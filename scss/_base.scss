@@ -1,0 +1,19 @@
+@import "compass";
+
+$body-copy-font: Helvetica, Arial;
+$heading-font: Georgia, Trebuchet, Helvetica, Arial;
+$font-base: 16;
+
+$large-desktop: 1280px;
+$small-desktop: 960px;
+$tablet: 768px;
+$mobile: 320px;
+
+$grid-collapse-below: $mobile;
+
+$default-transition-function: ease-in;
+$default-transition-duration: 0.2s;
+
+@import "qb/all";
+
+@include register-breakpoints($mobile, $tablet, $small-desktop, $large-desktop);

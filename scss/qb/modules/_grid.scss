@@ -1,0 +1,36 @@
+$grid-gutters: 20px;
+$grid-collapse-below: 500px !default;
+
+.grid{
+	@extend .clearfix;
+}
+%grid-col{
+	float: left;
+	padding-right: $grid-gutters;
+	
+	.grid &:last-of-type{
+		padding-right: 0;
+	}
+}
+[class*='col-']{
+	@extend %grid-col;
+}
+.col-1-1{
+	width: 100%;
+}
+.col-1-2{
+	width: 50%;
+}
+.col-1-3{
+	width: 33.33%;
+}
+.col-2-3{
+	width: 66.66%;
+}
+
+@media only screen and (max-width: $grid-collapse-below){
+	[class*='col-']{
+		width: 100%;
+		padding-right: 0;
+	}
+}
