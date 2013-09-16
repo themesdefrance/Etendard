@@ -1,1 +1,92 @@
 @import "base";
+
+.wrapper{
+	width: 960px;
+	margin: auto;
+}
+
+.main-header{
+	@extend .clearfix;
+}
+.main-header .logo-wrap{
+	float: left;
+}
+.main-header .main-menu{
+	float: right;
+}
+.main-header .main-menu ul{
+	list-style: none;
+}
+.main-header .main-menu li{
+	display: inline;
+}
+.main-header .main-menu a{
+	display: inline-block;
+	padding: 10px 5px;
+	margin: 0 8px;
+}
+
+//commun a plusieurs modules
+section.description,
+section.services,
+section.cta,
+section.portfolio,
+section.blog{
+	padding: 40px 0;
+}
+section .wrapper > h2{
+	text-align:center;
+	font-size: 30px;
+	color: $gris-principal;
+}
+ul.services,
+ul.portfolio,
+ul.blog{
+	list-style: none;
+	@extend .grid;
+}
+ul.services li,
+ul.portfolio li{
+	@extend .col-1-3;
+}
+ul.blog li{
+	@extend .col-1-4;
+}
+a.more-link{
+	display: inline-block;
+	font-size: 14px;
+	color: $bleu-principal;
+}
+
+//description
+section.description{
+	padding: 40px 0;
+	text-align:center;
+	color: $gris-principal;
+}
+section.description h1{
+	font-size: 30px;
+}
+section.description p{
+	font-size: 22px;
+}
+
+//services
+ul.services .service{
+	text-align: center;
+}
+ul.services .service h2{
+	font-size: 24px;
+	color: $bleu-principal;
+	margin-bottom: 10px;
+}
+ul.services .service a.more-link{
+	width: 100%;
+	text-align:center;
+	margin-top: 5px;
+}
+
+//cta
+.cta-button{
+	@extend %bouton-etendard;
+}

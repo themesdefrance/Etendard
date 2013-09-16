@@ -44,32 +44,36 @@
 	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
 	<header class="main-header">
-		<div class="logo-wrap">
-			<img src="" class="logo" />
+		<div class="wrapper">
+			<div class="logo-wrap">
+				<img src="" class="logo" />
+			</div>
+			<nav class="main-menu">
+				<ul>
+					<li>
+						<a href="#">
+							Accueil
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							A Propos
+						</a>
+					</li>
+				</ul>
+			</nav>
 		</div>
-		<nav>
-			<ul>
-				<li>
-					<a href="#">
-						Accueil
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						A Propos
-					</a>
-				</li>
-			</ul>
-		</nav>
 	</header>
 	
 	<section class="description">
-		<h1>
-			Le titre du site
-		</h1>
-		<p>
-			Une description sommaire pour faire bien.
-		</p>
+		<div class="wrapper">
+			<h1>
+				Le titre du site
+			</h1>
+			<p>
+				Une description sommaire pour faire bien.
+			</p>
+		</div>
 	</section>
 	
 	<section class="slider">
@@ -77,102 +81,114 @@
 	</section>
 
 	<section class="services">
-		<ul>
-			<li>
-				<h2>
-					Service 1
-				</h2>
-				<p>
-					Cum saepe multa, tum memini domi in hemicyclio sedentem, ut solebat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et.
-				</p>
-				<a href="#">
-					Lire la suite
-				</a>
-			</li>
-		</ul>
+		<div class="wrapper">
+			<ul class="services">
+				<li class="service">
+					<h2>
+						Service 1
+					</h2>
+					<p>
+						Cum saepe multa, tum memini domi in hemicyclio sedentem, ut solebat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et.
+					</p>
+					<a href="#" class="more-link">
+						Lire la suite
+					</a>
+				</li>
+			</ul>
+		</div>
 	</section>
 	
 	<section class="cta">
-		<p>
-			Super important midgets run through the hall looking for candy digesting a dandy.
-		</p>
-		<a href="#">
-			CLiquez ici
-		</a>
+		<div class="wrapper">
+			<p class="cta-text">
+				Super important midgets run through the hall looking for candy digesting a dandy.
+			</p>
+			<a href="#" class="cta-button">
+				CLiquez ici
+			</a>
+		</div>
 	</section>
 	
 	<section class="portfolio">
-		<h2>
-			Derniers travaux
-		</h2>
-		<ul>
-			<li>
-				<a href="#">
-					<figure>
-						<img src="" />
-						<figcaption>
-							Portfolio 1
-						</figcaption>
-					</figure>
-				</a>
-			</li>
-		</ul>
-		<a href="#">
-			Consulter le portfolio
-		</a>
+		<div class="wrapper">
+			<h2>
+				Derniers travaux
+			</h2>
+			<ul class="portfolio">
+				<li>
+					<a href="#">
+						<figure>
+							<img src="" />
+							<figcaption>
+								Portfolio 1
+							</figcaption>
+						</figure>
+					</a>
+				</li>
+			</ul>
+			<a href="#">
+				Consulter le portfolio
+			</a>
+		</div>
 	</section>
 	
 	<section class="blog">
-		<h2>
-			Derniers articles
-		</h2>
-		<ul>
-			<li>
-				<article>
-					<header>
-						<img src="" />
-						<h3>
-							Article 1
-						</h3>
-						<span class="date">
-							12 Janvier 2013 | 4 Commentaires
-						</span>
-					</header>
-					<div>
-						<p>
-							Cum saepe multa, tum memini do
- in hemicyclio sedentem, ut soat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et pauci admo dumfamiliares ego essem.
-						</p>
-					</div>
-					<a href="">
-						Lire la suite
-					</a>
-				</article>
-			</li>
-		</ul>
-		<a href="#">
-			Consulter les articles
-		</a>
+		<div class="wrapper">
+			<h2>
+				Derniers articles
+			</h2>
+			<ul class="blog">
+				<li>
+					<article>
+						<header>
+							<img src="" />
+							<h3>
+								Article 1
+							</h3>
+							<span class="date">
+								12 Janvier 2013 | 4 Commentaires
+							</span>
+						</header>
+						<div>
+							<p>
+								Cum saepe multa, tum memini do
+	 in hemicyclio sedentem, ut soat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et pauci admo dumfamiliares ego essem.
+							</p>
+						</div>
+						<a href="">
+							Lire la suite
+						</a>
+					</article>
+				</li>
+			</ul>
+			<a href="#">
+				Consulter les articles
+			</a>
+		</div>
 	</section>
 	
 	<section class="sidebar">
-		<div classs="newsletter">
-			<h2>
-				Newsletter
-			</h2>
-			<p>
-				Abonnez-vous à notre newsletter 
-et recevez des astuces tous les jeudi matins.
-			</p>
-			<form>
-				<input type="email" />
-				<input type="submit" value="Recevoir les news" />
-			</form>
+		<div class="wrapper">
+			<div classs="newsletter">
+				<h2>
+					Newsletter
+				</h2>
+				<p>
+					Abonnez-vous à notre newsletter 
+	et recevez des astuces tous les jeudi matins.
+				</p>
+				<form>
+					<input type="email" />
+					<input type="submit" value="Recevoir les news" />
+				</form>
+			</div>
 		</div>
 	</section>
 	
 	<footer class="main-footer">
-		©Copyright Lol Corp.
+		<div class="wrapper">
+			©Copyright Lol Corp.
+		</div>
 	</footer>
 </body>
 </html>

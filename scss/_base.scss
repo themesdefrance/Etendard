@@ -1,19 +1,66 @@
 @import "compass";
 
-$body-copy-font: Helvetica, Arial;
-$heading-font: Georgia, Trebuchet, Helvetica, Arial;
+$body-copy-font: 'Gentium Book Basic', Helvetica, Arial;
+$heading-font: 'Gentium Book Basic', Georgia, Trebuchet, Helvetica, Arial;
 $font-base: 16;
-
-$large-desktop: 1280px;
-$small-desktop: 960px;
-$tablet: 768px;
-$mobile: 320px;
-
-$grid-collapse-below: $mobile;
 
 $default-transition-function: ease-in;
 $default-transition-duration: 0.2s;
 
 @import "qb/all";
 
-@include register-breakpoints($mobile, $tablet, $small-desktop, $large-desktop);
+$bleu-principal: #1ba7c4;
+$gris-principal: #b7b8b8;
+
+html{
+	font-family: $body-copy-font;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: $heading-font;
+}
+p{
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+%bouton-etendard{
+	$background: $bleu-principal;
+	$fold-width: 23px;
+	
+	position:relative;
+	display: inline-block;
+	padding: 6px 34px;
+	background: $background;
+	color: #fff;
+	text-decoration: none;
+//	overflow: hidden;
+	
+	&:before{
+		content: "";
+		position: absolute;
+		display: block;
+		border: 0 solid red;
+		border-top-width: 0;
+		border-bottom-width: $fold-width;
+	}
+	&:before{
+		left: 0;
+		top: -3px;
+		border-left-color: transparent;
+		border-top-color: transparent;
+		border-bottom-color: transparent;
+		border-left-width: 0;
+		border-right-width: $fold-width;
+		@include transform-origin(0%, 0%);
+		@include rotate(45deg);
+	}
+//	&:after{
+//		right: 0;
+//		bottom: -$fold-height;
+//		border-right-color: transparent;
+//		border-top-color: transparent;
+//		border-bottom-color: transparent;
+//		border-right-width: 0;
+//		border-left-width: $fold-width;
+//	}
+}
