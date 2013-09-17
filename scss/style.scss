@@ -133,3 +133,25 @@ ul.portfolio{
 	font-size: 18px;
 	font-style: italic;
 }
+
+//blog
+ul.blog{
+	margin: 20px 0;
+}
+ul.blog .article .header{
+	margin-bottom: 5px;
+}
+ul.blog .article .header-title{
+	color: $bleu-principal;
+	font-size: 18px;
+	margin-bottom: 3px;
+}
+ul.blog .article .header-meta{
+	color: $gris-principal;
+	font-size: 14px;
+}
+ul.blog .article .content{
+	margin-bottom: 8px;
+	color: #122e3a;
+	line-height: 1.3;
+}
