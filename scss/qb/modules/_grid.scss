@@ -3,14 +3,11 @@ $grid-collapse-below: 500px !default;
 
 .grid{
 	@extend .clearfix;
+	margin-right: - $grid-gutters !important;
 }
 %grid-col{
 	float: left;
 	padding-right: $grid-gutters;
-	
-	.grid &:last-of-type{
-		padding-right: 0;
-	}
 }
 [class*='col-']{
 	@extend %grid-col;
