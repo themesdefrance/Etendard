@@ -52,10 +52,14 @@ ul.portfolio li{
 ul.blog li{
 	@extend .col-1-4;
 }
+
 a.more-link{
 	display: inline-block;
 	font-size: 14px;
 	color: $bleu-principal;
+}
+.cta-button{
+	@extend %bouton-etendard;
 }
 
 //description
@@ -84,9 +88,4 @@ ul.services .service a.more-link{
 	width: 100%;
 	text-align:center;
 	margin-top: 5px;
-}
-
-//cta
-.cta-button{
-	@extend %bouton-etendard;
 }
