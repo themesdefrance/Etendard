@@ -25,7 +25,6 @@
 	margin: 0 12px;
 	padding: 10px 0 2px;
 	text-decoration: none;
-	color: #011f2c;
 	font-size: 18px;
 	border-bottom: 3px solid transparent;
 	@include transition();
@@ -68,6 +67,13 @@ a.more-link{
 	display: inline-block;
 	font-size: 14px;
 	color: $bleu-principal;
+	text-decoration: none;
+	font-style: italic;
+	
+	&:hover{
+		color: #a2a3a5;
+	}
+	
 }
 .cta-wrapper{
 	text-align:center;
@@ -81,6 +87,7 @@ section.description{
 	padding: 40px 0;
 	text-align:center;
 	color: $gris-principal;
+	font-style: italic;
 }
 section.description h1{
 	font-size: 30px;
@@ -129,6 +136,10 @@ ul.portfolio{
 	&:hover:before{
 		opacity: 1;
 	}
+	&:hover figcaption{
+		background: $bleu-principal;
+		color: #fff;
+	}
 }
 .portfolio .creation figcaption{
 	position: absolute;
@@ -141,6 +152,7 @@ ul.portfolio{
 	color: $bleu-principal;
 	font-size: 18px;
 	font-style: italic;
+	@include transition();
 }
 
 //blog

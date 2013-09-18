@@ -11,9 +11,11 @@ $default-transition-duration: 0.2s;
 
 $bleu-principal: #1ba7c4;
 $gris-principal: #b7b8b8;
+$body-copy-color: #011f2c;
 
 html{
 	font-family: $body-copy-font;
+	color: $body-copy-color;
 }
 h1,h2,h3,h4,h5,h6{
 	font-family: $heading-font;
