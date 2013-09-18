@@ -25,6 +25,42 @@ p{
 	line-height: 1.4;
 }
 
+@mixin etendard($fold-width: 22px, $gauche: true, $droite: true){
+	&:before,
+	&:after{
+		content: "";
+		position: absolute;
+		display: block;
+		border: 0 solid white;
+		border-top-width: 0;
+		border-bottom-width: $fold-width;
+		border-bottom-color: transparent;
+		border-top-color: transparent;
+	}
+	
+	@if $gauche{
+		&:before{
+			left: 0;
+			top: 0;
+			border-left-color: transparent;
+			border-left-width: 0;
+			border-right-width: $fold-width;
+			@include transform-origin(0%, 0%);
+			@include rotate(45deg);
+		}
+	}
+	@if $droite{
+		&:after{
+			right: 0;
+			top: 0;
+			border-right-color: transparent;
+			border-right-width: 0;
+			border-left-width: $fold-width;
+			@include transform-origin(100%, 0%);
+			@include rotate(315deg);
+		}
+	}
+}
 %bouton-etendard{
 	$background: $bleu-principal;
 	$fold-width: 22px;
@@ -42,33 +78,5 @@ p{
 		background: darken($background, 5);
 	}
 	
-	&:before,
-	&:after{
-		content: "";
-		position: absolute;
-		display: block;
-		border: 0 solid white;
-		border-top-width: 0;
-		border-bottom-width: $fold-width;
-		border-bottom-color: transparent;
-		border-top-color: transparent;
-	}
-	&:before{
-		left: 0;
-		top: 0;
-		border-left-color: transparent;
-		border-left-width: 0;
-		border-right-width: $fold-width;
-		@include transform-origin(0%, 0%);
-		@include rotate(45deg);
-	}
-	&:after{
-		right: 0;
-		top: 0;
-		border-right-color: transparent;
-		border-right-width: 0;
-		border-left-width: $fold-width;
-		@include transform-origin(100%, 0%);
-		@include rotate(315deg);
-	}
+	@include etendard();
 }
