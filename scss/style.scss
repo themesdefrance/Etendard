@@ -22,8 +22,17 @@
 }
 .main-header .main-menu a{
 	display: inline-block;
-	padding: 10px 5px;
-	margin: 0 8px;
+	margin: 0 12px;
+	padding: 10px 0 2px;
+	text-decoration: none;
+	color: #011f2c;
+	font-size: 18px;
+	border-bottom: 3px solid transparent;
+	@include transition();
+	
+	&:hover{
+		border-bottom-color: $bleu-principal;
+	}
 }
 
 //commun a plusieurs modules
