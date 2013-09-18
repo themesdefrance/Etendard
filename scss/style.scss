@@ -111,6 +111,20 @@ ul.services .service a.more-link{
 	margin-top: 5px;
 }
 
+//cta
+section.cta > .wrapper{
+	display: table;
+}
+section.cta .cta-text,
+section.cta .button-wrapper{
+	display: table-cell;
+	vertical-align: middle;
+}
+section.cta .button-wrapper{
+	width: 30%;
+	text-align:center;
+}
+
 //portfolio
 ul.portfolio{
 	margin: 20px 0;
