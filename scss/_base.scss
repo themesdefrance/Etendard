@@ -25,37 +25,37 @@ p{
 	line-height: 1.4;
 }
 
-@mixin etendard($fold-width: 22px, $gauche: true, $droite: true){
-	&:before,
-	&:after{
-		content: "";
-		position: absolute;
-		display: block;
-		border: 0 solid white;
-		border-top-width: 0;
-		border-bottom-width: $fold-width;
-		border-bottom-color: transparent;
-		border-top-color: transparent;
-	}
-	
+@mixin etendard-commun($hauteur: 22px){
+	content: "";
+	position: absolute;
+	display: block;
+	border: 0 solid white;
+	border-top-width: 0;
+	border-bottom-width: $hauteur;
+	border-bottom-color: transparent;
+	border-top-color: transparent;
+}
+@mixin etendard($hauteur: 22px, $gauche: true, $droite: true){	
 	@if $gauche{
 		&:before{
+			@include etendard-commun($hauteur);
 			left: 0;
 			top: 0;
 			border-left-color: transparent;
 			border-left-width: 0;
-			border-right-width: $fold-width;
+			border-right-width: $hauteur;
 			@include transform-origin(0%, 0%);
 			@include rotate(45deg);
 		}
 	}
 	@if $droite{
 		&:after{
+			@include etendard-commun($hauteur);
 			right: 0;
 			top: 0;
 			border-right-color: transparent;
 			border-right-width: 0;
-			border-left-width: $fold-width;
+			border-left-width: $hauteur;
 			@include transform-origin(100%, 0%);
 			@include rotate(315deg);
 		}

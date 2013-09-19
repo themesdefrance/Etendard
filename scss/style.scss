@@ -27,6 +27,7 @@
 	text-decoration: none;
 	font-size: 18px;
 	border-bottom: 3px solid transparent;
+	color: inherit;
 	@include transition();
 	
 	&:hover{
@@ -188,7 +189,12 @@ ul.blog .article .header-title{
 		text-decoration: none;
 	}
 	
+	@include etendard($hauteur: 9px, $droite: false);
 	&:before{
+		top: 4px;
+		z-index: 1;
+	}
+	&:after{
 		content: "";
 		position: absolute;
 		top: 4px;
@@ -197,23 +203,6 @@ ul.blog .article .header-title{
 		display: block;
 		background: $bleu-principal;
 		width: 20px;
-	}
-	&:after{
-		content: "";
-		position: absolute;
-		top: 4px;
-		left: 0;
-		display: block;
-		border: 0 solid white;
-		border-top-width: 0;
-		border-bottom-width: 9px;
-		border-bottom-color: transparent;
-		border-top-color: transparent;
-		border-left-color: transparent;
-		border-left-width: 0;
-		border-right-width: 9px;
-		@include transform-origin(0%, 0%);
-		@include rotate(45deg);
 	}
 }
 ul.blog .article .header-meta{
