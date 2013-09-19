@@ -215,8 +215,51 @@ ul.blog .article .content{
 	line-height: 1.3;
 }
 
+//sidebar
+.sidebar{
+	padding: 30px 0;
+	background: #e6e7e8;
+}
+
 //footer
 .main-footer{
 	padding: 30px 0;
 	color: #6d6e71;
+}
+
+//module newsletter
+.module-newsletter{
+	color: #1f7384;
+	max-width: 400px;
+	padding: 0 20px;
+	text-align:center;
+}
+.module-newsletter h3{
+	margin-bottom: 8px;
+	font-style: italic;
+	font-size: 18px;
+}
+.module-newsletter input[type="email"]{
+	display:inline-block;
+	width: 100%;
+	margin-top: 5px;
+	background: #fff;
+	border: 1px solid #fff;
+	padding: 6px 4px;
+	color: #333;
+	
+	&:focus{
+		border-color: #8d8d8d;
+		outline: none;
+	}
+}
+.module-newsletter .form-submit{
+	@extend %bouton-etendard;
+}
+.module-newsletter input[type="submit"]{
+	background:transparent;
+	border: none;
+	margin: 0;
+	color: inherit;
+	font-size: 16px;
 }

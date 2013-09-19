@@ -35,7 +35,9 @@ p{
 	border-bottom-color: transparent;
 	border-top-color: transparent;
 }
-@mixin etendard($hauteur: 22px, $gauche: true, $droite: true){	
+@mixin etendard($hauteur: 22px, $gauche: true, $droite: true){
+	position:relative;
+	
 	@if $gauche{
 		&:before{
 			@include etendard-commun($hauteur);
@@ -65,7 +67,6 @@ p{
 	$background: $bleu-principal;
 	$fold-width: 22px;
 	
-	position:relative;
 	display: inline-block;
 	padding: 6px 35px;
 	background: $background;
