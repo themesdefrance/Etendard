@@ -264,17 +264,6 @@ ul.articles li{
 	}
 }
 
-//sidebar normale
-.sidebar .module{
-	margin-bottom: 20px;
-	
-	& h3{
-		text-align: center;
-		font-size: 24px;
-		font-style:italic;
-	}
-}
-
 //pagniation
 div.pagination{
 	text-align:center;
@@ -290,16 +279,47 @@ div.pagination{
 	}
 }
 
+//footer
+.main-footer{
+	padding: 30px 0;
+	color: #6d6e71;
+}
+
+//sidebar normale
+.sidebar{
+}
+
 //sidebar home
 .home-sidebar{
 	padding: 30px 0;
 	background: #e6e7e8;
 }
 
-//footer
-.main-footer{
-	padding: 30px 0;
-	color: #6d6e71;
+//modules
+.module{
+	margin-bottom: 20px;
+	
+	& h3{
+		text-align: center;
+		font-size: 24px;
+		font-style:italic;
+		margin-bottom: 10px;
+	}
+	& ul,ol{
+		list-style: none;
+	}
+	& li{
+		margin-bottom: 15px;
+	}
+	& a{
+		color: $body-copy-color;
+		text-decoration:none;
+		
+		&:hover{
+			text-decoration:underline;
+			color:lighten($body-copy-color, 5);
+		}
+	}
 }
 
 //module newsletter
@@ -337,4 +357,53 @@ div.pagination{
 	margin: 0;
 	color: inherit;
 	font-size: 16px;
+}
+
+//module recherche
+.module-recherche label span.screen-reader-text{
+	//@TODO : hide only visually
+	display: none;
+}
+form.search-form{
+	position: relative;
+}
+form.search-form input.search-field{
+	display: inline-block;
+	width: 100%;
+	padding: 10px 14px;
+	border:1px solid transparent;
+	background: #f1f2f2;
+	color: #b3b3b3;
+	@include transition();
+	
+	&:focus{
+		border:1px solid #939393;
+		background: darken(#f1f2f2, 3);
+		color: darken(#b3b3b3, 10);
+		outline: none;
+	}
+}
+form.search-form .search-submit-wrapper{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	
+	@extend .icon-search;
+	&:before{
+		position: absolute;
+		top:10px;
+		right: 4px;
+		font-size: 1.5rem;
+		color: $bleu-principal;
+	}
+}
+form.search-form input.search-submit{
+	display:block;
+	height: 100%;
+	border: none;
+	background: red;
+	font-size: 0;
+	width: 40px;
+	opacity: 0;
 }

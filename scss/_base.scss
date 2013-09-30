@@ -2,6 +2,7 @@
 
 $body-copy-font: 'Maven-Pro', Helvetica, Arial;
 $heading-font: 'Sanchez', Georgia, Trebuchet, Helvetica, Arial;
+$icon-font: 'icomoon';
 $font-base: 16;
 
 $default-transition-function: ease-in;
@@ -83,7 +84,7 @@ p{
 }
 
 %iconfont{
-	font-family: 'icomoon';
+	font-family: $icon-font;
 	content: attr(data-icon);
 	speak: none;
 	font-weight: normal;
@@ -104,7 +105,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-mail, .icon-search, .icon-google-plus, .icon-facebook, .icon-twitter, .icon-feed, .icon-youtube, .icon-vimeo, .icon-linkedin, .icon-skype, .icon-soundcloud, .icon-pinterest {
+.icon-mail:before, .icon-search:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, .icon-soundcloud:before, .icon-pinterest:before {
 	@extend %iconfont;
 }
 .icon-mail:before {
