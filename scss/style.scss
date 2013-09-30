@@ -177,6 +177,9 @@ ul.blog{
 ul.articles{
 	list-style: none;
 }
+ul.articles li{
+	margin-bottom:40px;
+}
 .article .header{
 	margin-bottom: 5px;
 }
@@ -234,7 +237,18 @@ ul.articles{
 	& h4,h5,h6{
 		font-size: 18px;
 	}
-	& blockquote{
+	& ul,ol{
+		margin-bottom: 20px;
+		
+		& li{
+			list-style-position: outside;
+			margin-left: 25px;
+		}
+	}
+}
+.article .content blockquote,
+.article.quote > blockquote{
+	& p{
 		margin: 10px 0;
 		padding: 20px 0;
 		border-radius: 10px;
@@ -243,13 +257,10 @@ ul.articles{
 		font-size: 36px;
 		text-align: center;
 	}
-	& ul,ol{
-		margin-bottom: 20px;
-		
-		& li{
-			list-style-position: outside;
-			margin-left: 25px;
-		}
+	& cite{
+		color: $bleu-principal;
+		font-size: 24px;
+		font-style:italic;
 	}
 }
 
@@ -261,6 +272,21 @@ ul.articles{
 		text-align: center;
 		font-size: 24px;
 		font-style:italic;
+	}
+}
+
+//pagniation
+div.pagination{
+	text-align:center;
+	color: $bleu-principal;
+	font-size: 24px;
+	font-style: italic;
+	
+	& a{
+		color:inherit;
+	}
+	& span.current{
+		color: $body-copy-color;
 	}
 }
 
