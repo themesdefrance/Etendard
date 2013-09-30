@@ -36,17 +36,16 @@
 }
 
 //commun a plusieurs modules
-section.description,
-section.services,
-section.cta,
-section.portfolio,
-section.blog{
+body > section{
 	padding: 40px 0;
 }
 section .wrapper > h2{
-	text-align:center;
 	font-size: 30px;
 	color: $gris-principal;
+	
+	&.center{
+		text-align:center;
+	}
 }
 ul.services,
 ul.portfolio,
@@ -130,10 +129,10 @@ section.cta .button-wrapper{
 ul.portfolio{
 	margin: 20px 0;
 }
-.portfolio .creation a{
+ul.portfolio .creation a{
 	text-decoration: none;
 }
-.portfolio .creation figure{
+ul.portfolio .creation figure{
 	position: relative;
 	
 	&:before{
@@ -156,7 +155,7 @@ ul.portfolio{
 		color: #fff;
 	}
 }
-.portfolio .creation figcaption{
+ul.portfolio .creation figcaption{
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -216,7 +215,7 @@ ul.blog .article .content{
 }
 
 //sidebar
-.sidebar{
+.home-sidebar{
 	padding: 30px 0;
 	background: #e6e7e8;
 }
