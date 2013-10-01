@@ -38,6 +38,7 @@ p{
 }
 @mixin etendard($hauteur: 22px, $gauche: true, $droite: true){
 	position:relative;
+	overflow: hidden;
 	
 	@if $gauche{
 		&:before{
