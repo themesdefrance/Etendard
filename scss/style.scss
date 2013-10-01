@@ -200,9 +200,10 @@ ul.articles li{
 		text-decoration: none;
 	}
 	
-	@include etendard($hauteur: 9px, $droite: false);
+	@include etendard($hauteur: 7px, $droite: false);
 	&:before{
 		top: 4px;
+		bottom: 4px;
 		z-index: 1;
 	}
 	&:after{

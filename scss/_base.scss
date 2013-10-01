@@ -26,30 +26,22 @@ p{
 	line-height: 1.4;
 }
 
-@mixin etendard-commun($hauteur: 22px){
+@mixin etendard-commun($hauteur: 16px){
 	content: "";
 	position: absolute;
 	display: block;
-	border: 0 solid white;
-	border-top-width: 0;
-	border-bottom-width: $hauteur;
-	border-bottom-color: transparent;
-	border-top-color: transparent;
+	border: $hauteur solid transparent;
 }
-@mixin etendard($hauteur: 22px, $gauche: true, $droite: true){
+@mixin etendard($hauteur: 16px, $gauche: true, $droite: true){
 	position:relative;
-	overflow: hidden;
 	
 	@if $gauche{
 		&:before{
 			@include etendard-commun($hauteur);
 			left: 0;
 			top: 0;
-			border-left-color: transparent;
-			border-left-width: 0;
-			border-right-width: $hauteur;
-			@include transform-origin(0%, 0%);
-			@include rotate(45deg);
+			bottom: 0;
+			border-left: $hauteur/2 solid white;
 		}
 	}
 	@if $droite{
@@ -57,17 +49,13 @@ p{
 			@include etendard-commun($hauteur);
 			right: 0;
 			top: 0;
-			border-right-color: transparent;
-			border-right-width: 0;
-			border-left-width: $hauteur;
-			@include transform-origin(100%, 0%);
-			@include rotate(315deg);
+			bottom: 0;
+			border-right: $hauteur/2 solid white;
 		}
 	}
 }
 %bouton-etendard{
 	$background: $bleu-principal;
-	$fold-width: 22px;
 	
 	display: inline-block;
 	padding: 6px 35px;
