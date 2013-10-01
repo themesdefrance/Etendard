@@ -289,6 +289,9 @@ div.pagination{
 //sidebar normale
 .sidebar{
 }
+.sidebar .module:nth-child(1){
+	@extend %dotted-background;
+}
 
 //sidebar home (qui ets en bas)
 .home-sidebar{
@@ -342,6 +345,20 @@ div.pagination{
 //module newsletter
 .module-newsletter{
 	text-align:center;
+}
+.module-newsletter .form-email{
+	position: relative;
+	display: inline-block;
+	width: 80%;
+	@extend .icon-mail;
+	
+	&:before{
+		position: absolute;
+		right: 7px;
+		top: 7px;
+		color: $bleu-principal;
+		font-size: 1.8rem;
+	}
 }
 .module-newsletter input[type="email"]{
 	display:inline-block;

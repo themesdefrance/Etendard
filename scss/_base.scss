@@ -72,6 +72,11 @@ p{
 	@include etendard();
 }
 
+%dotted-background{
+	background-image:url('../img/shinecaro.png');
+	background-repeat:repeat;
+}
+
 %iconfont{
 	font-family: $icon-font;
 	content: attr(data-icon);
