@@ -300,6 +300,14 @@ div.pagination{
 	max-width: 400px;
 	padding: 0 20px;
 }
+.home-sidebar .module-newsletter .form-submit{
+	&:before{
+		border-left-color: #e6e7e8;
+	}
+	&:after{
+		border-right-color: #e6e7e8;
+	}
+}
 .home-sidebar .module-newsletter h3{
 	font-size: 18px;
 }
@@ -350,13 +358,19 @@ div.pagination{
 	}
 }
 .module-newsletter .form-submit{
-	@extend %bouton-etendard;
+	@include etendard(14px);
+	
+	&:before,
+	&:after{
+		top: -4px;
+	}
 }
 .module-newsletter input[type="submit"]{
-	background:transparent;
+	background:$bleu-principal;
 	border: none;
 	margin: 0;
-	color: inherit;
+	padding: 4px 20px;
+	color: #fff;
 	font-size: 16px;
 }
 
