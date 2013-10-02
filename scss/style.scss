@@ -377,12 +377,8 @@ div.pagination{
 	}
 }
 .module-newsletter .form-submit{
-	@include etendard(14px);
-	
-	&:before,
-	&:after{
-		top: -4px;
-	}
+	display: inline-block;
+	@include etendard(12px);
 }
 .module-newsletter input[type="submit"]{
 	background:$bleu-principal;
