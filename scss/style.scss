@@ -100,6 +100,20 @@ section.description p{
 //services
 ul.services .service{
 	text-align: center;
+	border-right: 1px solid #dfe2e3;
+	padding: 0 20px;
+	
+	&:nth-child(3n){
+		border-right:none;
+	}
+	
+	@extend .icon-skype;
+	&:before{
+		display: block;
+		margin-bottom:10px;
+		color:#d1d3d4;
+		font-size: 3.7rem;
+	}
 }
 ul.services .service h2{
 	font-size: 24px;
