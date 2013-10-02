@@ -25,6 +25,9 @@ p{
 	font-size: 14px;
 	line-height: 1.4;
 }
+a:visited{
+	color:inherit;
+}
 
 @mixin etendard-commun($hauteur: 16px){
 	content: "";

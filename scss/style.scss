@@ -210,6 +210,9 @@ ul.articles{
 ul.articles li{
 	margin-bottom:40px;
 }
+.article{
+	@extend .clearfix;
+}
 .article .header{
 	margin-bottom: 5px;
 }
@@ -246,6 +249,11 @@ ul.articles li{
 		background: $bleu-principal;
 		width: 20px;
 	}
+}
+.article.alternate .header-image{
+	float: left;
+	width: 45%;
+	margin-right: 5%;
 }
 .article .header-meta{
 	color: $gris-principal;
