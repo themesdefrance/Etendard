@@ -453,12 +453,13 @@ form.search-form input.search-submit{
 }
 .module-social li a{
 	display: inline-block;
+	margin-right: 15px;
+	padding: 7px 13px;
+	@include etendard($hauteur: 18px);
 	color: #fff;
-	@include etendard();
 	background:$bleu-principal;
-	height: 30px;
-	padding: 4px 16px;
-	font-size: 1.2rem;
+	height: 38px;
+	font-size: 1.6rem;
 	@extend %iconfont;
 	@include transition(background $default-transition-duration $default-transition-function);
 	
