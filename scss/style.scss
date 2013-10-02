@@ -28,7 +28,7 @@
 	font-size: 18px;
 	border-bottom: 3px solid transparent;
 	color: inherit;
-	@include transition();
+	@include transition(border-bottom $default-transition-duration $default-transition-function);
 	
 	&:hover{
 		border-bottom-color: $bleu-principal;
@@ -146,7 +146,7 @@ ul.portfolio .creation figure{
 		right: 0;
 		background: rgba(0,0,0,.4);
 		opacity: 0;
-		@include transition();
+		@include transition(opacity $default-transition-duration $default-transition-function);
 	}
 	&:hover:before{
 		opacity: 1;
@@ -379,9 +379,15 @@ div.pagination{
 .module-newsletter .form-submit{
 	display: inline-block;
 	@include etendard(12px);
+	background:$bleu-principal;
+	@include transition(background $default-transition-duration $default-transition-function);
+	
+	&:hover{
+		background:darken($bleu-principal,5);
+	}
 }
 .module-newsletter input[type="submit"]{
-	background:$bleu-principal;
+	background:transparent;
 	border: none;
 	margin: 0;
 	padding: 4px 20px;
@@ -454,8 +460,11 @@ form.search-form input.search-submit{
 	padding: 4px 16px;
 	font-size: 1.2rem;
 	@extend %iconfont;
+	@include transition(background $default-transition-duration $default-transition-function);
 	
 	&:hover{
 		color: #fff;
+		text-decoration:none;
+		background:darken($bleu-principal,5);
 	}
 }
