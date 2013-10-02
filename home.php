@@ -102,44 +102,7 @@
 			</div>
 		</div>
 		<div class="sidebar col-1-3">
-			<div class="module module-newsletter">
-				<h3>
-					Newsletter
-				</h3>
-				<p>
-					Abonnez-vous à notre newsletter 
-	et recevez des astuces tous les jeudi matins.
-				</p>
-				<form>
-					<span class="form-email">
-						<input type="email" />
-					</span>
-					<span class="form-submit">
-						<input type="submit" value="Recevoir les news" />
-					</span>
-				</form>
-			</div>
-			<div class="module module-populaire">
-				<h3>
-					Articles populaires
-				</h3>
-				content and stuff
-			</div>
-			<div class="module module-populaire">
-				<h3>
-					Réseaux sociaux
-				</h3>
-				content and stuff
-			</div>
-			<div class="module module-recherche">
-				recherche
-			</div>
-			<div class="module module-apropos">
-				<h3>
-					A propos
-				</h3>
-				more content
-			</div>
+			<?php get_sidebar('blog'); ?>
 		</div>
 	</div>
 </section>
