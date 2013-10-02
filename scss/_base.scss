@@ -71,6 +71,9 @@ a:visited{
 	&:hover{
 		background: darken($background, 5);
 	}
+	&:visited{
+		color: #fff;
+	}
 	
 	@include etendard();
 }

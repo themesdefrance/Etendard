@@ -25,10 +25,16 @@
 <section class="blog grid">
 	<div class="wrapper">
 		<h2 class="section-title">
-			Blog
+			<?php _e('Blog', TEXT_TRANSLATION_DOMAIN); ?>
 		</h2>
 		<div class="col-2-3">
 			<ul class="articles">
+				<?php while ( have_posts() ) : the_post(); ?>
+				<li>
+					<?php get_template_part('content', get_post_format()); ?>
+				</li>
+				<?php endwhile; ?>
+				<?php /*
 				<li>
 					<article class="article">
 						<header class="header">
@@ -96,6 +102,7 @@
 						</span>
 					</article>
 				</li>
+				*/ ?>
 			</ul>
 			<div class="pagination">
 				<a href="">1</a> | <span class="current">2</span> | <a href="">3</a>

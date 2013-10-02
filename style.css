@@ -1,5 +1,5 @@
 @charset "CP850";
-/*!
+/*
 Theme Name: Étendard
 Theme URI: http://themesdefrance.fr/etendard
 Author: Thèmes de France
@@ -277,7 +277,7 @@ ul.blog:after,
   /* Black prints faster: sanbeiji.com/archives/953 */
   /* line 9, scss/qb/modules/_print.scss */
   a, a:visited {
-    color: #444 !important;
+    color: #444444 !important;
     text-decoration: underline;
   }
 
@@ -299,7 +299,7 @@ ul.blog:after,
   /* Don't show links for images, or javascript/internal links */
   /* line 22, scss/qb/modules/_print.scss */
   pre, blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid;
   }
 
@@ -429,6 +429,10 @@ a:visited {
 .cta-button:hover {
   background: #1894ae;
 }
+/* line 74, scss/_base.scss */
+.cta-button:visited {
+  color: #fff;
+}
 /* line 42, scss/_base.scss */
 .cta-button:before {
   content: "";
@@ -452,14 +456,14 @@ a:visited {
   border-right: 8px solid white;
 }
 
-/* line 78, scss/_base.scss */
+/* line 81, scss/_base.scss */
 .sidebar .module:nth-child(1),
 .sidebar .module:nth-child(2) {
   background-image: url("img/shinecaro.png");
   background-repeat: repeat;
 }
 
-/* line 83, scss/_base.scss */
+/* line 86, scss/_base.scss */
 [data-icon]:before, .icon-mail:before, .module-newsletter .form-email:before, .icon-search:before, form.search-form .search-submit-wrapper:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, ul.services .service:before, .icon-soundcloud:before, .icon-pinterest:before, .module-social li a {
   font-family: "icomoon";
   content: attr(data-icon);
@@ -479,62 +483,62 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-/* line 108, scss/_base.scss */
+/* line 111, scss/_base.scss */
 .icon-mail:before, .module-newsletter .form-email:before {
   content: "\e000";
 }
 
-/* line 111, scss/_base.scss */
+/* line 114, scss/_base.scss */
 .icon-search:before, form.search-form .search-submit-wrapper:before {
   content: "\e001";
 }
 
-/* line 114, scss/_base.scss */
+/* line 117, scss/_base.scss */
 .icon-google-plus:before {
   content: "\e002";
 }
 
-/* line 117, scss/_base.scss */
+/* line 120, scss/_base.scss */
 .icon-facebook:before {
   content: "\e003";
 }
 
-/* line 120, scss/_base.scss */
+/* line 123, scss/_base.scss */
 .icon-twitter:before {
   content: "\e004";
 }
 
-/* line 123, scss/_base.scss */
+/* line 126, scss/_base.scss */
 .icon-feed:before {
   content: "\e005";
 }
 
-/* line 126, scss/_base.scss */
+/* line 129, scss/_base.scss */
 .icon-youtube:before {
   content: "\e006";
 }
 
-/* line 129, scss/_base.scss */
+/* line 132, scss/_base.scss */
 .icon-vimeo:before {
   content: "\e007";
 }
 
-/* line 132, scss/_base.scss */
+/* line 135, scss/_base.scss */
 .icon-linkedin:before {
   content: "\e008";
 }
 
-/* line 135, scss/_base.scss */
+/* line 138, scss/_base.scss */
 .icon-skype:before, ul.services .service:before {
   content: "\e009";
 }
 
-/* line 138, scss/_base.scss */
+/* line 141, scss/_base.scss */
 .icon-soundcloud:before {
   content: "\e00a";
 }
 
-/* line 141, scss/_base.scss */
+/* line 144, scss/_base.scss */
 .icon-pinterest:before {
   content: "\e00b";
 }
@@ -1007,7 +1011,7 @@ div.pagination span.current {
   width: 100%;
   margin-top: 5px;
   background: #fff;
-  border: 1px solid #fff;
+  border: 1px solid white;
   padding: 6px 4px;
   color: #333;
 }
