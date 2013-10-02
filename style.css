@@ -1,0 +1,1177 @@
+@charset "CP850";
+/*!
+Theme Name: Étendard
+Theme URI: http://themesdefrance.fr/etendard
+Author: Thèmes de France
+Author URI: http://themesdefrance.fr
+Description: 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+Text Domain: etendard
+*/
+/* line 14, scss/qb/resets/_boxreset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 31, scss/qb/resets/_boxreset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 36, scss/qb/resets/_boxreset.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 41, scss/qb/resets/_boxreset.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+ * miscellaneous stuff, not really box related but always needed
+ */
+/* line 49, scss/qb/resets/_boxreset.scss */
+img {
+  border: 0;
+}
+
+/* line 55, scss/qb/resets/_boxreset.scss */
+a:focus {
+  outline: thin dotted;
+}
+/* line 61, scss/qb/resets/_boxreset.scss */
+a:active, a:hover {
+  outline: 0;
+}
+
+/* line 67, scss/qb/resets/_boxreset.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 72, scss/qb/resets/_boxreset.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 76, scss/qb/resets/_boxreset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, scss/qb/resets/_typereset.scss */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: "Maven-Pro", Helvetica, Arial;
+}
+
+/* line 6, scss/qb/resets/_typereset.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Sanchez", Georgia, Trebuchet, Helvetica, Arial;
+  font-weight: normal;
+}
+
+/* line 12, scss/qb/resets/_typereset.scss */
+ul, ol {
+  list-style-position: inside;
+}
+
+/* line 15, scss/qb/resets/_typereset.scss */
+ol {
+  list-style-type: decimal;
+}
+
+/* line 21, scss/qb/resets/_typereset.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 27, scss/qb/resets/_typereset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 30, scss/qb/resets/_typereset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 35, scss/qb/resets/_typereset.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 41, scss/qb/resets/_typereset.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 46, scss/qb/resets/_typereset.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 53, scss/qb/resets/_typereset.scss */
+pre,
+code,
+samp {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: monospace, serif;
+}
+
+/* line 61, scss/qb/resets/_typereset.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 1, scss/qb/resets/_formreset.scss */
+textarea {
+  overflow: auto;
+  font-family: inherit;
+  resize: vertical;
+  font-size: 100%;
+}
+
+/* line 10, scss/qb/resets/_formreset.scss */
+button,
+input,
+select {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+/* line 17, scss/qb/resets/_formreset.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/* line 23, scss/qb/resets/_formreset.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* line 28, scss/qb/resets/_formreset.scss */
+label, input[type="button"], input[type="submit"], input[type="image"], button {
+  cursor: pointer;
+}
+
+/* line 34, scss/qb/resets/_formreset.scss */
+button {
+  width: auto;
+  overflow: visible;
+}
+
+/* line 48, scss/qb/resets/_formreset.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 54, scss/qb/resets/_formreset.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+/* line 60, scss/qb/resets/_formreset.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 66, scss/qb/resets/_formreset.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 2, scss/qb/modules/_utility.scss */
+html {
+  font-size: 16px;
+}
+
+/* line 12, scss/qb/modules/_utility.scss */
+.clearfix:before, .grid:before, ul.services:before,
+ul.portfolio:before,
+ul.blog:before, .main-header:before, .article:before,
+.clearfix:after,
+.grid:after,
+ul.services:after,
+ul.portfolio:after,
+ul.blog:after,
+.main-header:after,
+.article:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 20, scss/qb/modules/_utility.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@media print {
+  /* line 2, scss/qb/modules/_print.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* Black prints faster: sanbeiji.com/archives/953 */
+  /* line 9, scss/qb/modules/_print.scss */
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+
+  /* line 13, scss/qb/modules/_print.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 16, scss/qb/modules/_print.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 19, scss/qb/modules/_print.scss */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  /* Don't show links for images, or javascript/internal links */
+  /* line 22, scss/qb/modules/_print.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 26, scss/qb/modules/_print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* css-discuss.incutio.com/wiki/Printing_Tables */
+  /* line 29, scss/qb/modules/_print.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 35, scss/qb/modules/_print.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 39, scss/qb/modules/_print.scss */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
+/* line 4, scss/qb/modules/_grid.scss */
+.grid, ul.services,
+ul.portfolio,
+ul.blog {
+  margin-right: -20px !important;
+}
+
+/* line 8, scss/qb/modules/_grid.scss */
+[class*='col-'], ul.services li,
+ul.portfolio li, ul.blog li {
+  float: left;
+  padding-right: 20px;
+}
+
+/* line 15, scss/qb/modules/_grid.scss */
+.col-1-1 {
+  width: 100%;
+}
+
+/* line 18, scss/qb/modules/_grid.scss */
+.col-1-2 {
+  width: 50%;
+}
+
+/* line 21, scss/qb/modules/_grid.scss */
+.col-1-3, ul.services li,
+ul.portfolio li {
+  width: 33.33%;
+}
+
+/* line 24, scss/qb/modules/_grid.scss */
+.col-2-3 {
+  width: 66.66%;
+}
+
+/* line 27, scss/qb/modules/_grid.scss */
+.col-1-4, ul.blog li {
+  width: 25%;
+}
+
+@media only screen and (max-width: 500px) {
+  /* line 32, scss/qb/modules/_grid.scss */
+  [class*='col-'] {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+/* line 73, scss/qb/modules/_rwd.scss */
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input,
+video {
+  max-width: 100%;
+}
+
+/* line 17, scss/_base.scss */
+html {
+  font-family: "Maven-Pro", Helvetica, Arial;
+  color: #011f2c;
+}
+
+/* line 21, scss/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Sanchez", Georgia, Trebuchet, Helvetica, Arial;
+}
+
+/* line 24, scss/_base.scss */
+p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* line 28, scss/_base.scss */
+a:visited {
+  color: inherit;
+}
+
+/* line 60, scss/_base.scss */
+.cta-button {
+  display: inline-block;
+  padding: 6px 35px;
+  background: #1ba7c4;
+  color: #fff;
+  text-decoration: none;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  position: relative;
+}
+/* line 71, scss/_base.scss */
+.cta-button:hover {
+  background: #1894ae;
+}
+/* line 42, scss/_base.scss */
+.cta-button:before {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 16px solid transparent;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 8px solid white;
+}
+/* line 51, scss/_base.scss */
+.cta-button:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 16px solid transparent;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-right: 8px solid white;
+}
+
+/* line 78, scss/_base.scss */
+.sidebar .module:nth-child(1),
+.sidebar .module:nth-child(2) {
+  background-image: url("img/shinecaro.png");
+  background-repeat: repeat;
+}
+
+/* line 83, scss/_base.scss */
+[data-icon]:before, .icon-mail:before, .module-newsletter .form-email:before, .icon-search:before, form.search-form .search-submit-wrapper:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, ul.services .service:before, .icon-soundcloud:before, .icon-pinterest:before, .module-social li a {
+  font-family: "icomoon";
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+/* line 108, scss/_base.scss */
+.icon-mail:before, .module-newsletter .form-email:before {
+  content: "\e000";
+}
+
+/* line 111, scss/_base.scss */
+.icon-search:before, form.search-form .search-submit-wrapper:before {
+  content: "\e001";
+}
+
+/* line 114, scss/_base.scss */
+.icon-google-plus:before {
+  content: "\e002";
+}
+
+/* line 117, scss/_base.scss */
+.icon-facebook:before {
+  content: "\e003";
+}
+
+/* line 120, scss/_base.scss */
+.icon-twitter:before {
+  content: "\e004";
+}
+
+/* line 123, scss/_base.scss */
+.icon-feed:before {
+  content: "\e005";
+}
+
+/* line 126, scss/_base.scss */
+.icon-youtube:before {
+  content: "\e006";
+}
+
+/* line 129, scss/_base.scss */
+.icon-vimeo:before {
+  content: "\e007";
+}
+
+/* line 132, scss/_base.scss */
+.icon-linkedin:before {
+  content: "\e008";
+}
+
+/* line 135, scss/_base.scss */
+.icon-skype:before, ul.services .service:before {
+  content: "\e009";
+}
+
+/* line 138, scss/_base.scss */
+.icon-soundcloud:before {
+  content: "\e00a";
+}
+
+/* line 141, scss/_base.scss */
+.icon-pinterest:before {
+  content: "\e00b";
+}
+
+/* line 4, scss/style.scss */
+.wrapper {
+  width: 960px;
+  margin: auto;
+}
+
+/* line 12, scss/style.scss */
+.main-header .logo-wrap {
+  float: left;
+}
+
+/* line 15, scss/style.scss */
+.main-header .main-menu {
+  float: right;
+}
+
+/* line 18, scss/style.scss */
+.main-header .main-menu ul {
+  list-style: none;
+}
+
+/* line 21, scss/style.scss */
+.main-header .main-menu li {
+  display: inline;
+}
+
+/* line 24, scss/style.scss */
+.main-header .main-menu a {
+  display: inline-block;
+  margin: 0 12px;
+  padding: 10px 0 2px;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: 3px solid transparent;
+  color: inherit;
+  -webkit-transition: border-bottom 0.2s ease-in;
+  -moz-transition: border-bottom 0.2s ease-in;
+  -o-transition: border-bottom 0.2s ease-in;
+  transition: border-bottom 0.2s ease-in;
+}
+/* line 34, scss/style.scss */
+.main-header .main-menu a:hover {
+  border-bottom-color: #1ba7c4;
+}
+
+/* line 40, scss/style.scss */
+body > section {
+  padding: 40px 0;
+}
+
+/* line 43, scss/style.scss */
+section .wrapper > h2 {
+  font-size: 30px;
+  color: #b7b8b8;
+  margin-bottom: 10px;
+}
+/* line 48, scss/style.scss */
+section .wrapper > h2.center {
+  text-align: center;
+}
+
+/* line 54, scss/style.scss */
+ul.services,
+ul.portfolio,
+ul.blog {
+  list-style: none;
+}
+
+/* line 68, scss/style.scss */
+a.more-link {
+  display: inline-block;
+  font-size: 14px;
+  color: #1ba7c4;
+  text-decoration: none;
+  font-style: italic;
+}
+/* line 75, scss/style.scss */
+a.more-link:hover {
+  color: #a2a3a5;
+}
+
+/* line 80, scss/style.scss */
+.cta-wrapper {
+  text-align: center;
+}
+
+/* line 88, scss/style.scss */
+section.description {
+  padding: 40px 0;
+  text-align: center;
+  color: #b7b8b8;
+  font-style: italic;
+}
+
+/* line 94, scss/style.scss */
+section.description h1 {
+  font-size: 30px;
+}
+
+/* line 97, scss/style.scss */
+section.description p {
+  font-size: 22px;
+}
+
+/* line 102, scss/style.scss */
+ul.services .service {
+  text-align: center;
+  border-right: 1px solid #dfe2e3;
+  padding: 0 20px;
+}
+/* line 107, scss/style.scss */
+ul.services .service:nth-child(3n) {
+  border-right: none;
+}
+/* line 112, scss/style.scss */
+ul.services .service:before {
+  display: block;
+  margin-bottom: 10px;
+  color: #d1d3d4;
+  font-size: 3.7rem;
+}
+
+/* line 119, scss/style.scss */
+ul.services .service h2 {
+  font-size: 24px;
+  color: #1ba7c4;
+  margin-bottom: 10px;
+}
+
+/* line 124, scss/style.scss */
+ul.services .service a.more-link {
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* line 131, scss/style.scss */
+section.cta > .wrapper {
+  display: table;
+}
+
+/* line 135, scss/style.scss */
+section.cta .cta-text,
+section.cta .button-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 139, scss/style.scss */
+section.cta .button-wrapper {
+  width: 30%;
+  text-align: center;
+}
+
+/* line 145, scss/style.scss */
+ul.portfolio {
+  margin: 20px 0;
+}
+
+/* line 148, scss/style.scss */
+ul.portfolio .creation a {
+  text-decoration: none;
+}
+
+/* line 151, scss/style.scss */
+ul.portfolio .creation figure {
+  position: relative;
+}
+/* line 154, scss/style.scss */
+ul.portfolio .creation figure:before {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 35%;
+  left: 50%;
+  margin-left: -1.5rem;
+  padding: 10px;
+  font-size: 1.5rem;
+  color: #1e1e1e;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0;
+}
+/* line 168, scss/style.scss */
+ul.portfolio .creation figure:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in;
+  -moz-transition: opacity 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+/* line 181, scss/style.scss */
+ul.portfolio .creation figure:hover:before, ul.portfolio .creation figure:hover:after {
+  opacity: 1;
+}
+/* line 184, scss/style.scss */
+ul.portfolio .creation figure:hover figcaption {
+  background: #1ba7c4;
+  color: #fff;
+}
+
+/* line 189, scss/style.scss */
+ul.portfolio .creation figcaption {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #e6e7e8;
+  padding: 5px 0;
+  text-align: center;
+  color: #1ba7c4;
+  font-size: 18px;
+  font-style: italic;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+/* line 205, scss/style.scss */
+ul.blog {
+  margin: 20px 0;
+}
+
+/* line 208, scss/style.scss */
+ul.articles {
+  list-style: none;
+}
+
+/* line 211, scss/style.scss */
+ul.articles li {
+  margin-bottom: 40px;
+}
+
+/* line 217, scss/style.scss */
+.article .header {
+  margin-bottom: 5px;
+}
+
+/* line 220, scss/style.scss */
+.article .header-title {
+  color: #1ba7c4;
+  font-size: 36px;
+  font-style: italic;
+}
+
+/* line 225, scss/style.scss */
+.article.teaser .header-title {
+  position: relative;
+  margin-bottom: 3px;
+  padding-left: 25px;
+  font-size: 18px;
+  font-style: normal;
+  position: relative;
+}
+/* line 232, scss/style.scss */
+.article.teaser .header-title a {
+  color: inherit;
+  text-decoration: none;
+}
+/* line 42, scss/_base.scss */
+.article.teaser .header-title:before {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 7px solid transparent;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 3.5px solid white;
+}
+/* line 238, scss/style.scss */
+.article.teaser .header-title:before {
+  top: 4px;
+  bottom: 4px;
+  z-index: 1;
+}
+/* line 243, scss/style.scss */
+.article.teaser .header-title:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 0;
+  display: block;
+  background: #1ba7c4;
+  width: 20px;
+}
+
+/* line 254, scss/style.scss */
+.article.alternate .header-image {
+  float: left;
+  width: 45%;
+  margin-right: 5%;
+}
+
+/* line 259, scss/style.scss */
+.article .header-meta {
+  color: #b7b8b8;
+  font-size: 14px;
+}
+
+/* line 263, scss/style.scss */
+.article .content {
+  margin-bottom: 8px;
+  color: #122e3a;
+  line-height: 1.3;
+}
+/* line 268, scss/style.scss */
+.article .content h1 {
+  font-size: 36px;
+}
+/* line 271, scss/style.scss */
+.article .content h2 {
+  font-size: 24px;
+}
+/* line 274, scss/style.scss */
+.article .content h3 {
+  font-size: 20px;
+}
+/* line 277, scss/style.scss */
+.article .content h4, .article .content h5, .article .content h6 {
+  font-size: 18px;
+}
+/* line 280, scss/style.scss */
+.article .content ul, .article .content ol {
+  margin-bottom: 20px;
+}
+/* line 283, scss/style.scss */
+.article .content ul li, .article .content ol li {
+  list-style-position: outside;
+  margin-left: 25px;
+}
+
+/* line 291, scss/style.scss */
+.article .content blockquote p,
+.article.quote > blockquote p {
+  margin: 10px 0;
+  padding: 20px 0;
+  border-radius: 10px;
+  background: #e6e7e8;
+  font-family: "Sanchez", Georgia, Trebuchet, Helvetica, Arial;
+  font-size: 36px;
+  text-align: center;
+}
+/* line 300, scss/style.scss */
+.article .content blockquote cite,
+.article.quote > blockquote cite {
+  color: #1ba7c4;
+  font-size: 24px;
+  font-style: italic;
+}
+
+/* line 308, scss/style.scss */
+div.pagination {
+  text-align: center;
+  color: #1ba7c4;
+  font-size: 24px;
+  font-style: italic;
+}
+/* line 314, scss/style.scss */
+div.pagination a {
+  color: inherit;
+}
+/* line 317, scss/style.scss */
+div.pagination span.current {
+  color: #011f2c;
+}
+
+/* line 323, scss/style.scss */
+.main-footer {
+  padding: 30px 0;
+  color: #6d6e71;
+}
+
+/* line 337, scss/style.scss */
+.home-sidebar {
+  padding: 30px 0;
+  background: #e6e7e8;
+}
+
+/* line 341, scss/style.scss */
+.home-sidebar .module-newsletter {
+  color: #1f7384;
+  max-width: 400px;
+  padding: 0 20px;
+}
+
+/* line 347, scss/style.scss */
+.home-sidebar .module-newsletter .form-submit:before {
+  border-left-color: #e6e7e8;
+}
+/* line 350, scss/style.scss */
+.home-sidebar .module-newsletter .form-submit:after {
+  border-right-color: #e6e7e8;
+}
+
+/* line 354, scss/style.scss */
+.home-sidebar .module-newsletter h3 {
+  font-size: 18px;
+}
+
+/* line 359, scss/style.scss */
+.module {
+  padding: 5px 10px 15px 5px;
+  margin-bottom: 20px;
+}
+/* line 363, scss/style.scss */
+.module h3 {
+  text-align: center;
+  font-size: 24px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+/* line 369, scss/style.scss */
+.module ul, .module ol {
+  list-style: none;
+}
+/* line 372, scss/style.scss */
+.module li {
+  margin-bottom: 15px;
+}
+/* line 375, scss/style.scss */
+.module a {
+  color: #011f2c;
+  text-decoration: none;
+}
+/* line 379, scss/style.scss */
+.module a:hover {
+  text-decoration: underline;
+  color: #023145;
+}
+
+/* line 387, scss/style.scss */
+.module-newsletter {
+  text-align: center;
+}
+
+/* line 390, scss/style.scss */
+.module-newsletter .form-email {
+  position: relative;
+  display: inline-block;
+  width: 80%;
+}
+/* line 396, scss/style.scss */
+.module-newsletter .form-email:before {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  color: #1ba7c4;
+  font-size: 1.8rem;
+}
+
+/* line 404, scss/style.scss */
+.module-newsletter input[type="email"] {
+  display: inline-block;
+  width: 100%;
+  margin-top: 5px;
+  background: #fff;
+  border: 1px solid #fff;
+  padding: 6px 4px;
+  color: #333;
+}
+/* line 413, scss/style.scss */
+.module-newsletter input[type="email"]:focus {
+  border-color: #8d8d8d;
+  outline: none;
+}
+
+/* line 418, scss/style.scss */
+.module-newsletter .form-submit {
+  display: inline-block;
+  position: relative;
+  background: #1ba7c4;
+  -webkit-transition: background 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+}
+/* line 42, scss/_base.scss */
+.module-newsletter .form-submit:before {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 12px solid transparent;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 6px solid white;
+}
+/* line 51, scss/_base.scss */
+.module-newsletter .form-submit:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 12px solid transparent;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-right: 6px solid white;
+}
+/* line 424, scss/style.scss */
+.module-newsletter .form-submit:hover {
+  background: #1894ae;
+}
+
+/* line 428, scss/style.scss */
+.module-newsletter input[type="submit"] {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 4px 20px;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* line 438, scss/style.scss */
+form.search-form span.screen-reader-text {
+  display: none;
+}
+
+/* line 442, scss/style.scss */
+form.search-form {
+  position: relative;
+}
+
+/* line 445, scss/style.scss */
+form.search-form input.search-field {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: #f1f2f2;
+  color: #b3b3b3;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+/* line 454, scss/style.scss */
+form.search-form input.search-field:focus {
+  border: 1px solid #939393;
+  background: #e9ebeb;
+  color: #9a9a9a;
+  outline: none;
+}
+
+/* line 461, scss/style.scss */
+form.search-form .search-submit-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+/* line 468, scss/style.scss */
+form.search-form .search-submit-wrapper:before {
+  position: absolute;
+  top: 10px;
+  right: 4px;
+  font-size: 1.5rem;
+  color: #1ba7c4;
+}
+
+/* line 476, scss/style.scss */
+form.search-form input.search-submit {
+  display: block;
+  height: 100%;
+  border: none;
+  background: red;
+  font-size: 0;
+  width: 40px;
+  opacity: 0;
+}
+
+/* line 487, scss/style.scss */
+.module-social ul {
+  list-style: none;
+}
+
+/* line 490, scss/style.scss */
+.module-social li {
+  display: inline-block;
+}
+
+/* line 493, scss/style.scss */
+.module-social li a {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 7px 13px;
+  position: relative;
+  color: #fff;
+  background: #1ba7c4;
+  height: 38px;
+  font-size: 1.6rem;
+  -webkit-transition: background 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+}
+/* line 42, scss/_base.scss */
+.module-social li a:before {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 18px solid transparent;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 9px solid white;
+}
+/* line 51, scss/_base.scss */
+.module-social li a:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 18px solid transparent;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-right: 9px solid white;
+}
+/* line 505, scss/style.scss */
+.module-social li a:hover {
+  color: #fff;
+  text-decoration: none;
+  background: #1894ae;
+}
