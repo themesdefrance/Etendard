@@ -1,3 +1,4 @@
+<?php /* Template Name: Blog */ ?>
 <?php get_header(); ?>
 <header class="main-header">
 	<div class="wrapper">
@@ -21,225 +22,125 @@
 	</div>
 </header>
 
-<section class="description">
+<section class="blog grid">
 	<div class="wrapper">
-		<h1>
-			Le titre du site
-		</h1>
-		<p>
-			Une description sommaire pour faire bien.
-		</p>
-	</div>
-</section>
-
-<section class="slider">
-	slider
-</section>
-
-<section class="services">
-	<div class="wrapper">
-		<ul class="services">
-			<li class="service">
-				<h2>
-					Service 1
-				</h2>
-				<p>
-					Cum saepe multa, tum memini domi in hemicyclio sedentem, ut solebat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et.
-				</p>
-				<a href="#" class="more-link">
-					Lire la suite
-				</a>
-			</li>
-			<li class="service">
-				<h2>
-					Service 1
-				</h2>
-				<p>
-					Cum saepe multa, tum memini domi in hemicyclio sedentem, ut solebat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et.
-				</p>
-				<a href="#" class="more-link">
-					Lire la suite
-				</a>
-			</li>
-			<li class="service">
-				<h2>
-					Service 1
-				</h2>
-				<p>
-					Cum saepe multa, tum memini domi in hemicyclio sedentem, ut solebat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et.
-				</p>
-				<a href="#" class="more-link">
-					Lire la suite
-				</a>
-			</li>
-		</ul>
-	</div>
-</section>
-
-<section class="cta">
-	<div class="wrapper">
-		<p class="cta-text">
-			Super important midgets run through the hall looking for candy digesting a dandy.<br />
-			Super important midgets run through the hall looking for candy digesting a dandy.
-			Super important midgets run through the hall looking for candy digesting a dandy.
-			Super important midgets run through the hall looking for candy digesting a dandy.
-		</p>
-		<div class="button-wrapper">
-			<a href="#" class="cta-button">
-				Cliquez ici
-			</a>
-		</div>
-	</div>
-</section>
-
-<section class="portfolio">
-	<div class="wrapper">
-		<h2 class="center">
-			Derniers travaux
+		<h2 class="section-title">
+			Blog
 		</h2>
-		<ul class="portfolio">
-			<li class="creation">
-				<a href="#">
-					<figure class="icon-search">
-						<img src="http://placehold.it/500x300" />
-						<figcaption>
-							Portfolio 1
-						</figcaption>
-					</figure>
-				</a>
-			</li>
-			<li class="creation">
-				<a href="#">
-					<figure>
-						<img src="http://placehold.it/500x300" />
-						<figcaption>
-							Portfolio 1
-						</figcaption>
-					</figure>
-				</a>
-			</li>
-			<li class="creation">
-				<a href="#">
-					<figure>
-						<img src="http://placehold.it/500x300" />
-						<figcaption>
-							Portfolio 1
-						</figcaption>
-					</figure>
-				</a>
-			</li>
-		</ul>
-		<div class="cta-wrapper">
-			<a href="#" class="cta-button">
-				Consulter le portfolio
-			</a>
-		</div>
-	</div>
-</section>
-
-<section class="blog">
-	<div class="wrapper">
-		<h2 class="center">
-			Derniers articles
-		</h2>
-		<ul class="blog">
-			<li>
-				<article class="article teaser">
-					<header class="header">
-						<img src="http://placehold.it/500x300" />
-						<h3 class="header-title">
+		<div class="col-2-3">
+			<ul class="articles">
+				<li>
+					<article class="article">
+						<header class="header">
+							<img src="http://placehold.it/800x200" />
+							<h1 class="header-title">
+								Titre de l'article
+							</h1>
+							<span class="header-meta">
+								Publiéé le bidule | 12 commentaires
+							</span>
+						</header>
+						<div class="content">
+							Lorem ipsudm dolor si maet
+						</div>
+						<a href="#" class="more-link">
+							Lire la suite
+						</a>
+					</article>
+				</li>
+				<li>
+					<article class="article alternate">
+						<header class="header">
+							<img src="http://placehold.it/800x800" class="header-image" />
+							<h1 class="header-title">
+								Un article un peu différent?
+							</h1>
+							<span class="header-meta">
+								Publiéé le bidule | 12 commentaires
+							</span>
+						</header>
+						<div class="content">
+							Lorem ipsudm dolor si maet
+						</div>
+						<a href="#" class="more-link">
+							Lire la suite
+						</a>
+					</article>
+				</li>
+				<li>
+					<article class="article quote">
+						<blockquote>
+							<p>
+								quote content
+							</p>
+							<footer>
+								<cite>
+									Par Nap'
+								</cite>
+							</footer>
+						</blockquote>
+						<span class="header-meta">
+							Publiéé le bidule | 12 commentaires
+						</span>
+					</article>
+				</li>
+				<li>
+					<article class="article link">
+						<h1 class="header-title">
 							<a href="">
-								Article 1
+								Lien vrs un site
 							</a>
-						</h3>
+						</h1>
 						<span class="header-meta">
-							12 Janvier 2013 | 4 Commentaires
+							Publiéé le bidule | 12 commentaires
 						</span>
-					</header>
-					<div class="content">
-						<p>
-							Cum saepe multa, tum memini do
- in hemicyclio sedentem, ut soat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et pauci admo dumfamiliares ego essem.
-						</p>
-					</div>
-					<a href="" class="more-link">
-						Lire la suite
-					</a>
-				</article>
-			</li>
-			<li>
-				<article class="article teaser">
-					<header class="header">
-						<img src="http://placehold.it/500x300" />
-						<h3 class="header-title">
-							Article 1
-						</h3>
-						<span class="header-meta">
-							12 Janvier 2013 | 4 Commentaires
-						</span>
-					</header>
-					<div class="content">
-						<p>
-							Cum saepe multa, tum memini do
- in hemicyclio sedentem, ut soat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et pauci admo dumfamiliares ego essem.
-						</p>
-					</div>
-					<a href="" class="more-link">
-						Lire la suite
-					</a>
-				</article>
-			</li>
-			<li>
-				<article class="article teaser">
-					<header class="header">
-						<img src="http://placehold.it/500x300" />
-						<h3 class="header-title">
-							Article 1
-						</h3>
-						<span class="header-meta">
-							12 Janvier 2013 | 4 Commentaires
-						</span>
-					</header>
-					<div class="content">
-						<p>
-							Cum saepe multa, tum memini do
- in hemicyclio sedentem, ut soat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et pauci admo dumfamiliares ego essem.
-						</p>
-					</div>
-					<a href="" class="more-link">
-						Lire la suite
-					</a>
-				</article>
-			</li>
-			<li>
-				<article class="article teaser">
-					<header class="header">
-						<img src="http://placehold.it/500x300" />
-						<h3 class="header-title">
-							Article 1
-						</h3>
-						<span class="header-meta">
-							12 Janvier 2013 | 4 Commentaires
-						</span>
-					</header>
-					<div class="content">
-						<p>
-							Cum saepe multa, tum memini do
- in hemicyclio sedentem, ut soat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et pauci admo dumfamiliares ego essem.
-						</p>
-					</div>
-					<a href="" class="more-link">
-						Lire la suite
-					</a>
-				</article>
-			</li>
-		</ul>
-		<div class="cta-wrapper">
-			<a href="#" class="cta-button">
-				Consulter les articles
-			</a>
+					</article>
+				</li>
+			</ul>
+			<div class="pagination">
+				<a href="">1</a> | <span class="current">2</span> | <a href="">3</a>
+			</div>
+		</div>
+		<div class="sidebar col-1-3">
+			<div class="module module-newsletter">
+				<h3>
+					Newsletter
+				</h3>
+				<p>
+					Abonnez-vous à notre newsletter 
+	et recevez des astuces tous les jeudi matins.
+				</p>
+				<form>
+					<span class="form-email">
+						<input type="email" />
+					</span>
+					<span class="form-submit">
+						<input type="submit" value="Recevoir les news" />
+					</span>
+				</form>
+			</div>
+			<div class="module module-populaire">
+				<h3>
+					Articles populaires
+				</h3>
+				content and stuff
+			</div>
+			<div class="module module-populaire">
+				<h3>
+					Réseaux sociaux
+				</h3>
+				content and stuff
+			</div>
+			<div class="module module-recherche">
+				recherche
+			</div>
+			<div class="module module-apropos">
+				<h3>
+					A propos
+				</h3>
+				more content
+			</div>
 		</div>
 	</div>
 </section>
-
 <?php get_footer(); ?>
