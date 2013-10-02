@@ -137,6 +137,20 @@ ul.portfolio .creation figure{
 	position: relative;
 	
 	&:before{
+		display:block;
+		position: absolute;
+		z-index: 1;
+		top: 35%;
+		left: 50%;
+		margin-left: -1.5rem;
+		padding: 10px;
+		font-size: 1.5rem;
+		color: #1e1e1e;
+		background:#fff;
+		border-radius:50%;
+		opacity: 0;
+	}
+	&:after{
 		content: "";
 		display:block;
 		position: absolute;
@@ -144,11 +158,12 @@ ul.portfolio .creation figure{
 		bottom: 20px;
 		left: 0;
 		right: 0;
-		background: rgba(0,0,0,.4);
+		background: rgba(0,0,0,.7);
 		opacity: 0;
 		@include transition(opacity $default-transition-duration $default-transition-function);
 	}
-	&:hover:before{
+	&:hover:before,
+	&:hover:after{
 		opacity: 1;
 	}
 	&:hover figcaption{
@@ -158,6 +173,7 @@ ul.portfolio .creation figure{
 }
 ul.portfolio .creation figcaption{
 	position: absolute;
+	z-index:1;
 	bottom: 0;
 	left: 0;
 	right: 0;
