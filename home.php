@@ -105,7 +105,7 @@
 				*/ ?>
 			</ul>
 			<div class="pagination">
-				<a href="">1</a> | <span class="current">2</span> | <a href="">3</a>
+				<?php etendard_posts_nav(false); ?>
 			</div>
 		</div>
 		<div class="sidebar col-1-3">
