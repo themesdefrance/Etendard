@@ -29,7 +29,7 @@
 		</h2>
 		<div class="col-2-3">
 			<ul class="articles">
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php while (have_posts()) : the_post(); ?>
 				<li>
 					<?php get_template_part('content', get_post_format()); ?>
 				</li>

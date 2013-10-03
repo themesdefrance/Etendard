@@ -236,7 +236,7 @@
 			</li>
 		</ul>
 		<div class="cta-wrapper">
-			<a href="?page_id=1066" class="cta-button">
+			<a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="cta-button">
 				Consulter les articles
 			</a>
 		</div>
