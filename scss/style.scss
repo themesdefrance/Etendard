@@ -208,14 +208,14 @@ ul.blog{
 ul.articles{
 	list-style: none;
 }
-ul.articles li{
-	margin-bottom:40px;
+ul.articles .article{
+	margin-bottom:60px;
 }
 .article{
 	@extend .clearfix;
 }
 .article .header{
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 .article .header-title{
 	color: $bleu-principal;
@@ -267,37 +267,77 @@ ul.articles li{
 	
 	& h1{
 		font-size: 36px;
+		margin-bottom: 14px;
 	}
 	& h2{
 		font-size: 24px;
+		margin-bottom: 10px;
 	}
 	& h3{
 		font-size: 20px;
+		margin-bottom: 8px;
 	}
 	& h4,h5,h6{
 		font-size: 18px;
+		margin-bottom: 6px;
 	}
-	& ul,ol{
+	& dl,
+	& table,
+	& ul,
+	& ol,
+	& address{
 		margin-bottom: 20px;
+	}
+	& p{
+		margin-bottom: 10px;
+	}
+	//no margins for nested lists
+	& ul ul,
+	& ul ol,
+	& ol ul,
+	& ol ol{
+		margin-bottom: 0;
+	}
+	& li{
+		list-style-position: outside;
+		margin-left: 25px;
+		margin-bottom: 5px;
+	}
+	& a{
+		color: #1f7798;
+		text-decoration:underline;
 		
-		& li{
-			list-style-position: outside;
-			margin-left: 25px;
+		&:visited{
+			color: #206bb5;
 		}
+	}
+	& dt{
+		font-weight: 700;
+	}
+	& dt ~ dd{
+		margin-bottom: 10px;
+	}
+	& abbr,
+	& acronym{
+		cursor: help;
+		border-bottom: 1px dotted;
 	}
 }
 .article .content blockquote,
 .article.quote > blockquote{
+	margin: 10px 0 20px;
+	padding: 20px;
+	border-radius: 10px;
+	background: #e6e7e8;
+	
 	& p{
-		margin: 10px 0;
-		padding: 20px 0;
-		border-radius: 10px;
-		background: #e6e7e8;
 		font-family: $heading-font;
 		font-size: 36px;
 		text-align: center;
 	}
+	
 	& cite{
+		display: block;
 		color: $bleu-principal;
 		font-size: 24px;
 		font-style:italic;
