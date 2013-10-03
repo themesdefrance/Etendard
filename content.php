@@ -25,4 +25,12 @@
 	<div class="content">
 		<?php the_content(__('Lire la suite', TEXT_TRANSLATION_DOMAIN)); ?>
 	</div>
+	<footer class="footer">
+		<?php 
+		wp_link_pages(array(
+			'before'=>'<div class="page-links"><span class="page-links-title">'.__('Pages:', TEXT_TRANSLATION_DOMAIN).'</span>', 
+			'after'=>'</div>'
+		));
+		?>
+	</footer>
 </article>

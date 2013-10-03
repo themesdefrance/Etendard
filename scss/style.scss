@@ -263,11 +263,22 @@ ul.articles .article{
 .article .header-meta .post-edit-link{
 	color: darken($gris-principal, 10);
 }
+.article .footer{
+	margin-top: 30px;
+	color: $gris-principal;
+	font-size: 14px;
+}
+.article .footer .page-links a{
+	color: darken($gris-principal, 10);
+}
 .article .content{
 	margin-bottom: 8px;
 	color: #122e3a;
 	line-height: 1.3;
 	
+	& *{
+		max-width:100%;
+	}
 	& h1{
 		font-size: 36px;
 		margin-bottom: 14px;
@@ -324,6 +335,18 @@ ul.articles .article{
 	& acronym{
 		cursor: help;
 		border-bottom: 1px dotted;
+	}
+	& .alignright{
+		float:right;
+		margin:5px 0 20px 20px;
+	}
+	& .alignleft{
+		float:left;
+		margin:5px 20px 20px 0;
+	}
+	& .aligncenter{
+		display:block;
+		margin:5px auto 5px auto;
 	}
 }
 .article .content blockquote,
