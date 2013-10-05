@@ -611,23 +611,18 @@ div.pagination{
 		outline: none;
 	}
 }
-.module-newsletter .form-submit{
-	display: inline-block;
-	@include etendard(12px);
-	background:$bleu-principal;
-	@include transition(background $default-transition-duration $default-transition-function);
-	
-	&:hover{
-		background:darken($bleu-principal,5);
-	}
-}
 .module-newsletter input[type="submit"]{
-	background:transparent;
+	background:$bleu-principal;
 	border: none;
 	margin: 0;
 	padding: 4px 20px;
 	color: #fff;
 	font-size: 16px;
+	@include transition(background $default-transition-duration $default-transition-function);
+	
+	&:hover{
+		background:darken($bleu-principal,5);
+	}
 }
 
 //module recherche

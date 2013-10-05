@@ -403,25 +403,26 @@ video {
 html {
   font-family: "Maven-Pro", Helvetica, Arial;
   color: #011f2c;
+  overflow-x: hidden;
 }
 
-/* line 21, scss/_base.scss */
+/* line 22, scss/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Sanchez", Georgia, Trebuchet, Helvetica, Arial;
 }
 
-/* line 24, scss/_base.scss */
+/* line 25, scss/_base.scss */
 p {
   font-size: 14px;
   line-height: 1.4;
 }
 
-/* line 28, scss/_base.scss */
+/* line 29, scss/_base.scss */
 a:visited {
   color: inherit;
 }
 
-/* line 60, scss/_base.scss */
+/* line 61, scss/_base.scss */
 .cta-button {
   display: inline-block;
   padding: 6px 35px;
@@ -435,15 +436,15 @@ a:visited {
   transition: all 0.2s ease-in;
   position: relative;
 }
-/* line 71, scss/_base.scss */
+/* line 72, scss/_base.scss */
 .cta-button:hover {
   background: #1894ae;
 }
-/* line 74, scss/_base.scss */
+/* line 75, scss/_base.scss */
 .cta-button:visited {
   color: #fff;
 }
-/* line 42, scss/_base.scss */
+/* line 43, scss/_base.scss */
 .cta-button:before {
   content: "";
   position: absolute;
@@ -454,7 +455,7 @@ a:visited {
   bottom: 0;
   border-left: 8px solid white;
 }
-/* line 51, scss/_base.scss */
+/* line 52, scss/_base.scss */
 .cta-button:after {
   content: "";
   position: absolute;
@@ -466,14 +467,14 @@ a:visited {
   border-right: 8px solid white;
 }
 
-/* line 81, scss/_base.scss */
+/* line 82, scss/_base.scss */
 .sidebar .module:nth-child(1),
 .sidebar .module:nth-child(2) {
   background-image: url("img/shinecaro.png");
   background-repeat: repeat;
 }
 
-/* line 86, scss/_base.scss */
+/* line 87, scss/_base.scss */
 [data-icon]:before, .icon-mail:before, .module-newsletter .form-email:before, .icon-search:before, form.search-form .search-submit-wrapper:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, ul.services .service:before, .icon-soundcloud:before, .icon-pinterest:before, .module-social li a {
   font-family: "icomoon";
   content: attr(data-icon);
@@ -493,62 +494,62 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-/* line 111, scss/_base.scss */
+/* line 112, scss/_base.scss */
 .icon-mail:before, .module-newsletter .form-email:before {
   content: "\e000";
 }
 
-/* line 114, scss/_base.scss */
+/* line 115, scss/_base.scss */
 .icon-search:before, form.search-form .search-submit-wrapper:before {
   content: "\e001";
 }
 
-/* line 117, scss/_base.scss */
+/* line 118, scss/_base.scss */
 .icon-google-plus:before {
   content: "\e002";
 }
 
-/* line 120, scss/_base.scss */
+/* line 121, scss/_base.scss */
 .icon-facebook:before {
   content: "\e003";
 }
 
-/* line 123, scss/_base.scss */
+/* line 124, scss/_base.scss */
 .icon-twitter:before {
   content: "\e004";
 }
 
-/* line 126, scss/_base.scss */
+/* line 127, scss/_base.scss */
 .icon-feed:before {
   content: "\e005";
 }
 
-/* line 129, scss/_base.scss */
+/* line 130, scss/_base.scss */
 .icon-youtube:before {
   content: "\e006";
 }
 
-/* line 132, scss/_base.scss */
+/* line 133, scss/_base.scss */
 .icon-vimeo:before {
   content: "\e007";
 }
 
-/* line 135, scss/_base.scss */
+/* line 136, scss/_base.scss */
 .icon-linkedin:before {
   content: "\e008";
 }
 
-/* line 138, scss/_base.scss */
+/* line 139, scss/_base.scss */
 .icon-skype:before, ul.services .service:before {
   content: "\e009";
 }
 
-/* line 141, scss/_base.scss */
+/* line 142, scss/_base.scss */
 .icon-soundcloud:before {
   content: "\e00a";
 }
 
-/* line 144, scss/_base.scss */
+/* line 145, scss/_base.scss */
 .icon-pinterest:before {
   content: "\e00b";
 }
@@ -871,7 +872,7 @@ ul.articles .article {
   font-style: normal;
   position: relative;
 }
-/* line 42, scss/_base.scss */
+/* line 43, scss/_base.scss */
 .article.teaser .header-title:before {
   content: "";
   position: absolute;
@@ -1276,63 +1277,34 @@ div.pagination a {
 }
 
 /* line 614, scss/style.scss */
-.module-newsletter .form-submit {
-  display: inline-block;
-  position: relative;
-  background: #1ba7c4;
-  -webkit-transition: background 0.2s ease-in;
-  -moz-transition: background 0.2s ease-in;
-  -o-transition: background 0.2s ease-in;
-  transition: background 0.2s ease-in;
-}
-/* line 42, scss/_base.scss */
-.module-newsletter .form-submit:before {
-  content: "";
-  position: absolute;
-  display: block;
-  border: 12px solid transparent;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  border-left: 6px solid white;
-}
-/* line 51, scss/_base.scss */
-.module-newsletter .form-submit:after {
-  content: "";
-  position: absolute;
-  display: block;
-  border: 12px solid transparent;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-right: 6px solid white;
-}
-/* line 620, scss/style.scss */
-.module-newsletter .form-submit:hover {
-  background: #1894ae;
-}
-
-/* line 624, scss/style.scss */
 .module-newsletter input[type="submit"] {
-  background: transparent;
+  background: #1ba7c4;
   border: none;
   margin: 0;
   padding: 4px 20px;
   color: #fff;
   font-size: 16px;
+  -webkit-transition: background 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+}
+/* line 623, scss/style.scss */
+.module-newsletter input[type="submit"]:hover {
+  background: #1894ae;
 }
 
-/* line 634, scss/style.scss */
+/* line 629, scss/style.scss */
 form.search-form span.screen-reader-text {
   display: none;
 }
 
-/* line 638, scss/style.scss */
+/* line 633, scss/style.scss */
 form.search-form {
   position: relative;
 }
 
-/* line 641, scss/style.scss */
+/* line 636, scss/style.scss */
 form.search-form input.search-field {
   display: inline-block;
   width: 100%;
@@ -1345,7 +1317,7 @@ form.search-form input.search-field {
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 650, scss/style.scss */
+/* line 645, scss/style.scss */
 form.search-form input.search-field:focus {
   border: 1px solid #939393;
   background: #e9ebeb;
@@ -1353,14 +1325,14 @@ form.search-form input.search-field:focus {
   outline: none;
 }
 
-/* line 657, scss/style.scss */
+/* line 652, scss/style.scss */
 form.search-form .search-submit-wrapper {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
 }
-/* line 664, scss/style.scss */
+/* line 659, scss/style.scss */
 form.search-form .search-submit-wrapper:before {
   position: absolute;
   top: 10px;
@@ -1369,7 +1341,7 @@ form.search-form .search-submit-wrapper:before {
   color: #1ba7c4;
 }
 
-/* line 672, scss/style.scss */
+/* line 667, scss/style.scss */
 form.search-form input.search-submit {
   display: block;
   height: 100%;
@@ -1380,17 +1352,17 @@ form.search-form input.search-submit {
   opacity: 0;
 }
 
-/* line 683, scss/style.scss */
+/* line 678, scss/style.scss */
 .module-social ul {
   list-style: none;
 }
 
-/* line 686, scss/style.scss */
+/* line 681, scss/style.scss */
 .module-social li {
   display: inline-block;
 }
 
-/* line 689, scss/style.scss */
+/* line 684, scss/style.scss */
 .module-social li a {
   display: inline-block;
   margin-right: 15px;
@@ -1405,7 +1377,7 @@ form.search-form input.search-submit {
   -o-transition: background 0.2s ease-in;
   transition: background 0.2s ease-in;
 }
-/* line 42, scss/_base.scss */
+/* line 43, scss/_base.scss */
 .module-social li a:before {
   content: "";
   position: absolute;
@@ -1416,7 +1388,7 @@ form.search-form input.search-submit {
   bottom: 0;
   border-left: 9px solid white;
 }
-/* line 51, scss/_base.scss */
+/* line 52, scss/_base.scss */
 .module-social li a:after {
   content: "";
   position: absolute;
@@ -1427,7 +1399,7 @@ form.search-form input.search-submit {
   bottom: 0;
   border-right: 9px solid white;
 }
-/* line 701, scss/style.scss */
+/* line 696, scss/style.scss */
 .module-social li a:hover {
   color: #fff;
   text-decoration: none;
