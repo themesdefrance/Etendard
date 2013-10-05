@@ -8,7 +8,13 @@
             ?>
 		</h2>
 		
-		<?php comment_form(); ?>
+		<?php comment_form(array(
+			'comment_notes_before'=>'',
+			'comment_notes_after'=>'',
+			'title_reply'=>'',
+			'title_reply_to'=>__('Répondre à %s', TEXT_TRANSLATION_DOMAIN),
+			'label_submit'=>__('Envoyer', TEXT_TRANSLATION_DOMAIN),
+		)); ?>
 		
 		<ol class="comment-list">
 			<?php wp_list_comments(array('callback'=>'shape_comment')); ?>

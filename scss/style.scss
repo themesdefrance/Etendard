@@ -373,6 +373,9 @@ ul.articles .article{
 }
 
 //commentaires
+.comments-area .comments-title{
+	margin-bottom: 15px;
+}
 .comment-list{
 	margin-top:20px;
 	list-style:none;
@@ -415,6 +418,46 @@ ul.articles .article{
 .comment ul.children{
 	list-style: none;
 	margin-left:30px;
+}
+
+//comment form
+#commentform > p{
+	margin-bottom: 10px;
+}
+#commentform label{
+	display:block;
+}
+#commentform #author,
+#commentform #email,
+#commentform #url,
+#commentform #comment{
+	border: none;
+	background: #f1f2f2;
+	padding: 12px 8px;
+	color: #6f6f6f;
+	font-style:italic;
+}
+#commentform #author,
+#commentform #email,
+#commentform #url{
+	width: 50%;
+}
+#commentform #comment{
+	width: 100%;
+}
+#commentform .form-submit{
+	text-align:right;
+}
+#commentform #submit{
+	background:$bleu-principal;
+	border: none;
+	padding: 6px 14px;
+	color: #fff;
+	@include transition(background $default-transition-duration $default-transition-function);
+	
+	&:hover{
+		background:darken($bleu-principal, 5);
+	}
 }
 
 //pagniation
