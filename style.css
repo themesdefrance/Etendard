@@ -1,5 +1,5 @@
 @charset "CP850";
-/*!
+/*
 Theme Name: Étendard
 Theme URI: http://themesdefrance.fr/etendard
 Author: Thèmes de France
@@ -277,7 +277,7 @@ ul.blog:after,
   /* Black prints faster: sanbeiji.com/archives/953 */
   /* line 9, scss/qb/modules/_print.scss */
   a, a:visited {
-    color: #444 !important;
+    color: #444444 !important;
     text-decoration: underline;
   }
 
@@ -299,7 +299,7 @@ ul.blog:after,
   /* Don't show links for images, or javascript/internal links */
   /* line 22, scss/qb/modules/_print.scss */
   pre, blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid;
   }
 
@@ -369,8 +369,18 @@ ul.portfolio li {
   width: 25%;
 }
 
+/* line 30, scss/qb/modules/_grid.scss */
+.col-1-5 {
+  width: 20%;
+}
+
+/* line 33, scss/qb/modules/_grid.scss */
+.col-4-5 {
+  width: 80%;
+}
+
 @media only screen and (max-width: 500px) {
-  /* line 32, scss/qb/modules/_grid.scss */
+  /* line 38, scss/qb/modules/_grid.scss */
   [class*='col-'] {
     width: 100%;
     padding-right: 0;
@@ -984,99 +994,154 @@ ul.articles .article {
 }
 
 /* line 376, scss/style.scss */
+.comment-list {
+  margin-top: 20px;
+  list-style: none;
+}
+
+/* line 380, scss/style.scss */
+.comment {
+  margin-bottom: 25px;
+}
+
+/* line 383, scss/style.scss */
+.comment .comment-header {
+  margin-bottom: 5px;
+}
+
+/* line 386, scss/style.scss */
+.comment .comment-author {
+  color: #1ba7c4;
+  font-family: "Sanchez", Georgia, Trebuchet, Helvetica, Arial;
+  font-size: 18px;
+  font-style: italic;
+}
+/* line 392, scss/style.scss */
+.comment .comment-author a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 397, scss/style.scss */
+.comment .reply a {
+  color: #b7b8b8;
+  font-family: "Sanchez", Georgia, Trebuchet, Helvetica, Arial;
+  font-size: 18px;
+  font-style: italic;
+  text-decoration: none;
+}
+/* line 404, scss/style.scss */
+.comment .reply a:before {
+  content: "\279d";
+  display: inline-block;
+  margin-right: 4px;
+}
+/* line 410, scss/style.scss */
+.comment .reply a:hover {
+  color: #9d9f9f;
+  text-decoration: underline;
+}
+
+/* line 415, scss/style.scss */
+.comment ul.children {
+  list-style: none;
+  margin-left: 30px;
+}
+
+/* line 421, scss/style.scss */
 div.pagination {
   text-align: center;
   color: #011f2c;
   font-size: 24px;
   font-style: italic;
 }
-/* line 383, scss/style.scss */
+/* line 428, scss/style.scss */
 div.pagination a, div.pagination span.current {
   display: inline-block;
   padding: 0 4px;
 }
-/* line 388, scss/style.scss */
+/* line 433, scss/style.scss */
 div.pagination a {
   color: #1ba7c4;
 }
 
-/* line 394, scss/style.scss */
+/* line 439, scss/style.scss */
 .main-footer {
   padding: 30px 0;
   color: #6d6e71;
 }
 
-/* line 408, scss/style.scss */
+/* line 453, scss/style.scss */
 .home-sidebar {
   padding: 30px 0;
   background: #e6e7e8;
 }
 
-/* line 412, scss/style.scss */
+/* line 457, scss/style.scss */
 .home-sidebar .module-newsletter {
   color: #1f7384;
   max-width: 400px;
   padding: 0 20px;
 }
 
-/* line 418, scss/style.scss */
+/* line 463, scss/style.scss */
 .home-sidebar .module-newsletter .form-submit:before {
   border-left-color: #e6e7e8;
 }
-/* line 421, scss/style.scss */
+/* line 466, scss/style.scss */
 .home-sidebar .module-newsletter .form-submit:after {
   border-right-color: #e6e7e8;
 }
 
-/* line 425, scss/style.scss */
+/* line 470, scss/style.scss */
 .home-sidebar .module-newsletter h3 {
   font-size: 18px;
 }
 
-/* line 430, scss/style.scss */
+/* line 475, scss/style.scss */
 .module {
   padding: 5px 10px 15px 5px;
   margin-bottom: 20px;
 }
-/* line 434, scss/style.scss */
+/* line 479, scss/style.scss */
 .module h3 {
   text-align: center;
   font-size: 24px;
   font-style: italic;
   margin-bottom: 10px;
 }
-/* line 440, scss/style.scss */
+/* line 485, scss/style.scss */
 .module ul, .module ol {
   list-style: none;
 }
-/* line 443, scss/style.scss */
+/* line 488, scss/style.scss */
 .module li {
   margin-bottom: 15px;
 }
-/* line 446, scss/style.scss */
+/* line 491, scss/style.scss */
 .module a {
   color: #011f2c;
   text-decoration: none;
 }
-/* line 450, scss/style.scss */
+/* line 495, scss/style.scss */
 .module a:hover {
   text-decoration: underline;
   color: #023145;
 }
 
-/* line 458, scss/style.scss */
+/* line 503, scss/style.scss */
 .module-newsletter {
   text-align: center;
 }
 
-/* line 461, scss/style.scss */
+/* line 506, scss/style.scss */
 .module-newsletter .form-email {
   position: relative;
   display: inline-block;
   margin: 5px 0;
   width: 80%;
 }
-/* line 468, scss/style.scss */
+/* line 513, scss/style.scss */
 .module-newsletter .form-email:before {
   position: absolute;
   right: 7px;
@@ -1085,23 +1150,23 @@ div.pagination a {
   font-size: 1.8rem;
 }
 
-/* line 476, scss/style.scss */
+/* line 521, scss/style.scss */
 .module-newsletter input[type="email"] {
   display: inline-block;
   width: 100%;
   margin-top: 5px;
   background: #fff;
-  border: 1px solid #fff;
+  border: 1px solid white;
   padding: 6px 4px;
   color: #333;
 }
-/* line 485, scss/style.scss */
+/* line 530, scss/style.scss */
 .module-newsletter input[type="email"]:focus {
   border-color: #8d8d8d;
   outline: none;
 }
 
-/* line 490, scss/style.scss */
+/* line 535, scss/style.scss */
 .module-newsletter .form-submit {
   display: inline-block;
   position: relative;
@@ -1133,12 +1198,12 @@ div.pagination a {
   bottom: 0;
   border-right: 6px solid white;
 }
-/* line 496, scss/style.scss */
+/* line 541, scss/style.scss */
 .module-newsletter .form-submit:hover {
   background: #1894ae;
 }
 
-/* line 500, scss/style.scss */
+/* line 545, scss/style.scss */
 .module-newsletter input[type="submit"] {
   background: transparent;
   border: none;
@@ -1148,17 +1213,17 @@ div.pagination a {
   font-size: 16px;
 }
 
-/* line 510, scss/style.scss */
+/* line 555, scss/style.scss */
 form.search-form span.screen-reader-text {
   display: none;
 }
 
-/* line 514, scss/style.scss */
+/* line 559, scss/style.scss */
 form.search-form {
   position: relative;
 }
 
-/* line 517, scss/style.scss */
+/* line 562, scss/style.scss */
 form.search-form input.search-field {
   display: inline-block;
   width: 100%;
@@ -1171,7 +1236,7 @@ form.search-form input.search-field {
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 526, scss/style.scss */
+/* line 571, scss/style.scss */
 form.search-form input.search-field:focus {
   border: 1px solid #939393;
   background: #e9ebeb;
@@ -1179,14 +1244,14 @@ form.search-form input.search-field:focus {
   outline: none;
 }
 
-/* line 533, scss/style.scss */
+/* line 578, scss/style.scss */
 form.search-form .search-submit-wrapper {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
 }
-/* line 540, scss/style.scss */
+/* line 585, scss/style.scss */
 form.search-form .search-submit-wrapper:before {
   position: absolute;
   top: 10px;
@@ -1195,7 +1260,7 @@ form.search-form .search-submit-wrapper:before {
   color: #1ba7c4;
 }
 
-/* line 548, scss/style.scss */
+/* line 593, scss/style.scss */
 form.search-form input.search-submit {
   display: block;
   height: 100%;
@@ -1206,17 +1271,17 @@ form.search-form input.search-submit {
   opacity: 0;
 }
 
-/* line 559, scss/style.scss */
+/* line 604, scss/style.scss */
 .module-social ul {
   list-style: none;
 }
 
-/* line 562, scss/style.scss */
+/* line 607, scss/style.scss */
 .module-social li {
   display: inline-block;
 }
 
-/* line 565, scss/style.scss */
+/* line 610, scss/style.scss */
 .module-social li a {
   display: inline-block;
   margin-right: 15px;
@@ -1253,7 +1318,7 @@ form.search-form input.search-submit {
   bottom: 0;
   border-right: 9px solid white;
 }
-/* line 577, scss/style.scss */
+/* line 622, scss/style.scss */
 .module-social li a:hover {
   color: #fff;
   text-decoration: none;
