@@ -1,27 +1,5 @@
 <?php /* Template Name: Home */ ?>
 <?php get_header(); ?>
-<header class="main-header">
-	<div class="wrapper">
-		<div class="logo-wrap">
-			<img src="" class="logo" />
-		</div>
-		<nav class="main-menu">
-			<ul>
-				<li>
-					<a href="#">
-						Accueil
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						A Propos
-					</a>
-				</li>
-			</ul>
-		</nav>
-	</div>
-</header>
-
 <section class="description">
 	<div class="wrapper">
 		<h1>

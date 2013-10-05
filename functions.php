@@ -1,6 +1,8 @@
 <?php
 define('TEXT_TRANSLATION_DOMAIN', 'etendard');
 				
+register_nav_menu('primary', __('Menu principal', TEXT_TRANSLATION_DOMAIN));
+				
 register_sidebar(array(
 		'name'          => __('Widgets de pied de page', TEXT_TRANSLATION_DOMAIN),
 		'id'            => 'footer',

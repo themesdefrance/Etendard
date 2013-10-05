@@ -15,25 +15,61 @@
 .main-header .main-menu{
 	float: right;
 }
-.main-header .main-menu ul{
+.main-menu ul{
 	list-style: none;
 }
-.main-header .main-menu li{
+.main-menu li{
 	display: inline;
 }
-.main-header .main-menu a{
+.main-menu a{
 	display: inline-block;
-	margin: 0 12px;
-	padding: 10px 0 2px;
+	padding: 10px 12px;
 	text-decoration: none;
 	font-size: 18px;
 	border-bottom: 3px solid transparent;
 	color: inherit;
-	@include transition(border-bottom $default-transition-duration $default-transition-function);
+	@include transition();
 	
 	&:hover{
-		border-bottom-color: $bleu-principal;
+		background: $bleu-principal;
+		color: #fff;
 	}
+}
+.toplevel > li{
+	position: relative;
+}
+.toplevel > li > a.active{
+	border-bottom: 2px solid $bleu-principal;
+}
+.main-menu .sub-menu{
+	display:block;
+	height:0;
+	opacity:0;
+	overflow:hidden;
+	position: absolute;
+	z-index:1;
+	top: 120%;
+	left: 0;
+	min-width: 200px;
+	background:#fff;
+	border: 1px solid #cacbcb;
+	@include transition(opacity $default-transition-duration $default-transition-function);
+	
+	&:before{
+		content: "";
+		display:block;
+		width: 100%;
+		border-bottom: 3px solid $bleu-principal;
+	}
+}
+.toplevel > li:hover .sub-menu{
+	display:block;
+	opacity:1;
+	height:auto;
+}
+.main-menu .sub-menu a{
+	display:block;
+	font-size: 14px;
 }
 
 //commun a plusieurs modules

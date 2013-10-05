@@ -29,6 +29,23 @@
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+	<header class="main-header">
+		<div class="wrapper">
+			<div class="logo-wrap">
+				<img src="http://placehold.it/200x80" class="logo" />
+			</div>
+			<?php
+			wp_nav_menu(array(
+				'theme_location'=>'primary',
+				'container'=>'nav',
+				'container_class'=>'main-menu',
+				'menu_class'=>'toplevel',
+				'depth'=>2
+			)); 
+			?>
+		</div>
+	</header>
