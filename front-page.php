@@ -116,109 +116,51 @@
 	</div>
 </section>
 
+<?php $posts = new WP_Query(array('posts_per_page'=>3)); ?>
+<?php if ($posts->have_posts()){ ?>
 <section class="blog">
 	<div class="wrapper">
 		<h2 class="center">
 			Derniers articles
 		</h2>
 		<ul class="blog">
+			<?php while ($posts->have_posts()) : $posts->the_post(); ?>
 			<li>
 				<article class="article teaser">
 					<header class="header">
-						<img src="http://placehold.it/500x300" />
+						<?php if (has_post_thumbnail() && !post_password_required()): ?>
+						<div class="entry-thumbnail">
+							<?php the_post_thumbnail(); ?>
+						</div>
+						<?php endif; ?>
 						<h3 class="header-title">
-							<a href="">
-								Article 1
+							<a href="<?php the_permalink(); ?>">
+								<?php the_title(); ?>
 							</a>
 						</h3>
 						<span class="header-meta">
-							12 Janvier 2013 | 4 Commentaires
+							<?php echo sprintf('%2$s', get_post_format_string(get_post_format()), get_the_date()); ?> |
+							<?php comments_number(__('Aucun commentaire', TEXT_TRANSLATION_DOMAIN), __('Un commentaire', TEXT_TRANSLATION_DOMAIN), __('% commentaires', TEXT_TRANSLATION_DOMAIN)); ?> 
 						</span>
 					</header>
 					<div class="content">
-						<p>
-							Cum saepe multa, tum memini do
- in hemicyclio sedentem, ut soat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et pauci admo dumfamiliares ego essem.
-						</p>
+						<?php the_excerpt(); ?>
 					</div>
-					<a href="" class="more-link">
-						Lire la suite
+					<a href="<?php the_permalink(); ?>" class="more-link">
+						<?php _e('Lire la suite', TEXT_TRANSLATION_DOMAIN); ?>
 					</a>
 				</article>
 			</li>
-			<li>
-				<article class="article teaser">
-					<header class="header">
-						<img src="http://placehold.it/500x300" />
-						<h3 class="header-title">
-							Article 1
-						</h3>
-						<span class="header-meta">
-							12 Janvier 2013 | 4 Commentaires
-						</span>
-					</header>
-					<div class="content">
-						<p>
-							Cum saepe multa, tum memini do
- in hemicyclio sedentem, ut soat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et pauci admo dumfamiliares ego essem.
-						</p>
-					</div>
-					<a href="" class="more-link">
-						Lire la suite
-					</a>
-				</article>
-			</li>
-			<li>
-				<article class="article teaser">
-					<header class="header">
-						<img src="http://placehold.it/500x300" />
-						<h3 class="header-title">
-							Article 1
-						</h3>
-						<span class="header-meta">
-							12 Janvier 2013 | 4 Commentaires
-						</span>
-					</header>
-					<div class="content">
-						<p>
-							Cum saepe multa, tum memini do
- in hemicyclio sedentem, ut soat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et pauci admo dumfamiliares ego essem.
-						</p>
-					</div>
-					<a href="" class="more-link">
-						Lire la suite
-					</a>
-				</article>
-			</li>
-			<li>
-				<article class="article teaser">
-					<header class="header">
-						<img src="http://placehold.it/500x300" />
-						<h3 class="header-title">
-							Article 1
-						</h3>
-						<span class="header-meta">
-							12 Janvier 2013 | 4 Commentaires
-						</span>
-					</header>
-					<div class="content">
-						<p>
-							Cum saepe multa, tum memini do
- in hemicyclio sedentem, ut soat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et pauci admo dumfamiliares ego essem.
-						</p>
-					</div>
-					<a href="" class="more-link">
-						Lire la suite
-					</a>
-				</article>
-			</li>
+			<?php endwhile; ?>
 		</ul>
 		<div class="cta-wrapper">
 			<a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="cta-button">
-				Consulter les articles
+				<?php _e('Consulter les articles', TEXT_TRANSLATION_DOMAIN); ?>
 			</a>
 		</div>
 	</div>
 </section>
+<?php } ?>
+<?php wp_reset_postdata(); ?>
 
 <?php get_footer(); ?>

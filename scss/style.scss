@@ -8,6 +8,7 @@
 
 .main-header{
 	@extend .clearfix;
+	margin-top: 20px;
 }
 .main-header .logo-wrap{
 	float: left;
@@ -286,6 +287,10 @@ ul.articles .article{
 		background: $bleu-principal;
 		width: 20px;
 	}
+}
+.article.teaser .entry-thumbnail{
+	max-height:150px;
+	overflow:hidden;
 }
 .article.alternate .header-image{
 	float: left;
