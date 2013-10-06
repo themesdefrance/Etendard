@@ -36,7 +36,9 @@
 	<header class="main-header">
 		<div class="wrapper">
 			<div class="logo-wrap">
-				<img src="http://placehold.it/200x80" class="logo" />
+				<a href="<?php echo home_url( '/' ); ?>">
+					<img src="http://placehold.it/200x80" class="logo" />
+				</a>
 			</div>
 			<?php
 			wp_nav_menu(array(
