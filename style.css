@@ -1221,7 +1221,7 @@ div.pagination a {
 
 /* line 559, scss/style.scss */
 .module {
-  padding: 5px 10px 15px 5px;
+  padding: 5px 15px 15px;
   margin-bottom: 20px;
 }
 /* line 563, scss/style.scss */
@@ -1331,8 +1331,8 @@ form.search-form input.search-field {
 /* line 650, scss/style.scss */
 form.search-form input.search-field:focus {
   border: 1px solid #939393;
-  background: #e9ebeb;
-  color: #9a9a9a;
+  background: #f9f9f9;
+  color: #cccccc;
   outline: none;
 }
 
