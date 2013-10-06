@@ -7,20 +7,20 @@ register_sidebar(array(
 		'name'          => __('Widgets de pied de page', TEXT_TRANSLATION_DOMAIN),
 		'id'            => 'footer',
 		'description'   => __('Section apparaissant en bas de toutes les pages.', TEXT_TRANSLATION_DOMAIN),
-		'before_widget' => '',
-		'after_widget'  => '',
-		'before_title'  => '',
-		'after_title'   => '',
+		'before_widget' => '<div id="%1$s" class="module %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
 	));
 	
 register_sidebar(array(
 		'name'          => __('Widgets de blog', TEXT_TRANSLATION_DOMAIN),
 		'id'            => 'blog',
 		'description'   => __('Barre latérale sur les pages du blog.', TEXT_TRANSLATION_DOMAIN),
-		'before_widget' => '',
-		'after_widget'  => '',
-		'before_title'  => '',
-		'after_title'   => '',
+		'before_widget' => '<div id="%1$s" class="module %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
 	));
 	
 add_theme_support('post-thumbnails');
