@@ -582,6 +582,9 @@ div.pagination{
 	padding: 5px 15px 15px;
 	margin-bottom: 20px;
 	
+	& *{
+		max-width:100%;
+	}
 	& h3{
 		text-align: center;
 		font-size: 24px;
@@ -602,6 +605,12 @@ div.pagination{
 			text-decoration:underline;
 			color:lighten($body-copy-color, 5);
 		}
+	}
+	& table{
+		width: 100%;
+	}
+	& td{
+		text-align:center;
 	}
 }
 
@@ -725,4 +734,17 @@ form.search-form input.search-submit{
 		text-decoration:none;
 		background:darken($bleu-principal,5);
 	}
+}
+
+//calendrier
+.widget_calendar table caption{
+	font-family: $heading-font;
+	font-size: 20px;
+}
+.widget_calendar td{
+	padding: 8px 0;
+}
+.widget_calendar #today{
+	background: $bleu-principal;
+	color: #fff;
 }

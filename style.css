@@ -1246,44 +1246,56 @@ div.pagination a {
   margin-bottom: 20px;
 }
 /* line 585, scss/style.scss */
+.module * {
+  max-width: 100%;
+}
+/* line 588, scss/style.scss */
 .module h3 {
   text-align: center;
   font-size: 24px;
   font-style: italic;
   margin-bottom: 10px;
 }
-/* line 591, scss/style.scss */
+/* line 594, scss/style.scss */
 .module ul, .module ol {
   list-style: none;
 }
-/* line 594, scss/style.scss */
+/* line 597, scss/style.scss */
 .module li {
   margin-bottom: 15px;
 }
-/* line 597, scss/style.scss */
+/* line 600, scss/style.scss */
 .module a {
   color: #011f2c;
   text-decoration: none;
 }
-/* line 601, scss/style.scss */
+/* line 604, scss/style.scss */
 .module a:hover {
   text-decoration: underline;
   color: #023145;
 }
-
 /* line 609, scss/style.scss */
+.module table {
+  width: 100%;
+}
+/* line 612, scss/style.scss */
+.module td {
+  text-align: center;
+}
+
+/* line 618, scss/style.scss */
 .widget_etendardnewsletter {
   text-align: center;
 }
 
-/* line 612, scss/style.scss */
+/* line 621, scss/style.scss */
 .widget_etendardnewsletter .form-email {
   position: relative;
   display: inline-block;
   margin: 5px 0;
   width: 80%;
 }
-/* line 619, scss/style.scss */
+/* line 628, scss/style.scss */
 .widget_etendardnewsletter .form-email:before {
   position: absolute;
   right: 7px;
@@ -1292,7 +1304,7 @@ div.pagination a {
   font-size: 1.8rem;
 }
 
-/* line 627, scss/style.scss */
+/* line 636, scss/style.scss */
 .widget_etendardnewsletter input[type="email"] {
   display: inline-block;
   width: 100%;
@@ -1302,13 +1314,13 @@ div.pagination a {
   padding: 6px 4px;
   color: #333;
 }
-/* line 636, scss/style.scss */
+/* line 645, scss/style.scss */
 .widget_etendardnewsletter input[type="email"]:focus {
   border-color: #8d8d8d;
   outline: none;
 }
 
-/* line 641, scss/style.scss */
+/* line 650, scss/style.scss */
 .widget_etendardnewsletter input[type="submit"] {
   background: #1ba7c4;
   border: none;
@@ -1321,22 +1333,22 @@ div.pagination a {
   -o-transition: background 0.2s ease-in;
   transition: background 0.2s ease-in;
 }
-/* line 650, scss/style.scss */
+/* line 659, scss/style.scss */
 .widget_etendardnewsletter input[type="submit"]:hover {
   background: #1894ae;
 }
 
-/* line 656, scss/style.scss */
+/* line 665, scss/style.scss */
 form.search-form span.screen-reader-text {
   display: none;
 }
 
-/* line 660, scss/style.scss */
+/* line 669, scss/style.scss */
 form.search-form {
   position: relative;
 }
 
-/* line 663, scss/style.scss */
+/* line 672, scss/style.scss */
 form.search-form input.search-field {
   display: inline-block;
   width: 100%;
@@ -1349,7 +1361,7 @@ form.search-form input.search-field {
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 672, scss/style.scss */
+/* line 681, scss/style.scss */
 form.search-form input.search-field:focus {
   border: 1px solid #939393;
   background: #f9f9f9;
@@ -1357,14 +1369,14 @@ form.search-form input.search-field:focus {
   outline: none;
 }
 
-/* line 679, scss/style.scss */
+/* line 688, scss/style.scss */
 form.search-form .search-submit-wrapper {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
 }
-/* line 686, scss/style.scss */
+/* line 695, scss/style.scss */
 form.search-form .search-submit-wrapper:before {
   position: absolute;
   top: 10px;
@@ -1373,7 +1385,7 @@ form.search-form .search-submit-wrapper:before {
   color: #1ba7c4;
 }
 
-/* line 694, scss/style.scss */
+/* line 703, scss/style.scss */
 form.search-form input.search-submit {
   display: block;
   height: 100%;
@@ -1384,17 +1396,17 @@ form.search-form input.search-submit {
   opacity: 0;
 }
 
-/* line 705, scss/style.scss */
+/* line 714, scss/style.scss */
 .module-social ul {
   list-style: none;
 }
 
-/* line 708, scss/style.scss */
+/* line 717, scss/style.scss */
 .module-social li {
   display: inline-block;
 }
 
-/* line 711, scss/style.scss */
+/* line 720, scss/style.scss */
 .module-social li a {
   display: inline-block;
   margin-right: 15px;
@@ -1431,9 +1443,26 @@ form.search-form input.search-submit {
   bottom: 0;
   border-right: 9px solid white;
 }
-/* line 723, scss/style.scss */
+/* line 732, scss/style.scss */
 .module-social li a:hover {
   color: #fff;
   text-decoration: none;
   background: #1894ae;
+}
+
+/* line 740, scss/style.scss */
+.widget_calendar table caption {
+  font-family: "Sanchez", Georgia, Trebuchet, Helvetica, Arial;
+  font-size: 20px;
+}
+
+/* line 744, scss/style.scss */
+.widget_calendar td {
+  padding: 8px 0;
+}
+
+/* line 747, scss/style.scss */
+.widget_calendar #today {
+  background: #1ba7c4;
+  color: #fff;
 }
