@@ -3,10 +3,10 @@
 <section class="description">
 	<div class="wrapper">
 		<h1>
-			Le titre du site
+			<?php echo get_bloginfo('title'); ?>
 		</h1>
 		<p>
-			Une description sommaire pour faire bien.
+			<?php echo get_bloginfo('description'); ?>
 		</p>
 	</div>
 </section>
