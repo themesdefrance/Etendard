@@ -17,7 +17,7 @@
 		)); ?>
 		
 		<ol class="comment-list">
-			<?php wp_list_comments(array('callback'=>'shape_comment')); ?>
+			<?php wp_list_comments(array('callback'=>'etendard_comment')); ?>
 		</ol><!-- .commentlist -->
  
         <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
