@@ -545,8 +545,8 @@ div.pagination{
 //sidebar normale
 .sidebar{
 }
-.sidebar .module:nth-child(1),
-.sidebar .module:nth-child(2){
+.sidebar .widget:nth-child(1),
+.sidebar .widget:nth-child(2){
 	@extend %dotted-background;
 }
 
@@ -556,7 +556,7 @@ div.pagination{
 	background: #e6e7e8;
 	@extend .grid;
 }
-.home-sidebar .module{
+.home-sidebar .widget{
 	@extend .col-1-3;
 	@extend %grid-col;
 }
@@ -573,12 +573,12 @@ div.pagination{
 		border-right-color: #e6e7e8;
 	}
 }
-.home-sidebar .module-newsletter h3{
+.home-sidebar .widget_etendardnewsletter h3{
 	font-size: 18px;
 }
 
 //modules
-.module{
+.widget{
 	padding: 5px 15px 15px;
 	margin-bottom: 20px;
 	
