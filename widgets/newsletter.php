@@ -13,35 +13,47 @@ class EtendardNewsletter extends WP_Widget{
 			__('Newsletter', TEXT_TRANSLATION_DOMAIN),
 			array('description'=>__('Inscription à une newsletter', TEXT_TRANSLATION_DOMAIN),)
 		);
+		
+		if(isset($_POST['etendard-nl-submit'])) {
+			add_action('init', array($this, 'process'));
+		}
 	}
 	
 	public function widget($args, $instance){
-//		var_dump($instance);
 		$cta = (isset($instance['cta'])) ? $instance['cta'] : __($this->defaults['cta'], TEXT_TRANSLATION_DOMAIN);
 		
 		echo $args['before_widget'];
 		
 		if (isset($instance['title'])){
-			echo $args['before_title'];
-			echo $instance['title'];
-			echo $args['after_title'];
+			echo $args['before_title'].$instance['title'].$args['after_title'];
 		}
 		?>
+		
 		<?php if (isset($instance['description'])){ ?>
 		<p>
 			<?php echo $instance['description']; ?>
 		</p>
 		<?php } ?>
-		<form>
+		<form action="" method="post">
+			<input type="hidden" name="etendard-nl-nonce" value="<?php echo wp_create_nonce('register-newsletter'); ?>" />
 			<span class="form-email">
-				<input type="email" />
+				<input type="email" name="etendard-nl-email" />
 			</span>
 			<span class="form-submit">
-				<input type="submit" value="<?php echo $cta; ?>" />
+				<input type="submit" name="etendard-nl-submit" value="<?php echo $cta; ?>" />
 			</span>
 		</form>
 		<?php
 		echo $args['after_widget'];
+	}
+	
+	public function process(){
+		$email = (isset($_POST['etendard-nl-email'])) ? $_POST['etendard-nl-email'] : '';
+		$nonce = (isset($_POST['etendard-nl-nonce'])) ? $_POST['etendard-nl-nonce'] : '';
+		
+		if (wp_verify_nonce($nonce, 'register-newsletter') && filter_var($email, FILTER_VALIDATE_EMAIL) !== false){
+			var_dump('register '.$email);
+		}
 	}
 	
 	public function form($instance){
