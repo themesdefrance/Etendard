@@ -1,6 +1,8 @@
 <?php
 define('TEXT_TRANSLATION_DOMAIN', 'etendard');
 				
+require_once 'widgets/newsletter.php';
+
 register_nav_menu('primary', __('Menu principal', TEXT_TRANSLATION_DOMAIN));
 				
 register_sidebar(array(
@@ -22,6 +24,10 @@ register_sidebar(array(
 		'before_title'  => '<h3>',
 		'after_title'   => '</h3>',
 	));
+	
+add_action('widgets_init', function(){
+     register_widget('EtendardNewsletter');
+});
 	
 add_theme_support('post-thumbnails');
 

@@ -476,7 +476,7 @@ a:visited {
 }
 
 /* line 87, scss/_base.scss */
-[data-icon]:before, .icon-mail:before, .module-newsletter .form-email:before, .icon-search:before, form.search-form .search-submit-wrapper:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, ul.services .service:before, .icon-soundcloud:before, .icon-pinterest:before, .module-social li a {
+[data-icon]:before, .icon-mail:before, .widget_etendardnewsletter .form-email:before, .icon-search:before, form.search-form .search-submit-wrapper:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, ul.services .service:before, .icon-soundcloud:before, .icon-pinterest:before, .module-social li a {
   font-family: "icomoon";
   content: attr(data-icon);
   speak: none;
@@ -496,7 +496,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 /* line 112, scss/_base.scss */
-.icon-mail:before, .module-newsletter .form-email:before {
+.icon-mail:before, .widget_etendardnewsletter .form-email:before {
   content: "\e000";
 }
 
@@ -1200,18 +1200,18 @@ div.pagination a {
 }
 
 /* line 546, scss/style.scss */
-.home-sidebar .module-newsletter {
+.home-sidebar .widget_etendardnewsletter {
   color: #1f7384;
   max-width: 400px;
   padding: 0 20px;
 }
 
 /* line 552, scss/style.scss */
-.home-sidebar .module-newsletter .form-submit:before {
+.home-sidebar .widget_etendardnewsletter .form-submit:before {
   border-left-color: #e6e7e8;
 }
 /* line 555, scss/style.scss */
-.home-sidebar .module-newsletter .form-submit:after {
+.home-sidebar .widget_etendardnewsletter .form-submit:after {
   border-right-color: #e6e7e8;
 }
 
@@ -1252,19 +1252,19 @@ div.pagination a {
 }
 
 /* line 592, scss/style.scss */
-.module-newsletter {
+.widget_etendardnewsletter {
   text-align: center;
 }
 
 /* line 595, scss/style.scss */
-.module-newsletter .form-email {
+.widget_etendardnewsletter .form-email {
   position: relative;
   display: inline-block;
   margin: 5px 0;
   width: 80%;
 }
 /* line 602, scss/style.scss */
-.module-newsletter .form-email:before {
+.widget_etendardnewsletter .form-email:before {
   position: absolute;
   right: 7px;
   top: 7px;
@@ -1273,7 +1273,7 @@ div.pagination a {
 }
 
 /* line 610, scss/style.scss */
-.module-newsletter input[type="email"] {
+.widget_etendardnewsletter input[type="email"] {
   display: inline-block;
   width: 100%;
   margin-top: 5px;
@@ -1283,13 +1283,13 @@ div.pagination a {
   color: #333;
 }
 /* line 619, scss/style.scss */
-.module-newsletter input[type="email"]:focus {
+.widget_etendardnewsletter input[type="email"]:focus {
   border-color: #8d8d8d;
   outline: none;
 }
 
 /* line 624, scss/style.scss */
-.module-newsletter input[type="submit"] {
+.widget_etendardnewsletter input[type="submit"] {
   background: #1ba7c4;
   border: none;
   margin: 0;
@@ -1302,7 +1302,7 @@ div.pagination a {
   transition: background 0.2s ease-in;
 }
 /* line 633, scss/style.scss */
-.module-newsletter input[type="submit"]:hover {
+.widget_etendardnewsletter input[type="submit"]:hover {
   background: #1894ae;
 }
 
