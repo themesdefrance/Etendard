@@ -1,11 +1,11 @@
 @charset "CP850";
-/*
+/*!
 Theme Name: Étendard
 Theme URI: http://themesdefrance.fr/etendard
 Author: Thèmes de France
 Author URI: http://themesdefrance.fr
 Description: 
-Version: 1.0
+Version: 1.000
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: 
@@ -278,7 +278,7 @@ ul.blog:after,
   /* Black prints faster: sanbeiji.com/archives/953 */
   /* line 9, scss/qb/modules/_print.scss */
   a, a:visited {
-    color: #444444 !important;
+    color: #444 !important;
     text-decoration: underline;
   }
 
@@ -300,7 +300,7 @@ ul.blog:after,
   /* Don't show links for images, or javascript/internal links */
   /* line 22, scss/qb/modules/_print.scss */
   pre, blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 
@@ -1278,7 +1278,7 @@ div.pagination a {
   width: 100%;
   margin-top: 5px;
   background: #fff;
-  border: 1px solid white;
+  border: 1px solid #fff;
   padding: 6px 4px;
   color: #333;
 }
