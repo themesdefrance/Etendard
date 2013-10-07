@@ -406,6 +406,11 @@ ul.articles .article{
 		display:block;
 		margin:5px auto 5px auto;
 	}
+	& .wp-caption-text{
+		padding: 2px 0;
+		color: #8d8d8d;
+		text-align:center;
+	}
 }
 .article .content blockquote,
 .article.quote > blockquote{
