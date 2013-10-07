@@ -1,5 +1,5 @@
 @charset "CP850";
-/*!
+/*
 Theme Name: Étendard
 Theme URI: http://themesdefrance.fr/etendard
 Author: Thèmes de France
@@ -278,7 +278,7 @@ ul.blog:after,
   /* Black prints faster: sanbeiji.com/archives/953 */
   /* line 9, scss/qb/modules/_print.scss */
   a, a:visited {
-    color: #444 !important;
+    color: #444444 !important;
     text-decoration: underline;
   }
 
@@ -300,7 +300,7 @@ ul.blog:after,
   /* Don't show links for images, or javascript/internal links */
   /* line 22, scss/qb/modules/_print.scss */
   pre, blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid;
   }
 
@@ -476,7 +476,7 @@ a:visited {
 }
 
 /* line 87, scss/_base.scss */
-[data-icon]:before, .icon-mail:before, .widget_etendardnewsletter .form-email:before, .icon-search:before, form.search-form .search-submit-wrapper:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, ul.services .service:before, .icon-soundcloud:before, .icon-pinterest:before, .module-social li a {
+[data-icon]:before, .icon-mail:before, .widget_etendardnewsletter .form-email:before, .icon-search:before, form.search-form .search-submit-wrapper:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, ul.services .service:before, .icon-soundcloud:before, .icon-pinterest:before, .widget_etendardsocial li a {
   font-family: "icomoon";
   content: attr(data-icon);
   speak: none;
@@ -1316,7 +1316,7 @@ div.pagination a {
   width: 100%;
   margin-top: 5px;
   background: #fff;
-  border: 1px solid #fff;
+  border: 1px solid white;
   padding: 6px 4px;
   color: #333;
 }
@@ -1403,17 +1403,17 @@ form.search-form input.search-submit {
 }
 
 /* line 719, scss/style.scss */
-.module-social ul {
+.widget_etendardsocial ul {
   list-style: none;
 }
 
 /* line 722, scss/style.scss */
-.module-social li {
+.widget_etendardsocial li {
   display: inline-block;
 }
 
 /* line 725, scss/style.scss */
-.module-social li a {
+.widget_etendardsocial li a {
   display: inline-block;
   margin-right: 15px;
   padding: 7px 13px;
@@ -1428,7 +1428,7 @@ form.search-form input.search-submit {
   transition: background 0.2s ease-in;
 }
 /* line 43, scss/_base.scss */
-.module-social li a:before {
+.widget_etendardsocial li a:before {
   content: "";
   position: absolute;
   display: block;
@@ -1439,7 +1439,7 @@ form.search-form input.search-submit {
   border-left: 9px solid white;
 }
 /* line 52, scss/_base.scss */
-.module-social li a:after {
+.widget_etendardsocial li a:after {
   content: "";
   position: absolute;
   display: block;
@@ -1450,7 +1450,7 @@ form.search-form input.search-submit {
   border-right: 9px solid white;
 }
 /* line 737, scss/style.scss */
-.module-social li a:hover {
+.widget_etendardsocial li a:hover {
   color: #fff;
   text-decoration: none;
   background: #1894ae;

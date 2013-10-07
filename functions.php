@@ -2,6 +2,7 @@
 define('TEXT_TRANSLATION_DOMAIN', 'etendard');
 				
 require_once 'widgets/newsletter.php';
+require_once 'widgets/social.php';
 
 function etendard_setup(){
 	register_nav_menu('primary', __('Menu principal', TEXT_TRANSLATION_DOMAIN));
@@ -38,6 +39,7 @@ function etendard_setup(){
 add_action('after_setup_theme', 'etendard_setup');
 add_action('widgets_init', function(){
      register_widget('EtendardNewsletter');
+     register_widget('EtendardSocial');
 });
 
 if (!function_exists('etendard_get_avatar')){
