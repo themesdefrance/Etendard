@@ -22,14 +22,11 @@
  
         <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
 		<nav role="navigation" id="comment-nav-below" class="comment-navigation">
-			<h1 class="assistive-text">
-				<?php _e('Comment navigation', 'shape'); ?>
-			</h1>
 			<div class="nav-previous">
-            	<?php previous_comments_link(__('&larr; Older Comments', TEXT_TRANSLATION_DOMAIN)); ?>
+            	<?php previous_comments_link(__('Commentaires précédents', TEXT_TRANSLATION_DOMAIN)); ?>
             </div>
             <div class="nav-next">
-            	<?php next_comments_link(__('Newer Comments &rarr;', TEXT_TRANSLATION_DOMAIN)); ?>
+            	<?php next_comments_link(__('Commentaires suivants', TEXT_TRANSLATION_DOMAIN)); ?>
             </div>
         </nav><!-- #comment-nav-before .site-navigation .comment-navigation -->
         <?php endif; // check for comment navigation ?>
@@ -38,7 +35,7 @@
  
     <?php if (!comments_open() && get_comments_number() != '0' && post_type_supports(get_post_type(), 'comments')) : ?>
 		<p class="nocomments">
-			<?php _e('Comments are closed.', TEXT_TRANSLATION_DOMAIN); ?>
+			<?php _e('Les commentaires sont clos.', TEXT_TRANSLATION_DOMAIN); ?>
 		</p>
 	<?php endif; ?>
 </div><!-- #comments .comments-area -->
