@@ -377,6 +377,23 @@ ul.articles .article{
 		cursor: help;
 		border-bottom: 1px dotted;
 	}
+	& tr{
+		border-bottom: 1px solid #bfbfbf;
+		
+		&:last-child{
+			border-bottom: none;
+		}
+		&:nth-child(even){
+			background: #f7f7f7;
+		}
+	}
+	& th{
+		text-align:center;
+	}
+	& td,
+	& th{
+		padding: 8px 4px;
+	}
 	& .alignright{
 		float:right;
 		margin:5px 0 20px 20px;
