@@ -41,7 +41,16 @@ function etendard_setup(){
 //	load_theme_textdomain(TEXT_TRANSLATION_DOMAIN, get_template_directory().'/local');
 }
 
+function etendard_enqueue(){
+	$theme = get_theme(get_current_theme());
+	
+	wp_enqueue_style('fonts', 'http://fonts.googleapis.com/css?family=Sanchez:400,400italic|Maven+Pro:400,700&subset=latin,latin-ext', array(), $theme['version']);
+	wp_enqueue_style('icons', get_template_directory_uri().'/fonts/style.css', array(), $theme['version']);
+	wp_enqueue_style('stylesheet', get_template_directory_uri().'/style.css', array(), $theme['version']);
+}
+
 add_action('after_setup_theme', 'etendard_setup');
+add_action('wp_enqueue_scripts', 'etendard_enqueue');
 add_action('widgets_init', function(){
      register_widget('EtendardNewsletter');
      register_widget('EtendardSocial');

@@ -22,10 +22,6 @@
 	<!-- Candy -->
 	<link rel="dns-prefetch" href="//ajax.googleapis.com" />
 	
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/style.css">
-	<link href='http://fonts.googleapis.com/css?family=Sanchez:400,400italic|Maven+Pro:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?v=0">
-	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	
 	<!-- Scripts that need to be loaded first -->

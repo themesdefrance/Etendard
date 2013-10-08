@@ -7,3 +7,5 @@ http_images_path = "img"
 http_generated_images_path = "img"
 
 javascripts_dir = "../../js"
+
+output_style = :compressed #:expanded or :nested or :compact or :compressed
