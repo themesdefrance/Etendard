@@ -28,6 +28,11 @@ function etendard_setup(){
 	));
 	
 	add_theme_support('post-thumbnails');
+	add_theme_support('custom-header', array(
+		'header-text'=>false,
+		'height'=>200,
+		'admin-preview-callback'=>'etendard_admin_header_image',
+	));
 	
 	add_theme_support('post-formats', array(
 		'chat', 'image', 'link', 'quote', 'status', 'video'
@@ -42,6 +47,20 @@ add_action('widgets_init', function(){
      register_widget('EtendardSocial');
 });
 
+//function etendard_menu(){
+//	add_theme_page('Étendard', 'Étendard', 'edit_theme_options', 'etendard-options', 'etendard_options');
+//}
+//
+//function etendard_options(){
+//	if (!current_user_can('edit_theme_options')) {
+//		wp_die(__('You do not have sufficient permissions to access this page.'));
+//	}
+//	
+//	require 'admin/index.php';
+//}
+//
+//add_action('admin_menu', 'etendard_menu');
+
 if (!function_exists('etendard_get_avatar')){
 	function etendard_get_avatar($avatar){
 		$avatar = preg_replace("/\s(width|height)='\d+'/", ' ', $avatar);
@@ -50,6 +69,14 @@ if (!function_exists('etendard_get_avatar')){
 	add_filter('get_avatar', 'etendard_get_avatar');
 }
 
+//fonctions persos
+if (!function_exists('etendard_admin_header_image')){
+	function etendard_admin_header_image(){
+	?>
+	<img src="<?php header_image(); ?>" alt="<?php echo get_bloginfo('title'); ?>" />
+	<?php
+	}
+}
 
 if (!function_exists('etendard_posts_nav')){
 	//derived from http://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/

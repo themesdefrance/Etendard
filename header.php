@@ -23,7 +23,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Sanchez:400,400italic|Maven+Pro:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?v=0">
 	
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	
 	<!-- Scripts that need to be loaded first -->
 	<!--[if lt IE 9]>
@@ -35,11 +35,13 @@
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 	<header class="main-header">
 		<div class="wrapper">
+			<?php if (get_header_image()): ?>
 			<div class="logo-wrap">
-				<a href="<?php echo home_url( '/' ); ?>">
-					<img src="http://placehold.it/200x80" class="logo" />
+				<a href="<?php echo home_url('/'); ?>">
+					<img src="<?php header_image(); ?>" alt="<?php echo get_bloginfo('title'); ?>" />
 				</a>
 			</div>
+			<?php endif; ?>
 			<?php
 			wp_nav_menu(array(
 				'theme_location'=>'primary',
