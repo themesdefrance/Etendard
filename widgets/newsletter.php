@@ -25,7 +25,7 @@ class EtendardNewsletter extends WP_Widget{
 		echo $args['before_widget'];
 		
 		if (isset($instance['title'])){
-			echo $args['before_title'].$instance['title'].$args['after_title'];
+			echo $args['before_title'].apply_filters('widget_title', $instance['title']).$args['after_title'];
 		}
 		?>
 		
