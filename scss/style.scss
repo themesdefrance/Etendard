@@ -484,6 +484,23 @@ ul.articles .article{
 	margin-left:30px;
 }
 
+.comment-navigation{
+	@extend .clearfix;
+}
+.comment-navigation a{
+	color: darken($gris-principal, 10);
+	
+	&:hover{
+		color: #333;
+	}
+}
+.comment-navigation .nav-previous{
+	float: left;
+}
+.comment-navigation .nav-next{
+	float: right;
+}
+
 //comment form
 #commentform > p{
 	margin-bottom: 10px;

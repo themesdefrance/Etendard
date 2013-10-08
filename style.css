@@ -239,7 +239,7 @@ html {
 /* line 12, scss/qb/modules/_utility.scss */
 .clearfix:before, .grid:before, ul.services:before,
 ul.portfolio:before,
-ul.blog:before, .home-sidebar:before, .main-header:before, .article:before,
+ul.blog:before, .home-sidebar:before, .main-header:before, .article:before, .comment-navigation:before,
 .clearfix:after,
 .grid:after,
 ul.services:after,
@@ -247,7 +247,8 @@ ul.portfolio:after,
 ul.blog:after,
 .home-sidebar:after,
 .main-header:after,
-.article:after {
+.article:after,
+.comment-navigation:after {
   content: "";
   display: table;
   clear: both;
@@ -1142,17 +1143,36 @@ ul.articles .article {
   margin-left: 30px;
 }
 
-/* line 488, scss/style.scss */
+/* line 490, scss/style.scss */
+.comment-navigation a {
+  color: #9d9f9f;
+}
+/* line 493, scss/style.scss */
+.comment-navigation a:hover {
+  color: #333;
+}
+
+/* line 497, scss/style.scss */
+.comment-navigation .nav-previous {
+  float: left;
+}
+
+/* line 500, scss/style.scss */
+.comment-navigation .nav-next {
+  float: right;
+}
+
+/* line 505, scss/style.scss */
 #commentform > p {
   margin-bottom: 10px;
 }
 
-/* line 491, scss/style.scss */
+/* line 508, scss/style.scss */
 #commentform label {
   display: block;
 }
 
-/* line 497, scss/style.scss */
+/* line 514, scss/style.scss */
 #commentform #author,
 #commentform #email,
 #commentform #url,
@@ -1164,24 +1184,24 @@ ul.articles .article {
   font-style: italic;
 }
 
-/* line 506, scss/style.scss */
+/* line 523, scss/style.scss */
 #commentform #author,
 #commentform #email,
 #commentform #url {
   width: 50%;
 }
 
-/* line 509, scss/style.scss */
+/* line 526, scss/style.scss */
 #commentform #comment {
   width: 100%;
 }
 
-/* line 512, scss/style.scss */
+/* line 529, scss/style.scss */
 #commentform .form-submit {
   text-align: right;
 }
 
-/* line 515, scss/style.scss */
+/* line 532, scss/style.scss */
 #commentform #submit {
   background: #1ba7c4;
   border: none;
@@ -1192,117 +1212,117 @@ ul.articles .article {
   -o-transition: background 0.2s ease-in;
   transition: background 0.2s ease-in;
 }
-/* line 522, scss/style.scss */
+/* line 539, scss/style.scss */
 #commentform #submit:hover {
   background: #1894ae;
 }
 
-/* line 528, scss/style.scss */
+/* line 545, scss/style.scss */
 div.pagination {
   text-align: center;
   color: #011f2c;
   font-size: 24px;
   font-style: italic;
 }
-/* line 535, scss/style.scss */
+/* line 552, scss/style.scss */
 div.pagination a, div.pagination span.current {
   display: inline-block;
   padding: 0 4px;
 }
-/* line 540, scss/style.scss */
+/* line 557, scss/style.scss */
 div.pagination a {
   color: #1ba7c4;
 }
 
-/* line 546, scss/style.scss */
+/* line 563, scss/style.scss */
 .main-footer {
   padding: 30px 0;
   color: #6d6e71;
 }
 
-/* line 560, scss/style.scss */
+/* line 577, scss/style.scss */
 .home-sidebar {
   padding: 30px 0;
   background: #e6e7e8;
 }
 
-/* line 569, scss/style.scss */
+/* line 586, scss/style.scss */
 .home-sidebar .widget_etendardnewsletter {
   color: #1f7384;
   max-width: 400px;
   padding: 0 20px;
 }
 
-/* line 575, scss/style.scss */
+/* line 592, scss/style.scss */
 .home-sidebar .widget_etendardnewsletter .form-submit:before {
   border-left-color: #e6e7e8;
 }
-/* line 578, scss/style.scss */
+/* line 595, scss/style.scss */
 .home-sidebar .widget_etendardnewsletter .form-submit:after {
   border-right-color: #e6e7e8;
 }
 
-/* line 582, scss/style.scss */
+/* line 599, scss/style.scss */
 .home-sidebar .widget_etendardnewsletter h3 {
   font-size: 18px;
 }
 
-/* line 587, scss/style.scss */
+/* line 604, scss/style.scss */
 .widget {
   padding: 5px 15px 15px;
   margin-bottom: 20px;
 }
-/* line 591, scss/style.scss */
+/* line 608, scss/style.scss */
 .widget * {
   max-width: 100%;
 }
-/* line 594, scss/style.scss */
+/* line 611, scss/style.scss */
 .widget h3 {
   text-align: center;
   font-size: 24px;
   font-style: italic;
   margin-bottom: 10px;
 }
-/* line 600, scss/style.scss */
+/* line 617, scss/style.scss */
 .widget ul, .widget ol {
   list-style: none;
 }
-/* line 603, scss/style.scss */
+/* line 620, scss/style.scss */
 .widget li {
   margin-bottom: 15px;
 }
-/* line 606, scss/style.scss */
+/* line 623, scss/style.scss */
 .widget a {
   color: #011f2c;
   text-decoration: none;
 }
-/* line 610, scss/style.scss */
+/* line 627, scss/style.scss */
 .widget a:hover {
   text-decoration: underline;
   color: #023145;
 }
-/* line 615, scss/style.scss */
+/* line 632, scss/style.scss */
 .widget table {
   width: 100%;
 }
-/* line 618, scss/style.scss */
+/* line 635, scss/style.scss */
 .widget td {
   text-align: center;
 }
 
-/* line 624, scss/style.scss */
+/* line 641, scss/style.scss */
 .widget_etendardnewsletter {
   text-align: center;
 }
 
-/* line 627, scss/style.scss */
+/* line 644, scss/style.scss */
 .widget_etendardnewsletter .form-email {
   position: relative;
   display: inline-block;
   margin: 5px 0;
   width: 80%;
 }
-/* line 634, scss/style.scss */
+/* line 651, scss/style.scss */
 .widget_etendardnewsletter .form-email:before {
   position: absolute;
   right: 7px;
@@ -1311,7 +1331,7 @@ div.pagination a {
   font-size: 1.8rem;
 }
 
-/* line 642, scss/style.scss */
+/* line 659, scss/style.scss */
 .widget_etendardnewsletter input[type="email"] {
   display: inline-block;
   width: 100%;
@@ -1321,13 +1341,13 @@ div.pagination a {
   padding: 6px 4px;
   color: #333;
 }
-/* line 651, scss/style.scss */
+/* line 668, scss/style.scss */
 .widget_etendardnewsletter input[type="email"]:focus {
   border-color: #8d8d8d;
   outline: none;
 }
 
-/* line 656, scss/style.scss */
+/* line 673, scss/style.scss */
 .widget_etendardnewsletter input[type="submit"] {
   background: #1ba7c4;
   border: none;
@@ -1340,22 +1360,22 @@ div.pagination a {
   -o-transition: background 0.2s ease-in;
   transition: background 0.2s ease-in;
 }
-/* line 665, scss/style.scss */
+/* line 682, scss/style.scss */
 .widget_etendardnewsletter input[type="submit"]:hover {
   background: #1894ae;
 }
 
-/* line 671, scss/style.scss */
+/* line 688, scss/style.scss */
 form.search-form span.screen-reader-text {
   display: none;
 }
 
-/* line 675, scss/style.scss */
+/* line 692, scss/style.scss */
 form.search-form {
   position: relative;
 }
 
-/* line 678, scss/style.scss */
+/* line 695, scss/style.scss */
 form.search-form input.search-field {
   display: inline-block;
   width: 100%;
@@ -1368,7 +1388,7 @@ form.search-form input.search-field {
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 687, scss/style.scss */
+/* line 704, scss/style.scss */
 form.search-form input.search-field:focus {
   border: 1px solid #939393;
   background: #f9f9f9;
@@ -1376,14 +1396,14 @@ form.search-form input.search-field:focus {
   outline: none;
 }
 
-/* line 694, scss/style.scss */
+/* line 711, scss/style.scss */
 form.search-form .search-submit-wrapper {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
 }
-/* line 701, scss/style.scss */
+/* line 718, scss/style.scss */
 form.search-form .search-submit-wrapper:before {
   position: absolute;
   top: 10px;
@@ -1392,7 +1412,7 @@ form.search-form .search-submit-wrapper:before {
   color: #1ba7c4;
 }
 
-/* line 709, scss/style.scss */
+/* line 726, scss/style.scss */
 form.search-form input.search-submit {
   display: block;
   height: 100%;
@@ -1403,17 +1423,17 @@ form.search-form input.search-submit {
   opacity: 0;
 }
 
-/* line 720, scss/style.scss */
+/* line 737, scss/style.scss */
 .widget_etendardsocial ul {
   list-style: none;
 }
 
-/* line 723, scss/style.scss */
+/* line 740, scss/style.scss */
 .widget_etendardsocial li {
   display: inline-block;
 }
 
-/* line 726, scss/style.scss */
+/* line 743, scss/style.scss */
 .widget_etendardsocial li a {
   display: inline-block;
   margin-right: 15px;
@@ -1450,25 +1470,25 @@ form.search-form input.search-submit {
   bottom: 0;
   border-right: 9px solid white;
 }
-/* line 738, scss/style.scss */
+/* line 755, scss/style.scss */
 .widget_etendardsocial li a:hover {
   color: #fff;
   text-decoration: none;
   background: #1894ae;
 }
 
-/* line 746, scss/style.scss */
+/* line 763, scss/style.scss */
 .widget_calendar table caption {
   font-family: "Sanchez", Georgia, Trebuchet, Helvetica, Arial;
   font-size: 20px;
 }
 
-/* line 750, scss/style.scss */
+/* line 767, scss/style.scss */
 .widget_calendar td {
   padding: 8px 0;
 }
 
-/* line 753, scss/style.scss */
+/* line 770, scss/style.scss */
 .widget_calendar #today {
   background: #1ba7c4;
   color: #fff;
