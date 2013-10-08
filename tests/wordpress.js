@@ -1,9 +1,6 @@
 var Config = require('./config');
 
-var checkPhpErrors = function(test){
-	test
-		.assert.doesntExist('table.xdebug-error', 'No PHP errors found');
-}
+var phpSelector = 'table.xdebug-error';
 
 module.exports = {
 	'Admin': function(test){
@@ -19,24 +16,27 @@ module.exports = {
 	'Template Hierarchy': function(test){
 		test
 			.open(Config.url+Config.posts)
-			.assert.numberOfElements('ul.articles li article').is.gte(5, 'At least 5 articles are displayed on the posts page')
+			.assert.numberOfElements('ul.articles li .article:not(.sticky)').is.gte(5, 'At least 5 articles are displayed on the posts page')
 			.assert.exists('.article .header-title', 'Articles have a title')
 			.assert.exists('.article div.content', 'Articles have a content')
-			.assert.exists('div.pagination', 'Posts pagination exists');
-			
-		checkPhpErrors(test);
-		test.done();
+			.assert.doesntExist('.article.post-418', "Scheduled articles don't show up")
+			.assert.doesntExist('.article.post-922', "Drafts don't show up")
+			.assert.exists('div.pagination', 'Posts pagination exists')
+			.assert.text('ul.articles li:first-child .header-title').is('Sticky', 'Sticky post shows up and is the first in the list')
+			.assert.doesntExist(phpSelector, 'No PHP errors found')
+			.done();
 //		@TODO:
 //		- check post order
-//		- number of posts
-//		- no js errors
 	},
 	'Static Front Page': function(test){
 		test
 			.open(Config.url)
-			.assert.exists('body.page-template-front-page-php', 'Static front page is active');
-		
-		checkPhpErrors(test);
-		test.done();
+			.assert.exists('body.page-template-front-page-php', 'Static front page is active')
+			.assert.doesntExist(phpSelector, 'No PHP errors found')
+			.click('.blog .cta-button')
+			.assert.url().is(Config.url+Config.posts, 'Link to posts index works')
+			.done();
+//		@TODO:
+//		- check other links
 	}
 }

@@ -1,4 +1,4 @@
-<article class="article">
+<article <?php post_class('article'); ?>>
 	<header class="header">
 		<?php if (has_post_thumbnail() && !post_password_required()): ?>
 		<div class="entry-thumbnail">
