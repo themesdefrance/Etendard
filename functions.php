@@ -56,8 +56,8 @@ if (!function_exists('etendard_enqueue')){
 add_action('after_setup_theme', 'etendard_setup');
 add_action('wp_enqueue_scripts', 'etendard_enqueue');
 add_action('widgets_init', function(){
-	 register_widget('EtendardNewsletter');
-	 register_widget('EtendardSocial');
+//	 register_widget('EtendardNewsletter');
+//	 register_widget('EtendardSocial');
 });
 
 function etendard_menu(){

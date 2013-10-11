@@ -11,10 +11,13 @@
 	</div>
 </section>
 
+<?php if (get_option('etendard_slider')): ?>
 <section class="slider">
 	slider
 </section>
+<?php endif; ?>
 
+<?php if (get_option('etendard_services')): ?>
 <section class="services">
 	<div class="wrapper">
 		<ul class="services">
@@ -54,7 +57,9 @@
 		</ul>
 	</div>
 </section>
+<?php endif; ?>
 
+<?php if (get_option('etendard_home_cta')): ?>
 <section class="cta">
 	<div class="wrapper">
 		<p class="cta-text">
@@ -70,7 +75,9 @@
 		</div>
 	</div>
 </section>
+<?php endif; ?>
 
+<?php if (get_option('etendard_portfolio')): ?>
 <section class="portfolio">
 	<div class="wrapper">
 		<h2 class="center">
@@ -115,6 +122,7 @@
 		</div>
 	</div>
 </section>
+<?php endif; ?>
 
 <?php $posts = new WP_Query(array('posts_per_page'=>4, 'ignore_sticky_posts'=>true)); ?>
 <?php if ($posts->have_posts()){ ?>
