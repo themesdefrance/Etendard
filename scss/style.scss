@@ -251,6 +251,8 @@ ul.articles .article{
 }
 .article{
 	@extend .clearfix;
+	-ms-word-wrap: break-word;
+
 }
 .article .header{
 	margin-bottom: 10px;
