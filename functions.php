@@ -60,19 +60,19 @@ add_action('widgets_init', function(){
 	 register_widget('EtendardSocial');
 });
 
-//function etendard_menu(){
-//	add_theme_page('Étendard', 'Étendard', 'edit_theme_options', 'etendard-options', 'etendard_options');
-//}
-//
-//function etendard_options(){
-//	if (!current_user_can('edit_theme_options')) {
-//		wp_die(__('You do not have sufficient permissions to access this page.'));
-//	}
-//	
-//	require 'admin/index.php';
-//}
-//
-//add_action('admin_menu', 'etendard_menu');
+function etendard_menu(){
+	add_theme_page('Étendard', 'Étendard', 'edit_theme_options', 'etendard-options', 'etendard_options');
+}
+
+function etendard_options(){
+	if (!current_user_can('edit_theme_options')) {
+		wp_die(__('You do not have sufficient permissions to access this page.'));
+	}
+	
+	require 'admin/index.php';
+}
+
+add_action('admin_menu', 'etendard_menu');
 
 if (!function_exists('etendard_get_avatar')){
 	function etendard_get_avatar($avatar){
