@@ -4,56 +4,60 @@ define('TEXT_TRANSLATION_DOMAIN', 'etendard');
 require_once 'widgets/newsletter.php';
 require_once 'widgets/social.php';
 
-function etendard_setup(){
-	register_nav_menu('primary', __('Menu principal', TEXT_TRANSLATION_DOMAIN));
-				
-	register_sidebar(array(
-			'name'          => __('Widgets de pied de page', TEXT_TRANSLATION_DOMAIN),
-			'id'            => 'footer',
-			'description'   => __('Section apparaissant en bas de toutes les pages.', TEXT_TRANSLATION_DOMAIN),
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h3>',
-			'after_title'   => '</h3>',
-	));
+if (!function_exists('etendard_setup')){
+	function etendard_setup(){
+		register_nav_menu('primary', __('Menu principal', TEXT_TRANSLATION_DOMAIN));
+					
+		register_sidebar(array(
+				'name'          => __('Widgets de pied de page', TEXT_TRANSLATION_DOMAIN),
+				'id'            => 'footer',
+				'description'   => __('Section apparaissant en bas de toutes les pages.', TEXT_TRANSLATION_DOMAIN),
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h3>',
+				'after_title'   => '</h3>',
+		));
+			
+		register_sidebar(array(
+				'name'          => __('Widgets de blog', TEXT_TRANSLATION_DOMAIN),
+				'id'            => 'blog',
+				'description'   => __('Barre latérale sur les pages du blog.', TEXT_TRANSLATION_DOMAIN),
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h3>',
+				'after_title'   => '</h3>',
+		));
 		
-	register_sidebar(array(
-			'name'          => __('Widgets de blog', TEXT_TRANSLATION_DOMAIN),
-			'id'            => 'blog',
-			'description'   => __('Barre latérale sur les pages du blog.', TEXT_TRANSLATION_DOMAIN),
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h3>',
-			'after_title'   => '</h3>',
-	));
-	
-	add_theme_support('post-thumbnails');
-	add_theme_support('custom-header', array(
-		'header-text'=>false,
-		'height'=>200,
-		'admin-preview-callback'=>'etendard_admin_header_image',
-	));
-	
-	add_theme_support('post-formats', array(
-		'chat', 'image', 'link', 'quote', 'status', 'video'
-	));
-	
-//	load_theme_textdomain(TEXT_TRANSLATION_DOMAIN, get_template_directory().'/local');
+		add_theme_support('post-thumbnails');
+		add_theme_support('custom-header', array(
+			'header-text'=>false,
+			'height'=>200,
+			'admin-preview-callback'=>'etendard_admin_header_image',
+		));
+		
+		add_theme_support('post-formats', array(
+			'chat', 'image', 'link', 'quote', 'status', 'video'
+		));
+		
+	//	load_theme_textdomain(TEXT_TRANSLATION_DOMAIN, get_template_directory().'/local');
+	}
 }
 
-function etendard_enqueue(){
-	$theme = get_theme(get_current_theme());
-	
-	wp_enqueue_style('fonts', 'http://fonts.googleapis.com/css?family=Sanchez:400,400italic|Maven+Pro:400,700&subset=latin,latin-ext', array(), $theme['version']);
-	wp_enqueue_style('icons', get_template_directory_uri().'/fonts/style.css', array(), $theme['version']);
-	wp_enqueue_style('stylesheet', get_template_directory_uri().'/style.css', array(), $theme['version']);
+if (!function_exists('etendard_enqueue')){
+	function etendard_enqueue(){
+		$theme = get_theme(get_current_theme());
+		
+		wp_enqueue_style('fonts', 'http://fonts.googleapis.com/css?family=Sanchez:400,400italic|Maven+Pro:400,700&subset=latin,latin-ext', array(), $theme['version']);
+		wp_enqueue_style('icons', get_template_directory_uri().'/fonts/style.css', array(), $theme['version']);
+		wp_enqueue_style('stylesheet', get_template_directory_uri().'/style.css', array(), $theme['version']);
+	}
 }
 
 add_action('after_setup_theme', 'etendard_setup');
 add_action('wp_enqueue_scripts', 'etendard_enqueue');
 add_action('widgets_init', function(){
-     register_widget('EtendardNewsletter');
-     register_widget('EtendardSocial');
+	 register_widget('EtendardNewsletter');
+	 register_widget('EtendardSocial');
 });
 
 //function etendard_menu(){
