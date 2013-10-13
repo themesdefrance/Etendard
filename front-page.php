@@ -103,7 +103,7 @@
 			<?php endwhile; ?>
 		</ul>
 		<div class="cta-wrapper">
-			<a href="#" class="cta-button">
+			<a href="<?php echo get_post_type_archive_link('portfolio'); ?>" class="cta-button">
 				<?php _e('Consulter le portfolio', TEXT_TRANSLATION_DOMAIN); ?>
 			</a>
 		</div>

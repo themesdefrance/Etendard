@@ -50,7 +50,8 @@ if (!function_exists('etendard_init_cpt')){
 			'label'=>__('Portfolio', TEXT_TRANSLATION_DOMAIN),
 			'labels'=>array(),
 			'public'=>true,
-			'menu_position'=>20
+			'menu_position'=>20,
+			'has_archive'=>true,
 		));
 		add_post_type_support('portfolio', array(
 			'title',
