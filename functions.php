@@ -43,6 +43,26 @@ if (!function_exists('etendard_setup')){
 	}
 }
 
+if (!function_exists('etendard_init_cpt')){
+	function etendard_init_cpt(){
+		//portfolio
+		register_post_type('portfolio', array(
+			'label'=>__('Portfolio', TEXT_TRANSLATION_DOMAIN),
+			'labels'=>array(),
+			'public'=>true,
+			'menu_position'=>20
+		));
+		add_post_type_support('portfolio', array(
+			'title',
+			'editor',
+			'thumbnail',
+			'excerpt',
+			'custom-fields',
+			'revisions',
+		));
+	}
+}
+
 if (!function_exists('etendard_enqueue')){
 	function etendard_enqueue(){
 		$theme = get_theme(get_current_theme());
@@ -53,41 +73,47 @@ if (!function_exists('etendard_enqueue')){
 	}
 }
 
+if (!function_exists('etendard_admin_menu')){
+	function etendard_admin_menu(){
+		add_theme_page('Étendard', 'Étendard', 'edit_theme_options', 'etendard-options', 'etendard_options');
+	}
+}
+
+if (!function_exists('etendard_options')){
+	function etendard_options(){
+		if (!current_user_can('edit_theme_options')) {
+			wp_die(__('You do not have sufficient permissions to access this page.'));
+		}
+		
+		require 'admin/index.php';
+	}
+}
+
+add_action('init', 'etendard_init_cpt');
 add_action('after_setup_theme', 'etendard_setup');
 add_action('wp_enqueue_scripts', 'etendard_enqueue');
+add_action('admin_menu', 'etendard_admin_menu');
 add_action('widgets_init', function(){
-//	 register_widget('EtendardNewsletter');
-//	 register_widget('EtendardSocial');
+	 register_widget('EtendardNewsletter');
+	 register_widget('EtendardSocial');
 });
 
-function etendard_menu(){
-	add_theme_page('Étendard', 'Étendard', 'edit_theme_options', 'etendard-options', 'etendard_options');
-}
-
-function etendard_options(){
-	if (!current_user_can('edit_theme_options')) {
-		wp_die(__('You do not have sufficient permissions to access this page.'));
-	}
-	
-	require 'admin/index.php';
-}
-
-add_action('admin_menu', 'etendard_menu');
-
-if (!function_exists('etendard_get_avatar')){
-	function etendard_get_avatar($avatar){
-		$avatar = preg_replace("/\s(width|height)='\d+'/", ' ', $avatar);
-		return $avatar;
-	}
-	add_filter('get_avatar', 'etendard_get_avatar');
-}
-
 //fonctions persos
+if (!function_exists('etendard_strip_img_sizes')){
+	//enleve les attributs width et height des images
+	function etendard_strip_img_sizes($img){
+		$img = preg_replace("/\s(width|height)=('|\")\d+('|\")/", ' ', $img);
+		return $img;
+	}
+}
+add_filter('get_avatar', 'etendard_strip_img_sizes');
+add_filter('post_thumbnail_html', 'etendard_strip_img_sizes');
+
 if (!function_exists('etendard_admin_header_image')){
 	function etendard_admin_header_image(){
-	?>
-	<img src="<?php header_image(); ?>" alt="<?php echo get_bloginfo('title'); ?>" />
-	<?php
+		?>
+		<img src="<?php header_image(); ?>" alt="<?php echo get_bloginfo('title'); ?>" />
+		<?php
 	}
 }
 

@@ -202,6 +202,7 @@ ul.portfolio .creation figure{
 		background:#fff;
 		border-radius:50%;
 		opacity: 0;
+		@include transition(opacity $default-transition-duration $default-transition-function);
 	}
 	&:after{
 		content: "";
@@ -223,6 +224,10 @@ ul.portfolio .creation figure{
 		background: $bleu-principal;
 		color: #fff;
 	}
+}
+ul.portfolio .creation .entry-thumbnail{
+	background: #e2e2e2;
+	min-height: 230px;
 }
 ul.portfolio .creation figcaption{
 	position: absolute;

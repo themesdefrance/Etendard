@@ -77,59 +77,47 @@
 </section>
 <?php endif; ?>
 
-<?php if (get_option('etendard_portfolio')): ?>
+<?php $portfolios = new WP_Query(array('posts_per_page'=>3, 'post_type'=>'portfolio')); ?>
+<?php if ($portfolios->have_posts()): ?>
 <section class="portfolio">
 	<div class="wrapper">
 		<h2 class="center">
-			Derniers travaux
+			<?php _e('Derniers travaux', TEXT_TRANSLATION_DOMAIN); ?>
 		</h2>
 		<ul class="portfolio">
+			<?php while ($portfolios->have_posts()) : $portfolios->the_post(); ?>
 			<li class="creation">
-				<a href="#">
+				<a href="<?php the_permalink(); ?>">
 					<figure class="icon-search">
-						<img src="http://placehold.it/500x300" />
+						<div class="entry-thumbnail">
+						<?php if (has_post_thumbnail() && !post_password_required()): ?>
+							<?php the_post_thumbnail(array(310,230)); ?>
+						<?php endif; ?>
+						</div>
 						<figcaption>
-							Portfolio 1
+							<?php the_title(); ?>
 						</figcaption>
 					</figure>
 				</a>
 			</li>
-			<li class="creation">
-				<a href="#">
-					<figure>
-						<img src="http://placehold.it/500x300" />
-						<figcaption>
-							Portfolio 1
-						</figcaption>
-					</figure>
-				</a>
-			</li>
-			<li class="creation">
-				<a href="#">
-					<figure>
-						<img src="http://placehold.it/500x300" />
-						<figcaption>
-							Portfolio 1
-						</figcaption>
-					</figure>
-				</a>
-			</li>
+			<?php endwhile; ?>
 		</ul>
 		<div class="cta-wrapper">
 			<a href="#" class="cta-button">
-				Consulter le portfolio
+				<?php _e('Consulter le portfolio', TEXT_TRANSLATION_DOMAIN); ?>
 			</a>
 		</div>
 	</div>
 </section>
 <?php endif; ?>
+<?php wp_reset_postdata(); ?>
 
 <?php $posts = new WP_Query(array('posts_per_page'=>4, 'ignore_sticky_posts'=>true)); ?>
-<?php if ($posts->have_posts()){ ?>
+<?php if ($posts->have_posts()): ?>
 <section class="blog">
 	<div class="wrapper">
 		<h2 class="center">
-			Derniers articles
+			<?php _e('Derniers articles', TEXT_TRANSLATION_DOMAIN); ?>
 		</h2>
 		<ul class="blog">
 			<?php while ($posts->have_posts()) : $posts->the_post(); ?>
@@ -168,7 +156,7 @@
 		</div>
 	</div>
 </section>
-<?php } ?>
+<?php endif; ?>
 <?php wp_reset_postdata(); ?>
 
 <?php get_footer(); ?>
