@@ -1,6 +1,9 @@
 .etendardsocial-toggle{
 	display:none;
 }
+.etendardsocial-toggle.open{
+	display:block;
+}
 .etendardsocial-toggle-link{
 	display:block;
 	float:right;
