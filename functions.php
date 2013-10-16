@@ -90,14 +90,18 @@ if (!function_exists('etendard_options')){
 	}
 }
 
+if (!function_exists('etendard_widgets_init')){
+	function etendard_widgets_init(){
+		register_widget('EtendardNewsletter');
+		register_widget('EtendardSocial');
+	}
+}
+
 add_action('init', 'etendard_init_cpt');
 add_action('after_setup_theme', 'etendard_setup');
 add_action('wp_enqueue_scripts', 'etendard_enqueue');
 add_action('admin_menu', 'etendard_admin_menu');
-add_action('widgets_init', function(){
-	 register_widget('EtendardNewsletter');
-	 register_widget('EtendardSocial');
-});
+add_action('widgets_init', 'etendard_widgets_init');
 
 //fonctions persos
 if (!function_exists('etendard_strip_img_sizes')){
