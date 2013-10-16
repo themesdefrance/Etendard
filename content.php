@@ -19,7 +19,7 @@
 		<span class="header-meta">
 			<?php echo sprintf('%2$s', get_post_format_string(get_post_format()), get_the_date()); ?> |
 			<?php comments_number(__('Aucun commentaire', TEXT_TRANSLATION_DOMAIN), __('Un commentaire', TEXT_TRANSLATION_DOMAIN), __('% commentaires', TEXT_TRANSLATION_DOMAIN)); ?> 
-			<?php edit_post_link(__('Edit', TEXT_TRANSLATION_DOMAIN)); ?>
+			<?php edit_post_link(__('Éditer', TEXT_TRANSLATION_DOMAIN)); ?>
 		</span>
 	</header>
 	<div class="content">
