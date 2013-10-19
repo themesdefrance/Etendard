@@ -106,6 +106,14 @@ if (!function_exists('etendard_register_custom_fields')){
 					 'side',
 					 'default'
 		);
+		
+		add_meta_box('etandard_portfolio_temoignage',
+					 __('Témoignage', TEXT_TRANSLATION_DOMAIN),
+					 'etendard_portfolio_temoignage',
+					 'portfolio',
+					 'normal',
+					 'high'
+		);
 	}
 }
 
@@ -148,6 +156,68 @@ if (!function_exists('etendard_portfolio_custom_fields')){
 	}
 }
 
+if (!function_exists('etendard_portfolio_temoignage')){
+	function etendard_portfolio_temoignage($post){
+		wp_nonce_field('etendard_portfolio_temoignage_nonce', 'etendard_portfolio_temoignage_nonce');
+		
+		$nom = get_post_meta($post->ID, 'etendard_portfolio_temoin_nom', true);
+		$texte = get_post_meta($post->ID, 'etendard_portfolio_temoin_texte', true);
+		$portrait = get_post_meta($post->ID, 'etendard_portfolio_temoin_portrait', true);
+		
+		echo '<div>';
+		echo '<label for="etendard_portfolio_temoin_nom">';
+		_e('Nom', TEXT_TRANSLATION_DOMAIN);
+		echo '</label> ';
+		echo '<input type="text" id="etendard_portfolio_temoin_nom" name="etendard_portfolio_temoin_nom" value="'.esc_attr($nom).'" />';
+		echo '</div>';
+		
+		echo '<div>';
+		echo '<label for="etendard_portfolio_temoin_texte">';
+		_e('Témoignage', TEXT_TRANSLATION_DOMAIN);
+		echo '</label> ';
+		echo '<textarea id="etendard_portfolio_temoin_texte" name="etendard_portfolio_temoin_texte">'.esc_attr($texte).'</textarea>';
+		echo '</div>';
+		
+		echo '<div>';
+		echo '<label for="etendard_portfolio_temoin_portrait">';
+		_e('Nom', TEXT_TRANSLATION_DOMAIN);
+		echo '</label> ';
+		echo '<input type="text" id="etendard_portfolio_temoin_portrait" name="etendard_portfolio_temoin_portrait" value="'.esc_attr($portrait).'" />';
+		echo '<input class="button" name="etendard_portfolio_temoin_portrait_button" id="etendard_portfolio_temoin_portrait_button" value="Upload" />';
+		echo '</div>';
+		
+		echo "
+		<script>
+		jQuery(document).ready(function($){
+		  var _custom_media = true,
+			  _orig_send_attachment = wp.media.editor.send.attachment;
+		
+		  $('#etendard_portfolio_temoin_portrait_button').click(function(e) {
+			var send_attachment_bkp = wp.media.editor.send.attachment;
+			var button = $(this);
+			var id = button.attr('id').replace('_button', '');
+			_custom_media = true;
+			wp.media.editor.send.attachment = function(props, attachment){
+			  if ( _custom_media ) {
+				$('#'+id).val(attachment.url);
+			  } else {
+				return _orig_send_attachment.apply( this, [props, attachment] );
+			  };
+			}
+		
+			wp.media.editor.open(button);
+			return false;
+		  });
+		
+		  $('.add_media').on('click', function(){
+			_custom_media = false;
+		  });
+		});
+		</script>
+		";
+	}
+}
+
 if (!function_exists('etendard_portfolio_save_custom')){
 	function etendard_portfolio_save_custom($post_id){
 		if (!isset($_POST['etendard_portfolio_nonce'])) return $post_id;
@@ -169,11 +239,17 @@ if (!function_exists('etendard_portfolio_save_custom')){
 		$date = sanitize_text_field($_POST['etendard_portfolio_date']);
 		$role = sanitize_text_field($_POST['etendard_portfolio_role']);
 		$url = sanitize_text_field($_POST['etendard_portfolio_url']);
+		$temoin = sanitize_text_field($_POST['etendard_portfolio_temoin_nom']);
+		$texte = sanitize_text_field($_POST['etendard_portfolio_temoin_texte']);
+		$portrait = sanitize_text_field($_POST['etendard_portfolio_temoin_portrait']);
 	
 		update_post_meta($post_id, 'etendard_portfolio_client', $client);
 		update_post_meta($post_id, 'etendard_portfolio_date', $date);
 		update_post_meta($post_id, 'etendard_portfolio_role', $role);
 		update_post_meta($post_id, 'etendard_portfolio_url', $url);
+		update_post_meta($post_id, 'etendard_portfolio_temoin_nom', $temoin);
+		update_post_meta($post_id, 'etendard_portfolio_temoin_texte', $texte);
+		update_post_meta($post_id, 'etendard_portfolio_temoin_portrait', $portrait);
 	}
 }
 

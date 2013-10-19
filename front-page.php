@@ -59,23 +59,7 @@
 </section>
 <?php endif; ?>
 
-<?php if (get_option('etendard_home_cta')): ?>
-<section class="cta">
-	<div class="wrapper">
-		<p class="cta-text">
-			Super important midgets run through the hall looking for candy digesting a dandy.<br />
-			Super important midgets run through the hall looking for candy digesting a dandy.
-			Super important midgets run through the hall looking for candy digesting a dandy.
-			Super important midgets run through the hall looking for candy digesting a dandy.
-		</p>
-		<div class="button-wrapper">
-			<a href="#" class="cta-button">
-				Cliquez ici
-			</a>
-		</div>
-	</div>
-</section>
-<?php endif; ?>
+<?php get_template_part('call_to_action'); ?> 
 
 <?php $portfolios = new WP_Query(array('posts_per_page'=>3, 'post_type'=>'portfolio')); ?>
 <?php if ($portfolios->have_posts()): ?>

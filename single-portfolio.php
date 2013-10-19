@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php while (have_posts()) : the_post();?>
-<?php $portfolio_custom = get_post_custom();  ?>
+<?php $portfolio_custom = get_post_custom(); ?>
 <section class="grid realisation article">
 	<div class="wrapper">
 		<h2 class="section-title">
@@ -14,25 +14,25 @@
 	<?php endif; ?>
 	<div class="wrapper">
 		<div class="col-1-3 meta">
-			<?php if (isset($portfolio_custom['etendard_portfolio_client'])): ?>
+			<?php if (!empty($portfolio_custom['etendard_portfolio_client'][0])): ?>
 			<h3 class="realisation-client">
 				Client : <?php echo $portfolio_custom['etendard_portfolio_client'][0]; ?>
 			</h3>
 			<?php endif; ?>
 			
-			<?php if (isset($portfolio_custom['etendard_portfolio_date'])): ?>
+			<?php if (!empty($portfolio_custom['etendard_portfolio_date'][0])): ?>
 			<div class="realisation-date">
 				Date : <?php echo $portfolio_custom['etendard_portfolio_date'][0]; ?>
 			</div>
 			<?php endif; ?>
 			
-			<?php if (isset($portfolio_custom['etendard_portfolio_role'])): ?>
+			<?php if (!empty($portfolio_custom['etendard_portfolio_role'][0])): ?>
 			<div class="realisation-role">
 				Rôle : <?php echo $portfolio_custom['etendard_portfolio_role'][0]; ?>
 			</div>
 			<?php endif; ?>
 			
-			<?php if (isset($portfolio_custom['etendard_portfolio_url'])): ?>
+			<?php if (!empty($portfolio_custom['etendard_portfolio_url'][0])): ?>
 			<a href="<?php echo $portfolio_custom['etendard_portfolio_url'][0]; ?>" class="realisation-site">
 				voir le site
 			</a>
@@ -43,40 +43,30 @@
 		</div>
 	</div>
 </section>
+
+<?php if (!empty($portfolio_custom['etendard_portfolio_temoin_nom'][0])): ?>
 <section class="grid">
 	<div class="wrapper">
 		<ul class="temoignages">
 			<li class="temoignage col-2-3">
 				<div class="temoignage-photo-wrapper">
-					<img src="http://placehold.it/300x300" class="temoignage-photo" />
+					<?php if (!empty($portfolio_custom['etendard_portfolio_temoin_portrait'][0])): ?>
+					<img src="<?php echo $portfolio_custom['etendard_portfolio_temoin_portrait'][0]; ?>" class="temoignage-photo" />
+					<?php endif; ?>
 				</div>
 				<h3 class="temoignage-headline">
-					Gros lol
+					<?php echo $portfolio_custom['etendard_portfolio_temoin_nom'][0]; ?>
 				</h3>
 				<div class="temoignage-content">
-					<p>
-						Cum saepe multa, tum memini do
-	 in hemicyclio sedentem, ut soat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et pauci admo dumfamiliares ego essem.
-					</p>
+					<?php echo $portfolio_custom['etendard_portfolio_temoin_texte'][0]; ?>
 				</div>
 			</li>
 		</ul>
 	</div>
 </section>
-<section class="cta">
-	<div class="wrapper">
-		<p class="cta-text">
-			Super important midgets run through the hall looking for candy digesting a dandy.<br />
-			Super important midgets run through the hall looking for candy digesting a dandy.
-			Super important midgets run through the hall looking for candy digesting a dandy.
-			Super important midgets run through the hall looking for candy digesting a dandy.
-		</p>
-		<div class="button-wrapper">
-			<a href="#" class="cta-button">
-				Cliquez ici
-			</a>
-		</div>
-	</div>
-</section>
+<?php endif; ?>
 <?php endwhile; ?>
+
+<?php get_template_part('call_to_action'); ?>
+
 <?php get_footer(); ?>
