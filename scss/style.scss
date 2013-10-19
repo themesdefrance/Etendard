@@ -319,6 +319,7 @@ section.realisation .realisation-site{
 }
 .temoignages .temoignage{
 	@extend .clearfix;
+	margin-left:33.3%;
 }
 .temoignages .temoignage-headline{
 	color: $bleu-principal;

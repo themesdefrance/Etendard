@@ -2,7 +2,7 @@
 
 $body-copy-font: 'Maven-Pro', Helvetica, Arial;
 $heading-font: 'Sanchez', Georgia, Trebuchet, Helvetica, Arial;
-$icon-font: 'icomoon';
+$icon-font: 'etendard';
 $font-base: 16;
 
 $default-transition-function: ease-in;
@@ -106,42 +106,48 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-mail:before, .icon-search:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, .icon-soundcloud:before, .icon-pinterest:before {
+.icon-mail:before, .icon-search:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, .icon-soundcloud:before, .icon-pinterest:before, .icon-instagram:before, .icon-viadeo:before {
 	@extend %iconfont;
 }
 .icon-mail:before {
-	content: "\e000";
+	content: "\e600";
 }
 .icon-search:before {
-	content: "\e001";
+	content: "\e601";
 }
-.icon-google-plus:before {
-	content: "\e002";
+.icon-googleplus:before {
+	content: "\e602";
 }
 .icon-facebook:before {
-	content: "\e003";
+	content: "\e603";
 }
 .icon-twitter:before {
-	content: "\e004";
+	content: "\e604";
 }
-.icon-feed:before {
-	content: "\e005";
-}
-.icon-youtube:before {
-	content: "\e006";
+.icon-rss:before {
+	content: "\e605";
 }
 .icon-vimeo:before {
-	content: "\e007";
+	content: "\e606";
 }
 .icon-linkedin:before {
-	content: "\e008";
+	content: "\e607";
 }
 .icon-skype:before {
-	content: "\e009";
+	content: "\e608";
 }
 .icon-soundcloud:before {
-	content: "\e00a";
+	content: "\e609";
 }
 .icon-pinterest:before {
-	content: "\e00b";
+	content: "\e60a";
+}
+.icon-instagram:before {
+	content: "\e60b";
+}
+.icon-youtube:before {
+	content: "\e60c";
+}
+.icon-viadeo:before {
+	content: "\e60d";
 }

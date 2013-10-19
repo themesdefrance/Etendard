@@ -10,7 +10,7 @@ class EtendardNewsletter extends WP_Widget{
 	public function __construct(){
 		parent::__construct(
 			'EtendardNewsletter',
-			__('Newsletter', TEXT_TRANSLATION_DOMAIN),
+			__('Étendard Newsletter', TEXT_TRANSLATION_DOMAIN),
 			array('description'=>__('Inscription à une newsletter', TEXT_TRANSLATION_DOMAIN),)
 		);
 		

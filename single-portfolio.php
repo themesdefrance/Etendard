@@ -46,21 +46,7 @@
 <section class="grid">
 	<div class="wrapper">
 		<ul class="temoignages">
-			<li class="col-1-2 temoignage">
-				<div class="temoignage-photo-wrapper">
-					<img src="http://placehold.it/300x300" class="temoignage-photo" />
-				</div>
-				<h3 class="temoignage-headline">
-					Gros lol
-				</h3>
-				<div class="temoignage-content">
-					<p>
-						Cum saepe multa, tum memini do
-	 in hemicyclio sedentem, ut soat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et pauci admo dumfamiliares ego essem.
-					</p>
-				</div>
-			</li>
-			<li class="col-1-2 temoignage">
+			<li class="temoignage col-2-3">
 				<div class="temoignage-photo-wrapper">
 					<img src="http://placehold.it/300x300" class="temoignage-photo" />
 				</div>

@@ -2,15 +2,18 @@
 class EtendardSocial extends WP_Widget{
 	
 	private $reseaux = array(
-		'facebook'=>'&#xe003;',
-		'twitter'=>'&#xe004;',
-		'youtube'=>'&#xe006;',
-		'google plus'=>'&#xe002;',
-		'vimeo'=>'&#xe007;',
-		'linkedin'=>'&#xe008;',
-		'skype'=>'&#xe009;',
-		'soundcloud'=>'&#xe00a;',
-		'pinterest'=>'&#xe00b;',
+		'facebook'=>'&#xe603;',
+		'twitter'=>'&#xe604;',
+		'youtube'=>'&#xe60c;',
+		'google plus'=>'&#xe602;',
+		'vimeo'=>'&#xe606;',
+		'linkedin'=>'&#xe607;',
+		'viadeo'=>'&#xe60d;',
+		'skype'=>'&#xe608;',
+		'soundcloud'=>'&#xe609;',
+		'pinterest'=>'&#xe60a;',
+		'instagram'=>'&#xe60b;',
+		'rss'=>'&#xe605;',
 	);
 	
 	private $error = false;
@@ -19,7 +22,7 @@ class EtendardSocial extends WP_Widget{
 	public function __construct(){
 		parent::__construct(
 			'EtendardSocial',
-			__('Icones Réseaus Sociaux', TEXT_TRANSLATION_DOMAIN),
+			__('Étendard Réseaux Sociaux', TEXT_TRANSLATION_DOMAIN),
 			array('description'=>__('Les liens vers vos comptes sur différents réseaux sociaux.', TEXT_TRANSLATION_DOMAIN),)
 		);
 	}
