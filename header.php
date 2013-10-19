@@ -6,7 +6,7 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
@@ -41,14 +41,16 @@
 				</a>
 			</div>
 			<?php endif; ?>
+			
+			<nav class="main-menu">
 			<?php
 			wp_nav_menu(array(
 				'theme_location'=>'primary',
-				'container'=>'nav',
-				'container_class'=>'main-menu',
 				'menu_class'=>'toplevel',
+				'container'=>false,
 				'depth'=>2
 			)); 
 			?>
+			</nav>
 		</div>
 	</header>
