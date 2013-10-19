@@ -9,7 +9,6 @@ class EtendardSocial extends WP_Widget{
 		'vimeo'=>'&#xe606;',
 		'linkedin'=>'&#xe607;',
 		'viadeo'=>'&#xe60d;',
-		'skype'=>'&#xe608;',
 		'soundcloud'=>'&#xe609;',
 		'pinterest'=>'&#xe60a;',
 		'instagram'=>'&#xe60b;',
