@@ -667,9 +667,19 @@ div.pagination{
 //sidebar normale
 .sidebar{
 }
-.sidebar .widget:nth-child(1),
-.sidebar .widget:nth-child(2){
+.sidebar .widget{
 	@extend %dotted-background;
+}
+.sidebar .widget_etendardsocial{
+	background:#f4f4f4;
+}
+.sidebar .widget_etendardsocial li a{
+	&:before{
+		border-left-color: #f4f4f4;
+	}
+	&:after{
+		border-right-color: #f4f4f4;
+	}
 }
 
 //sidebar home (qui ets en bas)
@@ -697,6 +707,14 @@ div.pagination{
 }
 .home-sidebar .widget_etendardnewsletter h3{
 	font-size: 18px;
+}
+.home-sidebar .widget_etendardsocial li a{
+	&:before{
+		border-left-color: #e6e7e8;
+	}
+	&:after{
+		border-right-color: #e6e7e8;
+	}
 }
 
 //modules
@@ -797,13 +815,13 @@ form.search-form input.search-field{
 	padding: 10px 14px;
 	border:1px solid transparent;
 	background: #f1f2f2;
-	color: #b3b3b3;
+	color: #969696;
 	@include transition();
 	
 	&:focus{
 		border:1px solid #939393;
 		background: lighten(#f1f2f2, 3);
-		color: lighten(#b3b3b3, 10);
+		color: darken(#969696, 10);
 		outline: none;
 	}
 }
