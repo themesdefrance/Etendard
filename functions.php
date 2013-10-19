@@ -97,11 +97,93 @@ if (!function_exists('etendard_widgets_init')){
 	}
 }
 
+if (!function_exists('etendard_register_custom_fields')){
+	function etendard_register_custom_fields(){
+		add_meta_box('etandard_portfolio_meta',
+					 __('Informations', TEXT_TRANSLATION_DOMAIN),
+					 'etendard_portfolio_custom_fields',
+					 'portfolio',
+					 'side',
+					 'default'
+		);
+	}
+}
+
+if (!function_exists('etendard_portfolio_custom_fields')){
+	function etendard_portfolio_custom_fields($post){
+		wp_nonce_field('etendard_portfolio_nonce', 'etendard_portfolio_nonce');
+		
+		$client = get_post_meta($post->ID, 'etendard_portfolio_client', true);
+		$date = get_post_meta($post->ID, 'etendard_portfolio_date', true);
+		$role = get_post_meta($post->ID, 'etendard_portfolio_role', true);
+		$url = get_post_meta($post->ID, 'etendard_portfolio_url', true);
+		
+		echo '<div>';
+		echo '<label for="etendard_portfolio_client">';
+		_e('Client', TEXT_TRANSLATION_DOMAIN);
+		echo '</label> ';
+		echo '<input type="text" id="etendard_portfolio_client" name="etendard_portfolio_client" value="'.esc_attr( $client).'" />';
+		echo '</div>';
+		
+		echo '<div>';
+		echo '<label for="etendard_portfolio_date">';
+		_e('Date', TEXT_TRANSLATION_DOMAIN);
+		echo '</label> ';
+		echo '<input type="text" id="etendard_portfolio_date" name="etendard_portfolio_date" value="'.esc_attr( $date).'" />';
+		echo '</div>';
+		
+		echo '<div>';
+		echo '<label for="etendard_portfolio_role">';
+		_e('Rôle', TEXT_TRANSLATION_DOMAIN);
+		echo '</label> ';
+		echo '<input type="text" id="etendard_portfolio_role" name="etendard_portfolio_role" value="'.esc_attr( $role).'" />';
+		echo '</div>';
+		
+		echo '<div>';
+		echo '<label for="etendard_portfolio_url">';
+		_e('URL', TEXT_TRANSLATION_DOMAIN);
+		echo '</label> ';
+		echo '<input type="url" id="etendard_portfolio_url" name="etendard_portfolio_url" value="'.esc_attr( $url).'" />';
+		echo '</div>';
+	}
+}
+
+if (!function_exists('etendard_portfolio_save_custom')){
+	function etendard_portfolio_save_custom($post_id){
+		if (!isset($_POST['etendard_portfolio_nonce'])) return $post_id;
+	  
+		$nonce = $_POST['etendard_portfolio_nonce'];
+	  
+		if (!wp_verify_nonce($nonce, 'etendard_portfolio_nonce')) return $post_id;
+	
+		if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+	
+		if ($_POST['post_type'] == 'page'){
+			if (!current_user_can('edit_page', $post_id)) return $post_id;
+		} else {
+			if (!current_user_can('edit_post', $post_id))
+			return $post_id;
+		}
+		
+		$client = sanitize_text_field($_POST['etendard_portfolio_client']);
+		$date = sanitize_text_field($_POST['etendard_portfolio_date']);
+		$role = sanitize_text_field($_POST['etendard_portfolio_role']);
+		$url = sanitize_text_field($_POST['etendard_portfolio_url']);
+	
+		update_post_meta($post_id, 'etendard_portfolio_client', $client);
+		update_post_meta($post_id, 'etendard_portfolio_date', $date);
+		update_post_meta($post_id, 'etendard_portfolio_role', $role);
+		update_post_meta($post_id, 'etendard_portfolio_url', $url);
+	}
+}
+
 add_action('init', 'etendard_init_cpt');
 add_action('after_setup_theme', 'etendard_setup');
 add_action('wp_enqueue_scripts', 'etendard_enqueue');
 add_action('admin_menu', 'etendard_admin_menu');
 add_action('widgets_init', 'etendard_widgets_init');
+add_action('add_meta_boxes', 'etendard_register_custom_fields');
+add_action('save_post', 'etendard_portfolio_save_custom');
 
 //fonctions persos
 if (!function_exists('etendard_strip_img_sizes')){

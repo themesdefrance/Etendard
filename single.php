@@ -2,7 +2,7 @@
 <section class="blog grid">
 	<div class="wrapper">
 		<h2 class="section-title">
-			Blog
+			<?php _e('Blog', TEXT_TRANSLATION_DOMAIN); ?>
 		</h2>
 		<div class="col-2-3">
 			<?php /* The loop */ ?>

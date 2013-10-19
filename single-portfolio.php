@@ -1,37 +1,45 @@
 <?php get_header(); ?>
+<?php while (have_posts()) : the_post();?>
+<?php $portfolio_custom = get_post_custom();  ?>
 <section class="grid realisation article">
 	<div class="wrapper">
 		<h2 class="section-title">
-			Projet
+			<?php the_title(); ?>
 		</h2>
 	</div>
+	<?php if (false): ?>
 	<div>
 		slider
 	</div>
+	<?php endif; ?>
 	<div class="wrapper">
 		<div class="col-1-3 meta">
+			<?php if (isset($portfolio_custom['etendard_portfolio_client'])): ?>
 			<h3 class="realisation-client">
-				Client : Monsieur Lol
+				Client : <?php echo $portfolio_custom['etendard_portfolio_client'][0]; ?>
 			</h3>
+			<?php endif; ?>
+			
+			<?php if (isset($portfolio_custom['etendard_portfolio_date'])): ?>
 			<div class="realisation-date">
-				Date : Aout 2013
+				Date : <?php echo $portfolio_custom['etendard_portfolio_date'][0]; ?>
 			</div>
+			<?php endif; ?>
+			
+			<?php if (isset($portfolio_custom['etendard_portfolio_role'])): ?>
 			<div class="realisation-role">
-				Rôle : webdesign, intégration
+				Rôle : <?php echo $portfolio_custom['etendard_portfolio_role'][0]; ?>
 			</div>
-			<a href="" class="realisation-site">
+			<?php endif; ?>
+			
+			<?php if (isset($portfolio_custom['etendard_portfolio_url'])): ?>
+			<a href="<?php echo $portfolio_custom['etendard_portfolio_url'][0]; ?>" class="realisation-site">
 				voir le site
 			</a>
+			<?php endif; ?>
 		</div>
 		<div class="col-2-3 content">
-			<p>
-				Cum saepe multa, tum memini do
-	 in hemicyclio sedentem, ut soat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et pauci admo dumfamiliares ego essem.
-			</p>
-			<p>
-				Cum saepe multa, tum memini do
-	 in hemicyclio sedentem, ut soat, cum et ego essem una et pauci admodum familiares, in eum sermonem una et pauci admo dumfamiliares ego essem.
-			</p>
+			<?php the_content(); ?>
 		</div>
 	</div>
 </section>
@@ -84,4 +92,5 @@
 		</div>
 	</div>
 </section>
+<?php endwhile; ?>
 <?php get_footer(); ?>
