@@ -125,34 +125,50 @@ if (!function_exists('etendard_portfolio_custom_fields')){
 		$date = get_post_meta($post->ID, 'etendard_portfolio_date', true);
 		$role = get_post_meta($post->ID, 'etendard_portfolio_role', true);
 		$url = get_post_meta($post->ID, 'etendard_portfolio_url', true);
-		
-		echo '<div>';
-		echo '<label for="etendard_portfolio_client">';
-		_e('Client', TEXT_TRANSLATION_DOMAIN);
-		echo '</label> ';
-		echo '<input type="text" id="etendard_portfolio_client" name="etendard_portfolio_client" value="'.esc_attr( $client).'" />';
-		echo '</div>';
-		
-		echo '<div>';
-		echo '<label for="etendard_portfolio_date">';
-		_e('Date', TEXT_TRANSLATION_DOMAIN);
-		echo '</label> ';
-		echo '<input type="text" id="etendard_portfolio_date" name="etendard_portfolio_date" value="'.esc_attr( $date).'" />';
-		echo '</div>';
-		
-		echo '<div>';
-		echo '<label for="etendard_portfolio_role">';
-		_e('Rôle', TEXT_TRANSLATION_DOMAIN);
-		echo '</label> ';
-		echo '<input type="text" id="etendard_portfolio_role" name="etendard_portfolio_role" value="'.esc_attr( $role).'" />';
-		echo '</div>';
-		
-		echo '<div>';
-		echo '<label for="etendard_portfolio_url">';
-		_e('URL', TEXT_TRANSLATION_DOMAIN);
-		echo '</label> ';
-		echo '<input type="url" id="etendard_portfolio_url" name="etendard_portfolio_url" value="'.esc_attr( $url).'" />';
-		echo '</div>';
+		?>
+		<table class="form-table">
+			<tr>
+				<th scope="row">
+					<label for="etendard_portfolio_client">
+						<span><?php _e('Client', TEXT_TRANSLATION_DOMAIN); ?></span>:
+					</label>
+				</th>
+				<td>
+					<input type="text" id="etendard_portfolio_client" name="etendard_portfolio_client" value="<?php echo esc_attr($client); ?>" />
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">
+					<label for="etendard_portfolio_date">
+						<span><?php _e('Date', TEXT_TRANSLATION_DOMAIN); ?></span>:
+					</label>
+				</th>
+				<td>
+					<input type="text" id="etendard_portfolio_date" name="etendard_portfolio_date" value="<?php echo esc_attr($date); ?>" />
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">
+					<label for="etendard_portfolio_role">
+						<span><?php _e('Rôle', TEXT_TRANSLATION_DOMAIN); ?></span>:
+					</label>
+				</th>
+				<td>
+					<input type="text" id="etendard_portfolio_role" name="etendard_portfolio_role" value="<?php echo esc_attr($role); ?>" />
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">
+					<label for="etendard_portfolio_url">
+						<span><?php _e('URL', TEXT_TRANSLATION_DOMAIN); ?></span>:
+					</label>
+				</th>
+				<td>
+					<input type="text" id="etendard_portfolio_url" name="etendard_portfolio_url" value="<?php echo esc_attr($url); ?>" />
+				</td>
+			</tr>
+		</table>
+		<?php
 	}
 }
 
@@ -161,30 +177,40 @@ if (!function_exists('etendard_portfolio_temoignage')){
 		$nom = get_post_meta($post->ID, 'etendard_portfolio_temoin_nom', true);
 		$texte = get_post_meta($post->ID, 'etendard_portfolio_temoin_texte', true);
 		$portrait = get_post_meta($post->ID, 'etendard_portfolio_temoin_portrait', true);
-		
-		echo '<div>';
-		echo '<label for="etendard_portfolio_temoin_nom">';
-		_e('Nom', TEXT_TRANSLATION_DOMAIN);
-		echo '</label> ';
-		echo '<input type="text" id="etendard_portfolio_temoin_nom" name="etendard_portfolio_temoin_nom" value="'.esc_attr($nom).'" />';
-		echo '</div>';
-		
-		echo '<div>';
-		echo '<label for="etendard_portfolio_temoin_texte">';
-		_e('Témoignage', TEXT_TRANSLATION_DOMAIN);
-		echo '</label> ';
-		echo '<textarea id="etendard_portfolio_temoin_texte" name="etendard_portfolio_temoin_texte">'.esc_attr($texte).'</textarea>';
-		echo '</div>';
-		
-		echo '<div>';
-		echo '<label for="etendard_portfolio_temoin_portrait">';
-		_e('Nom', TEXT_TRANSLATION_DOMAIN);
-		echo '</label> ';
-		echo '<input type="text" id="etendard_portfolio_temoin_portrait" name="etendard_portfolio_temoin_portrait" value="'.esc_attr($portrait).'" />';
-		echo '<input class="button" name="etendard_portfolio_temoin_portrait_button" id="etendard_portfolio_temoin_portrait_button" value="Upload" />';
-		echo '</div>';
-		
-		echo "
+		?>
+		<table class="form-table">
+			<tr>
+				<th scope="row">
+					<label for="etendard_portfolio_temoin_nom">
+						<span><?php _e('Nom', TEXT_TRANSLATION_DOMAIN); ?></span>:
+					</label>
+				</th>
+				<td>
+					<input type="text" id="etendard_portfolio_temoin_nom" name="etendard_portfolio_temoin_nom" value="<?php echo esc_attr($nom); ?>" />
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">
+					<label for="etendard_portfolio_temoin_texte">
+						<span><?php _e('Témoignage', TEXT_TRANSLATION_DOMAIN); ?></span>:
+					</label>
+				</th>
+				<td>
+					<textarea class="large-text" id="etendard_portfolio_temoin_texte" name="etendard_portfolio_temoin_texte"><?php echo esc_attr($texte); ?></textarea>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">
+					<label for="etendard_portfolio_temoin_portrait">
+						<span><?php _e('Portrait', TEXT_TRANSLATION_DOMAIN); ?></span>:
+					</label>
+				</th>
+				<td>
+					<input type="text" id="etendard_portfolio_temoin_portrait" name="etendard_portfolio_temoin_portrait" value="<?php echo esc_attr($portrait); ?>" />
+					<input class="button button-primary button-medium" name="etendard_portfolio_temoin_portrait_button" id="etendard_portfolio_temoin_portrait_button" value="Upload" />
+				</td>
+			</tr>
+		</table>
 		<script>
 		jQuery(document).ready(function($){
 		  var _custom_media = true,
@@ -212,7 +238,7 @@ if (!function_exists('etendard_portfolio_temoignage')){
 		  });
 		});
 		</script>
-		";
+		<?php
 	}
 }
 
