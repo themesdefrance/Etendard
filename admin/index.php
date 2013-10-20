@@ -1,5 +1,5 @@
-<?php
-if (isset($_POST['update_settings'])){
+<?php		
+if (isset($_POST['update_settings']) && isset($_POST['etendard_admin_nonce']) && wp_verify_nonce($_POST['etendard_admin_nonce'], 'etendard_admin_nonce')){
 	$cta_text = $_POST['cta_text'];
 	$cta_bouton = $_POST['cta_bouton'];
 	$cta_url = $_POST['cta_url'];
@@ -31,6 +31,7 @@ else{
 	</div>
 	<?php } ?>
 	<form method="post" action="">
+		<?php wp_nonce_field('etendard_admin_nonce', 'etendard_admin_nonce'); ?>
 		<h3>
 			<?php _e('Call to action'); ?>
 		</h3>

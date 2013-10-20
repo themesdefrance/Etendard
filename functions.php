@@ -158,8 +158,6 @@ if (!function_exists('etendard_portfolio_custom_fields')){
 
 if (!function_exists('etendard_portfolio_temoignage')){
 	function etendard_portfolio_temoignage($post){
-		wp_nonce_field('etendard_portfolio_temoignage_nonce', 'etendard_portfolio_temoignage_nonce');
-		
 		$nom = get_post_meta($post->ID, 'etendard_portfolio_temoin_nom', true);
 		$texte = get_post_meta($post->ID, 'etendard_portfolio_temoin_texte', true);
 		$portrait = get_post_meta($post->ID, 'etendard_portfolio_temoin_portrait', true);
