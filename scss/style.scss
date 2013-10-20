@@ -367,26 +367,27 @@ ul.articles .article{
 	font-size: 18px;
 	font-style: normal;
 	
-	@include etendard($hauteur: 7px, $droite: false);
+	@include etendard($hauteur: 8px, $droite: false);
 	&:before{
 		top: 4px;
-		bottom: 4px;
+		height: 16px;
 		z-index: 1;
 	}
 	&:after{
 		content: "";
 		position: absolute;
 		top: 4px;
-		bottom: 4px;
 		left: 0;
-		display: block;
+		display: inline-block;
 		background: $bleu-principal;
+		height: 16px;
 		width: 20px;
 	}
 }
 .article.teaser .entry-thumbnail{
 	max-height:150px;
 	overflow:hidden;
+	margin-bottom:5px;
 }
 .article.alternate .header-image{
 	float: left;
