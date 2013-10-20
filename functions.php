@@ -61,6 +61,11 @@ if (!function_exists('etendard_init_cpt')){
 			'custom-fields',
 			'revisions',
 		));
+		register_taxonomy('portfolio_categorie', 'portfolio', array(
+			'label'=>'Catégories',
+			'hierarchical'=>true,
+		));
+		register_taxonomy_for_object_type('portfolio_categorie', 'portfolio');
 	}
 }
 

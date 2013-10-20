@@ -2,35 +2,31 @@
 /*
 Template Name: Portfolio
 */
+$terms = get_terms('portfolio_categorie');
 ?>
 <?php get_header(); ?>
 
 <section class="portfolio">
 	<div class="wrapper">
+		<?php if (count($terms) > 0): ?> 
 		<nav class="categories">
 			<ul>
 				<li>
-					<a href="#" class="active">
-						Tout
+					<a href="<?php echo get_post_type_archive_link('portfolio'); ?>" class="<?php echo (is_post_type_archive('portfolio')) ? 'active' : ''; ?>">
+						<?php _e('Tous', TEXT_TRANSLATION_DOMAIN); ?>
 					</a>
 				</li>
+				<?php foreach ($terms as $term){ ?>
 				<li>
-					<a href="">
-						Catégorie 1
+					<a href="<?php echo get_term_link($term); ?>" class="<?php echo (is_tax('portfolio_categorie', $term)) ? 'active' : ''; ?>">
+						<?php echo $term->name; ?>
 					</a>
 				</li>
-				<li>
-					<a href="">
-						Catégorie 2
-					</a>
-				</li>
-				<li>
-					<a href="">
-						Catégorie 3
-					</a>
-				</li>
+				<?php } ?>
 			</ul>
 		</nav>
+		<?php endif; ?>
+		
 		<ul class="portfolio">
 			<?php while (have_posts()) : the_post(); ?>
 			<li class="creation">
