@@ -70,16 +70,27 @@
 		</h2>
 		<ul class="portfolio">
 			<?php while ($portfolios->have_posts()) : $portfolios->the_post(); ?>
+			<?php
+			$icon = '';
+			switch (get_post_format()){
+				case 'video':
+					$icon = 'icon-play';
+					break;
+				default:
+					$icon = 'icon-search';
+					break;
+			}
+			?>
 			<li class="creation">
 				<a href="<?php the_permalink(); ?>">
-					<figure class="icon-search">
+					<figure class="<?php echo $icon; ?>">
 						<div class="entry-thumbnail">
 						<?php if (has_post_thumbnail() && !post_password_required()): ?>
 							<?php the_post_thumbnail(array(310,230)); ?>
 						<?php endif; ?>
 						</div>
 						<figcaption>
-							<?php the_title(); ?>
+							<?php the_title(); echo get_post_format(); ?>
 						</figcaption>
 					</figure>
 				</a>

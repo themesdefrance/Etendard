@@ -44,9 +44,20 @@ else{
 		
 		<ul class="portfolio">
 			<?php while ($query->have_posts()) : $query->the_post(); ?>
+			<?php
+			$icon = '';
+			switch (get_post_format()){
+				case 'video':
+					$icon = 'icon-play';
+					break;
+				default:
+					$icon = 'icon-search';
+					break;
+			}
+			?>
 			<li class="creation">
 				<a href="<?php the_permalink(); ?>">
-					<figure class="">
+					<figure class="<?php echo $icon; ?>">
 						<div class="entry-thumbnail">
 							<?php if (has_post_thumbnail() && !post_password_required()): ?>
 							<?php the_post_thumbnail(array(310,230)); ?>
