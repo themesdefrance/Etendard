@@ -103,7 +103,7 @@ if (!function_exists('etendard_options')){
 
 if (!function_exists('etendard_widgets_init')){
 	function etendard_widgets_init(){
-		register_widget('EtendardNewsletter');
+//		register_widget('EtendardNewsletter');
 		register_widget('EtendardSocial');
 	}
 }
