@@ -2,7 +2,22 @@
 /*
 Template Name: Portfolio
 */
+
 $terms = get_terms('portfolio_categorie');
+
+global $wp_query;
+
+$query = $wp_query;
+if (is_tax('portfolio_categorie') || is_post_type_archive('portfolio')) $query = $wp_query;
+else{
+	$args = array(
+			'post_type'=>'portfolio',
+			'orderby'=>'menu_order',
+			'order'=>'ASC',
+			'posts_per_page'=>-1
+	);
+	$query = new WP_Query($args);
+}
 ?>
 <?php get_header(); ?>
 
@@ -12,7 +27,7 @@ $terms = get_terms('portfolio_categorie');
 		<nav class="categories">
 			<ul>
 				<li>
-					<a href="<?php echo get_post_type_archive_link('portfolio'); ?>" class="<?php echo (is_post_type_archive('portfolio')) ? 'active' : ''; ?>">
+					<a href="<?php echo etendard_portfolio_page_link(); ?>" class="<?php echo (!is_tax('portfolio_categorie')) ? 'active' : ''; ?>">
 						<?php _e('Tous', TEXT_TRANSLATION_DOMAIN); ?>
 					</a>
 				</li>
@@ -28,7 +43,7 @@ $terms = get_terms('portfolio_categorie');
 		<?php endif; ?>
 		
 		<ul class="portfolio">
-			<?php while (have_posts()) : the_post(); ?>
+			<?php while ($query->have_posts()) : $query->the_post(); ?>
 			<li class="creation">
 				<a href="<?php the_permalink(); ?>">
 					<figure class="">

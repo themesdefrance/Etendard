@@ -443,3 +443,15 @@ if (!function_exists('etendard_comment')){
 		endswitch;
 	}
 }
+
+//recupere une page utilisant le template portfolio
+if (!function_exists('etendard_portfolio_page_link')){
+	function etendard_portfolio_page_link(){
+		$portfolio_pages = get_pages(array(
+			'meta_key'=>'_wp_page_template',
+			'meta_value'=>'template-portfolio.php'
+		));
+		if (count($portfolio_pages) > 0) return get_page_link($portfolio_pages[0]->ID);
+		else return get_post_type_archive_link('portfolio');
+	}
+}
