@@ -36,7 +36,12 @@ if (!function_exists('etendard_setup')){
 		));
 		
 		add_theme_support('post-formats', array(
-			'chat', 'image', 'link', 'quote', 'status', 'video'
+//			'chat', 
+			'image', 
+			'link', 
+			'quote', 
+//			'status', 
+			'video',
 		));
 		
 	//	load_theme_textdomain(TEXT_TRANSLATION_DOMAIN, get_template_directory().'/local');
@@ -60,6 +65,7 @@ if (!function_exists('etendard_init_cpt')){
 			'excerpt',
 			'custom-fields',
 			'revisions',
+			'post-formats'
 		));
 		register_taxonomy('portfolio_categorie', 'portfolio', array(
 			'label'=>'Catégories',
