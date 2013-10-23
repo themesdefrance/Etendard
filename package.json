@@ -1,7 +1,7 @@
 {
   "name": "Etendard",
   "description": "",
-  "version": "1.001",
+  "version": "1.002",
   "dependencies": {
     "dalekjs": "0.0.6"
   }
