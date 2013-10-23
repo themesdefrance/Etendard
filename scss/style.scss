@@ -229,6 +229,10 @@ ul.portfolio .creation .entry-thumbnail{
 	background: #e2e2e2;
 	min-height: 230px;
 }
+ul.portfolio .creation .entry-thumbnail img{
+	display:block;
+	width:100%;
+}
 ul.portfolio .creation figcaption{
 	position: absolute;
 	z-index:1;

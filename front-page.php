@@ -86,7 +86,7 @@
 					<figure class="<?php echo $icon; ?>">
 						<div class="entry-thumbnail">
 						<?php if (has_post_thumbnail() && !post_password_required()): ?>
-							<?php the_post_thumbnail(array(310,230)); ?>
+							<?php the_post_thumbnail('etendard-portfolio-thumbnail'); ?>
 						<?php endif; ?>
 						</div>
 						<figcaption>
@@ -121,7 +121,7 @@
 					<header class="header">
 						<?php if (has_post_thumbnail() && !post_password_required()): ?>
 						<div class="entry-thumbnail">
-							<?php the_post_thumbnail(); ?>
+							<?php the_post_thumbnail('etendard-blog-thumbnail'); ?>
 						</div>
 						<?php endif; ?>
 						<h3 class="header-title">

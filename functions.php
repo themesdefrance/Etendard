@@ -44,6 +44,8 @@ if (!function_exists('etendard_setup')){
 			'video',
 		));
 		
+		add_image_size('etendard-portfolio-thumbnail', 301, 230, true);
+		add_image_size('etendard-blog-thumbnail', 203, 225, true);
 	//	load_theme_textdomain(TEXT_TRANSLATION_DOMAIN, get_template_directory().'/local');
 	}
 }

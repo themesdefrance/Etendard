@@ -60,7 +60,7 @@ else{
 					<figure class="<?php echo $icon; ?>">
 						<div class="entry-thumbnail">
 							<?php if (has_post_thumbnail() && !post_password_required()): ?>
-							<?php the_post_thumbnail(array(310,230)); ?>
+							<?php the_post_thumbnail('etendard-portfolio-thumbnail'); ?>
 							<?php endif; ?>
 						</div>
 						<figcaption>
