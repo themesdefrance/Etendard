@@ -85,6 +85,12 @@ if (!function_exists('etendard_enqueue')){
 	}
 }
 
+if (!function_exists('etendard_admin_init')){
+	function etendard_admin_init(){
+		remove_meta_box('postcustom', 'portfolio', 'normal');
+	}
+}
+
 if (!function_exists('etendard_admin_menu')){
 	function etendard_admin_menu(){
 		add_theme_page('Étendard', 'Étendard', 'edit_theme_options', 'etendard-options', 'etendard_options');
@@ -292,6 +298,7 @@ add_action('init', 'etendard_init_cpt');
 add_action('after_setup_theme', 'etendard_setup');
 add_action('wp_enqueue_scripts', 'etendard_enqueue');
 add_action('admin_menu', 'etendard_admin_menu');
+add_action('admin_init', 'etendard_admin_init');
 add_action('widgets_init', 'etendard_widgets_init');
 add_action('add_meta_boxes', 'etendard_register_custom_fields');
 add_action('save_post', 'etendard_portfolio_save_custom');
