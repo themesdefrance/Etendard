@@ -1,15 +1,25 @@
 <?php get_header(); ?>
 <?php while (have_posts()) : the_post();?>
-<?php $portfolio_custom = get_post_custom(); ?>
+<?php 
+$portfolio_custom = get_post_custom();
+$carousel = maybe_unserialize($portfolio_custom['etendard_portfolio_carousel'][0]);
+if (is_array($carousel) && trim($carousel[count($carousel)-1]) === '') array_pop($carousel);
+?>
 <section class="grid realisation article">
 	<div class="wrapper">
 		<h2 class="section-title">
 			<?php the_title(); ?>
 		</h2>
 	</div>
-	<?php if (false): ?>
-	<div>
-		slider
+	<?php if (count($carousel) > 0): ?>
+	<div class="flexslider">
+		<ul class="slides">
+			<?php foreach ($carousel as $img){ ?>
+			<li>
+				<img src="<?php echo $img; ?>" />
+			</li>
+			<?php } ?>
+	</ul>
 	</div>
 	<?php endif; ?>
 	<div class="wrapper">
