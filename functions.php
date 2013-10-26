@@ -142,6 +142,14 @@ if (!function_exists('etendard_register_custom_fields')){
 					 'normal',
 					 'high'
 		);
+		
+		add_meta_box('etandard_portfolio_carousel',
+					 __('Carousel', TEXT_TRANSLATION_DOMAIN),
+					 'etendard_portfolio_carousel',
+					 'portfolio',
+					 'normal',
+					 'high'
+		);
 	}
 }
 
@@ -154,6 +162,12 @@ if (!function_exists('etendard_portfolio_client')){
 if (!function_exists('etendard_portfolio_temoignage')){
 	function etendard_portfolio_temoignage($post){
 		require 'admin/meta-box/portfolio_temoignage.php';
+	}
+}
+
+if (!function_exists('etendard_portfolio_carousel')){
+	function etendard_portfolio_carousel($post){
+		require 'admin/meta-box/portfolio_carousel.php';
 	}
 }
 
@@ -181,6 +195,10 @@ if (!function_exists('etendard_portfolio_save_custom')){
 		$temoin = sanitize_text_field($_POST['etendard_portfolio_temoin_nom']);
 		$texte = sanitize_text_field($_POST['etendard_portfolio_temoin_texte']);
 		$portrait = sanitize_text_field($_POST['etendard_portfolio_temoin_portrait']);
+		$carousel = $_POST['etendard_portfolio_carousel'];
+		foreach ($carousel as &$img){
+			$img = sanitize_text_field($img);
+		}
 	
 		update_post_meta($post_id, 'etendard_portfolio_client', $client);
 		update_post_meta($post_id, 'etendard_portfolio_date', $date);
@@ -189,6 +207,7 @@ if (!function_exists('etendard_portfolio_save_custom')){
 		update_post_meta($post_id, 'etendard_portfolio_temoin_nom', $temoin);
 		update_post_meta($post_id, 'etendard_portfolio_temoin_texte', $texte);
 		update_post_meta($post_id, 'etendard_portfolio_temoin_portrait', $portrait);
+		update_post_meta($post_id, 'etendard_portfolio_carousel', $carousel);
 	}
 }
 

@@ -60,7 +60,7 @@ jQuery(function($){
 		</th>
 		<td>
 			<input type="text" id="etendard_portfolio_temoin_portrait" name="etendard_portfolio_temoin_portrait" value="<?php echo esc_attr($portrait); ?>" />
-			<input type="button" class="button button-primary button-medium" name="etendard_portfolio_temoin_portrait_button" id="etendard_portfolio_temoin_portrait_button" value="Upload" />
+			<input type="button" class="button button-primary button-medium" name="etendard_portfolio_temoin_portrait_button" id="etendard_portfolio_temoin_portrait_button" value="<?php echo esc_attr(__('Charger', TEXT_TRANSLATION_DOMAIN)); ?>" />
 		</td>
 	</tr>
 </table>
