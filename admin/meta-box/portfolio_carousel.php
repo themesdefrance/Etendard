@@ -1,5 +1,7 @@
 <?php
 $carousel = get_post_meta($post->ID, 'etendard_portfolio_carousel', true);
+if (!is_array($carousel)) $carousel = array('');
+else if ($carousel[count($carousel)-1] != '') array_push($carousel, '');
 ?>
 <script>
 jQuery(function($){
@@ -16,6 +18,7 @@ jQuery(function($){
 				button.prev().val(attachment.url);
 				$('.etendard_carousel_one').first().clone().appendTo('.etendard_carousel_form');
 				$('.etendard_carousel_one').last().find('[type="text"]').val('');
+				$('.etendard_carousel_one').last().find('a.delete').remove();
 			}
 			else{
 				return _orig_send_attachment.apply( this, [props, attachment] );
@@ -29,10 +32,15 @@ jQuery(function($){
 	$('.add_media').on('click', function(){
 		_custom_media = false;
 	});
+	
+	$('.etendard_carousel_form a.delete').live('click', function(event){
+		$(this).parents('.etendard_carousel_one').remove();
+		event.preventDefault();
+	});
 });
 </script>
 <table class="form-table etendard_carousel_form">
-	<?php foreach ($carousel as $img){ ?>
+	<?php foreach ($carousel as $index=>$img){ ?>
 	<tr class="etendard_carousel_one">
 		<th scope="row">
 			<label>
@@ -42,6 +50,9 @@ jQuery(function($){
 		<td>
 			<input type="text" name="etendard_portfolio_carousel[]" value="<?php echo esc_attr($img); ?>" />
 			<input type="button" class="button button-primary button-medium etendard_portfolio_upload_button" name="etendard_portfolio_carousel_button" value="<?php echo esc_attr(__('Charger', TEXT_TRANSLATION_DOMAIN)); ?>" />
+			<?php if ($index < count($carousel)-1){ ?>
+			<a href="#" class="delete">Supprimer</a>
+			<?php } ?>
 		</td>
 	</tr>
 	<?php } ?>
