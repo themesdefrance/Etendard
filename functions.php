@@ -4,6 +4,15 @@ define('TEXT_TRANSLATION_DOMAIN', 'etendard');
 require_once 'widgets/newsletter.php';
 require_once 'widgets/social.php';
 
+add_action('init', 'etendard_init_cpt');
+add_action('after_setup_theme', 'etendard_setup');
+add_action('wp_enqueue_scripts', 'etendard_enqueue');
+add_action('admin_menu', 'etendard_admin_menu');
+add_action('admin_init', 'etendard_admin_init');
+add_action('widgets_init', 'etendard_widgets_init');
+add_action('add_meta_boxes', 'etendard_register_custom_fields');
+add_action('save_post', 'etendard_portfolio_save_custom');
+
 if (!function_exists('etendard_setup')){
 	function etendard_setup(){
 		register_nav_menu('primary', __('Menu principal', TEXT_TRANSLATION_DOMAIN));
@@ -118,9 +127,9 @@ if (!function_exists('etendard_widgets_init')){
 
 if (!function_exists('etendard_register_custom_fields')){
 	function etendard_register_custom_fields(){
-		add_meta_box('etandard_portfolio_meta',
+		add_meta_box('etendard_portfolio_client',
 					 __('Informations', TEXT_TRANSLATION_DOMAIN),
-					 'etendard_portfolio_custom_fields',
+					 'etendard_portfolio_client',
 					 'portfolio',
 					 'side',
 					 'default'
@@ -136,128 +145,15 @@ if (!function_exists('etendard_register_custom_fields')){
 	}
 }
 
-if (!function_exists('etendard_portfolio_custom_fields')){
-	function etendard_portfolio_custom_fields($post){
-		wp_nonce_field('etendard_portfolio_nonce', 'etendard_portfolio_nonce');
-		
-		$client = get_post_meta($post->ID, 'etendard_portfolio_client', true);
-		$date = get_post_meta($post->ID, 'etendard_portfolio_date', true);
-		$role = get_post_meta($post->ID, 'etendard_portfolio_role', true);
-		$url = get_post_meta($post->ID, 'etendard_portfolio_url', true);
-		?>
-		<table class="form-table">
-			<tr>
-				<th scope="row">
-					<label for="etendard_portfolio_client">
-						<span><?php _e('Client', TEXT_TRANSLATION_DOMAIN); ?></span>:
-					</label>
-				</th>
-				<td>
-					<input type="text" id="etendard_portfolio_client" name="etendard_portfolio_client" value="<?php echo esc_attr($client); ?>" />
-				</td>
-			</tr>
-			<tr>
-				<th scope="row">
-					<label for="etendard_portfolio_date">
-						<span><?php _e('Date', TEXT_TRANSLATION_DOMAIN); ?></span>:
-					</label>
-				</th>
-				<td>
-					<input type="text" id="etendard_portfolio_date" name="etendard_portfolio_date" value="<?php echo esc_attr($date); ?>" />
-				</td>
-			</tr>
-			<tr>
-				<th scope="row">
-					<label for="etendard_portfolio_role">
-						<span><?php _e('Rôle', TEXT_TRANSLATION_DOMAIN); ?></span>:
-					</label>
-				</th>
-				<td>
-					<input type="text" id="etendard_portfolio_role" name="etendard_portfolio_role" value="<?php echo esc_attr($role); ?>" />
-				</td>
-			</tr>
-			<tr>
-				<th scope="row">
-					<label for="etendard_portfolio_url">
-						<span><?php _e('URL', TEXT_TRANSLATION_DOMAIN); ?></span>:
-					</label>
-				</th>
-				<td>
-					<input type="text" id="etendard_portfolio_url" name="etendard_portfolio_url" value="<?php echo esc_attr($url); ?>" />
-				</td>
-			</tr>
-		</table>
-		<?php
+if (!function_exists('etendard_portfolio_client')){
+	function etendard_portfolio_client($post){
+		require 'admin/meta-box/portfolio_client.php';
 	}
 }
 
 if (!function_exists('etendard_portfolio_temoignage')){
 	function etendard_portfolio_temoignage($post){
-		$nom = get_post_meta($post->ID, 'etendard_portfolio_temoin_nom', true);
-		$texte = get_post_meta($post->ID, 'etendard_portfolio_temoin_texte', true);
-		$portrait = get_post_meta($post->ID, 'etendard_portfolio_temoin_portrait', true);
-		?>
-		<table class="form-table">
-			<tr>
-				<th scope="row">
-					<label for="etendard_portfolio_temoin_nom">
-						<span><?php _e('Nom', TEXT_TRANSLATION_DOMAIN); ?></span>:
-					</label>
-				</th>
-				<td>
-					<input type="text" id="etendard_portfolio_temoin_nom" name="etendard_portfolio_temoin_nom" value="<?php echo esc_attr($nom); ?>" />
-				</td>
-			</tr>
-			<tr>
-				<th scope="row">
-					<label for="etendard_portfolio_temoin_texte">
-						<span><?php _e('Témoignage', TEXT_TRANSLATION_DOMAIN); ?></span>:
-					</label>
-				</th>
-				<td>
-					<textarea class="large-text" id="etendard_portfolio_temoin_texte" name="etendard_portfolio_temoin_texte"><?php echo esc_attr($texte); ?></textarea>
-				</td>
-			</tr>
-			<tr>
-				<th scope="row">
-					<label for="etendard_portfolio_temoin_portrait">
-						<span><?php _e('Portrait', TEXT_TRANSLATION_DOMAIN); ?></span>:
-					</label>
-				</th>
-				<td>
-					<input type="text" id="etendard_portfolio_temoin_portrait" name="etendard_portfolio_temoin_portrait" value="<?php echo esc_attr($portrait); ?>" />
-					<input class="button button-primary button-medium" name="etendard_portfolio_temoin_portrait_button" id="etendard_portfolio_temoin_portrait_button" value="Upload" />
-				</td>
-			</tr>
-		</table>
-		<script>
-		jQuery(document).ready(function($){
-		  var _custom_media = true,
-			  _orig_send_attachment = wp.media.editor.send.attachment;
-		
-		  $('#etendard_portfolio_temoin_portrait_button').click(function(e) {
-			var send_attachment_bkp = wp.media.editor.send.attachment;
-			var button = $(this);
-			var id = button.attr('id').replace('_button', '');
-			_custom_media = true;
-			wp.media.editor.send.attachment = function(props, attachment){
-			  if ( _custom_media ) {
-				$('#'+id).val(attachment.url);
-			  } else {
-				return _orig_send_attachment.apply( this, [props, attachment] );
-			  };
-			}
-		
-			wp.media.editor.open(button);
-			return false;
-		  });
-		
-		  $('.add_media').on('click', function(){
-			_custom_media = false;
-		  });
-		});
-		</script>
-		<?php
+		require 'admin/meta-box/portfolio_temoignage.php';
 	}
 }
 
@@ -295,15 +191,6 @@ if (!function_exists('etendard_portfolio_save_custom')){
 		update_post_meta($post_id, 'etendard_portfolio_temoin_portrait', $portrait);
 	}
 }
-
-add_action('init', 'etendard_init_cpt');
-add_action('after_setup_theme', 'etendard_setup');
-add_action('wp_enqueue_scripts', 'etendard_enqueue');
-add_action('admin_menu', 'etendard_admin_menu');
-add_action('admin_init', 'etendard_admin_init');
-add_action('widgets_init', 'etendard_widgets_init');
-add_action('add_meta_boxes', 'etendard_register_custom_fields');
-add_action('save_post', 'etendard_portfolio_save_custom');
 
 //fonctions persos
 if (!function_exists('etendard_strip_img_sizes')){
