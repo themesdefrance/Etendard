@@ -15,6 +15,13 @@
 	</div>
 </footer>
 <?php endif; ?>
+<?php 
+if (get_option("etendard_custom_css")){
+	echo '<style type="text/css">';
+	echo htmlentities(stripslashes(get_option("etendard_custom_css")), ENT_NOQUOTES);
+	echo '</style>';
+}
+?>
 <?php wp_footer(); ?>
 </body>
 </html>
