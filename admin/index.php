@@ -33,7 +33,7 @@ else{
 	<form method="post" action="">
 		<?php wp_nonce_field('etendard_admin_nonce', 'etendard_admin_nonce'); ?>
 		<h3>
-			<?php _e('Call to action'); ?>
+			<?php _e('Call to action — Portfolio'); ?>
 		</h3>
 		<table class="form-table">
 			<tr>
@@ -53,7 +53,7 @@ else{
 					</label>
 				</th>
 				<td>
-					<textarea id="cta_text" class="large-text code" name="cta_text"><?php echo $cta_text; ?></textarea>
+					<textarea id="cta_text" class="large-text" name="cta_text"><?php echo $cta_text; ?></textarea>
 				</td>
 			</tr>
 			<tr>

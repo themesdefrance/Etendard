@@ -12,6 +12,7 @@ add_action('admin_init', 'etendard_admin_init');
 add_action('widgets_init', 'etendard_widgets_init');
 add_action('add_meta_boxes', 'etendard_register_custom_fields');
 add_action('save_post', 'etendard_portfolio_save_custom');
+add_action('save_post', 'etendard_home_save_custom');
 
 if (!function_exists('etendard_setup')){
 	function etendard_setup(){
@@ -156,6 +157,19 @@ if (!function_exists('etendard_register_custom_fields')){
 					 'normal',
 					 'high'
 		);
+		
+		//cta box pour template homepage
+		$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+		$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
+		if ($template_file == 'front-page.php'){
+			add_meta_box('etendard_home_cta',
+						 __('Call To Action', TEXT_TRANSLATION_DOMAIN),
+						 'etendard_home_cta',
+						 'page',
+						 'normal',
+						 'high'
+			);
+		}
 	}
 }
 
@@ -174,6 +188,12 @@ if (!function_exists('etendard_portfolio_temoignage')){
 if (!function_exists('etendard_portfolio_carousel')){
 	function etendard_portfolio_carousel($post){
 		require 'admin/meta-box/portfolio_carousel.php';
+	}
+}
+
+if (!function_exists('etendard_home_cta')){
+	function etendard_home_cta($post){
+		require 'admin/meta-box/home_cta.php';
 	}
 }
 
@@ -214,6 +234,33 @@ if (!function_exists('etendard_portfolio_save_custom')){
 		update_post_meta($post_id, 'etendard_portfolio_temoin_texte', $texte);
 		update_post_meta($post_id, 'etendard_portfolio_temoin_portrait', $portrait);
 		update_post_meta($post_id, 'etendard_portfolio_carousel', $carousel);
+	}
+}
+
+if (!function_exists('etendard_home_save_custom')){
+	function etendard_home_save_custom($post_id){
+		if (!isset($_POST['etendard_home_nonce'])) return $post_id;
+	  
+		$nonce = $_POST['etendard_home_nonce'];
+	  
+		if (!wp_verify_nonce($nonce, 'etendard_home_nonce')) return $post_id;
+	
+		if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+	
+		if ($_POST['post_type'] == 'page'){
+			if (!current_user_can('edit_page', $post_id)) return $post_id;
+		} else {
+			if (!current_user_can('edit_post', $post_id))
+			return $post_id;
+		}
+		
+		$cta_url = sanitize_text_field($_POST['etendard_home_cta_url']);
+		$cta_text = sanitize_text_field($_POST['etendard_home_cta_text']);
+		$cta_bouton = sanitize_text_field($_POST['etendard_home_cta_bouton']);
+		
+		update_post_meta($post_id, 'etendard_home_cta_url', $cta_url);
+		update_post_meta($post_id, 'etendard_home_cta_text', $cta_text);
+		update_post_meta($post_id, 'etendard_home_cta_bouton', $cta_bouton);
 	}
 }
 
