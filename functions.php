@@ -94,12 +94,23 @@ if (!function_exists('etendard_enqueue')){
 		wp_register_script('flexslider', get_template_directory_uri().'/lib/flexslider/jquery.flexslider-min.js', array('jquery'), $theme['version'], true);
 		wp_register_style('flexslider', get_template_directory_uri().'/lib/flexslider/flexslider.css', false, $theme['version']);
 		
+		wp_register_script('fancybox', get_template_directory_uri().'/lib/fancybox/jquery.fancybox.pack.js', array('jquery'), $theme['version'], true);
+		wp_register_style('fancybox', get_template_directory_uri().'/lib/fancybox/jquery.fancybox.css', false, $theme['version']);
+		
+		wp_register_script('etendard_gallery', get_template_directory_uri().'/js/gallery.js', array('jquery'), $theme['version'], true);
+		
 		wp_enqueue_style('fonts', 'http://fonts.googleapis.com/css?family=Sanchez:400,400italic|Maven+Pro:400,700&subset=latin,latin-ext', array(), $theme['version']);
 		wp_enqueue_style('icons', get_template_directory_uri().'/fonts/style.css', array(), $theme['version']);
 		wp_enqueue_style('stylesheet', get_template_directory_uri().'/style.css', array(), $theme['version']);
 		
 		wp_enqueue_script('flexslider');
 		wp_enqueue_style('flexslider');
+		
+		if (get_post_gallery()){
+			wp_enqueue_script('fancybox');
+			wp_enqueue_style('fancybox');
+			wp_enqueue_script('etendard_gallery');
+		}
 	}
 }
 
