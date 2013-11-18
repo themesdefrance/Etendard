@@ -172,13 +172,21 @@ if (!function_exists('etendard_register_custom_fields')){
 		//cta box pour template homepage
 		$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
 		$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
-		if ($template_file == 'front-page.php'){
+		if ($template_file == 'template_home.php'){
 			add_meta_box('etendard_home_cta',
 						 __('Call To Action', TEXT_TRANSLATION_DOMAIN),
 						 'etendard_home_cta',
 						 'page',
 						 'normal',
 						 'high'
+			);
+			
+			add_meta_box('etandard_portfolio_carousel',
+					 __('Carousel', TEXT_TRANSLATION_DOMAIN),
+					 'etendard_portfolio_carousel',
+					 'page',
+					 'normal',
+					 'high'
 			);
 		}
 	}
@@ -268,10 +276,15 @@ if (!function_exists('etendard_home_save_custom')){
 		$cta_url = sanitize_text_field($_POST['etendard_home_cta_url']);
 		$cta_text = sanitize_text_field($_POST['etendard_home_cta_text']);
 		$cta_bouton = sanitize_text_field($_POST['etendard_home_cta_bouton']);
+		$carousel = $_POST['etendard_portfolio_carousel'];
+		foreach ($carousel as &$img){
+			$img = sanitize_text_field($img);
+		}
 		
 		update_post_meta($post_id, 'etendard_home_cta_url', $cta_url);
 		update_post_meta($post_id, 'etendard_home_cta_text', $cta_text);
 		update_post_meta($post_id, 'etendard_home_cta_bouton', $cta_bouton);
+		update_post_meta($post_id, 'etendard_portfolio_carousel', $carousel);
 	}
 }
 

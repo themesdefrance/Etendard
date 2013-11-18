@@ -3,7 +3,7 @@ $texte = $url = $bouton = '';
 $template = explode('/', get_page_template());
 $template = $template[count($template)-1];
 
-if ($template === 'front-page.php'){
+if ($template === 'template_home.php'){
 	$custom = get_post_custom();
 	
 	$texte = $custom['etendard_home_cta_text'][0];

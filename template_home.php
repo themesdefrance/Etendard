@@ -11,11 +11,9 @@
 	</div>
 </section>
 
-<?php if (get_option('etendard_slider')): ?>
 <section class="slider">
-	slider
+	<?php get_template_part('carousel'); ?>
 </section>
-<?php endif; ?>
 
 <?php if (get_option('etendard_services')): ?>
 <section class="services">
