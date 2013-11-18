@@ -672,31 +672,24 @@ div.pagination{
 //sidebar normale
 .sidebar{
 }
-.sidebar .widget{
-	@extend %dotted-background;
-}
-.sidebar .widget_etendardsocial{
-	background:#f4f4f4;
-}
-.sidebar .widget_etendardsocial li a{
-	&:before{
-		border-left-color: #f4f4f4;
-	}
-	&:after{
-		border-right-color: #f4f4f4;
-	}
-}
 
-//sidebar home (qui ets en bas)
+
+//sidebar home (qui est en bas) 		// Alex : Renommer en footer car pas que sur la home
 .home-sidebar{
 	padding: 30px 0;
 	background: #e6e7e8;
+	font-size: 14px;
+	color:#6d6e71;
 	@extend .grid;
+}
+.home-sidebar a{
+	color:inherit;
 }
 .home-sidebar .widget{
 	@extend .col-1-3;
 	@extend %grid-col;
 }
+
 .home-sidebar .widget_etendardnewsletter{
 	color: #1f7384;
 	max-width: 400px;
@@ -731,7 +724,6 @@ div.pagination{
 		max-width:100%;
 	}
 	& h3{
-		text-align: center;
 		font-size: 24px;
 		font-style:italic;
 		margin-bottom: 10px;
@@ -748,7 +740,7 @@ div.pagination{
 		
 		&:hover{
 			text-decoration:underline;
-			color:lighten($body-copy-color, 5);
+			//color:lighten($body-copy-color, 5);
 		}
 	}
 	& table{
