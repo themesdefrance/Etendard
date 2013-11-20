@@ -35,6 +35,15 @@ function optionsframework_options() {
 	$options[] = array(	'name'=> __('Apparence', TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'heading');
 						
+	$options[] = array(	'name'=> __('Position de la sidebar', TEXT_TRANSLATION_DOMAIN),
+						'type'=> 'info');
+											
+	$options[] = array( 'options'=>array('droite'=>__('à droite', TEXT_TRANSLATION_DOMAIN), 
+										 'gauche'=>__('à gauche', TEXT_TRANSLATION_DOMAIN)),
+						'std'=>'droite',
+						'id'=> 'etendard_sidebar_position',
+						'type'=> 'radio');
+						
 	$options[] = array(	'name'=> __('CSS personnalisé', TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'info');
 						
