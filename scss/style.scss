@@ -1,5 +1,6 @@
 @import "signature";
 @import "base";
+//@import "couleur";
 
 .wrapper{
 	width: 960px;
@@ -33,7 +34,7 @@
 	@include transition();
 	
 	&:hover{
-		background: $bleu-principal;
+		background: $couleur-principale;
 		color: #fff;
 	}
 }
@@ -41,7 +42,7 @@
 	position: relative;
 }
 .toplevel > li > a.active{
-	border-bottom: 2px solid $bleu-principal;
+	border-bottom: 2px solid $couleur-principale;
 }
 .main-menu .sub-menu{
 	display:block;
@@ -61,7 +62,7 @@
 		content: "";
 		display:block;
 		width: 100%;
-		border-bottom: 3px solid $bleu-principal;
+		border-bottom: 3px solid $couleur-principale;
 	}
 }
 .toplevel > li:hover .sub-menu{
@@ -106,7 +107,7 @@ ul.blog li{
 a.more-link{
 	display: inline-block;
 	font-size: 14px;
-	color: $bleu-principal;
+	color: $couleur-principale;
 	text-decoration: none;
 	font-style: italic;
 	
@@ -156,7 +157,7 @@ ul.services .service{
 }
 ul.services .service h2{
 	font-size: 24px;
-	color: $bleu-principal;
+	color: $couleur-principale;
 	margin-bottom: 10px;
 }
 ul.services .service a.more-link{
@@ -221,7 +222,7 @@ ul.portfolio .creation figure{
 		opacity: 1;
 	}
 	&:hover figcaption{
-		background: $bleu-principal;
+		background: $couleur-principale;
 		color: #fff;
 	}
 }
@@ -242,7 +243,7 @@ ul.portfolio .creation figcaption{
 	background: #e6e7e8;
 	padding: 5px 0;
 	text-align: center;
-	color: $bleu-principal;
+	color: $couleur-principale;
 	font-size: 18px;
 	font-style: italic;
 	@include transition();
@@ -291,7 +292,7 @@ section.portfolio nav.categories a{
 	
 	&.active,
 	&:hover{
-		background:$bleu-principal;
+		background: $couleur-principale;
 		color:#fff;
 	}
 }
@@ -300,7 +301,7 @@ section.realisation .meta > *{
 	margin-bottom:5px;
 }
 section.realisation .realisation-client{
-	color:$bleu-principal;
+	color:$couleur-principale;
 	font-style:italic;
 	font-size:18px;
 }
@@ -310,10 +311,10 @@ section.realisation .realisation-date{
 }
 section.realisation .realisation-site{
 	display:block;
-	color:$bleu-principal;
+	color:$couleur-principale;
 	
 	&:hover{
-		color:darken($bleu-principal,5);
+		color:darken($couleur-principale,5);
 	}
 }
 
@@ -326,7 +327,7 @@ section.realisation .realisation-site{
 	margin-left:33.3%;
 }
 .temoignages .temoignage-headline{
-	color: $bleu-principal;
+	color: $couleur-principale;
 	font-style:italic;
 	margin-bottom:5px;
 	font-size:18px;
@@ -355,7 +356,7 @@ ul.articles .article{
 	margin-bottom: 10px;
 }
 .article .header-title{
-	color: $bleu-principal;
+	color: $couleur-principale;
 	font-size: 36px;
 	font-style: italic;
 	
@@ -383,7 +384,7 @@ ul.articles .article{
 		top: 4px;
 		left: 0;
 		display: inline-block;
-		background: $bleu-principal;
+		background: $couleur-principale;
 		height: 16px;
 		width: 20px;
 	}
@@ -530,7 +531,7 @@ ul.articles .article{
 		display: block;
 		margin-top: 10px;
 		text-align: left;
-		color: $bleu-principal;
+		color: $couleur-principale;
 		font-size: 24px;
 		font-style:italic;
 	}
@@ -551,7 +552,7 @@ ul.articles .article{
 	margin-bottom: 5px;
 }
 .comment .comment-author{
-	color: $bleu-principal;
+	color: $couleur-principale;
 	font-family:$heading-font;
 	font-size:18px;
 	font-style:italic;
@@ -630,14 +631,14 @@ ul.articles .article{
 	text-align:right;
 }
 #commentform #submit{
-	background:$bleu-principal;
+	background:$couleur-principale;
 	border: none;
 	padding: 6px 14px;
 	color: #fff;
 	@include transition(background $default-transition-duration $default-transition-function);
 	
 	&:hover{
-		background:darken($bleu-principal, 5);
+		background:darken($couleur-principale, 5);
 	}
 }
 
@@ -655,7 +656,7 @@ div.pagination{
 	}
 	
 	& a{
-		color:$bleu-principal;
+		color:$couleur-principale;
 	}
 }
 
@@ -766,7 +767,7 @@ div.pagination{
 		position: absolute;
 		right: 7px;
 		top: 7px;
-		color: $bleu-principal;
+		color: $couleur-principale;
 		font-size: 1.8rem;
 	}
 }
@@ -785,7 +786,7 @@ div.pagination{
 	}
 }
 .widget_etendardnewsletter input[type="submit"]{
-	background:$bleu-principal;
+	background: $couleur-principale;
 	border: none;
 	margin: 0;
 	padding: 4px 20px;
@@ -794,7 +795,7 @@ div.pagination{
 	@include transition(background $default-transition-duration $default-transition-function);
 	
 	&:hover{
-		background:darken($bleu-principal,5);
+		background:darken($couleur-principale,5);
 	}
 }
 
@@ -834,7 +835,7 @@ form.search-form .search-submit-wrapper{
 		top:10px;
 		right: 4px;
 		font-size: 1.5rem;
-		color: $bleu-principal;
+		color: $couleur-principale;
 	}
 }
 form.search-form input.search-submit{
@@ -860,7 +861,7 @@ form.search-form input.search-submit{
 	padding: 7px 13px;
 	@include etendard($hauteur: 18px);
 	color: #fff;
-	background:$bleu-principal;
+	background: $couleur-principale;
 	height: 38px;
 	font-size: 1.6rem;
 	@extend %iconfont;
@@ -869,7 +870,7 @@ form.search-form input.search-submit{
 	&:hover{
 		color: #fff;
 		text-decoration:none;
-		background:darken($bleu-principal,5);
+		background:darken($couleur-principale,5);
 	}
 }
 
@@ -882,7 +883,7 @@ form.search-form input.search-submit{
 	padding: 8px 0;
 }
 .widget_calendar #today{
-	background: $bleu-principal;
+	background: $couleur-principale;
 	color: #fff;
 }
 

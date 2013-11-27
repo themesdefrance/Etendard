@@ -34,7 +34,14 @@ function optionsframework_options() {
 						
 	$options[] = array(	'name'=> __('Apparence', TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'heading');
-						
+			
+	$options[] = array(	'name'=> __('Couleur dominante', TEXT_TRANSLATION_DOMAIN),
+						'type'=> 'info');
+												
+	$options[] = array( 'desc'=> __('Couleur', TEXT_TRANSLATION_DOMAIN),
+						'id'=> 'etendard_color',
+						'type'=> 'color');
+												
 	$options[] = array(	'name'=> __('Position de la sidebar', TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'info');
 											

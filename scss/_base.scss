@@ -10,7 +10,7 @@ $default-transition-duration: 0.2s;
 
 @import "qb/all";
 
-$bleu-principal: #1ba7c4;
+$couleur-principale: #1ba7c4;
 $gris-principal: #b7b8b8;
 $body-copy-color: #011f2c;
 
@@ -59,7 +59,7 @@ a:visited{
 	}
 }
 %bouton-etendard{
-	$background: $bleu-principal;
+	$background: $couleur-principale;
 	
 	display: inline-block;
 	padding: 6px 35px;
