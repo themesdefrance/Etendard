@@ -131,11 +131,14 @@ if (!function_exists('etendard_admin_menu')){
 	}
 }
 
-add_filter('optionsframework_menu', function($menu){
-	$menu['page_title'] = __('Options Étendard');
-	$menu['menu_title'] = __('Étendard', TEXT_TRANSLATION_DOMAIN);
-	return $menu;
-});
+if (!function_exists('etendard_optionsframework_menu')){
+	function etendard_optionsframework_menu($menu){
+		$menu['page_title'] = __('Options Étendard');
+		$menu['menu_title'] = __('Étendard', TEXT_TRANSLATION_DOMAIN);
+		return $menu;
+	}
+}
+add_filter('optionsframework_menu', 'etendard_optionsframework_menu');
 
 if (!function_exists('etendard_options')){
 	function etendard_options(){
