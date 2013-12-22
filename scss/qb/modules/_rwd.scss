@@ -1,23 +1,29 @@
-$qb-breakpoints: null;
+$breakpoints: null;
 
-@mixin register-breakpoints($breakpoints...){
+@mixin register-breakpoints($registering...){
 	$sorted: 0;
 	$previous: 0;
 
-	@while $sorted < length($breakpoints){
+	@while $sorted < length($registering){
 		$min: 99999;
-		@each $amount in $breakpoints{
+		@each $amount in $registering{
 			@if $amount < $min{
 				@if $amount > $previous{
 					$min: $amount;
 				}
 			}
 		}
-		$qb-breakpoints: append($qb-breakpoints, $min);
+		@if nth($breakpoints, 1) == null{
+			$breakpoints: $min;
+		}
+		@else{
+			$breakpoints: append($breakpoints, $min);
+		}
 		$previous: $min;
 		$sorted: $sorted+1;
 	}
 }
+
 @mixin width-above($breakpoint){
 	@media only screen and (min-width: $breakpoint){
 		@content;
@@ -35,16 +41,16 @@ $qb-breakpoints: null;
 }
 @mixin width-matches($size){
 	$i: 1;
-	@each $breakpoint in $qb-breakpoints{
+	@each $breakpoint in $breakpoints{
 		@if ($breakpoint == $size){
 			//we've hit the correct breakpoint
 			@if $i == 1{
 				//smallest item in the list
-				@include width-below(nth($qb-breakpoints, 2) - 1px){
+				@include width-below(nth($breakpoints, 2) - 1px){
 					@content;
 				}
 			}
-			@else if $i == length($qb-breakpoints){
+			@else if $i == length($breakpoints){
 				//biggest item in the list
 				@include width-above($size){
 					@content;
@@ -52,7 +58,7 @@ $qb-breakpoints: null;
 			}
 			@else{
 				//any other item
-				@include width-between($size, nth($qb-breakpoints, $i+1)){
+				@include width-between($size, nth($breakpoints, $i+1)){
 					@content;
 				}
 			}

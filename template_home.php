@@ -79,7 +79,7 @@
 					break;
 			}
 			?>
-			<li class="creation">
+			<li class="creation col-1-3">
 				<a href="<?php the_permalink(); ?>">
 					<figure class="<?php echo $icon; ?>">
 						<div class="entry-thumbnail">
@@ -114,7 +114,7 @@
 		</h2>
 		<ul class="blog">
 			<?php while ($posts->have_posts()) : $posts->the_post(); ?>
-			<li>
+			<li class="col-1-4">
 				<article class="article teaser">
 					<header class="header">
 						<?php if (has_post_thumbnail() && !post_password_required()): ?>

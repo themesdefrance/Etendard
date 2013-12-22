@@ -8,11 +8,18 @@ $font-base: 16;
 $default-transition-function: ease-in;
 $default-transition-duration: 0.2s;
 
-@import "qb/all";
-
 $couleur-principale: #1ba7c4;
 $gris-principal: #b7b8b8;
 $body-copy-color: #011f2c;
+
+$breakpoint-desktop: 1000px;
+$breakpoint-tablet: 760px;
+$breakpoint-mobile: 600px;
+$grid-collapse-below: $breakpoint-mobile;
+
+@import "qb/all";
+
+@include register-breakpoints($breakpoint-desktop, $breakpoint-tablet, $breakpoint-mobile);
 
 html{
 	font-family: $body-copy-font;
