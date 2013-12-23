@@ -7,6 +7,7 @@ function optionsframework_options() {
 						'type'=> 'heading');
 						
 	$options[] = array(	'name'=> __('Call To Action', TEXT_TRANSLATION_DOMAIN),
+						'desc'=> __("Personnaliser le call to action de la page d'accueil", TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'info');
 						
 	$options[] = array( 'desc'=> __('Destination du call to action (url)', TEXT_TRANSLATION_DOMAIN),
@@ -22,6 +23,7 @@ function optionsframework_options() {
 						'type'=> 'text');
 						
 	$options[] = array(	'name'=> __('Footer', TEXT_TRANSLATION_DOMAIN),
+						'desc'=> __("Personnaliser le contenu du pied de page", TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'info');
 						
 	$options[] = array( 'desc'=> __('Partie gauche', TEXT_TRANSLATION_DOMAIN),
@@ -36,6 +38,7 @@ function optionsframework_options() {
 						'type'=> 'heading');
 			
 	$options[] = array(	'name'=> __('Couleur dominante', TEXT_TRANSLATION_DOMAIN),
+						'desc'=> __('Choisir la couleur dominante du thème', TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'info');
 												
 	$options[] = array( 'desc'=> __('Couleur', TEXT_TRANSLATION_DOMAIN),
@@ -43,6 +46,7 @@ function optionsframework_options() {
 						'type'=> 'color');
 												
 	$options[] = array(	'name'=> __('Position de la sidebar', TEXT_TRANSLATION_DOMAIN),
+						'desc'=> __('Choisir la position de la sidebar', TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'info');
 											
 	$options[] = array( 'options'=>array('droite'=>__('à droite', TEXT_TRANSLATION_DOMAIN), 
@@ -52,6 +56,7 @@ function optionsframework_options() {
 						'type'=> 'radio');
 						
 	$options[] = array(	'name'=> __('CSS personnalisé', TEXT_TRANSLATION_DOMAIN),
+						'desc'=> __('Ce css sera injecté sur toute les pages du site.', TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'info');
 						
 	$options[] = array( 'desc'=> __('CSS', TEXT_TRANSLATION_DOMAIN),
