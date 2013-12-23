@@ -49,6 +49,7 @@ section.portfolio nav.categories a:hover,
 .widget_etendardsocial li a,
 .cta-button{
 	background: <?php echo $color; ?> !important;
+	color: #fff !important;
 }
 
 .toplevel > li > a.active{
