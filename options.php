@@ -3,6 +3,8 @@ function optionsframework_options() {
 		
 	$options = array();
 		
+		
+	//Onglet Général
 	$options[] = array(	'name'=> __('Général', TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'heading');
 						
@@ -29,6 +31,7 @@ function optionsframework_options() {
 							'portfolio'=>true,
 							'articles'=>true,
 						));
+						
 						
 	$options[] = array(	'desc'=> __("Configurez l'ordre d'apparition des éléments", TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'info');
@@ -58,21 +61,6 @@ function optionsframework_options() {
 						'std'=>50,
 						'type'=> 'text');
 						
-	$options[] = array(	'name'=> __('Call To Action', TEXT_TRANSLATION_DOMAIN),
-						'desc'=> __("Personnaliser le call to action de la page d'accueil", TEXT_TRANSLATION_DOMAIN),
-						'type'=> 'info');
-						
-	$options[] = array( 'desc'=> __('Destination du call to action (url)', TEXT_TRANSLATION_DOMAIN),
-						'id'=> 'etendard_cta_url',
-						'type'=> 'text');
-						
-	$options[] = array( 'desc'=> __("Texte d'accompagnement", TEXT_TRANSLATION_DOMAIN),
-						'id'=> 'etendard_cta_text',
-						'type'=> 'etendard_cta_texte');
-						
-	$options[] = array( 'desc'=> __('Texte du bouton', TEXT_TRANSLATION_DOMAIN),
-						'id'=> 'etendard_cta_bouton',
-						'type'=> 'text');
 						
 	$options[] = array(	'name'=> __('Footer', TEXT_TRANSLATION_DOMAIN),
 						'desc'=> __("Personnaliser le contenu du pied de page", TEXT_TRANSLATION_DOMAIN),
@@ -86,6 +74,9 @@ function optionsframework_options() {
 						'id'=> 'etendard_footer_droite',
 						'type'=> 'textarea');
 						
+						
+						
+	//Onglet Apparence					
 	$options[] = array(	'name'=> __('Apparence', TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'heading');
 			
@@ -114,6 +105,27 @@ function optionsframework_options() {
 	$options[] = array( 'desc'=> __('CSS', TEXT_TRANSLATION_DOMAIN),
 						'id'=> 'etendard_custom_css',
 						'type'=> 'textarea');
+						
+						
+	//Onglet Portfolio					
+	$options[] = array(	'name'=> __('Portfolio', TEXT_TRANSLATION_DOMAIN),
+						'type'=> 'heading');
+						
+	$options[] = array(	'name'=> __('Call To Action', TEXT_TRANSLATION_DOMAIN),
+						'desc'=> __("Personnaliser le call to action des pages portfolio", TEXT_TRANSLATION_DOMAIN),
+						'type'=> 'info');
+						
+	$options[] = array( 'desc'=> __('Destination du call to action (url)', TEXT_TRANSLATION_DOMAIN),
+						'id'=> 'etendard_cta_url',
+						'type'=> 'text');
+						
+	$options[] = array( 'desc'=> __("Texte d'accompagnement", TEXT_TRANSLATION_DOMAIN),
+						'id'=> 'etendard_cta_text',
+						'type'=> 'textarea');
+						
+	$options[] = array( 'desc'=> __('Texte du bouton', TEXT_TRANSLATION_DOMAIN),
+						'id'=> 'etendard_cta_bouton',
+						'type'=> 'text');
 	
 	return $options;
 }
