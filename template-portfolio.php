@@ -55,7 +55,7 @@ else{
 					break;
 			}
 			?>
-			<li class="creation">
+			<li class="creation col-1-3">
 				<a href="<?php the_permalink(); ?>">
 					<figure class="<?php echo $icon; ?>">
 						<div class="entry-thumbnail">
