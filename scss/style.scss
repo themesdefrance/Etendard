@@ -22,9 +22,18 @@
 .main-header .logo-wrap{
 	float: left;
 	max-width:50%;
+	
+	@include width-matches($breakpoint-mobile){
+		float:none;
+		max-width:100%;
+	}
 }
 .main-header .main-menu{
 	float: right;
+	
+	@include width-matches($breakpoint-mobile){
+		float:none;
+	}
 }
 .main-menu ul{
 	list-style: none;
@@ -44,6 +53,10 @@
 	&:hover{
 		background: $couleur-principale;
 		color: #fff;
+	}
+	
+	@include width-matches($breakpoint-mobile){
+		display:block;
 	}
 }
 .toplevel > li{
@@ -71,6 +84,18 @@
 		display:block;
 		width: 100%;
 		border-bottom: 3px solid $couleur-principale;
+	}
+	
+	@include width-matches($breakpoint-mobile){
+		position:static;
+		opacity:1;
+		height:auto;
+		border:none;
+		padding-left:15px;
+		
+		&:before{
+			display:none;
+		}
 	}
 }
 .toplevel > li:hover .sub-menu{
