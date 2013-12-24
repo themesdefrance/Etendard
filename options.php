@@ -6,6 +6,58 @@ function optionsframework_options() {
 	$options[] = array(	'name'=> __('Général', TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'heading');
 						
+	$options[] = array(	'name'=> __("Page d'accueil", TEXT_TRANSLATION_DOMAIN),
+						'desc'=> false,
+						'type'=> 'info');
+						
+	$options[] = array(	'desc'=> __("Sélectionnez les éléments à faire figurer sur la page d'accueil", TEXT_TRANSLATION_DOMAIN),
+						'type'=> 'info');
+						
+	$options[] = array( 'id'=> 'etendard_blocks_presence',
+						'type'=> 'multicheck',
+						'options'=>array(
+							'titre'=>__('Titre & description', TEXT_TRANSLATION_DOMAIN),
+							'slider'=>__('Slider', TEXT_TRANSLATION_DOMAIN),
+							'cta'=>__('Call to action', TEXT_TRANSLATION_DOMAIN),
+							'portfolio'=>__('Portfolio', TEXT_TRANSLATION_DOMAIN),
+							'articles'=>__('Articles', TEXT_TRANSLATION_DOMAIN),
+						),
+						'std'=>array(
+							'titre'=>true,
+							'slider'=>true,
+							'cta'=>true,
+							'portfolio'=>true,
+							'articles'=>true,
+						));
+						
+	$options[] = array(	'desc'=> __("Configurez l'ordre d'apparition des éléments", TEXT_TRANSLATION_DOMAIN),
+						'type'=> 'info');
+						
+	$options[] = array( 'desc'=> __("Titre & Description", TEXT_TRANSLATION_DOMAIN),
+						'id'=> 'etendard_blocks_ordre_titre',
+						'std'=>10,
+						'type'=> 'text');
+						
+	$options[] = array( 'desc'=> __("Slider", TEXT_TRANSLATION_DOMAIN),
+						'id'=> 'etendard_blocks_ordre_slider',
+						'std'=>20,
+						'type'=> 'text');
+						
+	$options[] = array( 'desc'=> __("Call to action", TEXT_TRANSLATION_DOMAIN),
+						'id'=> 'etendard_blocks_ordre_cta',
+						'std'=>30,
+						'type'=> 'text');
+						
+	$options[] = array( 'desc'=> __("Portfolio", TEXT_TRANSLATION_DOMAIN),
+						'id'=> 'etendard_blocks_ordre_portfolio',
+						'std'=>40,
+						'type'=> 'text');
+						
+	$options[] = array( 'desc'=> __("Articles de blog", TEXT_TRANSLATION_DOMAIN),
+						'id'=> 'etendard_blocks_ordre_articles',
+						'std'=>50,
+						'type'=> 'text');
+						
 	$options[] = array(	'name'=> __('Call To Action', TEXT_TRANSLATION_DOMAIN),
 						'desc'=> __("Personnaliser le call to action de la page d'accueil", TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'info');
