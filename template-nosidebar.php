@@ -5,11 +5,7 @@ Template Name: Sans sidebar
 ?>
 <?php get_header(); ?>
 <section class="blog grid">
-	<div class="wrapper">
-		<h2 class="section-title">
-			<?php _e('Blog', TEXT_TRANSLATION_DOMAIN); ?>
-		</h2>
-		
+	<div class="wrapper">		
 		<div>
 			<?php /* The loop */ ?>
 			<?php while (have_posts()) : the_post(); ?>
