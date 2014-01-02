@@ -47,7 +47,8 @@ ul.portfolio .creation figure:hover figcaption,
 section.portfolio nav.categories a:hover,
 .widget_etendardnewsletter input[type="submit"],
 .widget_etendardsocial li a,
-.cta-button{
+.cta-button,
+.contact-form .submit input{
 	background: <?php echo $color; ?> !important;
 	color: #fff !important;
 }

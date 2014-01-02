@@ -691,6 +691,38 @@ div.pagination{
 	}
 }
 
+//page de contact
+.contact-form .field{
+	margin-bottom:25px;
+}
+.contact-form label{
+	display:block;
+	margin-bottom:2px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"]{
+	width:100%;
+	max-width:400px;
+}
+.contact-form textarea{
+	width:100%;
+	min-height:200px;
+}
+.contact-form .field input,
+.contact-form .field textarea{
+	border: 1px solid #ccc;
+	padding: 6px 4px;
+	
+	&:focus{
+		border: 1px solid #818181;
+	}
+}
+.contact-form .submit input{
+	border:none;
+	color:#fff;
+	padding:6px 14px;
+}
+
 //footer
 .main-footer{
 	padding: 15px 0 30px;
