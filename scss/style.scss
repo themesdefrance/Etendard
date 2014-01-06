@@ -713,14 +713,35 @@ div.pagination{
 	border: 1px solid #ccc;
 	padding: 6px 4px;
 	
+	&:invalid{
+		border: 1px solid transparent;
+		@include box-shadow(0px 0px 2px 1px #ea2222);
+	}
 	&:focus{
 		border: 1px solid #818181;
+	}
+	&:invalid:focus{
+		border: 1px solid transparent;
 	}
 }
 .contact-form .submit input{
 	border:none;
 	color:#fff;
 	padding:6px 14px;
+}
+
+.contact-feedback{
+	margin-top:10px;
+	color:#fff;
+	padding:8px 6px;
+	border-radius:5px;
+	
+	&.success{
+		background:#27ae60;
+	}
+	&.error{
+		background:#d83929;
+	}
 }
 
 //footer
