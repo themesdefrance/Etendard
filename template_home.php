@@ -3,11 +3,16 @@
 
 <?php
 $display_blocks = of_get_option('etendard_blocks_presence');
-$ordre_blocks = array('titre'=>of_get_option('etendard_blocks_ordre_titre'), 
-					  'slider'=>of_get_option('etendard_blocks_ordre_slider'),
-					  'cta'=>of_get_option('etendard_blocks_ordre_cta'),
-					  'portfolio'=>of_get_option('etendard_blocks_ordre_portfolio'),
-					  'articles'=>of_get_option('etendard_blocks_ordre_articles'));
+//$ordre_blocks = array('titre'=>of_get_option('etendard_blocks_ordre_titre'), 
+//					  'slider'=>of_get_option('etendard_blocks_ordre_slider'),
+//					  'cta'=>of_get_option('etendard_blocks_ordre_cta'),
+//					  'portfolio'=>of_get_option('etendard_blocks_ordre_portfolio'),
+//					  'articles'=>of_get_option('etendard_blocks_ordre_articles'));
+$ordre_blocks = array('titre'=>0, 
+					  'slider'=>1,
+					  'cta'=>2,
+					  'portfolio'=>3,
+					  'articles'=>4);
 asort($ordre_blocks);
 ?>
 

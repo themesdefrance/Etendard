@@ -33,33 +33,33 @@ function optionsframework_options() {
 						));
 						
 						
-	$options[] = array(	'desc'=> __("Configurez l'ordre d'apparition des éléments", TEXT_TRANSLATION_DOMAIN),
-						'type'=> 'info');
-						
-	$options[] = array( 'desc'=> __("Titre & Description", TEXT_TRANSLATION_DOMAIN),
-						'id'=> 'etendard_blocks_ordre_titre',
-						'std'=>10,
-						'type'=> 'text');
-						
-	$options[] = array( 'desc'=> __("Slider", TEXT_TRANSLATION_DOMAIN),
-						'id'=> 'etendard_blocks_ordre_slider',
-						'std'=>20,
-						'type'=> 'text');
-						
-	$options[] = array( 'desc'=> __("Call to action", TEXT_TRANSLATION_DOMAIN),
-						'id'=> 'etendard_blocks_ordre_cta',
-						'std'=>30,
-						'type'=> 'text');
-						
-	$options[] = array( 'desc'=> __("Portfolio", TEXT_TRANSLATION_DOMAIN),
-						'id'=> 'etendard_blocks_ordre_portfolio',
-						'std'=>40,
-						'type'=> 'text');
-						
-	$options[] = array( 'desc'=> __("Articles de blog", TEXT_TRANSLATION_DOMAIN),
-						'id'=> 'etendard_blocks_ordre_articles',
-						'std'=>50,
-						'type'=> 'text');
+//	$options[] = array(	'desc'=> __("Configurez l'ordre d'apparition des éléments", TEXT_TRANSLATION_DOMAIN),
+//						'type'=> 'info');
+//						
+//	$options[] = array( 'desc'=> __("Titre & Description", TEXT_TRANSLATION_DOMAIN),
+//						'id'=> 'etendard_blocks_ordre_titre',
+//						'std'=>10,
+//						'type'=> 'text');
+//						
+//	$options[] = array( 'desc'=> __("Slider", TEXT_TRANSLATION_DOMAIN),
+//						'id'=> 'etendard_blocks_ordre_slider',
+//						'std'=>20,
+//						'type'=> 'text');
+//						
+//	$options[] = array( 'desc'=> __("Call to action", TEXT_TRANSLATION_DOMAIN),
+//						'id'=> 'etendard_blocks_ordre_cta',
+//						'std'=>30,
+//						'type'=> 'text');
+//						
+//	$options[] = array( 'desc'=> __("Portfolio", TEXT_TRANSLATION_DOMAIN),
+//						'id'=> 'etendard_blocks_ordre_portfolio',
+//						'std'=>40,
+//						'type'=> 'text');
+//						
+//	$options[] = array( 'desc'=> __("Articles de blog", TEXT_TRANSLATION_DOMAIN),
+//						'id'=> 'etendard_blocks_ordre_articles',
+//						'std'=>50,
+//						'type'=> 'text');
 						
 						
 	$options[] = array(	'name'=> __('Footer', TEXT_TRANSLATION_DOMAIN),
