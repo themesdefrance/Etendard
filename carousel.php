@@ -8,13 +8,15 @@ if (isset($custom['etendard_portfolio_carousel']))
 if (is_array($carousel) && trim($carousel[count($carousel)-1]) === '') array_pop($carousel);
 ?>
 <?php if (count($carousel) > 0): ?>
-<div class="flexslider">
-	<ul class="slides">
-		<?php foreach ($carousel as $img){ ?>
-		<li>
-			<img src="<?php echo $img; ?>" />
-		</li>
-		<?php } ?>
-	</ul>
+<div class="wrapper">
+	<div class="flexslider">
+		<ul class="slides">
+			<?php foreach ($carousel as $img){ ?>
+			<li>
+				<img src="<?php echo $img; ?>" />
+			</li>
+			<?php } ?>
+		</ul>
+	</div>
 </div>
 <?php endif; ?>
