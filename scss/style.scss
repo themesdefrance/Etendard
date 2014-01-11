@@ -718,15 +718,8 @@ div.pagination{
 	border: 1px solid #ccc;
 	padding: 6px 4px;
 	
-	&:invalid{
-		border: 1px solid transparent;
-		@include box-shadow(0px 0px 2px 1px #ea2222);
-	}
 	&:focus{
 		border: 1px solid #818181;
-	}
-	&:invalid:focus{
-		border: 1px solid transparent;
 	}
 }
 .contact-form .submit input{
