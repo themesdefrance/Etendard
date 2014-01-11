@@ -32,7 +32,7 @@ if (isset($_POST['etendard_contact_nonce']) && wp_verify_nonce($_POST['etendard_
 		<label for="etendard_contact_email">
 			<?php _e('Email'); ?>:
 		</label>
-		<input type="email" id="etendard_contact_email" name="etendard_contact_email" />
+		<input type="email" id="etendard_contact_email" name="etendard_contact_email" required />
 	</div>
 	
 	<div class="field">

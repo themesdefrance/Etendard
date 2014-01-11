@@ -14,7 +14,6 @@
 		<?php wp_title('|', true, 'right'); ?>
 		<?php bloginfo('name'); ?>
 	</title>
-	<meta name="description" content="<?php echo esc_attr(get_bloginfo('description')); ?>">
 <!--	<link rel="shortcut icon" href="/favicon.ico?v=0">-->
 	
 	<meta name="viewport" content="width=device-width">

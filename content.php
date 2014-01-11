@@ -11,16 +11,19 @@
 			<?php the_title(); ?>
 		</h1>
 		<?php else : ?>
-		<h1 class="header-title">
+		<h2 class="header-title">
 			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-		</h1>
+		</h2>
 		<?php endif; // is_single() ?>
 		
+		<?php if(!is_page()) : ?>
 		<span class="header-meta">
 			<?php echo sprintf('%2$s', get_post_format_string(get_post_format()), get_the_date()); ?> |
 			<?php comments_number(__('Aucun commentaire', TEXT_TRANSLATION_DOMAIN), __('Un commentaire', TEXT_TRANSLATION_DOMAIN), __('% commentaires', TEXT_TRANSLATION_DOMAIN)); ?> 
 			<?php edit_post_link(__('Éditer', TEXT_TRANSLATION_DOMAIN)); ?>
 		</span>
+		<?php endif; ?>
+		
 	</header>
 	<div class="content">
 		<?php the_content(__('Lire la suite', TEXT_TRANSLATION_DOMAIN)); ?>

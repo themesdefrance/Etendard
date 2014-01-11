@@ -1,4 +1,4 @@
-<section class="home-sidebar">
+<section class="footer-widgets">
 	<div class="wrapper">
 			<?php get_sidebar('footer'); ?>
 		</div>
