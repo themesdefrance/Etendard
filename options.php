@@ -88,6 +88,14 @@ function optionsframework_options() {
 						'id'=> 'etendard_color',
 						'type'=> 'color');
 												
+	$options[] = array(	'name'=> __('Logo', TEXT_TRANSLATION_DOMAIN),
+						'desc'=> __('Sélectionnez un logo pour votre site.', TEXT_TRANSLATION_DOMAIN),
+						'type'=> 'info');
+												
+	$options[] = array( 'desc'=> __('Logo', TEXT_TRANSLATION_DOMAIN),
+						'id'=> 'etendard_logo',
+						'type'=> 'upload');
+												
 	$options[] = array(	'name'=> __('Position de la sidebar', TEXT_TRANSLATION_DOMAIN),
 						'desc'=> __('Choisir la position de la sidebar', TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'info');

@@ -42,11 +42,6 @@ if (!function_exists('etendard_setup')){
 		));
 		
 		add_theme_support('post-thumbnails');
-		add_theme_support('custom-header', array(
-			'header-text'=>false,
-			'height'=>200,
-			'admin-preview-callback'=>'etendard_admin_header_image',
-		));
 		
 		add_theme_support('post-formats', array(
 //			'chat', 
@@ -311,14 +306,6 @@ if (!function_exists('etendard_strip_img_sizes')){
 }
 add_filter('get_avatar', 'etendard_strip_img_sizes');
 add_filter('post_thumbnail_html', 'etendard_strip_img_sizes');
-
-if (!function_exists('etendard_admin_header_image')){
-	function etendard_admin_header_image(){
-		?>
-		<img src="<?php header_image(); ?>" alt="<?php echo get_bloginfo('title'); ?>" />
-		<?php
-	}
-}
 
 if (!function_exists('etendard_posts_nav')){
 	//derived from http://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/

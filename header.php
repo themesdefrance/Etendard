@@ -33,10 +33,10 @@
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 	<header class="main-header">
 		<div class="wrapper">
-			<?php if (get_header_image()): ?>
+			<?php if (of_get_option('etendard_logo')): ?>
 			<div class="logo-wrap">
 				<a href="<?php echo home_url('/'); ?>">
-					<img src="<?php header_image(); ?>" alt="<?php echo get_bloginfo('title'); ?>" />
+					<img src="<?php echo of_get_option('etendard_logo'); ?>" alt="<?php echo get_bloginfo('title'); ?>" />
 				</a>
 			</div>
 			<?php endif; ?>
