@@ -1,5 +1,4 @@
-@charset "CP850";
-/*
+/*!
 Theme Name: Étendard
 Theme URI: http://themesdefrance.fr/etendard
 Author: Thèmes de France
@@ -11,6 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: 
 Text Domain: etendard
 */
+/* $gris-principal: #b7b8b8; */
 /* line 14, scss/qb/resets/_boxreset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -282,7 +282,7 @@ section.portfolio nav.categories:after,
   /* Black prints faster: sanbeiji.com/archives/953 */
   /* line 9, scss/qb/modules/_print.scss */
   a, a:visited {
-    color: #444444 !important;
+    color: #444 !important;
     text-decoration: underline;
   }
 
@@ -304,7 +304,7 @@ section.portfolio nav.categories:after,
   /* Don't show links for images, or javascript/internal links */
   /* line 22, scss/qb/modules/_print.scss */
   pre, blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 
@@ -448,7 +448,7 @@ a:visited {
 }
 /* line 79, scss/_base.scss */
 .cta-button:hover {
-  background: #1894ae;
+  background: #9d9f9f;
 }
 /* line 82, scss/_base.scss */
 .cta-button:visited {
@@ -673,7 +673,7 @@ you can use the generic selector below, but it's slower:
   overflow: hidden;
   position: absolute;
   z-index: 1;
-  top: 120%;
+  top: 170%;
   left: 0;
   min-width: 200px;
   background: #fff;
@@ -726,7 +726,7 @@ body > section {
 /* line 115, scss/style.scss */
 section .wrapper > h2 {
   font-size: 30px;
-  color: #b7b8b8;
+  color: #9d9f9f;
   margin-bottom: 10px;
 }
 /* line 120, scss/style.scss */
@@ -772,7 +772,7 @@ a.more-link:hover {
 section.description {
   padding: 40px 0;
   text-align: center;
-  color: #b7b8b8;
+  color: #9d9f9f;
   font-style: italic;
 }
 
@@ -1131,25 +1131,25 @@ ul.articles .article {
 
 /* line 436, scss/style.scss */
 .article .header-meta {
-  color: #b7b8b8;
+  color: #9d9f9f;
   font-size: 14px;
 }
 
 /* line 440, scss/style.scss */
 .article .header-meta .post-edit-link {
-  color: #9d9f9f;
+  color: #838686;
 }
 
 /* line 443, scss/style.scss */
 .article .footer {
   margin-top: 30px;
-  color: #b7b8b8;
+  color: #9d9f9f;
   font-size: 14px;
 }
 
 /* line 448, scss/style.scss */
 .article .footer .page-links a {
-  color: #9d9f9f;
+  color: #838686;
 }
 
 /* line 451, scss/style.scss */
@@ -1329,7 +1329,7 @@ ul.articles .article {
 
 /* line 602, scss/style.scss */
 .comment .reply a {
-  color: #b7b8b8;
+  color: #9d9f9f;
   font-family: "Sanchez", Georgia, Trebuchet, Helvetica, Arial;
   font-size: 18px;
   font-style: italic;
@@ -1343,7 +1343,7 @@ ul.articles .article {
 }
 /* line 615, scss/style.scss */
 .comment .reply a:hover {
-  color: #9d9f9f;
+  color: #838686;
   text-decoration: underline;
 }
 
@@ -1355,7 +1355,7 @@ ul.articles .article {
 
 /* line 628, scss/style.scss */
 .comment-navigation a {
-  color: #9d9f9f;
+  color: #838686;
 }
 /* line 631, scss/style.scss */
 .comment-navigation a:hover {
@@ -1470,7 +1470,7 @@ div.pagination a {
 /* line 717, scss/style.scss */
 .contact-form .field input,
 .contact-form .field textarea {
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   padding: 6px 4px;
 }
 /* line 721, scss/style.scss */
@@ -1654,7 +1654,7 @@ div.pagination a {
   width: 100%;
   margin-top: 5px;
   background: #fff;
-  border: 1px solid white;
+  border: 1px solid #fff;
   padding: 6px 4px;
   color: #333;
 }

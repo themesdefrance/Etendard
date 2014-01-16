@@ -9,7 +9,7 @@ $default-transition-function: ease-in;
 $default-transition-duration: 0.2s;
 
 $couleur-principale: #1ba7c4;
-$gris-principal: #b7b8b8;
+$gris-principal: #9d9f9f; /* $gris-principal: #b7b8b8; */
 $body-copy-color: #011f2c;
 
 $breakpoint-desktop: 1000px;
@@ -77,7 +77,7 @@ a:visited{
 	@include transition();
 	
 	&:hover{
-		background: darken($background, 5);
+		background: $gris-principal;
 	}
 	&:visited{
 		color: #fff;

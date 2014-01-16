@@ -20,21 +20,21 @@ add_action('save_post', 'etendard_home_save_custom');
 if (!function_exists('etendard_setup')){
 	function etendard_setup(){
 		register_nav_menu('primary', __('Menu principal', TEXT_TRANSLATION_DOMAIN));
-					
+			
 		register_sidebar(array(
-				'name'          => __('Widgets de pied de page', TEXT_TRANSLATION_DOMAIN),
-				'id'            => 'footer',
-				'description'   => __('Section apparaissant en bas de toutes les pages.', TEXT_TRANSLATION_DOMAIN),
+				'name'          => __('Barre latérale', TEXT_TRANSLATION_DOMAIN),
+				'id'            => 'blog',
+				'description'   => __('Ajoutez les widgets à faire figurer dans la barre latérale (sidebar).', TEXT_TRANSLATION_DOMAIN),
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3>',
 				'after_title'   => '</h3>',
 		));
-			
+		
 		register_sidebar(array(
-				'name'          => __('Widgets de blog', TEXT_TRANSLATION_DOMAIN),
-				'id'            => 'blog',
-				'description'   => __('Barre latérale sur les pages du blog.', TEXT_TRANSLATION_DOMAIN),
+				'name'          => __('Pied de page', TEXT_TRANSLATION_DOMAIN),
+				'id'            => 'footer',
+				'description'   => __('Ajoutez les widgets à faire figurer dans le pied de page.', TEXT_TRANSLATION_DOMAIN),
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3>',
@@ -97,7 +97,7 @@ if (!function_exists('etendard_enqueue')){
 		
 		wp_register_script('etendard_gallery', get_template_directory_uri().'/js/gallery.js', array('jquery'), $theme['version'], true);
 		
-		wp_enqueue_style('fonts', 'http://fonts.googleapis.com/css?family=Sanchez:400,400italic|Maven+Pro:400,700&subset=latin,latin-ext', array(), $theme['version']);
+		wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Sanchez:400,400italic|Maven+Pro:400,700', array(), $theme['version']);
 		wp_enqueue_style('icons', get_template_directory_uri().'/fonts/style.css', array(), $theme['version']);
 		wp_enqueue_style('stylesheet', get_template_directory_uri().'/style.css', array(), $theme['version']);
 		
@@ -121,14 +121,14 @@ if (!function_exists('etendard_admin_init')){
 
 if (!function_exists('etendard_admin_menu')){
 	function etendard_admin_menu(){
-		add_theme_page('Étendard', 'Étendard', 'edit_theme_options', 'etendard-options', 'etendard_options');
+		add_theme_page('Options Étendard', 'Options Étendard', 'edit_theme_options', 'etendard-options', 'etendard_options');
 	}
 }
 
 if (!function_exists('etendard_optionsframework_menu')){
 	function etendard_optionsframework_menu($menu){
 		$menu['page_title'] = __('Options Étendard');
-		$menu['menu_title'] = __('Étendard', TEXT_TRANSLATION_DOMAIN);
+		$menu['menu_title'] = __('Options Étendard', TEXT_TRANSLATION_DOMAIN);
 		return $menu;
 	}
 }

@@ -33,6 +33,7 @@ define( 'OPTIONS_FRAMEWORK_URL', get_template_directory_uri().'/options/' );
 
 load_plugin_textdomain( 'optionsframework', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
 
+
 /* Make sure we don't expose any info if called directly */
 
 if ( !function_exists( 'add_action' ) ) {
