@@ -189,13 +189,16 @@ if (!function_exists('etendard_register_custom_fields')){
 						 'high'
 			);
 			
-			add_meta_box('etandard_portfolio_carousel',
-					 __('Carousel', TEXT_TRANSLATION_DOMAIN),
-					 'etendard_portfolio_carousel',
-					 'page',
-					 'normal',
-					 'high'
-			);
+			$display_blocks = of_get_option('etendard_blocks_presence');
+			if (array_key_exists('slider', $display_blocks) && $display_blocks['slider']){
+				add_meta_box('etandard_portfolio_carousel',
+						 __('Carousel', TEXT_TRANSLATION_DOMAIN),
+						 'etendard_portfolio_carousel',
+						 'page',
+						 'normal',
+						 'high'
+				);
+			}
 		}
 	}
 }
