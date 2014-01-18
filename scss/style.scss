@@ -396,7 +396,7 @@ ul.articles .article{
 	}
 	
 	& a:hover{
-		color: darken($couleur-principale, 5);
+		color: inherit;
 	}
 }
 .article.teaser .header-title{

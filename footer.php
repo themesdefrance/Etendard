@@ -7,10 +7,10 @@
 <footer class="main-footer">
 	<div class="wrapper">
 		<div class="col-1-2">
-			<?php echo esc_html(of_get_option("etendard_footer_gauche")); ?>
+			<?php echo of_get_option("etendard_footer_gauche"); ?>
 		</div>
 		<div class="col-1-2">
-			<?php echo esc_html(of_get_option("etendard_footer_droite")); ?>
+			<?php echo of_get_option("etendard_footer_droite"); ?>
 		</div>
 	</div>
 </footer>
@@ -60,14 +60,14 @@ section.portfolio nav.categories a:hover,
 	border-bottom: 3px solid <?php echo $color; ?> !important;;
 }
 
-/*
 assombris,
 #commentform #submit:hover,
 section.realisation .realisation-site:hover,
 .widget_etendardnewsletter input[type="submit"]:hover,
-.widget_etendardsocial li a:hover{
+.widget_etendardsocial li a:hover,
+.article .header-title a:hover{
+	/*color:#696969;*/
 }
-*/
 </style>
 <?php endif; ?>
 <?php wp_footer(); ?>

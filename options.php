@@ -65,11 +65,11 @@ function optionsframework_options() {
 						
 	$options[] = array( 'desc'=> __('Contenu de gauche (Exemple : Insérez des informations relative au droit d\'auteur). Laissez vide pour ne rien afficher.', TEXT_TRANSLATION_DOMAIN),
 						'id'=> 'etendard_footer_gauche',
-						'type'=> 'textarea');
+						'type'=> 'editor');
 						
 	$options[] = array( 'desc'=> __('Contenu de droite (Exemple : Pourquoi pas insérer un lien vers Thèmes de France ?). Laissez vide pour ne rien afficher.', TEXT_TRANSLATION_DOMAIN),
 						'id'=> 'etendard_footer_droite',
-						'type'=> 'textarea');
+						'type'=> 'editor');
 						
 						
 						

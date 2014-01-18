@@ -1,4 +1,5 @@
-/*!
+@charset "CP850";
+/*
 Theme Name: Étendard
 Theme URI: http://themesdefrance.fr/etendard
 Author: Thèmes de France
@@ -282,7 +283,7 @@ section.portfolio nav.categories:after,
   /* Black prints faster: sanbeiji.com/archives/953 */
   /* line 9, scss/qb/modules/_print.scss */
   a, a:visited {
-    color: #444 !important;
+    color: #444444 !important;
     text-decoration: underline;
   }
 
@@ -304,7 +305,7 @@ section.portfolio nav.categories:after,
   /* Don't show links for images, or javascript/internal links */
   /* line 22, scss/qb/modules/_print.scss */
   pre, blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid;
   }
 
@@ -1074,7 +1075,7 @@ ul.articles .article {
 }
 /* line 398, scss/style.scss */
 .article .header-title a:hover {
-  color: #1894ae;
+  color: inherit;
 }
 
 /* line 402, scss/style.scss */
@@ -1470,7 +1471,7 @@ div.pagination a {
 /* line 717, scss/style.scss */
 .contact-form .field input,
 .contact-form .field textarea {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 6px 4px;
 }
 /* line 721, scss/style.scss */
@@ -1654,7 +1655,7 @@ div.pagination a {
   width: 100%;
   margin-top: 5px;
   background: #fff;
-  border: 1px solid #fff;
+  border: 1px solid white;
   padding: 6px 4px;
   color: #333;
 }
