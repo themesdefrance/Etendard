@@ -5,8 +5,8 @@ require_once 'widgets/newsletter.php';
 require_once 'widgets/social.php';
 
 if (!function_exists( 'optionsframework_init')){
-	define('OPTIONS_FRAMEWORK_DIRECTORY', get_bloginfo('template_directory').'/options/');
-	require_once TEMPLATEPATH.'/options/'.'options-framework.php';
+	define('OPTIONS_FRAMEWORK_DIRECTORY', get_bloginfo('template_directory').'/admin/options/');
+	require_once TEMPLATEPATH.'/admin/options/'.'options-framework.php';
 }
 
 add_action('init', 'etendard_init_cpt');
