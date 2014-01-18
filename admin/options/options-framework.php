@@ -31,7 +31,7 @@ define( 'OPTIONS_FRAMEWORK_VERSION', '1.6' );
 //define( 'OPTIONS_FRAMEWORK_URL', plugin_dir_url( __FILE__ ) );
 define( 'OPTIONS_FRAMEWORK_URL', get_template_directory_uri().'/admin/options/' );
 
-var_dump(load_theme_textdomain( 'optionsframework', get_template_directory().'/admin/options/lang' ));
+load_theme_textdomain( 'optionsframework', get_template_directory().'/admin/options/lang' );
 
 
 /* Make sure we don't expose any info if called directly */

@@ -45,6 +45,7 @@ ul.portfolio .creation figure:hover figcaption,
 #commentform #submit,
 .widget_calendar #today,
 section.portfolio nav.categories a:hover,
+section.portfolio nav.categories a.active,
 .widget_etendardnewsletter input[type="submit"],
 .widget_etendardsocial li a,
 .cta-button,
@@ -60,13 +61,16 @@ section.portfolio nav.categories a:hover,
 	border-bottom: 3px solid <?php echo $color; ?> !important;;
 }
 
-assombris,
-#commentform #submit:hover,
-section.realisation .realisation-site:hover,
-.widget_etendardnewsletter input[type="submit"]:hover,
+.article.teaser .header-title:hover:after,
 .widget_etendardsocial li a:hover,
-.article .header-title a:hover{
-	/*color:#696969;*/
+.cta-button:hover,
+.contact-form .submit input:hover{
+	background:#696969 !important;
+}
+.article .header-title a:hover,
+form.search-form .search-submit-wrapper:hover:before,
+div.pagination a:hover{
+	color:#696969 !important;
 }
 </style>
 <?php endif; ?>
