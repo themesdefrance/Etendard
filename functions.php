@@ -82,6 +82,22 @@ if (!function_exists('etendard_init_cpt')){
 			'hierarchical'=>true,
 		));
 		register_taxonomy_for_object_type('portfolio_categorie', 'portfolio');
+		
+		//services
+		register_post_type('service', array(
+			'label'=>__('Services', TEXT_TRANSLATION_DOMAIN),
+			'labels'=>array(),
+			'public'=>true,
+			'menu_position'=>21,
+			'has_archive'=>true,
+		));
+		add_post_type_support('service', array(
+			'title',
+			'editor',
+			'thumbnail',
+			'excerpt',
+			'revisions',
+		));
 	}
 }
 
@@ -178,26 +194,28 @@ if (!function_exists('etendard_register_custom_fields')){
 		);
 		
 		//cta box pour template homepage
-		$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
-		$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
-		if ($template_file == 'template_home.php'){
-			add_meta_box('etendard_home_cta',
-						 __('Call To Action', TEXT_TRANSLATION_DOMAIN),
-						 'etendard_home_cta',
-						 'page',
-						 'normal',
-						 'high'
-			);
-			
-			$display_blocks = of_get_option('etendard_blocks_presence');
-			if (array_key_exists('slider', $display_blocks) && $display_blocks['slider']){
-				add_meta_box('etandard_portfolio_carousel',
-						 __('Carousel', TEXT_TRANSLATION_DOMAIN),
-						 'etendard_portfolio_carousel',
-						 'page',
-						 'normal',
-						 'high'
+		if (isset($_GET['post']) || isset($_POST['post_ID'])){
+			$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+			$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
+			if ($template_file == 'template_home.php'){
+				add_meta_box('etendard_home_cta',
+							 __('Call To Action', TEXT_TRANSLATION_DOMAIN),
+							 'etendard_home_cta',
+							 'page',
+							 'normal',
+							 'high'
 				);
+				
+				$display_blocks = of_get_option('etendard_blocks_presence');
+				if (array_key_exists('slider', $display_blocks) && $display_blocks['slider']){
+					add_meta_box('etandard_portfolio_carousel',
+							 __('Carousel', TEXT_TRANSLATION_DOMAIN),
+							 'etendard_portfolio_carousel',
+							 'page',
+							 'normal',
+							 'high'
+					);
+				}
 			}
 		}
 	}
