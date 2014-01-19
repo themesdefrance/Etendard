@@ -11,8 +11,9 @@ $display_blocks = of_get_option('etendard_blocks_presence');
 $ordre_blocks = array('titre'=>0, 
 					  'slider'=>1,
 					  'cta'=>2,
-					  'portfolio'=>3,
-					  'articles'=>4);
+					  'services'=>3,
+					  'portfolio'=>4,
+					  'articles'=>5);
 asort($ordre_blocks);
 ?>
 
@@ -26,6 +27,9 @@ foreach ($ordre_blocks as $block=>$ordre){
 			break;
 		case 'slider':
 			get_template_part('home_elements/slider');
+			break;
+		case 'services':
+			get_template_part('home_elements/services');
 			break;
 		case 'portfolio':
 			get_template_part('home_elements/portfolio');

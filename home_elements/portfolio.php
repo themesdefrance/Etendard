@@ -27,7 +27,7 @@
 						<?php endif; ?>
 						</div>
 						<figcaption>
-							<?php the_title(); echo get_post_format(); ?>
+							<?php the_title(); ?>
 						</figcaption>
 					</figure>
 				</a>
