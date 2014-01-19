@@ -18,21 +18,21 @@
 			</h3>
 			<?php endif; ?>
 			
-			<?php if (!empty($portfolio_custom['etendard_portfolio_date'][0])): ?>
-			<div class="realisation-date">
-				Date : <?php echo $portfolio_custom['etendard_portfolio_date'][0]; ?>
-			</div>
-			<?php endif; ?>
-			
-			<?php if (!empty($portfolio_custom['etendard_portfolio_role'][0])): ?>
-			<div class="realisation-role">
-				Rôle : <?php echo $portfolio_custom['etendard_portfolio_role'][0]; ?>
-			</div>
-			<?php endif; ?>
+			<?php foreach ($portfolio_custom as $name=>$value){
+				if (substr($name, 0, 10) === 'portfolio_'){
+				?>
+				<div class="meta">
+					<?php echo substr($name, 10); ?>:
+					<?php echo $value[0]; ?>
+				</div>
+				<?php
+				}
+			}
+			?>
 			
 			<?php if (!empty($portfolio_custom['etendard_portfolio_url'][0])): ?>
 			<a href="<?php echo $portfolio_custom['etendard_portfolio_url'][0]; ?>" class="realisation-site">
-				voir le site
+				<?php _e('voir le site', TEXT_TRANSLATION_DOMAIN); ?>
 			</a>
 			<?php endif; ?>
 		</div>

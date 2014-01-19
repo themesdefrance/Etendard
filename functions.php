@@ -131,7 +131,8 @@ add_action('wp_enqueue_scripts', 'etendard_enqueue');
 
 if (!function_exists('etendard_admin_init')){
 	function etendard_admin_init(){
-		remove_meta_box('postcustom', 'portfolio', 'normal');
+//		remove_meta_box('postcustom', 'portfolio', 'normal');
+		remove_meta_box('postcustom', 'service', 'normal');
 	}
 }
 
@@ -263,8 +264,8 @@ if (!function_exists('etendard_portfolio_save_custom')){
 		}
 		
 		$client = sanitize_text_field($_POST['etendard_portfolio_client']);
-		$date = sanitize_text_field($_POST['etendard_portfolio_date']);
-		$role = sanitize_text_field($_POST['etendard_portfolio_role']);
+//		$date = sanitize_text_field($_POST['etendard_portfolio_date']);
+//		$role = sanitize_text_field($_POST['etendard_portfolio_role']);
 		$url = sanitize_text_field($_POST['etendard_portfolio_url']);
 		$temoin = sanitize_text_field($_POST['etendard_portfolio_temoin_nom']);
 		$texte = sanitize_text_field($_POST['etendard_portfolio_temoin_texte']);
@@ -275,8 +276,8 @@ if (!function_exists('etendard_portfolio_save_custom')){
 		}
 	
 		update_post_meta($post_id, 'etendard_portfolio_client', $client);
-		update_post_meta($post_id, 'etendard_portfolio_date', $date);
-		update_post_meta($post_id, 'etendard_portfolio_role', $role);
+//		update_post_meta($post_id, 'etendard_portfolio_date', $date);
+//		update_post_meta($post_id, 'etendard_portfolio_role', $role);
 		update_post_meta($post_id, 'etendard_portfolio_url', $url);
 		update_post_meta($post_id, 'etendard_portfolio_temoin_nom', $temoin);
 		update_post_meta($post_id, 'etendard_portfolio_temoin_texte', $texte);
