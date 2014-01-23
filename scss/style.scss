@@ -502,6 +502,7 @@ ul.articles .article{
 			color: #206bb5;
 		}
 	}
+	
 	& dt{
 		font-weight: 700;
 	}
@@ -1014,5 +1015,13 @@ form.search-form input.search-submit{
 	margin:auto;
 	max-height:500px;
 	width:auto !important;
+}
+
+
+// Shortcodes
+
+.bouton{
+	@extend %bouton-etendard;
+	color: #fff !important
 }
 
