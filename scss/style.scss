@@ -137,6 +137,7 @@ ul.blog li{
 	}
 }
 
+
 a.more-link{
 	display: inline-block;
 	font-size: 14px;
@@ -190,7 +191,7 @@ ul.services .entry-thumbnail img{
 }
 ul.services .service h2{
 	font-size: 24px;
-	color: $couleur-principale;
+	color: $body-copy-color;
 	margin-bottom: 10px;
 }
 ul.services .service h2 a{
