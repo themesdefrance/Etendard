@@ -1,3 +1,10 @@
+<?php 
+// On sort si on accède directement au fichier
+
+if ( ! defined( 'ABSPATH' ) ) exit;
+	
+?>
+
 <?php if (post_password_required()) return; ?>
  
 <div id="comments" class="comments-area">

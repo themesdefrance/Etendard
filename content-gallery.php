@@ -1,3 +1,10 @@
+<?php 
+// On sort si on accède directement au fichier
+
+if ( ! defined( 'ABSPATH' ) ) exit;
+	
+?>
+
 <article <?php post_class('article'); ?>>
 	<header class="header">
 		<?php if (has_post_thumbnail() && !post_password_required()): ?>

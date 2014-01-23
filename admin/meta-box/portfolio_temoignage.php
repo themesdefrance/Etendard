@@ -1,3 +1,10 @@
+<?php 
+// On sort si on accède directement au fichier
+
+if ( ! defined( 'ABSPATH' ) ) exit;
+	
+?>
+
 <?php
 $nom = get_post_meta($post->ID, 'etendard_portfolio_temoin_nom', true);
 $texte = get_post_meta($post->ID, 'etendard_portfolio_temoin_texte', true);

@@ -1,3 +1,10 @@
+<?php 
+// On sort si on accède directement au fichier
+
+if ( ! defined( 'ABSPATH' ) ) exit;
+	
+?>
+
 <?php $services = new WP_Query(array('posts_per_page'=>3, 'post_type'=>'service')); ?>
 <?php if ($services->have_posts()): ?>
 <section class="services">

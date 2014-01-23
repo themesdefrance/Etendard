@@ -1,3 +1,10 @@
+<?php 
+// On sort si on accède directement au fichier
+
+if ( ! defined( 'ABSPATH' ) ) exit;
+	
+?>
+
 <?php
 
 /**
@@ -43,12 +50,12 @@ function optionsframework_uploader( $_id, $_value, $_desc = '', $_name = '' ) {
 	if ( $value ) {
 		$class = ' has-file';
 	}
-	$output .= '<input id="' . $id . '" class="upload' . $class . '" type="text" name="'.$name.'" value="' . $value . '" placeholder="' . __('No file chosen', 'optionsframework') .'" />' . "\n";
+	$output .= '<input id="' . $id . '" class="upload' . $class . '" type="text" name="'.$name.'" value="' . $value . '" placeholder="Choisissez un fichier" />' . "\n";
 	if ( function_exists( 'wp_enqueue_media' ) ) {
 		if ( ( $value == '' ) ) {
-			$output .= '<input id="upload-' . $id . '" class="upload-button button" type="button" value="' . __( 'Upload', 'optionsframework' ) . '" />' . "\n";
+			$output .= '<input id="upload-' . $id . '" class="upload-button button" type="button" value="Envoyer" />' . "\n";
 		} else {
-			$output .= '<input id="remove-' . $id . '" class="remove-file button" type="button" value="' . __( 'Remove', 'optionsframework' ) . '" />' . "\n";
+			$output .= '<input id="remove-' . $id . '" class="remove-file button" type="button" value="Supprimer" />' . "\n";
 		}
 	} else {
 		$output .= '<p><i>' . __( 'Upgrade your version of WordPress for full media support.', 'optionsframework' ) . '</i></p>';
@@ -61,7 +68,7 @@ function optionsframework_uploader( $_id, $_value, $_desc = '', $_name = '' ) {
 	$output .= '<div class="screenshot" id="' . $id . '-image">' . "\n";
 	
 	if ( $value != '' ) { 
-		$remove = '<a class="remove-image">Remove</a>';
+		$remove = '<a class="remove-image">Supprimer</a>';
 		$image = preg_match( '/(^.*\.jpg|jpeg|png|gif|ico*)/i', $value );
 		if ( $image ) {
 			$output .= '<img src="' . $value . '" alt="" />' . $remove;

@@ -3,6 +3,14 @@
 Template Name: Contact
 */
 ?>
+
+<?php 
+// On sort si on accède directement au fichier
+
+if ( ! defined( 'ABSPATH' ) ) exit;
+	
+?>
+
 <?php get_header(); ?>
 <section class="grid">
 	<div class="wrapper">

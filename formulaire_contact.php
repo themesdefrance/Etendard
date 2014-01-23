@@ -1,4 +1,11 @@
 <?php 
+// On sort si on accède directement au fichier
+
+if ( ! defined( 'ABSPATH' ) ) exit;
+	
+?>
+
+<?php 
 if (isset($_POST['etendard_contact_nonce']) && wp_verify_nonce($_POST['etendard_contact_nonce'], 'etendard_contact_nonce')){
 	$nom = $_POST['etendard_contact_nom'];
 	$email = $_POST['etendard_contact_email'];

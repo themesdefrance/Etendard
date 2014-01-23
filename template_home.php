@@ -1,4 +1,15 @@
-<?php /* Template Name: Home */ ?>
+<?php 
+/* 
+Template Name: Home
+*/ 
+?>
+
+<?php 
+// On sort si on accède directement au fichier
+
+if ( ! defined( 'ABSPATH' ) ) exit;
+	
+?>
 <?php get_header(); ?>
 
 <?php

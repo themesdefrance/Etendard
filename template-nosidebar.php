@@ -3,6 +3,13 @@
 Template Name: Sans sidebar
 */
 ?>
+
+<?php 
+// On sort si on accède directement au fichier
+
+if ( ! defined( 'ABSPATH' ) ) exit;
+	
+?>
 <?php get_header(); ?>
 <section class="blog grid">
 	<div class="wrapper">		
