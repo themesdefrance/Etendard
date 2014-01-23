@@ -72,11 +72,11 @@ function optionsframework_options() {
 						'desc'=> __("Personnalisez le contenu du pied de page :", TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'info');
 						
-	$options[] = array( 'desc'=> __('Contenu de gauche (Exemple : Insérez des informations relative au droit d\'auteur). Laissez vide pour ne rien afficher.', TEXT_TRANSLATION_DOMAIN),
+	$options[] = array( 'desc'=> __('Contenu de la partie gauche du pied de page. Les balises HTML de lien (&lt;a href=&quot;LIEN&quot;&gt;TEXTE_LIEN&lt;/a&gt;), de mise en gras (&lt;strong&gt;TEXTE_GRAS&lt;/strong&gt;), de mise en italique(&lt;em&gt;TEXTE_ITALIQUE&lt;/em&gt;) et d\'image (&lt;img src=&quot;ADRESSE_IMAGE&quot;&gt;) sont autoris&eacute;es. Laissez vide pour ne rien afficher.', TEXT_TRANSLATION_DOMAIN),
 						'id'=> 'etendard_footer_gauche',
 						'type'=> 'textarea');
 						
-	$options[] = array( 'desc'=> __('Contenu de droite (Exemple : Pourquoi pas insérer un lien vers Thèmes de France ?). Laissez vide pour ne rien afficher.', TEXT_TRANSLATION_DOMAIN),
+	$options[] = array( 'desc'=> __('Contenu de la partie droite du pied de page. Les balises HTML de lien (&lt;a href=&quot;LIEN&quot;&gt;TEXTE_LIEN&lt;/a&gt;), de mise en gras (&lt;strong&gt;TEXTE_GRAS&lt;/strong&gt;), de mise en italique(&lt;em&gt;TEXTE_ITALIQUE&lt;/em&gt;) et d\'image (&lt;img src=&quot;ADRESSE_IMAGE&quot;&gt;) sont autoris&eacute;es. Laissez vide pour ne rien afficher.', TEXT_TRANSLATION_DOMAIN),
 						'id'=> 'etendard_footer_droite',
 						'type'=> 'textarea');
 						
