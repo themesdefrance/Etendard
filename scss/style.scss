@@ -1025,3 +1025,14 @@ form.search-form input.search-submit{
 	color: #fff !important
 }
 
+.moitie_1, .moitie_2{
+	@extend .col-1-2;
+	overflow: hidden;
+	float: left;
+	position: relative;
+}
+
+.moitie_2{
+	clear: left;
+}
+// Mettre des margins sans tout péter

@@ -61,7 +61,6 @@ if (!function_exists('etendard_setup')){
 		
 		add_image_size('etendard-portfolio-thumbnail', 301, 230, true);
 		add_image_size('etendard-blog-thumbnail', 203, 225, true);
-		add_image_size('etendard-post-thumbnail', 620, 400, true);
 	//	load_theme_textdomain(TEXT_TRANSLATION_DOMAIN, get_template_directory().'/local');
 	}
 }
@@ -490,5 +489,24 @@ function etendard_new_excerpt_more( $more ) {
 }
 add_filter('excerpt_more', 'etendard_new_excerpt_more');
 
+////////////////////////////////////
+// Shortcodes
+////////////////////////////////////
+
+// Bouton
+function etendard_button($atts, $content=null){
+	$autrefenetre='';
+	if($atts['autrefenetre']==1){
+		$autrefenetre='target="_blank"';
+	}
+	return '<a href="'.$atts['lien'].'" class="bouton" '.$autrefenetre.'>' . $content . '</a>';
+}
+add_shortcode( 'bouton', 'etendard_button' );
+
+// 1/2 Colonne
+function etendard_col_1_2($atts, $content=null){
+	return '<div class="moitie_1">' . $content . '</div>';
+}
+add_shortcode( 'moitie_1', 'etendard_col_1_2' );
 
 

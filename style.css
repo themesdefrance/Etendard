@@ -353,7 +353,7 @@ ul.blog, .main-footer, .footer-widgets {
 }
 
 /* line 18, scss/qb/modules/_grid.scss */
-.col-1-2 {
+.col-1-2, .moitie_1, .moitie_2 {
   width: 50%;
 }
 
@@ -1508,12 +1508,12 @@ div.pagination a {
 }
 
 /* line 762, scss/style.scss */
-.main-footer div.col-1-2:last-child {
+.main-footer div.col-1-2:last-child, .main-footer div.moitie_1:last-child, .main-footer div.moitie_2:last-child {
   text-align: right;
 }
 @media only screen and (max-width: 759px) {
   /* line 762, scss/style.scss */
-  .main-footer div.col-1-2:last-child {
+  .main-footer div.col-1-2:last-child, .main-footer div.moitie_1:last-child, .main-footer div.moitie_2:last-child {
     text-align: left;
     margin-top: 20px;
   }
@@ -1839,4 +1839,16 @@ form.search-form input.search-submit {
 /* line 1023, scss/style.scss */
 .bouton {
   color: white !important;
+}
+
+/* line 1028, scss/style.scss */
+.moitie_1, .moitie_2 {
+  overflow: hidden;
+  float: left;
+  position: relative;
+}
+
+/* line 1035, scss/style.scss */
+.moitie_2 {
+  clear: left;
 }
