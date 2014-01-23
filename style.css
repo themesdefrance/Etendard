@@ -1804,9 +1804,22 @@ form.search-form input.search-submit {
 /* line 991, scss/style.scss */
 .flexslider {
   margin: 0 auto 40px !important;
+  border: 0 !important;
+  background: transparent;
+  border: none;
+  position: relative;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -o-box-shadow: none !important;
+  zoom: 1;
 }
 
-/* line 995, scss/style.scss */
+/* line 1007, scss/style.scss */
 .flexslider .slides img {
   display: inline-block;
   margin: auto;
