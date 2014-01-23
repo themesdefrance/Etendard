@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	<header class="header">
 		<?php if (has_post_thumbnail() && !post_password_required()): ?>
 		<div class="entry-thumbnail">
-			<?php the_post_thumbnail(); ?>
+			<?php the_post_thumbnail('etendard-post-thumbnail'); ?>
 		</div>
 		<?php endif; ?>
 		

@@ -40,7 +40,7 @@ a.more-link,
 ul.services .service h2,
 ul.portfolio .creation figcaption,
 .temoignages .temoignage-headline,
-.article .header-title,
+.article .header-title a:hover,
 .article.quote > blockquote cite,
 .comment .comment-author{
 	color: <?php echo $color; ?> !important;
@@ -74,7 +74,6 @@ section.portfolio nav.categories a.active,
 .contact-form .submit input:hover{
 	background:#696969 !important;
 }
-.article .header-title a:hover,
 form.search-form .search-submit-wrapper:hover:before,
 div.pagination a:hover{
 	color:#696969 !important;

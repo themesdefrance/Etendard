@@ -17,11 +17,11 @@
 
 .main-header{
 	@extend .clearfix;
-	margin-top: 20px;
 }
 .main-header .logo-wrap{
 	float: left;
 	max-width:50%;
+	margin-top: 4px;
 	
 	@include width-matches($breakpoint-mobile){
 		float:none;
@@ -43,7 +43,7 @@
 }
 .main-menu a{
 	display: inline-block;
-	padding: 10px 12px;
+	padding: 24px 12px;
 	text-decoration: none;
 	font-size: 18px;
 	border-bottom: 3px solid transparent;
@@ -72,7 +72,7 @@
 	overflow:hidden;
 	position: absolute;
 	z-index:1;
-	top: 170%;
+	top: 250%;
 	left: 0;
 	min-width: 200px;
 	background:#fff;
@@ -103,8 +103,10 @@
 	opacity:1;
 	height:auto;
 }
+
 .main-menu .sub-menu a{
 	display:block;
+	padding: 10px 12px;
 	font-size: 14px;
 }
 
@@ -392,7 +394,7 @@ ul.articles .article{
 	margin-bottom: 10px;
 }
 .article .header-title{
-	color: $couleur-principale;
+	color: $body-copy-color;
 	font-size: 36px;
 	
 	& a{
@@ -401,37 +403,24 @@ ul.articles .article{
 	}
 	
 	& a:hover{
-		color: inherit;
+		color: $couleur-principale;
 	}
 }
 .article.teaser .header-title{
 	position: relative;
 	margin-bottom: 3px;
-	padding-left: 25px;
 	font-size: 18px;
 	font-style: normal;
 	
-	@include etendard($hauteur: 8px, $droite: false);
-	&:before{
-		top: 4px;
-		height: 16px;
-		z-index: 1;
-	}
-	&:after{
-		content: "";
-		position: absolute;
-		top: 4px;
-		left: 0;
-		display: inline-block;
-		background: $couleur-principale;
-		height: 16px;
-		width: 20px;
-	}
 }
 .article.teaser .entry-thumbnail{
 	max-height:150px;
 	overflow:hidden;
 	margin-bottom:5px;
+}
+
+.article.teaser .content > p{
+	font-size: 14px;
 }
 .article.alternate .header-image{
 	float: left;
@@ -444,6 +433,10 @@ ul.articles .article{
 }
 .article .header-meta .post-edit-link{
 	color: darken($gris-principal, 10);
+	
+	&:hover{
+		text-decoration: none;
+	}
 }
 .article .footer{
 	margin-top: 30px;
@@ -731,6 +724,10 @@ div.pagination{
 	border:none;
 	color:#fff;
 	padding:6px 14px;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
 }
 
 .contact-feedback{
@@ -930,8 +927,8 @@ form.search-form input.search-field{
 form.search-form .search-submit-wrapper{
 	position: absolute;
 	top: 0;
-	bottom: 0;
-	right: 0;
+	bottom:0;
+	right:0;
 	
 	@extend .icon-search;
 	&:before{
@@ -950,7 +947,7 @@ form.search-form input.search-submit{
 	font-size: 0;
 	width: 40px;
 	opacity: 0;
-}
+} 
 
 //reseaux sociaux
 .widget_etendardsocial ul{
