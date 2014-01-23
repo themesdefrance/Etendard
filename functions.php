@@ -61,6 +61,7 @@ if (!function_exists('etendard_setup')){
 		
 		add_image_size('etendard-portfolio-thumbnail', 301, 230, true);
 		add_image_size('etendard-blog-thumbnail', 203, 225, true);
+		add_image_size('etendard-post-thumbnail', 620, 400, true);
 	//	load_theme_textdomain(TEXT_TRANSLATION_DOMAIN, get_template_directory().'/local');
 	}
 }
@@ -508,5 +509,10 @@ function etendard_col_1_2($atts, $content=null){
 	return '<div class="moitie_1">' . $content . '</div>';
 }
 add_shortcode( 'moitie_1', 'etendard_col_1_2' );
+
+function etendard_col_2_2($atts, $content=null){
+	return '<div class="moitie_2">' . $content . '</div>';
+}
+add_shortcode( 'moitie_2', 'etendard_col_2_2' );
 
 
