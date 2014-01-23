@@ -749,6 +749,15 @@ div.pagination{
 	color: #6d6e71;
 	@extend .grid;
 }
+
+.main-footer a{
+	text-decoration: none;
+	
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
 .main-footer div.col-1-2:last-child{
 	text-align: right;
 	
@@ -756,10 +765,6 @@ div.pagination{
 		text-align:left;
 		margin-top:20px;
 	}
-}
-
-//sidebar normale
-.sidebar{
 }
 
 
