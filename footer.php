@@ -14,10 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 <footer class="main-footer">
 	<div class="wrapper">
 		<div class="col-1-2">
-			<?php echo of_get_option("etendard_footer_gauche"); ?>
+			<?php echo strip_tags(of_get_option("etendard_footer_gauche"), '<strong><a><em><img>'); ?>
 		</div>
 		<div class="col-1-2">
-			<?php echo of_get_option("etendard_footer_droite"); ?>
+			<?php echo strip_tags(of_get_option("etendard_footer_droite"), '<strong><a><em><img>'); ?>
 		</div>
 	</div>
 </footer>
