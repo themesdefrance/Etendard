@@ -425,14 +425,15 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font-size: 16px;
   line-height: 1.4;
+  clear: both;
 }
 
-/* line 36, scss/_base.scss */
+/* line 37, scss/_base.scss */
 a:visited {
   color: inherit;
 }
 
-/* line 68, scss/_base.scss */
+/* line 69, scss/_base.scss */
 .cta-button, .bouton {
   display: inline-block;
   padding: 6px 35px;
@@ -446,15 +447,15 @@ a:visited {
   transition: all 0.2s ease-in;
   position: relative;
 }
-/* line 79, scss/_base.scss */
+/* line 80, scss/_base.scss */
 .cta-button:hover, .bouton:hover {
   background: #9d9f9f;
 }
-/* line 82, scss/_base.scss */
+/* line 83, scss/_base.scss */
 .cta-button:visited, .bouton:visited {
   color: #fff;
 }
-/* line 50, scss/_base.scss */
+/* line 51, scss/_base.scss */
 .cta-button:before, .bouton:before {
   content: "";
   position: absolute;
@@ -465,7 +466,7 @@ a:visited {
   bottom: 0;
   border-left: 8px solid white;
 }
-/* line 59, scss/_base.scss */
+/* line 60, scss/_base.scss */
 .cta-button:after, .bouton:after {
   content: "";
   position: absolute;
@@ -477,7 +478,7 @@ a:visited {
   border-right: 8px solid white;
 }
 
-/* line 94, scss/_base.scss */
+/* line 95, scss/_base.scss */
 [data-icon]:before, .icon-mail:before, .widget_etendardnewsletter .form-email:before, .icon-search:before, form.search-form .search-submit-wrapper:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, .icon-soundcloud:before, .icon-pinterest:before, .icon-instagram:before, .icon-viadeo:before, .icon-play:before, .widget_etendardsocial li a {
   font-family: "etendard";
   content: attr(data-icon);
@@ -497,77 +498,77 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-/* line 119, scss/_base.scss */
+/* line 120, scss/_base.scss */
 .icon-mail:before, .widget_etendardnewsletter .form-email:before {
   content: "\e600";
 }
 
-/* line 122, scss/_base.scss */
+/* line 123, scss/_base.scss */
 .icon-search:before, form.search-form .search-submit-wrapper:before {
   content: "\e601";
 }
 
-/* line 125, scss/_base.scss */
+/* line 126, scss/_base.scss */
 .icon-googleplus:before {
   content: "\e602";
 }
 
-/* line 128, scss/_base.scss */
+/* line 129, scss/_base.scss */
 .icon-facebook:before {
   content: "\e603";
 }
 
-/* line 131, scss/_base.scss */
+/* line 132, scss/_base.scss */
 .icon-twitter:before {
   content: "\e604";
 }
 
-/* line 134, scss/_base.scss */
+/* line 135, scss/_base.scss */
 .icon-rss:before {
   content: "\e605";
 }
 
-/* line 137, scss/_base.scss */
+/* line 138, scss/_base.scss */
 .icon-vimeo:before {
   content: "\e606";
 }
 
-/* line 140, scss/_base.scss */
+/* line 141, scss/_base.scss */
 .icon-linkedin:before {
   content: "\e607";
 }
 
-/* line 143, scss/_base.scss */
+/* line 144, scss/_base.scss */
 .icon-skype:before {
   content: "\e608";
 }
 
-/* line 146, scss/_base.scss */
+/* line 147, scss/_base.scss */
 .icon-soundcloud:before {
   content: "\e609";
 }
 
-/* line 149, scss/_base.scss */
+/* line 150, scss/_base.scss */
 .icon-pinterest:before {
   content: "\e60a";
 }
 
-/* line 152, scss/_base.scss */
+/* line 153, scss/_base.scss */
 .icon-instagram:before {
   content: "\e60b";
 }
 
-/* line 155, scss/_base.scss */
+/* line 156, scss/_base.scss */
 .icon-youtube:before {
   content: "\e60c";
 }
 
-/* line 158, scss/_base.scss */
+/* line 159, scss/_base.scss */
 .icon-viadeo:before {
   content: "\e60d";
 }
 
-/* line 161, scss/_base.scss */
+/* line 162, scss/_base.scss */
 .icon-play:before {
   content: "\e60e";
 }
@@ -1764,7 +1765,7 @@ form.search-form input.search-submit {
   -o-transition: background 0.2s ease-in;
   transition: background 0.2s ease-in;
 }
-/* line 50, scss/_base.scss */
+/* line 51, scss/_base.scss */
 .widget_etendardsocial li a:before {
   content: "";
   position: absolute;
@@ -1775,7 +1776,7 @@ form.search-form input.search-submit {
   bottom: 0;
   border-left: 9px solid white;
 }
-/* line 59, scss/_base.scss */
+/* line 60, scss/_base.scss */
 .widget_etendardsocial li a:after {
   content: "";
   position: absolute;
