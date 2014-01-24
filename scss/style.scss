@@ -1017,13 +1017,16 @@ form.search-form input.search-submit{
 	width:auto !important;
 }
 
-
+////////////////////////////////////////////////////////////
 // Shortcodes
+////////////////////////////////////////////////////////////
 
 .bouton{
 	@extend %bouton-etendard;
 	color: #fff !important
 }
+
+// Colonnes
 
 .un_demi, .un_tiers, .un_quart, .deux_tiers, .trois_quarts{
 	margin-left:4%;
@@ -1057,6 +1060,21 @@ form.search-form input.search-submit{
 	clear: left;
 }
 
+// Messages
+
+.message{
+	padding: 20px;
+	margin-bottom: 10px;
+	border: 1px solid #ddd;
+	background-color: #eee;
+	color: #666;
+}
+
+.message.erreur{
+	color:#d83c3c;
+	background: #f2bbbb;
+	border:2px solid #e99191;
+}
 
 
 

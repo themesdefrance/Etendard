@@ -510,6 +510,8 @@ if (!function_exists('etendard_button')){
 	add_shortcode( 'bouton', 'etendard_button' );
 }
 
+// Colonnes
+
 // 1/2
 if (!function_exists('etendard_un_demi')){
 	function etendard_un_demi($atts, $content=null){
@@ -522,6 +524,7 @@ if (!function_exists('etendard_un_demi')){
 	}
 	add_shortcode( 'un_demi', 'etendard_un_demi' );
 }
+
 // 1/3
 if (!function_exists('etendard_un_tiers')){
 	function etendard_un_tiers($atts, $content=null){
@@ -574,7 +577,51 @@ if (!function_exists('etendard_trois_quarts')){
 	add_shortcode( 'trois_quarts', 'etendard_trois_quarts' );
 }
 
+// Messages
 
+// Info
+if (!function_exists('etendard_message_info')){
+	function etendard_message_info($atts, $content=null){
+		$res = '<div class="message info">';
+		$res.= wpautop($content);
+		$res.= '</div>';
+		return $res;
+	}
+	add_shortcode( 'info', 'etendard_message_info' );
+}
+
+// Alerte
+if (!function_exists('etendard_message_alerte')){
+	function etendard_message_alerte($atts, $content=null){
+		$res = '<div class="message alerte">';
+		$res.= wpautop($content);
+		$res.= '</div>';
+		return $res;
+	}
+	add_shortcode( 'alerte', 'etendard_message_alerte' );
+}
+
+// Erreur
+if (!function_exists('etendard_message_erreur')){
+	function etendard_message_erreur($atts, $content=null){
+		$res = '<div class="message erreur">';
+		$res.= wpautop($content);
+		$res.= '</div>';
+		return $res;
+	}
+	add_shortcode( 'erreur', 'etendard_message_erreur' );
+}
+
+// Succès
+if (!function_exists('etendard_message_succes')){
+	function etendard_message_succes($atts, $content=null){
+		$res = '<div class="message succes">';
+		$res.= wpautop($content);
+		$res.= '</div>';
+		return $res;
+	}
+	add_shortcode( 'succes', 'etendard_message_succes' );
+}
 
 
 
