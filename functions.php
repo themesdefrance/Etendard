@@ -479,40 +479,104 @@ if (!function_exists('etendard_portfolio_page_link')){
 }
 
 // Taille d'extrait personnalisé
-function etendard_custom_excerpt_length( $length ) {
-	return 20;
+if (!function_exists('etendard_custom_excerpt_length')){
+	function etendard_custom_excerpt_length( $length ) {
+		return 20;
+	}
+	add_filter( 'excerpt_length', 'etendard_custom_excerpt_length', 999 );
 }
-add_filter( 'excerpt_length', 'etendard_custom_excerpt_length', 999 );
 
 // Suppression du [...] des extraits
-function etendard_new_excerpt_more( $more ) {
-	return '...';
+if (!function_exists('etendard_new_excerpt_more')){
+	function etendard_new_excerpt_more( $more ) {
+		return '...';
+	}
+	add_filter('excerpt_more', 'etendard_new_excerpt_more');
 }
-add_filter('excerpt_more', 'etendard_new_excerpt_more');
 
 ////////////////////////////////////
 // Shortcodes
 ////////////////////////////////////
 
 // Bouton
-function etendard_button($atts, $content=null){
-	$autrefenetre='';
-	if($atts['autrefenetre']==1){
-		$autrefenetre='target="_blank"';
+if (!function_exists('etendard_button')){
+	function etendard_button($atts, $content=null){
+		$autrefenetre='';
+		if($atts['autrefenetre']==1){
+			$autrefenetre='target="_blank"';
+		}
+		return '<a href="'.$atts['lien'].'" class="bouton" '.$autrefenetre.'>' . $content . '</a>';
 	}
-	return '<a href="'.$atts['lien'].'" class="bouton" '.$autrefenetre.'>' . $content . '</a>';
+	add_shortcode( 'bouton', 'etendard_button' );
 }
-add_shortcode( 'bouton', 'etendard_button' );
 
-// 1/2 Colonne
-function etendard_col_1_2($atts, $content=null){
-	return '<div class="moitie_1">' . $content . '</div>';
+// 1/2
+if (!function_exists('etendard_un_demi')){
+	function etendard_un_demi($atts, $content=null){
+		$premier='';
+		if (isset($atts[0]) && trim($atts[0]) == 'premier') {$premier = ' premier';}
+		$res = '<div class="un_demi'.$premier.'">';
+		$res.= wpautop($content);
+		$res.='</div>';
+		return $res;
+	}
+	add_shortcode( 'un_demi', 'etendard_un_demi' );
 }
-add_shortcode( 'moitie_1', 'etendard_col_1_2' );
+// 1/3
+if (!function_exists('etendard_un_tiers')){
+	function etendard_un_tiers($atts, $content=null){
+		$premier='';
+		if (isset($atts[0]) && trim($atts[0]) == 'premier') {$premier = ' premier';}
+		$res = '<div class="un_tiers'.$premier.'">';
+		$res.= wpautop($content);
+		$res.= '</div>';
+		return $res;
+	}
+	add_shortcode( 'un_tiers', 'etendard_un_tiers' );
+}
 
-function etendard_col_2_2($atts, $content=null){
-	return '<div class="moitie_2">' . $content . '</div>';
+// 1/4
+if (!function_exists('etendard_un_quart')){
+	function etendard_un_quart($atts, $content=null){
+		$premier='';
+		if (isset($atts[0]) && trim($atts[0]) == 'premier') {$premier = ' premier';}
+		$res = '<div class="un_quart'.$premier.'">';
+		$res.= wpautop($content);
+		$res.= '</div>';
+		return $res;
+	}
+	add_shortcode( 'un_quart', 'etendard_un_quart' );
 }
-add_shortcode( 'moitie_2', 'etendard_col_2_2' );
+
+// 2/3
+if (!function_exists('etendard_deux_tiers')){
+	function etendard_deux_tiers($atts, $content=null){
+		$premier='';
+		if (isset($atts[0]) && trim($atts[0]) == 'premier') {$premier = ' premier';}
+		$res = '<div class="deux_tiers'.$premier.'">';
+		$res.= wpautop($content);
+		$res.= '</div>';
+		return $res;
+	}
+	add_shortcode( 'deux_tiers', 'etendard_deux_tiers' );
+}
+
+// 3/4
+if (!function_exists('etendard_trois_quarts')){
+	function etendard_trois_quarts($atts, $content=null){
+		$premier='';
+		if (isset($atts[0]) && trim($atts[0]) == 'premier') {$premier = ' premier';}
+		$res = '<div class="trois_quarts'.$premier.'">';
+		$res.= wpautop($content);
+		$res.= '</div>';
+		return $res;
+	}
+	add_shortcode( 'trois_quarts', 'etendard_trois_quarts' );
+}
+
+
+
+
+
 
 

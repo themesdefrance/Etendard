@@ -353,7 +353,7 @@ ul.blog, .main-footer, .footer-widgets {
 }
 
 /* line 18, scss/qb/modules/_grid.scss */
-.col-1-2, .moitie_1, .moitie_2 {
+.col-1-2 {
   width: 50%;
 }
 
@@ -1508,12 +1508,12 @@ div.pagination a {
 }
 
 /* line 762, scss/style.scss */
-.main-footer div.col-1-2:last-child, .main-footer div.moitie_1:last-child, .main-footer div.moitie_2:last-child {
+.main-footer div.col-1-2:last-child {
   text-align: right;
 }
 @media only screen and (max-width: 759px) {
   /* line 762, scss/style.scss */
-  .main-footer div.col-1-2:last-child, .main-footer div.moitie_1:last-child, .main-footer div.moitie_2:last-child {
+  .main-footer div.col-1-2:last-child {
     text-align: left;
     margin-top: 20px;
   }
@@ -1842,13 +1842,40 @@ form.search-form input.search-submit {
 }
 
 /* line 1028, scss/style.scss */
-.moitie_1, .moitie_2 {
-  overflow: hidden;
+.un_demi, .un_tiers, .un_quart, .deux_tiers, .trois_quarts {
+  margin-left: 4%;
   float: left;
   position: relative;
+  overflow: hidden;
 }
 
 /* line 1035, scss/style.scss */
-.moitie_2 {
+.un_demi {
+  width: 48%;
+}
+
+/* line 1039, scss/style.scss */
+.un_tiers {
+  width: 30.5%;
+}
+
+/* line 1043, scss/style.scss */
+.un_quart {
+  width: 22%;
+}
+
+/* line 1047, scss/style.scss */
+.deux_tiers {
+  width: 65.5%;
+}
+
+/* line 1051, scss/style.scss */
+.trois_quarts {
+  width: 74%;
+}
+
+/* line 1055, scss/style.scss */
+.premier {
+  margin-left: 0;
   clear: left;
 }

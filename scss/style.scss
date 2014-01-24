@@ -1025,14 +1025,41 @@ form.search-form input.search-submit{
 	color: #fff !important
 }
 
-.moitie_1, .moitie_2{
-	@extend .col-1-2;
-	overflow: hidden;
-	float: left;
-	position: relative;
+.un_demi, .un_tiers, .un_quart, .deux_tiers, .trois_quarts{
+	margin-left:4%;
+	float:left;
+	position:relative;
+	overflow:hidden;
 }
 
-.moitie_2{
+.un_demi{
+	width:48%;
+}
+
+.un_tiers{
+	width:30.5%;
+}
+
+.un_quart{
+	width:22%;	
+}
+
+.deux_tiers{
+	width:65.5%;	
+}
+
+.trois_quarts{
+	width:74%;	
+}
+
+.premier{
+	margin-left: 0;
 	clear: left;
 }
-// Mettre des margins sans tout péter
+
+
+
+
+
+
+
