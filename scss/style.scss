@@ -1064,14 +1064,36 @@ form.search-form input.search-submit{
 	padding: 20px;
 	margin-bottom: 10px;
 	border: 1px solid #ddd;
-	background-color: #eee;
+	background: #eee;
 	color: #666;
 }
 
+.content .message p{
+	margin-bottom:0;
+}
+
+.message.info{
+	color:#3a87ad;
+	background: #d9edf7;
+	border:2px solid #bce8f1;
+}
+
+.message.alerte{
+	color:#c09853;
+	background: #fcf8e3;
+	border:2px solid #fbeed5;
+}
+
 .message.erreur{
-	color:#d83c3c;
-	background: #f2bbbb;
-	border:2px solid #e99191;
+	color:#b94a48;
+	background: #f2dede;
+	border:2px solid #eed3d7;
+}
+
+.message.succes{
+	color:#468847;
+	background: #dff0d8;
+	border:2px solid #d6e9c6;
 }
 
 

@@ -1,5 +1,4 @@
-@charset "CP850";
-/*
+/*!
 Theme Name: Étendard
 Theme URI: http://themesdefrance.fr/etendard
 Author: Thèmes de France
@@ -283,7 +282,7 @@ section.portfolio nav.categories:after,
   /* Black prints faster: sanbeiji.com/archives/953 */
   /* line 9, scss/qb/modules/_print.scss */
   a, a:visited {
-    color: #444444 !important;
+    color: #444 !important;
     text-decoration: underline;
   }
 
@@ -305,7 +304,7 @@ section.portfolio nav.categories:after,
   /* Don't show links for images, or javascript/internal links */
   /* line 22, scss/qb/modules/_print.scss */
   pre, blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 
@@ -1456,7 +1455,7 @@ div.pagination a {
 /* line 713, scss/style.scss */
 .contact-form .field input,
 .contact-form .field textarea {
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   padding: 6px 4px;
 }
 /* line 717, scss/style.scss */
@@ -1653,7 +1652,7 @@ div.pagination a {
   width: 100%;
   margin-top: 5px;
   background: #fff;
-  border: 1px solid white;
+  border: 1px solid #fff;
   padding: 6px 4px;
   color: #333;
 }
@@ -1819,12 +1818,12 @@ form.search-form input.search-submit {
   position: relative;
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
-  -o-border-radius: 0!important;
-  border-radius: 0!important;
+  -o-border-radius: 0 !important;
+  border-radius: 0 !important;
   box-shadow: none !important;
-  -webkit-box-shadow: none!important;
-  -moz-box-shadow: none!important;
-  -o-box-shadow: none!important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -o-box-shadow: none !important;
   zoom: 1;
 }
 
@@ -1884,14 +1883,40 @@ form.search-form input.search-submit {
 .message {
   padding: 20px;
   margin-bottom: 10px;
-  border: 1px solid #dddddd;
-  background-color: #eee;
+  border: 1px solid #ddd;
+  background: #eee;
   color: #666;
 }
 
 /* line 1071, scss/style.scss */
+.content .message p {
+  margin-bottom: 0;
+}
+
+/* line 1075, scss/style.scss */
+.message.info {
+  color: #3a87ad;
+  background: #d9edf7;
+  border: 2px solid #bce8f1;
+}
+
+/* line 1081, scss/style.scss */
+.message.alerte {
+  color: #c09853;
+  background: #fcf8e3;
+  border: 2px solid #fbeed5;
+}
+
+/* line 1087, scss/style.scss */
 .message.erreur {
-  color: #d83c3c;
-  background: #f2bbbb;
-  border: 2px solid #e99191;
+  color: #b94a48;
+  background: #f2dede;
+  border: 2px solid #eed3d7;
+}
+
+/* line 1093, scss/style.scss */
+.message.succes {
+  color: #468847;
+  background: #dff0d8;
+  border: 2px solid #d6e9c6;
 }

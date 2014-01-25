@@ -7,8 +7,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 <?php
 $carousel = get_post_meta($post->ID, 'etendard_portfolio_carousel', true);
+$liens = get_post_meta($post->ID, 'etendard_portfolio_carousel_lien', true);
+
 if (!is_array($carousel)) $carousel = array('');
 else if ($carousel[count($carousel)-1] != '') array_push($carousel, '');
+
 ?>
 <script>
 jQuery(function($){
@@ -60,6 +63,14 @@ jQuery(function($){
 			<?php if ($index < count($carousel)-1){ ?>
 			<a href="#" class="delete">Supprimer</a>
 			<?php } ?>
+		</td>
+		<th scope="row">
+			<label>
+				<span><?php _e('Lien (optionnel)', TEXT_TRANSLATION_DOMAIN); ?></span>:
+			</label>
+		</th>
+		<td>
+			<input type="url" name="etendard_portfolio_carousel_lien[]" value="<?php echo $liens[$index]; ?>" />
 		</td>
 	</tr>
 	<?php } ?>
