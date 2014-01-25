@@ -70,7 +70,7 @@ jQuery(function($){
 			</label>
 		</th>
 		<td>
-			<input type="url" name="etendard_portfolio_carousel_lien[]" value="<?php echo $liens[$index]; ?>" />
+			<input type="url" name="etendard_portfolio_carousel_lien[]" value="<?php echo (isset($liens[$index])) ?  $liens[$index] : ''; ?>" />
 		</td>
 	</tr>
 	<?php } ?>
