@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 		<?php endif; ?>
 		
-		<?php if (is_single()) : ?>
+		<?php if (is_single() || is_page()) : ?>
 		<h1 class="header-title">
 			<?php the_title(); ?>
 		</h1>
