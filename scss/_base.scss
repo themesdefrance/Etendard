@@ -34,8 +34,8 @@ p{
 	line-height: 1.4;
 	clear: both;
 }
-a:visited{
-	color:inherit;
+a{
+	color:$couleur-principale;
 }
 
 @mixin etendard-commun($hauteur: 16px){
