@@ -1919,24 +1919,40 @@ form.search-form input.search-submit {
   background: #d9edf7;
   border: 2px solid #bce8f1;
 }
+/* line 1093, scss/style.scss */
+.message.info a {
+  color: #25556d;
+}
 
-/* line 1094, scss/style.scss */
+/* line 1098, scss/style.scss */
 .message.alerte {
   color: #c09853;
   background: #fcf8e3;
   border: 2px solid #fbeed5;
 }
+/* line 1103, scss/style.scss */
+.message.alerte a {
+  color: #8b6b33;
+}
 
-/* line 1100, scss/style.scss */
+/* line 1108, scss/style.scss */
 .message.erreur {
   color: #b94a48;
   background: #f2dede;
   border: 2px solid #eed3d7;
 }
+/* line 1113, scss/style.scss */
+.message.erreur a {
+  color: #7c3130;
+}
 
-/* line 1106, scss/style.scss */
+/* line 1118, scss/style.scss */
 .message.succes {
   color: #468847;
   background: #dff0d8;
   border: 2px solid #d6e9c6;
+}
+/* line 1123, scss/style.scss */
+.message.succes a {
+  color: #29502a;
 }

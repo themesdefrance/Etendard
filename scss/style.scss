@@ -1089,24 +1089,40 @@ form.search-form input.search-submit{
 	color:#3a87ad;
 	background: #d9edf7;
 	border:2px solid #bce8f1;
+	
+	& a{
+		color: #25556d;
+	}
 }
 
 .message.alerte{
 	color:#c09853;
 	background: #fcf8e3;
 	border:2px solid #fbeed5;
+	
+	& a{
+		color: #8b6b33;
+	}
 }
 
 .message.erreur{
 	color:#b94a48;
 	background: #f2dede;
 	border:2px solid #eed3d7;
+	
+	& a{
+		color: #7c3130;
+	}
 }
 
 .message.succes{
 	color:#468847;
 	background: #dff0d8;
 	border:2px solid #d6e9c6;
+	
+	& a{
+		color: #29502a;
+	}
 }
 
 
