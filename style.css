@@ -1956,3 +1956,14 @@ form.search-form input.search-submit {
 .message.succes a {
   color: #29502a;
 }
+
+/* line 1129, scss/style.scss */
+.error404 p, .error404 .header-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* line 1133, scss/style.scss */
+.error404 .header-title {
+  font-size: 36px;
+}
