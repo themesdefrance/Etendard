@@ -575,24 +575,13 @@ ul.articles .article{
 }
 .article .content blockquote,
 .article.quote > blockquote{
-	margin: 10px 0 20px;
+	margin: 0px 20px 10px;
 	padding: 20px;
-	border-radius: 10px;
 	background: #e6e7e8;
 	
 	& p{
 		font-family: $heading-font;
-		font-size: 36px;
-		text-align: center;
-	}
-	
-	& cite{
-		display: block;
-		margin-top: 10px;
-		text-align: left;
-		color: $couleur-principale;
-		font-size: 24px;
-		font-style:italic;
+		font-size: 26px;
 	}
 }
 
