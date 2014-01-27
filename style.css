@@ -455,8 +455,9 @@ a:hover {
 /* line 84, scss/_base.scss */
 .cta-button:hover, .bouton:hover {
   background: #9d9f9f;
+  text-decoration: none;
 }
-/* line 87, scss/_base.scss */
+/* line 88, scss/_base.scss */
 .cta-button:visited, .bouton:visited {
   color: #fff;
 }
@@ -483,7 +484,7 @@ a:hover {
   border-right: 8px solid white;
 }
 
-/* line 99, scss/_base.scss */
+/* line 100, scss/_base.scss */
 [data-icon]:before, .icon-mail:before, .widget_etendardnewsletter .form-email:before, .icon-search:before, form.search-form .search-submit-wrapper:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, .icon-soundcloud:before, .icon-pinterest:before, .icon-instagram:before, .icon-viadeo:before, .icon-play:before, .widget_etendardsocial li a {
   font-family: "etendard";
   content: attr(data-icon);
@@ -503,77 +504,77 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-/* line 124, scss/_base.scss */
+/* line 125, scss/_base.scss */
 .icon-mail:before, .widget_etendardnewsletter .form-email:before {
   content: "\e600";
 }
 
-/* line 127, scss/_base.scss */
+/* line 128, scss/_base.scss */
 .icon-search:before, form.search-form .search-submit-wrapper:before {
   content: "\e601";
 }
 
-/* line 130, scss/_base.scss */
+/* line 131, scss/_base.scss */
 .icon-googleplus:before {
   content: "\e602";
 }
 
-/* line 133, scss/_base.scss */
+/* line 134, scss/_base.scss */
 .icon-facebook:before {
   content: "\e603";
 }
 
-/* line 136, scss/_base.scss */
+/* line 137, scss/_base.scss */
 .icon-twitter:before {
   content: "\e604";
 }
 
-/* line 139, scss/_base.scss */
+/* line 140, scss/_base.scss */
 .icon-rss:before {
   content: "\e605";
 }
 
-/* line 142, scss/_base.scss */
+/* line 143, scss/_base.scss */
 .icon-vimeo:before {
   content: "\e606";
 }
 
-/* line 145, scss/_base.scss */
+/* line 146, scss/_base.scss */
 .icon-linkedin:before {
   content: "\e607";
 }
 
-/* line 148, scss/_base.scss */
+/* line 149, scss/_base.scss */
 .icon-skype:before {
   content: "\e608";
 }
 
-/* line 151, scss/_base.scss */
+/* line 152, scss/_base.scss */
 .icon-soundcloud:before {
   content: "\e609";
 }
 
-/* line 154, scss/_base.scss */
+/* line 155, scss/_base.scss */
 .icon-pinterest:before {
   content: "\e60a";
 }
 
-/* line 157, scss/_base.scss */
+/* line 158, scss/_base.scss */
 .icon-instagram:before {
   content: "\e60b";
 }
 
-/* line 160, scss/_base.scss */
+/* line 161, scss/_base.scss */
 .icon-youtube:before {
   content: "\e60c";
 }
 
-/* line 163, scss/_base.scss */
+/* line 164, scss/_base.scss */
 .icon-viadeo:before {
   content: "\e60d";
 }
 
-/* line 166, scss/_base.scss */
+/* line 167, scss/_base.scss */
 .icon-play:before {
   content: "\e60e";
 }
