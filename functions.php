@@ -522,7 +522,7 @@ if (!function_exists('etendard_un_demi')){
 		$premier='';
 		if (isset($atts[0]) && trim($atts[0]) == 'premier') {$premier = ' premier';}
 		$res = '<div class="un_demi'.$premier.'">';
-		$res.= wpautop($content);
+		$res.= do_shortcode(wpautop($content));
 		$res.='</div>';
 		return $res;
 	}
@@ -535,7 +535,7 @@ if (!function_exists('etendard_un_tiers')){
 		$premier='';
 		if (isset($atts[0]) && trim($atts[0]) == 'premier') {$premier = ' premier';}
 		$res = '<div class="un_tiers'.$premier.'">';
-		$res.= wpautop($content);
+		$res.= do_shortcode(wpautop($content));
 		$res.= '</div>';
 		return $res;
 	}
@@ -548,7 +548,7 @@ if (!function_exists('etendard_un_quart')){
 		$premier='';
 		if (isset($atts[0]) && trim($atts[0]) == 'premier') {$premier = ' premier';}
 		$res = '<div class="un_quart'.$premier.'">';
-		$res.= wpautop($content);
+		$res.= do_shortcode(wpautop($content));
 		$res.= '</div>';
 		return $res;
 	}
@@ -561,7 +561,7 @@ if (!function_exists('etendard_deux_tiers')){
 		$premier='';
 		if (isset($atts[0]) && trim($atts[0]) == 'premier') {$premier = ' premier';}
 		$res = '<div class="deux_tiers'.$premier.'">';
-		$res.= wpautop($content);
+		$res.= do_shortcode(wpautop($content));
 		$res.= '</div>';
 		return $res;
 	}
@@ -574,7 +574,7 @@ if (!function_exists('etendard_trois_quarts')){
 		$premier='';
 		if (isset($atts[0]) && trim($atts[0]) == 'premier') {$premier = ' premier';}
 		$res = '<div class="trois_quarts'.$premier.'">';
-		$res.= wpautop($content);
+		$res.= do_shortcode(wpautop($content));
 		$res.= '</div>';
 		return $res;
 	}
@@ -627,6 +627,81 @@ if (!function_exists('etendard_message_succes')){
 	add_shortcode( 'succes', 'etendard_message_succes' );
 }
 
+////////////////////////////////////
+// Styles Personnalisés
+////////////////////////////////////
+
+// Chargements des styles utilisateurs
+if(!function_exists('etendard_user_styles')){
+	function etendard_user_styles(){
+		if (of_get_option("etendard_color")){
+			$color = of_get_option("etendard_color"); ?>
+			<style type="text/css">
+				section.realisation .realisation-client,
+				section.realisation .realisation-site,
+				div.pagination a,
+				.widget_etendardnewsletter .form-email:before,
+				form.search-form .search-submit-wrapper:before,
+				a.more-link,
+				ul.services .service h2:hover,
+				ul.portfolio .creation figcaption,
+				.temoignages .temoignage-headline,
+				.article .header-title a:hover,
+				.article.quote > blockquote cite,
+				.comment .comment-author{
+					color: <?php echo $color; ?> !important;
+				}
+				
+				.main-menu a:hover,
+				ul.portfolio .creation figure:hover figcaption,
+				.article.teaser .header-title:after,
+				#commentform #submit,
+				.widget_calendar #today,
+				section.portfolio nav.categories a:hover,
+				section.portfolio nav.categories a.active,
+				.widget_etendardnewsletter input[type="submit"],
+				.widget_etendardsocial li a,
+				.cta-button,
+				.contact-form .submit input{
+					background: <?php echo $color; ?> !important;
+					color: #fff !important;
+				}
+				
+				.toplevel > li > a.active{
+					border-bottom: 2px solid <?php echo $color; ?> !important;;
+				}
+				.main-menu .sub-menu:before{
+					border-bottom: 3px solid <?php echo $color; ?> !important;;
+				}
+				
+				.article.teaser .header-title:hover:after,
+				.widget_etendardsocial li a:hover,
+				.cta-button:hover,
+				.contact-form .submit input:hover{
+					background:#696969 !important;
+				}
+				form.search-form .search-submit-wrapper:hover:before,
+				div.pagination a:hover{
+					color:#696969 !important;
+				}
+			</style>
+		<?php }
+	}
+}
+add_action('wp_head','etendard_user_styles', 98);
+
+
+// Chargement du CSS Personnalisé
+if(!function_exists('etendard_custom_styles')){
+	function etendard_custom_styles(){
+		if (of_get_option("etendard_custom_css")){
+			echo '<style type="text/css">';
+			echo htmlentities(stripslashes(of_get_option("etendard_custom_css")), ENT_NOQUOTES);
+			echo '</style>';
+		}
+	}
+}
+add_action('wp_head', 'etendard_custom_styles', 99);
 
 
 
