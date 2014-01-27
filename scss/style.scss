@@ -205,18 +205,38 @@ ul.services .service a.more-link{
 }
 
 //cta
-section.cta > .wrapper{
+section.cta > .wrapper, .embedcta{
 	display: table;
+	background: #e6e7e8;
+	padding: 20px;
 }
 section.cta .cta-text,
-section.cta .button-wrapper{
+section.cta .button-wrapper,
+.embedcta .cta-text,
+.embedcta .button-wrapper{
 	display: table-cell;
 	vertical-align: middle;
 }
-section.cta .button-wrapper{
+section.cta .button-wrapper,
+.embedcta .button-wrapper{
 	width: 30%;
 	text-align:center;
 }
+
+section.cta .cta-button:before, .embedcta .cta-button:before{
+	border-left:8px solid #e6e7e8;
+}
+section.cta .cta-button:after, .embedcta .cta-button:after{
+	border-right:8px solid #e6e7e8;
+}
+
+// cta contenu
+.embedcta{
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+
 
 //portfolio
 ul.portfolio{

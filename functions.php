@@ -627,6 +627,23 @@ if (!function_exists('etendard_message_succes')){
 	add_shortcode( 'succes', 'etendard_message_succes' );
 }
 
+// Appel à l'action
+// En largeur
+if (!function_exists('etendard_appel_action')){
+	function etendard_appel_action($atts, $content=null){
+		return '<div class="embedcta">
+						<p class="cta-text">
+							'.$content.'
+						</p>
+						<div class="button-wrapper">
+							<a href="'.$atts['lien'].'" class="cta-button">'.$atts['bouton'].'</a>
+						</div>
+				</div>';
+	}
+	add_shortcode( 'appel_action', 'etendard_appel_action' );
+}
+
+
 ////////////////////////////////////
 // Styles Personnalisés
 ////////////////////////////////////
