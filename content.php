@@ -13,15 +13,15 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		</div>
 		<?php endif; ?>
 		
-		<?php if (is_single() || is_page()) : ?>
-		<h1 class="header-title">
-			<?php the_title(); ?>
-		</h1>
-		<?php else : ?>
-		<h2 class="header-title">
-			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-		</h2>
-		<?php endif; // is_single() ?>
+		<?php if (is_single() || is_page()){ ?>
+			<h1 class="header-title">
+				<?php the_title(); ?>
+			</h1>
+		<?php } else { ?>
+			<h2 class="header-title">
+				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			</h2>
+		<?php } // is_single() ?>
 		
 		<?php if(!is_page()) : ?>
 		<span class="header-meta">
@@ -33,7 +33,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		
 	</header>
 	<div class="content">
-		<?php the_content(__('Lire la suite', TEXT_TRANSLATION_DOMAIN)); ?>
+		<?php if (is_single() || is_page()){
+			the_content(__('Lire la suite', TEXT_TRANSLATION_DOMAIN));
+			
+			} else {
+				the_excerpt(__('Lire la suite', TEXT_TRANSLATION_DOMAIN));
+			}
+		?>
 	</div>
 	<footer class="footer">
 		<nav>
