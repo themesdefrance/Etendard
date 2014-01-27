@@ -304,7 +304,7 @@ ul.portfolio .creation figcaption{
 	text-align: center;
 	color: $couleur-principale;
 	font-size: 18px;
-	font-style: italic;
+	font-family: $heading-font;
 	@include transition();
 }
 ul.portfolio .creation .excerpt{
@@ -360,8 +360,7 @@ section.realisation .meta > *{
 	margin-bottom:5px;
 }
 section.realisation .realisation-client{
-	color:$couleur-principale;
-	font-style:italic;
+	color:$body-copy-color;
 	font-size:18px;
 }
 section.realisation .meta{
@@ -373,7 +372,7 @@ section.realisation .realisation-site{
 	color:$couleur-principale;
 	
 	&:hover{
-		color:darken($couleur-principale,5);
+		text-decoration: none;
 	}
 }
 
@@ -386,8 +385,7 @@ section.realisation .realisation-site{
 	margin-left:33.3%;
 }
 .temoignages .temoignage-headline{
-	color: $couleur-principale;
-	font-style:italic;
+	color: $body-copy-color;
 	margin-bottom:5px;
 	font-size:18px;
 }

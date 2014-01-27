@@ -654,7 +654,6 @@ if(!function_exists('etendard_user_styles')){
 		if (of_get_option("etendard_color")){
 			$color = of_get_option("etendard_color"); ?>
 			<style type="text/css">
-				section.realisation .realisation-client,
 				section.realisation .realisation-site,
 				div.pagination a,
 				.widget_etendardnewsletter .form-email:before,
@@ -662,7 +661,6 @@ if(!function_exists('etendard_user_styles')){
 				a.more-link,
 				ul.services .service h2:hover,
 				ul.portfolio .creation figcaption,
-				.temoignages .temoignage-headline,
 				.article .header-title a:hover,
 				.article.quote > blockquote cite,
 				.comment .comment-author{
