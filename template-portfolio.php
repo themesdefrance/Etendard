@@ -3,14 +3,7 @@
 Template Name: Portfolio
 */
 ?>
-
 <?php 
-// On sort si on accède directement au fichier
-
-if ( ! defined( 'ABSPATH' ) ) exit;
-	
-
-
 $terms = get_terms('portfolio_categorie');
 
 global $wp_query;

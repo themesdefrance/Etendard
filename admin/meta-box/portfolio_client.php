@@ -1,11 +1,3 @@
-<?php 
-// On sort si on accède directement au fichier
-
-if ( ! defined( 'ABSPATH' ) ) exit;
-	
-?>
-
-
 <?php
 wp_nonce_field('etendard_portfolio_nonce', 'etendard_portfolio_nonce');
 		

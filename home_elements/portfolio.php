@@ -1,10 +1,3 @@
-<?php 
-// On sort si on accède directement au fichier
-
-if ( ! defined( 'ABSPATH' ) ) exit;
-	
-?>
-
 <?php $portfolios = new WP_Query(array('posts_per_page'=>3, 'post_type'=>'portfolio')); ?>
 <?php if ($portfolios->have_posts()): ?>
 <section class="portfolio">

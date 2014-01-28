@@ -1,10 +1,3 @@
-<?php 
-// On sort si on accède directement au fichier
-
-if ( ! defined( 'ABSPATH' ) ) exit;
-	
-?>
-
 <section class="footer-widgets">
 	<div class="wrapper">
 			<?php get_sidebar('footer'); ?>

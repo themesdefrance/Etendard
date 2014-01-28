@@ -1,10 +1,3 @@
-<?php 
-// On sort si on accède directement au fichier
-
-if ( ! defined( 'ABSPATH' ) ) exit;
-	
-?>
-
 <?php
 class EtendardNewsletter extends WP_Widget{
 	

@@ -1,10 +1,3 @@
-<?php 
-// On sort si on accède directement au fichier
-
-if ( ! defined( 'ABSPATH' ) ) exit;
-	
-?>
-
 <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
 	<label>
 		<span class="screen-reader-text">

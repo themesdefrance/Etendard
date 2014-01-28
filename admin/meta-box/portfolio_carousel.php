@@ -1,10 +1,3 @@
-<?php 
-// On sort si on accède directement au fichier
-
-if ( ! defined( 'ABSPATH' ) ) exit;
-	
-?>
-
 <?php
 $carousel = get_post_meta($post->ID, 'etendard_portfolio_carousel', true);
 $liens = get_post_meta($post->ID, 'etendard_portfolio_carousel_lien', true);

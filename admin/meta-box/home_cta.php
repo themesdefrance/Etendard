@@ -1,10 +1,3 @@
-<?php 
-// On sort si on accède directement au fichier
-
-if ( ! defined( 'ABSPATH' ) ) exit;
-	
-?>
-
 <?php
 $cta_url = get_post_meta($post->ID, 'etendard_home_cta_url', true);
 $cta_text = get_post_meta($post->ID, 'etendard_home_cta_text', true);

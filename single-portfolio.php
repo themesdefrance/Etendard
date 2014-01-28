@@ -1,10 +1,3 @@
-<?php 
-// On sort si on accède directement au fichier
-
-if ( ! defined( 'ABSPATH' ) ) exit;
-	
-?>
-
 <?php $portfolio_custom = get_post_custom(); ?>
 <?php get_header(); ?>
 <?php while (have_posts()) : the_post();?>
