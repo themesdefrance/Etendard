@@ -82,8 +82,8 @@ if (!function_exists('etendard_init_cpt')){
 			'thumbnail',
 			'excerpt',
 			'custom-fields',
-			'revisions',
-			'post-formats'
+			'revisions'/*,
+			'post-formats'*/
 		));
 		register_taxonomy('portfolio_categorie', 'portfolio', array(
 			'label'=>'Catégories',
