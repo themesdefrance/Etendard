@@ -373,7 +373,6 @@ section.realisation .meta{
 section.realisation .realisation-site{
 	display:block;
 	color:$couleur-principale;
-	
 }
 
 .temoignages{
@@ -755,15 +754,8 @@ div.pagination{
 .main-footer{
 	padding: 15px 0 30px;
 	color: #6d6e71;
+	font-size: 14px;
 	@extend .grid;
-}
-
-.main-footer a{
-	text-decoration: none;
-	
-	&:hover{
-		text-decoration: underline;
-	}
 }
 
 .main-footer div.col-1-2:last-child{
@@ -774,7 +766,6 @@ div.pagination{
 		margin-top:20px;
 	}
 }
-
 
 //Widgets du footer
 .footer-widgets{
