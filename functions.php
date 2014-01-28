@@ -4,6 +4,10 @@ define('TEXT_TRANSLATION_DOMAIN', 'etendard');
 require_once 'widgets/newsletter.php';
 require_once 'widgets/social.php';
 
+//Software licensing
+//define('EDD_SL_STORE_URL', 'https://www.themesdefrance.fr/');
+//define('EDD_SL_THEME_NAME', 'Etendard');
+
 if (!function_exists( 'optionsframework_init')){
 	define('OPTIONS_FRAMEWORK_DIRECTORY', get_bloginfo('template_directory').'/admin/options/');
 	require_once TEMPLATEPATH.'/admin/options/'.'options-framework.php';
