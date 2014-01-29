@@ -54,10 +54,10 @@ if (isset($_POST['etendard_contact_nonce']) && wp_verify_nonce($_POST['etendard_
 	</div>
 </form>
 <?php } else { ?>
-	<div class="contact-feedback <?php echo ($contact) ? 'success' : 'error'; ?>">
+	<div class="message <?php echo ($contact) ? 'succes' : 'erreur'; ?>">
 	<?php
 	if ($contact) _e('Votre message à été envoyé.');
-	else _e("Une erreur est survenue lors de l'envoi de votre message, merci de réessayer ultérieurement.");
+	else _e("Une erreur est survenue lors de l'envoi de votre message, merci de réessayer ultérieurement.", TEXT_TRANSLATION_DOMAIN);
 	?>
 	</div>
 <?php } ?>
