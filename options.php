@@ -7,6 +7,13 @@ function optionsframework_options() {
 	$options[] = array(	'name'=> __('Général', TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'heading');
 						
+	$options[] = array(	'name'=> __("Licence", TEXT_TRANSLATION_DOMAIN),
+						'type'=> 'info');
+						
+	$options[] = array( 'desc'=> __("Numéro de licence", TEXT_TRANSLATION_DOMAIN),
+						'id'=> EDD_SL_LICENCE_KEY,
+						'type'=> 'text');
+						
 	$options[] = array(	'name'=> __("Page d'accueil", TEXT_TRANSLATION_DOMAIN),
 						'desc'=> __("Choisissez les éléments à afficher sur la page d'accueil :", TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'info');
@@ -119,11 +126,11 @@ function optionsframework_options() {
 	$options[] = array(	'name'=> __('Portfolio', TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'heading');
 						
-	$options[] = array(	'name'=> __('Appel à l\'action', TEXT_TRANSLATION_DOMAIN),
+	$options[] = array(	'name'=> __("Appel à l'action", TEXT_TRANSLATION_DOMAIN),
 						'desc'=> __("Définissez l'appel à l'action présent sur chaque page portfolio :", TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'info');
 						
-	$options[] = array( 'desc'=> __('Destination de l\'appel à l\'action (lien)', TEXT_TRANSLATION_DOMAIN),
+	$options[] = array( 'desc'=> __("Destination de l'appel à l'action (lien)", TEXT_TRANSLATION_DOMAIN),
 						'id'=> 'etendard_cta_url',
 						'type'=> 'text');
 						
