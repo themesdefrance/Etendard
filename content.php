@@ -2,7 +2,11 @@
 	<header class="header">
 		<?php if (has_post_thumbnail() && !post_password_required()): ?>
 		<div class="entry-thumbnail">
-			<?php the_post_thumbnail('etendard-post-thumbnail'); ?>
+			<?php if (is_single() || is_page()){ ?>
+				<?php the_post_thumbnail('etendard-post-thumbnail'); ?>
+			<?php }else{ ?>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('etendard-post-thumbnail'); ?></a>
+			<?php } ?>
 		</div>
 		<?php endif; ?>
 		
@@ -12,7 +16,7 @@
 			</h1>
 		<?php } else { ?>
 			<h2 class="header-title">
-				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 			</h2>
 		<?php } // is_single() ?>
 		
