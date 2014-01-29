@@ -7,8 +7,7 @@ require_once 'admin/widgets/social.php';
 //Software licensing
 define('EDD_SL_STORE_URL', 'https://www.themesdefrance.fr/');
 define('EDD_SL_THEME_NAME', 'Etendard');
-define('EDD_SL_LICENCE_KEY', 'etendard_licence_edd');
-//define('EDD_SL_LICENCE_KEY_STATUS', 'etendard_licence_edd_status');
+define('EDD_SL_LICENSE_KEY', 'etendard_license_edd');
 
 if(!class_exists('EDD_SL_Theme_Updater')){
 	include(dirname( __FILE__ ).'/admin/EDD_SL_Theme_Updater.php');
@@ -725,7 +724,7 @@ add_action('wp_head', 'etendard_custom_styles', 99);
 
 if(!function_exists('etendard_edd')){
 	function etendard_edd(){
-		$license = trim(of_get_option(EDD_SL_LICENCE_KEY));
+		$license = trim(of_get_option(EDD_SL_LICENSE_KEY));
 		$status = get_option('etendard_license_status');
 		
 		if (!$status){
