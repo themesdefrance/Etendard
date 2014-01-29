@@ -744,13 +744,13 @@ if(!function_exists('etendard_edd')){
 		}
 		
 //		// setup the updater
+		$theme = wp_get_theme();
 		$edd_updater = new EDD_SL_Theme_Updater(array( 
 				'remote_api_url'=> EDD_SL_STORE_URL,
-				'version' 	=> '1.0',
+				'version' 	=> $theme['version'],
 				'license' 	=> $license,
 				'item_name' => EDD_SL_THEME_NAME,
-				'author'	=> 'Thèmes de France',
-				'url'       => home_url()
+				'author'	=> 'Thèmes de France'
 			)
 		);
 	}

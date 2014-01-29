@@ -11,7 +11,7 @@ function optionsframework_options() {
 						'type'=> 'info');
 						
 	$options[] = array( 'desc'=> __("Numéro de licence", TEXT_TRANSLATION_DOMAIN),
-						'id'=> EDD_SL_LICENCE_KEY,
+						'id'=> EDD_SL_LICENSE_KEY,
 						'type'=> 'text');
 						
 	$options[] = array(	'name'=> __("Page d'accueil", TEXT_TRANSLATION_DOMAIN),
