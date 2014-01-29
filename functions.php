@@ -1,8 +1,8 @@
 <?php
 define('TEXT_TRANSLATION_DOMAIN', 'etendard');
 				
-require_once 'widgets/newsletter.php';
-require_once 'widgets/social.php';
+require_once 'admin/widgets/newsletter.php';
+require_once 'admin/widgets/social.php';
 
 //Software licensing
 //define('EDD_SL_STORE_URL', 'https://www.themesdefrance.fr/');
