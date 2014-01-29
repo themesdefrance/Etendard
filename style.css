@@ -1,5 +1,4 @@
-@charset "CP850";
-/*
+/*!
 Theme Name: Étendard
 Theme URI: http://themesdefrance.fr/etendard
 Author: Thèmes de France
@@ -283,7 +282,7 @@ section.portfolio nav.categories:after,
   /* Black prints faster: sanbeiji.com/archives/953 */
   /* line 9, scss/qb/modules/_print.scss */
   a, a:visited {
-    color: #444444 !important;
+    color: #444 !important;
     text-decoration: underline;
   }
 
@@ -305,7 +304,7 @@ section.portfolio nav.categories:after,
   /* Don't show links for images, or javascript/internal links */
   /* line 22, scss/qb/modules/_print.scss */
   pre, blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 
@@ -1503,7 +1502,7 @@ div.pagination a {
 /* line 740, scss/style.scss */
 .contact-form .field input,
 .contact-form .field textarea {
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   padding: 6px 4px;
 }
 /* line 744, scss/style.scss */
@@ -1692,7 +1691,7 @@ div.pagination a {
   width: 100%;
   margin-top: 5px;
   background: #fff;
-  border: 1px solid white;
+  border: 1px solid #fff;
   padding: 6px 4px;
   color: #333;
 }
@@ -1858,12 +1857,12 @@ form.search-form input.search-submit {
   position: relative;
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
-  -o-border-radius: 0!important;
-  border-radius: 0!important;
+  -o-border-radius: 0 !important;
+  border-radius: 0 !important;
   box-shadow: none !important;
-  -webkit-box-shadow: none!important;
-  -moz-box-shadow: none!important;
-  -o-box-shadow: none!important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -o-box-shadow: none !important;
   zoom: 1;
 }
 
@@ -1872,7 +1871,6 @@ form.search-form input.search-submit {
   display: inline-block;
   margin: auto;
   max-height: 500px;
-  width: auto !important;
 }
 
 /* line 1041, scss/style.scss */
@@ -1923,7 +1921,7 @@ form.search-form input.search-submit {
 .message {
   padding: 20px;
   margin-bottom: 10px;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   background: #eee;
   color: #666;
 }
