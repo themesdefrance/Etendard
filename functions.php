@@ -424,7 +424,6 @@ if (!function_exists('etendard_comment')){
 			<p>
 				<?php _e('Pingback:', TEXT_TRANSLATION_DOMAIN); ?>
 				<?php comment_author_link(); ?>
-				<?php edit_comment_link(__('(Éditer)', TEXT_TRANSLATION_DOMAIN), ' '); ?>
 			</p>
 		<?php
 			break;
@@ -434,7 +433,7 @@ if (!function_exists('etendard_comment')){
 			<article id="comment-<?php comment_ID(); ?>" class="article comment">
 				<aside class="col-1-5">
 					<?php if ($comment->comment_approved == '0') : ?>
-						<em><?php _e('Your comment is awaiting moderation.', TEXT_TRANSLATION_DOMAIN); ?></em>
+						<em><?php _e('Votre commentaire est en attente de modération.', TEXT_TRANSLATION_DOMAIN); ?></em>
 					<?php endif; ?>
 					<?php echo get_avatar($comment, 104); ?>
 				</aside>
@@ -443,7 +442,6 @@ if (!function_exists('etendard_comment')){
 					<header class="comment-header">
 						<div class="comment-author vcard">
 							<?php printf(__('%s', TEXT_TRANSLATION_DOMAIN), sprintf('<cite class="fn">%s</cite>', get_comment_author_link())); ?>
-							<?php edit_comment_link(__('(Éditer)', TEXT_TRANSLATION_DOMAIN), ' '); ?>
 						</div>
 					</header>
 		 
@@ -653,14 +651,19 @@ if(!function_exists('etendard_user_styles')){
 			<style type="text/css">
 				section.realisation .realisation-site,
 				div.pagination a,
-				.widget_etendardnewsletter .form-email:before,
+				.article .content a,
+				.article .header-meta a,
+				#comments a,
+				.sidebar .widget a,
+				.sidebar .widget_etendardnewsletter .form-email:before,
 				form.search-form .search-submit-wrapper:before,
 				a.more-link,
 				ul.services .service h2:hover,
 				ul.portfolio .creation figcaption,
 				.article .header-title a:hover,
 				.article.quote > blockquote cite,
-				.comment .comment-author{
+				.comment .comment-author a,
+				.main-footer a{
 					color: <?php echo $color; ?> !important;
 				}
 				
@@ -671,8 +674,8 @@ if(!function_exists('etendard_user_styles')){
 				.widget_calendar #today,
 				section.portfolio nav.categories a:hover,
 				section.portfolio nav.categories a.active,
-				.widget_etendardnewsletter input[type="submit"],
-				.widget_etendardsocial li a,
+				.sidebar .widget_etendardnewsletter input[type="submit"],
+				.sidebar .widget_etendardsocial li a,
 				.cta-button,
 				.contact-form .submit input{
 					background: <?php echo $color; ?> !important;
@@ -689,7 +692,8 @@ if(!function_exists('etendard_user_styles')){
 				.article.teaser .header-title:hover:after,
 				.widget_etendardsocial li a:hover,
 				.cta-button:hover,
-				.contact-form .submit input:hover{
+				.contact-form .submit input:hover,
+				#commentform #submit:hover{
 					background:#696969 !important;
 				}
 				form.search-form .search-submit-wrapper:hover:before,
