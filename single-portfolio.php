@@ -46,7 +46,7 @@
 <section class="grid">
 	<div class="wrapper">
 		<ul class="temoignages">
-			<li class="temoignage col-2-3">
+			<li class="temoignage">
 				<div class="temoignage-photo-wrapper">
 					<?php if (!empty($portfolio_custom['etendard_portfolio_temoin_portrait'][0])): ?>
 					<img src="<?php echo $portfolio_custom['etendard_portfolio_temoin_portrait'][0]; ?>" class="temoignage-photo" />
