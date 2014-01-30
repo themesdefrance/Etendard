@@ -53,14 +53,14 @@ if (!function_exists('etendard_setup')){
 		
 		add_theme_support('post-thumbnails');
 		
-		add_theme_support('post-formats', array(
-//			'chat', 
-			'image', 
-			'link', 
-			'quote', 
-//			'status', 
-			'video',
-		));
+//		add_theme_support('post-formats', array(
+////			'chat', 
+//			'image', 
+//			'link', 
+//			'quote', 
+////			'status', 
+//			'video',
+//		));
 		
 		add_image_size('etendard-portfolio-thumbnail', 301, 230, true);
 		add_image_size('etendard-blog-thumbnail', 225, 150, true);
