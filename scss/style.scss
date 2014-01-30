@@ -181,8 +181,6 @@ ul.services .entry-thumbnail{
 	margin-bottom: 20px;
 }
 ul.services .entry-thumbnail img{
-	display:block;
-	width:100%;
 	max-height:230px;
 }
 ul.services .service h2{
@@ -205,10 +203,14 @@ ul.services .service a.more-link{
 
 // Single Service
 
-.single-service .desc_service{
+.landing{
 	margin: 0 auto;
 	float: none;
 	padding: 0;
+}
+
+.landing .header{
+	text-align: center;
 }
 
 //cta
@@ -1038,7 +1040,11 @@ form.search-form input.search-submit{
 
 .bouton{
 	@extend %bouton-etendard;
-	color: #fff !important
+	color: #fff !important;
+	
+	&:hover{
+		text-decoration:none !important;
+	}
 }
 
 // Colonnes
