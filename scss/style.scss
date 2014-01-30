@@ -181,8 +181,6 @@ ul.services .entry-thumbnail{
 	margin-bottom: 20px;
 }
 ul.services .entry-thumbnail img{
-	display:block;
-	width:100%;
 	max-height:230px;
 }
 ul.services .service h2{
@@ -205,10 +203,14 @@ ul.services .service a.more-link{
 
 // Single Service
 
-.single-service .desc_service{
+.landing{
 	margin: 0 auto;
 	float: none;
 	padding: 0;
+}
+
+.landing .header{
+	text-align: center;
 }
 
 //cta
@@ -480,13 +482,6 @@ ul.articles .article{
 	color: $gris-principal;
 	font-size: 14px;
 }
-.article .header-meta .post-edit-link{
-	color: darken($gris-principal, 10);
-	
-	&:hover{
-		text-decoration: none;
-	}
-}
 .article .footer{
 	margin-top: 30px;
 	color: $gris-principal;
@@ -624,7 +619,7 @@ ul.articles .article{
 	margin-bottom: 5px;
 }
 .comment .comment-author{
-	color: $couleur-principale;
+	color: $body-copy-color;
 	font-family:$heading-font;
 	font-size:18px;
 	font-style:italic;
@@ -700,17 +695,18 @@ ul.articles .article{
 	width: 100%;
 }
 #commentform .form-submit{
-	text-align:right;
+	text-align:left;
 }
 #commentform #submit{
+
 	background:$couleur-principale;
 	border: none;
 	padding: 6px 14px;
 	color: #fff;
-	@include transition(background $default-transition-duration $default-transition-function);
+	@include transition();
 	
 	&:hover{
-		background:darken($couleur-principale, 5);
+		background: $gris-principal;
 	}
 }
 
@@ -838,6 +834,15 @@ div.pagination{
 	}
 }
 
+.footer-menu ul{
+	list-style-type: none;
+}
+
+.footer-menu ul li {
+	display: inline-block;
+	margin-left: 10px;
+}
+
 //modules
 .widget{
 	padding: 5px 0 15px;
@@ -857,12 +862,11 @@ div.pagination{
 		margin-bottom: 15px;
 	}
 	& a{
-		color: $body-copy-color;
+		color: $couleur-principale;
 		text-decoration:none;
 		
 		&:hover{
 			text-decoration:underline;
-			//color:lighten($body-copy-color, 5);
 		}
 	}
 	& table{
@@ -1038,7 +1042,11 @@ form.search-form input.search-submit{
 
 .bouton{
 	@extend %bouton-etendard;
-	color: #fff !important
+	color: #fff !important;
+	
+	&:hover{
+		text-decoration:none !important;
+	}
 }
 
 // Colonnes
