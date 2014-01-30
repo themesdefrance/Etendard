@@ -482,13 +482,6 @@ ul.articles .article{
 	color: $gris-principal;
 	font-size: 14px;
 }
-.article .header-meta .post-edit-link{
-	color: darken($gris-principal, 10);
-	
-	&:hover{
-		text-decoration: none;
-	}
-}
 .article .footer{
 	margin-top: 30px;
 	color: $gris-principal;
@@ -626,7 +619,7 @@ ul.articles .article{
 	margin-bottom: 5px;
 }
 .comment .comment-author{
-	color: $couleur-principale;
+	color: $body-copy-color;
 	font-family:$heading-font;
 	font-size:18px;
 	font-style:italic;
@@ -702,17 +695,18 @@ ul.articles .article{
 	width: 100%;
 }
 #commentform .form-submit{
-	text-align:right;
+	text-align:left;
 }
 #commentform #submit{
+
 	background:$couleur-principale;
 	border: none;
 	padding: 6px 14px;
 	color: #fff;
-	@include transition(background $default-transition-duration $default-transition-function);
+	@include transition();
 	
 	&:hover{
-		background:darken($couleur-principale, 5);
+		background: $gris-principal;
 	}
 }
 
@@ -859,12 +853,11 @@ div.pagination{
 		margin-bottom: 15px;
 	}
 	& a{
-		color: $body-copy-color;
+		color: $couleur-principale;
 		text-decoration:none;
 		
 		&:hover{
 			text-decoration:underline;
-			//color:lighten($body-copy-color, 5);
 		}
 	}
 	& table{
