@@ -834,6 +834,15 @@ div.pagination{
 	}
 }
 
+.footer-menu ul{
+	list-style-type: none;
+}
+
+.footer-menu ul li {
+	display: inline-block;
+	margin-left: 10px;
+}
+
 //modules
 .widget{
 	padding: 5px 0 15px;

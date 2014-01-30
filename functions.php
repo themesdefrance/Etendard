@@ -24,6 +24,7 @@ add_action('save_post', 'etendard_home_save_custom');
 if (!function_exists('etendard_setup')){
 	function etendard_setup(){
 		register_nav_menu('primary', __('Menu principal', TEXT_TRANSLATION_DOMAIN));
+		register_nav_menu('footer', __('Menu pied de page', TEXT_TRANSLATION_DOMAIN));
 			
 		register_sidebar(array(
 				'name'          => __('Barre latérale', TEXT_TRANSLATION_DOMAIN),
@@ -677,7 +678,8 @@ if(!function_exists('etendard_user_styles')){
 				.sidebar .widget_etendardnewsletter input[type="submit"],
 				.sidebar .widget_etendardsocial li a,
 				.cta-button,
-				.contact-form .submit input{
+				.contact-form .submit input,
+				a.bouton.lirelasuite{
 					background: <?php echo $color; ?> !important;
 					color: #fff !important;
 				}
@@ -693,7 +695,8 @@ if(!function_exists('etendard_user_styles')){
 				.widget_etendardsocial li a:hover,
 				.cta-button:hover,
 				.contact-form .submit input:hover,
-				#commentform #submit:hover{
+				#commentform #submit:hover,
+				a.bouton.lirelasuite:hover{
 					background:#696969 !important;
 				}
 				form.search-form .search-submit-wrapper:hover:before,

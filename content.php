@@ -69,7 +69,7 @@
 			
 				the_excerpt(__('Lire la suite', TEXT_TRANSLATION_DOMAIN)); ?>
 				
-				<a href="<?php the_permalink(); ?>" class="bouton" title="<?php the_title(); ?>">Lire la suite</a>
+				<a href="<?php the_permalink(); ?>" class="bouton lirelasuite" title="<?php the_title(); ?>">Lire la suite</a>
 				
 		<?php } ?>
 		

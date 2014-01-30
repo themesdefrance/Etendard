@@ -10,7 +10,15 @@
 			<?php echo strip_tags(of_get_option("etendard_footer_gauche"), '<strong><a><em><img>'); ?>
 		</div>
 		<div class="col-1-2">
-			<?php echo strip_tags(of_get_option("etendard_footer_droite"), '<strong><a><em><img>'); ?>
+			<nav class="footer-menu">
+				<?php
+				wp_nav_menu(array(
+					'theme_location'=>'footer',
+					'container'=>false,
+					'depth'=>-1
+				)); 
+				?>
+			</nav>
 		</div>
 	</div>
 </footer>

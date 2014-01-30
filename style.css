@@ -1614,59 +1614,70 @@ div.pagination a {
   border-right-color: #e6e7e8;
 }
 
-/* line 838, scss/style.scss */
+/* line 837, scss/style.scss */
+.footer-menu ul {
+  list-style-type: none;
+}
+
+/* line 841, scss/style.scss */
+.footer-menu ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/* line 847, scss/style.scss */
 .widget {
   padding: 5px 0 15px;
   margin-bottom: 20px;
 }
-/* line 842, scss/style.scss */
+/* line 851, scss/style.scss */
 .widget * {
   max-width: 100%;
 }
-/* line 845, scss/style.scss */
+/* line 854, scss/style.scss */
 .widget h3 {
   font-size: 24px;
   margin-bottom: 10px;
 }
-/* line 849, scss/style.scss */
+/* line 858, scss/style.scss */
 .widget ul, .widget ol {
   list-style: none;
 }
-/* line 852, scss/style.scss */
+/* line 861, scss/style.scss */
 .widget li {
   margin-bottom: 15px;
 }
-/* line 855, scss/style.scss */
+/* line 864, scss/style.scss */
 .widget a {
   color: #1ba7c4;
   text-decoration: none;
 }
-/* line 859, scss/style.scss */
+/* line 868, scss/style.scss */
 .widget a:hover {
   text-decoration: underline;
 }
-/* line 863, scss/style.scss */
+/* line 872, scss/style.scss */
 .widget table {
   width: 100%;
 }
-/* line 866, scss/style.scss */
+/* line 875, scss/style.scss */
 .widget td {
   text-align: center;
 }
 
-/* line 872, scss/style.scss */
+/* line 881, scss/style.scss */
 .widget_etendardnewsletter {
   text-align: center;
 }
 
-/* line 875, scss/style.scss */
+/* line 884, scss/style.scss */
 .widget_etendardnewsletter .form-email {
   position: relative;
   display: inline-block;
   margin: 5px 0;
   width: 80%;
 }
-/* line 882, scss/style.scss */
+/* line 891, scss/style.scss */
 .widget_etendardnewsletter .form-email:before {
   position: absolute;
   right: 7px;
@@ -1675,7 +1686,7 @@ div.pagination a {
   font-size: 1.8rem;
 }
 
-/* line 890, scss/style.scss */
+/* line 899, scss/style.scss */
 .widget_etendardnewsletter input[type="email"] {
   display: inline-block;
   width: 100%;
@@ -1685,13 +1696,13 @@ div.pagination a {
   padding: 6px 4px;
   color: #333;
 }
-/* line 899, scss/style.scss */
+/* line 908, scss/style.scss */
 .widget_etendardnewsletter input[type="email"]:focus {
   border-color: #8d8d8d;
   outline: none;
 }
 
-/* line 904, scss/style.scss */
+/* line 913, scss/style.scss */
 .widget_etendardnewsletter input[type="submit"] {
   background: #1ba7c4;
   border: none;
@@ -1704,22 +1715,22 @@ div.pagination a {
   -o-transition: background 0.2s ease-in;
   transition: background 0.2s ease-in;
 }
-/* line 913, scss/style.scss */
+/* line 922, scss/style.scss */
 .widget_etendardnewsletter input[type="submit"]:hover {
   background: #1894ae;
 }
 
-/* line 919, scss/style.scss */
+/* line 928, scss/style.scss */
 form.search-form span.screen-reader-text {
   display: none;
 }
 
-/* line 923, scss/style.scss */
+/* line 932, scss/style.scss */
 form.search-form {
   position: relative;
 }
 
-/* line 926, scss/style.scss */
+/* line 935, scss/style.scss */
 form.search-form input.search-field {
   display: inline-block;
   width: 100%;
@@ -1732,7 +1743,7 @@ form.search-form input.search-field {
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 935, scss/style.scss */
+/* line 944, scss/style.scss */
 form.search-form input.search-field:focus {
   border: 1px solid #939393;
   background: #f9f9f9;
@@ -1740,14 +1751,14 @@ form.search-form input.search-field:focus {
   outline: none;
 }
 
-/* line 942, scss/style.scss */
+/* line 951, scss/style.scss */
 form.search-form .search-submit-wrapper {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
 }
-/* line 949, scss/style.scss */
+/* line 958, scss/style.scss */
 form.search-form .search-submit-wrapper:before {
   position: absolute;
   top: 10px;
@@ -1756,7 +1767,7 @@ form.search-form .search-submit-wrapper:before {
   color: #1ba7c4;
 }
 
-/* line 957, scss/style.scss */
+/* line 966, scss/style.scss */
 form.search-form input.search-submit {
   display: block;
   height: 100%;
@@ -1767,17 +1778,17 @@ form.search-form input.search-submit {
   opacity: 0;
 }
 
-/* line 968, scss/style.scss */
+/* line 977, scss/style.scss */
 .widget_etendardsocial ul {
   list-style: none;
 }
 
-/* line 971, scss/style.scss */
+/* line 980, scss/style.scss */
 .widget_etendardsocial li {
   display: inline-block;
 }
 
-/* line 974, scss/style.scss */
+/* line 983, scss/style.scss */
 .widget_etendardsocial li a {
   display: inline-block;
   margin-right: 15px;
@@ -1814,31 +1825,31 @@ form.search-form input.search-submit {
   bottom: 0;
   border-right: 9px solid white;
 }
-/* line 986, scss/style.scss */
+/* line 995, scss/style.scss */
 .widget_etendardsocial li a:hover {
   color: #fff;
   text-decoration: none;
   background: #1894ae;
 }
 
-/* line 994, scss/style.scss */
+/* line 1003, scss/style.scss */
 .widget_calendar table caption {
   font-family: "Sanchez", Georgia, Trebuchet, Helvetica, Arial;
   font-size: 20px;
 }
 
-/* line 998, scss/style.scss */
+/* line 1007, scss/style.scss */
 .widget_calendar td {
   padding: 8px 0;
 }
 
-/* line 1001, scss/style.scss */
+/* line 1010, scss/style.scss */
 .widget_calendar #today {
   background: #1ba7c4;
   color: #fff;
 }
 
-/* line 1007, scss/style.scss */
+/* line 1016, scss/style.scss */
 .flexslider {
   margin: 0 auto 40px !important;
   border: 0 !important;
@@ -1856,23 +1867,23 @@ form.search-form input.search-submit {
   zoom: 1;
 }
 
-/* line 1023, scss/style.scss */
+/* line 1032, scss/style.scss */
 .flexslider .slides img {
   display: inline-block;
   margin: auto;
   max-height: 500px;
 }
 
-/* line 1034, scss/style.scss */
+/* line 1043, scss/style.scss */
 .bouton {
   color: #fff !important;
 }
-/* line 1038, scss/style.scss */
+/* line 1047, scss/style.scss */
 .bouton:hover {
   text-decoration: none !important;
 }
 
-/* line 1045, scss/style.scss */
+/* line 1054, scss/style.scss */
 .un_demi, .un_tiers, .un_quart, .deux_tiers, .trois_quarts {
   margin-left: 4%;
   float: left;
@@ -1880,38 +1891,38 @@ form.search-form input.search-submit {
   overflow: hidden;
 }
 
-/* line 1052, scss/style.scss */
+/* line 1061, scss/style.scss */
 .un_demi {
   width: 48%;
 }
 
-/* line 1056, scss/style.scss */
+/* line 1065, scss/style.scss */
 .un_tiers {
   width: 30.5%;
 }
 
-/* line 1060, scss/style.scss */
+/* line 1069, scss/style.scss */
 .un_quart {
   width: 22%;
 }
 
-/* line 1064, scss/style.scss */
+/* line 1073, scss/style.scss */
 .deux_tiers {
   width: 65.5%;
 }
 
-/* line 1068, scss/style.scss */
+/* line 1077, scss/style.scss */
 .trois_quarts {
   width: 74%;
 }
 
-/* line 1072, scss/style.scss */
+/* line 1081, scss/style.scss */
 .premier {
   margin-left: 0;
   clear: left;
 }
 
-/* line 1079, scss/style.scss */
+/* line 1088, scss/style.scss */
 .message {
   padding: 20px;
   margin-bottom: 10px;
@@ -1920,62 +1931,62 @@ form.search-form input.search-submit {
   color: #666;
 }
 
-/* line 1087, scss/style.scss */
+/* line 1096, scss/style.scss */
 .content .message p {
   margin-bottom: 0;
 }
 
-/* line 1091, scss/style.scss */
+/* line 1100, scss/style.scss */
 .message.info {
   color: #3a87ad;
   background: #d9edf7;
   border: 2px solid #bce8f1;
 }
-/* line 1096, scss/style.scss */
+/* line 1105, scss/style.scss */
 .message.info a {
   color: #25556d;
 }
 
-/* line 1101, scss/style.scss */
+/* line 1110, scss/style.scss */
 .message.alerte {
   color: #c09853;
   background: #fcf8e3;
   border: 2px solid #fbeed5;
 }
-/* line 1106, scss/style.scss */
+/* line 1115, scss/style.scss */
 .message.alerte a {
   color: #8b6b33;
 }
 
-/* line 1111, scss/style.scss */
+/* line 1120, scss/style.scss */
 .message.erreur {
   color: #b94a48;
   background: #f2dede;
   border: 2px solid #eed3d7;
 }
-/* line 1116, scss/style.scss */
+/* line 1125, scss/style.scss */
 .message.erreur a {
   color: #7c3130;
 }
 
-/* line 1121, scss/style.scss */
+/* line 1130, scss/style.scss */
 .message.succes {
   color: #468847;
   background: #dff0d8;
   border: 2px solid #d6e9c6;
 }
-/* line 1126, scss/style.scss */
+/* line 1135, scss/style.scss */
 .message.succes a {
   color: #29502a;
 }
 
-/* line 1132, scss/style.scss */
+/* line 1141, scss/style.scss */
 .error404 p, .error404 .header-title {
   text-align: center;
   margin-bottom: 10px;
 }
 
-/* line 1136, scss/style.scss */
+/* line 1145, scss/style.scss */
 .error404 .header-title {
   font-size: 36px;
 }
