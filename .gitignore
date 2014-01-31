@@ -1,5 +1,4 @@
 scss/config/.sass-cache
-css/
 node_modules/
 
 #################
@@ -217,3 +216,7 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+scss/config/config.rb
+
+scss/config/config.rb

@@ -415,6 +415,10 @@ section.realisation .realisation-site{
 .temoignages .temoignage{
 	@extend .clearfix;
 	margin-left:33.3%;
+	
+	@include width-matches($breakpoint-mobile){
+		margin-left:0;
+	}
 }
 .temoignages .temoignage-headline{
 	color: $body-copy-color;
