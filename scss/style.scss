@@ -388,8 +388,16 @@ section.realisation .header-title{
 	margin-bottom: 10px;
 }
 
-section.realisation .flexslider{
-	margin: 0 auto 60px !important;
+section.realisation .flexslider {
+	margin:0 auto !important;
+}
+
+section.realisation .flex-viewport {
+	margin-bottom: 40px;
+}
+
+section.realisation .flex-control-nav{
+	bottom:-30px !important;
 }
 
 section.realisation .meta > *{
