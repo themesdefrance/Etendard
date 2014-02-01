@@ -5,9 +5,15 @@ require_once 'admin/widgets/newsletter.php';
 require_once 'admin/widgets/social.php';
 
 //Software licensing
-//define('EDD_SL_STORE_URL', 'https://www.themesdefrance.fr/');
-//define('EDD_SL_THEME_NAME', 'Etendard');
+define('EDD_SL_STORE_URL', 'https://www.themesdefrance.fr/');
+define('EDD_SL_THEME_NAME', 'Etendard');
+define('EDD_SL_LICENSE_KEY', 'etendard_license_edd');
 
+if(!class_exists('EDD_SL_Theme_Updater')){
+	include(dirname( __FILE__ ).'/admin/EDD_SL_Theme_Updater.php');
+}
+
+//Loading up OF
 if (!function_exists( 'optionsframework_init')){
 	define('OPTIONS_FRAMEWORK_DIRECTORY', get_bloginfo('template_directory').'/admin/options/');
 	require_once TEMPLATEPATH.'/admin/options/'.'options-framework.php';
@@ -15,7 +21,6 @@ if (!function_exists( 'optionsframework_init')){
 
 add_action('init', 'etendard_init_cpt');
 add_action('after_setup_theme', 'etendard_setup');
-add_action('admin_init', 'etendard_admin_init');
 add_action('widgets_init', 'etendard_widgets_init');
 add_action('add_meta_boxes', 'etendard_register_custom_fields');
 add_action('save_post', 'etendard_portfolio_save_custom');
@@ -48,14 +53,14 @@ if (!function_exists('etendard_setup')){
 		
 		add_theme_support('post-thumbnails');
 		
-		/*add_theme_support('post-formats', array(
-//			'chat', 
-			'image', 
-			'link', 
-			'quote', 
-//			'status', 
-			'video',
-		));*/
+//		add_theme_support('post-formats', array(
+////			'chat', 
+//			'image', 
+//			'link', 
+//			'quote', 
+////			'status', 
+//			'video',
+//		));
 		
 		add_image_size('etendard-portfolio-thumbnail', 301, 230, true);
 		add_image_size('etendard-blog-thumbnail', 225, 150, true);
@@ -141,6 +146,7 @@ if (!function_exists('etendard_admin_init')){
 		remove_meta_box('postcustom', 'service', 'normal');
 	}
 }
+add_action('admin_init', 'etendard_admin_init');
 
 if (!function_exists('etendard_admin_menu')){
 	function etendard_admin_menu(){
@@ -655,7 +661,6 @@ if(!function_exists('etendard_user_styles')){
 				.article .content a,
 				.article .header-meta a,
 				#comments a,
-				.sidebar .widget a,
 				.sidebar .widget_etendardnewsletter .form-email:before,
 				form.search-form .search-submit-wrapper:before,
 				a.more-link,
@@ -664,7 +669,8 @@ if(!function_exists('etendard_user_styles')){
 				.article .header-title a:hover,
 				.article.quote > blockquote cite,
 				.comment .comment-author a,
-				.main-footer a{
+				.main-footer a,
+				.sidebar .widget a:hover{
 					color: <?php echo $color; ?> !important;
 				}
 				
@@ -692,7 +698,7 @@ if(!function_exists('etendard_user_styles')){
 				}
 				
 				.article.teaser .header-title:hover:after,
-				.widget_etendardsocial li a:hover,
+				.sidebar .widget_etendardsocial li a:hover,
 				.cta-button:hover,
 				.contact-form .submit input:hover,
 				#commentform #submit:hover,
@@ -700,8 +706,12 @@ if(!function_exists('etendard_user_styles')){
 					background:#696969 !important;
 				}
 				form.search-form .search-submit-wrapper:hover:before,
-				div.pagination a:hover{
+				div.pagination a:hover,
+				.sidebar .widget a{
 					color:#696969 !important;
+				}
+				.sidebar .widget_etendardsocial li a:hover{
+					color:#fff !important;
 				}
 			</style>
 		<?php }
@@ -723,5 +733,37 @@ if(!function_exists('etendard_custom_styles')){
 add_action('wp_head', 'etendard_custom_styles', 99);
 
 
-
-
+if(!function_exists('etendard_edd')){
+	function etendard_edd(){
+		$license = trim(of_get_option(EDD_SL_LICENSE_KEY));
+		$status = get_option('etendard_license_status');
+		
+		if (!$status){
+			//valider la license
+			$api_params = array(
+				'edd_action' => 'activate_license',
+				'license' => $license,
+				'item_name' => urlencode( EDD_SL_THEME_NAME )
+			);
+	
+			$response = wp_remote_get( add_query_arg( $api_params, EDD_SL_STORE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
+	
+			if ( !is_wp_error( $response ) ){
+				$license_data = json_decode( wp_remote_retrieve_body( $response ) );
+				if ($license_data->license === 'valid') update_option( 'etendard_license_status', true );
+			}
+		}
+		
+//		// setup the updater
+		$theme = wp_get_theme();
+		$edd_updater = new EDD_SL_Theme_Updater(array( 
+				'remote_api_url'=> EDD_SL_STORE_URL,
+				'version' 	=> $theme['version'],
+				'license' 	=> $license,
+				'item_name' => EDD_SL_THEME_NAME,
+				'author'	=> 'Thèmes de France'
+			)
+		);
+	}
+}
+add_action('admin_init', 'etendard_edd');
