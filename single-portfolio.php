@@ -2,13 +2,14 @@
 <?php get_header(); ?>
 <?php while (have_posts()) : the_post();?>
 <section class="grid realisation article">
-	<div class="wrapper">
-		<h2 class="section-title">
-			<?php the_title(); ?>
-		</h2>
-	</div>
 	
 	<?php get_template_part('carousel'); ?>
+	
+	<div class="wrapper">
+		<h1 class="section-title">
+			<?php the_title(); ?>
+		</h1>
+	</div>
 	
 	<div class="wrapper">
 		<div class="col-1-3 meta">
@@ -46,7 +47,7 @@
 <section class="grid">
 	<div class="wrapper">
 		<ul class="temoignages">
-			<li class="temoignage col-2-3">
+			<li class="temoignage">
 				<div class="temoignage-photo-wrapper">
 					<?php if (!empty($portfolio_custom['etendard_portfolio_temoin_portrait'][0])): ?>
 					<img src="<?php echo $portfolio_custom['etendard_portfolio_temoin_portrait'][0]; ?>" class="temoignage-photo" />
