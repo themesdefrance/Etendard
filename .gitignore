@@ -211,12 +211,5 @@ pip-log.txt
 .coverage
 .tox
 
-#Translations
-*.mo
-
 #Mr Developer
 .mr.developer.cfg
-
-scss/config/config.rb
-
-scss/config/config.rb
