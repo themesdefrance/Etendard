@@ -60,7 +60,6 @@
 	</header>
 	
 	<div class="content">
-	
 		<?php if (is_single() || is_page()){
 		
 				the_content();

@@ -7,6 +7,7 @@ Template Name: Home
 
 <?php
 $display_blocks = of_get_option('etendard_blocks_presence');
+$display_blocks['content'] = true;
 //$ordre_blocks = array('titre'=>of_get_option('etendard_blocks_ordre_titre'), 
 //					  'slider'=>of_get_option('etendard_blocks_ordre_slider'),
 //					  'cta'=>of_get_option('etendard_blocks_ordre_cta'),
@@ -14,10 +15,11 @@ $display_blocks = of_get_option('etendard_blocks_presence');
 //					  'articles'=>of_get_option('etendard_blocks_ordre_articles'));
 $ordre_blocks = array('titre'=>0, 
 					  'slider'=>1,
-					  'cta'=>2,
-					  'services'=>3,
-					  'portfolio'=>4,
-					  'articles'=>5);
+					  'content'=>2,
+					  'cta'=>3,
+					  'services'=>4,
+					  'portfolio'=>5,
+					  'articles'=>6);
 asort($ordre_blocks);
 ?>
 
@@ -31,6 +33,9 @@ foreach ($ordre_blocks as $block=>$ordre){
 			break;
 		case 'slider':
 			get_template_part('home_elements/slider');
+			break;
+		case 'content':
+			get_template_part('home_elements/content');
 			break;
 		case 'services':
 			get_template_part('home_elements/services');
