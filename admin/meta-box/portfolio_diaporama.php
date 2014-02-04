@@ -20,7 +20,7 @@ jQuery(function($){
 			if (_custom_media){
 				button.prev().val(attachment.url);
 				$('.etendard_diaporama_one').first().clone().appendTo('.etendard_diaporama_form');
-				$('.etendard_diaporama_one').last().find('[type="text"]').val('');
+				$('.etendard_diaporama_one').last().find('input[type="text"], input[type="url"]').val('');
 				$('.etendard_diaporama_one').last().find('a.delete').remove();
 			}
 			else{
