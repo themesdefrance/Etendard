@@ -1,10 +1,6 @@
 <?php get_header(); ?>
 <section class="blog grid">
 	<div class="wrapper">
-		<h2 class="section-title">
-			<?php _e('Blog', TEXT_TRANSLATION_DOMAIN); ?>
-		</h2>
-		
 		<?php if (of_get_option('etendard_sidebar_position') === 'gauche'): ?>
 		<div class="sidebar col-1-3">
 			<?php get_sidebar('blog'); ?>
