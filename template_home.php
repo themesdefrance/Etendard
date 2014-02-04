@@ -14,7 +14,7 @@ $display_blocks['content'] = true;
 //					  'portfolio'=>of_get_option('etendard_blocks_ordre_portfolio'),
 //					  'articles'=>of_get_option('etendard_blocks_ordre_articles'));
 $ordre_blocks = array('titre'=>0, 
-					  'slider'=>1,
+					  'diaporama'=>1,
 					  'content'=>2,
 					  'cta'=>3,
 					  'services'=>4,
@@ -31,8 +31,8 @@ foreach ($ordre_blocks as $block=>$ordre){
 		case 'titre':
 			get_template_part('home_elements/titre');
 			break;
-		case 'slider':
-			get_template_part('home_elements/slider');
+		case 'diaporama':
+			get_template_part('home_elements/diaporama');
 			break;
 		case 'content':
 			get_template_part('home_elements/content');

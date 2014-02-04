@@ -3,7 +3,7 @@
 <?php while (have_posts()) : the_post();?>
 <section class="grid realisation article">
 	
-	<?php get_template_part('carousel'); ?>
+	<?php get_template_part('diaporama'); ?>
 	
 	<div class="wrapper">
 		<h1 class="section-title">

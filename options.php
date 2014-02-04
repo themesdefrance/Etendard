@@ -22,50 +22,21 @@ function optionsframework_options() {
 						'type'=> 'multicheck',
 						'options'=>array(
 							'titre'=>__('Titre et slogan', TEXT_TRANSLATION_DOMAIN),
-							'slider'=>__('Slider', TEXT_TRANSLATION_DOMAIN),
-							'cta'=>__('Appel à l\'action', TEXT_TRANSLATION_DOMAIN),
+							'diaporama'=>__('Diaporama', TEXT_TRANSLATION_DOMAIN),
+							'cta'=>__("Appel à l'action", TEXT_TRANSLATION_DOMAIN),
 							'services'=>__('Liste de vos services', TEXT_TRANSLATION_DOMAIN),
 							'portfolio'=>__('Derniers éléments du portfolio', TEXT_TRANSLATION_DOMAIN),
 							'articles'=>__('Derniers articles', TEXT_TRANSLATION_DOMAIN),
 						),
 						'std'=>array(
 							'titre'=>true,
-							'slider'=>true,
+							'diaporama'=>true,
 							'cta'=>true,
 							'services'=>true,
 							'portfolio'=>true,
 							'articles'=>true,
 						),
-						'desc'=>'Pour paramétrer le titre et le slogan rendez-vous dans <a href="'.home_url().'/wp-admin/options-general.php" target="_blank" >Réglages > Général</a>. Concernant le slider et l\'appel à l\'action, vous pourrez les paramétrer en éditant la page d\'accueil.');
-						
-						
-//	$options[] = array(	'desc'=> __("Configurez l'ordre d'apparition des éléments", TEXT_TRANSLATION_DOMAIN),
-//						'type'=> 'info');
-//						
-//	$options[] = array( 'desc'=> __("Titre & Description", TEXT_TRANSLATION_DOMAIN),
-//						'id'=> 'etendard_blocks_ordre_titre',
-//						'std'=>10,
-//						'type'=> 'text');
-//						
-//	$options[] = array( 'desc'=> __("Slider", TEXT_TRANSLATION_DOMAIN),
-//						'id'=> 'etendard_blocks_ordre_slider',
-//						'std'=>20,
-//						'type'=> 'text');
-//						
-//	$options[] = array( 'desc'=> __("Call to action", TEXT_TRANSLATION_DOMAIN),
-//						'id'=> 'etendard_blocks_ordre_cta',
-//						'std'=>30,
-//						'type'=> 'text');
-//						
-//	$options[] = array( 'desc'=> __("Portfolio", TEXT_TRANSLATION_DOMAIN),
-//						'id'=> 'etendard_blocks_ordre_portfolio',
-//						'std'=>40,
-//						'type'=> 'text');
-//						
-//	$options[] = array( 'desc'=> __("Articles de blog", TEXT_TRANSLATION_DOMAIN),
-//						'id'=> 'etendard_blocks_ordre_articles',
-//						'std'=>50,
-//						'type'=> 'text');
+						'desc'=>'Pour paramétrer le titre et le slogan rendez-vous dans <a href="'.home_url().'/wp-admin/options-general.php" target="_blank" >Réglages > Général</a>. Concernant le diaporama et l\'appel à l\'action, vous pourrez les paramétrer en éditant la page d\'accueil.');
 						
 						
 	$options[] = array(	'name'=> __('Pied de page', TEXT_TRANSLATION_DOMAIN),
