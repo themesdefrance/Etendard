@@ -2,7 +2,7 @@
 <section class="blog grid">
 	<div class="wrapper">
 		<h1 class="section-title">
-			<?php single_cat_title(_e('Articles classés dans ', TEXT_TRANSLATION_DOMAIN)); ?>
+			<?php printf( __( 'Résultats de recherche pour : %s', TEXT_TRANSLATION_DOMAIN ), get_search_query() ); ?>
 		</h1>
 		
 		<?php if (of_get_option('etendard_sidebar_position') === 'gauche'): ?>

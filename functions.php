@@ -661,7 +661,6 @@ if(!function_exists('etendard_user_styles')){
 				.article .content a,
 				.article .header-meta a,
 				#comments a,
-				.sidebar .widget a,
 				.sidebar .widget_etendardnewsletter .form-email:before,
 				form.search-form .search-submit-wrapper:before,
 				a.more-link,
@@ -670,7 +669,8 @@ if(!function_exists('etendard_user_styles')){
 				.article .header-title a:hover,
 				.article.quote > blockquote cite,
 				.comment .comment-author a,
-				.main-footer a{
+				.main-footer a,
+				.sidebar .widget a:hover{
 					color: <?php echo $color; ?> !important;
 				}
 				
@@ -698,7 +698,7 @@ if(!function_exists('etendard_user_styles')){
 				}
 				
 				.article.teaser .header-title:hover:after,
-				.widget_etendardsocial li a:hover,
+				.sidebar .widget_etendardsocial li a:hover,
 				.cta-button:hover,
 				.contact-form .submit input:hover,
 				#commentform #submit:hover,
@@ -706,8 +706,12 @@ if(!function_exists('etendard_user_styles')){
 					background:#696969 !important;
 				}
 				form.search-form .search-submit-wrapper:hover:before,
-				div.pagination a:hover{
+				div.pagination a:hover,
+				.sidebar .widget a{
 					color:#696969 !important;
+				}
+				.sidebar .widget_etendardsocial li a:hover{
+					color:#fff !important;
 				}
 			</style>
 		<?php }
