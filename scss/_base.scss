@@ -118,7 +118,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-mail:before, .icon-search:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, .icon-soundcloud:before, .icon-pinterest:before, .icon-instagram:before, .icon-viadeo:before, .icon-play:before {
+.icon-mail:before, .icon-search:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, .icon-soundcloud:before, .icon-pinterest:before, .icon-instagram:before, .icon-viadeo:before, .icon-play:before, .icon-ellipsis:before, .icon-plus:before {
 	@extend %iconfont;
 }
 .icon-mail:before {
@@ -157,12 +157,18 @@ you can use the generic selector below, but it's slower:
 .icon-instagram:before {
 	content: "\e60b";
 }
-.icon-youtube:before {
-	content: "\e60c";
-}
-.icon-viadeo:before {
-	content: "\e60d";
-}
 .icon-play:before {
 	content: "\e60e";
 }
+.icon-ellipsis:before {
+	content: "\e60f";
+}
+.icon-youtube:before {
+	content: "\e60c";
+}
+.icon-plus:before {
+	content: "\e610";
+}
+.icon-viadeo:before {
+	content: "\e60d";
+} 
