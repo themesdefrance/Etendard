@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Options Framework Plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-22 19:13-0300\n"
-"PO-Revision-Date: 2013-03-28 13:13+0100\n"
+"PO-Revision-Date: 2014-02-06 16:23+0100\n"
 "Last-Translator: MBA Multimedia <mbamultimedia@gmail.com>\n"
 "Language-Team: Julien LE THUAUT <julien.le.thuaut@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -58,7 +58,7 @@ msgstr "Conteneur interne de l'Options Framework"
 
 #: options-medialibrary-uploader.php:128
 msgid "Upload"
-msgstr "Upload"
+msgstr "Envoyer"
 
 #: options-medialibrary-uploader.php:151
 msgid "View File"
@@ -70,7 +70,7 @@ msgstr "Galerie"
 
 #: options-medialibrary-uploader.php:288
 msgid "Previously Uploaded"
-msgstr "Uploadé précédemment"
+msgstr "Précédemment envoyé"
 
 #: options-sanitize.php:232
 msgid "No Repeat"
