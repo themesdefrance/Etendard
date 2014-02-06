@@ -10,7 +10,7 @@ function optionsframework_options() {
 	$options[] = array(	'name'=> __("Licence", TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'info');
 						
-	$options[] = array( 'desc'=> __("Numéro de licence", TEXT_TRANSLATION_DOMAIN),
+	$options[] = array( 'desc'=> __("Entrez la licence pour qu'Étendard puisse recevoir les mises à jour. Vous pourrez la trouver dans l'email que nous vous avons envoyé suite à votre commande.", TEXT_TRANSLATION_DOMAIN),
 						'id'=> EDD_SL_LICENSE_KEY,
 						'type'=> 'text');
 						

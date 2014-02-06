@@ -771,9 +771,9 @@ add_action('admin_init', 'etendard_edd');
 if(!function_exists('etendard_admin_notice')){
 	function etendard_admin_notice(){
 		if(!get_option('etendard_license_status')){
-			echo '<div class="error">';
-			_e("Etendard ne dispose pas d'une licence valide sur cette installation.", TEXT_TRANSLATION_DOMAIN);
-			echo '</div>';
+			echo '<div class="error"><p>';
+			_e("Afin de pouvoir bénéficier des mises à jour et du support, veuillez renseigner votre numéro de licence. Vous avez dû le recevoir par email.", TEXT_TRANSLATION_DOMAIN);
+			echo '</p></div>';
 		}
 	}
 }
