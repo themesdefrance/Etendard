@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Options Framework Plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-22 19:13-0300\n"
-"PO-Revision-Date: 2014-02-06 16:23+0100\n"
+"PO-Revision-Date: 2014-02-06 17:17+0100\n"
 "Last-Translator: MBA Multimedia <mbamultimedia@gmail.com>\n"
 "Language-Team: Julien LE THUAUT <julien.le.thuaut@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -32,7 +32,7 @@ msgstr "Options du thème"
 
 #: options-framework.php:323
 msgid "Save Options"
-msgstr "Sauvegarder options"
+msgstr "Sauvegarder les options"
 
 #: options-framework.php:324
 msgid "Restore Defaults"
