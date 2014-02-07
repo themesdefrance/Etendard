@@ -8,7 +8,7 @@ $cta_bouton = get_post_meta($post->ID, 'etendard_home_cta_bouton', true);
 	<tr>
 		<th scope="row">
 			<label for="etendard_home_cta_url">
-				<span><?php _e("Destination du call to action"); ?></span>:
+				<span><?php _e("Destination de l'appel à l'action (lien)"); ?></span>:
 			</label>
 		</th>
 		<td>

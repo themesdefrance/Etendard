@@ -212,7 +212,7 @@ if (!function_exists('etendard_register_custom_fields')){
 			$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
 			if ($template_file == 'template_home.php'){
 				add_meta_box('etendard_home_cta',
-							 __('Call To Action', TEXT_TRANSLATION_DOMAIN),
+							 __('Appel à l\'action', TEXT_TRANSLATION_DOMAIN),
 							 'etendard_home_cta',
 							 'page',
 							 'normal',
