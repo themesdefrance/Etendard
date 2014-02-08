@@ -8,11 +8,6 @@ Template Name: Accueil
 <?php
 $display_blocks = of_get_option('etendard_blocks_presence');
 $display_blocks['content'] = true;
-//$ordre_blocks = array('titre'=>of_get_option('etendard_blocks_ordre_titre'), 
-//					  'slider'=>of_get_option('etendard_blocks_ordre_slider'),
-//					  'cta'=>of_get_option('etendard_blocks_ordre_cta'),
-//					  'portfolio'=>of_get_option('etendard_blocks_ordre_portfolio'),
-//					  'articles'=>of_get_option('etendard_blocks_ordre_articles'));
 $ordre_blocks = array('titre'=>0, 
 					  'diaporama'=>1,
 					  'content'=>2,

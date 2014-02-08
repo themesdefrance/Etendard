@@ -1,1 +1,2 @@
-<?php dynamic_sidebar('blog'); ?>
+<?php 
+dynamic_sidebar('blog');

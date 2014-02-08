@@ -18,9 +18,6 @@
 	
 	<meta name="viewport" content="width=device-width">
 	
-	<!-- Candy -->
-	<link rel="dns-prefetch" href="//ajax.googleapis.com" />
-	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	
 	<!-- Scripts that need to be loaded first -->

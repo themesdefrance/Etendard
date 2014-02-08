@@ -3,6 +3,7 @@ $texte = $url = $bouton = '';
 $template = explode('/', get_page_template());
 $template = $template[count($template)-1];
 
+//variables globales ou de page?
 if ($template === 'template_home.php'){
 	$custom = get_post_custom();
 	
