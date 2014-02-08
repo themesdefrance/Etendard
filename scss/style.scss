@@ -268,7 +268,22 @@ section.cta .cta-button:after,
 
 //portfolio
 ul.portfolio{
-	margin: 20px 0;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: - $grid-gutters !important;
+}
+ul.portfolio .creation{
+	width: 33%;
+	display: inline-block;
+	vertical-align: top;
+	padding-right: $grid-gutters;
+	margin-right:-4px;
+	
+	@include width-below($grid-collapse-below){
+		display: block;
+		width: 100%;
+		margin-right: 0;
+	}
 }
 ul.portfolio .creation a{
 	text-decoration: none;
