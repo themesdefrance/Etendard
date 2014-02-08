@@ -3,12 +3,12 @@
 Template Name: Portfolio
 */
 ?>
+<?php get_header(); ?>
 <?php 
 $terms = get_terms('portfolio_categorie');
 
 global $wp_query;
 
-$query = $wp_query;
 if (is_tax('portfolio_categorie') || is_post_type_archive('portfolio')) $query = $wp_query;
 else{
 	$args = array(
@@ -20,8 +20,6 @@ else{
 	$query = new WP_Query($args);
 }
 ?>
-<?php get_header(); ?>
-
 <section class="portfolio">
 	<div class="wrapper">
 		<?php if (count($terms) > 0): ?> 
@@ -82,5 +80,6 @@ else{
 		</ul>
 	</div>
 </section>
+<?php wp_reset_postdata(); ?>
 
 <?php get_footer(); ?>
