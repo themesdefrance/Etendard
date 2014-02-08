@@ -1,10 +1,11 @@
 <?php
 define('TEXT_TRANSLATION_DOMAIN', 'etendard');
-				
-require_once 'admin/widgets/newsletter.php';
+			
+//chargement des widgets	
+//require_once 'admin/widgets/newsletter.php';
 require_once 'admin/widgets/social.php';
 
-//Software licensing
+//chargement du gestionnaire de licenses
 define('EDD_SL_STORE_URL', 'https://www.themesdefrance.fr/');
 define('EDD_SL_THEME_NAME', 'Etendard');
 define('EDD_SL_LICENSE_KEY', 'etendard_license_edd');
@@ -13,19 +14,13 @@ if(!class_exists('EDD_SL_Theme_Updater')){
 	include(dirname( __FILE__ ).'/admin/EDD_SL_Theme_Updater.php');
 }
 
-//Loading up OF
+//chargement d'OF
 if (!function_exists( 'optionsframework_init')){
 	define('OPTIONS_FRAMEWORK_DIRECTORY', get_bloginfo('template_directory').'/admin/options/');
 	require_once TEMPLATEPATH.'/admin/options/'.'options-framework.php';
 }
 
-add_action('init', 'etendard_init_cpt');
-add_action('after_setup_theme', 'etendard_setup');
-add_action('widgets_init', 'etendard_widgets_init');
-add_action('add_meta_boxes', 'etendard_register_custom_fields');
-add_action('save_post', 'etendard_portfolio_save_custom');
-add_action('save_post', 'etendard_home_save_custom');
-
+//setup du theme
 if (!function_exists('etendard_setup')){
 	function etendard_setup(){
 		register_nav_menu('primary', __('Menu principal', TEXT_TRANSLATION_DOMAIN));
@@ -68,7 +63,9 @@ if (!function_exists('etendard_setup')){
 	//	load_theme_textdomain(TEXT_TRANSLATION_DOMAIN, get_template_directory().'/local');
 	}
 }
+add_action('after_setup_theme', 'etendard_setup');
 
+//declaration des CPT
 if (!function_exists('etendard_init_cpt')){
 	function etendard_init_cpt(){
 		//portfolio
@@ -111,7 +108,9 @@ if (!function_exists('etendard_init_cpt')){
 		));
 	}
 }
+add_action('init', 'etendard_init_cpt');
 
+//ajout des scripts & styles
 if (!function_exists('etendard_enqueue')){
 	function etendard_enqueue(){
 		$theme = wp_get_theme();
@@ -140,6 +139,7 @@ if (!function_exists('etendard_enqueue')){
 }
 add_action('wp_enqueue_scripts', 'etendard_enqueue');
 
+//parametrage de l'administration
 if (!function_exists('etendard_admin_init')){
 	function etendard_admin_init(){
 //		remove_meta_box('postcustom', 'portfolio', 'normal');
@@ -148,12 +148,7 @@ if (!function_exists('etendard_admin_init')){
 }
 add_action('admin_init', 'etendard_admin_init');
 
-if (!function_exists('etendard_admin_menu')){
-	function etendard_admin_menu(){
-		add_theme_page('Options Étendard', 'Options Étendard', 'edit_theme_options', 'etendard-options', 'etendard_options');
-	}
-}
-
+//ajout de la page d'admin etendard
 if (!function_exists('etendard_optionsframework_menu')){
 	function etendard_optionsframework_menu($menu){
 		$menu['page_title'] = __('Options Étendard');
@@ -163,23 +158,32 @@ if (!function_exists('etendard_optionsframework_menu')){
 }
 add_filter('optionsframework_menu', 'etendard_optionsframework_menu');
 
-if (!function_exists('etendard_options')){
-	function etendard_options(){
-		if (!current_user_can('edit_theme_options')) {
-			wp_die(__('You do not have sufficient permissions to access this page.'));
-		}
-		
-		require 'admin/index.php';
-	}
-}
+//if (!function_exists('etendard_admin_menu')){
+//	function etendard_admin_menu(){
+//		add_theme_page('Options Étendard', 'Options Étendard', 'edit_theme_options', 'etendard-options', 'etendard_options');
+//	}
+//}
+//
+//if (!function_exists('etendard_options')){
+//	function etendard_options(){
+//		if (!current_user_can('edit_theme_options')) {
+//			wp_die(__('You do not have sufficient permissions to access this page.'));
+//		}
+//		
+//		require 'admin/index.php';
+//	}
+//}
 
+//initialisation des widgets
 if (!function_exists('etendard_widgets_init')){
 	function etendard_widgets_init(){
 //		register_widget('EtendardNewsletter');
 		register_widget('EtendardSocial');
 	}
 }
+add_action('widgets_init', 'etendard_widgets_init');
 
+//initialisation des customfields
 if (!function_exists('etendard_register_custom_fields')){
 	function etendard_register_custom_fields(){
 		add_meta_box('etendard_portfolio_client',
@@ -206,10 +210,11 @@ if (!function_exists('etendard_register_custom_fields')){
 					 'high'
 		);
 		
-		//cta box pour template homepage
+		//Metabox spéciales pour le template Accueil
 		if (isset($_GET['post']) || isset($_POST['post_ID'])){
 			$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
 			$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
+			
 			if ($template_file == 'template_home.php'){
 				add_meta_box('etendard_home_cta',
 							 __('Appel à l\'action', TEXT_TRANSLATION_DOMAIN),
@@ -233,7 +238,9 @@ if (!function_exists('etendard_register_custom_fields')){
 		}
 	}
 }
+add_action('add_meta_boxes', 'etendard_register_custom_fields');
 
+//Metabox individuelles
 if (!function_exists('etendard_portfolio_client')){
 	function etendard_portfolio_client($post){
 		require 'admin/meta-box/portfolio_client.php';
@@ -258,6 +265,7 @@ if (!function_exists('etendard_home_cta')){
 	}
 }
 
+//sauveragde des metabox du template portfolio
 if (!function_exists('etendard_portfolio_save_custom')){
 	function etendard_portfolio_save_custom($post_id){
 		if (!isset($_POST['etendard_portfolio_nonce'])) return $post_id;
@@ -276,8 +284,6 @@ if (!function_exists('etendard_portfolio_save_custom')){
 		}
 		
 		$client = sanitize_text_field($_POST['etendard_portfolio_client']);
-//		$date = sanitize_text_field($_POST['etendard_portfolio_date']);
-//		$role = sanitize_text_field($_POST['etendard_portfolio_role']);
 		$url = sanitize_text_field($_POST['etendard_portfolio_url']);
 		$temoin = sanitize_text_field($_POST['etendard_portfolio_temoin_nom']);
 		$texte = sanitize_text_field($_POST['etendard_portfolio_temoin_texte']);
@@ -289,8 +295,6 @@ if (!function_exists('etendard_portfolio_save_custom')){
 		}
 	
 		update_post_meta($post_id, 'etendard_portfolio_client', $client);
-//		update_post_meta($post_id, 'etendard_portfolio_date', $date);
-//		update_post_meta($post_id, 'etendard_portfolio_role', $role);
 		update_post_meta($post_id, 'etendard_portfolio_url', $url);
 		update_post_meta($post_id, 'etendard_portfolio_temoin_nom', $temoin);
 		update_post_meta($post_id, 'etendard_portfolio_temoin_texte', $texte);
@@ -299,7 +303,9 @@ if (!function_exists('etendard_portfolio_save_custom')){
 		update_post_meta($post_id, 'etendard_portfolio_diaporama_lien', $diaporama_liens);
 	}
 }
+add_action('save_post', 'etendard_portfolio_save_custom');
 
+//sauveragde des metabox du template accueil
 if (!function_exists('etendard_home_save_custom')){
 	function etendard_home_save_custom($post_id){
 		if (!isset($_POST['etendard_home_nonce'])) return $post_id;
@@ -333,8 +339,9 @@ if (!function_exists('etendard_home_save_custom')){
 		update_post_meta($post_id, 'etendard_portfolio_diaporama_lien', $diaporama_liens);
 	}
 }
+add_action('save_post', 'etendard_home_save_custom');
 
-//fonctions persos
+//supprimmes les tailles forcées des thumbnails
 if (!function_exists('etendard_strip_img_sizes')){
 	//enleve les attributs width et height des images
 	function etendard_strip_img_sizes($img){
@@ -345,6 +352,7 @@ if (!function_exists('etendard_strip_img_sizes')){
 add_filter('get_avatar', 'etendard_strip_img_sizes');
 add_filter('post_thumbnail_html', 'etendard_strip_img_sizes');
 
+//fonction de pagination
 if (!function_exists('etendard_posts_nav')){
 	//derived from http://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/
 	/**
@@ -419,6 +427,7 @@ if (!function_exists('etendard_posts_nav')){
 	}
 }
 
+//affichage descommentaires
 //borrowed from http://themeshaper.com/2012/11/04/the-wordpress-theme-comments-template/
 if (!function_exists('etendard_comment')){
 	function etendard_comment($comment, $args, $depth){
@@ -479,6 +488,7 @@ if (!function_exists('etendard_portfolio_page_link')){
 			'meta_key'=>'_wp_page_template',
 			'meta_value'=>'template-portfolio.php'
 		));
+		
 		if (count($portfolio_pages) > 0) return get_page_link($portfolio_pages[0]->ID);
 		else return get_post_type_archive_link('portfolio');
 	}
@@ -489,13 +499,13 @@ if (!function_exists('etendard_custom_excerpt_length')){
 	function etendard_custom_excerpt_length( $length ) {
 		return 20;
 	}
-	add_filter( 'excerpt_length', 'etendard_custom_excerpt_length', 999 );
+	add_filter('excerpt_length', 'etendard_custom_excerpt_length', 999);
 }
 
 // Suppression du [...] des extraits
 if (!function_exists('etendard_new_excerpt_more')){
 	function etendard_new_excerpt_more( $more ) {
-		return '...';
+		return '…';
 	}
 	add_filter('excerpt_more', 'etendard_new_excerpt_more');
 }
@@ -511,80 +521,63 @@ if (!function_exists('etendard_button')){
 		if($atts['autrefenetre']==1){
 			$autrefenetre='target="_blank"';
 		}
-		return '<a href="'.$atts['lien'].'" class="bouton" '.$autrefenetre.'>' . $content . '</a>';
+		return '<a href="'.$atts['lien'].'" class="bouton" '.$autrefenetre.'>'.$content.'</a>';
 	}
-	add_shortcode( 'bouton', 'etendard_button' );
+	add_shortcode('bouton', 'etendard_button');
 }
 
 // Colonnes
+if (!function_exists('etendard_shortcode_colonne')){
+	function etendard_shortcode_colonne($class, $atts, $content){
+		$premier = (isset($atts[0]) && trim($atts[0]) == 'premier') ? ' premier' : '';
+		$res = '<div class="'.$class.$premier.'">';
+		$res .= do_shortcode(wpautop($content));
+		$res .= '</div>';
+		return $res;
+	}
+}
 
 // 1/2
 if (!function_exists('etendard_un_demi')){
 	function etendard_un_demi($atts, $content=null){
-		$premier='';
-		if (isset($atts[0]) && trim($atts[0]) == 'premier') {$premier = ' premier';}
-		$res = '<div class="un_demi'.$premier.'">';
-		$res.= do_shortcode(wpautop($content));
-		$res.='</div>';
-		return $res;
+		return etendard_shortcode_colonne('un_demi', $atts, $content);
 	}
-	add_shortcode( 'un_demi', 'etendard_un_demi' );
+	add_shortcode('un_demi', 'etendard_un_demi');
 }
 
 // 1/3
 if (!function_exists('etendard_un_tiers')){
 	function etendard_un_tiers($atts, $content=null){
-		$premier='';
-		if (isset($atts[0]) && trim($atts[0]) == 'premier') {$premier = ' premier';}
-		$res = '<div class="un_tiers'.$premier.'">';
-		$res.= do_shortcode(wpautop($content));
-		$res.= '</div>';
-		return $res;
+		return etendard_shortcode_colonne('un_tiers', $atts, $content);
 	}
-	add_shortcode( 'un_tiers', 'etendard_un_tiers' );
+	add_shortcode('un_tiers', 'etendard_un_tiers');
 }
 
 // 1/4
 if (!function_exists('etendard_un_quart')){
 	function etendard_un_quart($atts, $content=null){
-		$premier='';
-		if (isset($atts[0]) && trim($atts[0]) == 'premier') {$premier = ' premier';}
-		$res = '<div class="un_quart'.$premier.'">';
-		$res.= do_shortcode(wpautop($content));
-		$res.= '</div>';
-		return $res;
+		return etendard_shortcode_colonne('un_quart', $atts, $content);
 	}
-	add_shortcode( 'un_quart', 'etendard_un_quart' );
+	add_shortcode('un_quart', 'etendard_un_quart');
 }
 
 // 2/3
 if (!function_exists('etendard_deux_tiers')){
 	function etendard_deux_tiers($atts, $content=null){
-		$premier='';
-		if (isset($atts[0]) && trim($atts[0]) == 'premier') {$premier = ' premier';}
-		$res = '<div class="deux_tiers'.$premier.'">';
-		$res.= do_shortcode(wpautop($content));
-		$res.= '</div>';
-		return $res;
+		return etendard_shortcode_colonne('deux_tiers', $atts, $content);
 	}
-	add_shortcode( 'deux_tiers', 'etendard_deux_tiers' );
+	add_shortcode('deux_tiers', 'etendard_deux_tiers');
 }
 
 // 3/4
 if (!function_exists('etendard_trois_quarts')){
 	function etendard_trois_quarts($atts, $content=null){
-		$premier='';
-		if (isset($atts[0]) && trim($atts[0]) == 'premier') {$premier = ' premier';}
-		$res = '<div class="trois_quarts'.$premier.'">';
-		$res.= do_shortcode(wpautop($content));
-		$res.= '</div>';
-		return $res;
+		return etendard_shortcode_colonne('trois_quarts', $atts, $content);
 	}
-	add_shortcode( 'trois_quarts', 'etendard_trois_quarts' );
+	add_shortcode('trois_quarts', 'etendard_trois_quarts');
 }
 
 // Messages
-
 // Info
 if (!function_exists('etendard_message_info')){
 	function etendard_message_info($atts, $content=null){
@@ -597,36 +590,36 @@ if (!function_exists('etendard_message_info')){
 }
 
 // Alerte
-if (!function_exists('etendard_message_alerte')){
-	function etendard_message_alerte($atts, $content=null){
-		$res = '<div class="message alerte">';
-		$res.= wpautop($content);
-		$res.= '</div>';
+if (!function_exists('etendard_message')){
+	function etendard_message($class, $content){
+		$res = '<div class="message '.$class.'">';
+		$res .= wpautop($content);
+		$res .= '</div>';
 		return $res;
 	}
-	add_shortcode( 'alerte', 'etendard_message_alerte' );
+}
+
+if (!function_exists('etendard_message_alerte')){
+	function etendard_message_alerte($atts, $content=null){
+		return etendard_message('alerte', $content);
+	}
+	add_shortcode('alerte', 'etendard_message_alerte');
 }
 
 // Erreur
 if (!function_exists('etendard_message_erreur')){
 	function etendard_message_erreur($atts, $content=null){
-		$res = '<div class="message erreur">';
-		$res.= wpautop($content);
-		$res.= '</div>';
-		return $res;
+		return etendard_message('erreur', $content);
 	}
-	add_shortcode( 'erreur', 'etendard_message_erreur' );
+	add_shortcode('erreur', 'etendard_message_erreur');
 }
 
 // Succès
 if (!function_exists('etendard_message_succes')){
 	function etendard_message_succes($atts, $content=null){
-		$res = '<div class="message succes">';
-		$res.= wpautop($content);
-		$res.= '</div>';
-		return $res;
+		return etendard_message('succes', $content);
 	}
-	add_shortcode( 'succes', 'etendard_message_succes' );
+	add_shortcode('succes', 'etendard_message_succes');
 }
 
 // Appel à l'action
@@ -642,7 +635,7 @@ if (!function_exists('etendard_appel_action')){
 						</div>
 				</div>';
 	}
-	add_shortcode( 'appel_action', 'etendard_appel_action' );
+	add_shortcode('appel_action', 'etendard_appel_action');
 }
 
 
@@ -650,7 +643,7 @@ if (!function_exists('etendard_appel_action')){
 // Styles Personnalisés
 ////////////////////////////////////
 
-// Chargements des styles utilisateurs
+//Couleur dominante
 if(!function_exists('etendard_user_styles')){
 	function etendard_user_styles(){
 		if (of_get_option("etendard_color")){
@@ -732,7 +725,9 @@ if(!function_exists('etendard_custom_styles')){
 }
 add_action('wp_head', 'etendard_custom_styles', 99);
 
-
+//Activation de license
+//On est sympa, on vous bloque pas le thème s'il n'y a pas de license valide 
+//et l'activation n'est pas très dure à contourner. Soyez bon joueurs et achetez-le :)
 if(!function_exists('etendard_edd')){
 	function etendard_edd(){
 		$license = trim(of_get_option(EDD_SL_LICENSE_KEY));
@@ -741,20 +736,19 @@ if(!function_exists('etendard_edd')){
 		if (!$status){
 			//valider la license
 			$api_params = array(
-				'edd_action' => 'activate_license',
-				'license' => $license,
-				'item_name' => urlencode( EDD_SL_THEME_NAME )
+				'edd_action'=>'activate_license',
+				'license'=>$license,
+				'item_name'=>urlencode(EDD_SL_THEME_NAME)
 			);
 	
-			$response = wp_remote_get( add_query_arg( $api_params, EDD_SL_STORE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
+			$response = wp_remote_get(add_query_arg($api_params, EDD_SL_STORE_URL), array('timeout'=>15, 'sslverify'=>false));
 	
-			if ( !is_wp_error( $response ) ){
-				$license_data = json_decode( wp_remote_retrieve_body( $response ) );
-				if ($license_data->license === 'valid') update_option( 'etendard_license_status', true );
+			if (!is_wp_error($response)){
+				$license_data = json_decode(wp_remote_retrieve_body($response));
+				if ($license_data->license === 'valid') update_option('etendard_license_status', true);
 			}
 		}
 		
-//		// setup the updater
 		$theme = wp_get_theme();
 		$edd_updater = new EDD_SL_Theme_Updater(array( 
 				'remote_api_url'=> EDD_SL_STORE_URL,
@@ -768,6 +762,7 @@ if(!function_exists('etendard_edd')){
 }
 add_action('admin_init', 'etendard_edd');
 
+//Notification de license
 if(!function_exists('etendard_admin_notice')){
 	function etendard_admin_notice(){
 		if(!get_option('etendard_license_status')){
