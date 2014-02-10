@@ -518,7 +518,7 @@ if (!function_exists('etendard_new_excerpt_more')){
 if (!function_exists('etendard_button')){
 	function etendard_button($atts, $content=null){
 		$autrefenetre='';
-		if($atts['autrefenetre']==1){
+		if(isset($atts['autrefenetre']) && $atts['autrefenetre']=='OUI'){
 			$autrefenetre='target="_blank"';
 		}
 		return '<a href="'.$atts['lien'].'" class="bouton" '.$autrefenetre.'>'.$content.'</a>';
