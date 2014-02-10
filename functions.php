@@ -676,7 +676,7 @@ if(!function_exists('etendard_user_styles')){
 				section.portfolio nav.categories a.active,
 				.sidebar .widget_etendardnewsletter input[type="submit"],
 				.sidebar .widget_etendardsocial li a,
-				.cta-button,
+				.embedcta .button-wrapper .cta-button,
 				.contact-form .submit input,
 				a.bouton.lirelasuite{
 					background: <?php echo $color; ?> !important;
@@ -692,7 +692,7 @@ if(!function_exists('etendard_user_styles')){
 				
 				.article.teaser .header-title:hover:after,
 				.sidebar .widget_etendardsocial li a:hover,
-				.cta-button:hover,
+				.embedcta .button-wrapper .cta-button:hover,
 				.contact-form .submit input:hover,
 				#commentform #submit:hover,
 				a.bouton.lirelasuite:hover{
