@@ -203,7 +203,7 @@ if (!function_exists('etendard_register_custom_fields')){
 		);
 		
 		add_meta_box('etandard_portfolio_diaporama',
-					 __('Siaporama', TEXT_TRANSLATION_DOMAIN),
+					 __('Diaporama', TEXT_TRANSLATION_DOMAIN),
 					 'etendard_portfolio_diaporama',
 					 'portfolio',
 					 'normal',
