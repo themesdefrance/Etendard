@@ -55,7 +55,7 @@ jQuery(function($){
 	<tr>
 		<th scope="row">
 			<label for="etendard_portfolio_temoin_portrait">
-				<span><?php _e('Portrait', TEXT_TRANSLATION_DOMAIN); ?></span>:
+				<span><?php _e('Portrait (taille optimale de 172x115 pixels)', TEXT_TRANSLATION_DOMAIN); ?></span>:
 			</label>
 		</th>
 		<td>
