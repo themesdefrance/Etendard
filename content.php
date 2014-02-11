@@ -25,11 +25,15 @@
 		
 		<?php if (is_single() || is_page()){ ?>
 		
-			<h1 class="header-title">
+			<?php if(!is_page_template('template_home.php')){ ?>
 			
-				<?php the_title(); ?>
+				<h1 class="header-title">
 				
-			</h1>
+					<?php the_title(); ?>
+					
+				</h1>
+				
+			<?php } ?>
 			
 		<?php } else { ?>
 		
