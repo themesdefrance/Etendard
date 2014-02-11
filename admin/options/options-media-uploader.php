@@ -103,8 +103,8 @@ function optionsframework_media_scripts( $hook ) {
 	wp_register_script( 'of-media-uploader', OPTIONS_FRAMEWORK_URL .'js/media-uploader.js', array( 'jquery' ) );
 	wp_enqueue_script( 'of-media-uploader' );
 	wp_localize_script( 'of-media-uploader', 'optionsframework_l10n', array(
-		'upload' => __( 'Upload', 'optionsframework' ),
-		'remove' => __( 'Remove', 'optionsframework' )
+		'upload' => __( 'Envoyer', 'optionsframework' ),
+		'remove' => __( 'Supprimer', 'optionsframework' )
 	) );
 }
 
