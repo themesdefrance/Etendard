@@ -675,8 +675,10 @@ if(!function_exists('etendard_user_styles')){
 				section.portfolio nav.categories a:hover,
 				section.portfolio nav.categories a.active,
 				.sidebar .widget_etendardnewsletter input[type="submit"],
-				.sidebar .widget_etendardsocial li a,
+				.widget_etendardsocial li a,
+				.cta .button-wrapper .cta-button,
 				.embedcta .button-wrapper .cta-button,
+				.cta-wrapper .cta-button,
 				.article .content a.bouton,
 				.contact-form .submit input,
 				a.bouton.lirelasuite{
@@ -692,9 +694,11 @@ if(!function_exists('etendard_user_styles')){
 				}
 				
 				.article.teaser .header-title:hover:after,
-				.sidebar .widget_etendardsocial li a:hover,
+				.widget_etendardsocial li a:hover,
+				.cta .button-wrapper .cta-button:hover,
 				.embedcta .button-wrapper .cta-button:hover,
 				.article .content a.bouton:hover,
+				.cta-wrapper .cta-button:hover,
 				.contact-form .submit input:hover,
 				#commentform #submit:hover,
 				a.bouton.lirelasuite:hover{
@@ -705,6 +709,7 @@ if(!function_exists('etendard_user_styles')){
 				.sidebar .widget a{
 					color:#696969 !important;
 				}
+				.sidebar .widget_etendardsocial li a,
 				.sidebar .widget_etendardsocial li a:hover{
 					color:#fff !important;
 				}
