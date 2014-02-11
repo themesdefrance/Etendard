@@ -56,7 +56,7 @@ class EDD_SL_Theme_Updater {
 		if ( version_compare( $this->version, $api_response->new_version, '<' ) ) {
 
 			echo '<div id="update-nag">';
-				printf( '<strong>%1$s %2$s</strong> is available. <a href="%3$s" class="thickbox" title="%4s">Check out what\'s new</a> or <a href="%5$s"%6$s>update now</a>.',
+				printf( '<strong>%1$s %2$s</strong> est de sortie. <a href="%3$s" class="thickbox" title="%4s">Découvrez les nouveautés</a> ou <a href="%5$s"%6$s>mettez à jour maintenant</a>.',
 					$theme->get( 'Name' ),
 					$api_response->new_version,
 					'#TB_inline?width=640&amp;inlineId=' . $this->theme_slug . '_changelog',
