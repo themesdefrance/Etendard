@@ -647,7 +647,11 @@ if (!function_exists('etendard_appel_action')){
 if(!function_exists('etendard_user_styles')){
 	function etendard_user_styles(){
 		if (of_get_option("etendard_color")){
-			$color = of_get_option("etendard_color"); ?>
+			$color = of_get_option("etendard_color");
+		}
+		else{ // Si aucune couleur par défaut, on utilise celle-ci
+			$color = "#02a7c6";
+		} ?>
 			<style type="text/css">
 				section.realisation .realisation-site,
 				div.pagination a,
@@ -715,7 +719,6 @@ if(!function_exists('etendard_user_styles')){
 				}
 			</style>
 		<?php }
-	}
 }
 add_action('wp_head','etendard_user_styles', 98);
 
