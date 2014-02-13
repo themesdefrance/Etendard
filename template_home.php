@@ -7,7 +7,6 @@ Template Name: Accueil
 
 <?php
 $display_blocks = of_get_option('etendard_blocks_presence');
-$display_blocks['content'] = true;
 $ordre_blocks = array('titre'=>0, 
 					  'diaporama'=>1,
 					  'content'=>2,

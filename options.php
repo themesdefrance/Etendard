@@ -23,6 +23,7 @@ function optionsframework_options() {
 						'options'=>array(
 							'titre'=>__('Titre et slogan', TEXT_TRANSLATION_DOMAIN),
 							'diaporama'=>__('Diaporama', TEXT_TRANSLATION_DOMAIN),
+							'content'=>__('Contenu', TEXT_TRANSLATION_DOMAIN),
 							'cta'=>__("Appel à l'action", TEXT_TRANSLATION_DOMAIN),
 							'services'=>__('Liste de vos services', TEXT_TRANSLATION_DOMAIN),
 							'portfolio'=>__('Derniers éléments du portfolio', TEXT_TRANSLATION_DOMAIN),
