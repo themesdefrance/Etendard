@@ -469,7 +469,7 @@ ul.articles .article{
 	@extend .clearfix;
 	-ms-word-wrap: break-word;
 }
-.article .header{
+.article .header, .article .entry-thumbnail{
 	margin-bottom: 10px;
 }
 .article .header-title{
