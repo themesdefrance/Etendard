@@ -668,7 +668,7 @@ if(!function_exists('etendard_user_styles')){
 				.comment .comment-author a,
 				.main-footer a,
 				.sidebar .widget a:hover{
-					color: <?php echo $color; ?> !important;
+					color: <?php echo $color; ?>;
 				}
 				
 				.main-menu a:hover,
