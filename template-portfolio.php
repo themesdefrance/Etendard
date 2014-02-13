@@ -50,7 +50,7 @@ else{
 					$icon = 'icon-play';
 					break;
 				default:
-					$icon = 'icon-search';
+					$icon = 'icon-ellipsis';
 					break;
 			}
 			?>
