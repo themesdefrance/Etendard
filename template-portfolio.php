@@ -15,7 +15,8 @@ else{
 			'post_type'=>'portfolio',
 			'orderby'=>'menu_order',
 			'order'=>'ASC',
-			'posts_per_page'=>-1
+			'posts_per_page'=>-1,
+			'nopaging'=>true
 	);
 	$query = new WP_Query($args);
 }
