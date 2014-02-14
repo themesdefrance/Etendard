@@ -2,7 +2,7 @@
 $diaporama = null;
 
 $custom = get_post_custom();
-if (isset($custom['etendard_portfolio_diaporama']) && isset($custom['etendard_portfolio_diaporama_lien'])){
+if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_diaporama_lien'])){
 	$diaporama = maybe_unserialize($custom['etendard_portfolio_diaporama'][0]);
 	$liens = maybe_unserialize($custom['etendard_portfolio_diaporama_lien'][0]);
 }

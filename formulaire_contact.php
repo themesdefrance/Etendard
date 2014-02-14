@@ -9,7 +9,7 @@ if (isset($_POST['etendard_contact_nonce']) && wp_verify_nonce($_POST['etendard_
 	
 	$subject = (trim($sujet) === '') ? __('Contact', TEXT_TRANSLATION_DOMAIN).' '.get_bloginfo('name') : $sujet;
 	$from = $nom;
-	$from_mail = (trim($sujet) === '') ? $to : $email;
+	$from_mail = (trim($email) === '') ? $to : $email;
 	
 	$headers = array();
 	$headers[] = 'From: '.$from.' <'.$from_mail.'>';
