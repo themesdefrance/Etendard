@@ -151,7 +151,7 @@ add_action('admin_init', 'etendard_admin_init');
 //ajout de la page d'admin etendard
 if (!function_exists('etendard_optionsframework_menu')){
 	function etendard_optionsframework_menu($menu){
-		$menu['page_title'] = __('Options Étendard');
+		$menu['page_title'] = __('Options Étendard', TEXT_TRANSLATION_DOMAIN);
 		$menu['menu_title'] = __('Options Étendard', TEXT_TRANSLATION_DOMAIN);
 		return $menu;
 	}

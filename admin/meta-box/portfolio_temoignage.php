@@ -49,7 +49,7 @@ jQuery(function($){
 			</label>
 		</th>
 		<td>
-			<textarea class="large-text" id="etendard_portfolio_temoin_texte" name="etendard_portfolio_temoin_texte"><?php echo esc_attr($texte); ?></textarea>
+			<textarea class="large-text" id="etendard_portfolio_temoin_texte" name="etendard_portfolio_temoin_texte"><?php echo esc_textarea($texte); ?></textarea>
 		</td>
 	</tr>
 	<tr>

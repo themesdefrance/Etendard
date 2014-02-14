@@ -12,7 +12,6 @@
 	
 	<title>
 		<?php wp_title('|', true, 'right'); ?>
-		<?php bloginfo('name'); ?>
 	</title>
 <!--	<link rel="shortcut icon" href="/favicon.ico?v=0">-->
 	
@@ -34,7 +33,7 @@
 			<?php if (of_get_option('etendard_logo')): ?>
 			<div class="logo-wrap">
 				<a href="<?php echo home_url('/'); ?>">
-					<img src="<?php echo of_get_option('etendard_logo'); ?>" alt="<?php echo get_bloginfo('title'); ?>" />
+					<img src="<?php echo of_get_option('etendard_logo'); ?>" alt="<?php echo esc_attr(get_bloginfo('title')); ?>" />
 				</a>
 			</div>
 			<?php endif; ?>
