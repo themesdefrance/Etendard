@@ -1,7 +1,7 @@
 <?php
 $texte = $url = $bouton = '';
-$template = explode('/', get_page_template());
-$template = $template[count($template)-1];
+$template = basename(get_page_template());
+
 
 //variables globales ou de page?
 if ($template === 'template_home.php'){
