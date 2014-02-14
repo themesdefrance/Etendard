@@ -17,7 +17,7 @@ if (isset($_POST['etendard_contact_nonce']) && wp_verify_nonce($_POST['etendard_
 	$contact = wp_mail($to, $subject, $message, $headers);
 }
 ?>
-<?php if (!isset($contact)){ ?>
+<?php if (!isset($contact)): ?>
 <form method="post" class="contact-form">
 	<?php wp_nonce_field('etendard_contact_nonce', 'etendard_contact_nonce'); ?>
 	
@@ -53,11 +53,11 @@ if (isset($_POST['etendard_contact_nonce']) && wp_verify_nonce($_POST['etendard_
 		<input type="submit" value="<?php _e('Envoyer'); ?>" />
 	</div>
 </form>
-<?php } else { ?>
+<?php else: ?>
 	<div class="message <?php echo ($contact) ? 'succes' : 'erreur'; ?>">
 	<?php
 	if ($contact) _e('Votre message à été envoyé.');
 	else _e("Une erreur est survenue lors de l'envoi de votre message, merci de réessayer ultérieurement.", TEXT_TRANSLATION_DOMAIN);
 	?>
 	</div>
-<?php } ?>
+<?php endif; ?>

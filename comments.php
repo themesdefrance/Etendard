@@ -1,7 +1,6 @@
-<?php if (post_password_required()) return; ?>
- 
+<?php if (post_password_required()) return; ?> 
 <div id="comments" class="comments-area">
-	<?php if (have_comments()){ ?>
+	<?php if (have_comments()): ?>
 		<h2 class="comments-title">
 			<?php
                 printf(_n('Une personne à écrit un commentaire, et vous ?', '%1$s personnes ont déja écrit un commentaire, et vous ?', get_comments_number(), TEXT_TRANSLATION_DOMAIN), number_format_i18n(get_comments_number()));
@@ -31,23 +30,22 @@
         </nav><!-- #comment-nav-before .site-navigation .comment-navigation -->
         <?php } // check for comment navigation ?>
  
-	<?php }else{  ?>
-				<h2 class="comments-title">
-					<?php __('Soyez le premier à rédiger un commentaire.', TEXT_TRANSLATION_DOMAIN); ?>
-				</h2>
-				
-				<?php comment_form(array(
-					'comment_notes_before'=>'',
-					'comment_notes_after'=>'',
-					'title_reply'=>'',
-					'title_reply_to'=>__('Répondre à %s', TEXT_TRANSLATION_DOMAIN),
-					'label_submit'=>__('Envoyer', TEXT_TRANSLATION_DOMAIN),
-				)); 
-			} ?>
-		
-    <?php if (!comments_open() && get_comments_number() != '0' && post_type_supports(get_post_type(), 'comments')){ ?>
+	<?php else:  ?>
+		<h2 class="comments-title">
+			<?php __('Soyez le premier à rédiger un commentaire.', TEXT_TRANSLATION_DOMAIN); ?>
+		</h2>
+
+		<?php comment_form(array(
+			'comment_notes_before'=>'',
+			'comment_notes_after'=>'',
+			'title_reply'=>'',
+			'title_reply_to'=>__('Répondre à %s', TEXT_TRANSLATION_DOMAIN),
+			'label_submit'=>__('Envoyer', TEXT_TRANSLATION_DOMAIN),
+		)); 
+	endif; ?>
+    <?php if (!comments_open() && get_comments_number() != '0' && post_type_supports(get_post_type(), 'comments')): ?>
 		<p class="nocomments">
 			<?php _e('Les commentaires sont clos.', TEXT_TRANSLATION_DOMAIN); ?>
 		</p>
-	<?php } ?>
+	<?php endif; ?>
 </div><!-- #comments .comments-area -->

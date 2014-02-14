@@ -20,14 +20,14 @@
 			<?php endif; ?>
 			
 			<?php foreach ($portfolio_custom as $name=>$value){
-				if (substr($name, 0, 10) === 'portfolio_'){
+				if (substr($name, 0, 10) === 'portfolio_'):
 				?>
 				<div class="meta">
 					<?php echo substr($name, 10); ?>:
 					<?php echo $value[0]; ?>
 				</div>
 				<?php
-				}
+				endif;
 			}
 			?>
 			

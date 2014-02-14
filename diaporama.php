@@ -16,13 +16,13 @@ if (is_array($diaporama) && trim($diaporama[count($diaporama)-1]) === '') array_
 		<ul class="slides">
 			<?php foreach ($diaporama as $index=>$img){ ?>
 			<li>
-				<?php if (isset($liens[$index]) && filter_var($liens[$index], FILTER_VALIDATE_URL) !== false){ ?>
+				<?php if (isset($liens[$index]) && filter_var($liens[$index], FILTER_VALIDATE_URL) !== false): ?>
 				<a href="<?php echo $liens[$index]; ?>">
 					<img src="<?php echo $img; ?>" alt="<?php echo $liens[$index]; ?>" />
 				</a>
-				<?php } else { ?>
+				<?php else: ?>
 				<img src="<?php echo $img; ?>" />
-				<?php } ?>
+				<?php endif; ?>
 			</li>
 			<?php } ?>
 		</ul>

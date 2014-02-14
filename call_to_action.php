@@ -25,11 +25,11 @@ else if (get_post_type() === 'portfolio'){
 		</p>
 		<div class="button-wrapper">
 			<a href="<?php echo esc_attr($url); ?>" class="cta-button">
-				<?php if ($bouton){ ?>
+				<?php if ($bouton): ?>
 					<?php echo esc_html($bouton); ?>
-				<?php } else { ?>
+				<?php else: ?>
 					<?php _e('Cliquez ici', TEXT_TRANSLATION_DOMAIN); ?>
-				<?php } ?>
+				<?php endif; ?>
 			</a>
 		</div>
 	</div>

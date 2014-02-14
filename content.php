@@ -2,30 +2,30 @@
 
 	<header class="header">
 	
-		<?php if(!is_category() && !is_tag() && !is_singular('service')){ ?>
+		<?php if(!is_category() && !is_tag() && !is_singular('service')): ?>
 			
-			<?php if (has_post_thumbnail() && !post_password_required()){ ?>
+			<?php if (has_post_thumbnail() && !post_password_required()): ?>
 			
 				<div class="entry-thumbnail">
 				
-					<?php if (is_single() || is_page()){ ?>
+					<?php if (is_single() || is_page()): ?>
 					
 						<?php the_post_thumbnail('etendard-post-thumbnail'); ?>
 						
-					<?php }else{ ?>
+					<?php else: ?>
 					
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('etendard-post-thumbnail'); ?></a>
 						
-					<?php } ?>
+					<?php endif; ?>
 				</div>
 				
-			<?php } ?>
+			<?php endif; ?>
 		
-		<?php } ?>
+		<?php endif; ?>
 		
-		<?php if (is_single() || is_page()){ ?>
+		<?php if (is_single() || is_page()): ?>
 		
-			<?php if(!is_page_template('template_home.php')){ ?>
+			<?php if(!is_page_template('template_home.php')): ?>
 			
 				<h1 class="header-title">
 				
@@ -33,9 +33,9 @@
 					
 				</h1>
 				
-			<?php } ?>
+			<?php endif; ?>
 			
-		<?php } else { ?>
+		<?php else: ?>
 		
 			<h2 class="header-title">
 			
@@ -43,9 +43,9 @@
 				
 			</h2>
 			
-		<?php } // is_single() ?>
+		<?php endif; // is_single() ?>
 		
-		<?php if( !is_singular('service') && !is_page()){ ?> 
+		<?php if( !is_singular('service') && !is_page()): ?> 
 		
 		<span class="header-meta">
 		
@@ -59,23 +59,19 @@
 			
 		</span>
 		
-		<?php } ?>
+		<?php endif; ?>
 		
 	</header>
 	
 	<div class="content">
-		<?php if (is_single() || is_page()){
-		
-				the_content();
-			
-			} else {
-			
-				the_excerpt(__('Lire la suite', TEXT_TRANSLATION_DOMAIN)); ?>
-				
-				<a href="<?php the_permalink(); ?>" class="bouton lirelasuite" title="<?php the_title(); ?>">Lire la suite</a>
-				
-		<?php } ?>
-		
+		<?php 
+		if (is_single() || is_page()):
+			the_content();
+		else:
+			the_excerpt(__('Lire la suite', TEXT_TRANSLATION_DOMAIN)); 
+		?>
+		<a href="<?php the_permalink(); ?>" class="bouton lirelasuite" title="<?php the_title(); ?>">Lire la suite</a>	
+		<?php endif; ?>
 	</div>
 	
 	<footer class="footer">
