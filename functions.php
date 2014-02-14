@@ -711,7 +711,7 @@ if(!function_exists('etendard_user_styles')){
 				form.search-form .search-submit-wrapper:hover:before,
 				div.pagination a:hover,
 				.sidebar .widget a{
-					color:#696969 !important;
+					color:#696969;
 				}
 				.sidebar .widget_etendardsocial li a,
 				.sidebar .widget_etendardsocial li a:hover{
