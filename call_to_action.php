@@ -7,9 +7,9 @@ $template = basename(get_page_template());
 if ($template === 'template_home.php'){
 	$custom = get_post_custom();
 	
-	$texte = $custom['etendard_home_cta_text'][0];
-	$url = $custom['etendard_home_cta_url'][0];
-	$bouton = $custom['etendard_home_cta_bouton'][0];
+	$texte = (isset($custom['etendard_home_cta_text'])) ? $custom['etendard_home_cta_text'][0] : '';
+	$url = (isset($custom['etendard_home_cta_url'])) ? $custom['etendard_home_cta_url'][0] : '';
+	$bouton = (isset($custom['etendard_home_cta_bouton'])) ? $custom['etendard_home_cta_bouton'][0] : '';
 }
 else if (get_post_type() === 'portfolio'){
 	$texte = of_get_option('etendard_cta_text');
