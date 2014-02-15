@@ -32,6 +32,7 @@ function optionsframework_options() {
 						'std'=>array(
 							'titre'=>true,
 							'diaporama'=>true,
+							'content'=>true,
 							'cta'=>true,
 							'services'=>true,
 							'portfolio'=>true,
