@@ -124,17 +124,17 @@ if (!function_exists('etendard_enqueue')){
 	function etendard_enqueue(){
 		$theme = wp_get_theme();
 		
-		wp_register_script('flexslider', get_template_directory_uri().'/lib/flexslider/jquery.flexslider-min.js', array('jquery'), $theme['version'], true);
-		wp_register_style('flexslider', get_template_directory_uri().'/lib/flexslider/flexslider.css', false, $theme['version']);
+		wp_register_script('flexslider', get_template_directory_uri().'/lib/flexslider/jquery.flexslider-min.js', array('jquery'), $theme->get('Version'), true);
+		wp_register_style('flexslider', get_template_directory_uri().'/lib/flexslider/flexslider.css', false, $theme->get('Version'));
 		
-		wp_register_script('fancybox', get_template_directory_uri().'/lib/fancybox/jquery.fancybox.pack.js', array('jquery'), $theme['version'], true);
-		wp_register_style('fancybox', get_template_directory_uri().'/lib/fancybox/jquery.fancybox.css', false, $theme['version']);
+		wp_register_script('fancybox', get_template_directory_uri().'/lib/fancybox/jquery.fancybox.pack.js', array('jquery'), $theme->get('Version'), true);
+		wp_register_style('fancybox', get_template_directory_uri().'/lib/fancybox/jquery.fancybox.css', false, $theme->get('Version'));
 		
-		wp_register_script('etendard_gallery', get_template_directory_uri().'/js/gallery.js', array('jquery'), $theme['version'], true);
+		wp_register_script('etendard_gallery', get_template_directory_uri().'/js/gallery.js', array('jquery'), $theme->get('Version'), true);
 		
-		wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Sanchez:400,400italic|Maven+Pro:400,700', array(), $theme['version']);
-		wp_enqueue_style('icons', get_template_directory_uri().'/fonts/style.css', array(), $theme['version']);
-		wp_enqueue_style('stylesheet', get_template_directory_uri().'/style.css', array(), $theme['version']);
+		wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Sanchez:400,400italic|Maven+Pro:400,700', array(), $theme->get('Version'));
+		wp_enqueue_style('icons', get_template_directory_uri().'/fonts/style.css', array(), $theme->get('Version'));
+		wp_enqueue_style('stylesheet', get_template_directory_uri().'/style.css', array(), $theme->get('Version'));
 		
 		wp_enqueue_script('flexslider');
 		wp_enqueue_style('flexslider');
@@ -754,7 +754,7 @@ if(!function_exists('etendard_edd')){
 		$theme = wp_get_theme();
 		$edd_updater = new EDD_SL_Theme_Updater(array( 
 				'remote_api_url'=> EDD_SL_STORE_URL,
-				'version' 	=> $theme['version'],
+				'version' 	=> $theme->get('Version'),
 				'license' 	=> $license,
 				'item_name' => EDD_SL_THEME_NAME,
 				'author'	=> 'Thèmes de France'
