@@ -8,7 +8,7 @@
 				<figure class="entry-thumbnail">
 					<a href="<?php the_permalink(); ?>">
 					<?php if (has_post_thumbnail() && !post_password_required()): ?>
-						<?php the_post_thumbnail('etendard-portfolio-thumbnail'); ?>
+						<?php the_post_thumbnail('etendard-service-thumbnail'); ?>
 					<?php endif; ?>
 					</a>
 				</figure>

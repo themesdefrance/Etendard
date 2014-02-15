@@ -58,6 +58,7 @@ if (!function_exists('etendard_setup')){
 //		));
 		
 		add_image_size('etendard-portfolio-thumbnail', 301, 230, true);
+		add_image_size('etendard-service-thumbnail', 230, 230, true);
 		add_image_size('etendard-blog-thumbnail', 225, 150, true);
 		add_image_size('etendard-post-thumbnail', 620, 400, true);
 	//	load_theme_textdomain(TEXT_TRANSLATION_DOMAIN, get_template_directory().'/local');
