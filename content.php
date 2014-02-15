@@ -2,7 +2,7 @@
 
 	<header class="header">
 	
-		<?php if(!is_category() && !is_tag() && !is_singular('service')): ?>
+		<?php if(!is_singular()): ?>
 			
 			<?php if (has_post_thumbnail() && !post_password_required()): ?>
 			
@@ -14,7 +14,7 @@
 						
 					<?php else: ?>
 					
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('etendard-post-thumbnail'); ?></a>
+						<a href="<?php the_permalink(); ?>" title="<?php esc_attr(the_title()); ?>"><?php the_post_thumbnail('etendard-post-thumbnail'); ?></a>
 						
 					<?php endif; ?>
 				</div>
