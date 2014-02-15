@@ -13,6 +13,15 @@ if(!class_exists('EDD_SL_Theme_Updater')){
 	include(dirname( __FILE__ ).'/admin/EDD_SL_Theme_Updater.php');
 }
 
+//installation du thème
+if (!function_exists( 'etendard_activation')){
+	function etendard_activation(){
+		global $wp_rewrite;
+		$wp_rewrite->flush_rules();
+	}
+}
+add_action('after_switch_theme', 'etendard_activation');
+
 //chargement d'OF
 if (!function_exists( 'optionsframework_init')){
 	define('OPTIONS_FRAMEWORK_DIRECTORY', get_bloginfo('template_directory').'/admin/options/');
