@@ -2,7 +2,6 @@
 define('TEXT_TRANSLATION_DOMAIN', 'etendard');
 			
 //chargement des widgets	
-//require_once 'admin/widgets/newsletter.php';
 require_once 'admin/widgets/social.php';
 
 //chargement du gestionnaire de licenses
@@ -159,26 +158,9 @@ if (!function_exists('etendard_optionsframework_menu')){
 }
 add_filter('optionsframework_menu', 'etendard_optionsframework_menu');
 
-//if (!function_exists('etendard_admin_menu')){
-//	function etendard_admin_menu(){
-//		add_theme_page('Options Étendard', 'Options Étendard', 'edit_theme_options', 'etendard-options', 'etendard_options');
-//	}
-//}
-//
-//if (!function_exists('etendard_options')){
-//	function etendard_options(){
-//		if (!current_user_can('edit_theme_options')) {
-//			wp_die(__('You do not have sufficient permissions to access this page.'));
-//		}
-//		
-//		require 'admin/index.php';
-//	}
-//}
-
 //initialisation des widgets
 if (!function_exists('etendard_widgets_init')){
 	function etendard_widgets_init(){
-//		register_widget('EtendardNewsletter');
 		register_widget('EtendardSocial');
 	}
 }
