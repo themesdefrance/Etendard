@@ -282,7 +282,7 @@ if (!function_exists('etendard_portfolio_save_custom')){
 		$portrait = sanitize_text_field($_POST['etendard_portfolio_temoin_portrait']);
 		$diaporama = $_POST['etendard_portfolio_diaporama'];
 		$diaporama_liens = $_POST['etendard_portfolio_diaporama_lien'];
-		foreach ($diaporama as &$img){
+		foreach ($diaporama as &$img){			
 			$img = sanitize_text_field($img);
 		}
 	
