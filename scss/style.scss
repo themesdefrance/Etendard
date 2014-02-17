@@ -65,14 +65,14 @@
 .toplevel > li > a.active{
 	border-bottom: 2px solid $couleur-principale;
 }
-.main-menu .sub-menu{
+.main-menu .sub-menu{ // Sous menu
 	display:block;
 	height:0;
 	opacity:0;
 	overflow:hidden;
 	position: absolute;
 	z-index:1;
-	top: 290%;
+	top: 240%;  
 	left: 0;
 	min-width: 200px;
 	background:#fff;
