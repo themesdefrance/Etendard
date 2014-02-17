@@ -2,7 +2,7 @@
 
 	<header class="header">
 	
-		<?php if(!is_singular()): ?>
+		<?php if(!is_category() && !is_tag() && !is_singular('service')): ?>
 			
 			<?php if (has_post_thumbnail() && !post_password_required()): ?>
 			
