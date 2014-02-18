@@ -40,6 +40,7 @@
 }
 .main-menu li{
 	display: inline-block;
+	margin-right: -4px;
 }
 .main-menu a{
 	display: inline-block;
@@ -104,7 +105,8 @@
 	}
 }
 .main-menu .sub-menu li{
-	display: inline;
+	display: inline-block;
+	width: 100%;
 }
 .main-menu .sub-menu a{
 	display:block;
