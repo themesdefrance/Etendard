@@ -42,7 +42,7 @@
 			<?php
 			wp_nav_menu(array(
 				'theme_location'=>'primary',
-				'menu_class'=>'toplevel',
+				'menu_class'=>'top-level-menu',
 				'container'=>false,
 				'depth'=>2
 			)); 

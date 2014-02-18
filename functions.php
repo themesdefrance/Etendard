@@ -664,6 +664,7 @@ if(!function_exists('etendard_user_styles')){
 				}
 				
 				.main-menu a:hover,
+				.top-level-menu > li:hover > a,
 				ul.portfolio .creation figure:hover figcaption,
 				.article.teaser .header-title:after,
 				#commentform #submit,

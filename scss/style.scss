@@ -50,22 +50,27 @@
 	color: inherit;
 	@include transition();
 	
-	&:hover{
-		background: $couleur-principale;
-		color: #fff;
-	}
-	
 	@include width-matches($breakpoint-mobile){
 		display:block;
 	}
 }
-.toplevel > li{
+.top-level-menu > li{
 	position: relative;
 }
-.toplevel > li > a.active{
+.top-level-menu > li > a.active{
 	border-bottom: 2px solid $couleur-principale;
 }
-.main-menu .sub-menu{ // Sous menu
+.top-level-menu > li:hover > a{
+	background: $couleur-principale;
+	color: #fff;
+}
+
+.top-level-menu > li:hover .sub-menu{
+	display:block;
+	opacity:1;
+	height:auto;
+}
+.top-level-menu .sub-menu{ // Sous menu
 	display:block;
 	height:0;
 	opacity:0;
@@ -98,12 +103,6 @@
 		}
 	}
 }
-.toplevel > li:hover .sub-menu{
-	display:block;
-	opacity:1;
-	height:auto;
-}
-
 .main-menu .sub-menu li{
 	display: inline;
 }
