@@ -39,7 +39,7 @@
 	list-style: none;
 }
 .main-menu li{
-	display: inline;
+	display: inline-block;
 }
 .main-menu a{
 	display: inline-block;
@@ -72,7 +72,7 @@
 	overflow:hidden;
 	position: absolute;
 	z-index:1;
-	top: 240%;  
+	top: 100%;
 	left: 0;
 	min-width: 200px;
 	background:#fff;
@@ -104,6 +104,9 @@
 	height:auto;
 }
 
+.main-menu .sub-menu li{
+	display: inline;
+}
 .main-menu .sub-menu a{
 	display:block;
 	padding: 10px 12px;
