@@ -17,17 +17,37 @@
 
 .main-header{
 	@extend .clearfix;
+	
+	&.sticky{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		background: rgba(#fff,.8);
+	}
 }
 .main-header .logo-wrap{
 	float: left;
 	max-width:50%;
 	margin-top: 4px;
+	line-height: 0;
 	
 	@include width-matches($breakpoint-mobile){
 		float:none;
 		max-width:100%;
 	}
 }
+.main-header .logo-wrap a{
+	display: inline-block;
+}
+.main-header.sticky .logo-wrap{
+	margin-top: 0;
+}
+.main-header.sticky .logo-wrap img{
+	max-height: 50px;
+}
+
 .main-header .main-menu{
 	float: right;
 	
@@ -54,6 +74,9 @@
 	@include width-matches($breakpoint-mobile){
 		display:block;
 	}
+}
+.main-header.sticky .main-menu a{
+	padding: 12px 10px;
 }
 .top-level-menu > li{
 	position: relative;
