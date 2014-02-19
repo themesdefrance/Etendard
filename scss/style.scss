@@ -500,6 +500,10 @@ ul.articles .article{
 	max-height:150px;
 	overflow:hidden;
 	margin-bottom:5px;
+	
+	@include width-matches($breakpoint-mobile){
+		text-align: center;
+	}
 }
 
 .article.teaser .content > p{
