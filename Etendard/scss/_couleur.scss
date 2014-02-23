@@ -1,0 +1,41 @@
+section.realisation .realisation-client,
+section.realisation .realisation-site,
+div.pagination a,
+.widget_etendardnewsletter .form-email:before,
+form.search-form .search-submit-wrapper:before,
+a.more-link,
+ul.services .service h2,
+ul.portfolio .creation figcaption,
+.temoignages .temoignage-headline,
+.article.quote > blockquote cite,
+.comment .comment-author{
+	color: #cc0000 !important;
+}
+
+.main-menu a:hover,
+ul.portfolio .creation figure:hover figcaption,
+.article.teaser .header-title:after,
+#commentform #submit,
+.widget_calendar #today,
+section.portfolio nav.categories a:hover,
+.widget_etendardnewsletter input[type="submit"],
+.widget_etendardsocial li a,
+.cta-button{
+	background: #cc0000 !important;
+}
+
+.toplevel > li > a.active{
+	border-bottom: 2px solid #cc0000 !important;;
+}
+.main-menu .sub-menu:before{
+	border-bottom: 3px solid #cc0000 !important;;
+}
+
+/*
+assombris,
+#commentform #submit:hover,
+section.realisation .realisation-site:hover,
+.widget_etendardnewsletter input[type="submit"]:hover,
+.widget_etendardsocial li a:hover{
+}
+*/
