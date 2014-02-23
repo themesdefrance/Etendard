@@ -913,20 +913,26 @@ div.pagination{
 	padding: 5px 0 15px;
 	margin-bottom: 20px;
 	
-	& *{
+	*{
 		max-width:100%;
 	}
-	& h3{
+	h3{
 		font-size: 24px;
 		margin-bottom: 10px;
 	}
-	& ul,ol{
+	ul,ol{
 		list-style: none;
 	}
-	& li{
+	li{
 		margin-bottom: 15px;
 	}
-	& a{
+	li ul,
+	li ol{
+		margin-top: 5px;
+		margin-left: 10px;
+	}
+	
+	a{
 		color: $couleur-principale;
 		text-decoration:none;
 		
@@ -934,10 +940,10 @@ div.pagination{
 			text-decoration:underline;
 		}
 	}
-	& table{
+	table{
 		width: 100%;
 	}
-	& td{
+	td{
 		text-align:center;
 	}
 }
@@ -1076,6 +1082,7 @@ form.search-form input.search-submit{
 	background: $couleur-principale;
 	color: #fff;
 }
+
 
 //slider styles
 .flexslider {  
