@@ -98,7 +98,7 @@
 	opacity:1;
 	height:auto;
 }
-.top-level-menu .sub-menu{ // Sous menu
+.top-level-menu > li > .sub-menu{ // Sous menu 1er niveau
 	display:block;
 	height:0;
 	opacity:0;
@@ -139,6 +139,9 @@
 	display:block;
 	padding: 10px 12px;
 	font-size: 14px;
+}
+.main-menu .sub-menu .sub-menu a{
+	padding-left: 20px;
 }
 
 //commun a plusieurs modules

@@ -44,7 +44,7 @@
 				'theme_location'=>'primary',
 				'menu_class'=>'top-level-menu',
 				'container'=>false,
-				'depth'=>2
+				'depth'=>3
 			)); 
 			?>
 			</nav>
