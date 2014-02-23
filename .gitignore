@@ -1,5 +1,6 @@
 scss/config/.sass-cache
 node_modules/
+.sass-cache
 
 #################
 ## Eclipse

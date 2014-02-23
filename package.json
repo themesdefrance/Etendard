@@ -1,0 +1,25 @@
+{
+  "name": "Etendard",
+  "version": "0.0.0",
+  "description": "Readme à l'arrache pou l'instant.",
+  "main": "functions.php",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/y-lohse/Etendard.git"
+  },
+  "author": "Themes de France",
+  "license": "GPL",
+  "readmeFilename": "README.md",
+  "gitHead": "395251acaa9b8fccab334727cccfd174a030a0e8",
+  "bugs": {
+    "url": "https://github.com/y-lohse/Etendard/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-compass": "~0.7.2"
+  }
+}
