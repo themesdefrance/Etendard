@@ -42,7 +42,8 @@
 	display: inline-block;
 }
 .main-header .logo-wrap img{
-	height: 100%;
+	@include transition(max-height .5s ease);
+	max-height: 100%;
 }
 .main-header.sticky .logo-wrap{
 	margin-top: 0;
@@ -72,7 +73,7 @@
 	font-size: 18px;
 	border-bottom: 3px solid transparent;
 	color: inherit;
-	@include transition(padding 1s ease);
+	@include transition(padding .5s ease);
 	
 	@include width-matches($breakpoint-mobile){
 		display:block;
