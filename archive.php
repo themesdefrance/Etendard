@@ -2,10 +2,9 @@
 <section class="blog grid">
 	<div class="wrapper">
 		<h1 class="section-title">
-		
 		<?php if (is_day()) { 
 				_e('Archives du ', TEXT_TRANSLATION_DOMAIN);
-				the_time('j F Y');
+				the_time(get_option('date_format'));
 			}
 			elseif(is_month()){
 				_e('Archives de ', TEXT_TRANSLATION_DOMAIN);
