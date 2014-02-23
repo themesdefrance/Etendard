@@ -41,6 +41,9 @@
 .main-header .logo-wrap a{
 	display: inline-block;
 }
+.main-header .logo-wrap img{
+	height: 100%;
+}
 .main-header.sticky .logo-wrap{
 	margin-top: 0;
 }
@@ -69,7 +72,7 @@
 	font-size: 18px;
 	border-bottom: 3px solid transparent;
 	color: inherit;
-	@include transition();
+	@include transition(padding 1s ease);
 	
 	@include width-matches($breakpoint-mobile){
 		display:block;
