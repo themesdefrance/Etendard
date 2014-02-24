@@ -491,7 +491,7 @@ if (!function_exists('etendard_portfolio_page_link')){
 
 // Taille d'extrait personnalisé
 if (!function_exists('etendard_custom_excerpt_length')){
-	function etendard_custom_excerpt_length( $length ) {
+	function etendard_custom_excerpt_length($length) {
 		return 20;
 	}
 	add_filter('excerpt_length', 'etendard_custom_excerpt_length', 999);
@@ -499,10 +499,20 @@ if (!function_exists('etendard_custom_excerpt_length')){
 
 // Suppression du [...] des extraits
 if (!function_exists('etendard_new_excerpt_more')){
-	function etendard_new_excerpt_more( $more ) {
+	function etendard_new_excerpt_more($more) {
 		return '…';
 	}
 	add_filter('excerpt_more', 'etendard_new_excerpt_more');
+}
+
+// Titre 
+if (!function_exists('etendard_titre_home')){
+	function etendard_titre_home($title) {
+		if( empty( $title ) && ( is_home() || is_front_page() ) ) {
+			return get_bloginfo('title');
+		}
+	}
+	add_filter('wp_title', 'etendard_titre_home');
 }
 
 ////////////////////////////////////
