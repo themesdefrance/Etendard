@@ -691,7 +691,8 @@ if(!function_exists('etendard_user_styles')){
 				.cta-wrapper .cta-button,
 				.article .content a.bouton,
 				.contact-form .submit input,
-				a.bouton.lirelasuite{
+				a.bouton.lirelasuite,
+				::selection{
 					background: <?php echo $color; ?> !important;
 					color: #fff !important;
 				}

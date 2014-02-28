@@ -79,8 +79,8 @@
 				case "asphalte":
 					$color="#34495e";
 					break;
-				case "orange":
-					$color="#e67e22";
+				case "beton":
+					$color="#95a5a6";
 					break;
 				case "citrouille":
 					$color="#d35400";
@@ -131,7 +131,8 @@
 		.cta-wrapper .cta-button,
 		.article .content a.bouton,
 		.contact-form .submit input,
-		a.bouton.lirelasuite{
+		a.bouton.lirelasuite,
+		::selection{
 			background: <?php echo $color; ?> !important;
 			color: #fff !important;
 		}
@@ -149,7 +150,7 @@
 		Options
 	</div>
 	
-	<p>Cliquez une couleur pour rhabiller Étendard. Via l'administration, vous pourrez définir votre propre couleur.</p>
+	<p><strong>Choisir la couleur principale</strong><br>Cliquez une couleur pour rhabiller Étendard. Via l'administration, vous pourrez définir votre propre couleur.</p>
 	
 	<form action="" method="get">
 	
@@ -160,7 +161,7 @@
 			<a href="?style=ciel" style="background:#3498db;">Ciel</a>
 			<a href="?style=pourpre" style="background:#9b59b6;">Pourpre</a>
 			<a href="?style=asphalte" style="background:#34495e;">Asphalte</a>
-			<a href="?style=orange" style="background:#e67e22;">Orange</a>
+			<a href="?style=beton" style="background:#95a5a6;">Béton</a>
 			<a href="?style=citrouille" style="background:#d35400;">Citrouille</a>
 			<a href="?style=rouge" style="background:#e74c3c;">Rouge</a>
 			<a href="?style=defaut" style="background:#02a7c6;">Défaut</a>
