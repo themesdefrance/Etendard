@@ -1,8 +1,11 @@
+<?php if (is_active_sidebar('footer')):?>
 <section class="footer-widgets">
 	<div class="wrapper">
 			<?php get_sidebar('footer'); ?>
 		</div>
 </section>
+<?php endif; ?>
+
 <?php if (of_get_option("etendard_footer_gauche") || of_get_option("etendard_footer_droite")): ?>
 <footer class="main-footer">
 	<div class="wrapper">
