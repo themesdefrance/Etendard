@@ -9,5 +9,21 @@ jQuery(function($){
 			if ($(window).scrollTop() > offsetTrigger && !isSticked) $('.main-header').addClass(stickyClass);
 			else if ($(window).scrollTop() <= offsetTrigger && isSticked) $('.main-header').removeClass(stickyClass);
 		});
+		
+		var $menu = $('.top-level-menu');
+		$menu.css('max-height', '100%');
+		var menuHeight = $menu.height();
+		
+		if (!$('#menu-toggle').is(':checked')) $menu.css('height', '0');
+		else $menu.css('height', menuHeight+'px');
+		
+		$('#menu-toggle').change(function(){
+			if ($(this).is(':checked')){
+				$menu.css('height', menuHeight+'px');
+			}
+			else{
+				$menu.css('height', '0');
+			}
+		});
 	});
 });
