@@ -18,13 +18,13 @@ if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_d
 			$imgPath = implode($exploded, '/');
 			$separator = strrpos($imgName, '.');
 
-			$wanted = substr($imgName, 0, $separator).'-900x500'.substr($imgName, $separator);
+			$wanted = substr($imgName, 0, $separator).'-960x500'.substr($imgName, $separator);
 
 			if (!file_exists(ABSPATH.$imgPath.'/'.$wanted)){
 				//create resized image
 				$editor = wp_get_image_editor(ABSPATH.$imgPath.'/'.$imgName);
 				if (!is_wp_error($editor)){
-					$editor->resize(900, 500, true);
+					$editor->resize(960, 500, true);
 					$editor->save(ABSPATH.$imgPath.'/'.$wanted);
 				}
 				else{
