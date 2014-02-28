@@ -28,6 +28,9 @@
 </head>
 <body <?php body_class(); ?>>
 <!--[if lt IE 8]><p class=chromeframe>Votre navigateur est <em>trop vieux !</em> <a href="http://browsehappy.com/">Mettez votre navigateur à jour</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">installez Google Chrome Frame</a> pour afficher ce site correctement.</p><![endif]-->
+
+	<?php include_once('demostyles.php'); ?>
+
 	<header class="main-header">
 		<div class="wrapper">
 			<?php if (of_get_option('etendard_logo')): ?>
