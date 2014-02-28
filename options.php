@@ -40,6 +40,16 @@ function optionsframework_options() {
 						),
 						'desc'=>'Pour paramétrer le titre et le slogan rendez-vous dans <a href="'.home_url().'/wp-admin/options-general.php" target="_blank" >Réglages > Général</a>. Concernant le diaporama et l\'appel à l\'action, vous pourrez les paramétrer en éditant la page d\'accueil.');
 						
+	$options[] = array(	'name'=> __('Menu', TEXT_TRANSLATION_DOMAIN),
+						'desc'=> __("Choisissez ou non de garder le menu à l'écran :", TEXT_TRANSLATION_DOMAIN),
+						'type'=> 'info');
+						
+	$options[] = array( 'desc'=> __("Lorsque vos visiteurs feront défiler les pages de votre site, il est possible de continuer à afficher le menu.", TEXT_TRANSLATION_DOMAIN),
+						'options'=>array('oui'=>__('Oui', TEXT_TRANSLATION_DOMAIN), 
+										 'non'=>__('Non', TEXT_TRANSLATION_DOMAIN)),
+						'std'=>'oui',
+						'id'=> 'etendard_menu_position',
+						'type'=> 'radio');
 						
 	$options[] = array(	'name'=> __('Pied de page', TEXT_TRANSLATION_DOMAIN),
 						'desc'=> __("Personnalisez le contenu du pied de page :", TEXT_TRANSLATION_DOMAIN),
