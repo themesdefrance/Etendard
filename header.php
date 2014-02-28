@@ -39,14 +39,19 @@
 			<?php endif; ?>
 			
 			<nav class="main-menu">
-			<?php
-			wp_nav_menu(array(
-				'theme_location'=>'primary',
-				'menu_class'=>'top-level-menu',
-				'container'=>false,
-				'depth'=>3
-			)); 
-			?>
+				<label class="toggle-menu-icon" for="menu-toggle">
+					<span class="icon-list"></span>
+				</label>
+				<input type="checkbox" id="menu-toggle" />
+			
+				<?php
+				wp_nav_menu(array(
+					'theme_location'=>'primary',
+					'menu_class'=>'top-level-menu',
+					'container'=>false,
+					'depth'=>3
+				)); 
+				?>
 			</nav>
 		</div>
 	</header>

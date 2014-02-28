@@ -64,6 +64,10 @@
 .main-menu li{
 	display: inline-block;
 	margin-right: -4px;
+	
+	@include width-matches($breakpoint-mobile){
+		display: block;
+	}
 }
 .main-menu a{
 	display: inline-block;
@@ -76,6 +80,7 @@
 	
 	@include width-matches($breakpoint-mobile){
 		display:block;
+		padding: 12px 10px;
 	}
 }
 .main-header.sticky .main-menu a{
@@ -142,6 +147,32 @@
 .main-menu .sub-menu .sub-menu a{
 	padding-left: 20px;
 }
+
+//responsive menu stuff
+#menu-toggle,
+.toggle-menu-icon{
+	display: none;
+}
+@include width-matches($breakpoint-mobile){
+	.top-level-menu{
+		max-height: 0;
+		overflow: hidden;
+		border-bottom: 2px solid #797979;
+		@include transition(max-height .4s ease-in);
+	}
+	
+	#menu-toggle:checked + .top-level-menu{
+		max-height: 100%;
+	}
+	
+	.toggle-menu-icon{
+		display: block;
+		font-size: 50px;
+		width: 100%;
+		text-align: center;
+	}
+}
+
 
 //commun a plusieurs modules
 body > section{
