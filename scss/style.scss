@@ -551,6 +551,14 @@ ul.articles .article{
 		color: $couleur-principale;
 	}
 }
+
+.article.teaser{
+	@include width-matches($breakpoint-mobile){
+		text-align: center;
+		padding: 0 20px;
+	}
+}
+
 .article.teaser .header-title{
 	position: relative;
 	margin-bottom: 3px;
@@ -562,10 +570,7 @@ ul.articles .article{
 	max-height:150px;
 	overflow:hidden;
 	margin-bottom:5px;
-	
-	@include width-matches($breakpoint-mobile){
-		text-align: center;
-	}
+
 }
 
 .article.teaser .content > p{
