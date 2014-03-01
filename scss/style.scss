@@ -307,6 +307,7 @@ section.cta .button-wrapper,
 	
 	@include width-matches($breakpoint-mobile){
 		margin:10px auto;
+		width:100%;
 	}
 }
 
