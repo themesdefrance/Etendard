@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "signature";
 @import "base";
 //@import "couleur";
@@ -453,7 +454,7 @@ section.portfolio nav.categories a{
 	margin-right:-5px;
 	padding: 4px 10px;
 	color: inherit;
-	text-decoration:none;
+	text-decoration:none; 
 	font-size:18px;
 	font-family:$heading-font;
 	color:$body-copy-color;
