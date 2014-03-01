@@ -876,12 +876,18 @@ div.pagination{
 
 .main-footer div.col-1-2:last-child{
 	text-align: right;
-	
 	@include width-matches($breakpoint-mobile){
-		text-align:left;
 		margin-top:20px;
+		text-align: center;
 	}
 }
+
+.main-footer div.col-1-2{
+	@include width-matches($breakpoint-mobile){
+		text-align:center;
+	}
+}
+
 
 //Widgets du footer
 .footer-widgets{
