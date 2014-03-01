@@ -11,7 +11,7 @@ if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_d
 		//switch to resized images
 		foreach ($unresizedDiaporama as $img){
 			if (!$img) continue;
-			$fullPath = substr($img, strlen(get_bloginfo('url')));
+			$fullPath = substr($img, strlen(content_url()));
 
 			$exploded = explode('/', $fullPath);
 			$imgName = array_pop($exploded);
@@ -33,7 +33,7 @@ if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_d
 				}
 			}
 
-			array_push($diaporama, get_bloginfo('url').$imgPath.'/'.$wanted);
+			array_push($diaporama, content_url().'/'.$imgPath.'/'.$wanted);
 		}
 	}
 }
