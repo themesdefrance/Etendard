@@ -4,29 +4,27 @@ module.exports = function(grunt){
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
 			compile: {
-				files: ['scss/**/*'],
+				files: ['sources_css/**/*'],
 				tasks: ['default']
 			}
 		},
 		compass: {
+			options:{
+				sassDir: 'sources_css/',
+				imagesDir: 'img',
+				fontsDir: 'fonts',
+				require: [],
+			},
 			build: {
 				options:{
-					sassDir: 'scss/',
 					cssDir: '.',
-					imagesDir: 'img',
-					fontsDir: 'fonts',
 					outputStyle: 'compressed',
-					require: [],
 				}
 			},
 			dev: {
 				options:{
-					sassDir: 'scss/',
-					cssDir: 'scss/',
-					imagesDir: 'img',
-					fontsDir: 'fonts',
+					cssDir: 'sources_css/',
 					outputStyle: 'expanded',
-					require: [],
 				}
 			}
 		},
@@ -44,5 +42,5 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	
 	grunt.registerTask('default', ['compass:build']);
-	grunt.registerTask('build', ['compass:build', 'copy:build']);
+	grunt.registerTask('build', ['compass:build', 'compass:dev', 'copy:build']);
 }
