@@ -1,5 +1,7 @@
 node_modules/
 .sass-cache
+Etendard/
+scss/style.css
 
 #################
 ## Eclipse
