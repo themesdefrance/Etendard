@@ -1,0 +1,13 @@
+.etendardsocial-toggle{
+	display:none;
+}
+.etendardsocial-toggle.open{
+	display:block;
+}
+.etendardsocial-toggle-link{
+	display:block;
+	float:right;
+	background:url("images/arrows.png") no-repeat scroll 4px 6px transparent;
+	width:24px;
+	height:26px;
+}
