@@ -9,13 +9,23 @@ module.exports = function(grunt){
 			}
 		},
 		compass: {
-			dev: {
+			build: {
 				options:{
 					sassDir: 'scss/',
 					cssDir: '.',
 					imagesDir: 'img',
 					fontsDir: 'fonts',
 					outputStyle: 'compressed',
+					require: [],
+				}
+			},
+			dev: {
+				options:{
+					sassDir: 'scss/',
+					cssDir: 'scss/',
+					imagesDir: 'img',
+					fontsDir: 'fonts',
+					outputStyle: 'expanded',
 					require: [],
 				}
 			}
@@ -26,16 +36,6 @@ module.exports = function(grunt){
 				src: ['**', '!.sass-cache', '!Etendard', '!node_modules/**', '!Gruntfile.js', '!README.md', '!package.json'],
 				dest: 'Etendard/',
 			}
-		},
-		replace: {
-			licence: {
-				files:[
-					{expand: true, src: ['Etendard/functions.php'], dest: ['Etendard/functions.php']}
-				],
-				options: {
-					
-				}
-			}
 		}
 	});
 	
@@ -43,5 +43,6 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	
-	grunt.registerTask('default', ['compass']);
+	grunt.registerTask('default', ['compass:build']);
+	grunt.registerTask('build', ['compass:build', 'copy:build']);
 }
