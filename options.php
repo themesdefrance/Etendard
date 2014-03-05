@@ -70,7 +70,7 @@ function optionsframework_options() {
 						'desc'=> __('Envoyez votre logo :', TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'info');
 												
-	$options[] = array( 'desc'=> __('Le fichier image doit être au format JPG ou PNG. Notez également que la taille optimale est de 280px par 60px.', TEXT_TRANSLATION_DOMAIN),
+	$options[] = array( 'desc'=> __('Le fichier image doit être au format JPG ou PNG. Notez également que la taille optimale est de 280px par 72px.', TEXT_TRANSLATION_DOMAIN),
 						'id'=> 'etendard_logo',
 						'type'=> 'upload');
 												
