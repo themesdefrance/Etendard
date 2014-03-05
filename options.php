@@ -97,6 +97,35 @@ function optionsframework_options() {
 	//Onglet Portfolio					
 	$options[] = array(	'name'=> __('Portfolio', TEXT_TRANSLATION_DOMAIN),
 						'type'=> 'heading');
+	
+	$options[] = array( 'options'=>array('oui'=>__('Oui', TEXT_TRANSLATION_DOMAIN), 
+										 'non'=>__('Non', TEXT_TRANSLATION_DOMAIN)),
+						'desc'=> __('Affichez ou non les extraits des éléments portfolios sur la page des projets', TEXT_TRANSLATION_DOMAIN),
+						'std'=>'oui',
+						'id'=> 'etendard_extraits_portfolio',
+						'type'=> 'radio',
+						'name'=> 'Afficher les extraits');
+	
+	$options[] = array( 'desc'=> __("Définissez la longueur de l'extrait à inclure.", TEXT_TRANSLATION_DOMAIN),
+						'id'=> 'etendard_length_excerpt_portfolio',
+						'std'=>'20',
+						'type'=> 'text',
+						'name'=> 'Longueur des extraits');
+						
+	$options[] = array( 'options'=>array('oui'=>__('Oui', TEXT_TRANSLATION_DOMAIN), 
+										 'non'=>__('Non', TEXT_TRANSLATION_DOMAIN)),
+						'desc'=> __('Affichez ou non les boutons des éléments portfolio sur la page des projets', TEXT_TRANSLATION_DOMAIN),
+						'std'=>'oui',
+						'id'=> 'etendard_boutons_portfolio',
+						'type'=> 'radio',
+						'name'=> 'Afficher les boutons');
+						
+	$options[] = array( 'desc'=> __("Définissez le texte à inclure pour les boutons de portfolio.", TEXT_TRANSLATION_DOMAIN),
+						'id'=> 'etendard_lbl_btn_portfolio',
+						'std'=>'Découvrir le projet',
+						'type'=> 'text',
+						'name'=> 'Libellé des boutons');
+	
 						
 	$options[] = array(	'name'=> __("Appel à l'action", TEXT_TRANSLATION_DOMAIN),
 						'desc'=> __("Définissez l'appel à l'action présent sur chaque page portfolio :", TEXT_TRANSLATION_DOMAIN),

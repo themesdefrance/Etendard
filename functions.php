@@ -505,6 +505,15 @@ if (!function_exists('etendard_new_excerpt_more')){
 	add_filter('excerpt_more', 'etendard_new_excerpt_more');
 }
 
+// Extrait personnalisable
+if (!function_exists('etendard_excerpt')){
+	function etendard_excerpt($length){
+		$content = get_the_content();
+		$excerpt = wp_trim_words( $content , $length );
+		return $excerpt;
+	}
+}
+
 // Titre 
 if (!function_exists('etendard_titre_home')){
 	function etendard_titre_home($title) {
