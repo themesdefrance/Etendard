@@ -509,7 +509,7 @@ if (!function_exists('etendard_new_excerpt_more')){
 if (!function_exists('etendard_excerpt')){
 	function etendard_excerpt($length){
 		$content = get_the_content();
-		$excerpt = wp_trim_words( $content , $length );
+		$excerpt = "<p>" . wp_trim_words( $content , $length ) . "</p>";
 		return $excerpt;
 	}
 }
@@ -523,6 +523,15 @@ if (!function_exists('etendard_titre_home')){
 	}
 	add_filter('wp_title', 'etendard_titre_home');
 }
+// Article en plusieurs morceaux ?
+// Thanks to https://gist.github.com/tommcfarlin/f2310bfad60b60ae00bf#file-is-paginated-post-php
+function etendard_is_paginated_post() {
+ 
+	global $multipage;
+	return 0 !== $multipage;
+ 
+}
+
 
 ////////////////////////////////////
 // Shortcodes
