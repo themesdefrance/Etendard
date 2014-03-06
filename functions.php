@@ -1,6 +1,8 @@
 <?php
 define('TEXT_TRANSLATION_DOMAIN', 'etendard');
-			
+
+require_once 'admin/Cocorico/cocorico.php';			
+
 //chargement des widgets	
 require_once 'admin/widgets/social.php';
 
@@ -160,6 +162,13 @@ if (!function_exists('etendard_admin_init')){
 }
 add_action('admin_init', 'etendard_admin_init');
 
+if (!function_exists('etendard_admin_menu')){
+	function etendard_admin_menu(){
+		add_theme_page('Options Étendard', 'Options Étendard 2', 'edit_theme_options', 'etendard_options', 'etendard_options');
+	}
+}
+add_action('admin_menu', 'etendard_admin_menu');
+
 //ajout de la page d'admin etendard
 if (!function_exists('etendard_optionsframework_menu')){
 	function etendard_optionsframework_menu($menu){
@@ -169,6 +178,16 @@ if (!function_exists('etendard_optionsframework_menu')){
 	}
 }
 add_filter('optionsframework_menu', 'etendard_optionsframework_menu');
+
+if (!function_exists('etendard_options')){
+	function etendard_options(){
+		if (!current_user_can('edit_theme_options')) {
+			wp_die(__('You do not have sufficient permissions to access this page.'));
+		}
+       	
+       	include 'admin/index.php';
+    }
+}
 
 //initialisation des widgets
 if (!function_exists('etendard_widgets_init')){
