@@ -532,14 +532,14 @@ ul.articles{
 	list-style: none;
 }
 ul.articles .article{
-	margin-bottom:60px;
+	margin-bottom:30px;
 }
 .article{
 	@extend .clearfix;
 	-ms-word-wrap: break-word;
 }
 .article .header, .article .entry-thumbnail{
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 .article .header-title{
 	color: $body-copy-color;
