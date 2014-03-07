@@ -1,6 +1,7 @@
 <?php
 define('TEXT_TRANSLATION_DOMAIN', 'etendard');
 
+define('COCORICO_PREFIX', 'etendard_');
 require_once 'admin/Cocorico/cocorico.php';			
 
 //chargement des widgets	
