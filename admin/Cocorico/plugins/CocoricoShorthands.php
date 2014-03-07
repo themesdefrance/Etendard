@@ -62,8 +62,9 @@ CocoDictionary::register(CocoDictionary::SHORTHAND, 'setting', 'cocoricoSettingS
 function cocoricoGroupHeader($cocorico, $tabNames){
 	$cocorico->startWrapper('group-header');
 	
-	foreach ($tabNames as $tab){
-		$cocorico->component('link', $tab, '#'.$tab, array('class'=>'nav-tab'));
+	foreach ($tabNames as $tab=>$name){
+		if (!is_string($tab)) $tab = $name;
+		$cocorico->component('link', $name, '#'.$tab, array('class'=>'nav-tab'));
 	}
 	
 	$cocorico->endWrapper('group-header');
