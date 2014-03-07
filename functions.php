@@ -2,7 +2,33 @@
 define('TEXT_TRANSLATION_DOMAIN', 'etendard');
 
 define('COCORICO_PREFIX', 'etendard_');
-require_once 'admin/Cocorico/cocorico.php';			
+require_once 'admin/Cocorico/cocorico.php';
+
+//migration depuis etendard < 1.008
+if (!get_option('etendard_import_OF')){
+	$theme = get_option( 'stylesheet' );
+	$theme = preg_replace("/\W/", "_", strtolower($theme) );
+	$ofkey = 'optionsframework_' . $theme;
+	$ofData = get_option($ofkey);
+	
+	if ($ofData){
+		foreach ($ofData as $key=>$value){
+			if ($key === 'etendard_blocks_presence'){
+				$converted = array();
+				
+				foreach ($value as $str=>$bool){
+					if ($bool) array_push($converted, $str);
+				}
+				
+				$value = $converted;
+			}
+			
+			update_option($key, $value);
+		}
+	}
+	
+	update_option('etendard_import_OF', true);
+}	
 
 //chargement des widgets	
 require_once 'admin/widgets/social.php';
