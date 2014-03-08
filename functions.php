@@ -1,42 +1,17 @@
 <?php
 define('TEXT_TRANSLATION_DOMAIN', 'etendard');
-
-define('COCORICO_PREFIX', 'etendard_');
-require_once 'admin/Cocorico/cocorico.php';
-
-//migration depuis etendard < 1.008
-if (!get_option('etendard_import_OF')){
-	$theme = get_option( 'stylesheet' );
-	$theme = preg_replace("/\W/", "_", strtolower($theme) );
-	$ofkey = 'optionsframework_' . $theme;
-	$ofData = get_option($ofkey);
-	
-	if ($ofData){
-		foreach ($ofData as $key=>$value){
-			if ($key === 'etendard_blocks_presence'){
-				$converted = array();
-				
-				foreach ($value as $str=>$bool){
-					if ($bool) array_push($converted, $str);
-				}
-				
-				$value = $converted;
-			}
-			
-			update_option($key, $value);
-		}
-	}
-	
-	update_option('etendard_import_OF', true);
-}	
-
-//chargement des widgets	
-require_once 'admin/widgets/social.php';
-
 //chargement du gestionnaire de licenses
 define('EDD_SL_STORE_URL', 'https://www.themesdefrance.fr/');
 define('EDD_SL_THEME_NAME', 'Etendard');
+define('EDD_SL_THEME_VERSION', '1.008');
 define('EDD_SL_LICENSE_KEY', 'etendard_license_edd');
+
+define('COCORICO_PREFIX', 'etendard_');
+
+require_once 'admin/Cocorico/cocorico.php';
+
+//chargement des widgets	
+require_once 'admin/widgets/social.php';
 
 if(!class_exists('EDD_SL_Theme_Updater')){
 	include(dirname( __FILE__ ).'/admin/EDD_SL_Theme_Updater.php');
@@ -754,10 +729,9 @@ if(!function_exists('etendard_edd')){
 			}
 		}
 		
-		$theme = wp_get_theme();
 		$edd_updater = new EDD_SL_Theme_Updater(array( 
 				'remote_api_url'=> EDD_SL_STORE_URL,
-				'version' 	=> $theme->get('Version'),
+				'version' 	=> EDD_SL_THEME_VERSION,
 				'license' 	=> $license,
 				'item_name' => EDD_SL_THEME_NAME,
 				'author'	=> 'Thèmes de France'
@@ -778,3 +752,29 @@ if(!function_exists('etendard_admin_notice')){
 	}
 }
 add_action('admin_notices', 'etendard_admin_notice');
+
+//migration depuis etendard < 1.008
+if (!get_option('etendard_import_OF')){
+	$theme = get_option( 'stylesheet' );
+	$theme = preg_replace("/\W/", "_", strtolower($theme) );
+	$ofkey = 'optionsframework_' . $theme;
+	$ofData = get_option($ofkey);
+	
+	if ($ofData){
+		foreach ($ofData as $key=>$value){
+			if ($key === 'etendard_blocks_presence'){
+				$converted = array();
+				
+				foreach ($value as $str=>$bool){
+					if ($bool) array_push($converted, $str);
+				}
+				
+				$value = $converted;
+			}
+			
+			update_option($key, $value);
+		}
+	}
+	
+	update_option('etendard_import_OF', true);
+}
