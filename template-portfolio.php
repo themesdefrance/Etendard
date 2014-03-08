@@ -69,28 +69,16 @@ else{
 					</figure>
 				</a>
 				
-				<?php if(of_get_option('etendard_extraits_portfolio')!='non'){ ?>
+				<?php if(get_option('etendard_extraits_portfolio') != 'non'){ ?>
 					<p class="excerpt">
-						<?php 
-							if(of_get_option('etendard_length_excerpt_portfolio')){
-								echo etendard_excerpt(of_get_option('etendard_length_excerpt_portfolio'));
-							  }
-							  else{
-								  echo etendard_excerpt(20);
-							  } ?>
+						<?php the_excerpt(); ?>
 					</p>
 				<?php } ?>
 				
-				<?php if(of_get_option('etendard_boutons_portfolio')!='non'){ ?>
+				<?php if(get_option('etendard_boutons_portfolio') != 'non'){ ?>
 					<div class="cta-wrapper">
 						<a href="<?php the_permalink(); ?>" class="cta-button">
-							<?php if(of_get_option('etendard_lbl_btn_portfolio')){
-									echo of_get_option('etendard_lbl_btn_portfolio');
-								  }
-								  else{
-									  _e('Découvrir le projet', TEXT_TRANSLATION_DOMAIN);
-								  }
-							?>
+							<?php _e('Découvrir le projet', TEXT_TRANSLATION_DOMAIN); ?>
 						</a>
 					</div>
 				<?php } ?>

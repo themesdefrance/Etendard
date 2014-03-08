@@ -12,9 +12,9 @@ if ($template === 'template_home.php'){
 	$bouton = (isset($custom['etendard_home_cta_bouton'])) ? $custom['etendard_home_cta_bouton'][0] : '';
 }
 else if (get_post_type() === 'portfolio'){
-	$texte = of_get_option('etendard_cta_text');
-	$url = of_get_option('etendard_cta_url');
-	$bouton = of_get_option('etendard_cta_bouton');
+	$texte = get_option('etendard_cta_text');
+	$url = get_option('etendard_cta_url');
+	$bouton = get_option('etendard_cta_bouton');
 }
 ?>
 <?php if ($texte && $url): ?>

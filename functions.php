@@ -265,8 +265,8 @@ if (!function_exists('etendard_register_custom_fields')){
 							 'high'
 				);
 				
-				$display_blocks = of_get_option('etendard_blocks_presence');
-				if (array_key_exists('diaporama', $display_blocks) && $display_blocks['diaporama']){
+				$display_blocks = get_option('etendard_blocks_presence');
+				if (in_array('diaporama', $display_blocks)){
 					add_meta_box('etandard_portfolio_diaporama',
 							 __('Diaporama', TEXT_TRANSLATION_DOMAIN),
 							 'etendard_portfolio_diaporama',
@@ -715,8 +715,8 @@ if (!function_exists('etendard_appel_action')){
 //Couleur dominante
 if(!function_exists('etendard_user_styles')){
 	function etendard_user_styles(){
-		if (of_get_option("etendard_color")){
-			$color = of_get_option("etendard_color");
+		if (get_option('etendard_color')){
+			$color = get_option('etendard_color');
 		}
 		else{ // Si aucune couleur par défaut, on utilise celle-ci
 			$color = "#02a7c6";
@@ -797,9 +797,9 @@ add_action('wp_head','etendard_user_styles', 98);
 // Chargement du CSS Personnalisé
 if(!function_exists('etendard_custom_styles')){
 	function etendard_custom_styles(){
-		if (of_get_option("etendard_custom_css")){
+		if (get_option("etendard_custom_css")){
 			echo '<style type="text/css">';
-			echo htmlentities(stripslashes(of_get_option("etendard_custom_css")), ENT_NOQUOTES);
+			echo htmlentities(stripslashes(get_option("etendard_custom_css")), ENT_NOQUOTES);
 			echo '</style>';
 		}
 	}
@@ -811,7 +811,7 @@ add_action('wp_head', 'etendard_custom_styles', 99);
 //et l'activation n'est pas très dure à contourner. Soyez bon joueurs et achetez-le :)
 if(!function_exists('etendard_edd')){
 	function etendard_edd(){
-		$license = trim(of_get_option(EDD_SL_LICENSE_KEY));
+		$license = trim(get_option(EDD_SL_LICENSE_KEY));
 		$status = get_option('etendard_license_status');
 		
 		if (!$status){

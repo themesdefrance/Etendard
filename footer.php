@@ -6,11 +6,11 @@
 </section>
 <?php endif; ?>
 
-<?php if (of_get_option("etendard_footer_gauche") || of_get_option("etendard_footer_droite")): ?>
+<?php if (get_option("etendard_footer_gauche") || wp_nav_menu(array('theme_location'=>'footer'))): ?>
 <footer class="main-footer">
 	<div class="wrapper">
 		<div class="col-1-2">
-			<?php echo strip_tags(of_get_option("etendard_footer_gauche"), '<strong><a><em><img>'); ?>
+			<?php echo strip_tags(get_option("etendard_footer_gauche"), '<strong><a><em><img>'); ?>
 		</div>
 		<div class="col-1-2">
 			<nav class="footer-menu">

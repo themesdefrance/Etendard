@@ -2,7 +2,7 @@
 <section class="blog grid">
 	<div class="wrapper">
 		
-		<?php if (of_get_option('etendard_sidebar_position') === 'gauche'): ?>
+		<?php if (get_option('etendard_sidebar_position') === 'gauche'): ?>
 		<div class="sidebar col-1-3">
 			<?php get_sidebar('blog'); ?>
 		</div>
@@ -22,7 +22,7 @@
 			</div>
 		</div>
 
-		<?php if (of_get_option('etendard_sidebar_position') !== 'gauche'): ?>
+		<?php if (get_option('etendard_sidebar_position') !== 'gauche'): ?>
 		<div class="sidebar col-1-3">
 			<?php get_sidebar('blog'); ?>
 		</div>

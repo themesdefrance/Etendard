@@ -6,7 +6,7 @@ Template Name: Accueil
 <?php get_header(); ?>
 
 <?php
-$display_blocks = of_get_option('etendard_blocks_presence');
+$display_blocks = get_option('etendard_blocks_presence');
 $ordre_blocks = array('titre'=>0, 
 					  'diaporama'=>1,
 					  'content'=>2,
@@ -19,7 +19,7 @@ asort($ordre_blocks);
 
 <?php 
 foreach ($ordre_blocks as $block=>$ordre){
-	if (!$display_blocks || !array_key_exists($block, $display_blocks) || !$display_blocks[$block]) continue;
+	if (!$display_blocks || !in_array($block, $display_blocks)) continue;
 	
 	switch ($block){
 		case 'titre':

@@ -30,10 +30,10 @@
 <!--[if lt IE 8]><p class=chromeframe>Votre navigateur est <em>trop vieux !</em> <a href="http://browsehappy.com/">Mettez votre navigateur à jour</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">installez Google Chrome Frame</a> pour afficher ce site correctement.</p><![endif]-->
 	<header class="main-header">
 		<div class="wrapper">
-			<?php if (of_get_option('etendard_logo')): ?>
+			<?php if (get_option('etendard_logo')): ?>
 			<div class="logo-wrap">
 				<a href="<?php echo home_url('/'); ?>">
-					<img src="<?php echo of_get_option('etendard_logo'); ?>" alt="<?php echo esc_attr(get_bloginfo('title')); ?>" />
+					<img src="<?php echo get_option('etendard_logo'); ?>" alt="<?php echo esc_attr(get_bloginfo('title')); ?>" />
 				</a>
 			</div>
 			<?php endif; ?>
