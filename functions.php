@@ -7,8 +7,7 @@ define('EDD_SL_THEME_VERSION', '1.008');
 define('EDD_SL_LICENSE_KEY', 'etendard_license_edd');
 
 define('COCORICO_PREFIX', 'etendard_');
-
-$cocoricofile = get_stylesheet_directory_uri() . 'admin/Cocorico/Cocorico.php';
+require_once 'admin/Cocorico/Cocorico.php';
 
 
 //chargement des widgets	
