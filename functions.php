@@ -650,3 +650,22 @@ if (!get_option('etendard_import_OF')){
 	
 	update_option('etendard_import_OF', true);
 }
+
+
+// TinyMCE Shortcodes Integration
+
+add_action('admin_head', 'etendard_add_tinymce');
+function etendard_add_tinymce() {
+	add_filter('mce_external_plugins', 'etendard_add_tinymce_plugin');
+	add_filter('mce_buttons', 'etendard_add_tinymce_button');
+}
+ 
+function etendard_add_tinymce_plugin($plugin_array) {
+	$plugin_array['drop'] =	get_stylesheet_directory_uri() . '/js/tmcedrop.js';
+	return $plugin_array;
+}
+ 
+function etendard_add_tinymce_button($buttons) {
+	array_push($buttons, 'drop');
+	return $buttons;
+}
