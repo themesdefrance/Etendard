@@ -1,12 +1,15 @@
-.appearance_page_etendard_options .nav-tab-wrapper{
+.appearance_page_etendard_options h2.nav-tab-wrapper{
 	margin-bottom: 0;
 }
 
-.cocorico-tab-wrapper{
+.appearance_page_etendard_options .cocorico-tab-wrapper {
 	background: #fff;
-	
+	padding: 0 15px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-top: none;
 }
 
-.cocorico-tab-wrapper .form-table{
+.appearance_page_etendard_options .cocorico-tab-wrapper .form-table{
 	margin-top:0;
 }

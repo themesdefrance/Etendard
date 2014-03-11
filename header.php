@@ -19,8 +19,6 @@
 	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	
-	<link rel="icon" type="image/x-icon" href="favicon.ico" />
-	
 	<!-- Scripts that need to be loaded first -->
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>

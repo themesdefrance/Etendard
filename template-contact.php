@@ -4,6 +4,9 @@ Template Name: Contact
 */
 ?>
 <?php get_header(); ?>
+
+<?php get_template_part('header-bar'); ?>
+
 <section class="grid">
 	<div class="wrapper">
 		

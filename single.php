@@ -1,4 +1,7 @@
 <?php get_header(); ?>
+
+<?php get_template_part('header-bar'); ?>
+
 <section class="blog grid">
 	<div class="wrapper">
 		

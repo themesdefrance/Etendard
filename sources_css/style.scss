@@ -73,7 +73,7 @@
 }
 .main-menu a{
 	display: inline-block;
-	padding: 24px 12px;
+	padding: 22px 12px 18px;
 	text-decoration: none;
 	font-size: 18px;
 	border-bottom: 3px solid transparent;
@@ -176,6 +176,16 @@
 		text-align: right;
 	}
 }
+
+.headerbar{
+	background:#e6e7e8;
+	
+	& .wrapper>.headerbartitle{
+		margin-bottom:0;
+	}
+}
+
+
 
 
 //commun a plusieurs modules
