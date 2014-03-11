@@ -178,8 +178,8 @@
 }
 
 .headerbar{
-	background:#e6e7e8;
-	
+	//background:#e6e7e8;
+	background:$couleur-principale;
 	& .wrapper>.headerbartitle{
 		margin-bottom:0;
 	}
