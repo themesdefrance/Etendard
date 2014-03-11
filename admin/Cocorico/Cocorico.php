@@ -34,6 +34,9 @@ if (!function_exists('cocorico_enqueue')){
 		wp_enqueue_style('wp-color-picker');
 		wp_enqueue_script('wp-color-picker');
 		
+		wp_register_style( 'etendard_custom_admin_css', get_template_directory_uri() . '/admin/css/admin-style.css', false, EDD_SL_THEME_VERSION );
+        wp_enqueue_style( 'etendard_custom_admin_css' );
+		
 		wp_enqueue_media();
 	}
 }
