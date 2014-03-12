@@ -272,9 +272,14 @@ ul.services .service a.more-link{
 // Single Service
 
 .landing{
+	width: 66%;
 	margin: 0 auto;
 	float: none;
 	padding: 0;
+	
+	@include width-below($grid-collapse-below){
+		width: 100%;
+	}
 }
 
 .landing .header{
