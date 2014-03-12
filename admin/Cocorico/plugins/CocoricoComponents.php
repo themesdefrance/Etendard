@@ -36,8 +36,8 @@ function cocoricoNonceComponent($component, $action){
 CocoDictionary::register(CocoDictionary::COMPONENT, 'nonce', 'cocoricoNonceComponent');
 
 //label
-function cocoricoLabelComponent($component, $for){
-	$output = '<label for="'.esc_attr($for).'">'.$component->getName().'</label>';
+function cocoricoLabelComponent($component, $label){
+	$output = '<label for="'.esc_attr($component->getName()).'">'.$label.'</label>';
 	return $output;
 }
 CocoDictionary::register(CocoDictionary::COMPONENT, 'label', 'cocoricoLabelComponent');
@@ -78,16 +78,15 @@ function cocoricoInputComponent($component, $options=array()){
 	$options = array_merge(array(
 		'type'=>'text',
 		'class'=>array(),
+		'name'=>$component->getName(),
+		'id'=>$component->getName(),
 	), $options);
 	
 	if ($component->getValue()) $value = $component->getValue();
 	else if (isset($options['default'])) $value = $options['default'];
 	
 	//core attributes
-	$attrs = array(
-		'name'=>$component->getName(),
-		'id'=>$component->getName(),
-	);
+	$attrs = array();
 	if (isset($value)) $attrs['value'] = $value;
 	
 	//optionnal attributes
@@ -206,10 +205,15 @@ function cocoricoColorComponent($component, $options=array()){
 CocoDictionary::register(CocoDictionary::COMPONENT, 'color', 'cocoricoColorComponent');
 
 function cocoricoUploadComponent($component, $options=array()){
-	$value = $component->getValue();
+	$value = (isset($options['value'])) ? $options['value'] : $component->getValue();
+	
+	$options = array_merge(array(
+		'type'=>'text',
+		'class'=>array('cocorico-upload')
+	), $options);
 	
 	$output = '';
-	$output .= '<input type="text" name="'.$component->getName().'" value="'.$value.'" class="cocorico-upload" />';
+	$output .= cocoricoInputComponent($component, $options);
 	$output .= '<input type="button" class="button cocorico-upload-button" value="Selectionner" />';
 	
 	if ($value){

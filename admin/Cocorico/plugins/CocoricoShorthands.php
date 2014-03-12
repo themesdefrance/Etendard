@@ -25,7 +25,7 @@ function cocoricoSettingShorthand($cocorico, $params){
 		$cocorico->component('raw', $params['label']);
 	}
 	else{
-		$cocorico->component('label', $params['label'], $params['name']);
+		$cocorico->component('label', $params['name'], $params['label']);
 	}
 	
 	$cocorico->endWrapper('th');

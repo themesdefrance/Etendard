@@ -14,12 +14,12 @@ class CocoRequest{
 		}
 	}
 	
-	public function restore(){
+	public static function restore(){
 		CocoRequest::$restored = array_merge(unserialize(get_option('cocostore_values')), $_POST);
 		update_option('cocostore_values', serialize(array()));//clears the cache
 	}
 	
-	public function backup(){
+	public static function backup(){
 		$names = unserialize(get_option('cocostore_names'));
 		$values = array();
 		
@@ -31,7 +31,7 @@ class CocoRequest{
 //		remove_action('shutdown', array('CocoStore', 'prepareBackup'));
 	}
 	
-	public function prepareBackup(){
+	public static function prepareBackup(){
 		if (count(CocoRequest::$requests) === 0) return;
 		
 		$ser = serialize(CocoRequest::$requests);

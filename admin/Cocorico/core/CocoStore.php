@@ -58,7 +58,7 @@ class CocoPostMetaStore implements CocoStoreInterface{
 		return CocoPostMetaStore::$isPostContext;
 	}
 	
-	public function currentScreenHook($screen){
+	public static function currentScreenHook($screen){
 		if ($screen->post_type !== ''){
 			CocoPostMetaStore::$isPostContext = true;
 			add_action('pre_get_posts', array('CocoPostMetaStore', 'loadFallbackPostId'));
@@ -69,7 +69,7 @@ class CocoPostMetaStore implements CocoStoreInterface{
 		if (CocoPostMetaStore::$postId === null) CocoPostMetaStore::$postId = $query->get('post_parent');
 	}
 	
-	public function checkPostTrigger(){
+	public static function checkPostTrigger(){
 		$postId = get_option(CocoPostMetaStore::$backupKey);
 		if ($postId != false){
 			CocoPostMetaStore::$postId = $postId;
@@ -77,7 +77,7 @@ class CocoPostMetaStore implements CocoStoreInterface{
 		}
 	}
 	
-	public function savePostTrigger($postId){
+	public static function savePostTrigger($postId){
 		update_option(CocoPostMetaStore::$backupKey, $postId);
 	}
 	
