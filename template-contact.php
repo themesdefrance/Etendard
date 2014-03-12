@@ -8,9 +8,9 @@ Template Name: Contact
 	<div class="wrapper">
 		
 		<?php if (get_option('etendard_sidebar_position') === 'gauche'): ?>
-		<div class="sidebar col-1-3">
+		<sidebar class="sidebar col-1-3">
 			<?php get_sidebar('blog'); ?>
-		</div>
+		</sidebar>
 		<?php endif; ?>
 		
 		<div class="col-2-3">
