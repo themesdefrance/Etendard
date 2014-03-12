@@ -531,13 +531,13 @@ if(!function_exists('etendard_user_styles')){
 					color: #fff !important;
 				}
 				
-				::selection,
-				::-moz-selection,
-				::-webkit-selection,
-				::-o-selection{ 
+				
+				<?php foreach(array('-moz-', '-webkit-', '-ms-', '-o-', '') as $prefix){ ?>
+				::<?php echo $prefix; ?>selection{ 
 					background: <?php echo $color; ?>;
 					color: #fff;
 				}
+				<?php } ?>
 				
 				.toplevel > li > a.active{
 					border-bottom: 2px solid <?php echo $color; ?> !important;;
