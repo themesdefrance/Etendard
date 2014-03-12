@@ -8,7 +8,7 @@
 		
 			<h1 class="headerbartitle"><?php echo get_the_title(); ?></h1>
 			
-		<?php }else if(is_page_template('template-portfolio.php')){ // Ca marche pas !!!! ?>
+		<?php }else if(get_post_type() == "portfolio"){ ?>
 
 			<h1 class="headerbartitle"><?php echo __('Portfolio', TEXT_TRANSLATION_DOMAIN); ?></h1>
 		
