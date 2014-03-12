@@ -182,10 +182,27 @@
 	background:$couleur-principale;
 	& .wrapper>.headerbartitle{
 		margin-bottom:0;
+		display:inline;
+		font-size: 25px;
 	}
 }
 
+// Fil d'ariane
+.headerbar #breadcrumbs{
+	font-size: 0.8rem;
+	float: right;
+	margin-top: 6px;
+}
+.home .headerbar #breadcrumbs{
+	display:none;
+}
 
+.headerbar #breadcrumbs a{
+	color:#fff;
+	&:hover{
+		text-decoration:underline;
+	}
+}
 
 
 //commun a plusieurs modules
@@ -1165,6 +1182,8 @@ form.search-form input.search-submit{
 	max-height:500px;
 	//width:auto !important;
 }
+
+
 
 ////////////////////////////////////////////////////////////
 // Shortcodes

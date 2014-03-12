@@ -1,10 +1,17 @@
-
 <section class="headerbar">
 	<div class="wrapper">
 		<?php if(is_single()){ ?>
 		
 			<h2 class="headerbartitle"><?php echo __('Blog', TEXT_TRANSLATION_DOMAIN); ?></h2>
 			
+		<?php }else if(is_page()){ ?>
+		
+			<h1 class="headerbartitle"><?php echo get_the_title(); ?></h1>
+			
+		<?php }else if(is_page_template('template-portfolio.php')){ // Ca marche pas !!!! ?>
+
+			<h1 class="headerbartitle"><?php echo __('Portfolio', TEXT_TRANSLATION_DOMAIN); ?></h1>
+		
 		<?php }else if(is_category()){ ?>
 		
 			<h1 class="headerbartitle">
@@ -38,17 +45,18 @@
 			
 			</h1>
 		
-		<?php }else if(is_page_template('template-portfolio.php')){ // Ca marche pas !!!! ?>
-
-			<h1 class="headerbartitle"><?php echo __('Portfolio', TEXT_TRANSLATION_DOMAIN); ?></h1>
-		
 		<?php }else{ ?>
 			
-			<h1 class="headerbartitle"><?php echo get_the_title(); ?> </h1>
+			<h1 class="headerbartitle"><?php echo __('Blog', TEXT_TRANSLATION_DOMAIN); ?></h1>
 			
 			
 			<?php ?>
 		<?php } ?>
 		
+		<?php if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb('<div id="breadcrumbs">','</div>');
+				} ?>
+		
 	</div>
+
 </section>
