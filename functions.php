@@ -526,8 +526,15 @@ if(!function_exists('etendard_user_styles')){
 				.article .content a.bouton,
 				.contact-form .submit input,
 				a.bouton.lirelasuite,
-				::selection,
 				.headerbar{
+					background: <?php echo $color; ?> !important;
+					color: #fff !important;
+				}
+				
+				::selection,
+				::-moz-selection,
+				::-webkit-selection,
+				::-o-selection{ 
 					background: <?php echo $color; ?> !important;
 					color: #fff !important;
 				}
