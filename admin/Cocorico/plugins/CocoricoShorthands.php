@@ -25,7 +25,7 @@ function cocoricoSettingShorthand($cocorico, $params){
 		$cocorico->component('raw', $params['label']);
 	}
 	else{
-		$cocorico->component('label', $params['label'], $params['name']);
+		$cocorico->component('label', $params['name'], $params['label']);
 	}
 	
 	$cocorico->endWrapper('th');
@@ -64,7 +64,7 @@ function cocoricoGroupHeader($cocorico, $tabNames){
 	
 	foreach ($tabNames as $tab=>$name){
 		if (!is_string($tab)) $tab = $name;
-		$cocorico->component('link', $name, '#'.$tab, array('class'=>'nav-tab'));
+		$cocorico->component('link', '#'.$tab, $name, array('class'=>'nav-tab'));
 	}
 	
 	$cocorico->endWrapper('group-header');

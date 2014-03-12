@@ -12,19 +12,28 @@ function cocoricoDescriptionComponent($component){
 CocoDictionary::register(CocoDictionary::COMPONENT, 'description', 'cocoricoDescriptionComponent');
 
 //link
-function cocoricoLinkComponent($component, $href, $options=array()){
+function cocoricoLinkComponent($component, $content, $options=array()){
 	$output = '<a';
 	
 	$attrs = array(
-		'href'=>$href,
+		'href'=>$component->getName(),
 	);
-	$attrs['class'] = (is_array($options['class'])) ? implode($options['class'], ' ') : $options['class'];
+	foreach ($options as $attr=>$value){
+		switch ($attr){
+			case 'class':
+				$attrs['class'] = (is_array($value)) ? implode($value, ' ') : $value;
+				break;
+			default:
+				$attrs[$attr] = $value;
+				break;
+		}
+	}
 	
 	foreach ($attrs as $name=>$value){
 		$output .= ' '.$name.'="'.esc_attr($value).'"';
 	}
 	
-	$output .= '>'.$component->getName().'</a>';
+	$output .= '>'.$content.'</a>';
 	return $output;
 }
 CocoDictionary::register(CocoDictionary::COMPONENT, 'link', 'cocoricoLinkComponent');
@@ -36,8 +45,8 @@ function cocoricoNonceComponent($component, $action){
 CocoDictionary::register(CocoDictionary::COMPONENT, 'nonce', 'cocoricoNonceComponent');
 
 //label
-function cocoricoLabelComponent($component, $for){
-	$output = '<label for="'.esc_attr($for).'">'.$component->getName().'</label>';
+function cocoricoLabelComponent($component, $label){
+	$output = '<label for="'.esc_attr($component->getName()).'">'.$label.'</label>';
 	return $output;
 }
 CocoDictionary::register(CocoDictionary::COMPONENT, 'label', 'cocoricoLabelComponent');
@@ -78,6 +87,7 @@ function cocoricoInputComponent($component, $options=array()){
 	$options = array_merge(array(
 		'type'=>'text',
 		'class'=>array(),
+		'id'=>$component->getName(),
 	), $options);
 	
 	if ($component->getValue()) $value = $component->getValue();
@@ -86,7 +96,6 @@ function cocoricoInputComponent($component, $options=array()){
 	//core attributes
 	$attrs = array(
 		'name'=>$component->getName(),
-		'id'=>$component->getName(),
 	);
 	if (isset($value)) $attrs['value'] = $value;
 	
@@ -207,9 +216,13 @@ CocoDictionary::register(CocoDictionary::COMPONENT, 'color', 'cocoricoColorCompo
 
 function cocoricoUploadComponent($component, $options=array()){
 	$value = $component->getValue();
+	$options = array_merge(array(
+		'type'=>'text',
+		'class'=>array('cocorico-upload')
+	), $options);
 	
 	$output = '';
-	$output .= '<input type="text" name="'.$component->getName().'" value="'.$value.'" class="cocorico-upload" />';
+	$output .= cocoricoInputComponent($component, $options);
 	$output .= '<input type="button" class="button cocorico-upload-button" value="Selectionner" />';
 	
 	if ($value){

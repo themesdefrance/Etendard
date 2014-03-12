@@ -57,7 +57,7 @@
 				$previewWrapper = $parent.find('.cocorico-preview-wrapper'),
 				$preview = $parent.find('.cocorico-preview');
 				
-			$parent.find('.cocorico-upload-button').add($field).click(function(){
+			$parent.find('.cocorico-upload-button').add($field).live('click', function(){
 				if (this === $field[0] && $field.val() !== '') return;
 				
 				var frame = wp.media();

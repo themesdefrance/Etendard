@@ -21,6 +21,10 @@ class Cocorico{
 		
 	}
 	
+	public function getStore(){
+		return $this->store;
+	}
+	
 	public function nonce(){
 		$nonce_action = 'cocorico_nonce_validation';
 		$nonce = $this->component('nonce', 'coco_nonce', $nonce_action)->filter('nonce', $nonce_action);
