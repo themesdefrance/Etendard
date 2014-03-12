@@ -29,10 +29,6 @@ function etendardDiaporamaShorthand($cocorico, $name){
 		)->filter('save');
 		$cocorico->endWrapper('td');
 		
-		$cocorico->endWrapper('tr');
-		
-		$cocorico->startWrapper('tr');
-		
 		$cocorico->startWrapper('th');
 		//THIS MAKES NO SENSE, INVERTARGS
 		$cocorico->component('label', $name.'-link-'.$index, __('Lien', TEXT_TRANSLATION_DOMAIN));
@@ -50,10 +46,26 @@ function etendardDiaporamaShorthand($cocorico, $name){
 		)->filter('save');
 		$cocorico->endWrapper('td');
 		
+		$cocorico->startWrapper('td');
+		$cocorico->component('link', 'Supprimer', '#', array(
+			'class'=>'submitdelete etendard-delete-diaporama',
+			'style'=>'color: #A00;'
+		));
+		$cocorico->endWrapper('td');
+		
 		$cocorico->endWrapper('tr');
 	}
 	
 	$cocorico->endForm();
+	
+	$cocorico->component('input', 'upload-add', array(
+		'type'=>'button',
+		'class'=>array('button', 'button-primary', 'etendard-diaporama-add'),
+		'value'=>__('Ajouter', TEXT_TRANSLATION_DOMAIN)
+	));
+	
+	wp_register_script('etendard_cocorico', COCORICO_URI.'/frontend/etendard.js', array('jquery'), '1', true);
+	wp_enqueue_script('etendard_cocorico');
 }
 CocoDictionary::register(CocoDictionary::SHORTHAND, 'diaporama', 'etendardDiaporamaShorthand');
 

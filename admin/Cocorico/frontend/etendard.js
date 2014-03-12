@@ -1,36 +1,18 @@
 (function($){
 	$(function(){
-		var _custom_media = true,
-		_orig_send_attachment = wp.media.editor.send.attachment;
-
-		$('.etendard_portfolio_upload_button').live('click', function(e){
-			var send_attachment_bkp = wp.media.editor.send.attachment;
-			var button = $(this);
-			var id = button.attr('name').replace('_button', '');
-			_custom_media = true;
-			wp.media.editor.send.attachment = function(props, attachment){
-				if (_custom_media){
-					button.prev().val(attachment.url);
-					$('.etendard_diaporama_one').first().clone().appendTo('.etendard_diaporama_form');
-					$('.etendard_diaporama_one').last().find('input[type="text"], input[type="url"]').val('');
-					$('.etendard_diaporama_one').last().find('a.delete').remove();
-				}
-				else{
-					return _orig_send_attachment.apply( this, [props, attachment] );
-				};
-			}
-
-			wp.media.editor.open(button);
-			return false;
+		$('.etendard-diaporama-add').click(function(){
+			var $table = $(this).prev();
+			
+			var $line = $table.find('tr').last().clone().appendTo($table);
+			
+			$line.find('input[type="text"]').val('');
+			$line.find('.cocorico-preview-wrapper').hide();
+			//@TODO: set new ids
 		});
-
-		$('.add_media').on('click', function(){
-			_custom_media = false;
-		});
-
-		$('.etendard_diaporama_form a.delete').live('click', function(event){
-			$(this).parents('.etendard_diaporama_one').remove();
+		
+		$('.etendard-delete-diaporama').live('click', function(event){
 			event.preventDefault();
+			$(this).parentsUntil('tr').parent().remove();
 		});
 	});
 })(jQuery);
