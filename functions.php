@@ -535,8 +535,8 @@ if(!function_exists('etendard_user_styles')){
 				::-moz-selection,
 				::-webkit-selection,
 				::-o-selection{ 
-					background: <?php echo $color; ?> !important;
-					color: #fff !important;
+					background: <?php echo $color; ?>;
+					color: #fff;
 				}
 				
 				.toplevel > li > a.active{
