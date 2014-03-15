@@ -49,6 +49,25 @@ $form->setting(array('type'=>'upload',
 					 'name'=>'logo',
 					 'label'=>__('Logo', TEXT_TRANSLATION_DOMAIN),
 					 'description'=>__('Le fichier image doit être au format JPG ou PNG. Notez également que la taille optimale est de 280px par 72px.', TEXT_TRANSLATION_DOMAIN)));
+					
+$form->setting(array('type'=>'radio',
+					 'label'=>__('Largeur des diaporamas', TEXT_TRANSLATION_DOMAIN),
+					 'name'=>'diaporama_width',
+					 'radios'=>array(
+						 'auto'=>__('Largeur du site', TEXT_TRANSLATION_DOMAIN),
+						 'full'=>__('Largeur de la fenêtre', TEXT_TRANSLATION_DOMAIN)
+					 ),
+					 'options'=>array(
+					 	'after'=>'<br/>',
+					 	'default'=>'auto'
+					 )));					 
+ 
+$form->setting(array('type'=>'text',
+					 'name'=>'diaporama_height',
+					 'label'=>__("Hauteur des diaporamas (en pixels)", TEXT_TRANSLATION_DOMAIN),
+					 'options'=>array(
+					 	'default'=>500,
+					 )));
 					 
 $form->setting(array('type'=>'radio',
 					 'label'=>__('Barre latérale', TEXT_TRANSLATION_DOMAIN),

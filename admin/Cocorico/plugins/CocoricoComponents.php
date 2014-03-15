@@ -87,6 +87,7 @@ function cocoricoInputComponent($component, $options=array()){
 	$options = array_merge(array(
 		'type'=>'text',
 		'class'=>array(),
+		'name'=>$component->getName(),
 		'id'=>$component->getName(),
 	), $options);
 	
@@ -94,9 +95,7 @@ function cocoricoInputComponent($component, $options=array()){
 	else if (isset($options['default'])) $value = $options['default'];
 	
 	//core attributes
-	$attrs = array(
-		'name'=>$component->getName(),
-	);
+	$attrs = array();
 	if (isset($value)) $attrs['value'] = $value;
 	
 	//optionnal attributes
@@ -141,6 +140,20 @@ function cocoricoURLComponent($component, $options=array()){
 }
 CocoDictionary::register(CocoDictionary::COMPONENT, 'url', 'cocoricoURLComponent');
 
+//boolean input
+function cocoricoBooleanComponent($component, $options=array()){
+	$name = $component->getName();
+	$value = ($component->getValue() === false && isset($options['default'])) ? $options['default'] : $component->getValue();
+	
+	$output = '';
+	
+	$output .= '<input type="hidden" name="'.$name.'" value="0" />';
+	$output .= '<input type="checkbox" name="'.$name.'" id="'.$name.'" value="1" '.(($value) ? 'checked="checked"' : '').' />';
+	
+	return $output;
+}
+CocoDictionary::register(CocoDictionary::COMPONENT, 'boolean', 'cocoricoBooleanComponent');
+
 //submit button
 function cocoricoSubmitComponent($component, $options=array()){
 	$options = array_merge(array(
@@ -160,7 +173,7 @@ function cocoricoRadioComponent($component, $radios, $options=array()){
 	), $options);
 	
 	$output = '';
-	$selected = $component->getValue();
+	$selected = (!$component->getValue() && isset($options['default'])) ? $options['default'] : $component->getValue();
 
 	foreach ($radios as $value=>$label){
 		$output .= $options['before'];
@@ -185,7 +198,7 @@ function cocoricoCheckboxComponent($component, $checkboxes, $options=array()){
 	), $options);
 	
 	$output = '';
-	$selected = $component->getValue();
+	$selected = (!$component->getValue() && isset($options['default'])) ? $options['default'] : $component->getValue();
 	if (!$selected) $selected = array();
 	
 	foreach ($checkboxes as $value=>$label){
@@ -215,7 +228,7 @@ function cocoricoColorComponent($component, $options=array()){
 CocoDictionary::register(CocoDictionary::COMPONENT, 'color', 'cocoricoColorComponent');
 
 function cocoricoUploadComponent($component, $options=array()){
-	$value = $component->getValue();
+	$value = (isset($options['value'])) ? $options['value'] : $component->getValue();
 	$options = array_merge(array(
 		'type'=>'text',
 		'class'=>array('cocorico-upload')
@@ -223,7 +236,7 @@ function cocoricoUploadComponent($component, $options=array()){
 	
 	$output = '';
 	$output .= cocoricoInputComponent($component, $options);
-	$output .= '<input type="button" class="button cocorico-upload-button" value="Selectionner" />';
+	$output .= '<input type="button" class="button cocorico-upload-button" value="'.__('Select').'" />';
 	
 	if ($value){
 		$matches = array();
