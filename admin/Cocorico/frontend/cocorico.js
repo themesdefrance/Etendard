@@ -51,40 +51,42 @@
 		$('.cocorico-colorpicker').wpColorPicker();
 		
 		//media uploaders
-		$('.cocorico-upload').each(function(){
-			var $field = $(this),
-				$parent = $field.parent(),
+		$(document).on('click', '.cocorico-upload, .cocorico-upload-button', function(){
+			var $parent = $(this).parent(),
+				$field = $parent.find('.cocorico-upload'),
 				$previewWrapper = $parent.find('.cocorico-preview-wrapper'),
 				$preview = $parent.find('.cocorico-preview');
-				
-			$parent.find('.cocorico-upload-button').add($field).click(function(){
-				if (this === $field[0] && $field.val() !== '') return;
-				
-				var frame = wp.media();
-				
-				frame.on('select', function(){
-					var attachment = frame.state().get('selection').first();
-
-					$field.val(attachment.attributes.url);
-					
-					if (attachment.attributes.type == 'image'){
-						$preview.attr('src', attachment.attributes.url);
-					}
-					else{
-						$preview.attr('src', attachment.attributes.icon);
-					}
-					
-					$previewWrapper.slideDown();
-				});
-				
-				frame.open();
-			});
 			
-			$parent.find('.cocorico-remove').click(function(event){
-				event.preventDefault();
-				$field.val('');
-				$previewWrapper.slideUp();
+			if (this === $field[0] && $field.val() !== '') return;
+
+			var frame = wp.media();
+
+			frame.on('select', function(){
+				var attachment = frame.state().get('selection').first();
+
+				$field.val(attachment.attributes.url);
+
+				if (attachment.attributes.type == 'image'){
+					$preview.attr('src', attachment.attributes.url);
+				}
+				else{
+					$preview.attr('src', attachment.attributes.icon);
+				}
+
+				$previewWrapper.slideDown();
 			});
+
+			frame.open();
+		});
+		
+		$(document).on('click', '.cocorico-remove', function(event){
+			var $parent = $(this).parentsUntil('.cocorico-preview-wrapper').parent().parent(),
+				$field = $parent.find('.cocorico-upload'),
+				$previewWrapper = $parent.find('.cocorico-preview-wrapper')
+				
+			event.preventDefault();
+			$field.val('');
+			$previewWrapper.slideUp();
 		});
 	});
 })(jQuery, window);

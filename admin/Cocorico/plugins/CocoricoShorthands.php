@@ -64,7 +64,7 @@ function cocoricoGroupHeader($cocorico, $tabNames){
 	
 	foreach ($tabNames as $tab=>$name){
 		if (!is_string($tab)) $tab = $name;
-		$cocorico->component('link', $name, '#'.$tab, array('class'=>'nav-tab'));
+		$cocorico->component('link', '#'.$tab, $name, array('class'=>'nav-tab'));
 	}
 	
 	$cocorico->endWrapper('group-header');

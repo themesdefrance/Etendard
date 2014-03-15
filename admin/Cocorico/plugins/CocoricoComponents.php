@@ -12,19 +12,28 @@ function cocoricoDescriptionComponent($component){
 CocoDictionary::register(CocoDictionary::COMPONENT, 'description', 'cocoricoDescriptionComponent');
 
 //link
-function cocoricoLinkComponent($component, $href, $options=array()){
+function cocoricoLinkComponent($component, $content, $options=array()){
 	$output = '<a';
 	
 	$attrs = array(
-		'href'=>$href,
+		'href'=>$component->getName(),
 	);
-	$attrs['class'] = (is_array($options['class'])) ? implode($options['class'], ' ') : $options['class'];
+	foreach ($options as $attr=>$value){
+		switch ($attr){
+			case 'class':
+				$attrs['class'] = (is_array($value)) ? implode($value, ' ') : $value;
+				break;
+			default:
+				$attrs[$attr] = $value;
+				break;
+		}
+	}
 	
 	foreach ($attrs as $name=>$value){
 		$output .= ' '.$name.'="'.esc_attr($value).'"';
 	}
 	
-	$output .= '>'.$component->getName().'</a>';
+	$output .= '>'.$content.'</a>';
 	return $output;
 }
 CocoDictionary::register(CocoDictionary::COMPONENT, 'link', 'cocoricoLinkComponent');
@@ -206,7 +215,6 @@ CocoDictionary::register(CocoDictionary::COMPONENT, 'color', 'cocoricoColorCompo
 
 function cocoricoUploadComponent($component, $options=array()){
 	$value = (isset($options['value'])) ? $options['value'] : $component->getValue();
-	
 	$options = array_merge(array(
 		'type'=>'text',
 		'class'=>array('cocorico-upload')
