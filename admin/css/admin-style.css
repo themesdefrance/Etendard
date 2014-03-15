@@ -1,5 +1,6 @@
 .appearance_page_etendard_options h2.nav-tab-wrapper{
 	margin-bottom: 0;
+	max-width: 900px;
 }
 
 .appearance_page_etendard_options .cocorico-tab-wrapper {
@@ -8,6 +9,7 @@
 	margin-bottom: 20px;
 	border: 1px solid #ccc;
 	border-top: none;
+	max-width: 900px;
 }
 
 .appearance_page_etendard_options .cocorico-tab-wrapper .form-table{
