@@ -660,7 +660,7 @@ function etendard_add_tinymce() {
 }
  
 function etendard_add_tinymce_plugin($plugin_array) {
-	$plugin_array['drop'] =	get_stylesheet_directory_uri() . '/js/tmcedrop.js';
+	$plugin_array['drop'] =	get_stylesheet_directory_uri() . '/admin/js/tmcedrop.js';
 	return $plugin_array;
 }
  
