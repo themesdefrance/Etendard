@@ -18,6 +18,7 @@
 
 .main-header{
 	@extend .clearfix;
+	min-height: 75px; 
 	
 	&.sticky{
 		position: fixed;
