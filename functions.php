@@ -26,12 +26,6 @@ if (!function_exists( 'etendard_activation')){
 }
 add_action('after_switch_theme', 'etendard_activation');
 
-//chargement d'OF
-if (!function_exists( 'optionsframework_init')){
-	define('OPTIONS_FRAMEWORK_DIRECTORY', get_bloginfo('template_directory').'/admin/options/');
-	require_once TEMPLATEPATH.'/admin/options/'.'options-framework.php';
-}
-
 //setup du theme
 if (!function_exists('etendard_setup')){
 	function etendard_setup(){
@@ -161,20 +155,10 @@ add_action('admin_init', 'etendard_admin_init');
 
 if (!function_exists('etendard_admin_menu')){
 	function etendard_admin_menu(){
-		add_theme_page('Options Étendard', 'Options Étendard 2', 'edit_theme_options', 'etendard_options', 'etendard_options');
+		add_theme_page('Options Étendard', 'Options Étendard', 'edit_theme_options', 'etendard_options', 'etendard_options');
 	}
 }
 add_action('admin_menu', 'etendard_admin_menu');
-
-//ajout de la page d'admin etendard
-if (!function_exists('etendard_optionsframework_menu')){
-	function etendard_optionsframework_menu($menu){
-		$menu['page_title'] = __('Options Étendard', TEXT_TRANSLATION_DOMAIN);
-		$menu['menu_title'] = __('Options Étendard', TEXT_TRANSLATION_DOMAIN);
-		return $menu;
-	}
-}
-add_filter('optionsframework_menu', 'etendard_optionsframework_menu');
 
 if (!function_exists('etendard_options')){
 	function etendard_options(){
