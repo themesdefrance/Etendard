@@ -91,24 +91,20 @@ $form->endWrapper('tab');
 $form->startWrapper('tab', 'portfolio');
 $form->startForm();
 
-$form->setting(array('type'=>'radio',
+$form->setting(array('type'=>'boolean',
 					 'label'=>__('Afficher les extraits', TEXT_TRANSLATION_DOMAIN),
 					 'name'=>'extraits_portfolio',
-					 'radios'=>array(
-						 'oui'=>__('Oui', TEXT_TRANSLATION_DOMAIN),
-						 'non'=>__('Non', TEXT_TRANSLATION_DOMAIN)
+					 'options'=>array(
+					 	'default'=>true
 					 ),
-					 'options'=>array('after'=>'<br/>'),
 					 'description'=>__('Affichez ou non les extraits des éléments portfolios sur la page des projets', TEXT_TRANSLATION_DOMAIN)));
 					 
-$form->setting(array('type'=>'radio',
+$form->setting(array('type'=>'boolean',
 					 'label'=>__('Afficher les boutons', TEXT_TRANSLATION_DOMAIN),
 					 'name'=>'boutons_portfolio',
-					 'radios'=>array(
-						 'oui'=>__('Oui', TEXT_TRANSLATION_DOMAIN),
-						 'non'=>__('Non', TEXT_TRANSLATION_DOMAIN)
+					 'options'=>array(
+					 	'default'=>true
 					 ),
-					 'options'=>array('after'=>'<br/>'),
 					 'description'=>__('Affichez ou non les boutons des éléments portfolio sur la page des projets', TEXT_TRANSLATION_DOMAIN)));
 					 
 $form->setting(array('type'=>'text',

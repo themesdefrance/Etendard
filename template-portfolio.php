@@ -69,13 +69,13 @@ else{
 					</figure>
 				</a>
 				
-				<?php if(get_option('etendard_extraits_portfolio') != 'non'){ ?>
+				<?php if(get_option('etendard_extraits_portfolio') != '0'){ ?>
 					<p class="excerpt">
 						<?php the_excerpt(); ?>
 					</p>
 				<?php } ?>
 				
-				<?php if(get_option('etendard_boutons_portfolio') != 'non'){ ?>
+				<?php if(get_option('etendard_boutons_portfolio') != '0'){ ?>
 					<div class="cta-wrapper">
 						<a href="<?php the_permalink(); ?>" class="cta-button">
 							<?php _e('Découvrir le projet', TEXT_TRANSLATION_DOMAIN); ?>
