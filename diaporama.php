@@ -8,24 +8,30 @@ if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_d
 	$liens = maybe_unserialize($custom['etendard_portfolio_diaporama_lien'][0]);
 	
 	if (is_array($unresizedDiaporama)){
+		$height = (int)get_option('etendard_diaporama_height');
+		if (!$height) $height = 500;
+		
+		$path = ABSPATH;
+		if (preg_match('/\/$/', $path)) $path = substr($path, 0, strlen($path)-1);
+		
 		//switch to resized images
 		foreach ($unresizedDiaporama as $img){
 			if (!$img) continue;
-			$fullPath = substr($img, strlen(content_url()));
+			$fullPath = substr($img, strlen(content_url())-strlen('wp-content/'));
 
 			$exploded = explode('/', $fullPath);
 			$imgName = array_pop($exploded);
 			$imgPath = implode($exploded, '/');
 			$separator = strrpos($imgName, '.');
 
-			$wanted = substr($imgName, 0, $separator).'-960x500'.substr($imgName, $separator);
+			$wanted = substr($imgName, 0, $separator).'-960x'.$height.substr($imgName, $separator);
 
-			if (!file_exists(ABSPATH.$imgPath.'/'.$wanted)){
+			if (!file_exists($path.$imgPath.'/'.$wanted)){
 				//create resized image
-				$editor = wp_get_image_editor(ABSPATH.$imgPath.'/'.$imgName);
+				$editor = wp_get_image_editor($path.$imgPath.'/'.$imgName);
 				if (!is_wp_error($editor)){
-					$editor->resize(960, 500, true);
-					$editor->save(ABSPATH.$imgPath.'/'.$wanted);
+					$editor->resize(960, $height, true);
+					$editor->save($path.$imgPath.'/'.$wanted);
 				}
 				else{
 					//default fallabck to normal image
@@ -33,7 +39,7 @@ if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_d
 				}
 			}
 
-			array_push($diaporama, content_url().'/'.$imgPath.'/'.$wanted);
+			array_push($diaporama, get_bloginfo('url').$imgPath.'/'.$wanted);
 		}
 	}
 }
