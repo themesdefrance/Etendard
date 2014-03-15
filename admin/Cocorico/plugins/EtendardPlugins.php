@@ -47,7 +47,7 @@ function etendardDiaporamaShorthand($cocorico, $name){
 		$cocorico->endWrapper('td');
 		
 		$cocorico->startWrapper('td');
-		$cocorico->component('link', 'Supprimer', '#', array(
+		$cocorico->component('link', '#', __('Supprimer', TEXT_TRANSLATION_DOMAIN), array(
 			'class'=>'submitdelete etendard-delete-diaporama',
 			'style'=>'color: #A00;'
 		));
