@@ -7,6 +7,10 @@
 	width: 960px;
 	margin: auto;
 	
+	&.full{
+		width: 100%;
+	}
+	
 	@include width-matches($breakpoint-tablet){
 		width: $breakpoint-tablet;
 	}

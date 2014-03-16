@@ -1,5 +1,6 @@
 <?php
 $diaporama = array();
+$fullWidth = (get_option('etendard_diaporama_width') === 'full');
 
 $custom = get_post_custom();
 if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_diaporama_lien'])){
@@ -8,6 +9,7 @@ if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_d
 	$liens = maybe_unserialize($custom['etendard_portfolio_diaporama_lien'][0]);
 	
 	if (is_array($unresizedDiaporama)){
+		$width = ($fullWidth) ? 1600 : 960;
 		$height = (int)get_option('etendard_diaporama_height');
 		if (!$height) $height = 500;
 		
@@ -24,13 +26,13 @@ if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_d
 			$imgPath = implode($exploded, '/');
 			$separator = strrpos($imgName, '.');
 
-			$wanted = substr($imgName, 0, $separator).'-960x'.$height.substr($imgName, $separator);
+			$wanted = substr($imgName, 0, $separator).'-'.$width.'x'.$height.substr($imgName, $separator);
 
 			if (!file_exists($path.$imgPath.'/'.$wanted)){
 				//create resized image
 				$editor = wp_get_image_editor($path.$imgPath.'/'.$imgName);
 				if (!is_wp_error($editor)){
-					$editor->resize(960, $height, true);
+					$editor->resize($width, $height, true);
 					$editor->save($path.$imgPath.'/'.$wanted);
 				}
 				else{
@@ -45,7 +47,7 @@ if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_d
 }
 ?>
 <?php if (count($diaporama) > 0): ?>
-<div class="wrapper">
+<div class="wrapper <?php if ($width) echo 'full'; ?>">
 	<div class="flexslider">
 		<ul class="slides">
 			<?php foreach ($diaporama as $index=>$img){ ?>
