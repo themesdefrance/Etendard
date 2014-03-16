@@ -604,6 +604,12 @@ if(!function_exists('etendard_admin_notice')){
 			_e("Afin de pouvoir bénéficier des mises à jour et du support, veuillez renseigner votre numéro de licence. Vous avez dû le recevoir par email.", TEXT_TRANSLATION_DOMAIN);
 			echo '</p></div>';
 		}
+		
+		if(!get_option('page_for_posts')){
+			echo '<div class="error"><p>';
+			_e("Vous n'avez pas défini de page pour les articles", TEXT_TRANSLATION_DOMAIN);
+			echo '</p></div>';
+		}
 	}
 }
 add_action('admin_notices', 'etendard_admin_notice');
