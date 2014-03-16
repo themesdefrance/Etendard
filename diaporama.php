@@ -13,27 +13,30 @@ if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_d
 		$height = (int)get_option('etendard_diaporama_height');
 		if (!$height) $height = 500;
 		
+		//abs path without trailing slash
 		$path = ABSPATH;
 		if (preg_match('/\/$/', $path)) $path = substr($path, 0, strlen($path)-1);
 		
 		//switch to resized images
 		foreach ($unresizedDiaporama as $img){
 			if (!$img) continue;
+			//full path to the image, without root url
 			$fullPath = substr($img, strlen(content_url())-strlen('wp-content/'));
 
 			$exploded = explode('/', $fullPath);
-			$imgName = array_pop($exploded);
-			$imgPath = implode($exploded, '/');
+			$imgName = array_pop($exploded);//only the image name
+			$imgDir = implode($exploded, '/').'/';//direcotry containing the image, with leading and trailing slash
+			
+			//compute the name of the resized image
 			$separator = strrpos($imgName, '.');
-
 			$wanted = substr($imgName, 0, $separator).'-'.$width.'x'.$height.substr($imgName, $separator);
 
-			if (!file_exists($path.$imgPath.'/'.$wanted)){
+			if (!file_exists($path.$imgDir.$wanted)){
 				//create resized image
-				$editor = wp_get_image_editor($path.$imgPath.'/'.$imgName);
+				$editor = wp_get_image_editor($path.$imgDir.$imgName);
 				if (!is_wp_error($editor)){
 					$editor->resize($width, $height, true);
-					$editor->save($path.$imgPath.'/'.$wanted);
+					$editor->save($path.$imgDir.$wanted);
 				}
 				else{
 					//default fallabck to normal image
@@ -41,13 +44,13 @@ if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_d
 				}
 			}
 
-			array_push($diaporama, get_bloginfo('url').$imgPath.'/'.$wanted);
+			array_push($diaporama, get_bloginfo('url').$imgDir.$wanted);
 		}
 	}
 }
 ?>
 <?php if (count($diaporama) > 0): ?>
-<div class="wrapper <?php if ($width) echo 'full'; ?>">
+<div class="wrapper <?php if ($fullWidth) echo 'full'; ?>">
 	<div class="flexslider">
 		<ul class="slides">
 			<?php foreach ($diaporama as $index=>$img){ ?>
