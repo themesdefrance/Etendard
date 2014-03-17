@@ -189,7 +189,7 @@ if (!function_exists('etendard_register_custom_fields')){
 					 'default'
 		);
 		
-		add_meta_box('etandard_portfolio_temoignage',
+		add_meta_box('etendard_portfolio_temoignage',
 					 __('Témoignage', TEXT_TRANSLATION_DOMAIN),
 					 'etendard_portfolio_temoignage',
 					 'portfolio',
@@ -197,7 +197,7 @@ if (!function_exists('etendard_register_custom_fields')){
 					 'high'
 		);
 		
-		add_meta_box('etandard_portfolio_diaporama',
+		add_meta_box('etendard_portfolio_diaporama',
 					 __('Diaporama', TEXT_TRANSLATION_DOMAIN),
 					 'etendard_portfolio_diaporama',
 					 'portfolio',
@@ -221,7 +221,7 @@ if (!function_exists('etendard_register_custom_fields')){
 				
 				$display_blocks = get_option('etendard_blocks_presence');
 				if (in_array('diaporama', $display_blocks)){
-					add_meta_box('etandard_portfolio_diaporama',
+					add_meta_box('etendard_portfolio_diaporama',
 							 __('Diaporama', TEXT_TRANSLATION_DOMAIN),
 							 'etendard_portfolio_diaporama',
 							 'page',
