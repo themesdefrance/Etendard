@@ -4,6 +4,9 @@ Template Name: Portfolio
 */
 ?>
 <?php get_header(); ?>
+
+<?php get_template_part('header-bar'); ?>
+
 <?php 
 $terms = get_terms('portfolio_categorie');
 

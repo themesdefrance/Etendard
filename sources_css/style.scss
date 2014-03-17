@@ -36,7 +36,7 @@
 .main-header .logo-wrap{
 	float: left;
 	max-width:50%;
-	margin-top: 4px;
+	margin: 2px 0;
 	line-height: 0;
 	
 	@include width-matches($breakpoint-mobile){
@@ -79,7 +79,7 @@
 }
 .main-menu a{
 	display: inline-block;
-	padding: 24px 12px;
+	padding: 22px 12px 18px;
 	text-decoration: none;
 	font-size: 18px;
 	border-bottom: 3px solid transparent;
@@ -180,6 +180,33 @@
 		font-size: 50px;
 		line-height: 0;
 		text-align: right;
+	}
+}
+
+.headerbar{
+	//background:#e6e7e8;
+	background:$couleur-principale;
+	& .wrapper>.headerbartitle{
+		margin-bottom:0;
+		display:inline;
+		font-size: 25px;
+	}
+}
+
+// Fil d'ariane
+.headerbar #breadcrumbs{
+	font-size: 0.9rem;
+	float: right;
+	margin-top: 6px;
+}
+.home .headerbar #breadcrumbs{
+	display:none;
+}
+
+.headerbar #breadcrumbs a{
+	color:#fff;
+	&:hover{
+		text-decoration:underline;
 	}
 }
 
@@ -1165,6 +1192,8 @@ form.search-form input.search-submit{
 	margin:auto;
 	//width:auto !important;
 }
+
+
 
 ////////////////////////////////////////////////////////////
 // Shortcodes

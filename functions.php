@@ -510,10 +510,18 @@ if(!function_exists('etendard_user_styles')){
 				.article .content a.bouton,
 				.contact-form .submit input,
 				a.bouton.lirelasuite,
-				::selection{
+				.headerbar{
 					background: <?php echo $color; ?> !important;
 					color: #fff !important;
 				}
+				
+				
+				<?php foreach(array('-moz-', '-webkit-', '-ms-', '-o-', '') as $prefix){ ?>
+				::<?php echo $prefix; ?>selection{ 
+					background: <?php echo $color; ?>;
+					color: #fff;
+				}
+				<?php } ?>
 				
 				.toplevel > li > a.active{
 					border-bottom: 2px solid <?php echo $color; ?> !important;;

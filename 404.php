@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <section class="blog grid">
 	<div class="wrapper">
 		<h1 class="header-title">

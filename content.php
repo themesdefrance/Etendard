@@ -23,7 +23,7 @@
 		
 		<?php endif; ?>
 		
-		<?php if (is_single() || is_page()): ?>
+		<?php if (is_single()): ?>
 		
 			<?php if(!is_page_template('template_home.php')): ?>
 			
@@ -35,7 +35,7 @@
 				
 			<?php endif; ?>
 			
-		<?php else: ?>
+		<?php elseif(!is_page()): ?>
 		
 			<h2 class="header-title">
 			
@@ -43,7 +43,8 @@
 				
 			</h2>
 			
-		<?php endif; // is_single() ?>
+		
+		<?php endif; ?>
 		
 		<?php if( !is_singular('service') && !is_page() && !is_tag()): ?> 
 		

@@ -1,4 +1,4 @@
-<section class="description">
+<section class="description headerbar">
 	<div class="wrapper">
 		<h1>
 			<?php echo get_bloginfo('title'); ?>
