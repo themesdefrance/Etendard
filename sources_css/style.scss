@@ -30,7 +30,7 @@
 .main-header .logo-wrap{
 	float: left;
 	max-width:50%;
-	margin-top: 4px;
+	margin: 2px 0;
 	line-height: 0;
 	
 	@include width-matches($breakpoint-mobile){
