@@ -7,9 +7,18 @@ function etendardDiaporamaShorthand($cocorico, $name){
 	$liens = CoCoRequest::request($name.'_lien');
 	if (!$liens) $liens = $cocorico->getStore()->get($name.'_lien');
 	
+	$titres = CoCoRequest::request($name.'_titre');
+	if (!$titres) $titres = $cocorico->getStore()->get($name.'_titre');
+	
 	$cocorico->startForm();
 	
-	foreach ($images as $index=>$img){	
+	foreach ($images as $index=>$img){
+		$cocorico->startWrapper('tr');
+		$cocorico->startWrapper('th');
+		$cocorico->component('raw', __('Diaporama', TEXT_TRANSLATION_DOMAIN).' #'.($index+1));
+		$cocorico->endWrapper('th');
+		$cocorico->endWrapper('tr');
+		
 		$cocorico->startWrapper('tr');
 		
 		$cocorico->startWrapper('th');
@@ -29,6 +38,10 @@ function etendardDiaporamaShorthand($cocorico, $name){
 		)->filter('save');
 		$cocorico->endWrapper('td');
 		
+		$cocorico->endWrapper('tr');
+		
+		$cocorico->startWrapper('tr');
+		
 		$cocorico->startWrapper('th');
 		//THIS MAKES NO SENSE, INVERTARGS
 		$cocorico->component('label', $name.'-link-'.$index, __('Lien', TEXT_TRANSLATION_DOMAIN));
@@ -42,6 +55,23 @@ function etendardDiaporamaShorthand($cocorico, $name){
 				'name'=>$name.'_lien[]',
 				'value'=>$liens[$index],
 				'id'=>$name.'-link-'.$index,
+			)
+		)->filter('save');
+		$cocorico->endWrapper('td');
+		
+		$cocorico->startWrapper('th');
+		//THIS MAKES NO SENSE, INVERTARGS
+		$cocorico->component('label', $name.'-title-'.$index, __('Titre', TEXT_TRANSLATION_DOMAIN));
+		$cocorico->endWrapper('th');
+		
+		$cocorico->startWrapper('td');
+		$cocorico->component(
+			'text', 
+			$name.'_titre',
+			array(
+				'name'=>$name.'_titre[]',
+				'value'=>$titres[$index],
+				'id'=>$name.'-title-'.$index,
 			)
 		)->filter('save');
 		$cocorico->endWrapper('td');
