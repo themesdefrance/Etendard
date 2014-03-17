@@ -54,8 +54,8 @@ $form->setting(array('type'=>'radio',
 					 'label'=>__('Largeur des diaporamas', TEXT_TRANSLATION_DOMAIN),
 					 'name'=>'diaporama_width',
 					 'radios'=>array(
-						 'auto'=>__('Largeur du site', TEXT_TRANSLATION_DOMAIN),
-						 'full'=>__('Largeur de la fenêtre', TEXT_TRANSLATION_DOMAIN)
+						 'auto'=>__('Cadré', TEXT_TRANSLATION_DOMAIN),
+						 'full'=>__('Plein écran', TEXT_TRANSLATION_DOMAIN)
 					 ),
 					 'options'=>array(
 					 	'after'=>'<br/>',
