@@ -10,13 +10,16 @@
 	margin-bottom: 20px;
 	border: 1px solid #ccc;
 	border-top: none;
-<<<<<<< HEAD
 	max-width: 900px;
 	margin-right: 20px;
-=======
->>>>>>> Bandeau-pages
 }
 
 .appearance_page_etendard_options .cocorico-tab-wrapper .form-table{
 	margin-top:0;
+}
+
+#normal-sortables .submitbox .submitdelete:hover{
+	color: red;
+	border: none;
+	background-color:transparent;
 }
