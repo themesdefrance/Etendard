@@ -22,7 +22,7 @@
 
 .main-header{
 	@extend .clearfix;
-	min-height: 75px; 
+	min-height: 68px; 
 	
 	&.sticky{
 		position: fixed;
@@ -36,7 +36,7 @@
 .main-header .logo-wrap{
 	float: left;
 	max-width:50%;
-	margin: 2px 0;
+	margin: 4px 0;
 	line-height: 0;
 	
 	@include width-matches($breakpoint-mobile){
