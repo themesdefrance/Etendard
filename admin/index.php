@@ -48,7 +48,7 @@ $form->setting(array('type'=>'color',
 $form->setting(array('type'=>'upload',
 					 'name'=>'logo',
 					 'label'=>__('Logo', TEXT_TRANSLATION_DOMAIN),
-					 'description'=>__('Le fichier image doit être au format JPG ou PNG. Notez également que la taille optimale est de 280px par 72px.', TEXT_TRANSLATION_DOMAIN)));
+					 'description'=>__('Le fichier image doit être au format JPG ou PNG. Notez également que la taille optimale est de 280px par 60px.', TEXT_TRANSLATION_DOMAIN)));
 					
 $form->setting(array('type'=>'radio',
 					 'label'=>__('Largeur des diaporamas', TEXT_TRANSLATION_DOMAIN),
