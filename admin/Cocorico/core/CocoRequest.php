@@ -24,7 +24,7 @@ class CocoRequest{
 		$values = array();
 		
 		foreach ($names as $name){
-			$values[$name] = $_POST[$name];
+			if ($name && array_key_exists($name, $_POST)) $values[$name] = $_POST[$name];
 		}
 		
 		update_option('cocostore_values', serialize($values));
