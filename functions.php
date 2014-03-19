@@ -117,9 +117,6 @@ if (!function_exists('etendard_enqueue')){
 	function etendard_enqueue(){
 		$theme = wp_get_theme();
 		
-//		wp_register_script('flexslider', get_template_directory_uri().'/lib/flexslider/jquery.flexslider-min.js', array('jquery'), $theme->get('Version'), true);
-//		wp_register_style('flexslider', get_template_directory_uri().'/lib/flexslider/flexslider.css', false, $theme->get('Version'));
-		
 		wp_register_script('glide', get_template_directory_uri().'/lib/glide/glide.min.js', array('jquery'), $theme->get('Version'), true);
 		wp_register_style('glide', get_template_directory_uri().'/lib/glide/glide.css', false, $theme->get('Version'));
 		

@@ -63,23 +63,3 @@ if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_d
 	</div>
 </div>
 <?php endif; ?>
-
-<!--
-<div class="wrapper <?php if ($fullWidth) echo 'full'; ?>">
-	<div class="flexslider">
-		<ul class="slides">
-			<?php foreach ($diaporama as $index=>$img){ ?>
-			<li>
-				<?php if (isset($liens[$index]) && filter_var($liens[$index], FILTER_VALIDATE_URL) !== false): ?>
-				<a href="<?php echo $liens[$index]; ?>">
-					<img src="<?php echo $img; ?>" alt="<?php echo $liens[$index]; ?>" />
-				</a>
-				<?php else: ?>
-				<img src="<?php echo $img; ?>" />
-				<?php endif; ?>
-			</li>
-			<?php } ?>
-		</ul>
-	</div>
-</div>
--->
