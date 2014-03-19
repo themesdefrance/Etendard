@@ -29,7 +29,7 @@ $form->setting(array('type'=>'checkbox',
 					 'options'=>array('after'=>'<br/>')));
 					 
 $form->setting(array('type'=>'textarea',
-					 'name'=>'etendard_footer_gauche',
+					 'name'=>'footer_gauche',
 					 'label'=>__("Pied de page", TEXT_TRANSLATION_DOMAIN),
 					 'description'=>__('Contenu de la partie gauche du pied de page. Les balises HTML de lien (&lt;a href=&quot;LIEN&quot;&gt;TEXTE_LIEN&lt;/a&gt;), de mise en gras (&lt;strong&gt;TEXTE_GRAS&lt;/strong&gt;), de mise en italique(&lt;em&gt;TEXTE_ITALIQUE&lt;/em&gt;) et d\'image (&lt;img src=&quot;ADRESSE_IMAGE&quot;&gt;) sont autoris&eacute;es. Laissez vide pour ne rien afficher.', TEXT_TRANSLATION_DOMAIN)));
 
