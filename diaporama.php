@@ -7,6 +7,7 @@ if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_d
 	$unresizedDiaporama = maybe_unserialize($custom['etendard_portfolio_diaporama'][0]);
 	$diaporama = array();
 	$liens = maybe_unserialize($custom['etendard_portfolio_diaporama_lien'][0]);
+	$titres = maybe_unserialize($custom['etendard_portfolio_diaporama_titre'][0]);
 	
 	if (is_array($unresizedDiaporama)){
 		$width = ($fullWidth) ? 1600 : 960;
@@ -53,13 +54,47 @@ if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_d
 <?php if (count($diaporama) > 0): ?>
 <div class="wrapper <?php if ($fullWidth) echo 'full'; ?>">
 	<div class="slider">
-		<ul class="slides">
+		<ul class="slides" style="height: <?php echo $height; ?>px;">
 			<?php foreach ($diaporama as $index=>$img){ ?>
 			<li class="slide">
-				<div class="img" style="background-image:url(<?php echo $img; ?>);height: <?php echo $height; ?>px;"></div>
+				<?php if (isset($liens[$index]) && filter_var($liens[$index], FILTER_VALIDATE_URL) !== false): ?>
+					<a href="<?php echo $liens[$index]; ?>">
+				<?php endif; ?>
+				
+				<div class="img" style="background-image:url(<?php echo $img; ?>); height: <?php echo $height; ?>px;">
+					<?php if (isset($titres[$index]) && trim($titres[$index]) != ''): ?>
+					<div class="slide-caption">
+						<?php echo $titres[$index]; ?>
+					</div>
+					<?php endif; ?>
+				</div>
+				
+				<?php if (isset($liens[$index]) && filter_var($liens[$index], FILTER_VALIDATE_URL) !== false): ?>
+					</a>
+				<?php endif; ?>
 			</li>
 			<?php } ?>
 		</ul>
 	</div>
 </div>
 <?php endif; ?>
+
+<!--
+<div class="wrapper <?php if ($fullWidth) echo 'full'; ?>">
+	<div class="flexslider">
+		<ul class="slides">
+			<?php foreach ($diaporama as $index=>$img){ ?>
+			<li>
+				<?php if (isset($liens[$index]) && filter_var($liens[$index], FILTER_VALIDATE_URL) !== false): ?>
+				<a href="<?php echo $liens[$index]; ?>">
+					<img src="<?php echo $img; ?>" alt="<?php echo $liens[$index]; ?>" />
+				</a>
+				<?php else: ?>
+				<img src="<?php echo $img; ?>" />
+				<?php endif; ?>
+			</li>
+			<?php } ?>
+		</ul>
+	</div>
+</div>
+-->
