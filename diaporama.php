@@ -49,7 +49,22 @@ if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_d
 	}
 }
 ?>
+
 <?php if (count($diaporama) > 0): ?>
+<div class="wrapper <?php if ($fullWidth) echo 'full'; ?>">
+	<div class="slider">
+		<ul class="slides">
+			<?php foreach ($diaporama as $index=>$img){ ?>
+			<li class="slide">
+				<div class="img" style="background-image:url(<?php echo $img; ?>);height: <?php echo $height; ?>px;"></div>
+			</li>
+			<?php } ?>
+		</ul>
+	</div>
+</div>
+<?php endif; ?>
+
+<!--
 <div class="wrapper <?php if ($fullWidth) echo 'full'; ?>">
 	<div class="flexslider">
 		<ul class="slides">
@@ -67,4 +82,4 @@ if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_d
 		</ul>
 	</div>
 </div>
-<?php endif; ?>
+-->
