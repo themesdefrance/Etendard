@@ -3,6 +3,7 @@
 function etendardDiaporamaShorthand($cocorico, $name){
 	$images = CoCoRequest::request($name);
 	if (!$images) $images = $cocorico->getStore()->get($name);
+	if (!$images) $images = array();
 	
 	$liens = CoCoRequest::request($name.'_lien');
 	if (!$liens) $liens = $cocorico->getStore()->get($name.'_lien');
