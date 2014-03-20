@@ -507,8 +507,18 @@ section.portfolio nav.categories a{
 	}
 }
 
-section.realisation .header-title{
-	margin-bottom: 10px;
+section.realisation{
+	padding:0 0 40px;
+}
+
+section.realisation > .wrapper.full, .diaporama > .wrapper.full{
+	@include width-matches($breakpoint-mobile){
+		padding: 0;
+	}
+}
+
+section.realisation .section-title{
+	margin: 30px 0 20px;
 }
 
 section.realisation .slider {
@@ -1177,6 +1187,7 @@ form.search-form input.search-submit{
 	background-size:cover;
 	margin: 0 auto 40px;
 	position: relative;
+	background-position: 50% 50%;
 }
 .slider .slide-caption{
 	background: rgba(0,0,0,.7);
