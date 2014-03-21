@@ -54,9 +54,9 @@ if (!function_exists('etendard_setup')){
 		
 		add_theme_support('post-thumbnails');
 		
-		add_theme_support('post-formats', array(
+		/*add_theme_support('post-formats', array(
 			'video'
-		));
+		));*/
 		
 		add_image_size('etendard-portfolio-thumbnail', 301, 230, true);
 		add_image_size('etendard-service-thumbnail', 230, 230, true);
