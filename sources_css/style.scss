@@ -507,11 +507,11 @@ section.portfolio nav.categories a{
 	}
 }
 
-section.realisation{
+section.realisation, section.diaporama{
 	padding:0 0 40px;
 }
 
-section.realisation > .wrapper.full, .diaporama > .wrapper.full{
+section.realisation > .wrapper.full, section.diaporama > .wrapper.full{
 	@include width-matches($breakpoint-mobile){
 		padding: 0;
 	}
