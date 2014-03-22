@@ -5,11 +5,12 @@ class CocoRequest{
 	private static $restored = array();
 	
 	public static function request($name){
+		array_push(CocoRequest::$requests, $name);
+		
 		if (isset(CocoRequest::$restored[$name])){
 			return CocoRequest::$restored[$name];
 		}
 		else{
-			array_push(CocoRequest::$requests, $name);
 			return false;
 		}
 	}
