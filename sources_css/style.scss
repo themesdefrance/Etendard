@@ -1200,7 +1200,29 @@ form.search-form input.search-submit{
 	text-align: center;
 	padding: 16px 0;
 }
-
+.slider .slider-arrow{
+	top: 50%;
+	font-size: 25px;
+	line-height: 0;
+	background: white;
+	border-radius: 50%;
+	padding: 7px;
+	color: #696969;
+	opacity: .7;
+	@include transition();
+	
+	&:hover{
+		text-decoration: none;
+		opacity: 1;
+	}
+	
+	&.icon-arrow-right{
+		right: 10px;
+	}
+	&.icon-arrow-left{
+		left: 10px;
+	}
+}
 
 
 ////////////////////////////////////////////////////////////

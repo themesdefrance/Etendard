@@ -118,8 +118,20 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-mail:before, .icon-search:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, .icon-soundcloud:before, .icon-pinterest:before, .icon-instagram:before, .icon-viadeo:before, .icon-play:before, .icon-ellipsis:before, .icon-list:before {
+.icon-mail:before, .icon-search:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, .icon-soundcloud:before, .icon-pinterest:before, .icon-instagram:before, .icon-viadeo:before, .icon-play:before, .icon-ellipsis:before, .icon-list:before, .icon-arrow-right:before, .icon-arrow-left:before {
 	@extend %iconfont;
+}
+.icon-viadeo:before {
+	content: "\e60d";
+}
+.icon-arrow-right:before {
+	content: "\e611";
+}
+.icon-arrow-left:before {
+	content: "\e612";
+}
+.icon-youtube:before {
+	content: "\e60c";
 }
 .icon-mail:before {
 	content: "\e600";
@@ -127,35 +139,11 @@ you can use the generic selector below, but it's slower:
 .icon-search:before {
 	content: "\e601";
 }
-.icon-googleplus:before {
-	content: "\e602";
-}
-.icon-facebook:before {
-	content: "\e603";
-}
-.icon-twitter:before {
-	content: "\e604";
-}
 .icon-rss:before {
 	content: "\e605";
 }
-.icon-vimeo:before {
-	content: "\e606";
-}
-.icon-linkedin:before {
-	content: "\e607";
-}
-.icon-skype:before {
-	content: "\e608";
-}
-.icon-soundcloud:before {
-	content: "\e609";
-}
-.icon-pinterest:before {
-	content: "\e60a";
-}
-.icon-instagram:before {
-	content: "\e60b";
+.icon-list:before {
+	content: "\e610";
 }
 .icon-play:before {
 	content: "\e60e";
@@ -163,12 +151,30 @@ you can use the generic selector below, but it's slower:
 .icon-ellipsis:before {
 	content: "\e60f";
 }
-.icon-list:before {
-	content: "\e610";
+.icon-vimeo:before {
+	content: "\e606";
 }
-.icon-youtube:before {
-	content: "\e60c";
+.icon-twitter:before {
+	content: "\e604";
 }
-.icon-viadeo:before {
-	content: "\e60d";
+.icon-facebook:before {
+	content: "\e603";
+}
+.icon-googleplus:before {
+	content: "\e602";
+}
+.icon-pinterest:before {
+	content: "\e60a";
+}
+.icon-linkedin:before {
+	content: "\e607";
+}
+.icon-instagram:before {
+	content: "\e60b";
+}
+.icon-skype:before {
+	content: "\e608";
+}
+.icon-soundcloud:before {
+	content: "\e609";
 }
