@@ -12,10 +12,13 @@ require_once 'admin/Cocorico/Cocorico.php';
 
 //chargement des widgets	
 require_once 'admin/widgets/social.php';
+require_once 'admin/bienvenue.php';
+
 
 if(!class_exists('EDD_SL_Theme_Updater')){
 	include(dirname( __FILE__ ).'/admin/EDD_SL_Theme_Updater.php');
 }
+
 
 //installation du thème
 if (!function_exists( 'etendard_activation')){
@@ -29,6 +32,7 @@ add_action('after_switch_theme', 'etendard_activation');
 //setup du theme
 if (!function_exists('etendard_setup')){
 	function etendard_setup(){
+		
 		register_nav_menu('primary', __('Menu principal', TEXT_TRANSLATION_DOMAIN));
 		register_nav_menu('footer', __('Menu pied de page', TEXT_TRANSLATION_DOMAIN));
 			
@@ -63,6 +67,9 @@ if (!function_exists('etendard_setup')){
 		add_image_size('etendard-blog-thumbnail', 225, 150, true);
 		add_image_size('etendard-post-thumbnail', 620, 400, true);
 	//	load_theme_textdomain(TEXT_TRANSLATION_DOMAIN, get_template_directory().'/local');
+	
+		// Transient de Redirection après activation
+		set_transient( '_etendard_activation_redirect', true, 30 );
 	}
 }
 add_action('after_setup_theme', 'etendard_setup');

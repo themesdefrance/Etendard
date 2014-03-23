@@ -43,11 +43,11 @@ class Etendard_Welcome {
 		remove_submenu_page( 'index.php', 'etendard-bienvenue' );
 
 		// Badge for welcome page
-		$badge_url = EDD_PLUGIN_URL . 'assets/images/edd-badge.png';
+		$badge_url = get_stylesheet_directory_uri() . '/admin/img/badge.png';
 		?>
 		<style type="text/css" media="screen">
 		/*<![CDATA[*/
-		.edd-badge {
+		.etendard-badge {
 			padding-top: 150px;
 			height: 52px;
 			width: 185px;
@@ -60,13 +60,13 @@ class Etendard_Welcome {
 			background: url('<?php echo $badge_url; ?>') no-repeat;
 		}
 
-		.about-wrap .edd-badge {
+		.about-wrap .etendard-badge {
 			position: absolute;
 			top: 0;
 			right: 0;
 		}
 
-		.edd-welcome-screenshots {
+		.etendard-screenshots {
 			float: right;
 			margin-left: 10px!important;
 		}
@@ -96,61 +96,58 @@ class Etendard_Welcome {
 		?>
 		<div class="wrap about-wrap">
 			<h1><?php printf( __( 'Bienvenue sur Étendard %s', TEXT_TRANSLATION_DOMAIN ), $display_version ); ?></h1>
-			<div class="about-text"><?php printf( __( 'Merci d\'avoir procédé à la mise à jour, vous allez pouvoir découvrir ce que nous avons ajouté pour que votre site web soit encore plus performant :)', TEXT_TRANSLATION_DOMAIN ), $display_version ); ?></div>
-			<div class="edd-badge"><?php printf( __( 'Version %s', TEXT_TRANSLATION_DOMAIN ), $display_version ); ?></div>
+			<div class="about-text"><?php printf( __( 'Merci d\'avoir procédé à la mise à jour, vous allez pouvoir découvrir ce que nous avons amélioré pour que votre site web soit encore plus performant.', TEXT_TRANSLATION_DOMAIN ), $display_version ); ?></div>
+			<div class="etendard-badge"><?php printf( __( 'Version %s', TEXT_TRANSLATION_DOMAIN ), $display_version ); ?></div>
 
 			<?php $this->tabs(); ?>
 
 			<div class="changelog">
-				<h3><?php _e( 'Improved Order Editing', TEXT_TRANSLATION_DOMAIN );?></h3>
+				<h3><?php _e( 'Découvrez le nouveau diaporama et les bandeaux colorés', TEXT_TRANSLATION_DOMAIN );?></h3>
 
 				<div class="feature-section">
 
-					<img src="<?php echo EDD_PLUGIN_URL . 'assets/images/screenshots/order-details.png'; ?>" class="edd-welcome-screenshots"/>
+					<img src="<?php echo get_stylesheet_directory_uri() . '/admin/img/accueil-etendard.jpg'; ?>" class="etendard-screenshots"/>
 
-					<h4><?php _e( 'Combined View and Edit Screens', TEXT_TRANSLATION_DOMAIN );?></h4>
-					<p><?php _e( 'The View and Edit payment screens have been combined into a single, more efficient, user-friendly screen. Add or remove products to an order, adjust amounts, add notes, or resend purchase receipts all at one time from the same screen.', TEXT_TRANSLATION_DOMAIN );?></p>
-					<p><?php _e( 'All data associated with a payment can now be edited as well, including the customer\'s billing address.', TEXT_TRANSLATION_DOMAIN );?></p>
+					<h4><?php _e( 'Mise à jour du diaporama', TEXT_TRANSLATION_DOMAIN );?></h4>
+					<p><?php _e( 'Il est maintenant possible d\'afficher le diaporama en pleine largeur ou de le garder cadré.', TEXT_TRANSLATION_DOMAIN );?></p>
+					<p><?php _e( 'La hauteur est désormais directement personnalisable via l\'administration. Vos images seront automatiquement redimensionnées (attention toutefois à employer des images avec une taille adaptée).', TEXT_TRANSLATION_DOMAIN );?></p>
 
-					<h4><?php _e( 'Responsive and Mobile Friendly', TEXT_TRANSLATION_DOMAIN );?></h4>
-					<p><?php _e( 'We have followed the introduction of a responsive Dashboard in WordPress 3.8 and made our own view/edit screen for orders fully responsive and easy to use on mobile devices.', TEXT_TRANSLATION_DOMAIN );?></p>
-
+					<h4><?php _e( 'Étendard prend des couleurs', TEXT_TRANSLATION_DOMAIN );?></h4>
+					<p><?php _e( 'Des bandeaux colorés ont été ajoutés pour rendre Étendard un peu moins minimaliste. La couleur que vous aurez définie dans l\'administration leur sera appliquée.', TEXT_TRANSLATION_DOMAIN );?></p>
+					<p><?php _e( 'Ces bandeaux contiennent les titres des pages sur la droite et un fil d\'ariane sur la gauche si vous l\'avez activé dans le plugin WordPress SEO.', TEXT_TRANSLATION_DOMAIN );?></p>
 				</div>
 			</div>
-
+			
+			
 
 			<div class="changelog">
-				<h3><?php _e( 'Additional Updates', TEXT_TRANSLATION_DOMAIN );?></h3>
+				<h3><?php _e( 'Autres nouveautés d\'Étendard', TEXT_TRANSLATION_DOMAIN );?></h3>
 
 				<div class="feature-section col three-col">
 					<div>
-						<h4><?php _e( 'Improved Product Creation / Editing', TEXT_TRANSLATION_DOMAIN );?></h4>
-						<p><?php _e( 'The interface for creating / editing Download products has been dramatically improved by separating the UI out into sections that are easier to use and less cluttered.', TEXT_TRANSLATION_DOMAIN );?></p>
+						<h4><?php _e( 'L\'administration se minimalise', TEXT_TRANSLATION_DOMAIN );?></h4>
+						<p><?php _e( 'Étendard repose désormais sur notre propre framework : Cocorico. Sans trop entrer dans les détails, Cocorico sert à gérer les options d\'Étendard. En fait, ce qui compte pour vous est que l\'administration d\'Étendard gagne en simplicité.', TEXT_TRANSLATION_DOMAIN );?></p>
 
-						<h4><?php _e( 'EDD_Graph Class', TEXT_TRANSLATION_DOMAIN );?></h4>
-						<p><?php _e( 'Along with per-product earnings / sales graphs, we have introduced an EDD_Graph class that makes it exceptionally simple to generate your own custom graphs. Simply build an array of data and let the class work its magic.', TEXT_TRANSLATION_DOMAIN );?></p>
+						<h4><?php _e( 'Optimisation pour WordPress SEO', TEXT_TRANSLATION_DOMAIN );?></h4>
+						<p><?php _e( 'Si vous utilisez le plugin WordPress SEO, Étendard prend maintenant en charge la fonctionnalité fil d\'ariane. Rendez-vous dans la page "Liens internes" pour l\'activer.', TEXT_TRANSLATION_DOMAIN );?></p>
 					</div>
 
 					<div>
-						<h4><?php _e( 'Payment Date Filters', TEXT_TRANSLATION_DOMAIN );?></h4>
-						<p><?php _e( 'A new section has been added to the Payment History screen that allows you to filter payments by date, making it much easier to locate payments for a particular period.', TEXT_TRANSLATION_DOMAIN );?></p>
+						<h4><?php _e( 'Insertion des shortcodes simplifiée', TEXT_TRANSLATION_DOMAIN );?></h4>
+						<p><?php _e( 'Cette nouvelle version permet d\'insérer les shotcodes plus simplement. Un bouton dans l\'éditeur visuel a été ajouté. Cliquez dessus et agencez vos pages et articles.', TEXT_TRANSLATION_DOMAIN );?></p>
 
-						<h4><?php _e( 'EDD_Email_Template_Tags Class', TEXT_TRANSLATION_DOMAIN );?></h4>
-						<p><?php _e( 'A new API has been introduced for easily adding new template tags to purchase receipts and admin sale notifications.', TEXT_TRANSLATION_DOMAIN );?></p>
 					</div>
 
 					<div class="last-feature">
-						<h4><?php _e( 'Resend Purchase Receipts in Bulk', TEXT_TRANSLATION_DOMAIN );?></h4>
-						<p><?php _e( 'A new action has been added to the Bulk Actions menu in the Payment History screen that allows you to resend purchase receipt emails in bulk.' ,TEXT_TRANSLATION_DOMAIN );?></p>
+						<h4><?php _e( 'La page portfolio gagne en flexibilité', TEXT_TRANSLATION_DOMAIN );?></h4>
+						<p><?php _e( 'En vous rendant dans l\'onglet portfolio de l\'administration, vous pourrez choisir d\'afficher ou non les extraits et les boutons de la page portfolio.' ,TEXT_TRANSLATION_DOMAIN );?></p>
 
-						<h4><?php _e( 'Exclude Products from Discounts',TEXT_TRANSLATION_DOMAIN );?></h4>
-						<p><?php _e( 'Along with being able to assign discounts to specific products, you can also now exclude products from discount codes.', TEXT_TRANSLATION_DOMAIN );?></p>
 					</div>
 				</div>
 			</div>
 
 			<div class="return-to-dashboard">
-				<a href="<?php echo esc_url( admin_url( add_query_arg( array( 'post_type' => 'download', 'page' => 'edd-settings' ), 'edit.php' ) ) ); ?>"><?php _e( 'Go to Easy Digital Downloads Settings', TEXT_TRANSLATION_DOMAIN ); ?></a>
+				<a href="<?php echo admin_url( 'themes.php?page=etendard_options') ?>" class="button button-primary"><?php _e( 'Découvrez la nouvelle administration d\'Étendard', TEXT_TRANSLATION_DOMAIN ); ?></a>
 			</div>
 		</div>
 		<?php
@@ -163,39 +160,83 @@ class Etendard_Welcome {
 	 * @since 1.9
 	 * @return void
 	 */
-	public function getting_started_screen() {
-		list( $display_version ) = explode( '-', EDD_VERSION );
+	public function bienvenue_screen() {
+		list( $display_version ) = explode( '-', EDD_SL_THEME_VERSION );
 		?>
 		<div class="wrap about-wrap">
-			<h1><?php printf( __( 'Welcome to Easy Digital Downloads %s', TEXT_TRANSLATION_DOMAIN ), $display_version ); ?></h1>
-			<div class="about-text"><?php printf( __( 'Thank you for updating to the latest version! Easy Digital Downloads %s is ready to make your online store faster, safer and better!', TEXT_TRANSLATION_DOMAIN ), $display_version ); ?></div>
-			<div class="edd-badge"><?php printf( __( 'Version %s', TEXT_TRANSLATION_DOMAIN ), $display_version ); ?></div>
+			<h1><?php printf( __( 'Bienvenue sur Étendard %s', TEXT_TRANSLATION_DOMAIN ), $display_version ); ?></h1>
+			<div class="about-text"><?php printf( __( 'Merci d\'avoir installé Étendard, parcourez le contenu de cette page pour découvrir comme mettre votre site en place.', TEXT_TRANSLATION_DOMAIN ), $display_version ); ?></div>
+			<div class="etendard-badge"><?php printf( __( 'Version %s', TEXT_TRANSLATION_DOMAIN ), $display_version ); ?></div>
 
 			<?php $this->tabs(); ?>
 
-			<p class="about-description"><?php _e( 'Use the tips below to get started using Easy Digital Downloads. You will be up and running in no time!', TEXT_TRANSLATION_DOMAIN ); ?></p>
+			<p class="about-description"><?php _e( 'Ces quelques indications vont vous permettre de prendre en main votre nouveau thème.', TEXT_TRANSLATION_DOMAIN ); ?></p>
 
 			<div class="changelog">
-				<h3><?php _e( 'Creating Your First Download Product', TEXT_TRANSLATION_DOMAIN );?></h3>
+				<h3><?php _e( 'Les 3 premières choses à faire avec Étendard', TEXT_TRANSLATION_DOMAIN );?></h3>
 
 				<div class="feature-section">
 
-					<img src="<?php echo EDD_PLUGIN_URL . 'assets/images/screenshots/edit-download.png'; ?>" class="edd-welcome-screenshots"/>
+					<img src="<?php echo get_stylesheet_directory_uri() . '/admin/img/premieres-etapes.png'; ?>" class="etendard-screenshots"/>
 
-					<h4><?php printf( __( '<a href="%s">%s &rarr; Add New</a>', TEXT_TRANSLATION_DOMAIN ), admin_url( 'post-new.php?post_type=download' ), edd_get_label_plural() ); ?></h4>
-					<p><?php printf( __( 'The %s menu is your access point for all aspects of your Easy Digital Downloads product creation and setup. To create your first product, simply click Add New and then fill out the product details.', TEXT_TRANSLATION_DOMAIN ), edd_get_label_plural() ); ?></p>
+					<h4><?php  _e( 'Validez votre clé de licence', TEXT_TRANSLATION_DOMAIN ); ?></h4>
+					<p><?php  _e( 'Suite à votre commande, vous avez reçu une clé de licence. Entrez-là en allant dans "Options Étendard" &rarr; "Général" pour recevoir les mises à jour directement dans WordPress.', TEXT_TRANSLATION_DOMAIN ); ?></p>
 
-					<h4><?php _e( 'Product Price', TEXT_TRANSLATION_DOMAIN );?></h4>
-					<p><?php _e( 'Products can have simple prices or variable prices if you wish to have more than one price point for a product. For a single price, simply enter the price. For multiple price points, click <em>Enable variable pricing</em> and enter the options.', TEXT_TRANSLATION_DOMAIN );?></p>
+					<h4><?php _e( 'Définissez une couleur principale', TEXT_TRANSLATION_DOMAIN );?></h4>
+					<p><?php _e( 'Étendard peut arborer la couleur de votre choix. Rendez-vous dans l\'onglet "Apparence" des options pour la choisir avec le sélecteur de couleur.', TEXT_TRANSLATION_DOMAIN );?></p>
 
-					<h4><?php _e( 'Download Files', TEXT_TRANSLATION_DOMAIN );?></h4>
-					<p><?php _e( 'Uploading the downloadable files is simple. Click <em>Upload File</em> in the Download Files section and choose your download file. To add more than one file, simply click the <em>Add New</em> button.', TEXT_TRANSLATION_DOMAIN );?></p>
+					<h4><?php _e( 'Envoyez votre logo', TEXT_TRANSLATION_DOMAIN );?></h4>
+					<p><?php _e( 'Toujours dans l\'onglet "Apparence", vous pouvez définir l\'image correspondant au logo de votre site. Cliquez sur le bouton "Sélectionner" pour envoyer/choisir une image dans votre bibliothèque de médias.', TEXT_TRANSLATION_DOMAIN );?></p>
 
 				</div>
 			</div>
 
-			
+			<div class="changelog">
+				<h3><?php _e( 'Ce que vous pouvez faire ensuite', TEXT_TRANSLATION_DOMAIN );?></h3>
 
+				<div class="feature-section col three-col">
+
+					<div>
+						<h4><?php _e( 'Paramétrez votre page d\'accueil', TEXT_TRANSLATION_DOMAIN ); ?></h4>
+						<p><?php _e( 'Déterminez les éléments à afficher en allant dans "Options Étendard" &rarr; "Général". Veillez à bien définir une page en tant que page d\'accueil (d\'autres options seront également disponibles sur cette page).', TEXT_TRANSLATION_DOMAIN ); ?></p>
+					</div>
+
+					<div>
+						<h4><?php _e( 'Ajoutez des éléments à votre portfolio', TEXT_TRANSLATION_DOMAIN );?></h4>
+						<p><?php _e( 'Une fois que vous aurez défini une page portfolio, ajoutez-y des éléments pour montrer au monde ce que vous avez accompli. N\'oubliez de définir un appel à l\'action dans l\'onglet "Portfolio" des options d\'Étendard.', TEXT_TRANSLATION_DOMAIN );?></p>
+					</div>
+					
+					<div class="last-feature">
+						<h4><?php _e( 'Sans oublier...', TEXT_TRANSLATION_DOMAIN );?></h4>
+						<p><?php _e( 'La personnalisation du pied de page, la position de la barre latérale, l\'insertion du widget "Étendard Social", etc.', TEXT_TRANSLATION_DOMAIN );?></p>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="return-to-dashboard">
+				<a href="<?php echo admin_url( 'themes.php?page=etendard_options') ?>" class="button button-primary"><?php _e( 'C\'est bon, j\'attaque le paramétrage d\'Étendard', TEXT_TRANSLATION_DOMAIN ); ?></a>
+			</div>
+			
+			<div class="changelog">
+				<h3><?php _e( 'Besoin d\'aide avec Étendard ?', TEXT_TRANSLATION_DOMAIN );?></h3>
+
+				<div class="feature-section">
+
+					<h4><?php _e( 'Consultez la documentation', TEXT_TRANSLATION_DOMAIN ); ?></h4>
+					<p><?php _e( 'En vous connectant sur Thèmes de France, vous pourrez accéder aux vidéos et aux tutoriels qui vous aideront à paramétrer Étendard.', TEXT_TRANSLATION_DOMAIN ); ?></p>
+					
+					<h4><?php _e( 'Publiez un message sur le forum de support', TEXT_TRANSLATION_DOMAIN ); ?></h4>
+					<p><?php _e( 'Toute l\'équipe de Thèmes de France est là pour vous aider à régler tous problèmes relatifs à Étendard.', TEXT_TRANSLATION_DOMAIN ); ?></p>
+					
+				</div>
+				
+			</div>
+			
+			<div class="return-to-dashboard">
+				<a href="https://www.themesdefrance.fr/documentation/manuel-etendard/" class="button button-primary" target="_blank"><?php _e( 'Ouvrir la documentation d\'Étendard', TEXT_TRANSLATION_DOMAIN ); ?></a>
+			</div>
+			
 		</div>
 		<?php
 	}
@@ -203,27 +244,26 @@ class Etendard_Welcome {
 
 
 	// Redirect to the First Install or Update Page
-	/*public function welcome() {
-		global $edd_options;
+	public function welcome() {
 
 		// Bail if no activation redirect
-		if ( ! get_transient( '_edd_activation_redirect' ) )
+		if ( ! get_transient( '_etendard_activation_redirect' ) )
 			return;
 
 		// Delete the redirect transient
-		delete_transient( '_edd_activation_redirect' );
+		delete_transient( '_etendard_activation_redirect' );
 
 		// Bail if activating from network, or bulk
 		if ( is_network_admin() || isset( $_GET['activate-multi'] ) )
 			return;
-
-		$upgrade = get_option( 'edd_version_upgraded_from' );
-
-		if( ! $upgrade ) { // First time install
-			wp_safe_redirect( admin_url( 'index.php?page=etendard-bienvenue' ) ); exit;
-		} else { // Update
+		
+		if ( ( isset( $_GET['action'] ) && 'do-theme-upgrade' == $_GET['action'] )){
 			wp_safe_redirect( admin_url( 'index.php?page=etendard-update' ) ); exit;
 		}
-	}*/
+		elseif(( isset( $_GET['activated'] ) && 'true' == $_GET['activated'] )){
+			wp_safe_redirect( admin_url( 'index.php?page=etendard-bienvenue' ) ); exit;
+		}
+
+	}
 }
 new Etendard_Welcome();
