@@ -36,7 +36,7 @@ function etendardDiaporamaShorthand($cocorico, $name){
 				'id'=>$name.'-upload-'.$index,
 				'name'=>$name.'[]',
 			)
-		)->filter('save');
+		)->filter('stripslashes')->filter('save');
 		$cocorico->endWrapper('td');
 		
 		$cocorico->endWrapper('tr');
@@ -57,7 +57,7 @@ function etendardDiaporamaShorthand($cocorico, $name){
 				'value'=>$liens[$index],
 				'id'=>$name.'-link-'.$index,
 			)
-		)->filter('save');
+		)->filter('stripslashes')->filter('save');
 		$cocorico->endWrapper('td');
 		
 		$cocorico->startWrapper('th');
@@ -74,7 +74,7 @@ function etendardDiaporamaShorthand($cocorico, $name){
 				'value'=>$titres[$index],
 				'id'=>$name.'-title-'.$index,
 			)
-		)->filter('save');
+		)->filter('stripslashes')->filter('save');
 		$cocorico->endWrapper('td');
 		
 		$cocorico->startWrapper('td');
