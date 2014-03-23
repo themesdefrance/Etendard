@@ -478,9 +478,15 @@ if(!function_exists('etendard_user_styles')){
 	function etendard_user_styles(){
 		if (get_option('etendard_color')){
 			$color = get_option('etendard_color');
+			
+			require_once 'admin/color_functions.php';
+			$hsl = etendard_RGBToHSL(etendard_HTMLToRGB($color));
+			if ($hsl->lightness > 180) $contrast = '#333';
+			else $contrast = '#fff';
 		}
 		else{ // Si aucune couleur par défaut, on utilise celle-ci
 			$color = "#02a7c6";
+			$contrast = '#fff';
 		} ?>
 			<style type="text/css">
 				section.realisation .realisation-site,
@@ -519,14 +525,14 @@ if(!function_exists('etendard_user_styles')){
 				a.bouton.lirelasuite,
 				.headerbar{
 					background: <?php echo $color; ?> !important;
-					color: #fff !important;
+					color: <?php echo $contrast; ?> !important;
 				}
 				
 				
 				<?php foreach(array('-moz-', '-webkit-', '-ms-', '-o-', '') as $prefix){ ?>
 				::<?php echo $prefix; ?>selection{ 
 					background: <?php echo $color; ?>;
-					color: #fff;
+					color: <?php echo $contrast; ?>;
 				}
 				<?php } ?>
 				
@@ -554,8 +560,9 @@ if(!function_exists('etendard_user_styles')){
 					color:#696969;
 				}
 				.sidebar .widget_etendardsocial li a,
-				.sidebar .widget_etendardsocial li a:hover{
-					color:#fff !important;
+				.sidebar .widget_etendardsocial li a:hover,
+				#breadcrumbs a{
+					color:<?php echo $contrast; ?> !important;
 				}
 			</style>
 		<?php }
