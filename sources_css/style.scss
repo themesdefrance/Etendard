@@ -473,13 +473,10 @@ section.portfolio nav.categories{
 section.portfolio nav.categories ul{
 	list-style:none;
 	float:right;
+	font-size:0;
 }
 section.portfolio nav.categories li{
-	display:inline;
-	
-	& a{
-		border-right: 2px solid $body-copy-color;
-	}
+	display:inline-block;
 	
 	&:first-child a{
 		border-right: none;
@@ -491,14 +488,14 @@ section.portfolio nav.categories li{
 	}
 }
 section.portfolio nav.categories a{
-	display:inline-block;
-	margin-right:-5px;
+	display:inline;
 	padding: 4px 10px;
 	color: inherit;
 	text-decoration:none; 
 	font-size:18px;
 	font-family:$heading-font;
 	color:$body-copy-color;
+	border-right: 2px solid $body-copy-color;
 	
 	&.active,
 	&:hover{
