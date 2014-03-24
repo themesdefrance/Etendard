@@ -43,7 +43,7 @@ class Etendard_Welcome {
 		remove_submenu_page( 'index.php', 'etendard-bienvenue' );
 
 		// Badge for welcome page
-		$badge_url = get_stylesheet_directory_uri() . '/admin/img/badge.png';
+		$badge_url = get_template_directory_uri() . '/admin/img/badge.png';
 		?>
 		<style type="text/css" media="screen">
 		/*<![CDATA[*/
@@ -106,7 +106,7 @@ class Etendard_Welcome {
 
 				<div class="feature-section">
 
-					<img src="<?php echo get_stylesheet_directory_uri() . '/admin/img/accueil-etendard.jpg'; ?>" class="etendard-screenshots"/>
+					<img src="<?php echo get_template_directory_uri() . '/admin/img/accueil-etendard.jpg'; ?>" class="etendard-screenshots"/>
 
 					<h4><?php _e( 'Mise à jour du diaporama', TEXT_TRANSLATION_DOMAIN );?></h4>
 					<p><?php _e( 'Il est maintenant possible d\'afficher le diaporama en pleine largeur ou de le garder cadré.', TEXT_TRANSLATION_DOMAIN );?></p>
@@ -177,7 +177,7 @@ class Etendard_Welcome {
 
 				<div class="feature-section">
 
-					<img src="<?php echo get_stylesheet_directory_uri() . '/admin/img/premieres-etapes.png'; ?>" class="etendard-screenshots"/>
+					<img src="<?php echo get_template_directory_uri() . '/admin/img/premieres-etapes.png'; ?>" class="etendard-screenshots"/>
 
 					<h4><?php  _e( 'Validez votre clé de licence', TEXT_TRANSLATION_DOMAIN ); ?></h4>
 					<p><?php  _e( 'Suite à votre commande, vous avez reçu une clé de licence. Entrez-là en allant dans "Options Étendard" &rarr; "Général" pour recevoir les mises à jour directement dans WordPress.', TEXT_TRANSLATION_DOMAIN ); ?></p>
