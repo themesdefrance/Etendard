@@ -4,6 +4,9 @@ Template Name: Portfolio
 */
 ?>
 <?php get_header(); ?>
+
+<?php get_template_part('header-bar'); ?>
+
 <?php 
 $terms = get_terms('portfolio_categorie');
 
@@ -68,14 +71,20 @@ else{
 						</figcaption>
 					</figure>
 				</a>
-				<p class="excerpt">
-					<?php the_excerpt(); ?>
-				</p>
-				<div class="cta-wrapper">
-					<a href="<?php the_permalink(); ?>" class="cta-button">
-						<?php _e('Découvrir le projet', TEXT_TRANSLATION_DOMAIN); ?>
-					</a>
-				</div>
+				
+				<?php if(get_option('etendard_extraits_portfolio') != '0'){ ?>
+					<p class="excerpt">
+						<?php the_excerpt(); ?>
+					</p>
+				<?php } ?>
+				
+				<?php if(get_option('etendard_boutons_portfolio') != '0'){ ?>
+					<div class="cta-wrapper">
+						<a href="<?php the_permalink(); ?>" class="cta-button">
+							<?php _e('Découvrir le projet', TEXT_TRANSLATION_DOMAIN); ?>
+						</a>
+					</div>
+				<?php } ?>
 			</li>
 			<?php endwhile; ?>
 		</ul>

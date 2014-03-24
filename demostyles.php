@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <div id="demostyles">
 	
 	<style>
@@ -45,10 +46,10 @@
 			-moz-opacity:0.7;
 			-o-opacity:0.7;
 		}		
-		
+		</style>
 		
 		<?php 
-			session_start();
+			
 			if(isset($_GET["style"])){
 				$style=$_GET["style"];
 			}
@@ -95,54 +96,66 @@
 			// On stocke la couleur dans une session
 			$_SESSION['style'] = $style;
 			
-			
-		?>
-		
-		section.realisation .realisation-site,
-		div.pagination a,
-		.article .content a,
-		.article .header-meta a,
-		#comments a,
-		.sidebar .widget_etendardnewsletter .form-email:before,
-		form.search-form .search-submit-wrapper:before,
-		a.more-link,
-		ul.services .service h2:hover,
-		ul.portfolio .creation figcaption,
-		.article .header-title a:hover,
-		.article.quote > blockquote cite,
-		.comment .comment-author a,
-		.main-footer a,
-		.sidebar .widget a:hover{
-			color: <?php echo $color; ?> !important;
-		}
-		
-		.main-menu a:hover,
-		.top-level-menu > li:hover > a,
-		ul.portfolio .creation figure:hover figcaption,
-		.article.teaser .header-title:after,
-		#commentform #submit,
-		.widget_calendar #today,
-		section.portfolio nav.categories a:hover,
-		section.portfolio nav.categories a.active,
-		.sidebar .widget_etendardnewsletter input[type="submit"],
-		.widget_etendardsocial li a,
-		.cta .button-wrapper .cta-button,
-		.embedcta .button-wrapper .cta-button,
-		.cta-wrapper .cta-button,
-		.article .content a.bouton,
-		.contact-form .submit input,
-		a.bouton.lirelasuite,
-		::selection{
-			background: <?php echo $color; ?> !important;
-			color: #fff !important;
-		}
-		
-		.toplevel > li > a.active{
-			border-bottom: 2px solid <?php echo $color; ?> !important;;
-		}
-		.main-menu .sub-menu:before{
-			border-bottom: 3px solid <?php echo $color; ?> !important;;
-		}
+			require('admin/color_functions.php');
+			$hsl = etendard_RGBToHSL(etendard_HTMLToRGB($color));
+			if ($hsl->lightness > 180) $contrast = '#333';
+			else $contrast = '#fff';
+			 ?>
+			 
+			<style type="text/css">
+				section.realisation .realisation-site,
+				div.pagination a,
+				.article .content a,
+				.article .header-meta a,
+				#comments a,
+				.sidebar .widget_etendardnewsletter .form-email:before,
+				form.search-form .search-submit-wrapper:before,
+				a.more-link,
+				ul.services .service h2:hover,
+				ul.portfolio .creation figcaption,
+				.article .header-title a:hover,
+				.article.quote > blockquote cite,
+				.comment .comment-author a,
+				.main-footer a,
+				.sidebar .widget a:hover{
+					color: <?php echo $color; ?> !important;
+				}
+				
+				.main-menu a:hover,
+				.top-level-menu > li:hover > a,
+				ul.portfolio .creation figure:hover figcaption,
+				.article.teaser .header-title:after,
+				#commentform #submit,
+				.widget_calendar #today,
+				section.portfolio nav.categories a:hover,
+				section.portfolio nav.categories a.active,
+				.sidebar .widget_etendardnewsletter input[type="submit"],
+				.widget_etendardsocial li a,
+				.cta .button-wrapper .cta-button,
+				.embedcta .button-wrapper .cta-button,
+				.cta-wrapper .cta-button,
+				.article .content a.bouton,
+				.contact-form .submit input,
+				a.bouton.lirelasuite,
+				.headerbar{
+					background: <?php echo $color; ?> !important;
+					color: <?php echo $contrast; ?> !important;
+				}
+				
+				
+				<?php foreach(array('-moz-', '-webkit-', '-ms-', '-o-', '') as $prefix){ ?>
+				::<?php echo $prefix; ?>selection{ 
+					background: <?php echo $color; ?>;
+					color: <?php echo $contrast; ?>;
+				}
+				<?php } ?>
+				
+				.toplevel > li > a.active{
+					border-bottom: 2px solid <?php echo $color; ?> !important;;
+				}
+				.main-menu .sub-menu:before{
+					border-bottom: 3px solid <?php echo $color; ?> !important;;
+				}
 		
 	</style>
 
