@@ -18,7 +18,7 @@
             if(n=='drop'){
                 var mlb = cm.createMenuButton('wtpstshortcode', {
 						title : 'Shortcodes',
-						image : etendard_url + 'admin/img/cocorico.png',
+						image : etendard_url + 'img/cocorico.png',
 						icons:false
 						
 				});
