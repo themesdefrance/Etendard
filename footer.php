@@ -15,11 +15,13 @@
 		<div class="col-1-2">
 			<nav class="footer-menu">
 				<?php
-				wp_nav_menu(array(
-					'theme_location'=>'footer',
-					'container'=>false,
-					'depth'=>-1
-				)); 
+				if(has_nav_menu('footer')){
+					wp_nav_menu(array(
+						'theme_location'=>'footer',
+						'container'=>false,
+						'depth'=>-1
+					));
+				}
 				?>
 			</nav>
 		</div>
