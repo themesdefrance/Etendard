@@ -22,7 +22,8 @@
 
 .main-header{
 	@extend .clearfix;
-	min-height: 68px; 
+	min-height: 68px;
+	position: relative;
 	
 	&.sticky{
 		position: fixed;
@@ -63,7 +64,6 @@
 	
 	@include width-matches($breakpoint-mobile){
 		float:none;
-		position: relative;
 	}
 }
 .main-menu ul{
@@ -174,12 +174,12 @@
 	
 	.toggle-menu-icon{
 		position: absolute;
-		bottom: 100%;
-		display: block;
-		width: 100%;
+		right: 0;
+		display: inline-block;
 		font-size: 50px;
 		line-height: 0;
-		text-align: right;
+		z-index: 100;
+		top: 0;
 	}
 }
 
