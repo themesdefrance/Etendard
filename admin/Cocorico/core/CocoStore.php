@@ -65,7 +65,7 @@ class CocoPostMetaStore implements CocoStoreInterface{
 		}
 	}
 	
-	public function static loadFallbackPostId($query){
+	public static function loadFallbackPostId($query){
 		if (CocoPostMetaStore::$postId === null) CocoPostMetaStore::$postId = $query->get('post_parent');
 	}
 	
