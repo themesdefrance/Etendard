@@ -35,7 +35,7 @@
 					// Appel à l'action
 					
 					m.add({title : 'Appel à l\'action', onclick : function() {
-						var str = '[appel_action lien="LIEN_PAGE_DESTINATION" bouton="TEXTE_BOUTON"]TEXTE_APPEL_ACTION[/bouton]';
+						var str = '[appel_action lien="LIEN_PAGE_DESTINATION" bouton="TEXTE_BOUTON"]TEXTE_APPEL_ACTION[/appel_action]';
 						window.tinyMCE.activeEditor.selection.setContent(str);
 					}});
 					
