@@ -70,6 +70,11 @@ class Etendard_Welcome {
 			float: right;
 			margin-left: 10px!important;
 		}
+		
+		.etendard-video {
+			float: right;
+			margin-left: 10px!important;
+		}
 		/*]]>*/
 		</style>
 		<?php
@@ -102,49 +107,37 @@ class Etendard_Welcome {
 			<?php $this->tabs(); ?>
 
 			<div class="changelog">
-				<h3><?php _e( 'Découvrez le nouveau diaporama et les bandeaux colorés', TEXT_TRANSLATION_DOMAIN );?></h3>
+				<h3><?php _e( 'Présentation des nouveautés en vidéo', TEXT_TRANSLATION_DOMAIN );?></h3>
 
 				<div class="feature-section">
 
-					<img src="<?php echo get_template_directory_uri() . '/admin/img/accueil-etendard.jpg'; ?>" class="etendard-screenshots"/>
+					<div class="etendard-video">
+						<iframe width="550" height="309" src="//www.youtube.com/embed/_sgtKI2GNu4?rel=0" frameborder="0" allowfullscreen></iframe>
+					</div>
 
-					<h4><?php _e( 'Mise à jour du diaporama', TEXT_TRANSLATION_DOMAIN );?></h4>
-					<p><?php _e( 'Il est maintenant possible d\'afficher le diaporama en pleine largeur ou de le garder cadré.', TEXT_TRANSLATION_DOMAIN );?></p>
-					<p><?php _e( 'La hauteur est désormais directement personnalisable via l\'administration. Vos images seront automatiquement redimensionnées (attention toutefois à employer des images avec une taille adaptée).', TEXT_TRANSLATION_DOMAIN );?></p>
-
-					<h4><?php _e( 'Étendard prend des couleurs', TEXT_TRANSLATION_DOMAIN );?></h4>
-					<p><?php _e( 'Des bandeaux colorés ont été ajoutés pour rendre Étendard un peu moins minimaliste. La couleur que vous aurez définie dans l\'administration leur sera appliquée.', TEXT_TRANSLATION_DOMAIN );?></p>
-					<p><?php _e( 'Ces bandeaux contiennent les titres des pages sur la droite et un fil d\'ariane sur la gauche si vous l\'avez activé dans le plugin WordPress SEO.', TEXT_TRANSLATION_DOMAIN );?></p>
+					<h4>Au programme</h4>
+					
+					<ul>
+						<li>Le menu du pied de page est désormais facultatif. Aucun menu ne s'affichera automatiquement lorsqu'aucun menu n'est défini.</li>
+						<li>Si vous n'utilisez pas de logo, le menu mobile s'affichera normalement.</li>
+						<li>Les personnes utilisant un thème enfant retrouvent l'éditeur visuel. Une erreur s'était glissée dans le bouton pour insérer les shortcodes.</li>
+						<li>Les blocs de citation ont été optimisés. La police est un peu moins grande pour une meilleure lisibilité.</li>
+					</ul>
+					
+					<p>Nous avons également procédé à d'autres petites corrections sur le thème. N'hésitez à <a href="https://www.themesdefrance.fr/support/" target="_blank">poster un message sur le forum de support</a> en cas de problème.</p>
+					
+					<h4>Participez au lancement de Thèmes de France</h4>
+					
+					<p>Thèmes de France ouvre enfin ses portes au grand public le jeudi 27 mars. À vrai dire, nous avons un peu de mal à réaliser. Le projet se concrétise enfin ! Des dizaines de personnes vont, comme vous, pouvoir utiliser Étendard pour créer leur propre site avec WordPress.</p>
+					
+					<p>Si vous le désirez, vous pouvez nous aider à faire parler de l'évènement grâce aux réseaux sociaux. Nous sommes sur <a href="https://www.facebook.com/ThemesDeFrance" target="_blank">Facebook</a>, <a href="https://twitter.com/themesdefrance" target="_blank">Twitter</a> et <a href="https://plus.google.com/b/108963306408977874042/108963306408977874042/posts" target="_blank">Google+</a>. Et si vous connaissez quelqu'un qui a besoin de créer un site, envoyez-lui un petit email en lui parlant de Thèmes de France ;)</p>
+					
+					<p>A très vite pour une nouvelle mise à jour.</p>
+					
+					<p>L'équipe Thèmes de France</p>
 				</div>
 			</div>
 			
-			
-
-			<div class="changelog">
-				<h3><?php _e( 'Autres nouveautés d\'Étendard', TEXT_TRANSLATION_DOMAIN );?></h3>
-
-				<div class="feature-section col three-col">
-					<div>
-						<h4><?php _e( 'L\'administration se minimalise', TEXT_TRANSLATION_DOMAIN );?></h4>
-						<p><?php _e( 'Étendard repose désormais sur notre propre framework : Cocorico. Sans trop entrer dans les détails, Cocorico sert à gérer les options d\'Étendard. En fait, ce qui compte pour vous est que l\'administration d\'Étendard gagne en simplicité.', TEXT_TRANSLATION_DOMAIN );?></p>
-
-						<h4><?php _e( 'Optimisation pour WordPress SEO', TEXT_TRANSLATION_DOMAIN );?></h4>
-						<p><?php _e( 'Si vous utilisez le plugin WordPress SEO, Étendard prend maintenant en charge la fonctionnalité fil d\'ariane. Rendez-vous dans la page "Liens internes" pour l\'activer.', TEXT_TRANSLATION_DOMAIN );?></p>
-					</div>
-
-					<div>
-						<h4><?php _e( 'Insertion des shortcodes simplifiée', TEXT_TRANSLATION_DOMAIN );?></h4>
-						<p><?php _e( 'Cette nouvelle version permet d\'insérer les shotcodes plus simplement. Un bouton dans l\'éditeur visuel a été ajouté. Cliquez dessus et agencez vos pages et articles.', TEXT_TRANSLATION_DOMAIN );?></p>
-
-					</div>
-
-					<div class="last-feature">
-						<h4><?php _e( 'La page portfolio gagne en flexibilité', TEXT_TRANSLATION_DOMAIN );?></h4>
-						<p><?php _e( 'En vous rendant dans l\'onglet portfolio de l\'administration, vous pourrez choisir d\'afficher ou non les extraits et les boutons de la page portfolio.' ,TEXT_TRANSLATION_DOMAIN );?></p>
-
-					</div>
-				</div>
-			</div>
 
 			<div class="return-to-dashboard">
 				<a href="<?php echo admin_url( 'themes.php?page=etendard_options') ?>" class="button button-primary"><?php _e( 'Découvrez la nouvelle administration d\'Étendard', TEXT_TRANSLATION_DOMAIN ); ?></a>
