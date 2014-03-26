@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Sans sidebar
+Template Name: Sans Barre Latérale
 */
 ?>
 <?php get_header(); ?>
