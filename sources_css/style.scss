@@ -378,6 +378,10 @@ ul.portfolio{
 	margin-top: 20px;
 	margin-bottom: 20px;
 	margin-right: - $grid-gutters !important;
+	
+	@include width-below($grid-collapse-below){
+		margin-right: 0 !important;
+	}
 }
 ul.portfolio .creation{
 	width: 33%;
