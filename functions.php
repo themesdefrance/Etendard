@@ -83,7 +83,7 @@ if (!function_exists('etendard_init_cpt')){
 			'labels'=>array(),
 			'public'=>true,
 			'menu_position'=>20,
-			'has_archive'=>true,
+			'has_archive'=>'portfolio-archive',
 		));
 		add_post_type_support('portfolio', array(
 			'title',
@@ -106,7 +106,7 @@ if (!function_exists('etendard_init_cpt')){
 			'labels'=>array(),
 			'public'=>true,
 			'menu_position'=>21,
-			'has_archive'=>true,
+			'has_archive'=>'service-archive',
 		));
 		add_post_type_support('service', array(
 			'title',
