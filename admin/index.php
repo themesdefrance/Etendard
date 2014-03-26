@@ -1,17 +1,16 @@
 <?php
 $form = new Cocorico();
 
+$form->startWrapper('titre');
+$form->component('raw', __('Options Étendard', TEXT_TRANSLATION_DOMAIN));
+$form->endWrapper('titre');
+
 $form->groupHeader(array('general'=>__('Général', TEXT_TRANSLATION_DOMAIN), 
 						 'apparence'=>__('Apparence', TEXT_TRANSLATION_DOMAIN), 
 						 'portfolio'=>__('Portfolio', TEXT_TRANSLATION_DOMAIN)));
 
 //Tab general
 $form->startWrapper('tab', 'general');
-
-$form->startWrapper('titre');
-$form->component('raw', __('Général', TEXT_TRANSLATION_DOMAIN));
-$form->endWrapper('titre');
-
 
 $form->startForm();
 
@@ -44,10 +43,6 @@ $form->endWrapper('tab');
 
 //Tab apparence
 $form->startWrapper('tab', 'apparence');
-
-$form->startWrapper('titre');
-$form->component('raw', __('Apparence', TEXT_TRANSLATION_DOMAIN));
-$form->endWrapper('titre');
 
 $form->startForm();
 
@@ -100,10 +95,6 @@ $form->endWrapper('tab');
 
 //Tab portfolio
 $form->startWrapper('tab', 'portfolio');
-
-$form->startWrapper('titre');
-$form->component('raw', __('Portfolio', TEXT_TRANSLATION_DOMAIN));
-$form->endWrapper('titre');
 
 $form->startForm();
 
