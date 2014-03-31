@@ -132,6 +132,7 @@ if (!function_exists('etendard_enqueue')){
 		
 		wp_register_script('etendard_gallery', get_template_directory_uri().'/js/gallery.js', array('jquery'), $theme->get('Version'), true);
 		wp_register_script('etendard_menu', get_template_directory_uri().'/js/menu.js', array('jquery'), $theme->get('Version'), true);
+		wp_register_script('etendard_backtotop', get_template_directory_uri().'/js/backtotop.js', array('jquery'), $theme->get('Version'), true);
 		
 		wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Sanchez:400,400italic|Maven+Pro:400,700', array(), $theme->get('Version'));
 		wp_enqueue_style('icons', get_template_directory_uri().'/fonts/style.css', array(), $theme->get('Version'));
@@ -141,6 +142,7 @@ if (!function_exists('etendard_enqueue')){
 		wp_enqueue_style('glide');
 		
 		wp_enqueue_script('etendard_menu');
+		wp_enqueue_script('etendard_backtotop');
 		
 		if (get_post_gallery()){
 			wp_enqueue_script('fancybox');
@@ -523,7 +525,8 @@ if(!function_exists('etendard_user_styles')){
 				.article .content a.bouton,
 				.contact-form .submit input,
 				a.bouton.lirelasuite,
-				.headerbar{
+				.headerbar,
+				#remonter{
 					background: <?php echo $color; ?> !important;
 					color: <?php echo $contrast; ?> !important;
 				}
@@ -551,7 +554,8 @@ if(!function_exists('etendard_user_styles')){
 				.cta-wrapper .cta-button:hover,
 				.contact-form .submit input:hover,
 				#commentform #submit:hover,
-				a.bouton.lirelasuite:hover{
+				a.bouton.lirelasuite:hover,
+				#remonter:hover{
 					background:#696969 !important;
 				}
 				form.search-form .search-submit-wrapper:hover:before,
@@ -665,18 +669,29 @@ if (!get_option('etendard_import_OF')){
 
 // TinyMCE Shortcodes Integration
 
+if(!function_exists('etendard_add_tinymce')){
+	function etendard_add_tinymce() {
+		add_filter('mce_external_plugins', 'etendard_add_tinymce_plugin');
+		add_filter('mce_buttons', 'etendard_add_tinymce_button');
+	}
+}
 add_action('admin_head', 'etendard_add_tinymce');
-function etendard_add_tinymce() {
-	add_filter('mce_external_plugins', 'etendard_add_tinymce_plugin');
-	add_filter('mce_buttons', 'etendard_add_tinymce_button');
+
+if(!function_exists('etendard_add_tinymce_plugin')){
+	function etendard_add_tinymce_plugin($plugin_array) {
+		$plugin_array['drop'] =	get_template_directory_uri() . '/admin/js/tmcedrop.js';
+		return $plugin_array;
+	}
 }
- 
-function etendard_add_tinymce_plugin($plugin_array) {
-	$plugin_array['drop'] =	get_template_directory_uri() . '/admin/js/tmcedrop.js';
-	return $plugin_array;
+
+if(!function_exists('etendard_add_tinymce_button')){
+	function etendard_add_tinymce_button($buttons) {
+		array_push($buttons, 'drop');
+		return $buttons;
+	}
 }
- 
-function etendard_add_tinymce_button($buttons) {
-	array_push($buttons, 'drop');
-	return $buttons;
-}
+
+
+
+
+

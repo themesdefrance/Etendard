@@ -1341,4 +1341,20 @@ form.search-form input.search-submit{
 	margin: 20px auto;
 }
 
+// Bouton remonter
+
+#remonter{
+	position: fixed;
+	bottom: 0;
+	right: 1em;
+	text-decoration: none;
+	background-color: $couleur-principale;
+	padding:7px 13px;
+	color:#fff;
+	-webkit-transition: background-color 0.2s ease-in;
+	-moz-transition: background-color 0.2s ease-in;
+	-o-transition: background-color 0.2s ease-in;
+	transition: background-color 0.2s ease-in;
+}
+
 
