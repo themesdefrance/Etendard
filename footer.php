@@ -6,11 +6,16 @@
 </section>
 <?php endif; ?>
 
-<?php if (get_option("etendard_footer_gauche") || wp_nav_menu(array('theme_location'=>'footer'))): ?>
 <footer class="main-footer">
 	<div class="wrapper">
 		<div class="col-1-2">
-			<?php echo strip_tags(get_option("etendard_footer_gauche"), '<strong><a><em><img>'); ?>
+			<?php
+				if(get_option("etendard_footer_gauche")) {
+					echo strip_tags(get_option("etendard_footer_gauche"), '<strong><a><em><img>');
+				}
+				else{ ?>
+					<strong>2014</strong> - Étendard par <a href="https://www.themesdefrance.fr" target="_blank">Thèmes de France</a>
+				<?php } ?>
 		</div>
 		<div class="col-1-2">
 			<nav class="footer-menu">
@@ -27,7 +32,6 @@
 		</div>
 	</div>
 </footer>
-<?php endif; ?>
 
 <?php wp_footer(); ?>
 </body>
