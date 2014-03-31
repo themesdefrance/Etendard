@@ -1327,6 +1327,18 @@ form.search-form input.search-submit{
 	}
 }
 
+// Toggle
+h3.toggle a{
+	cursor:pointer;
+	color:#122e3a !important;
+	padding-left: 10px;
+	&:hover{
+		text-decoration:none !important;
+	}
+}
+
+
+
 // 404
 .error404 p, .error404 .header-title{
 	text-align: center;

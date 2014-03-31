@@ -118,7 +118,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-mail:before, .icon-search:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, .icon-soundcloud:before, .icon-pinterest:before, .icon-instagram:before, .icon-viadeo:before, .icon-play:before, .icon-ellipsis:before, .icon-list:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-totop:before {
+.icon-mail:before, .icon-search:before, .icon-google-plus:before, .icon-facebook:before, .icon-twitter:before, .icon-feed:before, .icon-youtube:before, .icon-vimeo:before, .icon-linkedin:before, .icon-skype:before, .icon-soundcloud:before, .icon-pinterest:before, .icon-instagram:before, .icon-viadeo:before, .icon-play:before, .icon-ellipsis:before, .icon-list:before, .icon-arrow-right:before, .icon-arrow-left:before, .icon-totop:before, .icon-tobottom:before, .icon-toleft:before, .icon-toright:before {
 	@extend %iconfont;
 }
 .icon-viadeo:before {
@@ -178,6 +178,15 @@ you can use the generic selector below, but it's slower:
 .icon-soundcloud:before {
 	content: "\e609";
 }
+.icon-toleft:before {
+	content: "\e614";
+}
+.icon-tobottom:before {
+	content: "\e615";
+}
 .icon-totop:before {
 	content: "\e613";
+}
+.icon-toright:before {
+	content: "\e616";
 }

@@ -39,6 +39,13 @@
 						window.tinyMCE.activeEditor.selection.setContent(str);
 					}});
 					
+					// Appel à l'action
+					
+					m.add({title : 'Toggle', onclick : function() {
+						var str = '[toggle titre="TITRE_TOGGLE"]CONTENU_TOGGLE[/toggle]';
+						window.tinyMCE.activeEditor.selection.setContent(str);
+					}});
+					
 					m.addSeparator();
 
 					// Agencement en 2 colonnes

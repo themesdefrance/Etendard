@@ -124,3 +124,19 @@ if (!function_exists('etendard_appel_action')){
 	add_shortcode('appel_action', 'etendard_appel_action');
 }
 
+// Toggle
+if (!function_exists('etendard_toggle')){
+	function etendard_toggle($atts, $content = null) {
+	
+		$title = $atts['titre'];
+		$res="";
+		$res .= '<h3 class="toggle icon-toright"><a href="#">'.$title.'</a></h3>';
+		$res .= '<div class="toggle-content" style="display: none;"><p>';
+		$res .= do_shortcode($content);
+		$res .= '</p></div>';
+		
+	   return $res;
+	}
+}
+
+add_shortcode('toggle', 'etendard_toggle');
