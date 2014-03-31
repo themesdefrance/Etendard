@@ -1337,6 +1337,17 @@ h3.toggle a{
 	}
 }
 
+// Separateur
+
+
+.separateur{
+	margin: 40px 0;
+	
+	& hr{
+		border: 0;
+		border-bottom: 1px solid #696969;
+	}
+}
 
 
 // 404

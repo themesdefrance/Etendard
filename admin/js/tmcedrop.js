@@ -39,10 +39,17 @@
 						window.tinyMCE.activeEditor.selection.setContent(str);
 					}});
 					
-					// Appel à l'action
+					// Toggle
 					
 					m.add({title : 'Toggle', onclick : function() {
 						var str = '[toggle titre="TITRE_TOGGLE"]CONTENU_TOGGLE[/toggle]';
+						window.tinyMCE.activeEditor.selection.setContent(str);
+					}});
+					
+					// Séparateur
+					
+					m.add({title : 'Séparateur', onclick : function() {
+						var str = '[separateur]';
 						window.tinyMCE.activeEditor.selection.setContent(str);
 					}});
 					

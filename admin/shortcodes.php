@@ -129,8 +129,8 @@ if (!function_exists('etendard_toggle')){
 	function etendard_toggle($atts, $content = null) {
 	
 		$title = $atts['titre'];
-		$res="";
-		$res .= '<h3 class="toggle icon-toright"><a href="#">'.$title.'</a></h3>';
+		
+		$res = '<h3 class="toggle icon-toright"><a href="#">'.$title.'</a></h3>';
 		$res .= '<div class="toggle-content" style="display: none;"><p>';
 		$res .= do_shortcode($content);
 		$res .= '</p></div>';
@@ -140,3 +140,16 @@ if (!function_exists('etendard_toggle')){
 }
 
 add_shortcode('toggle', 'etendard_toggle');
+
+
+// Separateur
+if (!function_exists('etendard_separateur')){
+	function etendard_separateur($atts, $content = null) {
+
+		$res = '<div class="separateur"><hr></div>';
+		
+	   return $res;
+	}
+}
+
+add_shortcode('separateur', 'etendard_separateur');
