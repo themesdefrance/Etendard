@@ -23,14 +23,14 @@ if (isset($_POST['etendard_contact_nonce']) && wp_verify_nonce($_POST['etendard_
 	
 	<div class="field">
 		<label for="etendard_contact_nom">
-			<?php _e('Nom'); ?>:
+			<?php _e('Nom *'); ?>:
 		</label>
 		<input type="text" id="etendard_contact_nom" name="etendard_contact_nom" required />
 	</div>
 	
 	<div class="field">
 		<label for="etendard_contact_email">
-			<?php _e('Email'); ?>:
+			<?php _e('Email *'); ?>:
 		</label>
 		<input type="email" id="etendard_contact_email" name="etendard_contact_email" required />
 	</div>
@@ -44,7 +44,7 @@ if (isset($_POST['etendard_contact_nonce']) && wp_verify_nonce($_POST['etendard_
 	
 	<div class="field">
 		<label for="etendard_contact_message">
-			<?php _e('Message'); ?>:
+			<?php _e('Message *'); ?>:
 		</label>
 		<textarea id="etendard_contact_message" name="etendard_contact_message" required></textarea>
 	</div>
