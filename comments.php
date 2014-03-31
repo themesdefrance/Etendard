@@ -3,7 +3,7 @@
 	<?php if (have_comments()): ?>
 		<h2 class="comments-title">
 			<?php
-                printf(_n('Une personne à écrit un commentaire, et vous ?', '%1$s personnes ont déja écrit un commentaire, et vous ?', get_comments_number(), TEXT_TRANSLATION_DOMAIN), number_format_i18n(get_comments_number()));
+                printf(_n('Un commentaire a été rédigé, allez-vous ajouter le votre ?', '%1$s commentaires ont été rédigés, allez-vous ajouter le votre ?', get_comments_number(), TEXT_TRANSLATION_DOMAIN), number_format_i18n(get_comments_number()));
             ?>
 		</h2>
 		
