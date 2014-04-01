@@ -55,16 +55,18 @@
 	<div class="wrapper">
 		<ul class="temoignages">
 			<li class="temoignage">
+			
+				<?php if (!empty($portfolio_custom['etendard_portfolio_temoin_portrait'][0])): ?>
 				<div class="temoignage-photo-wrapper">
-					<?php if (!empty($portfolio_custom['etendard_portfolio_temoin_portrait'][0])): ?>
 					<img src="<?php echo $portfolio_custom['etendard_portfolio_temoin_portrait'][0]; ?>" class="temoignage-photo" />
-					<?php endif; ?>
 				</div>
-				<h3 class="temoignage-headline">
-					<?php echo $portfolio_custom['etendard_portfolio_temoin_nom'][0]; ?>
-				</h3>
+				<?php endif; ?>
+				
 				<div class="temoignage-content">
 					<?php echo $portfolio_custom['etendard_portfolio_temoin_texte'][0]; ?>
+					<span class="temoignage-name">
+					<?php echo $portfolio_custom['etendard_portfolio_temoin_nom'][0]; ?>
+					</span>
 				</div>
 			</li>
 		</ul>

@@ -552,26 +552,31 @@ section.realisation .realisation-site{
 
 .temoignages{
 	list-style:none;
-	margin-top: 40px;
 }
 .temoignages .temoignage{
 	@extend .clearfix;
-	margin-left:33.3%;
+	margin: 0 10%;
 	
 	@include width-matches($breakpoint-mobile){
 		margin-left:0;
 	}
 }
-.temoignages .temoignage-headline{
+.temoignages .temoignage-name{
 	color: $body-copy-color;
-	margin-bottom:5px;
+	margin: 10px 0 5px;
 	font-size:18px;
+	display:block;
 }
 .temoignages .temoignage-photo-wrapper{
-	width: 30%;
+	width: 180px;
 	float:left;
 	padding-right:20px;
 }
+
+.temoignages .temoignage-name{
+	padding-left: 180px;
+}
+
 
 //blog
 ul.blog{

@@ -14,7 +14,7 @@ $form->setting(array('type'=>'textarea',
 $form->setting(array('type'=>'upload',
 					 'name'=>'portfolio_temoin_portrait',
 					 'label'=>__('Portrait', TEXT_TRANSLATION_DOMAIN),
-					 'description'=>__('Taille optimale de 172x115 pixels', TEXT_TRANSLATION_DOMAIN)));
+					 'description'=>__('Taille optimale de 160x110 pixels', TEXT_TRANSLATION_DOMAIN)));
 
 $form->endForm();
 $form->render();
