@@ -12,6 +12,9 @@
 	</div>
 	
 	<div class="wrapper">
+	
+	<?php  if(!empty($portfolio_custom['etendard_portfolio_client'][0]) || !empty($portfolio_custom['etendard_portfolio_url'][0])){ ?>
+		
 		<div class="col-1-3 meta">
 			<?php if (!empty($portfolio_custom['etendard_portfolio_client'][0])): ?>
 			<h3 class="realisation-client">
@@ -38,6 +41,10 @@
 			<?php endif; ?>
 		</div>
 		<div class="col-2-3 content">
+		
+		<?php }else{ ?>
+			<div class="content">
+		<?php } ?>
 			<?php the_content(); ?>
 		</div>
 	</div>
