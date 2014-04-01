@@ -137,7 +137,7 @@ if (!function_exists('etendard_enqueue')){
 		
 		wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Sanchez:400,400italic|Maven+Pro:400,700', array(), $theme->get('Version'));
 		wp_enqueue_style('icons', get_template_directory_uri().'/fonts/style.css', array(), $theme->get('Version'));
-		wp_enqueue_style('stylesheet', get_template_directory_uri().'/style.css', array(), $theme->get('Version'));
+		wp_enqueue_style('stylesheet', get_stylesheet_directory_uri().'/style.css', array(), $theme->get('Version'));
 		
 		wp_enqueue_script('glide');
 		wp_enqueue_style('glide');
