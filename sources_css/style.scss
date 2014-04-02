@@ -353,11 +353,13 @@ section.cta .button-wrapper,
 }
 
 section.cta .cta-button:before, 
-.embedcta .cta-button:before{
+.embedcta .cta-button:before,
+.cta-widget .cta-button:before{
 	border-left:8px solid #e6e7e8;
 }
 section.cta .cta-button:after, 
-.embedcta .cta-button:after{
+.embedcta .cta-button:after,
+.cta-widget .cta-button:after{
 	border-right:8px solid #e6e7e8;
 }
 
@@ -1172,6 +1174,28 @@ form.search-form input.search-submit{
 		background:darken($couleur-principale,5);
 	}
 }
+
+// Widget Appel à l'action
+
+.widget_etendardappelaction .cta-widget{
+	background: #e6e7e8;
+	padding:10px;
+	
+	& p{
+		text-align: center;
+	}
+	& p.cta-text{
+		margin-bottom: 10px;
+	}
+	& a.cta-button{
+		color:white;
+		
+		&:hover{
+			text-decoration:none;
+		}
+	}
+}
+
 
 //calendrier
 .widget_calendar table caption{

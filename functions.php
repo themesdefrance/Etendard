@@ -12,6 +12,7 @@ require_once 'admin/Cocorico/Cocorico.php';
 
 //chargement des widgets	
 require_once 'admin/widgets/social.php';
+require_once 'admin/widgets/appel-action.php';
 require_once 'admin/bienvenue.php';
 
 
@@ -188,6 +189,13 @@ if (!function_exists('etendard_widgets_init')){
 	}
 }
 add_action('widgets_init', 'etendard_widgets_init');
+
+if (!function_exists('etendard_appel_action_init')){
+	function etendard_appel_action_init(){
+		register_widget('EtendardAppelAction');
+	}
+}
+add_action('widgets_init', 'etendard_appel_action_init');
 
 //initialisation des customfields
 if (!function_exists('etendard_register_custom_fields')){
@@ -520,6 +528,7 @@ if(!function_exists('etendard_user_styles')){
 				section.portfolio nav.categories a:hover,
 				section.portfolio nav.categories a.active,
 				.sidebar .widget_etendardnewsletter input[type="submit"],
+				.widget_etendardappelaction a.cta-button,
 				.widget_etendardsocial li a,
 				.cta .button-wrapper .cta-button,
 				.embedcta .button-wrapper .cta-button,
@@ -550,6 +559,7 @@ if(!function_exists('etendard_user_styles')){
 				
 				.article.teaser .header-title:hover:after,
 				.widget_etendardsocial li a:hover,
+				.widget_etendardappelaction a.cta-button:hover,
 				.cta .button-wrapper .cta-button:hover,
 				.embedcta .button-wrapper .cta-button:hover,
 				.article .content a.bouton:hover,
@@ -567,6 +577,8 @@ if(!function_exists('etendard_user_styles')){
 				}
 				.sidebar .widget_etendardsocial li a,
 				.sidebar .widget_etendardsocial li a:hover,
+				.sidebar .widget_etendardappelaction a.cta-button,
+				.sidebar .widget_etendardappelaction a.cta-button:hover,
 				#breadcrumbs a{
 					color:<?php echo $contrast; ?> !important;
 				}
