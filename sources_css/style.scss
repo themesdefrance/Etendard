@@ -1179,9 +1179,10 @@ form.search-form input.search-submit{
 
 .widget_etendardappelaction .cta-widget{
 	background: #e6e7e8;
-	padding:10px;
+	padding:30px;
 	
-	& p{
+	
+	& p, h3{
 		text-align: center;
 	}
 	& p.cta-text{

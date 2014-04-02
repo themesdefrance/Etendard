@@ -13,15 +13,23 @@ class EtendardAppelAction extends WP_Widget{
 	
 	public function widget($args, $instance){
 		echo $args['before_widget'];
-		
-		if (isset($instance['title'])){
-			echo $args['before_title'].apply_filters('widget_title', $instance['title']).$args['after_title'];
-		} ?>
+		?>
 		
 		<div class="cta-widget">
-			<p class="cta-text"><?php echo $instance['desc']; ?></p>
+		
+			<?php if (isset($instance['title'])){
+					echo $args['before_title'].apply_filters('widget_title', $instance['title']).$args['after_title'];
+			} ?>
+			
+			<p class="cta-text"><?php if (isset($instance['desc']) && $instance['desc']!=""){ echo $instance['desc'];} ?></p>
 			<p>
-				<a href="<?php echo $instance['lien']; ?>" class="cta-button"><?php echo $instance['libelle']; ?></a>
+				<a href="<?php if (isset($instance['lien']) && $instance['lien']!=""){ echo $instance['lien'];}else{echo bloginfo('url');} ?>" class="cta-button">
+				<?php if (isset($instance['libelle']) && $instance['libelle']!=""){
+						echo $instance['libelle'];
+					}else{
+						_e( 'Cliquez ici' );
+					} ?>
+				</a>
 			</p>
 		</div>
 		<?php
