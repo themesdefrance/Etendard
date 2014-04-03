@@ -1019,6 +1019,10 @@ div.pagination{
 	padding: 5px 0 15px;
 	margin-bottom: 20px;
 	
+	&:first-child{
+		padding-top:0; 
+	}
+	
 	*{
 		max-width:100%;
 	}
