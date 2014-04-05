@@ -5,9 +5,9 @@ jQuery(function($){
 			offsetTrigger = 5;
 		
 		$(window).on('scroll', function(){
-			isSticked = ($('.main-header.'+stickyClass).length > 1) ? true : false;
+			isSticked = ($('.main-header.'+stickyClass).length >= 1) ? true : false;
 			if ($(window).scrollTop() > offsetTrigger && !isSticked) $('.main-header').addClass(stickyClass);
-			else if ($(window).scrollTop() <= offsetTrigger && isSticked) $('.main-header').removeClass(stickyClass);
+			else if ($(window).scrollTop() <= 0 && isSticked) $('.main-header').removeClass(stickyClass);
 		});
 		
 		var $menu = $('.top-level-menu');

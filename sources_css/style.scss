@@ -28,10 +28,15 @@
 	&.sticky{
 		position: fixed;
 		min-height: 50px;
+		top: 0;
 		left: 0;
 		right: 0;
 		z-index: 200;
 		background: rgba(#fff,.8);
+	}
+	
+	&.sticky + *{
+		margin-top: 50px;
 	}
 }
 .main-header .logo-wrap{
