@@ -34,6 +34,12 @@ add_action('after_switch_theme', 'etendard_activation');
 if (!function_exists('etendard_setup')){
 	function etendard_setup(){
 		
+		// Sauvegarde version precedente etendard
+		$etendard_version = get_option( 'etendard_version' );
+		if ( $etendard_version ) {
+			update_option( 'etendard_precedente_version', $etendard_version );
+		}
+		
 		register_nav_menu('primary', __('Menu principal', TEXT_TRANSLATION_DOMAIN));
 		register_nav_menu('footer', __('Menu pied de page', TEXT_TRANSLATION_DOMAIN));
 			
@@ -67,10 +73,14 @@ if (!function_exists('etendard_setup')){
 		add_image_size('etendard-service-thumbnail', 230, 230, true);
 		add_image_size('etendard-blog-thumbnail', 225, 150, true);
 		add_image_size('etendard-post-thumbnail', 620, 400, true);
-	//	load_theme_textdomain(TEXT_TRANSLATION_DOMAIN, get_template_directory().'/local');
-	
+		//	load_theme_textdomain(TEXT_TRANSLATION_DOMAIN, get_template_directory().'/local');
+		
+		// Mise à jour numero de version
+		update_option( 'etendard_version', EDD_SL_THEME_VERSION );
+		
 		// Transient de Redirection après activation
 		set_transient( '_etendard_activation_redirect', true, 30 );
+		
 	}
 }
 add_action('after_setup_theme', 'etendard_setup');
