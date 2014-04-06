@@ -3,11 +3,11 @@
 // Bouton
 if (!function_exists('etendard_button')){
 	function etendard_button($atts, $content=null){
-		$autrefenetre='';
-		if(isset($atts['autrefenetre']) && $atts['autrefenetre']=='OUI'){
-			$autrefenetre='target="_blank"';
+		$nouvellefenetre='';
+		if(isset($atts['nouvellefenetre']) && $atts['nouvellefenetre']=='oui'){
+			$nouvellefenetre='target="_blank"';
 		}
-		return '<a href="'.$atts['lien'].'" class="bouton" '.$autrefenetre.'>'.$content.'</a>';
+		return '<a href="'.$atts['lien'].'" class="bouton" '.$nouvellefenetre.'>'.$content.'</a>';
 	}
 	add_shortcode('bouton', 'etendard_button');
 }
@@ -112,12 +112,18 @@ if (!function_exists('etendard_message_succes')){
 // En largeur
 if (!function_exists('etendard_appel_action')){
 	function etendard_appel_action($atts, $content=null){
+	
+		$nouvellefenetre='';
+		if(isset($atts['nouvellefenetre']) && $atts['nouvellefenetre']=='oui'){
+			$nouvellefenetre='target="_blank"';
+		}
+		
 		return '<div class="embedcta">
 						<p class="cta-text">
 							'.$content.'
 						</p>
 						<div class="button-wrapper">
-							<a href="'.$atts['lien'].'" class="cta-button">'.$atts['bouton'].'</a>
+							<a href="'.$atts['lien'].'" class="cta-button" '.$nouvellefenetre.'>'.$atts['bouton'].'</a>
 						</div>
 				</div>';
 	}

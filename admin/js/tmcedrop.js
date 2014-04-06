@@ -32,10 +32,24 @@
 						window.tinyMCE.activeEditor.selection.setContent(str);
 					}});
 					
+					// Bouton Nouvelle Fenêtre
+					
+					m.add({title : 'Bouton (nouvelle fenêtre)', onclick : function() {
+						var str = '[bouton lien="LIEN_PAGE_DESTINATION" nouvellefenetre="oui"]TEXTE_BOUTON[/bouton]';
+						window.tinyMCE.activeEditor.selection.setContent(str);
+					}});
+					
 					// Appel à l'action
 					
 					m.add({title : 'Appel à l\'action', onclick : function() {
 						var str = '[appel_action lien="LIEN_PAGE_DESTINATION" bouton="TEXTE_BOUTON"]TEXTE_APPEL_ACTION[/appel_action]';
+						window.tinyMCE.activeEditor.selection.setContent(str);
+					}});
+					
+					// Appel à l'action
+					
+					m.add({title : 'Appel à l\'action (nouvelle fenêtre)', onclick : function() {
+						var str = '[appel_action lien="LIEN_PAGE_DESTINATION" bouton="TEXTE_BOUTON" nouvellefenetre="oui"]TEXTE_APPEL_ACTION[/appel_action]';
 						window.tinyMCE.activeEditor.selection.setContent(str);
 					}});
 					
