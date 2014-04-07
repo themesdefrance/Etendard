@@ -16,7 +16,7 @@ if (is_tax('portfolio_categorie') || is_post_type_archive('portfolio')) $query =
 else{
 	$args = array(
 			'post_type'=>'portfolio',
-			'orderby'=>'menu_order',
+			'orderby'=>'date',
 			'order'=>'ASC',
 			'posts_per_page'=>-1,
 			'nopaging'=>true
