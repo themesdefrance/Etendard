@@ -64,27 +64,26 @@ if (!function_exists('etendard_trois_quarts')){
 }
 
 // Messages
-// Info
-if (!function_exists('etendard_message_info')){
-	function etendard_message_info($atts, $content=null){
-		$res = '<div class="message info">';
-		$res.= wpautop($content);
-		$res.= '</div>';
-		return $res;
-	}
-	add_shortcode( 'info', 'etendard_message_info' );
-}
 
-// Alerte
+// Message par défaut
 if (!function_exists('etendard_message')){
 	function etendard_message($class, $content){
 		$res = '<div class="message '.$class.'">';
-		$res .= wpautop($content);
+		$res .= do_shortcode(wpautop($content));
 		$res .= '</div>';
 		return $res;
 	}
 }
 
+// Info
+if (!function_exists('etendard_message_info')){
+	function etendard_message_info($atts, $content=null){
+		return etendard_message('info', $content);
+	}
+	add_shortcode( 'info', 'etendard_message_info' );
+}
+
+// Alerte
 if (!function_exists('etendard_message_alerte')){
 	function etendard_message_alerte($atts, $content=null){
 		return etendard_message('alerte', $content);
