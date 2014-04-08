@@ -18,7 +18,7 @@ if (!is_tax('portfolio_categorie') && !is_post_type_archive('portfolio')){
 			'post_type'=>'portfolio',
 			'orderby'=>'date',
 			'order'=>'ASC',
-			'posts_per_page'=>2,
+			'posts_per_page'=>get_option('posts_per_page'),
 			'paged'=>$paged
 	);
 	$wp_query = new WP_Query($args);
