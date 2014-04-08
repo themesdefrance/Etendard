@@ -12,16 +12,16 @@ $terms = get_terms('portfolio_categorie');
 
 global $wp_query;
 
-if (is_tax('portfolio_categorie') || is_post_type_archive('portfolio')) $query = $wp_query;
-else{
+if (!is_tax('portfolio_categorie') && !is_post_type_archive('portfolio')){
+	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	$args = array(
 			'post_type'=>'portfolio',
 			'orderby'=>'date',
 			'order'=>'ASC',
-			'posts_per_page'=>-1,
-			'nopaging'=>true
+			'posts_per_page'=>2,
+			'paged'=>$paged
 	);
-	$query = new WP_Query($args);
+	$wp_query = new WP_Query($args);
 }
 ?>
 <section class="portfolio">
@@ -46,7 +46,7 @@ else{
 		<?php endif; ?>
 		
 		<ul class="portfolio">
-			<?php while ($query->have_posts()) : $query->the_post(); ?>
+			<?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 			<?php
 			$icon = '';
 			switch (get_post_format()){
@@ -88,6 +88,11 @@ else{
 			</li>
 			<?php endwhile; ?>
 		</ul>
+		
+		<div class="pagination">
+			<?php previous_posts_link(__('Page précédente')); ?>
+			<?php next_posts_link(__('Page suivante')); ?> 
+		</div>
 	</div>
 </section>
 <?php wp_reset_postdata(); ?>
