@@ -88,8 +88,12 @@
 	</div>
 	
 	<footer class="footer">
+		<span class="footer-meta icon-tags">
 		
-		<?php //Afficher les mots clés ? ?>
+			<?php echo get_the_tag_list('',' - ',''); ?>
+		
+		</span>
+		
 		
 		<?php if(etendard_is_paginated_post()){ ?>
 			<nav>

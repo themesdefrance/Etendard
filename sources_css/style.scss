@@ -654,8 +654,9 @@ ul.articles .article{
 	color: $gris-principal;
 	font-size: 14px;
 }
-.article .footer .page-links a{
+.article .footer a{
 	color: darken($gris-principal, 10);
+
 }
 .article .content{
 	margin-bottom: 8px;
