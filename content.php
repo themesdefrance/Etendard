@@ -90,7 +90,7 @@
 	<footer class="footer">
 		<span class="footer-meta icon-tags">
 		
-			<?php echo get_the_tag_list('',' - ',''); ?>
+			<?php echo get_the_tag_list('',' | ',''); ?>
 		
 		</span>
 		
