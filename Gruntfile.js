@@ -4,7 +4,7 @@ module.exports = function(grunt){
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
 			compile: {
-				files: ['sources_css/**/*'],
+				files: ['sources_css/**/*', 'js/*.js'],
 				tasks: ['default']
 			}
 		},
@@ -28,6 +28,14 @@ module.exports = function(grunt){
 				}
 			}
 		},
+		concat: {
+			options: {
+			},
+			js: {
+				src: ['js/*.js', '!js/etendard-combined.js'],
+				dest: 'js/etendard-combined.js'
+			}
+		},
 		copy: {
 			build: {
 				expand: true,
@@ -39,8 +47,9 @@ module.exports = function(grunt){
 	
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-compass');
+	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	
-	grunt.registerTask('default', ['compass:build']);
-	grunt.registerTask('build', ['compass:build', 'compass:dev', 'copy:build']);
+	grunt.registerTask('default', ['compass:build', 'concat:js']);
+	grunt.registerTask('build', ['compass:build', 'compass:dev', 'concat:js', 'copy:build']);
 }

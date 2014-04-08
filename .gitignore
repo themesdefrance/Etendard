@@ -2,6 +2,7 @@ node_modules/
 .sass-cache
 ./Etendard/
 sources_css/style.css
+js/etendard-combined.js
 
 #################
 ## Eclipse
