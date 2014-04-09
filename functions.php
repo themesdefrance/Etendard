@@ -512,6 +512,7 @@ if(!function_exists('etendard_user_styles')){
 				div.pagination a,
 				.article .content a,
 				.article .header-meta a,
+				.article .footer-meta a,
 				#comments a,
 				.sidebar .widget_etendardnewsletter .form-email:before,
 				form.search-form .search-submit-wrapper:before,
