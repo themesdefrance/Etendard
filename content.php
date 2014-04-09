@@ -88,12 +88,16 @@
 	</div>
 	
 	<footer class="footer">
-		<span class="footer-meta icon-tags">
+	
+		<?php if(has_tag() && is_single()){ ?>
+	
+			<span class="footer-meta icon-tags">
+			
+				<?php echo get_the_tag_list('',' | ',''); ?>
+			
+			</span>
 		
-			<?php echo get_the_tag_list('',' | ',''); ?>
-		
-		</span>
-		
+		<?php } ?>
 		
 		<?php if(etendard_is_paginated_post()){ ?>
 			<nav>
