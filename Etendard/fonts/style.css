@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'etendard';
+	src:url('etendard.eot?-sos25u');
+	src:url('etendard.eot?#iefix-sos25u') format('embedded-opentype'),
+		url('etendard.ttf?-sos25u') format('truetype'),
+		url('etendard.woff?-sos25u') format('woff'),
+		url('etendard.svg?-sos25u#etendard') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
