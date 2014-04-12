@@ -4,7 +4,7 @@ module.exports = function(grunt){
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
 			compile: {
-				files: ['sources_css/**/*', 'js/*.js'],
+				files: ['sources_css/**/*', 'js/*.js', '!js/etendard-combined.js'],
 				tasks: ['default']
 			}
 		},
