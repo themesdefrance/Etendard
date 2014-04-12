@@ -11,6 +11,10 @@
 		width: 100%;
 	}
 	
+	.layout-grid{
+		@extend .grid;
+	}
+	
 	@include width-matches($breakpoint-tablet){
 		width: $breakpoint-tablet;
 	}
@@ -384,21 +388,21 @@ section.cta .cta-button:after,
 ul.portfolio{
 	margin-top: 20px;
 	margin-bottom: 20px;
-	margin-right: - $grid-gutters !important;
+//	margin-right: - $grid-gutters !important;
 	
-	@include width-below($grid-collapse-below){
+	@include width-below($breakpoint-tablet){
 		margin-right: 0 !important;
 	}
 }
-ul.portfolio .creation{
+ul.portfolio .creation-list{
 	width: 33%;
 	display: inline-block;
 	vertical-align: top;
-	padding-right: $grid-gutters;
+	padding-left: $grid-gutters;
 	margin-right:-4px;
 	padding-bottom: $grid-gutters*2;
 	
-	@include width-below($grid-collapse-below){
+	@include width-below($breakpoint-mobile){
 		display: block;
 		width: 100%;
 		margin-right: 0;

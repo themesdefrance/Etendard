@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="blog grid">
+<section class="blog">
 	<div class="wrapper">
 		<h1 class="header-title">
 			<?php _e('Oups, vous voici dans une impasse…', TEXT_TRANSLATION_DOMAIN); ?>

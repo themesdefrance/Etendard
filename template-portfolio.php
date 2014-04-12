@@ -58,7 +58,7 @@ if (!is_tax('portfolio_categorie') && !is_post_type_archive('portfolio')){
 					break;
 			}
 			?>
-			<li class="creation">
+			<li class="creation creation-list">
 				<a href="<?php the_permalink(); ?>">
 					<figure class="<?php echo $icon; ?>">
 						<div class="entry-thumbnail">

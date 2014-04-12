@@ -7,7 +7,7 @@ Template Name: Sans Barre Latérale
 
 <?php get_template_part('header-bar'); ?>
 
-<section class="blog grid">
+<section class="blog">
 	<div class="wrapper">		
 		<div>
 			<?php /* The loop */ ?>

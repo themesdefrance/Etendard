@@ -1,7 +1,7 @@
 <?php $portfolio_custom = get_post_custom(); ?>
 <?php get_header(); ?>
 <?php while (have_posts()) : the_post();?>
-<section class="grid realisation article">
+<section class="realisation article">
 	
 	<?php get_template_part('diaporama'); ?>
 	
@@ -12,40 +12,42 @@
 	</div>
 	
 	<div class="wrapper">
+		<div class="layout-grid">
 	
-	<?php  if(!empty($portfolio_custom['etendard_portfolio_client'][0]) || !empty($portfolio_custom['etendard_portfolio_url'][0])){ ?>
+			<?php  if(!empty($portfolio_custom['etendard_portfolio_client'][0]) || !empty($portfolio_custom['etendard_portfolio_url'][0])){ ?>
 		
-		<div class="col-1-3 meta">
-			<?php if (!empty($portfolio_custom['etendard_portfolio_client'][0])): ?>
-			<h3 class="realisation-client">
-				Client : <?php echo $portfolio_custom['etendard_portfolio_client'][0]; ?>
-			</h3>
-			<?php endif; ?>
-			
-			<?php foreach ($portfolio_custom as $name=>$value){
-				if (substr($name, 0, 10) === 'portfolio_'):
+			<div class="col-1-3 meta">
+				<?php if (!empty($portfolio_custom['etendard_portfolio_client'][0])): ?>
+				<h3 class="realisation-client">
+					Client : <?php echo $portfolio_custom['etendard_portfolio_client'][0]; ?>
+				</h3>
+				<?php endif; ?>
+
+				<?php foreach ($portfolio_custom as $name=>$value){
+					if (substr($name, 0, 10) === 'portfolio_'):
+					?>
+					<div class="meta">
+						<?php echo substr($name, 10); ?>:
+						<?php echo $value[0]; ?>
+					</div>
+					<?php
+					endif;
+				}
 				?>
-				<div class="meta">
-					<?php echo substr($name, 10); ?>:
-					<?php echo $value[0]; ?>
-				</div>
-				<?php
-				endif;
-			}
-			?>
-			
-			<?php if (!empty($portfolio_custom['etendard_portfolio_url'][0])): ?>
-			<a href="<?php echo $portfolio_custom['etendard_portfolio_url'][0]; ?>" class="realisation-site">
-				<?php _e('voir le site', TEXT_TRANSLATION_DOMAIN); ?>
-			</a>
-			<?php endif; ?>
-		</div>
-		<div class="col-2-3 content">
-		
-		<?php }else{ ?>
-			<div class="content">
-		<?php } ?>
-			<?php the_content(); ?>
+
+				<?php if (!empty($portfolio_custom['etendard_portfolio_url'][0])): ?>
+				<a href="<?php echo $portfolio_custom['etendard_portfolio_url'][0]; ?>" class="realisation-site">
+					<?php _e('voir le site', TEXT_TRANSLATION_DOMAIN); ?>
+				</a>
+				<?php endif; ?>
+			</div>
+			<div class="col-2-3 content">
+
+			<?php }else{ ?>
+				<div class="content">
+			<?php } ?>
+				<?php the_content(); ?>
+			</div>
 		</div>
 	</div>
 </section>
