@@ -7,4 +7,8 @@ jQuery(function($){
 			$(this).attr('rel', galName);
 		}).fancybox();
 	});
+	
+	$('article.post.type-post').find('a > img').each(function(){
+		$(this).parent().fancybox();
+	});
 });

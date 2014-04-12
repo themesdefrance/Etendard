@@ -13,7 +13,7 @@ require_once 'admin/Cocorico/Cocorico.php';
 //chargement des widgets	
 require_once 'admin/widgets/social.php';
 require_once 'admin/widgets/appel-action.php';
-require_once 'admin/bienvenue.php';
+//require_once 'admin/bienvenue.php';
 
 
 if(!class_exists('EDD_SL_Theme_Updater')){
@@ -155,10 +155,8 @@ if (!function_exists('etendard_enqueue')){
 		wp_enqueue_script('etendard_combined');
 		wp_enqueue_script('etendard_shortcodes');
 		
-		if (get_post_gallery()){
-			wp_enqueue_script('fancybox');
-			wp_enqueue_style('fancybox');
-		}
+		wp_enqueue_script('fancybox');
+		wp_enqueue_style('fancybox');
 	}
 }
 add_action('wp_enqueue_scripts', 'etendard_enqueue');
