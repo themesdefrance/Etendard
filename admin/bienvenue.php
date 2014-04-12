@@ -260,13 +260,13 @@ class Etendard_Welcome {
 		
 		
 		// Code adapté de EDD
-		$upgrade = get_option( 'etendard_precedente_version' );
-		
-		if( ! $upgrade ) { // Première installation
-			wp_safe_redirect( admin_url( 'index.php?page=etendard-bienvenue' ) ); exit;
-		} else { // Mise à jour
-			wp_safe_redirect( admin_url( 'index.php?page=etendard-update' ) ); exit;
-		}
+//		$upgrade = get_option( 'etendard_precedente_version' );
+//		
+//		if( ! $upgrade ) { // Première installation
+//			wp_safe_redirect( admin_url( 'index.php?page=etendard-bienvenue' ) ); exit;
+//		} else { // Mise à jour
+//			wp_safe_redirect( admin_url( 'index.php?page=etendard-update' ) ); exit;
+//		}
 		
 		
 
