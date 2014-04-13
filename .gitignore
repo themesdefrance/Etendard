@@ -1,7 +1,7 @@
 node_modules/
 .sass-cache
-./Etendard/
 Etendard/
+!admin/Cocorico/extensions/etendard
 sources_css/style.css
 js/etendard-combined.js
 
