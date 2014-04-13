@@ -23,3 +23,14 @@
 	border: none;
 	background-color:transparent;
 }
+
+
+ul.slip-target li{
+	background: #ddd;
+	padding: 6px 8px;
+	margin-bottom: 8px;
+	cursor: move;
+}
+ul.slip-target li.slip-reordering{
+	opacity: .7;
+}

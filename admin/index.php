@@ -18,20 +18,16 @@ $form->setting(array('type'=>'text',
 					 'name'=>substr(EDD_SL_LICENSE_KEY, strlen(COCORICO_PREFIX)),
 					 'label'=>__("Licence", TEXT_TRANSLATION_DOMAIN),
 					 'description'=>__("Entrez la licence pour qu'Étendard puisse recevoir les mises à jour. Vous pourrez la trouver dans l'email que nous vous avons envoyé suite à votre commande.", TEXT_TRANSLATION_DOMAIN)));
-					 
-$form->setting(array('type'=>'checkbox',
-					 'label'=>__("Choisissez les éléments à afficher sur la page d'accueil :", TEXT_TRANSLATION_DOMAIN),
-					 'name'=>'blocks_presence',
-					 'checkboxes'=>array(
-					 	'titre'=>__('Titre et slogan', TEXT_TRANSLATION_DOMAIN),
+
+$form->ordre('home_blocks',
+				__("Choisissez les éléments à afficher sur la page d'accueil :", TEXT_TRANSLATION_DOMAIN),
+				array(  'titre'=>__('Titre et slogan', TEXT_TRANSLATION_DOMAIN),
 						'diaporama'=>__('Diaporama', TEXT_TRANSLATION_DOMAIN),
 						'content'=>__('Contenu', TEXT_TRANSLATION_DOMAIN),
 						'cta'=>__("Appel à l'action", TEXT_TRANSLATION_DOMAIN),
 						'services'=>__('Liste de vos services', TEXT_TRANSLATION_DOMAIN),
 						'portfolio'=>__('Derniers éléments du portfolio', TEXT_TRANSLATION_DOMAIN),
-						'articles'=>__('Derniers articles', TEXT_TRANSLATION_DOMAIN),
-					 ),
-					 'options'=>array('after'=>'<br/>')));
+						'articles'=>__('Derniers articles', TEXT_TRANSLATION_DOMAIN)));
 					 
 $form->setting(array('type'=>'textarea',
 					 'name'=>'footer_gauche',

@@ -107,3 +107,76 @@ function etendardTitreWrapper($content){
 	return $output;
 }
 CocoDictionary::register(CocoDictionary::WRAPPER, 'titre', 'etendardTitreWrapper');
+
+function etendardUlWrapper($content){
+	$output = '<ul class="slip-target">';
+	$output .= $content;
+	$output .= '</ul>';
+	return $output;
+}
+CocoDictionary::register(CocoDictionary::WRAPPER, 'ul', 'etendardUlWrapper');
+
+function etendardLiWrapper($content){
+	$output = '<li>';
+	$output .= $content;
+	$output .= '</li>';
+	return $output;
+}
+CocoDictionary::register(CocoDictionary::WRAPPER, 'li', 'etendardLiWrapper');
+
+function etendardOrdreShorthand($cocorico, $name, $label, $checkboxes){
+	$stored = CoCoRequest::request($name);
+	if (!$stored) $stored = $cocorico->getStore()->get($name);
+	if (!$stored && get_option('etendard_blocks_presence')){
+		//premier lancementapres une migration
+		$migrate = get_option('etendard_blocks_presence');
+		$stored = array();
+		foreach ($checkboxes as $index=>$value){
+			$stored[$index] = in_array($index, $migrate);
+		}
+	}
+	if (!$stored){
+		//first run
+		$stored = array();
+		foreach ($checkboxes as $index=>$value){
+			$stored[$index] = true;
+		}
+	}
+	
+	$reorderedCheckboxes = array();
+	foreach ($stored as $index=>$value){
+		$reorderedCheckboxes[$index] = $checkboxes[$index];
+	}
+	
+	$cocorico->startWrapper('tr');
+	$cocorico->startWrapper('th');
+	$cocorico->component('raw', $label);
+	$cocorico->endWrapper('th');
+	
+	$cocorico->startWrapper('td');
+	$cocorico->startWrapper('ul');
+
+	foreach ($reorderedCheckboxes as $value=>$label){
+		$cocorico->startWrapper('li');
+		$cocorico->component('boolean', $name.'['.$value.']', array('default'=>$stored[$value]))->filter('saveOrdre', $name);
+		$cocorico->component('label', $name.'['.$value.']', $label);
+		$cocorico->endWrapper('li');
+	}
+	
+	
+	$cocorico->endWrapper('ul');
+	$cocorico->endWrapper('td');
+	$cocorico->endWrapper('tr');
+	
+	wp_register_script('etendard_slip', COCORICO_URI.'/extensions/etendard/slip.js', array(), '1', true);
+	wp_enqueue_script('etendard_slip');
+	wp_register_script('etendard_ordre', COCORICO_URI.'/extensions/etendard/ordre.js', array('jquery'), '1', true);
+	wp_enqueue_script('etendard_ordre');
+}
+CocoDictionary::register(CocoDictionary::SHORTHAND, 'ordre', 'etendardOrdreShorthand');
+
+function etendardSaveOrdreFilter($value, $name, $component){
+	$stored = CoCoRequest::request($name);
+	$component->getStore()->set($name, $stored);
+}
+CocoDictionary::register(CocoDictionary::FILTER, 'saveOrdre', 'etendardSaveOrdreFilter');

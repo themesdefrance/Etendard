@@ -6,20 +6,12 @@ Template Name: Accueil
 <?php get_header(); ?>
 
 <?php
-$display_blocks = get_option('etendard_blocks_presence');
-$ordre_blocks = array('titre'=>0, 
-					  'diaporama'=>1,
-					  'content'=>2,
-					  'cta'=>3,
-					  'services'=>4,
-					  'portfolio'=>5,
-					  'articles'=>6);
-asort($ordre_blocks);
+$blocks = get_option('etendard_home_blocks');
 ?>
 
 <?php 
-foreach ($ordre_blocks as $block=>$ordre){
-	if (!$display_blocks || !in_array($block, $display_blocks)) continue;
+foreach ($blocks as $block=>$display){
+	if (!$display) continue;
 	
 	switch ($block){
 		case 'titre':
