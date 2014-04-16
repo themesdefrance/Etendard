@@ -687,7 +687,7 @@ if (!get_option('etendard_import_OF')){
 }
 
 
-// TinyMCE Shortcodes Integration
+// TinyMCE 3 Shortcodes Integration
 
 if(!function_exists('etendard_add_tinymce')){
 	function etendard_add_tinymce() {
@@ -711,6 +711,38 @@ if(!function_exists('etendard_add_tinymce_button')){
 	}
 }
 
+
+// TinyMCE 3 Shortcodes Integration
+add_action( 'admin_head', 'etendard_add_tinymce4' );
+function etendard_add_tinymce4() {
+    global $typenow;
+
+    // only on Post Type: post and page
+    if( ! in_array( $typenow, array( 'post', 'page' ) ) )
+        return ;
+
+    add_filter( 'mce_external_plugins', 'etendard_add_tinymce4_plugin' );
+    // Add to line 1 form WP TinyMCE
+    add_filter( 'mce_buttons', 'etendard_add_tinymce4_button' );
+}
+
+// inlcude the js for tinymce
+function etendard_add_tinymce4_plugin( $plugin_array ) {
+
+    $plugin_array['shortcode_drop'] = get_template_directory_uri() . '/admin/js/tmcedrop4.js';
+    // Print all plugin js path
+    var_dump( $plugin_array );
+    return $plugin_array;
+}
+
+// Add the button key for address via JS
+function etendard_add_tinymce4_button( $buttons ) {
+
+    array_push( $buttons, 'etendard_shortcode_button' );
+    // Print all buttons
+    //var_dump( $buttons );
+    return $buttons;
+}
 
 
 
