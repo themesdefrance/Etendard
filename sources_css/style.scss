@@ -1291,26 +1291,44 @@ form.search-form input.search-submit{
 	float:left;
 	position:relative;
 	overflow:hidden;
+	@include width-matches($breakpoint-mobile){
+		margin:0;
+	}
 }
 
 .un_demi{
 	width:48%;
+	@include width-matches($breakpoint-mobile){
+		width:100%;
+	}
 }
 
 .un_tiers{
 	width:30.5%;
+	@include width-matches($breakpoint-mobile){
+		width:100%;
+	}
 }
 
 .un_quart{
-	width:22%;	
+	width:22%;
+	@include width-matches($breakpoint-mobile){
+		width:100%;
+	}
 }
 
 .deux_tiers{
-	width:65.5%;	
+	width:65.5%;
+	@include width-matches($breakpoint-mobile){
+		width:100%;
+	}	
 }
 
 .trois_quarts{
-	width:74%;	
+	width:74%;
+	@include width-matches($breakpoint-mobile){
+		width:100%;
+	}
 }
 
 .premier{
