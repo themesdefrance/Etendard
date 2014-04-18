@@ -23,6 +23,12 @@
 			<h1 class="headerbartitle">
 				<?php single_tag_title(_e('Articles identifiés par ', TEXT_TRANSLATION_DOMAIN)); ?>
 			</h1>
+			
+		<?php }else if(is_search()){ ?>
+		
+			<h1 class="headerbartitle">
+				<?php printf( __( 'Résultats de recherche pour : %s', TEXT_TRANSLATION_DOMAIN ), get_search_query() ); ?>
+			</h1>
 		
 		<?php }else if(is_archive()){ ?>
 			<h1 class="headerbartitle">
