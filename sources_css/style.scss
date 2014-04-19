@@ -27,7 +27,7 @@
 $main-header-transition-duration: .4s;
 .main-header{
 	position: fixed;
-	top: 32px;
+	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 200;
@@ -44,6 +44,9 @@ $main-header-transition-duration: .4s;
 		//décalle le bloc suivant
 		margin-top: 170px + 20px;
 	}
+}
+body.admin-bar .main-header{
+	top: 32px;
 }
 
 .main-header .logo-wrap{
