@@ -112,7 +112,7 @@ body.admin-bar .main-header{
 	height:auto;
 }
 .top-level-menu > li > .sub-menu{ // Sous menu 1er niveau
-	display:block;
+	display: none;
 	height:0;
 	opacity:0;
 	overflow:hidden;
