@@ -11,6 +11,10 @@
 			this.addEventListener('slip:beforeswipe', function(e){
 				e.preventDefault();
 			}, false);
+			
+			this.addEventListener('slip:beforewait', function(e){
+				e.preventDefault();
+			}, false);
 		});
 	});
 })(jQuery);
