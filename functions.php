@@ -743,7 +743,7 @@ function etendard_add_tinymce4_plugin( $plugin_array ) {
 
     $plugin_array['shortcode_drop'] = get_template_directory_uri() . '/admin/js/tmcedrop4.js';
     // Print all plugin js path
-    var_dump( $plugin_array );
+//    var_dump( $plugin_array );
     return $plugin_array;
 }
 
