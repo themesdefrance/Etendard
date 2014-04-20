@@ -686,6 +686,18 @@ if (!get_option('etendard_import_OF')){
 	update_option('etendard_import_OF', true);
 }
 
+//migration -> 1.010
+if (!get_option('etendard_home_blocks')){
+	$migrate = get_option('etendard_blocks_presence');
+	$stored = array();
+	$checkboxes = array('titre', 'diaporama', 'content', 'cta', 'services', 'portfolio', 'articles');
+	
+	foreach ($checkboxes as $index){
+		$stored[$index] = in_array($index, $migrate);
+	}
+	update_option('etendard_home_blocks', $stored);
+}
+
 
 // TinyMCE 3 Shortcodes Integration
 

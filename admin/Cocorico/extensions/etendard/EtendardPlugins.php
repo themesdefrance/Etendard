@@ -127,14 +127,6 @@ CocoDictionary::register(CocoDictionary::WRAPPER, 'li', 'etendardLiWrapper');
 function etendardOrdreShorthand($cocorico, $name, $label, $checkboxes){
 	$stored = CoCoRequest::request($name);
 	if (!$stored) $stored = $cocorico->getStore()->get($name);
-	if (!$stored && get_option('etendard_blocks_presence')){
-		//premier lancementapres une migration
-		$migrate = get_option('etendard_blocks_presence');
-		$stored = array();
-		foreach ($checkboxes as $index=>$value){
-			$stored[$index] = in_array($index, $migrate);
-		}
-	}
 	if (!$stored){
 		//first run
 		$stored = array();
