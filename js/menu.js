@@ -16,7 +16,7 @@ jQuery(function($){
 		var menuHeight = $menu.height(),
 			menuTimeout = null;
 		
-		if (!$('#menu-toggle').is(':checked')) $menu.css('height', '0');
+		if ($('.toggle-menu-icon').is(':visible') && !$('#menu-toggle').is(':checked')) $menu.css('height', '0');
 		else $menu.css('height', menuHeight+'px');
 		
 		$(window).resize(function(){

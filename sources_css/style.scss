@@ -26,26 +26,26 @@
 
 $main-header-transition-duration: .4s;
 .main-header{
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 200;
+	position: static;
 	text-align: right;
 	background: rgba(#fff,.8);
 	@extend .clearfix;
+	margin-bottom: 20px;
 	
-	& + *{
-		//décalle le bloc suivant
-		@include transition(margin-top $main-header-transition-duration ease);
-		margin-top: 200px + 20px;
+	&.sticky{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 200;
 	}
+	
 	&.sticky + *{
 		//décalle le bloc suivant
-		margin-top: 170px + 20px;
+		margin-top: 140px;
 	}
 }
-body.admin-bar .main-header{
+body.admin-bar .main-header.sticky{
 	top: 32px;
 }
 
@@ -133,8 +133,10 @@ body.admin-bar .main-header{
 	}
 	
 	@include width-matches($breakpoint-mobile){
+		display: block;
 		position:static;
 		opacity:1;
+		background: none;
 		height:auto;
 		border:none;
 		padding-left:15px;
@@ -170,14 +172,7 @@ body.admin-bar .main-header{
 @include width-matches($breakpoint-mobile){
 	.main-header{
 		text-align: left;
-		
-		& + *{
-			margin-top: 120px + 20px;
-		}
-		
-		&.sticky{
-			min-height: 80px;
-		}
+		min-height: 80px;
 	}
 	.top-level-menu{
 		max-height: 0;
