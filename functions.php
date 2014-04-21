@@ -477,11 +477,46 @@ if (!function_exists('etendard_titre_home')){
 }
 // Article en plusieurs morceaux ?
 // Thanks to https://gist.github.com/tommcfarlin/f2310bfad60b60ae00bf#file-is-paginated-post-php
-function etendard_is_paginated_post() {
- 
-	global $multipage;
-	return 0 !== $multipage;
- 
+if (!function_exists('etendard_is_paginated_post')){
+	function etendard_is_paginated_post() {
+		global $multipage;
+		return 0 !== $multipage;
+	}
+}
+
+
+if (!function_exists('etendard_resize_upload')){
+	function etendard_resize_upload($img, $width, $height){
+		$uploadDirs = wp_upload_dir();
+		$upload_url = $uploadDirs['baseurl'];
+		$upload_path = $uploadDirs['basedir'];
+		
+		//full path to the image, without root url
+		$fullPath = substr($img, strlen($upload_url));
+
+		$exploded = explode('/', $fullPath);
+		$imgName = array_pop($exploded);//only the image name
+		$imgDir = implode($exploded, '/').'/';//direcotry containing the image, with leading and trailing slash
+
+		//compute the name of the resized image
+		$separator = strrpos($imgName, '.');
+		$wanted = substr($imgName, 0, $separator).'-'.$width.'x'.$height.substr($imgName, $separator);
+
+		if (!file_exists($upload_path.$imgDir.$wanted)){
+			//create resized image
+			$editor = wp_get_image_editor($upload_path.$imgDir.$imgName);
+			if (!is_wp_error($editor)){
+				$editor->resize($width, $height, true);
+				$editor->save($upload_path.$imgDir.$wanted);
+			}
+			else{
+				//default fallabck to normal image
+				$wanted = $imgName;
+			}
+		}
+		
+		return $upload_url.$imgDir.$wanted;
+	}
 }
 
 

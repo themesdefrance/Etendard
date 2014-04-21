@@ -2,7 +2,7 @@ jQuery(function($){
 	$(function(){
 		var stickyClass = 'sticky',
 			isSticked = false,
-			offsetTrigger = 5;
+			offsetTrigger = 20;
 		
 		$(window).on('scroll', function(){
 			isSticked = ($('.main-header.'+stickyClass).length >= 1) ? true : false;

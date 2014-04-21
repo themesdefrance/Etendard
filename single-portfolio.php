@@ -60,7 +60,7 @@
 			
 				<?php if (!empty($portfolio_custom['etendard_portfolio_temoin_portrait'][0])): ?>
 				<div class="temoignage-photo-wrapper">
-					<img src="<?php echo $portfolio_custom['etendard_portfolio_temoin_portrait'][0]; ?>" class="temoignage-photo" />
+					<img src="<?php echo etendard_resize_upload($portfolio_custom['etendard_portfolio_temoin_portrait'][0], 160, 110); ?>" class="temoignage-photo" />
 				</div>
 				<?php endif; ?>
 				
