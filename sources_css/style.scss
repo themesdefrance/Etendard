@@ -24,13 +24,13 @@
 	}
 }
 
-$main-header-transition-duration: .4s;
+$main-header-transition-duration: .05s;
 .main-header{
 	position: static;
 	text-align: right;
 	background: rgba(#fff,.8);
 	@extend .clearfix;
-	margin-bottom: 20px;
+	margin-bottom: 4px;
 	
 	&.sticky{
 		position: fixed;
@@ -38,11 +38,12 @@ $main-header-transition-duration: .4s;
 		left: 0;
 		right: 0;
 		z-index: 200;
+		height:52px;
 	}
 	
 	&.sticky + *{
 		//décalle le bloc suivant
-		margin-top: 140px;
+		margin-top: 68px;
 	}
 }
 body.admin-bar .main-header.sticky{
@@ -62,8 +63,8 @@ body.admin-bar .main-header.sticky{
 	max-height: 200px;
 }
 .main-header.sticky .logo-wrap img{
-	max-height: 80px;
-	padding: 5px 0;
+	max-height: 55px;
+	padding: 3px 0 7px;
 }
 
 .main-menu ul{
