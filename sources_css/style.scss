@@ -39,6 +39,10 @@ $main-header-transition-duration: .05s;
 		right: 0;
 		z-index: 200;
 		height:52px;
+		
+		& .wrapper{
+			padding:0;
+		}
 	}
 	
 	&.sticky + *{
@@ -48,12 +52,23 @@ $main-header-transition-duration: .05s;
 }
 body.admin-bar .main-header.sticky{
 	top: 32px;
+	
+	@include width-below('782px'){ // Fix Admin bar WordPress
+		top:46px;
+	}
+	
+	@include width-below('600px'){ // Fix Admin bar WordPress
+		top:0;
+	}
 }
 
 .main-header .logo-wrap{
 	float: left;
 	max-width:50%;
 	line-height: 0;
+	@include width-matches($breakpoint-mobile){
+		max-width: 80%;
+	}
 }
 .main-header .logo-wrap a{
 	display: inline-block;
@@ -173,11 +188,13 @@ body.admin-bar .main-header.sticky{
 @include width-matches($breakpoint-mobile){
 	.main-header{
 		text-align: left;
-		min-height: 80px;
+		min-height: 50px;
 	}
 	.top-level-menu{
 		max-height: 0;
 		overflow: hidden;
+		padding: 0 10px;
+		background: rgba(255,255,255,0.8);
 		@include transition(height .4s ease-in);
 	}
 	
@@ -196,10 +213,18 @@ body.admin-bar .main-header.sticky{
 		position: absolute;
 		z-index: 100;
 		right: 0;
-		top: 20px;
+		top: 0px;
 		display: inline-block;
 		font-size: 50px;
 		line-height: 0;
+	}
+	
+	body.admin-bar .main-header .toggle-menu-icon{
+		top: 50px;
+	}
+	
+	body.admin-bar .main-header.sticky .toggle-menu-icon{
+		top: 0px;
 	}
 }
 
