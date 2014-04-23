@@ -39,7 +39,7 @@ module.exports = function(grunt){
 		copy: {
 			build: {
 				expand: true,
-				src: ['**', '!.sass-cache', '!Etendard', '!node_modules/**', '!Gruntfile.js', '!README.md', '!package.json'],
+				src: ['**', '!.sass-cache', '!Etendard/', '!node_modules/**', '!Gruntfile.js', '!README.md', '!package.json'],
 				dest: 'Etendard/',
 			}
 		}
