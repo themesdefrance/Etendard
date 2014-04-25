@@ -1,7 +1,7 @@
 <?php
 define('TEXT_TRANSLATION_DOMAIN', 'etendard');
 //chargement du gestionnaire de licenses
-define('EDD_SL_STORE_URL', 'https://www.themesdefrance.fr/');
+define('EDD_SL_STORE_URL', 'https://www.themesdefrance.fr');
 define('EDD_SL_THEME_NAME', 'Etendard');
 define('EDD_SL_THEME_VERSION', '1.010');
 define('EDD_SL_LICENSE_KEY', 'etendard_license_edd');
