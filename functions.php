@@ -1,27 +1,40 @@
 <?php
+
 define('TEXT_TRANSLATION_DOMAIN', 'etendard');
-//chargement du gestionnaire de licenses
+
+////////////////////////////////////
+// License Stuff
+////////////////////////////////////
+
 define('EDD_SL_STORE_URL', 'https://www.themesdefrance.fr');
 define('EDD_SL_THEME_NAME', 'Etendard');
 define('EDD_SL_THEME_VERSION', '1.010');
 define('EDD_SL_LICENSE_KEY', 'etendard_license_edd');
 
-define('COCORICO_PREFIX', 'etendard_');
-require_once 'admin/Cocorico/Cocorico.php';
-
-
-//chargement des widgets	
-require_once 'admin/widgets/social.php';
-require_once 'admin/widgets/appel-action.php';
-//require_once 'admin/bienvenue.php';
-
-
 if(!class_exists('EDD_SL_Theme_Updater')){
 	include(dirname( __FILE__ ).'/admin/EDD_SL_Theme_Updater.php');
 }
 
+////////////////////////////////////
+// Cocorico Framework
+////////////////////////////////////
 
-//installation du thème
+define('COCORICO_PREFIX', 'etendard_');
+require_once 'admin/Cocorico/Cocorico.php';
+
+////////////////////////////////////
+// Widgets, Shortcodes & Welcome page loading
+////////////////////////////////////
+	
+require_once 'admin/widgets/social.php';
+require_once 'admin/widgets/appel-action.php';
+require_once 'admin/shortcodes.php';
+//require_once 'admin/bienvenue.php'; // Coming soon
+
+////////////////////////////////////
+// Etendard Setup & Activation
+////////////////////////////////////
+
 if (!function_exists( 'etendard_activation')){
 	function etendard_activation(){
 		global $wp_rewrite;
@@ -30,19 +43,21 @@ if (!function_exists( 'etendard_activation')){
 }
 add_action('after_switch_theme', 'etendard_activation');
 
-//setup du theme
+
 if (!function_exists('etendard_setup')){
 	function etendard_setup(){
 		
-		// Sauvegarde version precedente etendard
+		// Save Etendard previous version
 		$etendard_version = get_option( 'etendard_version' );
 		if ( $etendard_version ) {
 			update_option( 'etendard_precedente_version', $etendard_version );
 		}
 		
+		// Register menus
 		register_nav_menu('primary', __('Menu principal', TEXT_TRANSLATION_DOMAIN));
 		register_nav_menu('footer', __('Menu pied de page', TEXT_TRANSLATION_DOMAIN));
-			
+		
+		//Register sidebars
 		register_sidebar(array(
 				'name'          => __('Barre latérale', TEXT_TRANSLATION_DOMAIN),
 				'id'            => 'blog',
@@ -63,32 +78,41 @@ if (!function_exists('etendard_setup')){
 				'after_title'   => '</h3>',
 		));
 		
+		// Enable thumbnails
 		add_theme_support('post-thumbnails');
 		
+		// Enable post formats - Coming soon
 		/*add_theme_support('post-formats', array(
 			'video'
 		));*/
 		
+		// Set images sizes
 		add_image_size('etendard-portfolio-thumbnail', 301, 230, true);
 		add_image_size('etendard-service-thumbnail', 230, 230, true);
 		add_image_size('etendard-blog-thumbnail', 225, 150, true);
 		add_image_size('etendard-post-thumbnail', 620, 400, true);
+		
+		// Load language
 		//	load_theme_textdomain(TEXT_TRANSLATION_DOMAIN, get_template_directory().'/local');
 		
-		// Mise à jour numero de version
+		// Update Etendard new version
 		update_option( 'etendard_version', EDD_SL_THEME_VERSION );
 		
-		// Transient de Redirection après activation
+		// Transiant redirect after activation
 		set_transient( '_etendard_activation_redirect', true, 30 );
 		
 	}
 }
 add_action('after_setup_theme', 'etendard_setup');
 
-//declaration des CPT
+////////////////////////////////////
+// Custom Post Types Declaration
+////////////////////////////////////
+
 if (!function_exists('etendard_init_cpt')){
 	function etendard_init_cpt(){
-		//portfolio
+		
+		// Portfolio
 		register_post_type('portfolio', array(
 			'label'=>__('Portfolio', TEXT_TRANSLATION_DOMAIN),
 			'labels'=>array(),
@@ -111,7 +135,7 @@ if (!function_exists('etendard_init_cpt')){
 		));
 		register_taxonomy_for_object_type('portfolio_categorie', 'portfolio');
 		
-		//services
+		// Services
 		register_post_type('service', array(
 			'label'=>__('Services', TEXT_TRANSLATION_DOMAIN),
 			'labels'=>array(),
@@ -130,25 +154,39 @@ if (!function_exists('etendard_init_cpt')){
 }
 add_action('init', 'etendard_init_cpt');
 
-//ajout des scripts & styles
+////////////////////////////////////
+// Scripts & Styles Registering & Loading
+////////////////////////////////////
+
 if (!function_exists('etendard_enqueue')){
 	function etendard_enqueue(){
+	
 		$theme = wp_get_theme();
 		
+		// Slider
 		wp_register_script('glide', get_template_directory_uri().'/lib/glide/glide.min.js', array('jquery'), $theme->get('Version'), true);
 		wp_register_style('glide', get_template_directory_uri().'/lib/glide/glide.css', false, $theme->get('Version'));
 		
+		// Fancybox (lightbox like effect)
 		wp_register_script('fancybox', get_template_directory_uri().'/lib/fancybox/jquery.fancybox.pack.js', array('jquery'), $theme->get('Version'), true);
 		wp_register_style('fancybox', get_template_directory_uri().'/lib/fancybox/jquery.fancybox.css', false, $theme->get('Version'));
 		
+		// Etendard combined scripts (menu, galery, backtotop...)
 		wp_register_script('etendard_combined', get_template_directory_uri().'/js/etendard-combined.js', array('jquery'), $theme->get('Version'), true);
 		
+		// Entendard Shortcodes Script
 		wp_register_script('etendard_shortcodes', get_template_directory_uri().'/admin/js/shortcodes.js', array('jquery'), $theme->get('Version'), true);
 		
+		// Google Fonts
 		wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Sanchez:400,400italic|Maven+Pro:400,700', array(), $theme->get('Version'));
+		
+		// Etendard Font
 		wp_enqueue_style('icons', get_template_directory_uri().'/fonts/style.css', array(), $theme->get('Version'));
+		
+		// Style.css
 		wp_enqueue_style('stylesheet', get_stylesheet_directory_uri().'/style.css', array(), $theme->get('Version'));
 		
+		// Enqueue scripts & style
 		wp_enqueue_script('glide');
 		wp_enqueue_style('glide');
 		
@@ -161,15 +199,20 @@ if (!function_exists('etendard_enqueue')){
 }
 add_action('wp_enqueue_scripts', 'etendard_enqueue');
 
-//parametrage de l'administration
+////////////////////////////////////
+// Admin Initialization
+////////////////////////////////////
+
+// Removing Custom fields metabox
 if (!function_exists('etendard_admin_init')){
 	function etendard_admin_init(){
-//		remove_meta_box('postcustom', 'portfolio', 'normal');
+		//remove_meta_box('postcustom', 'portfolio', 'normal');
 		remove_meta_box('postcustom', 'service', 'normal');
 	}
 }
 add_action('admin_init', 'etendard_admin_init');
 
+// Add Etendard admin menu
 if (!function_exists('etendard_admin_menu')){
 	function etendard_admin_menu(){
 		add_theme_page('Options Étendard', 'Options Étendard', 'edit_theme_options', 'etendard_options', 'etendard_options');
@@ -187,7 +230,11 @@ if (!function_exists('etendard_options')){
     }
 }
 
-//initialisation des widgets
+////////////////////////////////////
+// Widgets Initialization
+////////////////////////////////////
+
+// Etendard Social
 if (!function_exists('etendard_widgets_init')){
 	function etendard_widgets_init(){
 		register_widget('EtendardSocial');
@@ -195,6 +242,7 @@ if (!function_exists('etendard_widgets_init')){
 }
 add_action('widgets_init', 'etendard_widgets_init');
 
+// Etendard Call to action
 if (!function_exists('etendard_appel_action_init')){
 	function etendard_appel_action_init(){
 		register_widget('EtendardAppelAction');
@@ -202,7 +250,10 @@ if (!function_exists('etendard_appel_action_init')){
 }
 add_action('widgets_init', 'etendard_appel_action_init');
 
-//initialisation des customfields
+////////////////////////////////////
+// Custom Metaboxes
+////////////////////////////////////
+
 if (!function_exists('etendard_register_custom_fields')){
 	function etendard_register_custom_fields(){
 		add_meta_box('etendard_portfolio_client',
@@ -229,7 +280,7 @@ if (!function_exists('etendard_register_custom_fields')){
 					 'high'
 		);
 		
-		//Metabox spéciales pour le template Accueil
+		// Home Metaboxes
 		if (isset($_GET['post']) || isset($_POST['post_ID'])){
 			$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
 			$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
@@ -259,7 +310,7 @@ if (!function_exists('etendard_register_custom_fields')){
 }
 add_action('add_meta_boxes', 'etendard_register_custom_fields');
 
-//Metabox individuelles
+// Metaboxes loading
 if (!function_exists('etendard_portfolio_client')){
 	function etendard_portfolio_client($post){
 		require 'admin/meta-box/portfolio_client.php';
@@ -284,9 +335,12 @@ if (!function_exists('etendard_home_cta')){
 	}
 }
 
-//supprimmes les tailles forcées des thumbnails
+////////////////////////////////////
+// Delete custom sizes thumbnails
+////////////////////////////////////
+
 if (!function_exists('etendard_strip_img_sizes')){
-	//enleve les attributs width et height des images
+	//delete images width & height attributes
 	function etendard_strip_img_sizes($img){
 		$img = preg_replace("/\s(width|height)=('|\")\d+('|\")/", ' ', $img);
 		return $img;
@@ -295,32 +349,32 @@ if (!function_exists('etendard_strip_img_sizes')){
 add_filter('get_avatar', 'etendard_strip_img_sizes');
 add_filter('post_thumbnail_html', 'etendard_strip_img_sizes');
 
-// Chargement des shortcodes
-require_once 'admin/shortcodes.php';
+////////////////////////////////////
+// Pagination
+////////////////////////////////////
 
-
-//fonction de pagination
 if (!function_exists('etendard_posts_nav')){
 	//derived from http://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/
-	/**
-	 @param $extremes : afficher ou non les liens précédent/suivant
-	 @param $separator : chaine à insérer entre chaque page
+	/*
+	 @param $extremes : display or not previous & next links
+	 @param $separator : string to insert between each page
 	*/
+	
 	function etendard_posts_nav($extremes=true, $separator='|'){
 		if (is_singular()) return;
 	
 		global $wp_query;
 	
-		/** Stop execution if there's only 1 page */
+		// Stop execution if there's only 1 page
 		if($wp_query->max_num_pages <= 1) return;
 	
 		$paged = get_query_var('paged') ? absint(get_query_var('paged')) : 1;
 		$max = intval($wp_query->max_num_pages);
 	
-		/**	Add current page to the array */
+		// Add current page to the array
 		if ($paged >= 1) $links[] = $paged;
 	
-		/**	Add the pages around the current page to the array */
+		// Add the pages around the current page to the array
 		if ($paged >= 3){
 			$links[] = $paged - 1;
 			$links[] = $paged - 2;
@@ -334,10 +388,10 @@ if (!function_exists('etendard_posts_nav')){
 		$current = '<span class="current">%s</span>';
 		$linkTemplate = '<a href="%s">%s</a>';
 	
-		/**	Previous Post Link */
+		// Previous Post Link
 		if ($extremes && get_previous_posts_link()) previous_posts_link();
 	
-		/**	Link to first page, plus ellipses if necessary */
+		// Link to first page, plus ellipses if necessary */
 		if (!in_array(1, $links)){
 			if ($paged == 1)
 				printf($current, '1');
@@ -348,7 +402,7 @@ if (!function_exists('etendard_posts_nav')){
 			if (!in_array(2, $links)) echo '…'.$separator;
 		}
 	
-		/**	Link to current page, plus 2 pages in either direction if necessary */
+		// Link to current page, plus 2 pages in either direction if necessary
 		sort($links);
 		foreach ((array) $links as $link){
 			if ($paged == $link)
@@ -359,7 +413,7 @@ if (!function_exists('etendard_posts_nav')){
 			if ($link < $max) echo $separator;
 		}
 	
-		/**	Link to last page, plus ellipses if necessary */
+		// Link to last page, plus ellipses if necessary
 		if (!in_array($max, $links)){
 			if (!in_array($max-1, $links)) echo '…'.$separator;
 	
@@ -369,13 +423,16 @@ if (!function_exists('etendard_posts_nav')){
 				printf($linkTemplate, esc_url(get_pagenum_link($max)), $max);
 		}
 	
-		/**	Next Post Link */
+		// Next Post Link
 		if ($extremes && get_next_posts_link()) next_posts_link();
 	}
 }
 
-//affichage descommentaires
-//borrowed from http://themeshaper.com/2012/11/04/the-wordpress-theme-comments-template/
+////////////////////////////////////
+// Comments
+////////////////////////////////////
+
+// Borrowed from http://themeshaper.com/2012/11/04/the-wordpress-theme-comments-template/
 if (!function_exists('etendard_comment')){
 	function etendard_comment($comment, $args, $depth){
 		$GLOBALS['comment'] = $comment;
@@ -428,7 +485,11 @@ if (!function_exists('etendard_comment')){
 	}
 }
 
-//recupere une page utilisant le template portfolio
+////////////////////////////////////
+// Miscellaneous Functions
+////////////////////////////////////
+
+// Get the first page using the portfolio template
 if (!function_exists('etendard_portfolio_page_link')){
 	function etendard_portfolio_page_link(){
 		$portfolio_pages = get_pages(array(
@@ -441,7 +502,7 @@ if (!function_exists('etendard_portfolio_page_link')){
 	}
 }
 
-// Taille d'extrait personnalisé
+// Custom excerpt size
 if (!function_exists('etendard_custom_excerpt_length')){
 	function etendard_custom_excerpt_length($length) {
 		return 20;
@@ -449,7 +510,7 @@ if (!function_exists('etendard_custom_excerpt_length')){
 	add_filter('excerpt_length', 'etendard_custom_excerpt_length', 999);
 }
 
-// Suppression du [...] des extraits
+// Deleting more from excerpts
 if (!function_exists('etendard_new_excerpt_more')){
 	function etendard_new_excerpt_more($more) {
 		return '…';
@@ -457,7 +518,7 @@ if (!function_exists('etendard_new_excerpt_more')){
 	add_filter('excerpt_more', 'etendard_new_excerpt_more');
 }
 
-// Extrait personnalisable
+// Custom excerpts
 if (!function_exists('etendard_excerpt')){
 	function etendard_excerpt($length){
 		$content = get_the_content();
@@ -466,7 +527,7 @@ if (!function_exists('etendard_excerpt')){
 	}
 }
 
-// Titre 
+// Get the right title in the head section
 if (!function_exists('etendard_titre_home')){
 	function etendard_titre_home($title) {
 		if( empty( $title ) && ( is_home() || is_front_page() ) ) {
@@ -475,7 +536,8 @@ if (!function_exists('etendard_titre_home')){
 	}
 	add_filter('wp_title', 'etendard_titre_home');
 }
-// Article en plusieurs morceaux ?
+
+// Paginated post
 // Thanks to https://gist.github.com/tommcfarlin/f2310bfad60b60ae00bf#file-is-paginated-post-php
 if (!function_exists('etendard_is_paginated_post')){
 	function etendard_is_paginated_post() {
@@ -484,33 +546,33 @@ if (!function_exists('etendard_is_paginated_post')){
 	}
 }
 
-
+// Resizing images when uploading
 if (!function_exists('etendard_resize_upload')){
 	function etendard_resize_upload($img, $width, $height){
 		$uploadDirs = wp_upload_dir();
 		$upload_url = $uploadDirs['baseurl'];
 		$upload_path = $uploadDirs['basedir'];
 		
-		//full path to the image, without root url
+		// Full path to the image, without root url
 		$fullPath = substr($img, strlen($upload_url));
 
 		$exploded = explode('/', $fullPath);
 		$imgName = array_pop($exploded);//only the image name
 		$imgDir = implode($exploded, '/').'/';//direcotry containing the image, with leading and trailing slash
 
-		//compute the name of the resized image
+		// Compute the name of the resized image
 		$separator = strrpos($imgName, '.');
 		$wanted = substr($imgName, 0, $separator).'-'.$width.'x'.$height.substr($imgName, $separator);
 
 		if (!file_exists($upload_path.$imgDir.$wanted)){
-			//create resized image
+			// Create resized image
 			$editor = wp_get_image_editor($upload_path.$imgDir.$imgName);
 			if (!is_wp_error($editor)){
 				$editor->resize($width, $height, true);
 				$editor->save($upload_path.$imgDir.$wanted);
 			}
 			else{
-				//default fallabck to normal image
+				// Default fallabck to normal image
 				$wanted = $imgName;
 			}
 		}
@@ -519,13 +581,11 @@ if (!function_exists('etendard_resize_upload')){
 	}
 }
 
-
-
 ////////////////////////////////////
 // Styles Personnalisés
 ////////////////////////////////////
 
-//Couleur dominante
+// Main Etendard color
 if(!function_exists('etendard_user_styles')){
 	function etendard_user_styles(){
 		if (get_option('etendard_color')){
@@ -536,7 +596,7 @@ if(!function_exists('etendard_user_styles')){
 			if ($hsl->lightness > 180) $contrast = '#333';
 			else $contrast = '#fff';
 		}
-		else{ // Si aucune couleur par défaut, on utilise celle-ci
+		else{ // Default color
 			$color = "#02a7c6";
 			$contrast = '#fff';
 		} ?>
@@ -628,8 +688,7 @@ if(!function_exists('etendard_user_styles')){
 }
 add_action('wp_head','etendard_user_styles', 98);
 
-
-// Chargement du CSS Personnalisé
+// Custom CSS loading
 if(!function_exists('etendard_custom_styles')){
 	function etendard_custom_styles(){
 		if (get_option("etendard_custom_css")){
@@ -641,9 +700,10 @@ if(!function_exists('etendard_custom_styles')){
 }
 add_action('wp_head', 'etendard_custom_styles', 99);
 
-//Activation de license
-//On est sympa, on vous bloque pas le thème s'il n'y a pas de license valide 
-//et l'activation n'est pas très dure à contourner. Soyez bon joueurs et achetez-le :)
+////////////////////////////////////
+// License activation
+////////////////////////////////////
+
 if(!function_exists('etendard_edd')){
 	function etendard_edd(){
 		$license = trim(get_option(EDD_SL_LICENSE_KEY));
@@ -677,7 +737,10 @@ if(!function_exists('etendard_edd')){
 }
 add_action('admin_init', 'etendard_edd');
 
-//Notification de license
+////////////////////////////////////
+// Etendard notifications
+////////////////////////////////////
+
 if(!function_exists('etendard_admin_notice')){
 	function etendard_admin_notice(){
 		if(!get_option('etendard_license_status')){
@@ -695,102 +758,42 @@ if(!function_exists('etendard_admin_notice')){
 }
 add_action('admin_notices', 'etendard_admin_notice');
 
-//migration depuis etendard < 1.008
-if (!get_option('etendard_import_OF')){
-	$theme = get_option( 'stylesheet' );
-	$theme = preg_replace("/\W/", "_", strtolower($theme) );
-	$ofkey = 'optionsframework_' . $theme;
-	$ofData = get_option($ofkey);
+////////////////////////////////////
+// TinyMCE 4 Shortcodes Menu Button
+////////////////////////////////////
+
+if(!function_exists('etendard_add_tinymce4')){
+	function etendard_add_tinymce4() {
 	
-	if ($ofData){
-		foreach ($ofData as $key=>$value){
-			if ($key === 'etendard_blocks_presence'){
-				$converted = array();
-				
-				foreach ($value as $str=>$bool){
-					if ($bool) array_push($converted, $str);
-				}
-				
-				$value = $converted;
-			}
-			
-			update_option($key, $value);
-		}
-	}
-	
-	update_option('etendard_import_OF', true);
-}
-
-//migration -> 1.010
-if (!get_option('etendard_home_blocks')){
-	$migrate = get_option('etendard_blocks_presence');
-	$stored = array();
-	$checkboxes = array('titre', 'diaporama', 'content', 'cta', 'services', 'portfolio', 'articles');
-	
-	foreach ($checkboxes as $index){
-		$stored[$index] = in_array($index, $migrate);
-	}
-	update_option('etendard_home_blocks', $stored);
-}
-
-
-// TinyMCE 3 Shortcodes Integration
-
-if(!function_exists('etendard_add_tinymce')){
-	function etendard_add_tinymce() {
-		add_filter('mce_external_plugins', 'etendard_add_tinymce_plugin');
-		add_filter('mce_buttons', 'etendard_add_tinymce_button');
+	    add_filter( 'mce_external_plugins', 'etendard_add_tinymce4_plugin' );
+	    // Add button to line 1 form WP TinyMCE
+	    add_filter( 'mce_buttons', 'etendard_add_tinymce4_button' );
 	}
 }
-add_action('admin_head', 'etendard_add_tinymce');
-
-if(!function_exists('etendard_add_tinymce_plugin')){
-	function etendard_add_tinymce_plugin($plugin_array) {
-		$plugin_array['drop'] =	get_template_directory_uri() . '/admin/js/tmcedrop.js';
-		return $plugin_array;
-	}
-}
-
-if(!function_exists('etendard_add_tinymce_button')){
-	function etendard_add_tinymce_button($buttons) {
-		array_push($buttons, 'drop');
-		return $buttons;
-	}
-}
-
-
-// TinyMCE 3 Shortcodes Integration
 add_action( 'admin_head', 'etendard_add_tinymce4' );
-function etendard_add_tinymce4() {
-    global $typenow;
 
-    // only on Post Type: post and page
-    if( ! in_array( $typenow, array( 'post', 'page' ) ) )
-        return ;
-
-    add_filter( 'mce_external_plugins', 'etendard_add_tinymce4_plugin' );
-    // Add to line 1 form WP TinyMCE
-    add_filter( 'mce_buttons', 'etendard_add_tinymce4_button' );
+// Load TinyMCE plugin
+if(!function_exists('etendard_add_tinymce4_plugin')){
+	function etendard_add_tinymce4_plugin( $plugin_array ) {
+	
+	    $plugin_array['shortcode_drop'] = get_template_directory_uri() . '/admin/js/tmcedrop4.js';
+	    return $plugin_array;
+	}
 }
 
-// inlcude the js for tinymce
-function etendard_add_tinymce4_plugin( $plugin_array ) {
-
-    $plugin_array['shortcode_drop'] = get_template_directory_uri() . '/admin/js/tmcedrop4.js';
-    // Print all plugin js path
-//    var_dump( $plugin_array );
-    return $plugin_array;
+// Create shortcode button
+if(!function_exists('etendard_add_tinymce4_button')){
+	function etendard_add_tinymce4_button( $buttons ) {
+	
+	    array_push( $buttons, 'etendard_shortcode_button' );
+	    return $buttons;
+	}
 }
 
-// Add the button key for address via JS
-function etendard_add_tinymce4_button( $buttons ) {
+////////////////////////////////////
+// Migration from previous versions
+////////////////////////////////////
 
-    array_push( $buttons, 'etendard_shortcode_button' );
-    // Print all buttons
-    //var_dump( $buttons );
-    return $buttons;
-}
-
-
+require_once 'admin/migration.php';
 
 
