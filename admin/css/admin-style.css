@@ -18,6 +18,10 @@
 	margin-top:0;
 }
 
+.cocorico-tab-wrapper input[type=text]{
+	width:300px;
+}
+
 #normal-sortables .submitbox .submitdelete:hover{
 	color: red;
 	border: none;
