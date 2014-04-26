@@ -94,6 +94,13 @@ $form->startWrapper('tab', 'portfolio');
 
 $form->startForm();
 
+$form->setting(array('type'=>'text-list',
+					 'label'=>__('Champs personnalisés', TEXT_TRANSLATION_DOMAIN),
+					 'name'=>'portfolio_fields',
+					 'options'=>array(
+//					 	'default'=>array()
+					 )));
+
 $form->setting(array('type'=>'boolean',
 					 'label'=>__('Afficher les extraits', TEXT_TRANSLATION_DOMAIN),
 					 'name'=>'extraits_portfolio',

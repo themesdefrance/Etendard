@@ -172,3 +172,25 @@ function etendardSaveOrdreFilter($value, $name, $component){
 	$component->getStore()->set($name, $stored);
 }
 CocoDictionary::register(CocoDictionary::FILTER, 'saveOrdre', 'etendardSaveOrdreFilter');
+
+function etendardTextList($component){
+	if ($component->getValue()) $value = $component->getValue();
+	else if (isset($options['default'])) $value = $options['default'];
+	else $value = array();
+	
+	$output = '<ul>';
+	
+	foreach ($value as $field){
+		if (trim($field) === '') continue;
+		
+		$output .= '<li><input type="text" class="etendard-text-list" name="'.$component->getName().'[]" value="'.$field.'" /></li>';
+	}
+	$output .= '<li><input type="text" class="etendard-text-list" name="'.$component->getName().'[]" /></li>';
+	$output .= '</ul>';
+	
+	wp_register_script('etendard_text_list', COCORICO_URI.'/extensions/etendard/textlist.js', array('jquery'), '1', true);
+	wp_enqueue_script('etendard_text_list');
+	
+	return $output;
+}
+CocoDictionary::register(CocoDictionary::COMPONENT, 'text-list', 'etendardTextList');
