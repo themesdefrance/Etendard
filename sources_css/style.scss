@@ -72,7 +72,30 @@ body.admin-bar .main-header.sticky{
 }
 .main-header .logo-wrap a{
 	display: inline-block;
+	font-size: 28px;
+	line-height: 38px;
+	color: #011f2c;
+	font-family:"Sanchez",Georgia,Trebuchet,Helvetica,Arial;
+	
+	&:hover{
+		text-decoration:none;
+	}
 }
+
+.main-header .logo-wrap a.logotext{
+	@include transition(margin,font-size $main-header-transition-duration ease);
+		margin-top: 18px;
+}
+
+.main-header.sticky .logo-wrap a.logotext{
+	margin-top:14px;
+	font-size: 26px;
+	
+	@include width-matches($breakpoint-mobile){
+		margin-left:10px;
+	}
+}
+
 .main-header .logo-wrap img{
 	@include transition(max-height $main-header-transition-duration ease);
 	max-height: 200px;
@@ -107,7 +130,7 @@ body.admin-bar .main-header.sticky{
 }
 .top-level-menu > li{
 	position: relative;
-	margin-right: -4px;
+	margin-right: -5px;
 	display: inline-block;
 	
 	@include width-matches($breakpoint-mobile){

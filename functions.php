@@ -606,6 +606,7 @@ if(!function_exists('etendard_user_styles')){
 				.article .content a,
 				.article .header-meta a,
 				.article .footer-meta a,
+				.main-header .logo-wrap a.logotext:hover,
 				#comments a,
 				.sidebar .widget_etendardnewsletter .form-email:before,
 				form.search-form .search-submit-wrapper:before,
