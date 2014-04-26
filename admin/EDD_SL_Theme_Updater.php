@@ -34,13 +34,15 @@ class EDD_SL_Theme_Updater {
 		add_filter( 'delete_site_transient_update_themes', array( &$this, 'delete_theme_update_transient' ) );
 		add_action( 'load-update-core.php', array( &$this, 'delete_theme_update_transient' ) );
 		add_action( 'load-themes.php', array( &$this, 'delete_theme_update_transient' ) );
-		add_action( 'load-themes.php', array( &$this, 'load_themes_screen' ) );
-	}
-
-	function load_themes_screen() {
+		//add_action( 'load-themes.php', array( &$this, 'load_themes_screen' ) );
 		add_thickbox();
 		add_action( 'admin_notices', array( &$this, 'update_nag' ) );
 	}
+
+	/*function load_themes_screen() {
+		add_thickbox();
+		add_action( 'admin_notices', array( &$this, 'update_nag' ) );
+	}*/
 
 	function update_nag() {
 		$theme = wp_get_theme( $this->theme_slug );
@@ -56,11 +58,11 @@ class EDD_SL_Theme_Updater {
 		if ( version_compare( $this->version, $api_response->new_version, '<' ) ) {
 
 			echo '<div id="update-nag">';
-				printf( '<strong>%1$s %2$s</strong> est de sortie. <a href="%3$s" class="thickbox" title="%4s">Découvrez les nouveautés</a> ou <a href="%5$s"%6$s>mettez à jour maintenant</a>.',
-					$theme->get( 'Name' ),
+				printf( '<strong>%1$s %2$s</strong> est disponible. <a href="%3$s" class="thickbox" title="%4s">Découvrez les nouveautés</a> ou <a href="%5$s"%6$s>Mettez à jour maintenant</a>.',
+					ucwords($theme->get( 'Name' )),
 					$api_response->new_version,
-					'#TB_inline?width=640&amp;inlineId=' . $this->theme_slug . '_changelog',
-					$theme->get( 'Name' ),
+					'#TB_inline?width=1200&amp;inlineId=' . $this->theme_slug . '_changelog',
+					ucwords($theme->get( 'Name' )),
 					$update_url,
 					$update_onclick
 				);
