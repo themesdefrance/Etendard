@@ -73,7 +73,6 @@ body.admin-bar .main-header.sticky{
 .main-header .logo-wrap a{
 	display: inline-block;
 	font-size: 28px;
-	line-height: 38px;
 	color: #011f2c;
 	font-family:"Sanchez",Georgia,Trebuchet,Helvetica,Arial;
 	
@@ -84,7 +83,8 @@ body.admin-bar .main-header.sticky{
 
 .main-header .logo-wrap a.logotext{
 	@include transition(margin,font-size $main-header-transition-duration ease);
-		margin-top: 18px;
+	margin-top: 18px;
+	line-height: 38px;
 }
 
 .main-header.sticky .logo-wrap a.logotext{
