@@ -19,6 +19,24 @@ $form->setting(array('type'=>'text',
 					 'label'=>__("Licence", TEXT_TRANSLATION_DOMAIN),
 					 'description'=>__("Entrez la licence pour qu'Étendard puisse recevoir les mises à jour. Vous pourrez la trouver dans l'email que nous vous avons envoyé suite à votre commande.", TEXT_TRANSLATION_DOMAIN)));
 
+$form->setting(array('type'=>'text',
+					 'name'=> 'title',
+					 'label'=>__("Titre", TEXT_TRANSLATION_DOMAIN),
+					 'description'=>__("Titre dans le bandeau de la page d'accueil.", TEXT_TRANSLATION_DOMAIN),
+					 'options'=>array(
+					 	'default'=>get_bloginfo('name')
+					 	)
+					 ));
+
+$form->setting(array('type'=>'text',
+					 'name'=>'subtitle',
+					 'label'=>__("Sous-titre", TEXT_TRANSLATION_DOMAIN),
+					 'description'=>__("Sous-titre dans le bandeau.", TEXT_TRANSLATION_DOMAIN),
+					 'options'=>array(
+					 	'default'=>get_bloginfo('description')
+					 	)
+					 ));
+
 $form->ordre('home_blocks',
 				__("Choisissez les éléments à afficher sur la page d'accueil et réorganisez-les avec des glisser déposer:", TEXT_TRANSLATION_DOMAIN),
 				array(  'titre'=>__('Titre et slogan', TEXT_TRANSLATION_DOMAIN),
@@ -93,13 +111,6 @@ $form->endWrapper('tab');
 $form->startWrapper('tab', 'portfolio');
 
 $form->startForm();
-
-$form->setting(array('type'=>'text-list',
-					 'label'=>__('Champs personnalisés', TEXT_TRANSLATION_DOMAIN),
-					 'name'=>'portfolio_fields',
-					 'options'=>array(
-//					 	'default'=>array()
-					 )));
 
 $form->setting(array('type'=>'boolean',
 					 'label'=>__('Afficher les extraits', TEXT_TRANSLATION_DOMAIN),
