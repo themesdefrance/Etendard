@@ -243,8 +243,8 @@ if (!function_exists('etendard_register_custom_fields')){
 							 'high'
 				);
 				
-				$display_blocks = get_option('etendard_blocks_presence');
-				if (in_array('diaporama', $display_blocks)){
+				$display_blocks = get_option('etendard_home_blocks');
+				if ($display_blocks['diaporama']){
 					add_meta_box('etendard_portfolio_diaporama',
 							 __('Diaporama', TEXT_TRANSLATION_DOMAIN),
 							 'etendard_portfolio_diaporama',
