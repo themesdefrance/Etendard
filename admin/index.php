@@ -128,6 +128,12 @@ $form->setting(array('type'=>'boolean',
 					 ),
 					 'description'=>__('Affichez ou non les boutons des éléments portfolio sur la page des projets', TEXT_TRANSLATION_DOMAIN)));
 					 
+$form->setting(array('type'=>'text-list',
+					 'label'=>__('Champs personnalisés', TEXT_TRANSLATION_DOMAIN),
+					 'name'=>'portfolio_fields',
+					 'options'=>array()
+					));
+					 
 $form->setting(array('type'=>'text',
 					 'name'=>'cta_url',
 					 'label'=>__("Destination de l'appel à l'action (lien)", TEXT_TRANSLATION_DOMAIN)));
