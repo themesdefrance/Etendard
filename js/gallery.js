@@ -9,7 +9,7 @@ jQuery(function($){
 		}).fancybox();
 	});
 	
-	$('article.post.type-post').find('a > img').each(function(){
+	$('article.post.type-post, article.page.type-page, article.type-service, .article .content').find('a > img').each(function(){
 		if($(this).parent().attr('title')== undefined){
 			if($(this).attr('title') != undefined){
 				$(this).parent().attr('title', $(this).attr('title'));
