@@ -765,7 +765,10 @@ add_action('admin_notices', 'etendard_admin_notice');
 
 if(!function_exists('etendard_add_tinymce4')){
 	function etendard_add_tinymce4() {
-	
+		global $typenow;
+		if( ! in_array( $typenow, array( 'post', 'page', 'portfolio', 'service' ) ) )
+        return ;
+		
 	    add_filter( 'mce_external_plugins', 'etendard_add_tinymce4_plugin' );
 	    // Add button to line 1 form WP TinyMCE
 	    add_filter( 'mce_buttons', 'etendard_add_tinymce4_button' );
