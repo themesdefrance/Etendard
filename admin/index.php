@@ -50,7 +50,11 @@ $form->ordre('home_blocks',
 $form->setting(array('type'=>'textarea',
 					 'name'=>'footer_gauche',
 					 'label'=>__("Pied de page", TEXT_TRANSLATION_DOMAIN),
-					 'description'=>__('Contenu de la partie gauche du pied de page. Les balises HTML de lien (&lt;a href=&quot;LIEN&quot;&gt;TEXTE_LIEN&lt;/a&gt;), de mise en gras (&lt;strong&gt;TEXTE_GRAS&lt;/strong&gt;), de mise en italique(&lt;em&gt;TEXTE_ITALIQUE&lt;/em&gt;) et d\'image (&lt;img src=&quot;ADRESSE_IMAGE&quot;&gt;) sont autoris&eacute;es. Laissez vide pour ne rien afficher.', TEXT_TRANSLATION_DOMAIN)));
+					 'description'=>__('Contenu de la partie gauche du pied de page. Les balises HTML de lien (&lt;a href=&quot;LIEN&quot;&gt;TEXTE_LIEN&lt;/a&gt;), de mise en gras (&lt;strong&gt;TEXTE_GRAS&lt;/strong&gt;), de mise en italique(&lt;em&gt;TEXTE_ITALIQUE&lt;/em&gt;) et d\'image (&lt;img src=&quot;ADRESSE_IMAGE&quot;&gt;) sont autoris&eacute;es. Laissez vide pour ne rien afficher.', TEXT_TRANSLATION_DOMAIN),
+					 'options'=>array(
+					 	'default'=>__('<strong>2014</strong> - Étendard par <a href="https://www.themesdefrance.fr" target="_blank">Thèmes de France</a>', TEXT_TRANSLATION_DOMAIN)
+					 	)
+					 ));
 
 $form->endForm();
 $form->endWrapper('tab');
@@ -127,12 +131,6 @@ $form->setting(array('type'=>'boolean',
 					 	'default'=>true
 					 ),
 					 'description'=>__('Affichez ou non les boutons des éléments portfolio sur la page des projets', TEXT_TRANSLATION_DOMAIN)));
-					 
-$form->setting(array('type'=>'text-list',
-					 'label'=>__('Champs personnalisés', TEXT_TRANSLATION_DOMAIN),
-					 'name'=>'portfolio_fields',
-					 'options'=>array()
-					));
 					 
 $form->setting(array('type'=>'text',
 					 'name'=>'cta_url',
