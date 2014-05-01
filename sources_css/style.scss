@@ -959,7 +959,11 @@ div.pagination{
 	}
 }
 
-//page de contact
+
+////////////////////////////////////
+// Contact Form
+////////////////////////////////////
+
 .contact-form .field{
 	margin-bottom:25px;
 }
@@ -995,7 +999,10 @@ div.pagination{
 	transition: all 0.2s ease-in;
 }
 
-//footer
+////////////////////////////////////
+// Widgets Footer
+////////////////////////////////////
+
 .main-footer{
 	padding: 20px 0;
 	color: #6d6e71;
@@ -1017,8 +1024,10 @@ div.pagination{
 	}
 }
 
+////////////////////////////////////
+// Widgets Footer
+////////////////////////////////////
 
-//Widgets du footer
 .footer-widgets{
 	padding: 30px 0;
 	background: #e6e7e8;
@@ -1047,22 +1056,10 @@ div.pagination{
 	}
 }
 
-.footer-widgets .widget_etendardnewsletter{
-	color: #1f7384;
-	max-width: 400px;
-	padding: 0 20px;
-}
-.footer-widgets .widget_etendardnewsletter .form-submit{
-	&:before{
-		border-left-color: #e6e7e8;
-	}
-	&:after{
-		border-right-color: #e6e7e8;
-	}
-}
-.footer-widgets .widget_etendardnewsletter h3{
-	font-size: 18px;
-}
+////////////////////////////////////
+// Etendard Widgets Footer
+////////////////////////////////////
+
 .footer-widgets .widget_etendardsocial li a{
 
 	color: #fff;
@@ -1073,6 +1070,23 @@ div.pagination{
 		border-right-color: #e6e7e8;
 	}
 }
+
+.footer-widgets .widget_etendardappelaction .cta-widget{
+	border: 2px solid #4c4c4e;
+	background-color: white;
+}
+
+.footer-widgets .widget_etendardappelaction .cta-widget .cta-button:before{
+	border-left: 8px solid white;
+}
+
+.footer-widgets .widget_etendardappelaction .cta-widget .cta-button:after{
+	border-right: 8px solid white;
+}
+
+////////////////////////////////////
+// Footer Menu
+////////////////////////////////////
 
 .footer-menu ul{
 	list-style-type: none;
