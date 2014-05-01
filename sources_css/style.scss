@@ -672,6 +672,7 @@ ul.articles .article{
 	& a{
 		color: inherit;
 		text-decoration: none;
+		@include transition(color $default-transition-duration $default-transition-function);
 	}
 	
 	& a:hover{
@@ -945,8 +946,7 @@ ul.articles .article{
 //pagniation
 div.pagination{
 	text-align:center;
-	color: $body-copy-color;
-	font-size: 24px;
+	font-size: 20px;
 	
 	& a,
 	& span.current{
@@ -954,9 +954,13 @@ div.pagination{
 		padding: 0 4px;
 	}
 	
+	& span.current{
+		color:darken($gris-principal, 5);
+	}
 	& a{
 		color:$body-copy-color;
 		text-decoration: underline;
+		@include transition(color $default-transition-duration $default-transition-function);
 	}
 }
 
