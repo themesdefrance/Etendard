@@ -51,10 +51,11 @@
 			
 				<?php
 				wp_nav_menu(array(
-					'theme_location'=>'primary',
-					'menu_class'=>'top-level-menu',
-					'container'=>false,
-					'depth'=>3
+					'theme_location' => 'primary',
+					'menu_class'     => 'top-level-menu',
+					'container'      => false,
+					'depth'          => 3,
+					'fallback_cb'    => 'etendard_nomenu'
 				)); 
 				?>
 			</nav>

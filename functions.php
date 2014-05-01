@@ -43,6 +43,12 @@ if (!function_exists( 'etendard_activation')){
 }
 add_action('after_switch_theme', 'etendard_activation');
 
+// Function to call if no primary menu
+if (!function_exists( 'etendard_nomenu')){
+	function etendard_nomenu(){
+		echo '<ul class="top-level-menu"><li><a href="'.admin_url('nav-menus.php').'">Veuillez configurer le menu principal</a></li></ul>';
+	}
+}
 
 if (!function_exists('etendard_setup')){
 	function etendard_setup(){
