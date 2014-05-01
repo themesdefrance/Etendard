@@ -113,9 +113,26 @@ if (!function_exists('etendard_init_cpt')){
 	function etendard_init_cpt(){
 		
 		// Portfolio
+		$labels_portfolio = array(
+		'name'               => _x( 'Portfolios', 'post type general name', TEXT_TRANSLATION_DOMAIN ),
+		'singular_name'      => _x( 'Portfolio', 'post type singular name', TEXT_TRANSLATION_DOMAIN ),
+		'menu_name'          => _x( 'Portfolios', 'admin menu', TEXT_TRANSLATION_DOMAIN ),
+		'name_admin_bar'     => _x( 'Portfolio', 'add new on admin bar', TEXT_TRANSLATION_DOMAIN ),
+		'add_new'            => _x( 'Ajouter', 'portfolio', TEXT_TRANSLATION_DOMAIN ),
+		'add_new_item'       => __( 'Ajouter', TEXT_TRANSLATION_DOMAIN ),
+		'new_item'           => __( 'Ajouter', TEXT_TRANSLATION_DOMAIN ),
+		'edit_item'          => __( 'Modifier', TEXT_TRANSLATION_DOMAIN ),
+		'view_item'          => __( 'Afficher l\'élément portfolio', TEXT_TRANSLATION_DOMAIN ),
+		'all_items'          => __( 'Portfolio', TEXT_TRANSLATION_DOMAIN ),
+		'search_items'       => __( 'Rechercher dans les éléments portfolios', TEXT_TRANSLATION_DOMAIN ),
+		'parent_item_colon'  => __( 'Portfolio parent:', TEXT_TRANSLATION_DOMAIN ),
+		'not_found'          => __( 'Aucun élément portfolio n\'a été trouvé.', TEXT_TRANSLATION_DOMAIN ),
+		'not_found_in_trash' => __( 'Aucun élément portfolio n\'a été trouvé dans la corbeille.', TEXT_TRANSLATION_DOMAIN ),
+		);
+		
 		register_post_type('portfolio', array(
 			'label'=>__('Portfolio', TEXT_TRANSLATION_DOMAIN),
-			'labels'=>array(),
+			'labels'=>$labels_portfolio,
 			'public'=>true,
 			'menu_position'=>20,
 			'has_archive'=>'portfolio-archive',
@@ -136,9 +153,26 @@ if (!function_exists('etendard_init_cpt')){
 		register_taxonomy_for_object_type('portfolio_categorie', 'portfolio');
 		
 		// Services
+		$labels_service = array(
+		'name'               => _x( 'Services', 'post type general name', TEXT_TRANSLATION_DOMAIN ),
+		'singular_name'      => _x( 'Service', 'post type singular name', TEXT_TRANSLATION_DOMAIN ),
+		'menu_name'          => _x( 'Services', 'admin menu', TEXT_TRANSLATION_DOMAIN ),
+		'name_admin_bar'     => _x( 'Service', 'add new on admin bar', TEXT_TRANSLATION_DOMAIN ),
+		'add_new'            => _x( 'Ajouter', 'service', TEXT_TRANSLATION_DOMAIN ),
+		'add_new_item'       => __( 'Ajouter', TEXT_TRANSLATION_DOMAIN ),
+		'new_item'           => __( 'Ajouter', TEXT_TRANSLATION_DOMAIN ),
+		'edit_item'          => __( 'Modifier', TEXT_TRANSLATION_DOMAIN ),
+		'view_item'          => __( 'Afficher le service', TEXT_TRANSLATION_DOMAIN ),
+		'all_items'          => __( 'Service', TEXT_TRANSLATION_DOMAIN ),
+		'search_items'       => __( 'Rechercher dans les services', TEXT_TRANSLATION_DOMAIN ),
+		'parent_item_colon'  => __( 'Service parent:', TEXT_TRANSLATION_DOMAIN ),
+		'not_found'          => __( 'Aucun service n\'a été trouvé.', TEXT_TRANSLATION_DOMAIN ),
+		'not_found_in_trash' => __( 'Aucun service n\'a été trouvé dans la corbeille.', TEXT_TRANSLATION_DOMAIN ),
+		);
+		
 		register_post_type('service', array(
 			'label'=>__('Services', TEXT_TRANSLATION_DOMAIN),
-			'labels'=>array(),
+			'labels'=>$labels_service,
 			'public'=>true,
 			'menu_position'=>21,
 			'has_archive'=>'service-archive',
