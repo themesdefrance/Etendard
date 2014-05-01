@@ -8,7 +8,6 @@ $font-base: 16;
 $default-transition-function: ease-out;
 $default-transition-duration: 0.2s;
 
-$couleur-principale: #1ba7c4;
 $gris-principal: #9d9f9f; /* $gris-principal: #b7b8b8; */
 $body-copy-color: #011f2c;
 
@@ -34,7 +33,6 @@ p{
 	line-height: 1.4;
 }
 a{
-	color:$couleur-principale;
 	text-decoration: none;
 	&:hover{
 		text-decoration: underline;
@@ -70,7 +68,7 @@ a{
 	}
 }
 %bouton-etendard{
-	$background: $couleur-principale;
+	$background: $gris-principal;
 	
 	display: inline-block;
 	padding: 6px 35px;

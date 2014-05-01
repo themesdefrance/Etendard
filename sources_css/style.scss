@@ -137,13 +137,6 @@ body.admin-bar .main-header.sticky{
 		display: block;
 	}
 }
-.top-level-menu > li > a.active{
-	border-bottom: 2px solid $couleur-principale;
-}
-.top-level-menu > li:hover > a{
-	background: $couleur-principale;
-	color: #fff;
-}
 
 .top-level-menu > li:hover .sub-menu{
 	display:block;
@@ -168,7 +161,6 @@ body.admin-bar .main-header.sticky{
 		content: "";
 		display:block;
 		width: 100%;
-		border-bottom: 3px solid $couleur-principale;
 	}
 	
 	@include width-matches($breakpoint-mobile){
@@ -251,14 +243,10 @@ body.admin-bar .main-header.sticky{
 	}
 }
 
-.headerbar{
-	//background:#e6e7e8;
-	background:$couleur-principale;
-	& .wrapper>.headerbartitle{
-		margin-bottom:0;
-		display:inline;
-		font-size: 25px;
-	}
+.headerbar .wrapper > .headerbartitle{
+	margin-bottom:0;
+	display:inline;
+	font-size: 25px;
 }
 
 // Fil d'ariane
@@ -309,7 +297,6 @@ ul.blog li{
 a.more-link{
 	display: inline-block;
 	font-size: 14px;
-	color: $couleur-principale;
 	text-decoration: none;
 	
 	&:hover{
@@ -504,10 +491,6 @@ ul.portfolio .creation figure{
 	&:hover:after{
 		opacity: 1;
 	}
-	&:hover figcaption{
-		background: $couleur-principale;
-		color: #fff;
-	}
 }
 ul.portfolio .creation .entry-thumbnail{
 	background: #e2e2e2;
@@ -527,7 +510,6 @@ ul.portfolio .creation figcaption{
 	background: #e6e7e8;
 	padding: 5px 0;
 	text-align: center;
-	color: $couleur-principale;
 	font-size: 18px;
 	font-family: $heading-font;
 	@include transition();
@@ -570,12 +552,6 @@ section.portfolio nav.categories a{
 	font-family:$heading-font;
 	color:$body-copy-color;
 	border-right: 2px solid $body-copy-color;
-	
-	&.active,
-	&:hover{
-		background: $couleur-principale;
-		color:#fff;
-	}
 }
 
 section.realisation, section.diaporama{
@@ -617,7 +593,6 @@ section.realisation .meta{
 }
 section.realisation .realisation-site{
 	display:block;
-	color:$couleur-principale;
 }
 
 .temoignages{
@@ -674,10 +649,6 @@ ul.articles .article{
 		text-decoration: none;
 		@include transition(color $default-transition-duration $default-transition-function);
 	}
-	
-	& a:hover{
-		color: $couleur-principale;
-	}
 }
 
 .article.teaser{
@@ -727,50 +698,49 @@ ul.articles .article{
 	color: #122e3a;
 	line-height: 1.3;
 	
-	& *{
+	*{
 		max-width:100%;
 		height: auto;
 	}
-	& h1{
+	h1{
 		font-size: 36px;
 		margin-bottom: 14px;
 	}
-	& h2{
+	h2{
 		font-size: 24px;
 		margin-bottom: 10px;
 	}
-	& h3{
+	h3{
 		font-size: 20px;
 		margin-bottom: 8px;
 	}
-	& h4,h5,h6{
+	h4,h5,h6{
 		font-size: 18px;
 		margin-bottom: 6px;
 	}
-	& dl,
-	& table,
-	& ul,
-	& ol,
-	& address{
+	dl,
+	table,
+	ul,
+	ol,
+	address{
 		margin-bottom: 20px;
 	}
-	& p{
+	p{
 		margin-bottom: 10px;
 	}
 	//no margins for nested lists
-	& ul ul,
-	& ul ol,
-	& ol ul,
-	& ol ol{
+	ul ul,
+	ul ol,
+	ol ul,
+	ol ol{
 		margin-bottom: 0;
 	}
-	& li{
+	li{
 		list-style-position: outside;
 		margin-left: 25px;
 		margin-bottom: 5px;
 	}
-	& a{
-		color: $couleur-principale;
+	a{
 		text-decoration: none;
 		
 		&:hover{
@@ -779,18 +749,18 @@ ul.articles .article{
 		
 	}
 	
-	& dt{
+	dt{
 		font-weight: 700;
 	}
-	& dt ~ dd{
+	dt ~ dd{
 		margin-bottom: 10px;
 	}
-	& abbr,
-	& acronym{
+	abbr,
+	acronym{
 		cursor: help;
 		border-bottom: 1px dotted;
 	}
-	& tr{
+	tr{
 		border-bottom: 1px solid #bfbfbf;
 		
 		&:last-child{
@@ -800,26 +770,26 @@ ul.articles .article{
 			background: #f7f7f7;
 		}
 	}
-	& th{
+	th{
 		text-align:center;
 	}
-	& td,
-	& th{
+	td,
+	th{
 		padding: 8px 4px;
 	}
-	& .alignright{
+	.alignright{
 		float:right;
 		margin:5px 0 20px 20px;
 	}
-	& .alignleft{
+	.alignleft{
 		float:left;
 		margin:5px 20px 20px 0;
 	}
-	& .aligncenter{
+	.aligncenter{
 		display:block;
 		margin:5px auto 5px auto;
 	}
-	& .wp-caption-text{
+	.wp-caption-text{
 		padding: 2px 0;
 		color: #8d8d8d;
 		text-align:center;
@@ -931,16 +901,10 @@ ul.articles .article{
 	text-align:left;
 }
 #commentform #submit{
-
-	background:$couleur-principale;
 	border: none;
 	padding: 6px 14px;
 	color: #fff;
 	@include transition();
-	
-	&:hover{
-		background: $gris-principal;
-	}
 }
 
 //pagniation
@@ -1131,7 +1095,6 @@ div.pagination{
 	}
 	
 	a{
-		color: $couleur-principale;
 		text-decoration:none;
 		
 		&:hover{
@@ -1143,53 +1106,6 @@ div.pagination{
 	}
 	td{
 		text-align:center;
-	}
-}
-
-//module newsletter
-.widget_etendardnewsletter{
-	text-align:center;
-}
-.widget_etendardnewsletter .form-email{
-	position: relative;
-	display: inline-block;
-	margin: 5px 0;
-	width: 80%;
-	@extend .icon-mail;
-	
-	&:before{
-		position: absolute;
-		right: 7px;
-		top: 7px;
-		color: $couleur-principale;
-		font-size: 1.8rem;
-	}
-}
-.widget_etendardnewsletter input[type="email"]{
-	display:inline-block;
-	width: 100%;
-	margin-top: 5px;
-	background: #fff;
-	border: 1px solid #fff;
-	padding: 6px 4px;
-	color: #333;
-	
-	&:focus{
-		border-color: #8d8d8d;
-		outline: none;
-	}
-}
-.widget_etendardnewsletter input[type="submit"]{
-	background: $couleur-principale;
-	border: none;
-	margin: 0;
-	padding: 4px 20px;
-	color: #fff;
-	font-size: 16px;
-	@include transition(background $default-transition-duration $default-transition-function);
-	
-	&:hover{
-		background:darken($couleur-principale,5);
 	}
 }
 
@@ -1222,14 +1138,13 @@ form.search-form .search-submit-wrapper{
 	top: 0;
 	bottom:0;
 	right:0;
-	
 	@extend .icon-search;
+	
 	&:before{
 		position: absolute;
 		top:10px;
 		right: 4px;
 		font-size: 1.5rem;
-		color: $couleur-principale;
 	}
 }
 form.search-form input.search-submit{
@@ -1253,22 +1168,13 @@ form.search-form input.search-submit{
 	margin-right: 15px;
 	padding: 7px 13px;
 	@include etendard($hauteur: 18px);
-	color: #fff;
-	background: $couleur-principale;
 	height: 38px;
 	font-size: 1.6rem;
 	@extend %iconfont;
 	@include transition(background $default-transition-duration $default-transition-function);
-	
-	&:hover{
-		color: #fff;
-		text-decoration:none;
-		background:darken($couleur-principale,5);
-	}
 }
 
 // Widget Appel à l'action
-
 .widget_etendardappelaction .cta-widget{
 	background: #e6e7e8;
 	padding:30px;
@@ -1297,10 +1203,6 @@ form.search-form input.search-submit{
 }
 .widget_calendar td{
 	padding: 8px 0;
-}
-.widget_calendar #today{
-	background: $couleur-principale;
-	color: #fff;
 }
 
 
@@ -1479,8 +1381,6 @@ h3.toggle a{
 }
 
 // Separateur
-
-
 .separateur{
 	margin: 40px 0;
 	
@@ -1506,19 +1406,11 @@ h3.toggle a{
 }
 
 // Bouton remonter
-
 #remonter{
 	position: fixed;
 	bottom: 0;
 	right: 1em;
 	text-decoration: none;
-	background-color: $couleur-principale;
 	padding:7px 13px;
-	color:#fff;
-	-webkit-transition: background-color 0.2s ease-in;
-	-moz-transition: background-color 0.2s ease-in;
-	-o-transition: background-color 0.2s ease-in;
-	transition: background-color 0.2s ease-in;
+	@include transition(background $default-transition-duration $default-transition-function);
 }
-
-
