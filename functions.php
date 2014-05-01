@@ -633,16 +633,23 @@ if(!function_exists('etendard_user_styles')){
 			
 			require_once 'admin/color_functions.php';
 			$hsl = etendard_RGBToHSL(etendard_HTMLToRGB($color));
-			if ($hsl->lightness > 180) $contrast = '#333';
-			else $contrast = '#fff';
+			if ($hsl->lightness > 180){
+				$contrast = '#333';
+			}
+			else{
+				$contrast = '#fff';
+			}
+			
+			$hsl->lightness -= 30;
+			$complement = etendard_HSLToHTML($hsl->hue, $hsl->saturation, $hsl->lightness);
 		}
 		else{ // Default color
-			$color = "#02a7c6";
+			$color = '#02a7c6';
+			$complement = '#007f96';
 			$contrast = '#fff';
 		} ?>
 			<style type="text/css">
 				section.realisation .realisation-site,
-				div.pagination a,
 				.article .content a,
 				.article .header-meta a,
 				.article .footer-meta a,
@@ -710,12 +717,12 @@ if(!function_exists('etendard_user_styles')){
 				#commentform #submit:hover,
 				a.bouton.lirelasuite:hover,
 				#remonter:hover{
-					background:#696969 !important;
+					background:<?php echo $complement; ?> !important;
 				}
 				form.search-form .search-submit-wrapper:hover:before,
 				div.pagination a:hover,
 				.sidebar .widget a{
-					color:#696969;
+					color:<?php echo $complement; ?>;
 				}
 				.sidebar .widget_etendardsocial li a,
 				.sidebar .widget_etendardsocial li a:hover,
