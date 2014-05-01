@@ -1,12 +1,12 @@
-<?php $articles = new WP_Query(array('posts_per_page'=>4, 'ignore_sticky_posts'=>true)); ?>
-<?php if ($articles->have_posts()): ?>
+<?php $posts = new WP_Query(array('posts_per_page'=>4, 'ignore_sticky_posts'=>true)); ?>
+<?php if ($posts->have_posts()): ?>
 <section class="blog">
 	<div class="wrapper">
 		<h2 class="center">
 			<?php _e('Derniers articles', TEXT_TRANSLATION_DOMAIN); ?>
 		</h2>
 		<ul class="blog">
-			<?php while ($articles->have_posts()) : $articles->the_post(); ?>
+			<?php while ($posts->have_posts()) : $posts->the_post(); ?>
 			<li class="col-1-4">
 				<article class="article teaser">
 					<header class="header">
