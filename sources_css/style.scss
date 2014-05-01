@@ -1030,7 +1030,6 @@ div.pagination{
 ////////////////////////////////////
 
 .footer-widgets .widget_etendardsocial li a{
-
 	color: #fff;
 	&:before{
 		border-left-color: #e6e7e8;
@@ -1041,16 +1040,13 @@ div.pagination{
 }
 
 .footer-widgets .widget_etendardappelaction .cta-widget{
-	border: 2px solid #4c4c4e;
-	background-color: white;
+	border: 1px solid #4c4c4e;
 }
-
 .footer-widgets .widget_etendardappelaction .cta-widget .cta-button:before{
-	border-left: 8px solid white;
+	border-left: 8px solid #e6e7e8;
 }
-
 .footer-widgets .widget_etendardappelaction .cta-widget .cta-button:after{
-	border-right: 8px solid white;
+	border-right: 8px solid #e6e7e8;
 }
 
 ////////////////////////////////////
