@@ -87,10 +87,13 @@ if (!function_exists('etendard_setup')){
 		// Enable thumbnails
 		add_theme_support('post-thumbnails');
 		
-		// Enable post formats - Coming soon
-		/*add_theme_support('post-formats', array(
-			'video'
-		));*/
+		// Enable post formats
+		add_theme_support('post-formats', array(
+			'video',
+			'link',
+			'quote'
+		));
+		require_once 'admin/meta-box/post_formats.php';
 		
 		// Set images sizes
 		add_image_size('etendard-portfolio-thumbnail', 301, 230, true);
@@ -664,7 +667,9 @@ if(!function_exists('etendard_user_styles')){
 				.article.quote > blockquote cite,
 				.comment .comment-author a,
 				.main-footer a,
-				.sidebar .widget a:hover{
+				.sidebar .widget a:hover,
+				article.format-link .post-link a,
+				article.format-quote .post-quote blockquote a:hover{
 					color: <?php echo $color; ?>;
 				}
 				
