@@ -2,7 +2,7 @@
 
 	<header class="header">
 	
-		<?php if(!is_category() && !is_tag() && !is_singular('service')): ?>
+		<?php if(!is_category() && !is_tag()): ?>
 			
 			<?php if (has_post_thumbnail() && !post_password_required()): ?>
 			
@@ -17,7 +17,7 @@
 						<a href="<?php the_permalink(); ?>" title="<?php esc_attr(the_title()); ?>"><?php the_post_thumbnail('etendard-post-thumbnail'); ?></a>
 						
 					<?php endif; ?>
-				</div>
+				</div><!--END .entry-thumbnail-->
 				
 			<?php endif; ?>
 		
@@ -46,7 +46,7 @@
 		
 		<?php endif; ?>
 		
-		<?php if( !is_singular('service') && !is_page() && !is_tag()): ?> 
+		<?php if(!is_page() && !is_tag()): ?> 
 		
 		<span class="header-meta">
 		

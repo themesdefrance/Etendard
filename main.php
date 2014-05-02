@@ -1,4 +1,5 @@
 <div class="layout-grid">
+
 	<?php if (get_option('etendard_sidebar_position') === 'gauche'): ?>
 	<sidebar class="sidebar col-1-3">
 		<?php get_sidebar('blog'); ?>
@@ -16,11 +17,12 @@
 		<div class="pagination">
 			<?php etendard_posts_nav(false); ?>
 		</div>
-	</div>
+	</div><!--END .col-2-3-->
 
 	<?php if (get_option('etendard_sidebar_position') !== 'gauche'): ?>
 	<sidebar class="sidebar col-1-3">
 		<?php get_sidebar('blog'); ?>
 	</sidebar>
 	<?php endif; ?>	
+	
 </div>
