@@ -1,5 +1,8 @@
 <?php 
-$portfolio_custom = get_post_custom();
+$temoin_nom = etendard_meta_migration('_etendard_portfolio_temoin_nom', 'etendard_portfolio_temoin_nom');
+$temoin_texte = etendard_meta_migration('_etendard_portfolio_temoin_texte', 'etendard_portfolio_temoin_texte');
+$temoin_portrait = etendard_meta_migration('_etendard_portfolio_temoin_portrait', 'etendard_portfolio_temoin_portrait');
+
 $champs_portfolio = get_option('etendard_portfolio_fields');
 ?>
 <?php get_header(); ?>
@@ -42,22 +45,22 @@ $champs_portfolio = get_option('etendard_portfolio_fields');
 	</div>
 </section>
 
-<?php if (!empty($portfolio_custom['etendard_portfolio_temoin_nom'][0])): ?>
+<?php if ($temoin_nom[0]): ?>
 <section class="grid">
 	<div class="wrapper">
 		<ul class="temoignages">
 			<li class="temoignage">
 			
-				<?php if (!empty($portfolio_custom['etendard_portfolio_temoin_portrait'][0])): ?>
+				<?php if ($temoin_portrait[0]): ?>
 				<div class="temoignage-photo-wrapper">
-					<img src="<?php echo etendard_resize_upload($portfolio_custom['etendard_portfolio_temoin_portrait'][0], 160, 110); ?>" class="temoignage-photo" />
+					<img src="<?php echo etendard_resize_upload($temoin_portrait[0], 160, 110); ?>" class="temoignage-photo" />
 				</div>
 				<?php endif; ?>
 				
 				<div class="temoignage-content">
-					<?php echo $portfolio_custom['etendard_portfolio_temoin_texte'][0]; ?>
+					<?php echo $temoin_texte[0]; ?>
 					<span class="temoignage-name">
-					<?php echo $portfolio_custom['etendard_portfolio_temoin_nom'][0]; ?>
+					<?php echo $temoin_nom[0]; ?>
 					</span>
 				</div>
 			</li>

@@ -5,11 +5,13 @@ $template = basename(get_page_template());
 
 //variables globales ou de page?
 if ($template === 'template_home.php'){
-	$custom = get_post_custom();
+	$texte = etendard_meta_migration('_etendard_home_cta_text', 'etendard_home_cta_text');
+	$url = etendard_meta_migration('_etendard_home_cta_url', 'etendard_home_cta_url');
+	$bouton = etendard_meta_migration('_etendard_home_cta_bouton', 'etendard_home_cta_bouton');
 	
-	$texte = (isset($custom['etendard_home_cta_text'])) ? $custom['etendard_home_cta_text'][0] : '';
-	$url = (isset($custom['etendard_home_cta_url'])) ? $custom['etendard_home_cta_url'][0] : '';
-	$bouton = (isset($custom['etendard_home_cta_bouton'])) ? $custom['etendard_home_cta_bouton'][0] : '';
+	$texte = ($texte) ? $texte[0] : '';
+	$url = ($url) ? $url[0] : '';
+	$bouton = ($bouton) ? $bouton[0] : '';
 }
 else if (get_post_type() === 'portfolio'){
 	$texte = get_option('etendard_cta_text');

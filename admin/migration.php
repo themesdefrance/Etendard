@@ -43,6 +43,24 @@ if (!get_option('etendard_home_blocks')){
 	update_option('etendard_home_blocks', $stored);
 }
 
+////////////////////////////////////
+// Migration from Etendard < 1.011
+////////////////////////////////////
+if(!function_exists('etendard_meta_migration')){
+	function etendard_meta_migration($newName, $oldName){
+		$custom = get_post_custom();
+		
+		if (isset($custom[$newName])){
+			return $custom[$newName];
+		}
+		else if (isset($custom[$oldName])){
+			global $post;
+			update_post_meta($post->ID, $newName, $custom[$oldName][0]);
+			return $custom[$oldName];
+		}
+		else return;
+	}
+}
 
 ////////////////////////////////////
 // Shortocode button for WordPress < 3.9
