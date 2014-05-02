@@ -38,3 +38,7 @@ ul.slip-target li{
 ul.slip-target li.slip-reordering{
 	opacity: .7;
 }
+
+#etendard_link input[type=url], #etendard_quote input[type=text], #etendard_video input[type=url]{
+	width:300px;
+}
