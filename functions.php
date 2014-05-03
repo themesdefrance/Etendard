@@ -88,11 +88,9 @@ if (!function_exists('etendard_setup')){
 		add_theme_support('post-thumbnails');
 		
 		// Enable post formats
-		add_theme_support('post-formats', array(
-			'video',
-			'link',
-			'quote'
-		));
+		// Post formats are enabled with etendard_custom_format
+		
+		// Add Meta boxes for post formats
 		require_once 'admin/meta-box/post_formats.php';
 		
 		// Set images sizes
@@ -153,8 +151,8 @@ if (!function_exists('etendard_init_cpt')){
 			'thumbnail',
 			'excerpt',
 			'custom-fields',
-			'revisions'/*,
-			'post-formats'*/
+			'revisions',
+			'post-formats'
 		));
 		register_taxonomy('portfolio_categorie', 'portfolio', array(
 			'label'=>'Catégories',
@@ -198,6 +196,19 @@ if (!function_exists('etendard_init_cpt')){
 	}
 }
 add_action('init', 'etendard_init_cpt');
+
+////////////////////////////////////
+// Custom Post Format by post type thanks to @Boiteaweb :)
+////////////////////////////////////
+
+if(!function_exists('etendard_custom_format')){
+	function etendard_custom_format() {
+		$cpts = array( 'post' => array( 'video', 'link', 'quote' ), 'portfolio' => array( 'video' ) );
+		add_theme_support( 'post-formats', $cpts[ $GLOBALS['typenow'] ] );
+	}
+}
+add_action( 'load-post.php', 'etendard_custom_format' );
+add_action( 'load-post-new.php', 'etendard_custom_format' );
 
 ////////////////////////////////////
 // Scripts & Styles Registering & Loading

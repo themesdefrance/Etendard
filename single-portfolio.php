@@ -4,12 +4,17 @@ $temoin_texte = etendard_meta_migration('_etendard_portfolio_temoin_texte', 'ete
 $temoin_portrait = etendard_meta_migration('_etendard_portfolio_temoin_portrait', 'etendard_portfolio_temoin_portrait');
 
 $champs_portfolio = get_option('etendard_portfolio_fields');
+
 ?>
 <?php get_header(); ?>
 <?php while (have_posts()) : the_post();?>
 <section class="realisation article">
 	
-	<?php get_template_part('diaporama'); ?>
+	<?php 	if(has_post_format('video'))
+				get_template_part('portfolio', 'video');
+			else
+				get_template_part('diaporama');
+	?>
 	
 	<div class="wrapper">
 		<h1 class="section-title">

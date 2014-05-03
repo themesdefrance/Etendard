@@ -1,10 +1,8 @@
 <?php
 
-// Create metaboxes
-
+// Post metaboxes
 if(!function_exists('etendard_add_meta_boxes')){
 	function etendard_add_meta_boxes(){
-	
 		add_meta_box(
 					'etendard_link',
 					__('Lien', 'etendard'),
@@ -22,6 +20,7 @@ if(!function_exists('etendard_add_meta_boxes')){
 					 'normal',
 					 'high'
 					 );
+		
 		add_meta_box(
 					'etendard_video',
 					__('Vidéo', 'etendard'),
@@ -32,7 +31,23 @@ if(!function_exists('etendard_add_meta_boxes')){
 					 );
 	}
 }
-add_action('add_meta_boxes', 'etendard_add_meta_boxes');
+add_action('add_meta_boxes_post', 'etendard_add_meta_boxes');
+
+// Portfolio Metaboxes
+if(!function_exists('etendard_add_portfolio_meta_boxes')){
+	function etendard_add_portfolio_meta_boxes(){
+		
+		add_meta_box(
+					'etendard_video',
+					__('Vidéo', 'etendard'),
+					'etendard_video_callback',
+					 'portfolio',
+					 'normal',
+					 'high'
+					 );
+	}
+}
+add_action('add_meta_boxes_portfolio', 'etendard_add_portfolio_meta_boxes');
 
 // Callback functions
 
@@ -151,7 +166,45 @@ function etendard_display_metaboxes() {
         </script>
         
         <?php
-    }
+    }else if(get_post_type() == "portfolio"){ ?>
+	    
+    <script type="text/javascript">
+        /* <![CDATA[ */
+            jQuery(document).ready(function($) {
+            
+	            // Set variables
+	            var video_radio = $('#post-format-video'),
+	            	video_metabox = $('#etendard_video'),
+	            	diaporama_metabox = $('#etendard_portfolio_diaporama'),
+	            	all_formats = $('#post-formats-select input');
+		            
+	            hideAllMetaBoxes();
+	            
+	            all_formats.change( function() {
+				    
+			        hideAllMetaBoxes();
+			
+			        if( $(this).val() == 'video' ) {
+						video_metabox.css('display', 'block');
+					} 
+			
+				});
+			        
+			    if(video_radio.is(':checked'))
+					video_metabox.css('display', 'block');
+				else
+					diaporama_metabox.css('display', 'block');
+	            
+	            
+	            function hideAllMetaBoxes(){
+		            diaporama_metabox.css('display', 'none');
+		            video_metabox.css('display', 'none');
+	            }
+            });
+			/* ]]> */
+        </script>
+    
+    <?php }
 }
 // Add inline js in admin
 add_action( 'admin_print_scripts', 'etendard_display_metaboxes',1000);
