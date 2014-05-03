@@ -145,6 +145,7 @@ if (!function_exists('etendard_init_cpt')){
 			'public'=>true,
 			'menu_position'=>20,
 			'has_archive'=>'portfolio-archive',
+			'exclude_from_search'=> true
 		));
 		add_post_type_support('portfolio', array(
 			'title',
@@ -185,6 +186,7 @@ if (!function_exists('etendard_init_cpt')){
 			'public'=>true,
 			'menu_position'=>21,
 			'has_archive'=>'service-archive',
+			'exclude_from_search'=> true
 		));
 		add_post_type_support('service', array(
 			'title',
@@ -847,6 +849,20 @@ if(!function_exists('etendard_add_tinymce4_button')){
 	    return $buttons;
 	}
 }
+
+////////////////////////////////////
+// Only show posts in search results
+////////////////////////////////////
+
+if(!function_exists('etendard_search_post_only')){
+	function etendard_search_post_only($query) {
+		if ($query->is_search) {
+			$query->set('post_type', 'post');
+		}
+		return $query;
+	}
+}
+add_filter('pre_get_posts','etendard_search_post_only');
 
 ////////////////////////////////////
 // Migration from previous versions
