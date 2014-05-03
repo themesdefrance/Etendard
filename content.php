@@ -6,7 +6,7 @@
 
 	<header class="header">
 	
-	<?php get_template_part( 'format', $format ); ?>
+		<?php get_template_part( 'format', $format ); ?>
 		
 		<?php get_template_part( 'content', 'header-meta' ); ?>
 		
