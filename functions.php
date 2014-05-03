@@ -204,7 +204,9 @@ add_action('init', 'etendard_init_cpt');
 if(!function_exists('etendard_custom_format')){
 	function etendard_custom_format() {
 		$cpts = array( 'post' => array( 'video', 'link', 'quote' ), 'portfolio' => array( 'video' ) );
-		add_theme_support( 'post-formats', $cpts[ $GLOBALS['typenow'] ] );
+		$current_post_type = $GLOBALS['typenow'];
+		if($current_post_type == 'post' || $current_post_type == 'portfolio')
+			add_theme_support( 'post-formats', $cpts[ $GLOBALS['typenow'] ] );
 	}
 }
 add_action( 'load-post.php', 'etendard_custom_format' );
