@@ -1480,3 +1480,36 @@ h3.toggle a{
 	padding:7px 13px;
 	@include transition(background $default-transition-duration $default-transition-function);
 }
+
+////////////////////////////////////////////////////////////
+// Jetpack Optimization
+////////////////////////////////////////////////////////////
+.jetpack_subscription_widget #subscribe-email{
+	margin:10px 0;
+
+	& #subscribe-field{
+		display: inline-block;
+		width: 100%;
+		padding: 10px 14px;
+		border:1px solid transparent;
+		background: #f1f2f2;
+		color: #969696;
+		@include transition();
+		
+		&:focus{
+			border:1px solid #939393;
+			background: lighten(#f1f2f2, 3);
+			color: darken(#969696, 10);
+			outline: none;
+		}
+	}
+}
+
+.jetpack_subscription_widget #subscribe-submit{
+	text-align:center;
+	& input[type="submit"]{
+		@extend %bouton-etendard;
+		border: 0;
+	}
+}
+	
