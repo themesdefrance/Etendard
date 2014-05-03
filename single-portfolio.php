@@ -42,7 +42,7 @@ $champs_portfolio = get_option('etendard_portfolio_fields');
 			<div class="col-2-3 content">
 
 			<?php }else{ ?>
-				<div class="content">
+				<div class="col-1-1 content">
 			<?php } ?>
 				<?php the_content(); ?>
 			</div>
