@@ -1,16 +1,12 @@
+<?php $format = get_post_format(); ?>
+
+<?php if ( false === $format ) $format = 'standard'; ?>
+
 <article <?php post_class('article'); ?>>
 
 	<header class="header">
 	
-	<?php 	if( has_post_format( 'video' ) )
-				get_template_part( 'format', 'video' );	
-			else if( has_post_format( 'link' ) )
-				get_template_part( 'format', 'link' );
-			else if( has_post_format( 'quote' ) )
-				get_template_part( 'format', 'quote' );	
-			else 
-				get_template_part( 'format', 'standard' );
-	?>
+	<?php get_template_part( 'format', $format ); ?>
 		
 		<?php get_template_part( 'content', 'header-meta' ); ?>
 		
