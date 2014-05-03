@@ -144,7 +144,7 @@ if (!function_exists('etendard_init_cpt')){
 			'menu_position'=>20,
 			'has_archive'=>'portfolio-archive',
 			'rewrite'=>array(
-				'slug'=>'portfolios'
+				'slug'=>'projet'
 			),
 			'exclude_from_search'=> true
 		));
