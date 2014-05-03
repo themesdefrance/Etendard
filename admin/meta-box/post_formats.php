@@ -115,8 +115,7 @@ function etendard_display_metaboxes() {
 
     if ( get_post_type() == "post" ){ ?>
     
-        <script type="text/javascript">
-        /* <![CDATA[ */
+        <script>
             jQuery(document).ready(function($) {
             
 	            // Set variables
@@ -135,41 +134,40 @@ function etendard_display_metaboxes() {
 			        hideAllMetaBoxes();
 			
 			        if( $(this).val() == 'link' ) {
-						link_metabox.css('display', 'block');
+						link_metabox.show();
 					}
 					else if( $(this).val() == 'quote' ) {
-					    quote_metabox.css('display', 'block');
+					    quote_metabox.show();
 					} 
 					else if( $(this).val() == 'video' ) {
-						video_metabox.css('display', 'block');
+						video_metabox.show();
 					} 
 			
 				});
 			
 			    if(link_radio.is(':checked'))
-			        link_metabox.css('display', 'block');
+			        link_metabox.show();
 			
 			    if(quote_radio.is(':checked'))
-			        quote_metabox.css('display', 'block');
+			        quote_metabox.show();
 			        
 			    if(video_radio.is(':checked'))
-					video_metabox.css('display', 'block');
+					video_metabox.show();
 	            
 	            
 	            function hideAllMetaBoxes(){
-		            link_metabox.css('display', 'none');
-		            quote_metabox.css('display', 'none');
-		            video_metabox.css('display', 'none');
+		            link_metabox.hide();
+		            quote_metabox.hide();
+		            video_metabox.hide();
 	            }
             });
-			/* ]]> */
         </script>
         
         <?php
-    }else if(get_post_type() == "portfolio"){ ?>
+    }
+	else if(get_post_type() == "portfolio"){ ?>
 	    
-    <script type="text/javascript">
-        /* <![CDATA[ */
+    <script>
             jQuery(document).ready(function($) {
             
 	            // Set variables
@@ -185,23 +183,22 @@ function etendard_display_metaboxes() {
 			        hideAllMetaBoxes();
 			
 			        if( $(this).val() == 'video' ) {
-						video_metabox.css('display', 'block');
+						video_metabox.show();
 					} 
 			
 				});
 			        
 			    if(video_radio.is(':checked'))
-					video_metabox.css('display', 'block');
+					video_metabox.show();
 				else
-					diaporama_metabox.css('display', 'block');
+					diaporama_metabox.show();
 	            
 	            
 	            function hideAllMetaBoxes(){
-		            diaporama_metabox.css('display', 'none');
-		            video_metabox.css('display', 'none');
+		            diaporama_metabox.hide();
+		            video_metabox.hide();
 	            }
             });
-			/* ]]> */
         </script>
     
     <?php }
