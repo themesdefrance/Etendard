@@ -1229,6 +1229,10 @@ form.search-form input.search-submit{
 	font-size: 1.6rem;
 	@extend %iconfont;
 	@include transition(background $default-transition-duration $default-transition-function);
+	
+	&:hover{
+		text-decoration:none;
+	}
 }
 
 // Widget Appel à l'action
@@ -1457,6 +1461,7 @@ h3.toggle a{
 	font-size: 36px;
 	margin-bottom: 40px;
 }
+
 .error404 .smiley-404{
 	display: block;
 	margin: 20px auto;
