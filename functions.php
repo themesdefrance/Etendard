@@ -714,7 +714,8 @@ if(!function_exists('etendard_user_styles')){
 				.contact-form .submit input,
 				a.bouton.lirelasuite,
 				.headerbar,
-				#remonter{
+				#remonter,
+				.jetpack_subscription_widget #subscribe-submit input[type="submit"]<?php // Jetpack ?>{
 					background: <?php echo $color; ?> !important;
 					color: <?php echo $contrast; ?> !important;
 				}
@@ -744,7 +745,8 @@ if(!function_exists('etendard_user_styles')){
 				.contact-form .submit input:hover,
 				#commentform #submit:hover,
 				a.bouton.lirelasuite:hover,
-				#remonter:hover{
+				#remonter:hover,
+				.jetpack_subscription_widget #subscribe-submit input[type="submit"]:hover{
 					background:<?php echo $complement; ?> !important;
 				}
 				form.search-form .search-submit-wrapper:hover:before,
