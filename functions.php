@@ -143,6 +143,9 @@ if (!function_exists('etendard_init_cpt')){
 			'public'=>true,
 			'menu_position'=>20,
 			'has_archive'=>'portfolio-archive',
+			'rewrite'=>array(
+				'slug'=>'pf'
+			),
 			'exclude_from_search'=> true
 		));
 		add_post_type_support('portfolio', array(
@@ -184,6 +187,9 @@ if (!function_exists('etendard_init_cpt')){
 			'public'=>true,
 			'menu_position'=>21,
 			'has_archive'=>'service-archive',
+			'rewrite'=>array(
+				'slug'=>'service'
+			),
 			'exclude_from_search'=> true
 		));
 		add_post_type_support('service', array(
