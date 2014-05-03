@@ -1,4 +1,4 @@
-<?php $video_link = get_post_meta($post->ID, 'etendard_video_meta', true); ?>
+<?php $video_link = get_post_meta($post->ID, '_etendard_video_meta', true); ?>
 
 <div class="post-video">
 									

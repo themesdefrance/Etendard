@@ -57,7 +57,7 @@ function etendard_link_callback( $post ) {
 	$form->startForm();
 	
 	$form->setting(array('type'=>'url',
-					 'name'=>'link_meta',
+					 'name'=>'_link_meta',
 					 'label'=>__('Lien à mettre en avant', 'etendard'),
 					 'description' => __('Insérez un lien à mettre en avant pour votre article. Libre à vous de le commenter dans le corps de l\'article.','etendard')
 					 )
@@ -73,14 +73,14 @@ function etendard_quote_callback( $post ) {
 	$form->startForm();
 	
 	$form->setting(array('type'=>'text',
-					 'name'=>'quote_meta',
+					 'name'=>'_quote_meta',
 					 'label'=>__('Citation à mettre en avant', 'etendard'),
 					 'description' => __('Insérez de sages paroles et commentez-les éventuellement dans le corps de l\'article.','etendard')
 					 )
 				  );
 	
 	$form->setting(array('type'=>'text',
-					 'name'=>'quote_author_meta',
+					 'name'=>'_quote_author_meta',
 					 'label'=>__('Auteur de la citation (facultatif)', 'etendard'),
 					 'description' => __('N\'oubliez pas de créditer l\'auteur de la citation.','etendard')
 					 )
@@ -97,7 +97,7 @@ function etendard_video_callback( $post ) {
 	$form->startForm();
 	
 	$form->setting(array('type'=>'url',
-					 'name'=>'video_meta',
+					 'name'=>'_video_meta',
 					 'label'=>__('Vidéo à mettre en avant', 'etendard'),
 					 'description' => __('Insérez le lien d\'une vidéo Youtube, Dailymotion ou Vimeo pour l\'afficher à la tête de votre article.','etendard')
 					 )
@@ -208,31 +208,3 @@ function etendard_display_metaboxes() {
 }
 // Add inline js in admin
 add_action( 'admin_print_scripts', 'etendard_display_metaboxes',1000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

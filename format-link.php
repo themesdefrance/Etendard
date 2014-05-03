@@ -1,4 +1,4 @@
-<?php $link = get_post_meta($post->ID, 'etendard_link_meta', true); ?>
+<?php $link = get_post_meta($post->ID, '_etendard_link_meta', true); ?>
 
 <div class="post-link">
 		

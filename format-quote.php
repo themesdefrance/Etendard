@@ -1,5 +1,5 @@
-<?php $quote = get_post_meta($post->ID, 'etendard_quote_meta', true); ?>
-<?php $author_quote = get_post_meta($post->ID, 'etendard_quote_author_meta', true); ?>
+<?php $quote = get_post_meta($post->ID, '_etendard_quote_meta', true); ?>
+<?php $author_quote = get_post_meta($post->ID, '_etendard_quote_author_meta', true); ?>
 
 <div class="post-quote">
 		
