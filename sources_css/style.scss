@@ -813,14 +813,24 @@ ul.articles .article{
 }
 
 // Post Formats
-article.format-link .header-title{
-	margin-bottom: 10px;
-}
-
 
 article.format-link .post-link{
-	display:block;
+	background-color: #e6e7e8;
+	padding: 40px 20px;
 	margin-bottom: 15px;
+	text-align: center;
+	
+	& .header-title{
+		margin-bottom: 10px;
+		
+		& a{
+			color: $body-copy-color;
+		}
+	}
+	
+	& .post-link-url{
+		display:block;
+	}
 }
 
 

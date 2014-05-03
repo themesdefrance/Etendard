@@ -668,7 +668,8 @@ if(!function_exists('etendard_user_styles')){
 				.comment .comment-author a,
 				.main-footer a,
 				.sidebar .widget a:hover,
-				article.format-link .post-link a,
+				article.format-link .post-link .header-title a:hover,
+				article.format-link .post-link .post-link-url a,
 				article.format-quote .post-quote blockquote a:hover{
 					color: <?php echo $color; ?>;
 				}
