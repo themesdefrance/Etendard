@@ -249,24 +249,19 @@ class Etendard_Welcome {
 		// Bail if activating from network, or bulk
 		if ( is_network_admin() || isset( $_GET['activate-multi'] ) )
 			return;
-
-		/* Code précédent : La redirection de la mise à jour ne marche pas :/
-		if ( ( isset( $_GET['action'] ) && 'do-theme-upgrade' == $_GET['action'] )){
-			wp_safe_redirect( admin_url( 'index.php?page=etendard-update' ) ); exit;
-		}
-		elseif(( isset( $_GET['activated'] ) && 'true' == $_GET['activated'] )){
-			wp_safe_redirect( admin_url( 'index.php?page=etendard-bienvenue' ) ); exit;
-		}*/
-		
 		
 		// Code adapté de EDD
-//		$upgrade = get_option( 'etendard_precedente_version' );
-//		
-//		if( ! $upgrade ) { // Première installation
-//			wp_safe_redirect( admin_url( 'index.php?page=etendard-bienvenue' ) ); exit;
-//		} else { // Mise à jour
-//			wp_safe_redirect( admin_url( 'index.php?page=etendard-update' ) ); exit;
-//		}
+		$lastv = get_option( 'etendard_precedente_version' );
+		$currentv = get_option( 'etendard_version' );
+		
+		if( ! $lastv && $_GET['page'] !== 'etendard-bienvenue' ) { // Première installation
+			update_option( 'etendard_precedente_version', $currentv );
+			wp_safe_redirect( admin_url( 'index.php?page=etendard-bienvenue' ) ); exit;
+		} else if ((float)$lastv < (float)$currentv && $_GET['page'] !== 'etendard-update') { 			
+			// Mise à jour
+			update_option( 'etendard_precedente_version', $currentv );
+			wp_safe_redirect( admin_url( 'index.php?page=etendard-update' ) ); exit;
+		}
 		
 		
 

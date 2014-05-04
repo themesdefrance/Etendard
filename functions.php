@@ -27,7 +27,7 @@ require_once 'admin/Cocorico/Cocorico.php';
 require_once 'admin/widgets/social.php';
 require_once 'admin/widgets/appel-action.php';
 require_once 'admin/shortcodes.php';
-//require_once 'admin/bienvenue.php'; // Coming soon
+require_once 'admin/bienvenue.php'; // Coming soon
 
 ////////////////////////////////////
 // Etendard Setup & Activation
@@ -50,13 +50,6 @@ if (!function_exists( 'etendard_nomenu')){
 
 if (!function_exists('etendard_setup')){
 	function etendard_setup(){
-		
-		// Save Etendard previous version
-		$etendard_version = get_option( 'etendard_version' );
-		if ( $etendard_version ) {
-			update_option( 'etendard_precedente_version', $etendard_version );
-		}
-		
 		// Register menus
 		register_nav_menu('primary', __('Menu principal', 'etendard'));
 		register_nav_menu('footer', __('Menu pied de page', 'etendard'));
