@@ -132,6 +132,12 @@ $form->setting(array('type'=>'boolean',
 					 ),
 					 'description'=>__('Affichez ou non les boutons des éléments portfolio sur la page des projets', 'etendard')));
 					 
+$form->setting(array('type'=>'text-list',
+					'label'=>__('Champs personnalisés', 'etendard'),
+					'name'=>'portfolio_fields',
+					'options'=>array()
+));
+					 
 $form->setting(array('type'=>'text',
 					 'name'=>'cta_url',
 					 'label'=>__("Destination de l'appel à l'action (lien)", 'etendard')));
