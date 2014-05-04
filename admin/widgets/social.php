@@ -21,8 +21,8 @@ class EtendardSocial extends WP_Widget{
 	public function __construct(){
 		parent::__construct(
 			'EtendardSocial',
-			__('Étendard Réseaux Sociaux', TEXT_TRANSLATION_DOMAIN),
-			array('description'=>__('Les liens vers vos comptes sur différents réseaux sociaux.', TEXT_TRANSLATION_DOMAIN),)
+			__('Étendard Réseaux Sociaux', 'etendard'),
+			array('description'=>__('Les liens vers vos comptes sur différents réseaux sociaux.', 'etendard'),)
 		);
 	}
 	
@@ -61,7 +61,7 @@ class EtendardSocial extends WP_Widget{
 		
 		if ($this->error){
 			echo '<div class="error">';
-			_e('Merci de saisir une url valide', TEXT_TRANSLATION_DOMAIN);
+			_e('Merci de saisir une url valide', 'etendard');
 			echo '</div>';
 		}
 		
@@ -77,7 +77,7 @@ class EtendardSocial extends WP_Widget{
 				<a href="#" class="etendardsocial-toggle-link">
 				</a>
 				<h4>
-					<?php _e('Plus de réseaux', TEXT_TRANSLATION_DOMAIN); ?>
+					<?php _e('Plus de réseaux', 'etendard'); ?>
 				</h4>
 			</div>
 			<div class="etendardsocial-toggle <?php echo $open; ?>">

@@ -21,7 +21,7 @@
 					<?php the_excerpt(); ?>
 				</p>
 				<a href="<?php the_permalink(); ?>" class="more-link">
-					<?php _e('Lire la suite', TEXT_TRANSLATION_DOMAIN); ?>
+					<?php _e('Lire la suite', 'etendard'); ?>
 				</a>
 			</li>
 			<?php endwhile; ?>

@@ -3,7 +3,7 @@
 	<?php if (have_comments()): ?>
 		<h2 class="comments-title">
 			<?php
-                printf(_n('Un commentaire a été rédigé, allez-vous ajouter le votre ?', '%1$s commentaires ont été rédigés, allez-vous ajouter le votre ?', get_comments_number(), TEXT_TRANSLATION_DOMAIN), number_format_i18n(get_comments_number()));
+                printf(_n('Un commentaire a été rédigé, allez-vous ajouter le votre ?', '%1$s commentaires ont été rédigés, allez-vous ajouter le votre ?', get_comments_number(), 'etendard'), number_format_i18n(get_comments_number()));
             ?>
 		</h2>
 		
@@ -11,8 +11,8 @@
 			'comment_notes_before'=>'',
 			'comment_notes_after'=>'',
 			'title_reply'=>'',
-			'title_reply_to'=>__('Répondre à %s', TEXT_TRANSLATION_DOMAIN),
-			'label_submit'=>__('Envoyer', TEXT_TRANSLATION_DOMAIN),
+			'title_reply_to'=>__('Répondre à %s', 'etendard'),
+			'label_submit'=>__('Envoyer', 'etendard'),
 		)); ?>
 		
 		<ol class="comment-list">
@@ -22,30 +22,30 @@
         <?php if (get_comment_pages_count() > 1 && get_option('page_comments')){ ?>
 		<nav role="navigation" id="comment-nav-below" class="comment-navigation">
 			<div class="nav-previous">
-            	<?php previous_comments_link(__('Commentaires précédents', TEXT_TRANSLATION_DOMAIN)); ?>
+            	<?php previous_comments_link(__('Commentaires précédents', 'etendard')); ?>
             </div>
             <div class="nav-next">
-            	<?php next_comments_link(__('Commentaires suivants', TEXT_TRANSLATION_DOMAIN)); ?>
+            	<?php next_comments_link(__('Commentaires suivants', 'etendard')); ?>
             </div>
         </nav><!-- #comment-nav-before .site-navigation .comment-navigation -->
         <?php } // check for comment navigation ?>
  
 	<?php else:  ?>
 		<h2 class="comments-title">
-			<?php __('Soyez le premier à rédiger un commentaire.', TEXT_TRANSLATION_DOMAIN); ?>
+			<?php __('Soyez le premier à rédiger un commentaire.', 'etendard'); ?>
 		</h2>
 
 		<?php comment_form(array(
 			'comment_notes_before'=>'',
 			'comment_notes_after'=>'',
 			'title_reply'=>'',
-			'title_reply_to'=>__('Répondre à %s', TEXT_TRANSLATION_DOMAIN),
-			'label_submit'=>__('Envoyer', TEXT_TRANSLATION_DOMAIN),
+			'title_reply_to'=>__('Répondre à %s', 'etendard'),
+			'label_submit'=>__('Envoyer', 'etendard'),
 		)); 
 	endif; ?>
     <?php if (!comments_open() && get_comments_number() != '0' && post_type_supports(get_post_type(), 'comments')): ?>
 		<p class="nocomments">
-			<?php _e('Les commentaires sont clos.', TEXT_TRANSLATION_DOMAIN); ?>
+			<?php _e('Les commentaires sont clos.', 'etendard'); ?>
 		</p>
 	<?php endif; ?>
 </div><!-- #comments .comments-area -->

@@ -9,12 +9,11 @@ Template Name: Sans Barre Latérale
 
 <section class="blog">
 	<div class="wrapper">		
-		<div>
-			<?php /* The loop */ ?>
+
 			<?php while (have_posts()) : the_post(); ?>
-				<?php get_template_part('content', get_post_format()); ?>
+				<?php get_template_part('content'); ?>
 			<?php endwhile; ?>
-		</div>
+
 	</div>
 </section>
 <?php get_footer(); ?>

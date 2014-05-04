@@ -6,8 +6,8 @@ class EtendardAppelAction extends WP_Widget{
 	public function __construct(){
 		parent::__construct(
 			'EtendardAppelAction',
-			__('Étendard - Appel à l\'action', TEXT_TRANSLATION_DOMAIN),
-			array('description'=>__('Insérez un appel à l\'action dans une barre latérale.', TEXT_TRANSLATION_DOMAIN),)
+			__('Étendard - Appel à l\'action', 'etendard'),
+			array('description'=>__('Insérez un appel à l\'action dans une barre latérale.', 'etendard'),)
 		);
 	}
 	

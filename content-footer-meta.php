@@ -12,7 +12,7 @@
 	<nav>
 	
 	<?php wp_link_pages(array(
-		'before'=>'<div class="page-links"><span class="page-links-title">'.__('Pages:', TEXT_TRANSLATION_DOMAIN).'</span>', 
+		'before'=>'<div class="page-links"><span class="page-links-title">'.__('Pages:', 'etendard').'</span>', 
 		'after'=>'</div>'
 	)); ?>
 	

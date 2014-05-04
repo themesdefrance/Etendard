@@ -31,7 +31,7 @@ if (!is_tax('portfolio_categorie') && !is_post_type_archive('portfolio')){
 			<ul>
 				<li>
 					<a href="<?php echo etendard_portfolio_page_link(); ?>" class="<?php echo (!is_tax('portfolio_categorie')) ? 'active' : ''; ?>">
-						<?php _e('Tous', TEXT_TRANSLATION_DOMAIN); ?>
+						<?php _e('Tous', 'etendard'); ?>
 					</a>
 				</li>
 				<?php foreach ($terms as $term){ ?>
@@ -81,7 +81,7 @@ if (!is_tax('portfolio_categorie') && !is_post_type_archive('portfolio')){
 				<?php if(get_option('etendard_boutons_portfolio') != '0'){ ?>
 					<div class="cta-wrapper">
 						<a href="<?php the_permalink(); ?>" class="cta-button">
-							<?php _e('Découvrir le projet', TEXT_TRANSLATION_DOMAIN); ?>
+							<?php _e('Découvrir le projet', 'etendard'); ?>
 						</a>
 					</div>
 				<?php } ?>

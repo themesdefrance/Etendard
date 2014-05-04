@@ -14,7 +14,7 @@
 					echo strip_tags(get_option("etendard_footer_gauche"), '<strong><a><em><img>');
 				}
 				else{  
-					_e('<strong>2014</strong> - Étendard par <a href="https://www.themesdefrance.fr" target="_blank">Thèmes de France</a>', TEXT_TRANSLATION_DOMAIN);
+					_e('<strong>2014</strong> - Étendard par <a href="https://www.themesdefrance.fr" target="_blank">Thèmes de France</a>', 'etendard');
 				} ?>
 		</div>
 		<div class="col-1-2">
@@ -32,7 +32,7 @@
 		</div>
 	</div>
 	
-	<a href="#" id="remonter" class="icon-totop" style="display:none;" title="<?php _e('Remonter en haut', TEXT_TRANSLATION_DOMAIN); ?>"></a>
+	<a href="#" id="remonter" class="icon-totop" style="display:none;" title="<?php _e('Remonter', 'etendard'); ?>"></a>
 	
 </footer>
 

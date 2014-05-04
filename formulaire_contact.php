@@ -7,7 +7,7 @@ if (isset($_POST['etendard_contact_nonce']) && wp_verify_nonce($_POST['etendard_
 	
 	$to = get_bloginfo('admin_email');
 	
-	$subject = (trim($sujet) === '') ? __('Contact', TEXT_TRANSLATION_DOMAIN).' '.get_bloginfo('name') : $sujet;
+	$subject = (trim($sujet) === '') ? __('Contact', 'etendard').' '.get_bloginfo('name') : $sujet;
 	$from = $nom;
 	$from_mail = (trim($email) === '') ? $to : $email;
 	
@@ -57,7 +57,7 @@ if (isset($_POST['etendard_contact_nonce']) && wp_verify_nonce($_POST['etendard_
 	<div class="message <?php echo ($contact) ? 'succes' : 'erreur'; ?>">
 	<?php
 	if ($contact) _e('Votre message à été envoyé.');
-	else _e("Une erreur est survenue lors de l'envoi de votre message, merci de réessayer ultérieurement.", TEXT_TRANSLATION_DOMAIN);
+	else _e("Une erreur est survenue lors de l'envoi de votre message, merci de réessayer ultérieurement.", 'etendard');
 	?>
 	</div>
 <?php endif; ?>

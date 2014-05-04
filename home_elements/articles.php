@@ -3,7 +3,7 @@
 <section class="blog">
 	<div class="wrapper">
 		<h2 class="center">
-			<?php _e('Derniers articles', TEXT_TRANSLATION_DOMAIN); ?>
+			<?php _e('Derniers articles', 'etendard'); ?>
 		</h2>
 		<ul class="blog">
 			<?php while ($articles->have_posts()) : $articles->the_post(); ?>
@@ -27,7 +27,7 @@
 						<?php the_excerpt(); ?>
 					</div>
 					<a href="<?php the_permalink(); ?>" class="more-link">
-						<?php _e('Lire la suite', TEXT_TRANSLATION_DOMAIN); ?>
+						<?php _e('Lire la suite', 'etendard'); ?>
 					</a>
 				</article>
 			</li>
@@ -35,7 +35,7 @@
 		</ul>
 		<div class="cta-wrapper">
 			<a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="cta-button">
-				<?php _e('Consulter les articles', TEXT_TRANSLATION_DOMAIN); ?>
+				<?php _e('Consulter les articles', 'etendard'); ?>
 			</a>
 		</div>
 	</div>

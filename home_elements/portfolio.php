@@ -3,7 +3,7 @@
 <section class="portfolio">
 	<div class="wrapper">
 		<h2 class="center">
-			<?php _e('Derniers travaux', TEXT_TRANSLATION_DOMAIN); ?>
+			<?php _e('Derniers travaux', 'etendard'); ?>
 		</h2>
 		<ul class="portfolio">
 			<?php while ($portfolios->have_posts()) : $portfolios->the_post(); ?>
@@ -36,7 +36,7 @@
 		</ul>
 		<div class="cta-wrapper">
 			<a href="<?php echo etendard_portfolio_page_link(); ?>" class="cta-button">
-				<?php _e('Consulter le portfolio', TEXT_TRANSLATION_DOMAIN); ?>
+				<?php _e('Consulter le portfolio', 'etendard'); ?>
 			</a>
 		</div>
 	</div>

@@ -16,7 +16,7 @@ function etendardDiaporamaShorthand($cocorico, $name){
 	foreach ($images as $index=>$img){
 		$cocorico->startWrapper('tr');
 		$cocorico->startWrapper('th');
-		$cocorico->component('raw', __('Diaporama', TEXT_TRANSLATION_DOMAIN).' #'.($index+1));
+		$cocorico->component('raw', __('Diaporama', 'etendard').' #'.($index+1));
 		$cocorico->endWrapper('th');
 		$cocorico->endWrapper('tr');
 		
@@ -24,7 +24,7 @@ function etendardDiaporamaShorthand($cocorico, $name){
 		
 		$cocorico->startWrapper('th');
 		//THIS MAKES NO SENSE, INVERTARGS
-		$cocorico->component('label', $name.'-upload-'.$index, __('Image', TEXT_TRANSLATION_DOMAIN));
+		$cocorico->component('label', $name.'-upload-'.$index, __('Image', 'etendard'));
 		$cocorico->endWrapper('th');
 		
 		$cocorico->startWrapper('td');
@@ -45,7 +45,7 @@ function etendardDiaporamaShorthand($cocorico, $name){
 		
 		$cocorico->startWrapper('th');
 		//THIS MAKES NO SENSE, INVERTARGS
-		$cocorico->component('label', $name.'-link-'.$index, __('Lien', TEXT_TRANSLATION_DOMAIN));
+		$cocorico->component('label', $name.'-link-'.$index, __('Lien', 'etendard'));
 		$cocorico->endWrapper('th');
 		
 		$cocorico->startWrapper('td');
@@ -62,7 +62,7 @@ function etendardDiaporamaShorthand($cocorico, $name){
 		
 		$cocorico->startWrapper('th');
 		//THIS MAKES NO SENSE, INVERTARGS
-		$cocorico->component('label', $name.'-title-'.$index, __('Titre', TEXT_TRANSLATION_DOMAIN));
+		$cocorico->component('label', $name.'-title-'.$index, __('Titre', 'etendard'));
 		$cocorico->endWrapper('th');
 		
 		$cocorico->startWrapper('td');
@@ -78,7 +78,7 @@ function etendardDiaporamaShorthand($cocorico, $name){
 		$cocorico->endWrapper('td');
 		
 		$cocorico->startWrapper('td');
-		$cocorico->component('link', '#', __('Supprimer', TEXT_TRANSLATION_DOMAIN), array(
+		$cocorico->component('link', '#', __('Supprimer', 'etendard'), array(
 			'class'=>'submitdelete etendard-delete-diaporama',
 			'style'=>'color: #A00;'
 		));
@@ -92,7 +92,7 @@ function etendardDiaporamaShorthand($cocorico, $name){
 	$cocorico->component('input', 'upload-add', array(
 		'type'=>'button',
 		'class'=>array('button', 'button-primary', 'etendard-diaporama-add'),
-		'value'=>__('Ajouter', TEXT_TRANSLATION_DOMAIN)
+		'value'=>__('Ajouter', 'etendard')
 	));
 	
 	wp_register_script('etendard_cocorico', COCORICO_URI.'/extensions/etendard/etendard.js', array('jquery'), '1', true);

@@ -30,7 +30,7 @@ else if (get_post_type() === 'portfolio'){
 				<?php if ($bouton): ?>
 					<?php echo esc_html($bouton); ?>
 				<?php else: ?>
-					<?php _e('Cliquez ici', TEXT_TRANSLATION_DOMAIN); ?>
+					<?php _e('Cliquez ici', 'etendard'); ?>
 				<?php endif; ?>
 			</a>
 		</div>
