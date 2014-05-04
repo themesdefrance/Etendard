@@ -10,7 +10,7 @@
 		<ul class="articles">
 			<?php while (have_posts()) : the_post(); ?>
 			<li>
-				<?php get_template_part('content'); ?>
+				<?php get_template_part('content', get_post_format()); ?>
 			</li>
 			<?php endwhile; ?>
 		</ul>
