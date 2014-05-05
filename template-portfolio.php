@@ -90,8 +90,8 @@ if (!is_tax('portfolio_categorie') && !is_post_type_archive('portfolio')){
 		</ul>
 		
 		<div class="pagination">
-			<?php previous_posts_link(__('Page précédente')); ?>
-			<?php next_posts_link(__('Page suivante')); ?> 
+			<?php previous_posts_link(__('Page précédente', 'etendard')); ?>
+			<?php next_posts_link(__('Page suivante', 'etendard')); ?> 
 		</div>
 	</div>
 </section>

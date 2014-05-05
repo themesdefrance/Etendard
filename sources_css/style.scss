@@ -972,7 +972,7 @@ article.format-quote .post-quote{
 	@include transition();
 }
 
-//pagniation
+//pagination
 div.pagination{
 	text-align:center;
 	font-size: 20px;
@@ -991,6 +991,10 @@ div.pagination{
 		text-decoration: underline;
 		@include transition(color $default-transition-duration $default-transition-function);
 	}
+}
+
+section.portfolio .pagination a{
+	@extend %bouton-etendard;
 }
 
 
@@ -1500,7 +1504,7 @@ h3.toggle a{
 			border:1px solid #939393;
 			background: lighten(#f1f2f2, 3);
 			color: darken(#969696, 10);
-			outline: none;
+			outline:none;
 		}
 	}
 }
@@ -1509,7 +1513,7 @@ h3.toggle a{
 	text-align:center;
 	& input[type="submit"]{
 		@extend %bouton-etendard;
-		border: 0;
+		border:0;
 	}
 }
 	

@@ -706,6 +706,7 @@ if(!function_exists('etendard_user_styles')){
 				a.bouton.lirelasuite,
 				.headerbar,
 				#remonter,
+				section.portfolio .pagination a,
 				.jetpack_subscription_widget #subscribe-submit input[type="submit"]<?php // Jetpack ?>{
 					background: <?php echo $color; ?> !important;
 					color: <?php echo $contrast; ?> !important;
@@ -737,6 +738,7 @@ if(!function_exists('etendard_user_styles')){
 				#commentform #submit:hover,
 				a.bouton.lirelasuite:hover,
 				#remonter:hover,
+				section.portfolio .pagination a:hover,
 				.jetpack_subscription_widget #subscribe-submit input[type="submit"]:hover{
 					background:<?php echo $complement; ?> !important;
 				}
