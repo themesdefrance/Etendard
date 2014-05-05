@@ -67,6 +67,9 @@ if(!function_exists('etendard_meta_migration')){
 
 if (!get_option('etendard_portfolio_fields') && get_option(EDD_SL_LICENSE_KEY)){
 	update_option('etendard_portfolio_fields', array('Client', 'URL'));
+	
+	global $wp_rewrite;
+	$wp_rewrite->flush_rules();
 }
 
 ////////////////////////////////////
