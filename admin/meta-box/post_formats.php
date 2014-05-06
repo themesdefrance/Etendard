@@ -99,7 +99,7 @@ function etendard_video_callback( $post ) {
 	$form->setting(array('type'=>'url',
 					 'name'=>'_video_meta',
 					 'label'=>__('Vidéo à mettre en avant', 'etendard'),
-					 'description' => __('Insérez le lien d\'une vidéo Youtube, Dailymotion ou Vimeo pour l\'afficher à la tête de votre article.','etendard')
+					 'description' => __('Insérez le lien d\'une vidéo Youtube, Dailymotion ou Vimeo à mettre en avant.','etendard')
 					 )
 				  );
 	
