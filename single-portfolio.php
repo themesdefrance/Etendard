@@ -24,8 +24,8 @@ $portfolio_custom = get_post_custom();
 	
 	<div class="wrapper">
 		<div class="layout-grid">
-	
-			<?php  if(count($champs_portfolio) > 0){ ?>
+			
+			<?php  if(count($champs_portfolio) > 1){ ?>
 		
 			<div class="col-1-3 meta">
 				<?php foreach ($champs_portfolio as $champ){
