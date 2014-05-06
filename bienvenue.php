@@ -132,7 +132,7 @@ class Etendard_Welcome {
 					
 					<p>Un article a également été publié sur le blog de Thèmes de France pour revenir plus en détails sur cette version 1.011 d'Étendard.</p>
 					<p>
-						<a href="https://www.themesdefrance.fr/etendard-version-1-011/" class="button button-primary button-large" target="_blank">Lire l'article sur Thèmes de France</a>
+						<a href="https://www.themesdefrance.fr/etendard-version-1-011/?utm_source=SiteClient&utm_medium=Etendard&utm_campaign=1.011" class="button button-primary button-large" target="_blank">Lire l'article sur Thèmes de France</a>
 					</p>
 	
 				</div>
