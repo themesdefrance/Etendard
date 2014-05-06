@@ -9,6 +9,7 @@ Template Name: Portfolio
 
 <?php 
 $terms = get_terms('portfolio_categorie');
+$currentterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); // Fix temporaire
 
 global $wp_query;
 
@@ -23,6 +24,21 @@ if (!is_tax('portfolio_categorie') && !is_post_type_archive('portfolio')){
 	);
 	$wp_query = new WP_Query($args);
 }
+
+if (is_tax('portfolio_categorie')){ // Fix temporaire
+	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+	$args = array(
+			'post_type'=>'portfolio',
+			'orderby'=>'date',
+			'order'=>'ASC',
+			'posts_per_page'=> 6,
+			'paged'=>$paged,
+			'portfolio_categorie'=>$currentterm->slug
+	);
+	$wp_query = new WP_Query($args);
+}
+
+
 ?>
 <section class="portfolio">
 	<div class="wrapper">
