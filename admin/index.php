@@ -135,7 +135,7 @@ $form->setting(array('type'=>'boolean',
 $form->setting(array('type'=>'text-list',
 					'label'=>__('Informations complémentaires', 'etendard'),
 					'name'=>'portfolio_fields',
-					'description' => __('Définissez des informations complémenaires afin d\'enrichir les éléments portfolios (nom de votre client, son site, etc.). Vous devrez ensuite leur attribuer une valeur dans l\'encart "Informations complémentaires" de chaque élément portfolio.', 'etendard'),
+					'description' => __('Définissez des informations complémentaires afin d\'enrichir les éléments portfolios (nom de votre client, son site, etc.). Vous devrez ensuite leur attribuer une valeur dans l\'encart "Informations complémentaires" de chaque élément portfolio.', 'etendard'),
 					'options'=>array()
 ));
 					 

@@ -312,7 +312,7 @@ add_action('widgets_init', 'etendard_appel_action_init');
 if (!function_exists('etendard_register_custom_fields')){
 	function etendard_register_custom_fields(){
 		add_meta_box('etendard_portfolio_client',
-					 __('Informations', 'etendard'),
+					 __('Informations complémentaires', 'etendard'),
 					 'etendard_portfolio_client',
 					 'portfolio',
 					 'side',
