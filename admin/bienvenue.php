@@ -75,6 +75,17 @@ class Etendard_Welcome {
 			float: right;
 			margin-left: 10px!important;
 		}
+		
+		.etendard-merci{
+			font-style:italic;
+		}
+		
+		.feature-section img{
+			border:1px solid rgba(0,0,0,.1);
+		}
+		
+		
+		
 		/*]]>*/
 		</style>
 		<?php
@@ -95,7 +106,7 @@ class Etendard_Welcome {
 		<?php
 	}
 
-	// Display Update Screen
+	// Onglet Mise à jour
 	public function update_screen() {
 		list( $display_version ) = explode( '-', EDD_SL_THEME_VERSION );
 		?>
@@ -107,52 +118,138 @@ class Etendard_Welcome {
 			<?php $this->tabs(); ?>
 
 			<div class="changelog">
-				<h3><?php _e( 'Présentation des nouveautés en vidéo', 'etendard' );?></h3>
+				<h3><?php _e( 'Présentation des nouveautés', 'etendard' );?></h3>
 
 				<div class="feature-section">
 
 					<div class="etendard-video">
 						<iframe width="550" height="309" src="//www.youtube.com/embed/_sgtKI2GNu4?rel=0" frameborder="0" allowfullscreen></iframe>
 					</div>
-
-					<h4>Au programme</h4>
 					
-					<ul>
-						<li>Le menu du pied de page est désormais facultatif. Aucun menu ne s'affichera automatiquement lorsqu'aucun menu n'est défini.</li>
-						<li>Si vous n'utilisez pas de logo, le menu mobile s'affichera normalement.</li>
-						<li>Les personnes utilisant un thème enfant retrouvent l'éditeur visuel. Une erreur s'était glissée dans le bouton pour insérer les shortcodes.</li>
-						<li>Les blocs de citation ont été optimisés. La police est un peu moins grande pour une meilleure lisibilité.</li>
-					</ul>
+					<p>Comme d'habitude, nous avons réalisé une vidéo afin de vous présenter les améliorations que contient cette nouvelle version.</p>
 					
-					<p>Nous avons également procédé à d'autres petites corrections sur le thème. N'hésitez à <a href="https://www.themesdefrance.fr/support/" target="_blank">poster un message sur le forum de support</a> en cas de problème.</p>
+					<p>Nous en profitons pour remercier toutes les personnes qui nous ont apporté des suggestions et permis de résoudre des bugs, vous allez pouvoir profiter de tout cela :)</p>
 					
-					<h4>Participez au lancement de Thèmes de France</h4>
-					
-					<p>Thèmes de France ouvre enfin ses portes au grand public le jeudi 27 mars. À vrai dire, nous avons un peu de mal à réaliser. Le projet se concrétise enfin ! Des dizaines de personnes vont, comme vous, pouvoir utiliser Étendard pour créer leur propre site avec WordPress.</p>
-					
-					<p>Si vous le désirez, vous pouvez nous aider à faire parler de l'évènement grâce aux réseaux sociaux. Nous sommes sur <a href="https://www.facebook.com/ThemesDeFrance" target="_blank">Facebook</a>, <a href="https://twitter.com/themesdefrance" target="_blank">Twitter</a> et <a href="https://plus.google.com/b/108963306408977874042/108963306408977874042/posts" target="_blank">Google+</a>. Et si vous connaissez quelqu'un qui a besoin de créer un site, envoyez-lui un petit email en lui parlant de Thèmes de France ;)</p>
-					
-					<p>A très vite pour une nouvelle mise à jour.</p>
-					
-					<p>L'équipe Thèmes de France</p>
+					<p>Un article a également été publié sur le blog de Thèmes de France pour revenir plus en détails sur cette version 1.011 d'Étendard.</p>
+					<p>
+						<a href="#" class="button button-primary button-large">Lire l'article sur Thèmes de France</a>
+					</p>
+	
 				</div>
+			</div>
+
+			<hr>
+			
+			<div class="changelog">
+			
+			<h2 class="about-headline-callout">Les 3 améliorations majeures d'Étendard 1.011</h2>
+			
+				<div class="feature-section col three-col">
+
+					<div class="col-1">
+					
+						<img src="<?php echo get_template_directory_uri() . '/admin/img/formats-articles.jpg'; ?>" alt="Formats articles" />
+						
+						<h4>Publiez des articles au format vidéo, citation et lien</h4>
+						
+						<p>Cette fonctionnalité nous a été beaucoup demandé, c'est désormais chose faite. Il est désormais possible d'associer une vidéo Youtube, Dailymotion ou Vimeo aux articles. Les articles de types "lien" et "citation" font également leur apparition.</p>
+						
+						<p>Le portfolio pourra lui aussi avoir un format "vidéo" si vous le désirez.</p>
+					</div>
+					
+					<div class="col-2">
+					
+						<img src="<?php echo get_template_directory_uri() . '/admin/img/infos-complementaires.jpg'; ?>" alt="Formats articles" />
+						
+						<h4>Enrichissez les éléments portfolio</h4>
+						
+						<p>Auparavant, deux champs étaient disponibles pour mieux décrire les éléments portfolio (client et site). À partir de maintenant, vous pouvez définir autant d'informations complémentaires que votre site a besoin.</p>
+						
+						<p>Vous n'en avez pas besoin ? Supprimez simplement les champs dans l'onglet portfolio des options d'Étendard.</p>
+					</div>
+					
+					<div class="col-3 last-feature">
+					
+						<img src="<?php echo get_template_directory_uri() . '/admin/img/titre-sous-titre.jpg'; ?>" alt="Formats articles" />
+						
+						<h4>Définissez un titre et un sous-titre plus facilement</h4>
+						
+						<p>Dans les versions précédentes, le titre et le sous-titre de la page d'accueil utilisaient le nom et la description de votre site. Pour modifier ces textes, vous deviez donc changer le nom de votre site, ce qui n'était pas pratique.</p>
+						
+						<p>Avec cette nouvelle version, vous pourrez changer le texte d'accueil sans changer le nom de votre site.</p>
+					</div>
+				</div>
+			</div>
+			
+			<hr>
+			
+			<div class="changelog">
+				
+				<h2 class="about-headline-callout">Découvrez 3 autres optimisations</h2>
+				
+				<div class="feature-section col three-col">
+
+					<div class="col-1">
+						
+						<h4>Les vidéos et autres contenus externes s'affichent correctement</h4>
+						
+						<p>Un bug CSS faisait mal s'afficher les insertions de contenus externes comme les vidéos Youtube, les diaporamas Slideshare et les documents Google Docs. Avec cette nouvelle version, c'est de l'histoire ancienne.</p>
+						
+						<p class="etendard-merci">Merci à Stéphane et Ling-en pour l'info.</p>
+					</div>
+					
+					<div class="col-2">
+						
+						<h4>Le bouton d'ajout de shortcodes s'affiche partout</h4>
+						
+						<p>Il faut avouer qu'il est bien plus pratique de passer par le bouton pour ajouter des shortcodes dans vos publications. Désormais, les éléments de portfolio et les services le proposent pour vous faciliter la vie.</p>
+						
+						<p class="etendard-merci">Merci à Marc d'avoir fait remonter le problème.</p>
+					</div>
+					
+					<div class="col-3 last-feature">
+						
+						<h4>Une couleur secondaire a été introduite</h4>
+						
+						<p>Pour donner un peu plus de dynamisme, nous avons ajouté une seconde couleur à Étendard.</p>
+						
+						<p>Rassurez-vous vous n'avez rien à faire, Étendard la créera automatiquement afin qu'elle s'accorde au mieux avec la couleur principale.</p>
+						
+					</div>
+				</div>
+			</div>
+			
+			<hr>
+			
+			<div class="changelog">
+			
+				<h3>Participez à l'amélioration d'Étendard</h3>
+					
+				<div class="feature-section col two-col">
+					
+					<div class="col-1">
+						<h4>Sur les réseaux sociaux</h4>
+						<p>Si vous le désirez, vous pouvez contribuer à l'amélioration d'Étendard en nous faisant part de vos idées et suggestions sur les réseaux sociaux. Nous sommes sur <a href="https://www.facebook.com/ThemesDeFrance" target="_blank">Facebook</a>, <a href="https://twitter.com/themesdefrance" target="_blank">Twitter</a> et <a href="https://plus.google.com/b/108963306408977874042/108963306408977874042/posts" target="_blank">Google+</a>.</p>
+					</div>
+					
+					<div class="col-2 last-feature">
+						<h4>Sur le forum</h4>
+						<p>Nous sommes également à votre écoute sur <a href="https://www.themesdefrance.fr/support/" target="_blank">le forum de support</a> pour vous aider à tirer le meilleur d'Étendard. N'hésitez surtout pas si vous avez des questions, nous avons à coeur d'avoir des clients satisfaits.</p>
+					</div>
+				</div>
+				
 			</div>
 			
 
 			<div class="return-to-dashboard">
-				<a href="<?php echo admin_url( 'themes.php?page=etendard_options') ?>" class="button button-primary"><?php _e( 'Découvrez la nouvelle administration d\'Étendard', 'etendard' ); ?></a>
+				<a href="<?php echo admin_url( 'themes.php?page=etendard_options') ?>" class="button button-primary">Découvrir les nouvelles fonctionnalités</a>
 			</div>
 		</div>
 		<?php
 	}
 
-	/**
-	 * Render Getting Started Screen
-	 *
-	 * @access public
-	 * @since 1.9
-	 * @return void
-	 */
+	// Onglet Bienvenue
+	
 	public function bienvenue_screen() {
 		list( $display_version ) = explode( '-', EDD_SL_THEME_VERSION );
 		?>
@@ -196,12 +293,12 @@ class Etendard_Welcome {
 
 					<div>
 						<h4><?php _e( 'Ajoutez des éléments à votre portfolio', 'etendard' );?></h4>
-						<p><?php _e( 'Une fois que vous aurez défini une page portfolio, ajoutez-y des éléments pour montrer au monde ce que vous avez accompli. N\'oubliez de définir un appel à l\'action dans l\'onglet "Portfolio" des options d\'Étendard.', 'etendard' );?></p>
+						<p><?php _e( 'Une fois que vous aurez défini une page portfolio, ajoutez-y des éléments pour montrer au monde ce que vous avez accompli.', 'etendard' );?></p>
 					</div>
 					
 					<div class="last-feature">
 						<h4><?php _e( 'Sans oublier...', 'etendard' );?></h4>
-						<p><?php _e( 'La personnalisation du pied de page, la position de la barre latérale, l\'insertion du widget "Étendard Social", etc.', 'etendard' );?></p>
+						<p><?php _e( 'La personnalisation du pied de page, la position de la barre latérale, l\'insertion du widget "Étendard Social", d\'appels à l\'action, etc.', 'etendard' );?></p>
 					</div>
 					
 				</div>
@@ -214,20 +311,19 @@ class Etendard_Welcome {
 			<div class="changelog">
 				<h3><?php _e( 'Besoin d\'aide avec Étendard ?', 'etendard' );?></h3>
 
-				<div class="feature-section">
-
-					<h4><?php _e( 'Consultez la documentation', 'etendard' ); ?></h4>
-					<p><?php _e( 'En vous connectant sur Thèmes de France, vous pourrez accéder aux vidéos et aux tutoriels qui vous aideront à paramétrer Étendard.', 'etendard' ); ?></p>
+				<div class="feature-section col three-col">
 					
-					<h4><?php _e( 'Publiez un message sur le forum de support', 'etendard' ); ?></h4>
-					<p><?php _e( 'Toute l\'équipe de Thèmes de France est là pour vous aider à régler tous problèmes relatifs à Étendard.', 'etendard' ); ?></p>
+					<div>
+						<h4><?php _e( 'Consultez la documentation', 'etendard' ); ?></h4>
+						<p><?php _e( 'En vous <a href="https://www.themesdefrance.fr/documentation/manuel-etendard/" target="_blank">connectant sur Thèmes de France</a>, vous pourrez accéder aux vidéos et aux tutoriels qui vous aideront à paramétrer Étendard.', 'etendard' ); ?></p>
+					</div>
 					
+					<div>
+						<h4><?php _e( 'Posez vos questions sur le forum de support', 'etendard' ); ?></h4>
+						<p><?php _e( 'Toute l\'équipe de Thèmes de France est là pour vous aider à régler tous problèmes relatifs à Étendard.', 'etendard' ); ?></p>
+					</div>
 				</div>
 				
-			</div>
-			
-			<div class="return-to-dashboard">
-				<a href="https://www.themesdefrance.fr/documentation/manuel-etendard/" class="button button-primary" target="_blank"><?php _e( 'Ouvrir la documentation d\'Étendard', 'etendard' ); ?></a>
 			</div>
 			
 		</div>
