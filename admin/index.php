@@ -133,8 +133,9 @@ $form->setting(array('type'=>'boolean',
 					 'description'=>__('Affichez ou non les boutons des éléments portfolio sur la page des projets', 'etendard')));
 					 
 $form->setting(array('type'=>'text-list',
-					'label'=>__('Champs personnalisés', 'etendard'),
+					'label'=>__('Informations complémentaires', 'etendard'),
 					'name'=>'portfolio_fields',
+					'description' => __('Définissez des informations complémenaires afin d\'enrichir les éléments portfolios (nom de votre client, son site, etc.). Vous devrez ensuite leur attribuer une valeur dans l\'encart "Informations complémentaires" de chaque élément portfolio.', 'etendard'),
 					'options'=>array()
 ));
 					 

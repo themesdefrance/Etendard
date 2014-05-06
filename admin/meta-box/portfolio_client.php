@@ -10,11 +10,17 @@ $form = new Cocorico(false);
 $form->startForm();
 
 foreach ($fields as $field){
-	if (trim($field) === '') continue;
-	
-	$form->setting(array('type'=>'text',
-						 'name'=>'_'.$field,
-						 'label'=>$field));
+	if(count($fields)>1){
+
+		if (trim($field) === '') continue;
+		
+		$form->setting(array('type'=>'text',
+							 'name'=>'_'.$field,
+							 'label'=>$field));
+	}
+	else{
+		printf(__('Aucune information complémentaire n\'a été définie. Pour en ajouter, rendez-vous dans l\'onglet portfolio <a href="%s" >des options d\'Étendard</a>.','etendard') , admin_url('themes.php?page=etendard_options'));
+	}
 }
 
 $form->endForm();
