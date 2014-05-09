@@ -13,18 +13,19 @@ module.exports = function(grunt){
 				sassDir: 'sources_css/',
 				imagesDir: 'img',
 				fontsDir: 'fonts',
-				require: [],
+				require: []
 			},
 			build: {
 				options:{
 					cssDir: '.',
-					outputStyle: 'compressed',
+					outputStyle: 'compressed'
 				}
 			},
 			dev: {
 				options:{
 					cssDir: 'sources_css/',
 					outputStyle: 'expanded',
+					noLineComments: true
 				}
 			}
 		},
