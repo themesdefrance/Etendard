@@ -123,7 +123,7 @@ class Etendard_Welcome {
 				<div class="feature-section">
 
 					<div class="etendard-video">
-						<iframe width="550" height="309" src="//www.youtube.com/embed/_sgtKI2GNu4?rel=0" frameborder="0" allowfullscreen></iframe>
+						<iframe width="550" height="309" src="//www.youtube.com/embed/NE0Un832ipk?rel=0" frameborder="0" allowfullscreen></iframe>
 					</div>
 					
 					<p>Comme d'habitude, nous avons réalisé une vidéo afin de vous présenter les améliorations que contient cette nouvelle version.</p>
@@ -132,7 +132,7 @@ class Etendard_Welcome {
 					
 					<p>Un article a également été publié sur le blog de Thèmes de France pour revenir plus en détails sur cette version 1.011 d'Étendard.</p>
 					<p>
-						<a href="#" class="button button-primary button-large">Lire l'article sur Thèmes de France</a>
+						<a href="https://www.themesdefrance.fr/etendard-version-1-011/?utm_source=SiteClient&utm_medium=Etendard&utm_campaign=1.011" class="button button-primary button-large" target="_blank">Lire l'article sur Thèmes de France</a>
 					</p>
 	
 				</div>

@@ -27,7 +27,7 @@ require_once 'admin/Cocorico/Cocorico.php';
 require_once 'admin/widgets/social.php';
 require_once 'admin/widgets/appel-action.php';
 require_once 'admin/shortcodes.php';
-require_once 'admin/bienvenue.php'; // Coming soon
+require_once 'admin/bienvenue.php';
 
 ////////////////////////////////////
 // Etendard Setup & Activation

@@ -18,7 +18,7 @@ if (!is_tax('portfolio_categorie') && !is_post_type_archive('portfolio')){
 	$args = array(
 			'post_type'=>'portfolio',
 			'orderby'=>'date',
-			'order'=>'ASC',
+			'order'=>'DESC',
 			'posts_per_page'=> 6,
 			'paged'=>$paged
 	);
@@ -30,7 +30,7 @@ if (is_tax('portfolio_categorie')){ // Fix temporaire
 	$args = array(
 			'post_type'=>'portfolio',
 			'orderby'=>'date',
-			'order'=>'ASC',
+			'order'=>'DESC',
 			'posts_per_page'=> 6,
 			'paged'=>$paged,
 			'portfolio_categorie'=>$currentterm->slug

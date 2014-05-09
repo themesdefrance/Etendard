@@ -13,7 +13,7 @@
 	<title>
 		<?php wp_title('|', true, 'right'); ?>
 	</title>
-<!--	<link rel="shortcut icon" href="/favicon.ico?v=0">-->
+	<link rel="shortcut icon" href="/favicon.ico?v=0">
 	
 	<meta name="viewport" content="width=device-width">
 	
