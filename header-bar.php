@@ -2,7 +2,7 @@
 	<div class="wrapper">
 		<?php if(is_single()){ ?>
 		
-			<h2 class="headerbartitle"><?php echo __('Blog', 'etendard'); ?></h2>
+			<h2 class="headerbartitle"><?php echo apply_filters('etendard_headerbar_single', __('Blog', 'etendard')); ?></h2>
 			
 		<?php }else if(is_page()){ ?>
 		
@@ -10,7 +10,7 @@
 			
 		<?php }else if(get_post_type() == "portfolio"){ ?>
 
-			<h1 class="headerbartitle"><?php echo __('Portfolio', 'etendard'); ?></h1>
+			<h1 class="headerbartitle"><?php echo apply_filters('etendard_headerbar_portfolio', __('Portfolio', 'etendard')); ?></h1>
 		
 		<?php }else if(is_category()){ ?>
 		
@@ -53,7 +53,7 @@
 		
 		<?php }else{ ?>
 			
-			<h1 class="headerbartitle"><?php echo __('Blog', 'etendard'); ?></h1>
+			<h1 class="headerbartitle"><?php echo apply_filters('etendard_headerbar_single', __('Blog', 'etendard')); ?></h1>
 			
 			
 			<?php ?>

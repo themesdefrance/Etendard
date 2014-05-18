@@ -47,7 +47,7 @@ if (is_tax('portfolio_categorie')){ // Fix temporaire
 			<ul>
 				<li>
 					<a href="<?php echo etendard_portfolio_page_link(); ?>" class="<?php echo (!is_tax('portfolio_categorie')) ? 'active' : ''; ?>">
-						<?php _e('Tous', 'etendard'); ?>
+						<?php echo apply_filters('etendard_portfolio_tous', __('Tous', 'etendard')); ?>
 					</a>
 				</li>
 				<?php foreach ($terms as $term){ ?>
@@ -97,7 +97,7 @@ if (is_tax('portfolio_categorie')){ // Fix temporaire
 				<?php if(get_option('etendard_boutons_portfolio') != '0'){ ?>
 					<div class="cta-wrapper">
 						<a href="<?php the_permalink(); ?>" class="cta-button">
-							<?php _e('Découvrir le projet', 'etendard'); ?>
+							<?php apply_filters('etendard_portfolio_label', __('Découvrir le projet', 'etendard')); ?>
 						</a>
 					</div>
 				<?php } ?>
@@ -106,8 +106,8 @@ if (is_tax('portfolio_categorie')){ // Fix temporaire
 		</ul>
 		
 		<div class="pagination">
-			<?php previous_posts_link(__('Page précédente', 'etendard')); ?>
-			<?php next_posts_link(__('Page suivante', 'etendard')); ?> 
+			<?php previous_posts_link(apply_filters('etendard_pagination_precedente', __('Page précédente', 'etendard'))); ?>
+			<?php next_posts_link(apply_filters('etendard_pagination_suivante', __('Page suivante', 'etendard'))); ?> 
 		</div>
 	</div>
 </section>

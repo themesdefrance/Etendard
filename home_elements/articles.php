@@ -3,7 +3,7 @@
 <section class="blog">
 	<div class="wrapper">
 		<h2 class="center">
-			<?php _e('Derniers articles', 'etendard'); ?>
+			<?php apply_filters('etendard_home_articles', __('Derniers articles', 'etendard')); ?>
 		</h2>
 		<ul class="blog">
 			<?php while ($articles->have_posts()) : $articles->the_post(); ?>
@@ -35,7 +35,7 @@
 		</ul>
 		<div class="cta-wrapper">
 			<a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="cta-button">
-				<?php _e('Consulter les articles', 'etendard'); ?>
+				<?php echo apply_filters('etendard_home_articles_lien', __('Consulter les articles', 'etendard')); ?>
 			</a>
 		</div>
 	</div>

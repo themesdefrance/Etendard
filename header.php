@@ -37,7 +37,7 @@
 						</a>
 					<?php else: ?>
 						<a href="<?php echo home_url('/'); ?>" title="<?php echo get_bloginfo('name'); ?>" class="logotext">
-							<?php echo get_bloginfo('name'); ?>
+							<?php echo apply_filters('etendard_entete_titre', get_bloginfo('name')); ?>
 						</a>
 					<?php endif; ?>
 					

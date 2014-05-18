@@ -398,7 +398,7 @@ if (!function_exists('etendard_strip_img_sizes')){
 	//delete images width & height attributes
 	function etendard_strip_img_sizes($img){
 		$img = preg_replace("/\s(width|height)=('|\")\d+('|\")/", ' ', $img);
-		return $img;
+		return apply_filters('etendard_strip_img_sizes', $img);
 	}
 }
 add_filter('get_avatar', 'etendard_strip_img_sizes');
@@ -419,6 +419,7 @@ if (!function_exists('etendard_posts_nav')){
 		if (is_singular()) return;
 	
 		global $wp_query;
+		$output = '';
 	
 		// Stop execution if there's only 1 page
 		if($wp_query->max_num_pages <= 1) return;
@@ -440,8 +441,8 @@ if (!function_exists('etendard_posts_nav')){
 			$links[] = $paged + 1;
 		}
 		
-		$current = '<span class="current">%s</span>';
-		$linkTemplate = '<a href="%s">%s</a>';
+		$current = apply_filters('etendard_post_nav_current', '<span class="current">%s</span>');
+		$linkTemplate = apply_filters('etendard_post_nav_link', '<a href="%s">%s</a>');
 	
 		// Previous Post Link
 		if ($extremes && get_previous_posts_link()) previous_posts_link();
@@ -449,21 +450,21 @@ if (!function_exists('etendard_posts_nav')){
 		// Link to first page, plus ellipses if necessary */
 		if (!in_array(1, $links)){
 			if ($paged == 1)
-				printf($current, '1');
+				$output .= sprintf($current, '1');
 			else
-				printf($linkTemplate, esc_url(get_pagenum_link(1)), '1');
+				$output .= sprintf($linkTemplate, esc_url(get_pagenum_link(1)), '1');
 			
 			echo $separator;
-			if (!in_array(2, $links)) echo '…'.$separator;
+			if (!in_array(2, $links)) $output .= '…'.$separator;
 		}
 	
 		// Link to current page, plus 2 pages in either direction if necessary
 		sort($links);
 		foreach ((array) $links as $link){
 			if ($paged == $link)
-				printf($current, $link);
+				$output .= sprintf($current, $link);
 			else
-				printf($linkTemplate, esc_url(get_pagenum_link($link)), $link);
+				$output .= sprintf($linkTemplate, esc_url(get_pagenum_link($link)), $link);
 				
 			if ($link < $max) echo $separator;
 		}
@@ -473,10 +474,12 @@ if (!function_exists('etendard_posts_nav')){
 			if (!in_array($max-1, $links)) echo '…'.$separator;
 	
 			if ($paged == $max)
-				printf($current, $link);
+				$output .= sprintf($current, $link);
 			else
-				printf($linkTemplate, esc_url(get_pagenum_link($max)), $max);
+				$output .= sprintf($linkTemplate, esc_url(get_pagenum_link($max)), $max);
 		}
+		
+		echo apply_filters('etendard_post_nav', $output);
 	
 		// Next Post Link
 		if ($extremes && get_next_posts_link()) next_posts_link();
@@ -497,7 +500,7 @@ if (!function_exists('etendard_comment')){
 		?>
 		<li class="post pingback">
 			<p>
-				<?php _e('Pingback:', 'etendard'); ?>
+				<?php echo apply_filters('etendard_pingback', __('Pingback:', 'etendard')); ?>
 				<?php comment_author_link(); ?>
 			</p>
 		<?php
@@ -508,7 +511,7 @@ if (!function_exists('etendard_comment')){
 			<article id="comment-<?php comment_ID(); ?>" class="article comment">
 				<aside class="col-1-5">
 					<?php if ($comment->comment_approved == '0') : ?>
-						<em><?php _e('Votre commentaire est en attente de modération.', 'etendard'); ?></em>
+						<em><?php echo apply_filters('etendard_commentaire_modere', __('Votre commentaire est en attente de modération.', 'etendard')); ?></em>
 					<?php endif; ?>
 					<?php echo get_avatar($comment, 104); ?>
 				</aside>
@@ -516,7 +519,7 @@ if (!function_exists('etendard_comment')){
 				<div class="col-4-5">
 					<header class="comment-header">
 						<div class="comment-author vcard">
-							<?php printf(__('%s', 'etendard'), sprintf('<cite class="fn">%s</cite>', get_comment_author_link())); ?>
+							<?php echo apply_filters('etendard_commentaire_auteur', sprintf(__('%s', 'etendard'), sprintf('<cite class="fn">%s</cite>', get_comment_author_link()))); ?>
 						</div>
 					</header>
 		 
@@ -529,7 +532,7 @@ if (!function_exists('etendard_comment')){
 						comment_reply_link(array_merge($args, 
 							array(	'depth'=>$depth, 
 									'max_depth'=>$args['max_depth'],
-									'reply_text'=>__('Répondre', 'etendard')))); 
+									'reply_text'=>apply_filters('etendard_commentaire_repondre', __('Répondre', 'etendard'))))); 
 						?>
 					</div><!-- .reply -->
 				</div>
@@ -632,7 +635,7 @@ if (!function_exists('etendard_resize_upload')){
 			}
 		}
 		
-		return $upload_url.$imgDir.$wanted;
+		return apply_filters('etendard_resize_upload', $upload_url.$imgDir.$wanted);
 	}
 }
 
@@ -644,7 +647,7 @@ if (!function_exists('etendard_resize_upload')){
 if(!function_exists('etendard_user_styles')){
 	function etendard_user_styles(){
 		if (get_option('etendard_color')){
-			$color = get_option('etendard_color');
+			$color = apply_filters('etendard_color', get_option('etendard_color'));
 			
 			require_once 'admin/color_functions.php';
 			$hsl = etendard_RGBToHSL(etendard_HTMLToRGB($color));
@@ -652,11 +655,11 @@ if(!function_exists('etendard_user_styles')){
 				$contrast = '#333';
 			}
 			else{
-				$contrast = '#fff';
+				$contrast = apply_filters('etendard_color_contrast', '#fff');
 			}
 			
 			$hsl->lightness -= 30;
-			$complement = etendard_HSLToHTML($hsl->hue, $hsl->saturation, $hsl->lightness);
+			$complement = apply_filters('etendard_color_complement', etendard_HSLToHTML($hsl->hue, $hsl->saturation, $hsl->lightness));
 		}
 		else{ // Default color
 			$color = '#02a7c6';
