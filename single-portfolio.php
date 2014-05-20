@@ -33,7 +33,7 @@ $portfolio_custom = get_post_custom();
 					?>
 					<div class="meta">
 						<?php echo $champ; ?>:
-						<?php echo $portfolio_custom['_'.COCORICO_PREFIX.$champ][0]; ?>
+						<?php echo preg_replace('/((http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?)/', '<a href="\1">\1</a>', $portfolio_custom['_'.COCORICO_PREFIX.$champ][0]); ?>
 					</div>
 					<?php
 				}
