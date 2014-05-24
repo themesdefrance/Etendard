@@ -88,7 +88,7 @@ if (!function_exists('etendard_setup')){
 		add_image_size('etendard-portfolio-thumbnail', 301, 230, true);
 		add_image_size('etendard-service-thumbnail', 230, 230, true);
 		add_image_size('etendard-blog-thumbnail', 225, 150, true);
-		add_image_size('etendard-post-thumbnail', 620, 400, true);
+		add_image_size('etendard-post-thumbnail', 633, 400, true);
 		
 		// Load language
 		//	load_theme_textdomain('etendard', get_template_directory().'/local');
