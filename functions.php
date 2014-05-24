@@ -90,6 +90,13 @@ if (!function_exists('etendard_setup')){
 		add_image_size('etendard-blog-thumbnail', 225, 150, true);
 		add_image_size('etendard-post-thumbnail', 633, 400, true);
 		
+		add_filter('image_size_names_choose', 'etendard_tailles_images');
+		function etendard_tailles_images($sizes) {
+			$added = array('etendard-post-thumbnail'=>__('Article', 'etendard'));
+			$newsizes = array_merge($sizes, $added);
+			return $newsizes;
+		}
+		
 		// Load language
 		//	load_theme_textdomain('etendard', get_template_directory().'/local');
 		
