@@ -1,6 +1,6 @@
 <?php if(has_tag() && is_single()){ ?>
 	
-	<span class="footer-meta icon-tags">
+	<span class="footer-meta icon-tags" itemscope="keywords">
 	
 		<?php echo get_the_tag_list('',' | ',''); ?>
 	

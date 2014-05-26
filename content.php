@@ -1,4 +1,4 @@
-<article <?php post_class('article'); ?>>
+<article <?php post_class('article'); ?> itemscope itemtype="http://schema.org/Article">
 
 	<header class="header">
 	
@@ -27,7 +27,7 @@
 		
 			<?php if(!is_page_template('template_home.php')): ?>
 			
-				<h1 class="header-title">
+				<h1 class="header-title" itemprop="name">
 				
 					<?php the_title(); ?>
 					
@@ -37,7 +37,7 @@
 			
 		<?php elseif(!is_page()): ?>
 		
-			<h2 class="header-title">
+			<h2 class="header-title" itemprop="name">
 			
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 				
@@ -50,7 +50,7 @@
 		
 	</header>
 	
-	<div class="content">
+	<div class="content" itemprop="articleBody">
 		
 		<?php get_template_part( 'content', 'body' ); ?>
 
