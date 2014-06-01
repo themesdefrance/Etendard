@@ -8,7 +8,7 @@ $portfolio_custom = get_post_custom();
 ?>
 <?php get_header(); ?>
 <?php while (have_posts()) : the_post();?>
-<section class="realisation article">
+<section class="realisation article" itemscope itemtype="http://schema.org/CreativeWork">
 	
 	<?php 	if(has_post_format('video'))
 				get_template_part('portfolio', 'video');
@@ -17,7 +17,7 @@ $portfolio_custom = get_post_custom();
 	?>
 	
 	<div class="wrapper">
-		<h1 class="section-title">
+		<h1 class="section-title" itemprop="name">
 			<?php the_title(); ?>
 		</h1>
 	</div>
@@ -39,10 +39,10 @@ $portfolio_custom = get_post_custom();
 				}
 				?>
 			</div>
-			<div class="col-2-3 content">
+			<div class="col-2-3 content" itemprop="text">
 
 			<?php }else{ ?>
-				<div class="col-1-1 content">
+				<div class="col-1-1 content" itemprop="text">
 			<?php } ?>
 				<?php the_content(); ?>
 			</div>
@@ -54,17 +54,17 @@ $portfolio_custom = get_post_custom();
 <section class="grid">
 	<div class="wrapper">
 		<ul class="temoignages">
-			<li class="temoignage">
+			<li class="temoignage" itemscope itemtype="http://schema.org/Review">
 			
 				<?php if ($temoin_portrait[0]): ?>
 				<div class="temoignage-photo-wrapper">
-					<img src="<?php echo etendard_resize_upload($temoin_portrait[0], 160, 110); ?>" class="temoignage-photo" />
+					<img src="<?php echo etendard_resize_upload($temoin_portrait[0], 160, 110); ?>" class="temoignage-photo" itemprop="image" />
 				</div>
 				<?php endif; ?>
 				
-				<div class="temoignage-content">
+				<div class="temoignage-content" itemprop="text">
 					<?php echo $temoin_texte[0]; ?>
-					<span class="temoignage-name">
+					<span class="temoignage-name" itemprop="author">
 					<?php echo $temoin_nom[0]; ?>
 					</span>
 				</div>
