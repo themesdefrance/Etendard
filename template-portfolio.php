@@ -97,7 +97,7 @@ if (is_tax('portfolio_categorie')){ // Fix temporaire
 				<?php if(get_option('etendard_boutons_portfolio') != '0'){ ?>
 					<div class="cta-wrapper">
 						<a href="<?php the_permalink(); ?>" class="cta-button">
-							<?php apply_filters('etendard_portfolio_label', __('Découvrir le projet', 'etendard')); ?>
+							<?php apply_filters('etendard_portfolio_label', _e('Decouvrir le projet', 'etendard')); ?>
 						</a>
 					</div>
 				<?php } ?>

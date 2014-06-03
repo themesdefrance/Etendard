@@ -64,7 +64,7 @@ $portfolio_custom = get_post_custom();
 				
 				<div class="temoignage-content" itemprop="text">
 					<?php echo $temoin_texte[0]; ?>
-					<span class="temoignage-name" itemprop="author">
+					<span class="temoignage-name" itemprop="author" <?php if (!$temoin_portrait[0])echo 'style="padding-left:0;"'; ?>>
 					<?php echo $temoin_nom[0]; ?>
 					</span>
 				</div>
