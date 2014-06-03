@@ -526,8 +526,11 @@ if (!function_exists('etendard_comment')){
 				<div class="col-4-5">
 					<header class="comment-header">
 						<div class="comment-author vcard">
-							<?php echo apply_filters('etendard_commentaire_auteur', sprintf(__('%s', 'etendard'), sprintf('<cite class="fn">%s</cite>', get_comment_author_link()))); ?>
+							<?php echo apply_filters('etendard_commentaire_auteur', sprintf(__('%s', 'etendard'), sprintf(__('<cite class="fn">%s</cite>', 'etendard'), get_comment_author_link()))); ?>
 						</div>
+						<span class="comment-date">
+							<?php echo apply_filters('etendard_commentaire_date', sprintf(__('Publié le %s à %s', 'etendard'),get_comment_date(),get_comment_time('H:i'))); ?>
+						</span>
 					</header>
 		 
 					<div class="content">
