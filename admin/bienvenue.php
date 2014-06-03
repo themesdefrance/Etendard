@@ -255,7 +255,7 @@ class Etendard_Welcome {
 		?>
 		<div class="wrap about-wrap">
 			<h1><?php printf( __( 'Bienvenue sur Étendard %s', 'etendard' ), $display_version ); ?></h1>
-			<div class="about-text"><?php printf( __( 'Merci d\'avoir installé Étendard, parcourez le contenu de cette page pour découvrir comme mettre votre site en place.', 'etendard' ), $display_version ); ?></div>
+			<div class="about-text"><?php printf( __( 'Merci d\'avoir installé Étendard, parcourez le contenu de cette page pour découvrir comment mettre votre site en place.', 'etendard' ), $display_version ); ?></div>
 			<div class="etendard-badge"><?php printf( __( 'Version %s', 'etendard' ), $display_version ); ?></div>
 
 			<?php $this->tabs(); ?>
