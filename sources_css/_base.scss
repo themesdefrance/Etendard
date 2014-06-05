@@ -39,6 +39,27 @@ a{
 	}
 }
 
+input[type='text'],input[type='email'], input[type='url'], input[type='tel'], input[type='number'], input[type='date'], textarea, select {
+	display: inline-block;
+	padding: 10px 14px;
+	border: 1px solid transparent;
+	background: #f1f2f2;
+	color: #969696;
+}
+
+input[type='submit']{
+	@extend %bouton-etendard;
+	border:0;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+textarea{
+	width: 90%;
+	min-height: 200px;
+}
+
 @mixin etendard-commun($hauteur: 16px){
 	content: "";
 	position: absolute;

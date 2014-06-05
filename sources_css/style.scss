@@ -1018,33 +1018,11 @@ section.portfolio .pagination a{
 	display:block;
 	margin-bottom:2px;
 }
-.contact-form input[type="text"],
-.contact-form input[type="email"]{
+.contact-form input[type='text'], .contact-form input[type='email'], .contact-form input[type='url'], .contact-form input[type='tel']{
 	width:100%;
-	max-width:400px;
+	max-width:300px;
 }
-.contact-form textarea{
-	width:100%;
-	min-height:200px;
-}
-.contact-form .field input,
-.contact-form .field textarea{
-	border: 1px solid #ccc;
-	padding: 6px 4px;
-	
-	&:focus{
-		border: 1px solid #818181;
-	}
-}
-.contact-form .submit input{
-	border:none;
-	color:#fff;
-	padding:6px 14px;
-	-webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in;
-}
+
 
 ////////////////////////////////////
 // Widgets Footer
@@ -1408,7 +1386,7 @@ form.search-form input.search-submit{
 	margin-bottom:0;
 }
 
-.message.info{
+.message.info, div.wpcf7-mail-sent-ng{
 	color:#3a87ad;
 	background: #d9edf7;
 	border:2px solid #bce8f1;
@@ -1418,7 +1396,7 @@ form.search-form input.search-submit{
 	}
 }
 
-.message.alerte{
+.message.alerte, div.wpcf7-validation-errors{
 	color:#c09853;
 	background: #fcf8e3;
 	border:2px solid #fbeed5;
@@ -1428,7 +1406,7 @@ form.search-form input.search-submit{
 	}
 }
 
-.message.erreur{
+.message.erreur, div.wpcf7-spam-blocked{
 	color:#b94a48;
 	background: #f2dede;
 	border:2px solid #eed3d7;
@@ -1438,7 +1416,7 @@ form.search-form input.search-submit{
 	}
 }
 
-.message.succes{
+.message.succes, div.wpcf7-mail-sent-ok{
 	color:#468847;
 	background: #dff0d8;
 	border:2px solid #d6e9c6;
@@ -1520,9 +1498,27 @@ h3.toggle a{
 
 .jetpack_subscription_widget #subscribe-submit{
 	text-align:center;
-	& input[type="submit"]{
-		@extend %bouton-etendard;
-		border:0;
-	}
 }
-	
+
+////////////////////////////////////////////////////////////
+// Contact Form 7
+////////////////////////////////////////////////////////////
+
+input.wpcf7-file{
+	display: inline-block;
+	padding: 10px 0;
+}
+
+.wpcf7 input[type='text'], .wpcf7 input[type='email'], .wpcf7 input[type='url'], .wpcf7 input[type='tel']{
+	width:100%;
+	max-width:300px;
+}
+
+span.wpcf7-list-item.first {
+	margin-left: 0;
+}
+
+div.wpcf7-response-output {
+	padding: 20px;
+	margin: 2em 0 1em;
+}
