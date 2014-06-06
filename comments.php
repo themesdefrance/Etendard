@@ -45,7 +45,7 @@
 	endif; ?>
     <?php if (!comments_open() && get_comments_number() != '0' && post_type_supports(get_post_type(), 'comments')): ?>
 		<p class="nocomments">
-			<?php echo apply_filters('etendard_commentaire_clos', __('Les commentaires sont clos.', 'etendard')); ?>
+			<?php echo apply_filters('etendard_commentaires_clos', __('Les commentaires sont clos.', 'etendard')); ?>
 		</p>
 	<?php endif; ?>
 </div><!-- #comments .comments-area -->

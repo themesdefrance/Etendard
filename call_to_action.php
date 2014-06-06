@@ -30,7 +30,7 @@ else if (get_post_type() === 'portfolio'){
 				<?php if ($bouton): ?>
 					<?php echo esc_html($bouton); ?>
 				<?php else: ?>
-					<?php apply_filters('etendard_cta_button', __('Cliquez ici', 'etendard')); ?>
+					<?php echo apply_filters('etendard_cta_button', __('Cliquez ici', 'etendard')); ?>
 				<?php endif; ?>
 			</a>
 		</div>
