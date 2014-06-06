@@ -672,8 +672,22 @@ ul.articles .article{
 	max-height:150px;
 	overflow:hidden;
 	margin-bottom:5px;
-
 }
+
+.article.teaser.format-quote .post-quote, .article.teaser.format-link .post-link{
+	padding:30px 10px;
+}
+
+.article.teaser.format-quote .post-quote blockquote{
+	font-size: 18px;
+}
+
+.article.teaser.format-quote .post-quote .post-quote-author{
+	font-size: 16px;
+}
+
+
+
 
 .article.teaser .content > p{
 	font-size: 14px;
@@ -869,6 +883,7 @@ article.format-quote .post-quote{
 		font-size:20px;
 	}
 }
+
 
 
 

@@ -3,25 +3,54 @@
 <section class="blog">
 	<div class="wrapper">
 		<h2 class="center">
-			<?php apply_filters('etendard_home_articles', __('Derniers articles', 'etendard')); ?>
+			<?php echo apply_filters('etendard_home_articles', __('Derniers articles', 'etendard')); ?>
 		</h2>
 		<ul class="blog">
 			<?php while ($articles->have_posts()) : $articles->the_post(); ?>
 			<li class="col-1-4">
-				<article class="article teaser">
+				<article <?php post_class('article teaser'); ?>>
 					<header class="header">
-						<?php if (has_post_thumbnail() && !post_password_required()): ?>
-						<div class="entry-thumbnail">
-							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-								<?php the_post_thumbnail('etendard-blog-thumbnail'); ?>
-							</a>
-						</div>
-						<?php endif; ?>
-						<h3 class="header-title">
-							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-								<?php the_title(); ?>
-							</a>
-						</h3>
+						<?php $format = get_post_format();
+					
+							switch($format){
+									case 'video':
+										$video_link = get_post_meta($post->ID, '_etendard_video_meta', true); ?>
+										<div class="entry-thumbnail post-video">
+											<?php echo wp_oembed_get( $video_link, array( 'width' => 225, 'height' => 150) ); ?>
+										</div><?php
+									break;
+									case 'quote':
+										$quote = get_post_meta($post->ID, '_etendard_quote_meta', true);
+										$author_quote = get_post_meta($post->ID, '_etendard_quote_author_meta', true); ?>
+										<div class="entry-thumbnail post-quote">
+											<blockquote><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">“<?php echo $quote; ?>”</a></blockquote>
+											<span class="post-quote-author"><?php echo $author_quote; ?></span>
+										</div><?php
+									break;
+									case 'link':
+										$link = get_post_meta($post->ID, '_etendard_link_meta', true); ?>
+										<div class="entry-thumbnail post-link">
+											<h2 class="header-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+											<span class="post-link-url"><a href="<?php echo $link; ?>" title="<?php the_title(); ?>" class="icon-newtab" target="_blank" rel="bookmark"></a></span>
+										</div><?php
+									break;
+									default:
+										if (has_post_thumbnail() && !post_password_required()): ?>
+											<div class="entry-thumbnail">
+												<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+													<?php the_post_thumbnail('etendard-blog-thumbnail'); ?>
+												</a>
+											</div>
+										<?php endif;
+							}
+							
+						if($format=='' || $format=='video'){ ?>
+							<h3 class="header-title">
+								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+									<?php the_title(); ?>
+								</a>
+							</h3>
+						<?php } ?>
 					</header>
 					<div class="content">
 						<?php the_excerpt(); ?>
