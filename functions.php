@@ -715,12 +715,11 @@ if(!function_exists('etendard_user_styles')){
 				.embedcta .button-wrapper .cta-button,
 				.cta-wrapper .cta-button,
 				.article .content a.bouton,
-				.contact-form .submit input,
+				input[type='submit'],
 				a.bouton.lirelasuite,
 				.headerbar,
 				#remonter,
-				section.portfolio .pagination a,
-				.jetpack_subscription_widget #subscribe-submit input[type="submit"]<?php // Jetpack ?>{
+				section.portfolio .pagination a{
 					background: <?php echo $color; ?> !important;
 					color: <?php echo $contrast; ?> !important;
 				}
@@ -752,7 +751,7 @@ if(!function_exists('etendard_user_styles')){
 				a.bouton.lirelasuite:hover,
 				#remonter:hover,
 				section.portfolio .pagination a:hover,
-				.jetpack_subscription_widget #subscribe-submit input[type="submit"]:hover{
+				input[type='submit']:hover{
 					background:<?php echo $complement; ?> !important;
 				}
 				form.search-form .search-submit-wrapper:hover:before,
