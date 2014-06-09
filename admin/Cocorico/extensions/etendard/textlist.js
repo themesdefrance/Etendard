@@ -16,6 +16,10 @@
 					$(this).parent().remove();
 				}
 			});
+			
+			$list.on('click', '.etendard-text-list-delete', function(){
+				$(this).parent().remove();
+			});
 		});
 	});
 })(jQuery);

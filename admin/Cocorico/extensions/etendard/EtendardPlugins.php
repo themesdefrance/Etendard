@@ -183,7 +183,7 @@ function etendardTextList($component){
 	foreach ($value as $field){
 		if (trim($field) === '') continue;
 		
-		$output .= '<li><input type="text" class="etendard-text-list" name="'.$component->getName().'[]" value="'.$field.'" /></li>';
+		$output .= '<li><input type="text" class="etendard-text-list" name="'.$component->getName().'[]" value="'.$field.'" /><a href="#" class="etendard-text-list-delete">'.__('supprimer', 'etendard').'</a></li>';
 	}
 	$output .= '<li><input type="text" class="etendard-text-list" name="'.$component->getName().'[]" /></li>';
 	$output .= '</ul>';
