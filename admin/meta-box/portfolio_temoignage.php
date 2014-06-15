@@ -4,7 +4,7 @@ etendard_meta_migration('_etendard_portfolio_temoin_nom', 'etendard_portfolio_te
 etendard_meta_migration('_etendard_portfolio_temoin_texte', 'etendard_portfolio_temoin_texte');
 etendard_meta_migration('_etendard_portfolio_temoin_portrait', 'etendard_portfolio_temoin_portrait');
 
-$form = new Cocorico(false);
+$form = new Cocorico(ETENDARD_COCORICO_PREFIX, false);
 $form->startForm();
 
 $form->setting(array('type'=>'text',

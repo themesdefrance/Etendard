@@ -6,7 +6,7 @@ etendard_meta_migration('_etendard_URL', 'etendard_portfolio_url');
 $fields = get_option('etendard_portfolio_fields');
 if (!$fields) $fields = array();
 
-$form = new Cocorico(false);
+$form = new Cocorico(ETENDARD_COCORICO_PREFIX, false);
 $form->startForm();
 
 foreach ($fields as $field){

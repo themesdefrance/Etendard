@@ -39,8 +39,8 @@ function cocoricoLinkComponent($component, $content, $options=array()){
 CocoDictionary::register(CocoDictionary::COMPONENT, 'link', 'cocoricoLinkComponent');
 
 //nonce
-function cocoricoNonceComponent($component, $action){
-	return wp_nonce_field($action, $component->getName(), true, false);
+function cocoricoNonceComponent($component, $action, $referer = true){
+	return wp_nonce_field($action, $component->getName(), $referer, false);
 }
 CocoDictionary::register(CocoDictionary::COMPONENT, 'nonce', 'cocoricoNonceComponent');
 
@@ -140,6 +140,24 @@ function cocoricoURLComponent($component, $options=array()){
 }
 CocoDictionary::register(CocoDictionary::COMPONENT, 'url', 'cocoricoURLComponent');
 
+//email input
+function cocoricoNumberComponent($component, $options=array()){
+	$options = array_merge(array(
+		'type'=>'number',
+	), $options);
+	return cocoricoInputComponent($component, $options);
+}
+CocoDictionary::register(CocoDictionary::COMPONENT, 'number', 'cocoricoNumberComponent');
+
+//number input
+function cocoricoEmailComponent($component, $options=array()){
+	$options = array_merge(array(
+		'type'=>'email',
+	), $options);
+	return cocoricoInputComponent($component, $options);
+}
+CocoDictionary::register(CocoDictionary::COMPONENT, 'email', 'cocoricoEmailComponent');
+
 //boolean input
 function cocoricoBooleanComponent($component, $options=array()){
 	$name = $component->getName();
@@ -159,7 +177,7 @@ function cocoricoSubmitComponent($component, $options=array()){
 	$options = array_merge(array(
 		'type'=>'submit',
 		'class'=>array('button', 'button-primary'),
-		'default'=>'Save'
+		'default'=>__('Save all changes')
 	), $options);
 	return cocoricoInputComponent($component, $options);
 }

@@ -46,7 +46,7 @@ class CocoPostMetaStore implements CocoStoreInterface{
 	
 	public function get($key){
 		$return = get_post_meta(CocoPostMetaStore::$postId, $this->honorPrefix($key));
-		if (is_array($return) && count($return) === 1) return array_shift($return);
+		if (count($return) === 1) return array_shift($return);
 		else return $return;
 	}
 	

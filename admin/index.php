@@ -1,5 +1,5 @@
 <?php
-$form = new Cocorico();
+$form = new Cocorico(ETENDARD_COCORICO_PREFIX);
 
 $form->startWrapper('titre');
 $form->component('raw', __('Options Étendard', 'etendard'));
@@ -15,7 +15,7 @@ $form->startWrapper('tab', 'general');
 $form->startForm();
 
 $form->setting(array('type'=>'text',
-					 'name'=>substr(EDD_SL_LICENSE_KEY, strlen(COCORICO_PREFIX)),
+					 'name'=>substr(EDD_SL_LICENSE_KEY, strlen(ETENDARD_COCORICO_PREFIX)),
 					 'label'=>__("Licence", 'etendard'),
 					 'description'=>__("Entrez la licence pour qu'Étendard puisse recevoir les mises à jour. Vous pourrez la trouver dans l'email que nous vous avons envoyé suite à votre commande.", 'etendard')));
 

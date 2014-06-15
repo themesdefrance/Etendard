@@ -7,14 +7,14 @@ class Cocorico{
 	protected $wrapperArgsStack = array();
 	protected $store = null;
 	
-	public function __construct($autoForm=true, $autoNonce=true, $useStore='auto'){
+	public function __construct($prefix='', $autoForm=true, $autoNonce=true, $useStore='auto'){
 		$this->autoForm = $autoForm;
 		
 		if ($useStore === 'auto') $storeClass = (CocoPostMetaStore::isPostContext()) ? 'CocoPostMetaStore' : 'CocoOptionStore';
 		else $storeClass = $useStore;
 		//@TODO : check if custom store implements store interface
 		$this->store = new $storeClass();
-		$this->store->setPrefix(COCORICO_PREFIX);
+		$this->store->setPrefix($prefix);
 		
 		if ($this->autoForm) $this->startWrapper('form');
 		if ($autoNonce) $this->nonce();

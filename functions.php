@@ -17,7 +17,7 @@ if(!class_exists('EDD_SL_Theme_Updater')){
 // Cocorico Framework
 ////////////////////////////////////
 
-define('COCORICO_PREFIX', 'etendard_');
+define('ETENDARD_COCORICO_PREFIX', 'etendard_');
 require_once 'admin/Cocorico/Cocorico.php';
 
 ////////////////////////////////////

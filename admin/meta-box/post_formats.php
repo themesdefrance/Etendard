@@ -53,7 +53,7 @@ add_action('add_meta_boxes_portfolio', 'etendard_add_portfolio_meta_boxes');
 
 function etendard_link_callback( $post ) {
 
-	$form = new Cocorico(false);
+	$form = new Cocorico(ETENDARD_COCORICO_PREFIX, false);
 	$form->startForm();
 	
 	$form->setting(array('type'=>'url',
@@ -69,7 +69,7 @@ function etendard_link_callback( $post ) {
 
 function etendard_quote_callback( $post ) {
 	
-	$form = new Cocorico(false);
+	$form = new Cocorico(ETENDARD_COCORICO_PREFIX, false);
 	$form->startForm();
 	
 	$form->setting(array('type'=>'text',
@@ -93,7 +93,7 @@ function etendard_quote_callback( $post ) {
 
 function etendard_video_callback( $post ) {
 
-	$form = new Cocorico(false);
+	$form = new Cocorico(ETENDARD_COCORICO_PREFIX, false);
 	$form->startForm();
 	
 	$form->setting(array('type'=>'url',
