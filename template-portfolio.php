@@ -24,21 +24,10 @@ if (!is_tax('portfolio_categorie') && !is_post_type_archive('portfolio')){
 	);
 	$wp_query = new WP_Query($args);
 }
-
-if (is_tax('portfolio_categorie')){ // Fix temporaire
-	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-	$args = array(
-			'post_type'=>'portfolio',
-			'orderby'=>'date',
-			'order'=>'DESC',
-			'posts_per_page'=> apply_filters('etendard_portfolio_pagination', 6),
-			'paged'=>$paged,
-			'portfolio_categorie'=>$currentterm->slug
-	);
-	$wp_query = new WP_Query($args);
+else if (is_tax('portfolio_categorie')){
+	$wp_query->set('post_type', 'portfolio');
+	$wp_query->get_posts();
 }
-
-
 ?>
 <section class="portfolio">
 	<div class="wrapper">
