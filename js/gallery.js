@@ -8,17 +8,6 @@ jQuery(function($){
 			$(this).attr('title', this.title);
 		}).fancybox();
 	});
-	
-	$('article.post.type-post, article.page.type-page, article.type-service, .article .content').find('a > img').each(function(){
-		if($(this).parent().attr('title')== undefined){
-			if($(this).attr('title') != undefined){
-				$(this).parent().attr('title', $(this).attr('title'));
-			}else{
-				$(this).parent().attr('title', $(this).attr('alt'));
-			}
-		}
-		$(this).parent().fancybox();
-	});
 
 });
 
