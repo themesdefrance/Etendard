@@ -130,9 +130,9 @@ class Etendard_Welcome {
 					
 					<p>Nous en profitons pour remercier toutes les personnes qui nous ont apporté des suggestions et permis de résoudre des bugs, vous allez pouvoir profiter de tout cela :)</p>
 					
-					<p>Un article a également été publié sur le blog de Thèmes de France pour revenir plus en détails sur cette version 1.011 d'Étendard.</p>
+					<p>Un article a également été publié sur le blog de Thèmes de France pour revenir plus en détails sur cette version 1.012 d'Étendard.</p>
 					<p>
-						<a href="https://www.themesdefrance.fr/etendard-version-1-011/?utm_source=SiteClient&utm_medium=Etendard&utm_campaign=1.011" class="button button-primary button-large" target="_blank">Lire l'article sur Thèmes de France</a>
+						<a href="https://www.themesdefrance.fr/etendard-1-012-cocorico-social/?utm_source=SiteClient&utm_medium=Etendard&utm_campaign=1.012" class="button button-primary button-large" target="_blank">Lire l'article sur Thèmes de France</a>
 					</p>
 	
 				</div>
@@ -142,41 +142,36 @@ class Etendard_Welcome {
 			
 			<div class="changelog">
 			
-			<h2 class="about-headline-callout">Les 3 améliorations majeures d'Étendard 1.011</h2>
+			<h2 class="about-headline-callout">Les 3 améliorations majeures d'Étendard 1.012</h2>
 			
 				<div class="feature-section col three-col">
 
 					<div class="col-1">
 					
-						<img src="<?php echo get_template_directory_uri() . '/admin/img/formats-articles.jpg'; ?>" alt="Formats articles" />
+						<img src="<?php echo get_template_directory_uri() . '/admin/img/contact-form-7.jpg'; ?>" alt="Formats articles" />
 						
-						<h4>Publiez des articles au format vidéo, citation et lien</h4>
+						<h4>Optimisation pour Contact Form 7</h4>
 						
-						<p>Cette fonctionnalité nous a été beaucoup demandé, c'est désormais chose faite. Il est désormais possible d'associer une vidéo Youtube, Dailymotion ou Vimeo aux articles. Les articles de types "lien" et "citation" font également leur apparition.</p>
-						
-						<p>Le portfolio pourra lui aussi avoir un format "vidéo" si vous le désirez.</p>
+						<p>Si vous avez besoin de plus de champs sur la page de contact proposée par Étendard, nous vous recommandons d'utiliser le célèbre plugin Contact Form 7.</p><p>Tous les éléments de formulaires ont été optimisés pour s'intégrer au mieux avec Étendard.</p>
 					</div>
 					
 					<div class="col-2">
 					
-						<img src="<?php echo get_template_directory_uri() . '/admin/img/infos-complementaires.jpg'; ?>" alt="Formats articles" />
+						<img src="<?php echo get_template_directory_uri() . '/admin/img/jetpack.jpg'; ?>" alt="Formats articles" />
 						
-						<h4>Enrichissez les éléments portfolio</h4>
+						<h4>Optimisation pour JetPack</h4>
 						
-						<p>Auparavant, deux champs étaient disponibles pour mieux décrire les éléments portfolio (client et site). À partir de maintenant, vous pouvez définir autant d'informations complémentaires que votre site a besoin.</p>
-						
-						<p>Vous n'en avez pas besoin ? Supprimez simplement les champs dans l'onglet portfolio des options d'Étendard.</p>
+						<p>JetPack est un plugin qui propose pas mal de choses créé par l'équipe de WordPress.</p><p>Étendard intègre maintenant mieux les widgets proposés par Jetpack (le formulaire d'abonnement aux articles en fait partie).</p>
 					</div>
 					
 					<div class="col-3 last-feature">
 					
-						<img src="<?php echo get_template_directory_uri() . '/admin/img/titre-sous-titre.jpg'; ?>" alt="Formats articles" />
+						<img src="<?php echo get_template_directory_uri() . '/admin/img/filtres.jpg'; ?>" alt="Formats articles" />
 						
-						<h4>Définissez un titre et un sous-titre plus facilement</h4>
+						<h4>Une vingtaine de filtres ont été ajoutés</h4>
 						
-						<p>Dans les versions précédentes, le titre et le sous-titre de la page d'accueil utilisaient le nom et la description de votre site. Pour modifier ces textes, vous deviez donc changer le nom de votre site, ce qui n'était pas pratique.</p>
+						<p>Plusieurs utilisateurs étaient désireux de personnaliser plus finement différents éléments d'Étendard.</p> <p>Afin de ne pas surcharger l'administration nous avons ajouté plusieurs filtres pour permettre une meilleure personnalisation. <a href="https://www.themesdefrance.fr/doc/etendard-filtres/" target="_blank">Cliquez ici</a> pour les découvrir en intégralité.</p>
 						
-						<p>Avec cette nouvelle version, vous pourrez changer le texte d'accueil sans changer le nom de votre site.</p>
 					</div>
 				</div>
 			</div>
@@ -191,30 +186,28 @@ class Etendard_Welcome {
 
 					<div class="col-1">
 						
-						<h4>Les vidéos et autres contenus externes s'affichent correctement</h4>
+						<h4>Les balises schema.org ont été ajoutées</h4>
 						
-						<p>Un bug CSS faisait mal s'afficher les insertions de contenus externes comme les vidéos Youtube, les diaporamas Slideshare et les documents Google Docs. Avec cette nouvelle version, c'est de l'histoire ancienne.</p>
+						<p>Derrière ce nom étrange se cache une simple optimisation du code d'Étendard pour <strong>améliorer le référencement</strong> de votre site.</p>
 						
-						<p class="etendard-merci">Merci à Stéphane et Ling-en pour l'info.</p>
 					</div>
 					
 					<div class="col-2">
 						
-						<h4>Le bouton d'ajout de shortcodes s'affiche partout</h4>
+						<h4>La date des commentaires est désormais affichée</h4>
 						
-						<p>Il faut avouer qu'il est bien plus pratique de passer par le bouton pour ajouter des shortcodes dans vos publications. Désormais, les éléments de portfolio et les services le proposent pour vous faciliter la vie.</p>
+						<p>Auparavant, la date de publication des commentaires n'était pas affichée. C'est désormais de l'histoire ancienne.</p>
 						
-						<p class="etendard-merci">Merci à Marc d'avoir fait remonter le problème.</p>
+						<p class="etendard-merci">Merci à Julie d'avoir suggéré cette amélioration.</p>
 					</div>
 					
 					<div class="col-3 last-feature">
 						
-						<h4>Une couleur secondaire a été introduite</h4>
+						<h4>Les shortcodes ont été supprimés des extraits</h4>
 						
-						<p>Pour donner un peu plus de dynamisme, nous avons ajouté une seconde couleur à Étendard.</p>
+						<p>Dans les versions précédentes, si vous insériez des shortcodes au début de vos articles, il figuraient toujours dans l'extrait généré par WordPress. Étendard possède maintenant des extraits doté uniquement de texte.</p>
 						
-						<p>Rassurez-vous vous n'avez rien à faire, Étendard la créera automatiquement afin qu'elle s'accorde au mieux avec la couleur principale.</p>
-						
+						<p class="etendard-merci">Merci à Esther d'avoir fait remonter le problème.</p>
 					</div>
 				</div>
 			</div>
