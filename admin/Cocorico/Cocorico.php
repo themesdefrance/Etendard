@@ -27,7 +27,13 @@ if (!defined('COCORICO_PATH')){
 
 			wp_enqueue_style('wp-color-picker');
 			wp_enqueue_script('wp-color-picker');
-
+			
+			$path = get_template_directory_uri() . '/admin/Cocorico/extensions/etendard/admin-style.css';
+			var_dump($path);
+			//wp_register_style( 'etendard_custom_admin_css', COCORICO_URI . '/extensions/etendard/admin-style.css', false );
+			wp_register_style( 'etendard_custom_admin_css', get_template_directory_uri() . '/admin/Cocorico/extensions/etendard/admin-style.css', false );
+			wp_enqueue_style( 'etendard_custom_admin_css' );
+			
 			wp_enqueue_media();
 		}
 	}
