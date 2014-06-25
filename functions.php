@@ -851,7 +851,7 @@ if (!function_exists('etendard_admin_enqueue')){
 		wp_enqueue_style( 'etendard_custom_admin_css' );
 	}
 }
-add_action('cocorico_enqueue', 'etendard_admin_enqueue');
+add_action('admin_enqueue_scripts', 'etendard_admin_enqueue');
 
 ////////////////////////////////////
 // TinyMCE 4 Shortcodes Menu Button
