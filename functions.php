@@ -842,6 +842,18 @@ if(!function_exists('etendard_admin_notice')){
 add_action('admin_notices', 'etendard_admin_notice');
 
 ////////////////////////////////////
+// Complement cocorico
+////////////////////////////////////
+if (!function_exists('etendard_admin_enqueue')){
+	function etendard_admin_enqueue($uri){
+		define('ETENDARD_COCO_URI', get_template_directory_uri().'/admin/Cocorico');
+		wp_register_style( 'etendard_custom_admin_css', ETENDARD_COCO_URI.'/extensions/etendard/admin-style.css', false );
+		wp_enqueue_style( 'etendard_custom_admin_css' );
+	}
+}
+add_action('cocorico_enqueue', 'etendard_admin_enqueue');
+
+////////////////////////////////////
 // TinyMCE 4 Shortcodes Menu Button
 ////////////////////////////////////
 

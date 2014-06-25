@@ -95,7 +95,7 @@ function etendardDiaporamaShorthand($cocorico, $name){
 		'value'=>__('Ajouter', 'etendard')
 	));
 	
-	wp_register_script('etendard_cocorico', COCORICO_URI.'/extensions/etendard/etendard.js', array('jquery'), '1', true);
+	wp_register_script('etendard_cocorico', ETENDARD_COCO_URI.'/extensions/etendard/etendard.js', array('jquery'), '1', true);
 	wp_enqueue_script('etendard_cocorico');
 }
 CocoDictionary::register(CocoDictionary::SHORTHAND, 'diaporama', 'etendardDiaporamaShorthand');
@@ -161,11 +161,10 @@ function etendardOrdreShorthand($cocorico, $name, $label, $checkboxes){
 	$cocorico->endWrapper('tr');
 	
 	//wp_register_script('etendard_slip', COCORICO_URI.'/extensions/etendard/slip.js', array(), '1', true);
-	wp_register_script('etendard_slip', get_template_directory_uri() . '/admin/Cocorico/extensions/etendard/slip.js', array(), '1', true);
+	wp_register_script('etendard_slip', ETENDARD_COCO_URI.'/extensions/etendard/slip.js', array(), '1', true);
 	wp_enqueue_script('etendard_slip');
 	
-	//wp_register_script('etendard_ordre', COCORICO_URI.'/extensions/etendard/ordre.js', array('jquery'), '1', true);
-	wp_register_script('etendard_ordre', get_template_directory_uri() . '/admin/Cocorico/extensions/etendard/ordre.js', array('jquery'), '1', true);
+	wp_register_script('etendard_ordre',ETENDARD_COCO_URI.'/extensions/etendard/ordre.js', array('jquery'), '1', true);
 	wp_enqueue_script('etendard_ordre');
 }
 CocoDictionary::register(CocoDictionary::SHORTHAND, 'ordre', 'etendardOrdreShorthand');
@@ -191,8 +190,7 @@ function etendardTextList($component){
 	$output .= '<li><input type="text" class="etendard-text-list" name="'.$component->getName().'[]" /></li>';
 	$output .= '</ul>';
 	
-	//wp_register_script('etendard_text_list', COCORICO_URI.'/extensions/etendard/textlist.js', array('jquery'), '1', true);
-	wp_register_script('etendard_text_list', get_template_directory_uri() . '/admin/Cocorico/extensions/etendard/textlist.js', array('jquery'), '1', true);
+	wp_register_script('etendard_text_list', ETENDARD_COCO_URI.'/extensions/etendard/textlist.js', array('jquery'), '1', true);
 	wp_enqueue_script('etendard_text_list');
 	
 	return $output;
