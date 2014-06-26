@@ -123,7 +123,7 @@ class Etendard_Welcome {
 				<div class="feature-section">
 
 					<div class="etendard-video">
-						<iframe width="550" height="309" src="//www.youtube.com/embed/NE0Un832ipk?rel=0" frameborder="0" allowfullscreen></iframe>
+						<iframe width="550" height="309" src="//www.youtube.com/embed/ngLS6vokwfA?rel=0" frameborder="0" allowfullscreen></iframe>
 					</div>
 					
 					<p>Comme d'habitude, nous avons réalisé une vidéo afin de vous présenter les améliorations que contient cette nouvelle version.</p>
