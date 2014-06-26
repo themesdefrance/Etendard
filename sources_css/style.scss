@@ -74,7 +74,7 @@ body.admin-bar .main-header.sticky{
 	display: inline-block;
 	font-size: 28px;
 	color: #011f2c;
-	font-family:"Sanchez",Georgia,Trebuchet,Helvetica,Arial;
+	font-family:$heading-font;
 	
 	&:hover{
 		text-decoration:none;
