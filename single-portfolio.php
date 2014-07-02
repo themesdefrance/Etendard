@@ -29,11 +29,11 @@ $portfolio_custom = get_post_custom();
 		
 			<div class="col-1-3 meta">
 				<?php foreach ($champs_portfolio as $champ){
-					if (trim($champ) === '' || !array_key_exists('_'.COCORICO_PREFIX.$champ, $portfolio_custom)) continue;
+					if (trim($champ) === '' || !array_key_exists('_'.ETENDARD_COCORICO_PREFIX.$champ, $portfolio_custom)) continue;
 					?>
 					<div class="meta">
 						<?php echo $champ; ?>:
-						<?php echo preg_replace('/((http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?)/', '<a href="\1">\1</a>', $portfolio_custom['_'.COCORICO_PREFIX.$champ][0]); ?>
+						<?php echo preg_replace('/((http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?)/', '<a href="\1">\1</a>', $portfolio_custom['_'.ETENDARD_COCORICO_PREFIX.$champ][0]); ?>
 					</div>
 					<?php
 				}
