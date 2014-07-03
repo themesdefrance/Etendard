@@ -8,34 +8,33 @@
 		
 		var buttonstyle = "background:url('" + etendard_url + "img/cocorico.png') no-repeat 5px 2px";
 		
-		var sousmenu = [
-			{text: 'val1', value: 'value 1'},
-			{text: 'val2', value: 'value 2'}
-		];
-		
         editor.addButton( 'etendard_shortcode_button', {
 			type: 'menubutton',
             style: buttonstyle,
             tooltip: 'Shortcodes Étendard',
             menu: [
-            		{	text: 'Bouton', 
+
+            		{	text: 'Boutons',
             			menu: [
+							{	text: 'Bouton',
+								onclick: function() {editor.insertContent('[bouton lien="LIEN_PAGE_DESTINATION"]TEXTE_BOUTON[/bouton]');}
+							},
 							{	text: 'Bouton (nouvelle fenêtre)',
 								onclick: function() {editor.insertContent('[bouton lien="LIEN_PAGE_DESTINATION" nouvellefenetre="oui"]TEXTE_BOUTON[/bouton]');}
-							},
-						],
-            			onclick: function() {editor.insertContent('[bouton lien="LIEN_PAGE_DESTINATION"]TEXTE_BOUTON[/bouton]');}
+							}
+						]
             			
             		},
   
-						
-					{	text: 'Appel à l\'action',
+					{	text: 'Appels à l\'action',
 						menu: [
+							{	text: 'Appel à l\'action',
+								onclick: function() {editor.insertContent('[appel_action lien="LIEN_PAGE_DESTINATION" bouton="TEXTE_BOUTON"]TEXTE_APPEL_ACTION[/appel_action]');}
+							},
 							{	text: 'Appel à l\'action (nouvelle fenêtre)',
 								onclick: function() {editor.insertContent('[appel_action lien="LIEN_PAGE_DESTINATION" bouton="TEXTE_BOUTON" nouvellefenetre="oui"]TEXTE_APPEL_ACTION[/appel_action]');}
-							},
+							}
 						],
-            			onclick: function() {editor.insertContent('[appel_action lien="LIEN_PAGE_DESTINATION" bouton="TEXTE_BOUTON"]TEXTE_APPEL_ACTION[/appel_action]');}
             		},
             		
             		{	text: 'Toggle', 
