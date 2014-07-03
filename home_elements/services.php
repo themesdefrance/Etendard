@@ -24,7 +24,7 @@
 					</a>
 				</h2>
 				<p>
-					<?php the_excerpt(); ?>
+					<?php echo get_the_excerpt(); ?>
 				</p>
 				<a href="<?php the_permalink(); ?>" class="more-link">
 					<?php _e('Lire la suite', 'etendard'); ?>

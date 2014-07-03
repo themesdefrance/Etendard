@@ -79,7 +79,7 @@ else if (is_tax('portfolio_categorie')){
 				
 				<?php if(get_option('etendard_extraits_portfolio') != '0'){ ?>
 					<p class="excerpt">
-						<?php the_excerpt(); ?>
+						<?php echo get_the_excerpt(); ?>
 					</p>
 				<?php } ?>
 				
