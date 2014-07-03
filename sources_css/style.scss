@@ -356,6 +356,11 @@ ul.services .service a.more-link{
 	margin-top: 5px;
 }
 
+// Template Services 
+.page-template-template-services-php ul.services .service{
+	margin-bottom:40px;
+}
+
 // Single Service
 
 .landing{
@@ -1016,7 +1021,7 @@ div.pagination{
 	}
 }
 
-section.portfolio .pagination a{
+section.portfolio .pagination a, section.services .pagination a{
 	@extend %bouton-etendard;
 }
 

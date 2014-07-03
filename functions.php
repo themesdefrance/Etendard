@@ -719,7 +719,8 @@ if(!function_exists('etendard_user_styles')){
 				a.bouton.lirelasuite,
 				.headerbar,
 				#remonter,
-				section.portfolio .pagination a{
+				section.portfolio .pagination a,
+				section.services .pagination a{
 					background: <?php echo $color; ?> !important;
 					color: <?php echo $contrast; ?> !important;
 				}
@@ -751,6 +752,7 @@ if(!function_exists('etendard_user_styles')){
 				a.bouton.lirelasuite:hover,
 				#remonter:hover,
 				section.portfolio .pagination a:hover,
+				section.services .pagination a:hover,
 				input[type='submit']:hover{
 					background:<?php echo $complement; ?> !important;
 				}
