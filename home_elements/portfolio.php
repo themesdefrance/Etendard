@@ -1,4 +1,8 @@
-<?php $portfolios = new WP_Query(array('posts_per_page'=>3, 'post_type'=>'portfolio')); ?>
+<?php $portfolios = new WP_Query(array(
+								'posts_per_page'=>apply_filters('etendard_home_portfolio_nombre', 3),
+								'post_type'=>'portfolio'
+								)); ?>
+
 <?php if ($portfolios->have_posts()): ?>
 <section class="portfolio">
 	<div class="wrapper">

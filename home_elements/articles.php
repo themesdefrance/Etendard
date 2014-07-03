@@ -1,4 +1,8 @@
-<?php $articles = new WP_Query(array('posts_per_page'=>4, 'ignore_sticky_posts'=>true)); ?>
+<?php $articles = new WP_Query(array(
+								'posts_per_page'=>apply_filters('etendard_home_articles_nombre', 4),
+								'ignore_sticky_posts'=>true
+								)); ?>
+								
 <?php if ($articles->have_posts()): ?>
 <section class="blog">
 	<div class="wrapper">

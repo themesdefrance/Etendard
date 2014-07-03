@@ -1,4 +1,10 @@
-<?php $services = new WP_Query(array('posts_per_page'=>3, 'post_type'=>'service', 'orderby'=>'date')); ?>
+<?php $services = new WP_Query(array(
+								'posts_per_page'=>apply_filters('etendard_home_services_nombre', 3),
+								'post_type'=>'service',
+								'orderby'=>'date'
+								)); ?>
+
+
 <?php if ($services->have_posts()): ?>
 <section class="services">
 	<div class="wrapper">
