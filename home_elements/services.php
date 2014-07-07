@@ -2,15 +2,19 @@
 								'posts_per_page'=>apply_filters('etendard_home_services_nombre', 3),
 								'post_type'=>'service',
 								'orderby'=>'date'
-								)); ?>
-
+								));
+								
+if ($services->post_count == 1) $class = '1-1';
+else if ($services->post_count % 2 == 0) $class = '1-2';
+else $class = '1-3';
+?>
 
 <?php if ($services->have_posts()): ?>
 <section class="services">
 	<div class="wrapper">
 		<ul class="services">
 			<?php while ($services->have_posts()) : $services->the_post(); ?>
-			<li class="service col-1-3">
+			<li class="service col-<?php echo $class; ?>">
 				<figure class="entry-thumbnail">
 					<a href="<?php the_permalink(); ?>">
 					<?php if (has_post_thumbnail() && !post_password_required()): ?>
