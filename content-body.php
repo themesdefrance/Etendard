@@ -12,7 +12,7 @@ else if(is_category() || is_tax()){
 <?php 
 }else if(is_tag()|| is_search()){
 
-	echo "";
+	echo etendard_excerpt(0);
 	
 }else{
 

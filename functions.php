@@ -589,6 +589,9 @@ if (!function_exists('etendard_new_excerpt_more')){
 // Custom excerpts
 if (!function_exists('etendard_excerpt')){
 	function etendard_excerpt($length){
+		if($length==0)
+			return '';
+		
 		$content = strip_shortcodes(get_the_content());
 		$excerpt = "<p>" . wp_trim_words( $content , $length ) . "</p>";
 		return $excerpt;

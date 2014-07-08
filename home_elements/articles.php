@@ -57,7 +57,7 @@
 						<?php } ?>
 					</header>
 					<div class="content">
-						<?php the_excerpt(); ?>
+						<?php echo etendard_excerpt(20); ?>
 					</div>
 					<a href="<?php the_permalink(); ?>" class="more-link">
 						<?php _e('Lire la suite', 'etendard'); ?>
