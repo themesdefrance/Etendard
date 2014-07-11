@@ -2,11 +2,11 @@
 $form = new Cocorico(ETENDARD_COCORICO_PREFIX);
 
 $form->startWrapper('titre');
-$form->component('raw', __('Options Étendard', 'etendard'));
+$form->component('raw', __('Etendard Options', 'etendard'));
 $form->endWrapper('titre');
 
-$form->groupHeader(array('general'=>__('Général', 'etendard'), 
-						 'apparence'=>__('Apparence', 'etendard'), 
+$form->groupHeader(array('general'=>__('General', 'etendard'), 
+						 'apparence'=>__('Appearance', 'etendard'), 
 						 'portfolio'=>__('Portfolio', 'etendard')));
 
 //Tab general
@@ -17,12 +17,12 @@ $form->startForm();
 $form->setting(array('type'=>'text',
 					 'name'=>substr(EDD_SL_LICENSE_KEY, strlen(ETENDARD_COCORICO_PREFIX)),
 					 'label'=>__("Licence", 'etendard'),
-					 'description'=>__("Entrez la licence pour qu'Étendard puisse recevoir les mises à jour. Vous pourrez la trouver dans l'email que nous vous avons envoyé suite à votre commande.", 'etendard')));
+					 'description'=>__("Enter your licence key in order to receive Etendard updates. You'll find it in the confirmation email we sent you after your purchase.", 'etendard')));
 
 $form->setting(array('type'=>'text',
 					 'name'=> 'title',
-					 'label'=>__("Titre", 'etendard'),
-					 'description'=>__("Titre dans le bandeau de la page d'accueil.", 'etendard'),
+					 'label'=>__("Title", 'etendard'),
+					 'description'=>__("Title in the homepage banner.", 'etendard'),
 					 'options'=>array(
 					 	'default'=>get_bloginfo('name')
 					 	)
@@ -31,28 +31,28 @@ $form->setting(array('type'=>'text',
 $form->setting(array('type'=>'text',
 					 'name'=>'subtitle',
 					 'label'=>__("Sous-titre", 'etendard'),
-					 'description'=>__("Sous-titre dans le bandeau.", 'etendard'),
+					 'description'=>__("Subtitle in the homepage banner.", 'etendard'),
 					 'options'=>array(
 					 	'default'=>get_bloginfo('description')
 					 	)
 					 ));
 
 $form->ordre('home_blocks',
-				__("Choisissez les éléments à afficher sur la page d'accueil et réorganisez-les avec des glisser déposer:", 'etendard'),
-				array(  'titre'=>__('Titre et slogan', 'etendard'),
-						'diaporama'=>__('Diaporama', 'etendard'),
-						'content'=>__('Contenu', 'etendard'),
-						'cta'=>__("Appel à l'action", 'etendard'),
-						'services'=>__('Liste de vos services', 'etendard'),
-						'portfolio'=>__('Derniers éléments du portfolio', 'etendard'),
-						'articles'=>__('Derniers articles', 'etendard')));
+				__("Choose elements to display on the homepage and organize them with drag & drop :", 'etendard'),
+				array(  'titre'=>__('Title and subtitle', 'etendard'),
+						'diaporama'=>__('Slider', 'etendard'),
+						'content'=>__('Content', 'etendard'),
+						'cta'=>__("Call to action", 'etendard'),
+						'services'=>__('Services', 'etendard'),
+						'portfolio'=>__('Last projects', 'etendard'),
+						'articles'=>__('Last posts', 'etendard')));
 					 
 $form->setting(array('type'=>'textarea',
 					 'name'=>'footer_gauche',
-					 'label'=>__("Pied de page", 'etendard'),
-					 'description'=>__('Contenu de la partie gauche du pied de page. Les balises HTML de lien (&lt;a href=&quot;LIEN&quot;&gt;TEXTE_LIEN&lt;/a&gt;), de mise en gras (&lt;strong&gt;TEXTE_GRAS&lt;/strong&gt;), de mise en italique(&lt;em&gt;TEXTE_ITALIQUE&lt;/em&gt;) et d\'image (&lt;img src=&quot;ADRESSE_IMAGE&quot;&gt;) sont autoris&eacute;es. Laissez vide pour ne rien afficher.', 'etendard'),
+					 'label'=>__("Footer", 'etendard'),
+					 'description'=>__('Left footer content. The following HTML tags are allowed : &lt;a href=&quot;LINK&quot;&gt;TEXT_LINK&lt;/a&gt;, &lt;strong&gt;BOLD_TEXT&lt;/strong&gt;, &lt;em&gt;ITALIC_TEXT&lt;/em&gt;, &lt;img src=&quot;IMAGE_URL&quot;&gt;.', 'etendard'),
 					 'options'=>array(
-					 	'default'=>__('<strong>2014</strong> - Étendard par <a href="https://www.themesdefrance.fr" target="_blank">Thèmes de France</a>', 'etendard')
+					 	'default'=>__('<strong>2014</strong> - Etendard by <a href="https://www.themesdefrance.fr/" target="_blank">Themes de France</a>', 'etendard')
 					 	)
 					 ));
 
@@ -66,20 +66,20 @@ $form->startForm();
 
 $form->setting(array('type'=>'color',
 					 'name'=>'color',
-					 'label'=>__("Couleur principale", 'etendard'),
-					 'description'=>__("Cette couleur sera utilisée pour mettre en valeur les boutons, les liens et d'autres d'Étendard.", 'etendard')));
+					 'label'=>__("Main color", 'etendard'),
+					 'description'=>__("This color will be used across your site for buttons, links, etc.", 'etendard')));
 					 
 $form->setting(array('type'=>'upload',
 					 'name'=>'logo',
 					 'label'=>__('Logo', 'etendard'),
-					 'description'=>__('Le fichier image doit être au format JPG ou PNG. Notez également que la taille optimale est de 280px par 60px.', 'etendard')));
+					 'description'=>__('The image filetype should be JPG or PNG. Note that the optimal size is 280px by 60px.', 'etendard')));
 					
 $form->setting(array('type'=>'radio',
-					 'label'=>__('Largeur des diaporamas', 'etendard'),
+					 'label'=>__('Slider width', 'etendard'),
 					 'name'=>'diaporama_width',
 					 'radios'=>array(
-						 'auto'=>__('Cadré', 'etendard'),
-						 'full'=>__('Plein écran', 'etendard')
+						 'auto'=>__('Boxed', 'etendard'),
+						 'full'=>__('Fullsize', 'etendard')
 					 ),
 					 'options'=>array(
 					 	'after'=>'<br/>',
@@ -88,25 +88,25 @@ $form->setting(array('type'=>'radio',
  
 $form->setting(array('type'=>'text',
 					 'name'=>'diaporama_height',
-					 'label'=>__("Hauteur des diaporamas (en pixels)", 'etendard'),
+					 'label'=>__("Slider height (in pixels)", 'etendard'),
 					 'options'=>array(
 					 	'default'=>500,
 					 )));
 					 
 $form->setting(array('type'=>'radio',
-					 'label'=>__('Barre latérale', 'etendard'),
+					 'label'=>__('Sidebar position', 'etendard'),
 					 'name'=>'sidebar_position',
 					 'radios'=>array(
-						 'droite'=>__('Droite', 'etendard'),
-						 'gauche'=>__('Gauche', 'etendard')
+						 'droite'=>__('Right', 'etendard'),
+						 'gauche'=>__('Left', 'etendard')
 					 ),
 					 'options'=>array('after'=>'<br/>'),
-					 'description'=>__('La barre latérale (également appelée "sidebar") peut se positionner à droite ou à gauche du contenu principal. La plupart des sites la placent à droite mais vous pouvez faire l\'inverse :)', 'etendard')));
+					 'description'=>__('Sidebar could be placed on the right or on the left of the main content. Most sites place them on the right but you could do the opposite :)', 'etendard')));
 					 
 $form->setting(array('type'=>'textarea',
 					 'name'=>'custom_css',
-					 'label'=>__('CSS Supplémentaire', 'etendard'),
-					 'description'=>__('Les règles CSS entrées ci-contre seront ajoutées à votre site. Si les modifications sont trop importantes, songez plutôt à créer un thème enfant.', 'etendard')));
+					 'label'=>__('Additionnal CSS', 'etendard'),
+					 'description'=>__('CSS rules added in this field will be added to your site. If you have too many updates, you should create a child theme.', 'etendard')));
 
 $form->endForm();
 $form->endWrapper('tab');
@@ -117,43 +117,43 @@ $form->startWrapper('tab', 'portfolio');
 $form->startForm();
 
 $form->setting(array('type'=>'boolean',
-					 'label'=>__('Afficher les extraits', 'etendard'),
+					 'label'=>__('Display excerpts', 'etendard'),
 					 'name'=>'extraits_portfolio',
 					 'options'=>array(
 					 	'default'=>true
 					 ),
-					 'description'=>__('Affichez ou non les extraits des éléments portfolios sur la page des projets', 'etendard')));
+					 'description'=>__('Check this to display excerpts underneath the projects on the portfolio page.', 'etendard')));
 					 
 $form->setting(array('type'=>'boolean',
-					 'label'=>__('Afficher les boutons', 'etendard'),
+					 'label'=>__('Display buttons', 'etendard'),
 					 'name'=>'boutons_portfolio',
 					 'options'=>array(
 					 	'default'=>true
 					 ),
-					 'description'=>__('Affichez ou non les boutons des éléments portfolio sur la page des projets', 'etendard')));
+					 'description'=>__('Check this to display buttons underneath the projects on the portfolio page.', 'etendard')));
 					 
 $form->setting(array('type'=>'text-list',
-					'label'=>__('Informations complémentaires', 'etendard'),
+					'label'=>__('Project metas', 'etendard'),
 					'name'=>'portfolio_fields',
-					'description' => __('Définissez des informations complémentaires afin d\'enrichir les éléments portfolios (nom de votre client, son site, etc.). Vous devrez ensuite leur attribuer une valeur dans l\'encart "Informations complémentaires" de chaque élément portfolio.', 'etendard'),
+					'description' => __('Add metas to enhance your projects (the client, his website, etc.). Add values to each meta in the "Projects metas" metabox on each project page.', 'etendard'),
 					'options'=>array()
 ));
 					 
 $form->setting(array('type'=>'text',
 					 'name'=>'cta_url',
-					 'label'=>__("Destination de l'appel à l'action (lien)", 'etendard')));
+					 'label'=>__('Call to action destination (url)', 'etendard')));
 					 
 $form->setting(array('type'=>'textarea',
 					 'name'=>'cta_text',
-					 'label'=>__("Texte accompagnant l'appel à l'action, soyez convaincant ;)", 'etendard')));
+					 'label'=>__('Write an incentive to get people to click on the call to action, be convincing ;)', 'etendard')));
 					 
 $form->setting(array('type'=>'text',
 					 'name'=>'cta_bouton',
-					 'label'=>__('Libellé du bouton (Exemple : "Contactez-moi").', 'etendard')));
+					 'label'=>__('Button\'s label (Example : "Contact-us").', 'etendard')));
 
 $form->endForm();
 $form->endWrapper('tab');
 
-$form->component('submit', 'submit', array('value'=>__('Sauvegarder les réglages', 'etendard')));
+$form->component('submit', 'submit', array('value'=>__('Save changes', 'etendard')));
 
 $form->render();

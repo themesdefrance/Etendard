@@ -9,15 +9,15 @@ $form->startForm();
 
 $form->setting(array('type'=>'text',
 					 'name'=>'_home_cta_url',
-					 'label'=>__("Destination de l'appel à l'action (lien)", 'etendard')));
+					 'label'=>__('Call to action destination (url)', 'etendard')));
 					 
 $form->setting(array('type'=>'textarea',
 					 'name'=>'_home_cta_text',
-					 'label'=>__("Texte d'accompagnement", 'etendard')));
+					 'label'=>__("Call to action incentive", 'etendard')));
 					 
 $form->setting(array('type'=>'text',
 					 'name'=>'_home_cta_bouton',
-					 'label'=>__('Texte du bouton', 'etendard')));
+					 'label'=>__('Button\'s label', 'etendard')));
 
 $form->endForm();
 $form->render();

@@ -5,7 +5,7 @@ if(!function_exists('etendard_add_meta_boxes')){
 	function etendard_add_meta_boxes(){
 		add_meta_box(
 					'etendard_link',
-					__('Lien', 'etendard'),
+					__('Link', 'etendard'),
 					'etendard_link_callback',
 					 'post',
 					 'normal',
@@ -14,7 +14,7 @@ if(!function_exists('etendard_add_meta_boxes')){
 					 
 		add_meta_box(
 					'etendard_quote',
-					__('Citation', 'etendard'),
+					__('Quote', 'etendard'),
 					'etendard_quote_callback',
 					 'post',
 					 'normal',
@@ -23,7 +23,7 @@ if(!function_exists('etendard_add_meta_boxes')){
 		
 		add_meta_box(
 					'etendard_video',
-					__('Vidéo', 'etendard'),
+					__('Video', 'etendard'),
 					'etendard_video_callback',
 					 'post',
 					 'normal',
@@ -39,7 +39,7 @@ if(!function_exists('etendard_add_portfolio_meta_boxes')){
 		
 		add_meta_box(
 					'etendard_video',
-					__('Vidéo', 'etendard'),
+					__('Video', 'etendard'),
 					'etendard_video_callback',
 					 'portfolio',
 					 'normal',
@@ -58,8 +58,8 @@ function etendard_link_callback( $post ) {
 	
 	$form->setting(array('type'=>'url',
 					 'name'=>'_link_meta',
-					 'label'=>__('Lien à mettre en avant', 'etendard'),
-					 'description' => __('Insérez un lien à mettre en avant pour votre article. Libre à vous de le commenter dans le corps de l\'article.','etendard')
+					 'label'=>__('Link to feature', 'etendard'),
+					 'description' => __('Add a link to feature for this post. You\'re free to talk about it in the post content.','etendard')
 					 )
 				  );
 	
@@ -74,15 +74,15 @@ function etendard_quote_callback( $post ) {
 	
 	$form->setting(array('type'=>'text',
 					 'name'=>'_quote_meta',
-					 'label'=>__('Citation à mettre en avant', 'etendard'),
-					 'description' => __('Insérez de sages paroles et commentez-les éventuellement dans le corps de l\'article.','etendard')
+					 'label'=>__('Quote to feature', 'etendard'),
+					 'description' => __('Add some wise words and talk about it in the post content.','etendard')
 					 )
 				  );
 	
 	$form->setting(array('type'=>'text',
 					 'name'=>'_quote_author_meta',
 					 'label'=>__('Auteur de la citation (facultatif)', 'etendard'),
-					 'description' => __('N\'oubliez pas de créditer l\'auteur de la citation.','etendard')
+					 'description' => __('Be nice and don\'t forget to credit the quote author.','etendard')
 					 )
 				  );
 	
@@ -98,8 +98,8 @@ function etendard_video_callback( $post ) {
 	
 	$form->setting(array('type'=>'url',
 					 'name'=>'_video_meta',
-					 'label'=>__('Vidéo à mettre en avant', 'etendard'),
-					 'description' => __('Insérez le lien d\'une vidéo Youtube, Dailymotion ou Vimeo à mettre en avant.','etendard')
+					 'label'=>__('Video to feature', 'etendard'),
+					 'description' => __('Add a video link from Youtube, Dailymotion or Vimeo.','etendard')
 					 )
 				  );
 	

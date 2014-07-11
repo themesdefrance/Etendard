@@ -9,16 +9,16 @@ $form->startForm();
 
 $form->setting(array('type'=>'text',
 					 'name'=>'_portfolio_temoin_nom',
-					 'label'=>__('Nom', 'etendard')));
+					 'label'=>__('Name', 'etendard')));
 					 
 $form->setting(array('type'=>'textarea',
 					 'name'=>'_portfolio_temoin_texte',
-					 'label'=>__('Témoignage', 'etendard')));
+					 'label'=>__('Testimonial', 'etendard')));
 					 
 $form->setting(array('type'=>'upload',
 					 'name'=>'_portfolio_temoin_portrait',
-					 'label'=>__('Portrait', 'etendard'),
-					 'description'=>__('Taille optimale de 160x110 pixels', 'etendard')));
+					 'label'=>__('Avatar', 'etendard'),
+					 'description'=>__('Optimal size is 160x110 pixels', 'etendard')));
 
 $form->endForm();
 $form->render();

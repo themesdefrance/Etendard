@@ -6,7 +6,7 @@ class EtendardAppelAction extends WP_Widget{
 	public function __construct(){
 		parent::__construct(
 			'EtendardAppelAction',
-			__('Étendard - Appel à l\'action', 'etendard'),
+			__('Etendard - Call to action', 'etendard'),
 			array('description'=>__('Insérez un appel à l\'action dans une barre latérale.', 'etendard'),)
 		);
 	}
@@ -27,18 +27,12 @@ class EtendardAppelAction extends WP_Widget{
 				<?php if (isset($instance['libelle']) && $instance['libelle']!=""){
 						echo $instance['libelle'];
 					}else{
-						_e( 'Cliquez ici' );
+						_e( 'Click here', 'etendard');
 					} ?>
 				</a>
 			</p>
 		</div>
 		<?php
-		/*
-		
-			Afficher le contenu du widget avec des echo
-		
-		*/
-		
 		echo $args['after_widget'];
 	}
 	
@@ -64,19 +58,19 @@ class EtendardAppelAction extends WP_Widget{
 		?>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Titre:' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'etendard' ); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="url" value="<?php echo esc_attr( $fields['title'] ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'lien' ); ?>"><?php _e( 'Destination de l\'appel à l\'action (lien):' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'lien' ); ?>"><?php _e( 'Call to action destination (url):', 'etendard' ); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'lien' ); ?>" name="<?php echo $this->get_field_name( 'lien' ); ?>" type="url" value="<?php echo esc_attr( $fields['lien'] ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'desc' ); ?>"><?php _e( 'Texte accompagnant l\'appel à l\'action:' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'desc' ); ?>"><?php _e( 'Call to action incentive:', 'etendard' ); ?></label> 
 			<textarea  class="widefat" id="<?php echo $this->get_field_id( 'desc' ); ?>" name="<?php echo $this->get_field_name( 'desc' ); ?>"><?php echo esc_attr( $fields['desc'] ); ?></textarea>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'libelle' ); ?>"><?php _e( 'Libellé du bouton:' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'libelle' ); ?>"><?php _e( 'Button\'s label:' ); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'libelle' ); ?>" name="<?php echo $this->get_field_name( 'libelle' ); ?>" type="text" value="<?php echo esc_attr( $fields['libelle'] ); ?>">
 		</p>
 		<?php

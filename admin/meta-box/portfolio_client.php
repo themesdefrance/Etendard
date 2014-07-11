@@ -19,7 +19,7 @@ foreach ($fields as $field){
 							 'label'=>$field));
 	}
 	else{
-		printf(__('Aucune information complémentaire n\'a été définie. Pour en ajouter, rendez-vous dans l\'onglet portfolio <a href="%s" >des options d\'Étendard</a>.','etendard') , admin_url('themes.php?page=etendard_options'));
+		printf(__('No project meta was defined. If you want to, rendez-vous in the portfolio tab <a href="%s" >in Etendard Options</a>.','etendard') , admin_url('themes.php?page=etendard_options'));
 	}
 }
 

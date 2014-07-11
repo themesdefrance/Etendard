@@ -3,12 +3,12 @@
 <section class="blog">
 	<div class="wrapper">
 		<h1 class="header-title">
-			<?php _e('Oups, vous voici dans une impasse…', 'etendard'); ?>
+			<?php _e('Oops, there is nothing here...', 'etendard'); ?>
 		</h1>
 		<div class="content">
-			<img src="<?php echo get_template_directory_uri()."/img/triste.png" ?>" alt="<?php _e('Erreur 404', 'etendard'); ?>" class="smiley-404">
+			<img src="<?php echo get_template_directory_uri()."/img/triste.png" ?>" alt="<?php _e('Error 404', 'etendard'); ?>" class="smiley-404">
 			<p>
-				<?php printf(__("La page demandée n'a pas été trouvée. <a href=\"%s\">Cliquez ici</a> retourner sur la page d'accueil.", 'etendard'), home_url()); ?>
+				<?php printf(__("The page you requested does not seem to exist. <a href=\"%s\">Click here</a> to get back to the home page.", 'etendard'), home_url()); ?>
 			</p>
 		</div>
 	</div>
