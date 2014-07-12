@@ -291,6 +291,11 @@ ul.blog li{
 	@include width-matches($breakpoint-mobile){
 		margin-bottom: 30px;
 	}
+	
+	&.centered{
+		margin: auto;
+		float: none;
+	}
 }
 
 

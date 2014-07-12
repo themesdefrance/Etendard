@@ -4,9 +4,17 @@
 								'orderby'=>'date'
 								));
 								
-if ($services->post_count == 1) $class = '1-1';
-else if ($services->post_count % 2 == 0) $class = '1-2';
-else $class = '1-3';
+switch ($services->post_count){
+	case 1:
+		$class = '1-2 centered';
+		break;
+	case 2:
+		$class = '1-2';
+		break;
+	default:
+		$class = '1-3';
+		break;
+}
 ?>
 
 <?php if ($services->have_posts()): ?>
