@@ -98,7 +98,8 @@ $form->setting(array('type'=>'radio',
 					 'name'=>'sidebar_position',
 					 'radios'=>array(
 						 'droite'=>__('Right', 'etendard'),
-						 'gauche'=>__('Left', 'etendard')
+						 'gauche'=>__('Left', 'etendard'),
+						 'sans'=>__('Nowhere', 'etendard')
 					 ),
 					 'options'=>array('after'=>'<br/>'),
 					 'description'=>__('Sidebar could be placed on the right or on the left of the main content. Most sites place them on the right but you could do the opposite :)', 'etendard')));

@@ -11,7 +11,7 @@
 			</sidebar>
 			<?php endif; ?>
 
-			<div class="col-2-3">
+			<div class="col-2-3 <?php if (get_option('etendard_sidebar_position') === 'sans') echo 'landing' ?>">
 				<ul class="articles">
 					<?php while (have_posts()) : the_post(); ?>
 					<li>
@@ -25,7 +25,7 @@
 				</div>
 			</div>
 
-			<?php if (get_option('etendard_sidebar_position') !== 'gauche'): ?>
+			<?php if (get_option('etendard_sidebar_position') === 'droite' || !get_option('etendard_sidebar_position')): ?>
 			<sidebar class="sidebar col-1-3">
 				<?php get_sidebar('blog'); ?>
 			</sidebar>

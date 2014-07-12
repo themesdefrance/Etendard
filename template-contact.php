@@ -16,7 +16,7 @@ Template Name: Contact
 			</sidebar>
 			<?php endif; ?>
 
-			<div class="col-2-3">
+			<div class="col-2-3 <?php if (get_option('etendard_sidebar_position') === 'sans') echo 'landing' ?>">
 				<?php /* The loop */ ?>
 				<?php while (have_posts()) : the_post(); ?>
 					<?php get_template_part('content', get_post_format()); ?>
@@ -25,7 +25,7 @@ Template Name: Contact
 				<?php get_template_part('formulaire_contact'); ?>
 			</div>
 
-			<?php if (get_option('etendard_sidebar_position') !== 'gauche'): ?>
+			<?php if (get_option('etendard_sidebar_position') === 'droite' || !get_option('etendard_sidebar_position')): ?>
 			<div class="sidebar col-1-3">
 				<?php get_sidebar('blog'); ?>
 			</div>
