@@ -23,41 +23,41 @@ if (isset($_POST['etendard_contact_nonce']) && wp_verify_nonce($_POST['etendard_
 	
 	<div class="field">
 		<label for="etendard_contact_nom">
-			<?php _e('Nom *'); ?>:
+			<?php _e('Name *','etendard'); ?>:
 		</label>
 		<input type="text" id="etendard_contact_nom" name="etendard_contact_nom" required />
 	</div>
 	
 	<div class="field">
 		<label for="etendard_contact_email">
-			<?php _e('Email *'); ?>:
+			<?php _e('Email *','etendard'); ?>:
 		</label>
 		<input type="email" id="etendard_contact_email" name="etendard_contact_email" required />
 	</div>
 	
 	<div class="field">
 		<label for="etendard_contact_sujet">
-			<?php _e('Sujet'); ?>:
+			<?php _e('Subject','etendard'); ?>:
 		</label>
 		<input type="text" id="etendard_contact_sujet" name="etendard_contact_sujet" />
 	</div>
 	
 	<div class="field">
 		<label for="etendard_contact_message">
-			<?php _e('Message *'); ?>:
+			<?php _e('Message *','etendard'); ?>:
 		</label>
 		<textarea id="etendard_contact_message" name="etendard_contact_message" required></textarea>
 	</div>
 	
 	<div class="submit">
-		<input type="submit" value="<?php _e('Envoyer'); ?>" />
+		<input type="submit" value="<?php _e('Send','etendard'); ?>" />
 	</div>
 </form>
 <?php else: ?>
 	<div class="message <?php echo ($contact) ? 'succes' : 'erreur'; ?>">
 	<?php
-	if ($contact) _e('Votre message a été envoyé.');
-	else _e("Une erreur est survenue lors de l'envoi de votre message, merci de réessayer ultérieurement.", 'etendard');
+	if ($contact) _e('Succes ! You message was sent.','etendard');
+	else _e('An error occured during sending, try again in a few minutes.', 'etendard');
 	?>
 	</div>
 <?php endif; ?>

@@ -44,21 +44,21 @@ add_action('after_switch_theme', 'etendard_activation');
 // Function to call if no primary menu
 if (!function_exists( 'etendard_nomenu')){
 	function etendard_nomenu(){
-		echo '<ul class="top-level-menu"><li><a href="'.admin_url('nav-menus.php').'">Veuillez configurer le menu principal</a></li></ul>';
+		echo '<ul class="top-level-menu"><li><a href="'.admin_url('nav-menus.php').'">'.__('Set up the main menu','etendard').'</a></li></ul>';
 	}
 }
 
 if (!function_exists('etendard_setup')){
 	function etendard_setup(){
 		// Register menus
-		register_nav_menu('primary', __('Menu principal', 'etendard'));
-		register_nav_menu('footer', __('Menu pied de page', 'etendard'));
+		register_nav_menu('primary', __('Main menu', 'etendard'));
+		register_nav_menu('footer', __('Footer menu', 'etendard'));
 		
 		//Register sidebars
 		register_sidebar(array(
-				'name'          => __('Barre latérale', 'etendard'),
+				'name'          => __('Sidebar', 'etendard'),
 				'id'            => 'blog',
-				'description'   => __('Ajoutez les widgets à faire figurer dans la barre latérale (sidebar).', 'etendard'),
+				'description'   => __('Add widgets in the sidebar.', 'etendard'),
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3>',
@@ -66,9 +66,9 @@ if (!function_exists('etendard_setup')){
 		));
 		
 		register_sidebar(array(
-				'name'          => __('Pied de page', 'etendard'),
+				'name'          => __('Footer', 'etendard'),
 				'id'            => 'footer',
-				'description'   => __('Ajoutez les widgets à faire figurer dans le pied de page.', 'etendard'),
+				'description'   => __('Add widgets in the footer.', 'etendard'),
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3>',
@@ -92,7 +92,7 @@ if (!function_exists('etendard_setup')){
 		
 		add_filter('image_size_names_choose', 'etendard_tailles_images');
 		function etendard_tailles_images($sizes) {
-			$added = array('etendard-post-thumbnail'=>__('Article', 'etendard'));
+			$added = array('etendard-post-thumbnail'=>__('Post', 'etendard'));
 			$newsizes = array_merge($sizes, $added);
 			return $newsizes;
 		}
@@ -103,7 +103,7 @@ if (!function_exists('etendard_setup')){
 		// Update Etendard new version
 		update_option( 'etendard_version', EDD_SL_THEME_VERSION );
 		
-		// Transiant redirect after activation
+		// Transient redirect after activation
 		set_transient( '_etendard_activation_redirect', true, 30 );
 		
 	}
@@ -119,30 +119,30 @@ if (!function_exists('etendard_init_cpt')){
 		
 		// Portfolio
 		$labels_portfolio = array(
-		'name'               => _x( 'Projets', 'post type general name', 'etendard' ),
-		'singular_name'      => _x( 'Projet', 'post type singular name', 'etendard' ),
-		'menu_name'          => _x( 'Projets', 'admin menu', 'etendard' ),
-		'name_admin_bar'     => _x( 'Projet', 'add new on admin bar', 'etendard' ),
-		'add_new'            => _x( 'Ajouter', 'portfolio', 'etendard' ),
-		'add_new_item'       => __( 'Ajouter', 'etendard' ),
-		'new_item'           => __( 'Ajouter', 'etendard' ),
-		'edit_item'          => __( 'Modifier le projet', 'etendard' ),
-		'view_item'          => __( 'Afficher le projet', 'etendard' ),
-		'all_items'          => __( 'Projets', 'etendard' ),
-		'search_items'       => __( 'Rechercher dans les projets', 'etendard' ),
-		'parent_item_colon'  => __( 'Projet parent:', 'etendard' ),
-		'not_found'          => __( 'Aucun projet n\'a été trouvé.', 'etendard' ),
-		'not_found_in_trash' => __( 'Aucun projet n\'a été trouvé dans la corbeille.', 'etendard' ),
+		'name'               => _x( 'Projects', 'post type general name', 'etendard' ),
+		'singular_name'      => _x( 'Project', 'post type singular name', 'etendard' ),
+		'menu_name'          => _x( 'Projects', 'admin menu', 'etendard' ),
+		'name_admin_bar'     => _x( 'Project', 'add new on admin bar', 'etendard' ),
+		'add_new'            => _x( 'Add New', 'portfolio', 'etendard' ),
+		'add_new_item'       => __( 'Add New Project', 'etendard' ),
+		'new_item'           => __( 'Add New', 'etendard' ),
+		'edit_item'          => __( 'Edit Project', 'etendard' ),
+		'view_item'          => __( 'View Project', 'etendard' ),
+		'all_items'          => __( 'All Projects', 'etendard' ),
+		'search_items'       => __( 'Search Projects', 'etendard' ),
+		'parent_item_colon'  => __( 'Parent Project:', 'etendard' ),
+		'not_found'          => __( 'No Projects found.', 'etendard' ),
+		'not_found_in_trash' => __( 'No Projects found in Trash.', 'etendard' ),
 		);
 		
 		register_post_type('portfolio', array(
-			'label'=>__('Projet', 'etendard'),
+			'label'=>__('Project', 'etendard'),
 			'labels'=>$labels_portfolio,
 			'public'=>true,
 			'menu_position'=>20,
 			'has_archive'=>'portfolio-archive',
 			'rewrite'=>array(
-				'slug'=>'projet'
+				'slug'=>__('project', 'etendard')
 			),
 			'exclude_from_search'=> true
 		));
@@ -156,7 +156,7 @@ if (!function_exists('etendard_init_cpt')){
 			'post-formats'
 		));
 		register_taxonomy('portfolio_categorie', 'portfolio', array(
-			'label'=>'Catégories',
+			'label'=>__('Categories', 'etendard'),
 			'hierarchical'=>true,
 		));
 		register_taxonomy_for_object_type('portfolio_categorie', 'portfolio');
@@ -167,16 +167,16 @@ if (!function_exists('etendard_init_cpt')){
 		'singular_name'      => _x( 'Service', 'post type singular name', 'etendard' ),
 		'menu_name'          => _x( 'Services', 'admin menu', 'etendard' ),
 		'name_admin_bar'     => _x( 'Service', 'add new on admin bar', 'etendard' ),
-		'add_new'            => _x( 'Ajouter', 'service', 'etendard' ),
-		'add_new_item'       => __( 'Ajouter', 'etendard' ),
-		'new_item'           => __( 'Ajouter', 'etendard' ),
-		'edit_item'          => __( 'Modifier le service', 'etendard' ),
-		'view_item'          => __( 'Afficher le service', 'etendard' ),
+		'add_new'            => _x( 'Add New', 'service', 'etendard' ),
+		'add_new_item'       => __( 'Add New Service', 'etendard' ),
+		'new_item'           => __( 'Add New', 'etendard' ),
+		'edit_item'          => __( 'Edit Service', 'etendard' ),
+		'view_item'          => __( 'View Service', 'etendard' ),
 		'all_items'          => __( 'Services', 'etendard' ),
-		'search_items'       => __( 'Rechercher dans les services', 'etendard' ),
-		'parent_item_colon'  => __( 'Service parent:', 'etendard' ),
-		'not_found'          => __( 'Aucun service n\'a été trouvé.', 'etendard' ),
-		'not_found_in_trash' => __( 'Aucun service n\'a été trouvé dans la corbeille.', 'etendard' ),
+		'search_items'       => __( 'Search Services', 'etendard' ),
+		'parent_item_colon'  => __( 'Parent Service:', 'etendard' ),
+		'not_found'          => __( 'No Services Found', 'etendard' ),
+		'not_found_in_trash' => __( 'No Services Found in Trash.', 'etendard' ),
 		);
 		
 		register_post_type('service', array(
@@ -277,7 +277,7 @@ add_action('admin_init', 'etendard_admin_init');
 // Add Etendard admin menu
 if (!function_exists('etendard_admin_menu')){
 	function etendard_admin_menu(){
-		add_theme_page('Options Étendard', 'Options Étendard', 'edit_theme_options', 'etendard_options', 'etendard_options');
+		add_theme_page('Etendard Settings', 'Etendard Settings', 'edit_theme_options', 'etendard_options', 'etendard_options');
 	}
 }
 add_action('admin_menu', 'etendard_admin_menu');
@@ -319,7 +319,7 @@ add_action('widgets_init', 'etendard_appel_action_init');
 if (!function_exists('etendard_register_custom_fields')){
 	function etendard_register_custom_fields(){
 		add_meta_box('etendard_portfolio_client',
-					 __('Informations complémentaires', 'etendard'),
+					 __('Project Metas', 'etendard'),
 					 'etendard_portfolio_client',
 					 'portfolio',
 					 'side',
@@ -327,7 +327,7 @@ if (!function_exists('etendard_register_custom_fields')){
 		);
 		
 		add_meta_box('etendard_portfolio_temoignage',
-					 __('Témoignage', 'etendard'),
+					 __('Testimonial', 'etendard'),
 					 'etendard_portfolio_temoignage',
 					 'portfolio',
 					 'normal',
@@ -349,7 +349,7 @@ if (!function_exists('etendard_register_custom_fields')){
 			
 			if ($template_file == 'template_home.php'){
 				add_meta_box('etendard_home_cta',
-							 __('Appel à l\'action', 'etendard'),
+							 __('Call to action', 'etendard'),
 							 'etendard_home_cta',
 							 'page',
 							 'normal',
@@ -359,7 +359,7 @@ if (!function_exists('etendard_register_custom_fields')){
 				$display_blocks = get_option('etendard_home_blocks');
 				if ($display_blocks['diaporama']){
 					add_meta_box('etendard_portfolio_diaporama',
-							 __('Diaporama', 'etendard'),
+							 __('Slider', 'etendard'),
 							 'etendard_portfolio_diaporama',
 							 'page',
 							 'normal',
@@ -518,7 +518,7 @@ if (!function_exists('etendard_comment')){
 			<article id="comment-<?php comment_ID(); ?>" class="article comment">
 				<aside class="col-1-5">
 					<?php if ($comment->comment_approved == '0') : ?>
-						<em><?php echo apply_filters('etendard_commentaire_modere', __('Votre commentaire est en attente de modération.', 'etendard')); ?></em>
+						<em><?php echo apply_filters('etendard_commentaire_modere', __('Your comment is waiting for moderation.', 'etendard')); ?></em>
 					<?php endif; ?>
 					<?php echo get_avatar($comment, 104); ?>
 				</aside>
@@ -529,7 +529,7 @@ if (!function_exists('etendard_comment')){
 							<?php echo apply_filters('etendard_commentaire_auteur', sprintf(__('%s', 'etendard'), sprintf(__('<cite class="fn">%s</cite>', 'etendard'), get_comment_author_link()))); ?>
 						</div>
 						<span class="comment-date">
-							<?php echo apply_filters('etendard_commentaire_date', sprintf(__('Publié le %s à %s', 'etendard'),get_comment_date(),get_comment_time('H:i'))); ?>
+							<?php echo apply_filters('etendard_commentaire_date', sprintf(__('Published on %s at %s', 'etendard'),get_comment_date(),get_comment_time('H:i'))); ?>
 						</span>
 					</header>
 		 
@@ -542,7 +542,7 @@ if (!function_exists('etendard_comment')){
 						comment_reply_link(array_merge($args, 
 							array(	'depth'=>$depth, 
 									'max_depth'=>$args['max_depth'],
-									'reply_text'=>apply_filters('etendard_commentaire_repondre', __('Répondre', 'etendard'))))); 
+									'reply_text'=>apply_filters('etendard_commentaire_repondre', __('Reply', 'etendard'))))); 
 						?>
 					</div><!-- .reply -->
 				</div>
@@ -818,7 +818,7 @@ if(!function_exists('etendard_edd')){
 				'version' 	=> EDD_SL_THEME_VERSION,
 				'license' 	=> $license,
 				'item_name' => EDD_SL_THEME_NAME,
-				'author'	=> 'Thèmes de France'
+				'author'	=> __('Themes de France','etendard')
 			)
 		);
 	}
@@ -839,7 +839,7 @@ if(!function_exists('etendard_admin_notice')){
 		
 		if(!get_option('page_for_posts')){
 			echo '<div class="error"><p>';
-			_e("Vous n'avez pas défini de page pour les articles", 'etendard');
+			printf(__('You did not set up any page for posts. <a href="%s">Click here to fix it</a>', 'etendard'), admin_url('options-reading.php'));
 			echo '</p></div>';
 		}
 	}

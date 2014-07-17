@@ -7,7 +7,7 @@
 <section class="blog">
 	<div class="wrapper">
 		<h2 class="center">
-			<?php echo apply_filters('etendard_home_articles', __('Derniers articles', 'etendard')); ?>
+			<?php echo apply_filters('etendard_home_articles', __('Last Posts', 'etendard')); ?>
 		</h2>
 		<ul class="blog">
 			<?php while ($articles->have_posts()) : $articles->the_post(); ?>
@@ -60,7 +60,7 @@
 						<?php echo etendard_excerpt(20); ?>
 					</div>
 					<a href="<?php the_permalink(); ?>" class="more-link">
-						<?php _e('Lire la suite', 'etendard'); ?>
+						<?php _e('Read more', 'etendard'); ?>
 					</a>
 				</article>
 			</li>
@@ -68,7 +68,7 @@
 		</ul>
 		<div class="cta-wrapper">
 			<a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="cta-button">
-				<?php echo apply_filters('etendard_home_articles_lien', __('Consulter les articles', 'etendard')); ?>
+				<?php echo apply_filters('etendard_home_articles_lien', __('Read the blog', 'etendard')); ?>
 			</a>
 		</div>
 	</div>

@@ -15,33 +15,33 @@
 		<?php }else if(is_category()){ ?>
 		
 			<h1 class="headerbartitle">
-				<?php single_cat_title(_e('Articles classés dans ', 'etendard')); ?>
+				<?php single_cat_title(_e('Posts from ', 'etendard')); ?>
 			</h1>
 		
 		<?php }else if(is_tag()){ ?>
 		
 			<h1 class="headerbartitle">
-				<?php single_tag_title(_e('Articles identifiés par ', 'etendard')); ?>
+				<?php single_tag_title(_e('Posts tagged by ', 'etendard')); ?>
 			</h1>
 			
 		<?php }else if(is_search()){ ?>
 		
 			<h1 class="headerbartitle">
-				<?php printf( __( 'Résultats de recherche pour : %s', 'etendard' ), get_search_query() ); ?>
+				<?php printf( __( 'Search results for : %s', 'etendard' ), get_search_query() ); ?>
 			</h1>
 		
 		<?php }else if(is_archive()){ ?>
 			<h1 class="headerbartitle">
 				<?php if (is_day()) { 
-						_e('Archives du ', 'etendard');
+						_e('Archives from ', 'etendard');
 						the_time(get_option('date_format'));
 					}
 					elseif(is_month()){
-						_e('Archives de ', 'etendard');
+						_e('Archives for ', 'etendard');
 						the_time('F Y');
 					}
 					elseif(is_year()){
-						_e('Archives de ', 'etendard');
+						_e('Archives for ', 'etendard');
 						the_time('Y');
 					}
 					else{

@@ -46,7 +46,7 @@ Template Name: Services
 					<?php the_excerpt(); ?>
 				</p>
 				<a href="<?php the_permalink(); ?>" class="more-link">
-					<?php _e('Lire la suite', 'etendard'); ?>
+					<?php _e('Read more', 'etendard'); ?>
 				</a>
 			</li>
 			
@@ -54,8 +54,8 @@ Template Name: Services
 		</ul>
 		
 		<div class="pagination">
-			<?php previous_posts_link(apply_filters('etendard_pagination_precedente', __('Page précédente', 'etendard'))); ?>
-			<?php next_posts_link(apply_filters('etendard_pagination_suivante', __('Page suivante', 'etendard'))); ?> 
+			<?php previous_posts_link(apply_filters('etendard_pagination_precedente', __('Previous Page', 'etendard'))); ?>
+			<?php next_posts_link(apply_filters('etendard_pagination_suivante', __('Next Page', 'etendard'))); ?> 
 		</div>
 	</div>
 </section>

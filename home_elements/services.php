@@ -1,8 +1,8 @@
 <?php $services = new WP_Query(array(
-								'posts_per_page'=>apply_filters('etendard_home_services_nombre', 3),
-								'post_type'=>'service',
-								'orderby'=>'date'
-								));
+					'posts_per_page'=>apply_filters('etendard_home_services_nombre', 3),
+					'post_type'=>'service',
+					'orderby'=>'date'
+					));
 								
 switch ($services->post_count){
 	case 1:
@@ -39,7 +39,7 @@ switch ($services->post_count){
 					<?php echo etendard_excerpt(30); ?>
 				</p>
 				<a href="<?php the_permalink(); ?>" class="more-link">
-					<?php _e('Lire la suite', 'etendard'); ?>
+					<?php _e('Read more', 'etendard'); ?>
 				</a>
 			</li>
 			<?php endwhile; ?>

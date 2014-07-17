@@ -1,7 +1,9 @@
-<?php $portfolios = new WP_Query(array(
-								'posts_per_page'=>apply_filters('etendard_home_portfolio_nombre', 1),
-								'post_type'=>'portfolio'
-								));
+<?php 
+
+$portfolios = new WP_Query(array(
+				'posts_per_page'=>apply_filters('etendard_home_portfolio_nombre', 1),
+				'post_type'=>'portfolio'
+				));
 								
 switch ($portfolios->post_count){
 	case 1:
@@ -20,7 +22,7 @@ switch ($portfolios->post_count){
 <section class="portfolio">
 	<div class="wrapper">
 		<h2 class="center">
-			<?php apply_filters('etendard_home_portfolio', __('Derniers travaux', 'etendard')); ?>
+			<?php apply_filters('etendard_home_portfolio', __('Last Projects', 'etendard')); ?>
 		</h2>
 		<ul class="portfolio">
 			<?php while ($portfolios->have_posts()) : $portfolios->the_post(); ?>
@@ -53,7 +55,7 @@ switch ($portfolios->post_count){
 		</ul>
 		<div class="cta-wrapper">
 			<a href="<?php echo etendard_portfolio_page_link(); ?>" class="cta-button">
-				<?php echo apply_filters('etendard_home_portfolio_lien', __('Consulter le portfolio', 'etendard')); ?>
+				<?php echo apply_filters('etendard_home_portfolio_lien', __('Check the portfolio', 'etendard')); ?>
 			</a>
 		</div>
 	</div>
