@@ -86,7 +86,7 @@ else if (is_tax('portfolio_categorie')){
 				<?php if(get_option('etendard_boutons_portfolio') != '0'){ ?>
 					<div class="cta-wrapper">
 						<a href="<?php the_permalink(); ?>" class="cta-button">
-							<?php echo apply_filters('etendard_portfolio_label', _e('Read more', 'etendard')); ?>
+							<?php echo apply_filters('etendard_portfolio_label', __('Read more', 'etendard')); ?>
 						</a>
 					</div>
 				<?php } ?>
