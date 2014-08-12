@@ -1,4 +1,5 @@
 jQuery(function($){
+	
 	$('.gallery').each(function(){
 		var $gallery = $(this),
 			galName = 'group-'+Math.round(Math.random()*1000);
@@ -8,6 +9,9 @@ jQuery(function($){
 			$(this).attr('title', this.title);
 		}).fancybox();
 	});
+	
+	// Fancybox on links with the fancybox class
+	$('.fancybox').fancybox();
 
 });
 
