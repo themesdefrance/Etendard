@@ -1,18 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Etendard\n"
-"POT-Creation-Date: 2014-08-20 16:44+0100\n"
-"PO-Revision-Date: 2014-08-20 16:45+0100\n"
+"POT-Creation-Date: 2014-08-20 17:31+0100\n"
+"PO-Revision-Date: 2014-08-20 17:31+0100\n"
 "Last-Translator: \n"
 "Language-Team: Themes de France <alex@themesdefrance.fr>\n"
-"Language: English\n"
+"Language: French\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
-"X-Poedit-KeywordsList: __;_e;_x;_n\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_n:1,2;_ex:1,2c\n"
 "X-Poedit-Basepath: .\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1) ;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
@@ -182,22 +182,38 @@ msgstr "Ajouter des widgets dans le pied de page."
 msgid "Post"
 msgstr "Article"
 
-#: ../functions.php:122 ../functions.php:124
+#: ../functions.php:122
+msgctxt "project post type general name"
 msgid "Projects"
 msgstr "Projets"
 
-#: ../functions.php:123 ../functions.php:125 ../functions.php:139
+#: ../functions.php:123
+msgctxt "project post type singular name"
 msgid "Project"
 msgstr "Projet"
 
-#: ../functions.php:126 ../functions.php:128 ../functions.php:170
-#: ../functions.php:172
+#: ../functions.php:124
+msgctxt "projects admin menu"
+msgid "Projects"
+msgstr "Projets"
+
+#: ../functions.php:125
+msgctxt "add new project on admin bar"
+msgid "Project"
+msgstr "Projet"
+
+#: ../functions.php:126
+msgctxt "add new portfolio"
 msgid "Add New"
-msgstr "Ajouter"
+msgstr "Ajouter "
 
 #: ../functions.php:127
 msgid "Add New Project"
 msgstr "Ajouter un projet"
+
+#: ../functions.php:128 ../functions.php:172
+msgid "Add New"
+msgstr "Ajouter"
 
 #: ../functions.php:129
 msgid "Edit Project"
@@ -227,6 +243,10 @@ msgstr "Aucun projet trouvé."
 msgid "No Projects found in Trash."
 msgstr "Aucun projet trouvé dans la corbeille."
 
+#: ../functions.php:139
+msgid "Project"
+msgstr "Projet"
+
 #: ../functions.php:145
 msgid "project"
 msgstr "projet"
@@ -235,14 +255,30 @@ msgstr "projet"
 msgid "Categories"
 msgstr "Catégories"
 
-#: ../functions.php:166 ../functions.php:168 ../functions.php:175
-#: ../functions.php:183 ../admin/index.php:46
+#: ../functions.php:166
+msgctxt "service post type general name"
 msgid "Services"
 msgstr "Services"
 
-#: ../functions.php:167 ../functions.php:169
+#: ../functions.php:167
+msgctxt "service post type singular name"
 msgid "Service"
 msgstr "Service"
+
+#: ../functions.php:168
+msgctxt "services admin menu"
+msgid "Services"
+msgstr "Services"
+
+#: ../functions.php:169
+msgctxt "add new service on admin bar"
+msgid "Service"
+msgstr "Service"
+
+#: ../functions.php:170
+msgctxt "add new service"
+msgid "Add New"
+msgstr "Ajouter"
 
 #: ../functions.php:171
 msgid "Add New Service"
@@ -255,6 +291,10 @@ msgstr "Modifier le service"
 #: ../functions.php:174
 msgid "View Service"
 msgstr "Voir le service"
+
+#: ../functions.php:175 ../functions.php:183 ../admin/index.php:46
+msgid "Services"
+msgstr "Services"
 
 #: ../functions.php:176
 msgid "Search Services"
@@ -271,6 +311,10 @@ msgstr "Aucun service trouvé."
 #: ../functions.php:179
 msgid "No Services Found in Trash."
 msgstr "Aucun service trouvé dans la corbeille."
+
+#: ../functions.php:280 ../admin/index.php:5
+msgid "Etendard Settings"
+msgstr "Options Étendard"
 
 #: ../functions.php:288
 msgid "You do not have sufficient permissions to access this page."
@@ -644,10 +688,6 @@ msgstr ""
 "\" title=\"%4s\">Découvrez les nouveautés</a> ou <a href=\"%5$s\"%6$s>Mettez "
 "à jour maintenant</a>."
 
-#: ../admin/index.php:5
-msgid "Etendard Settings"
-msgstr "Options Étendard"
-
 #: ../admin/index.php:8
 msgid "General"
 msgstr "Général"
@@ -687,11 +727,10 @@ msgstr "Sous-titre de la page d'accueil."
 
 #: ../admin/index.php:41
 msgid ""
-"Choose elements to display on the homepage and organize them with drag & "
-"drop :"
+"Choose elements to display on the homepage and organize them with drag & drop"
 msgstr ""
 "Choisir les éléments à afficher sur la page d'accueil et organisez les par "
-"glisser déposer :"
+"glisser déposer"
 
 #: ../admin/index.php:42
 msgid "Title and subtitle"

@@ -38,7 +38,7 @@ $form->setting(array('type'=>'text',
 					 ));
 
 $form->ordre('home_blocks',
-				__("Choose elements to display on the homepage and organize them with drag & drop :", 'etendard'),
+				__("Choose elements to display on the homepage and organize them with drag & drop", 'etendard'),
 				array(  'titre'=>__('Title and subtitle', 'etendard'),
 						'diaporama'=>__('Slider', 'etendard'),
 						'content'=>__('Content', 'etendard'),

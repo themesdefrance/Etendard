@@ -70,7 +70,7 @@ class EtendardAppelAction extends WP_Widget{
 			<textarea  class="widefat" id="<?php echo $this->get_field_id( 'desc' ); ?>" name="<?php echo $this->get_field_name( 'desc' ); ?>"><?php echo esc_attr( $fields['desc'] ); ?></textarea>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'libelle' ); ?>"><?php _e( 'Button\'s label:' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'libelle' ); ?>"><?php _e( 'Button\'s label:' , 'etendard' ); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'libelle' ); ?>" name="<?php echo $this->get_field_name( 'libelle' ); ?>" type="text" value="<?php echo esc_attr( $fields['libelle'] ); ?>">
 		</p>
 		<?php

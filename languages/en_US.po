@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Etendard\n"
-"POT-Creation-Date: 2014-08-20 16:11+0100\n"
-"PO-Revision-Date: 2014-08-20 16:11+0100\n"
+"POT-Creation-Date: 2014-08-20 17:22+0100\n"
+"PO-Revision-Date: 2014-08-20 17:22+0100\n"
 "Last-Translator: \n"
 "Language-Team: Themes de France <alex@themesdefrance.fr>\n"
 "Language: English\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
-"X-Poedit-KeywordsList: __;_e;_x;_n\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_n:1,2;_ex:1,2c\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -173,21 +173,37 @@ msgstr ""
 msgid "Post"
 msgstr ""
 
-#: ../functions.php:122 ../functions.php:124
+#: ../functions.php:122
+msgctxt "project post type general name"
 msgid "Projects"
 msgstr ""
 
-#: ../functions.php:123 ../functions.php:125 ../functions.php:139
+#: ../functions.php:123
+msgctxt "project post type singular name"
 msgid "Project"
 msgstr ""
 
-#: ../functions.php:126 ../functions.php:128 ../functions.php:170
-#: ../functions.php:172
+#: ../functions.php:124
+msgctxt "projects admin menu"
+msgid "Projects"
+msgstr ""
+
+#: ../functions.php:125
+msgctxt "add new project on admin bar"
+msgid "Project"
+msgstr ""
+
+#: ../functions.php:126
+msgctxt "add new portfolio"
 msgid "Add New"
 msgstr ""
 
 #: ../functions.php:127
 msgid "Add New Project"
+msgstr ""
+
+#: ../functions.php:128 ../functions.php:172
+msgid "Add New"
 msgstr ""
 
 #: ../functions.php:129
@@ -218,6 +234,10 @@ msgstr ""
 msgid "No Projects found in Trash."
 msgstr ""
 
+#: ../functions.php:139
+msgid "Project"
+msgstr ""
+
 #: ../functions.php:145
 msgid "project"
 msgstr ""
@@ -226,13 +246,29 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
-#: ../functions.php:166 ../functions.php:168 ../functions.php:175
-#: ../functions.php:183 ../admin/index.php:46
+#: ../functions.php:166
+msgctxt "service post type general name"
 msgid "Services"
 msgstr ""
 
-#: ../functions.php:167 ../functions.php:169
+#: ../functions.php:167
+msgctxt "service post type singular name"
 msgid "Service"
+msgstr ""
+
+#: ../functions.php:168
+msgctxt "services admin menu"
+msgid "Services"
+msgstr ""
+
+#: ../functions.php:169
+msgctxt "add new service on admin bar"
+msgid "Service"
+msgstr ""
+
+#: ../functions.php:170
+msgctxt "add new service"
+msgid "Add New"
 msgstr ""
 
 #: ../functions.php:171
@@ -245,6 +281,10 @@ msgstr ""
 
 #: ../functions.php:174
 msgid "View Service"
+msgstr ""
+
+#: ../functions.php:175 ../functions.php:183 ../admin/index.php:46
+msgid "Services"
 msgstr ""
 
 #: ../functions.php:176
@@ -261,6 +301,10 @@ msgstr ""
 
 #: ../functions.php:179
 msgid "No Services Found in Trash."
+msgstr ""
+
+#: ../functions.php:280 ../admin/index.php:5
+msgid "Etendard Settings"
 msgstr ""
 
 #: ../functions.php:288
@@ -594,10 +638,6 @@ msgid ""
 "a>."
 msgstr ""
 
-#: ../admin/index.php:5
-msgid "Etendard Settings"
-msgstr ""
-
 #: ../admin/index.php:8
 msgid "General"
 msgstr ""
@@ -617,6 +657,7 @@ msgid ""
 msgstr ""
 
 #: ../admin/index.php:24
+#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:65
 msgid "Title"
 msgstr ""
 
@@ -634,8 +675,7 @@ msgstr ""
 
 #: ../admin/index.php:41
 msgid ""
-"Choose elements to display on the homepage and organize them with drag & "
-"drop :"
+"Choose elements to display on the homepage and organize them with drag & drop"
 msgstr ""
 
 #: ../admin/index.php:42
@@ -792,23 +832,21 @@ msgid "Image"
 msgstr ""
 
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:48
-msgid "Lien"
-msgstr ""
-
-#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:65
-msgid "Titre"
+#: ../admin/meta-box/post_formats.php:8
+msgid "Link"
 msgstr ""
 
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:81
-msgid "Supprimer"
+#: ../admin/Cocorico/plugins/CocoricoComponents.php:304
+msgid "Delete"
 msgstr ""
 
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:95
-msgid "Ajouter"
+msgid "Add"
 msgstr ""
 
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:188
-msgid "supprimer"
+msgid "delete"
 msgstr ""
 
 #: ../admin/Cocorico/plugins/CocoricoComponents.php:180
@@ -817,10 +855,6 @@ msgstr ""
 
 #: ../admin/Cocorico/plugins/CocoricoComponents.php:257
 msgid "Select"
-msgstr ""
-
-#: ../admin/Cocorico/plugins/CocoricoComponents.php:304
-msgid "Delete"
 msgstr ""
 
 #: ../admin/meta-box/home_cta.php:16
@@ -848,10 +882,6 @@ msgstr ""
 
 #: ../admin/meta-box/portfolio_temoignage.php:21
 msgid "Optimal size is 160x110 pixels"
-msgstr ""
-
-#: ../admin/meta-box/post_formats.php:8
-msgid "Link"
 msgstr ""
 
 #: ../admin/meta-box/post_formats.php:17

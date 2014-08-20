@@ -98,7 +98,7 @@ if (!function_exists('etendard_setup')){
 		}
 		
 		// Load language
-		//	load_theme_textdomain('etendard', get_template_directory().'/local');
+		load_theme_textdomain('etendard', get_template_directory().'/languages');
 		
 		// Update Etendard new version
 		update_option( 'etendard_version', EDD_SL_THEME_VERSION );
@@ -119,11 +119,11 @@ if (!function_exists('etendard_init_cpt')){
 		
 		// Portfolio
 		$labels_portfolio = array(
-		'name'               => _x( 'Projects', 'post type general name', 'etendard' ),
-		'singular_name'      => _x( 'Project', 'post type singular name', 'etendard' ),
-		'menu_name'          => _x( 'Projects', 'admin menu', 'etendard' ),
-		'name_admin_bar'     => _x( 'Project', 'add new on admin bar', 'etendard' ),
-		'add_new'            => _x( 'Add New', 'portfolio', 'etendard' ),
+		'name'               => _x( 'Projects', 'project post type general name', 'etendard' ),
+		'singular_name'      => _x( 'Project', 'project post type singular name', 'etendard' ),
+		'menu_name'          => _x( 'Projects', 'projects admin menu', 'etendard' ),
+		'name_admin_bar'     => _x( 'Project', 'add new project on admin bar', 'etendard' ),
+		'add_new'            => _x( 'Add New', 'add new portfolio', 'etendard' ),
 		'add_new_item'       => __( 'Add New Project', 'etendard' ),
 		'new_item'           => __( 'Add New', 'etendard' ),
 		'edit_item'          => __( 'Edit Project', 'etendard' ),
@@ -163,11 +163,11 @@ if (!function_exists('etendard_init_cpt')){
 		
 		// Services
 		$labels_service = array(
-		'name'               => _x( 'Services', 'post type general name', 'etendard' ),
-		'singular_name'      => _x( 'Service', 'post type singular name', 'etendard' ),
-		'menu_name'          => _x( 'Services', 'admin menu', 'etendard' ),
-		'name_admin_bar'     => _x( 'Service', 'add new on admin bar', 'etendard' ),
-		'add_new'            => _x( 'Add New', 'service', 'etendard' ),
+		'name'               => _x( 'Services', 'service post type general name', 'etendard' ),
+		'singular_name'      => _x( 'Service', 'service post type singular name', 'etendard' ),
+		'menu_name'          => _x( 'Services', 'services admin menu', 'etendard' ),
+		'name_admin_bar'     => _x( 'Service', 'add new service on admin bar', 'etendard' ),
+		'add_new'            => _x( 'Add New', 'add new service', 'etendard' ),
 		'add_new_item'       => __( 'Add New Service', 'etendard' ),
 		'new_item'           => __( 'Add New', 'etendard' ),
 		'edit_item'          => __( 'Edit Service', 'etendard' ),
@@ -277,7 +277,7 @@ add_action('admin_init', 'etendard_admin_init');
 // Add Etendard admin menu
 if (!function_exists('etendard_admin_menu')){
 	function etendard_admin_menu(){
-		add_theme_page('Etendard Settings', 'Etendard Settings', 'edit_theme_options', 'etendard_options', 'etendard_options');
+		add_theme_page(__('Etendard Settings','etendard'), __('Etendard Settings','etendard'), 'edit_theme_options', 'etendard_options', 'etendard_options');
 	}
 }
 add_action('admin_menu', 'etendard_admin_menu');

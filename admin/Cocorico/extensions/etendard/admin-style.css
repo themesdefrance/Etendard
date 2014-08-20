@@ -42,3 +42,7 @@ ul.slip-target li.slip-reordering{
 #etendard_link input[type=url], #etendard_quote input[type=text], #etendard_video input[type=url]{
 	width:300px;
 }
+
+.attachment-preview:before{
+	padding-top:0;
+}
