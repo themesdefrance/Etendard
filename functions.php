@@ -175,7 +175,7 @@ if (!function_exists('etendard_init_cpt')){
 		'all_items'          => __( 'Services', 'etendard' ),
 		'search_items'       => __( 'Search Services', 'etendard' ),
 		'parent_item_colon'  => __( 'Parent Service:', 'etendard' ),
-		'not_found'          => __( 'No Services Found', 'etendard' ),
+		'not_found'          => __( 'No Services Found.', 'etendard' ),
 		'not_found_in_trash' => __( 'No Services Found in Trash.', 'etendard' ),
 		);
 		
@@ -335,7 +335,7 @@ if (!function_exists('etendard_register_custom_fields')){
 		);
 		
 		add_meta_box('etendard_portfolio_diaporama',
-					 __('Diaporama', 'etendard'),
+					 __('Slider', 'etendard'),
 					 'etendard_portfolio_diaporama',
 					 'portfolio',
 					 'normal',
@@ -526,7 +526,7 @@ if (!function_exists('etendard_comment')){
 				<div class="col-4-5">
 					<header class="comment-header">
 						<div class="comment-author vcard">
-							<?php echo apply_filters('etendard_commentaire_auteur', sprintf(__('%s', 'etendard'), sprintf(__('<cite class="fn">%s</cite>', 'etendard'), get_comment_author_link()))); ?>
+							<?php echo apply_filters('etendard_commentaire_auteur', sprintf('%s', sprintf('<cite class="fn">%s</cite>', get_comment_author_link()))); ?>
 						</div>
 						<span class="comment-date">
 							<?php echo apply_filters('etendard_commentaire_date', sprintf(__('Published on %s at %s', 'etendard'),get_comment_date(),get_comment_time('H:i'))); ?>
@@ -833,7 +833,7 @@ if(!function_exists('etendard_admin_notice')){
 	function etendard_admin_notice(){
 		if(!get_option('etendard_license_status')){
 			echo '<div class="error"><p>';
-			_e("Afin de pouvoir bénéficier des mises à jour et du support, veuillez renseigner votre numéro de licence. Vous avez dû le recevoir par email.", 'etendard');
+			_e("In order to get updates, please enter your licence that you received by email.", 'etendard');
 			echo '</p></div>';
 		}
 		

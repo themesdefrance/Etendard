@@ -1,0 +1,953 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Etendard\n"
+"POT-Creation-Date: 2014-08-20 16:11+0100\n"
+"PO-Revision-Date: 2014-08-20 16:11+0100\n"
+"Last-Translator: \n"
+"Language-Team: Themes de France <alex@themesdefrance.fr>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:6
+msgid "Oops, there is nothing here..."
+msgstr ""
+
+#: ../404.php:9
+msgid "Error 404"
+msgstr ""
+
+#: ../404.php:11
+#, php-format
+msgid ""
+"The page you requested does not seem to exist. <a href=\"%s\">Click here</a> "
+"to get back to the home page."
+msgstr ""
+
+#: ../call_to_action.php:33 ../admin/widgets/appel-action.php:30
+msgid "Click here"
+msgstr ""
+
+#: ../comments.php:15 ../comments.php:43
+#, php-format
+msgid "Reply to %s"
+msgstr ""
+
+#: ../comments.php:16 ../comments.php:44
+msgid "Post comment"
+msgstr ""
+
+#: ../comments.php:26
+msgid "Previous comments"
+msgstr ""
+
+#: ../comments.php:29
+msgid "Next comments"
+msgstr ""
+
+#: ../comments.php:36
+msgid "Be the first to post a comment."
+msgstr ""
+
+#: ../comments.php:49
+msgid "Comments are closed."
+msgstr ""
+
+#: ../content-body.php:10 ../content-body.php:22 ../template-portfolio.php:89
+#: ../template-services.php:49 ../home_elements/articles.php:63
+#: ../home_elements/services.php:42
+msgid "Read more"
+msgstr ""
+
+#: ../content-footer-meta.php:15
+msgid "Pages:"
+msgstr ""
+
+#: ../content-header-meta.php:5
+#, php-format
+msgid "Published on %2$s by <a href=\"%3$s\">%4$s</a> in %5$s | "
+msgstr ""
+
+#: ../content-header-meta.php:7
+msgid "No Comment"
+msgstr ""
+
+#: ../content-header-meta.php:7
+msgid "One Comment"
+msgstr ""
+
+#: ../content-header-meta.php:7
+msgid "% Comments"
+msgstr ""
+
+#: ../content-header-meta.php:9
+msgid "Edit"
+msgstr ""
+
+#: ../content-none.php:4
+#, php-format
+msgid ""
+"Sorry, no posts were found. You can <a href=\"%s\" title=\"Click here to get "
+"back to the homepage\">go back to the homepage</a> or use the search field "
+"below :"
+msgstr ""
+
+#: ../footer.php:17
+msgid ""
+"<strong>2014</strong> - Étendard by <a href=\"https://www.themesdefrance.fr"
+"\" target=\"_blank\">Themes de France</a>"
+msgstr ""
+
+#: ../footer.php:35
+msgid "Top"
+msgstr ""
+
+#: ../formulaire_contact.php:10
+msgid "Contact"
+msgstr ""
+
+#: ../formulaire_contact.php:26
+msgid "Name *"
+msgstr ""
+
+#: ../formulaire_contact.php:33
+msgid "Email *"
+msgstr ""
+
+#: ../formulaire_contact.php:40
+msgid "Subject"
+msgstr ""
+
+#: ../formulaire_contact.php:47
+msgid "Message *"
+msgstr ""
+
+#: ../formulaire_contact.php:53
+msgid "Send"
+msgstr ""
+
+#: ../formulaire_contact.php:59
+msgid "Succes ! You message was sent."
+msgstr ""
+
+#: ../formulaire_contact.php:60
+msgid "An error occured during sending, try again in a few minutes."
+msgstr ""
+
+#: ../functions.php:47
+msgid "Set up the main menu"
+msgstr ""
+
+#: ../functions.php:54
+msgid "Main menu"
+msgstr ""
+
+#: ../functions.php:55
+msgid "Footer menu"
+msgstr ""
+
+#: ../functions.php:59
+msgid "Sidebar"
+msgstr ""
+
+#: ../functions.php:61
+msgid "Add widgets in the sidebar."
+msgstr ""
+
+#: ../functions.php:69 ../admin/index.php:52
+msgid "Footer"
+msgstr ""
+
+#: ../functions.php:71
+msgid "Add widgets in the footer."
+msgstr ""
+
+#: ../functions.php:95
+msgid "Post"
+msgstr ""
+
+#: ../functions.php:122 ../functions.php:124
+msgid "Projects"
+msgstr ""
+
+#: ../functions.php:123 ../functions.php:125 ../functions.php:139
+msgid "Project"
+msgstr ""
+
+#: ../functions.php:126 ../functions.php:128 ../functions.php:170
+#: ../functions.php:172
+msgid "Add New"
+msgstr ""
+
+#: ../functions.php:127
+msgid "Add New Project"
+msgstr ""
+
+#: ../functions.php:129
+msgid "Edit Project"
+msgstr ""
+
+#: ../functions.php:130
+msgid "View Project"
+msgstr ""
+
+#: ../functions.php:131
+msgid "All Projects"
+msgstr ""
+
+#: ../functions.php:132
+msgid "Search Projects"
+msgstr ""
+
+#: ../functions.php:133
+msgid "Parent Project:"
+msgstr ""
+
+#: ../functions.php:134
+msgid "No Projects found."
+msgstr ""
+
+#: ../functions.php:135
+msgid "No Projects found in Trash."
+msgstr ""
+
+#: ../functions.php:145
+msgid "project"
+msgstr ""
+
+#: ../functions.php:159
+msgid "Categories"
+msgstr ""
+
+#: ../functions.php:166 ../functions.php:168 ../functions.php:175
+#: ../functions.php:183 ../admin/index.php:46
+msgid "Services"
+msgstr ""
+
+#: ../functions.php:167 ../functions.php:169
+msgid "Service"
+msgstr ""
+
+#: ../functions.php:171
+msgid "Add New Service"
+msgstr ""
+
+#: ../functions.php:173
+msgid "Edit Service"
+msgstr ""
+
+#: ../functions.php:174
+msgid "View Service"
+msgstr ""
+
+#: ../functions.php:176
+msgid "Search Services"
+msgstr ""
+
+#: ../functions.php:177
+msgid "Parent Service:"
+msgstr ""
+
+#: ../functions.php:178
+msgid "No Services Found."
+msgstr ""
+
+#: ../functions.php:179
+msgid "No Services Found in Trash."
+msgstr ""
+
+#: ../functions.php:288
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: ../functions.php:322
+msgid "Project Metas"
+msgstr ""
+
+#: ../functions.php:330 ../admin/meta-box/portfolio_temoignage.php:16
+msgid "Testimonial"
+msgstr ""
+
+#: ../functions.php:338 ../functions.php:362 ../admin/index.php:43
+#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:19
+msgid "Slider"
+msgstr ""
+
+#: ../functions.php:352 ../admin/index.php:45
+msgid "Call to action"
+msgstr ""
+
+#: ../functions.php:510
+msgid "Pingback:"
+msgstr ""
+
+#: ../functions.php:521
+msgid "Your comment is waiting for moderation."
+msgstr ""
+
+#: ../functions.php:532
+#, php-format
+msgid "Published on %s at %s"
+msgstr ""
+
+#: ../functions.php:545
+msgid "Reply"
+msgstr ""
+
+#: ../functions.php:821
+msgid "Themes de France"
+msgstr ""
+
+#: ../functions.php:836
+msgid ""
+"In order to get updates, please enter your licence that you received by "
+"email."
+msgstr ""
+
+#: ../functions.php:842
+#, php-format
+msgid ""
+"You did not set up any page for posts. <a href=\"%s\">Click here to fix it</"
+"a>"
+msgstr ""
+
+#: ../header-bar.php:5 ../header-bar.php:56
+msgid "Blog"
+msgstr ""
+
+#: ../header-bar.php:13 ../admin/index.php:10
+msgid "Portfolio"
+msgstr ""
+
+#: ../header-bar.php:18
+msgid "Posts from "
+msgstr ""
+
+#: ../header-bar.php:24
+msgid "Posts tagged by "
+msgstr ""
+
+#: ../header-bar.php:30
+#, php-format
+msgid "Search results for : %s"
+msgstr ""
+
+#: ../header-bar.php:36
+msgid "Archives from "
+msgstr ""
+
+#: ../header-bar.php:40 ../header-bar.php:44
+msgid "Archives for "
+msgstr ""
+
+#: ../header-bar.php:48
+msgid "Archives"
+msgstr ""
+
+#: ../header.php:30
+msgid "Your browser is <em>too old !"
+msgstr ""
+
+#: ../header.php:30
+msgid "Update your browser"
+msgstr ""
+
+#: ../header.php:30
+msgid "or"
+msgstr ""
+
+#: ../header.php:30
+msgid "Install Google Chrome Frame"
+msgstr ""
+
+#: ../header.php:30
+msgid "to display this website correctly"
+msgstr ""
+
+#: ../searchform.php:4
+msgid "Search :"
+msgstr ""
+
+#: ../searchform.php:6
+msgid "Search..."
+msgstr ""
+
+#: ../searchform.php:9
+msgid "Go"
+msgstr ""
+
+#: ../template-portfolio.php:39
+msgid "All"
+msgstr ""
+
+#: ../template-portfolio.php:98 ../template-services.php:57
+msgid "Previous Page"
+msgstr ""
+
+#: ../template-portfolio.php:99 ../template-services.php:58
+msgid "Next Page"
+msgstr ""
+
+#: ../admin/bienvenue.php:23 ../admin/bienvenue.php:24
+msgid "Etendard was updated"
+msgstr ""
+
+#: ../admin/bienvenue.php:32 ../admin/bienvenue.php:33
+msgid "Welcome to Etendard"
+msgstr ""
+
+#: ../admin/bienvenue.php:95
+msgid "What's new ?"
+msgstr ""
+
+#: ../admin/bienvenue.php:98
+msgid "Welcome"
+msgstr ""
+
+#: ../admin/bienvenue.php:109 ../admin/bienvenue.php:177
+#, php-format
+msgid "Welcome to Etendard %s"
+msgstr ""
+
+#: ../admin/bienvenue.php:110
+msgid ""
+"Thanks for updating Etendard, here are the good stuff we added in order to "
+"improve your website."
+msgstr ""
+
+#: ../admin/bienvenue.php:111 ../admin/bienvenue.php:179
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: ../admin/bienvenue.php:116
+msgid "Changelog"
+msgstr ""
+
+#: ../admin/bienvenue.php:120
+msgid ""
+"Go to Themes de France's blog (in french) to check the features we added in "
+"the last versions."
+msgstr ""
+
+#: ../admin/bienvenue.php:146
+msgid "Help us to improve Etendard"
+msgstr ""
+
+#: ../admin/bienvenue.php:151
+msgid "On social media"
+msgstr ""
+
+#: ../admin/bienvenue.php:152
+msgid ""
+"You can contribute to Etendard by giving us ideas and reporting bugs. We are "
+"on"
+msgstr ""
+
+#: ../admin/bienvenue.php:156
+msgid "On the forum"
+msgstr ""
+
+#: ../admin/bienvenue.php:157
+msgid "We are also on the"
+msgstr ""
+
+#: ../admin/bienvenue.php:157
+msgid "support forum"
+msgstr ""
+
+#: ../admin/bienvenue.php:157
+msgid ""
+"in order to help you get the most out of Etendard. Don't hesitate to ask "
+"questions we love have happy customers."
+msgstr ""
+
+#: ../admin/bienvenue.php:165
+msgid "Discover the new stuff"
+msgstr ""
+
+#: ../admin/bienvenue.php:178
+msgid ""
+"Thanks for buying Etendard, browse this page to discover how to set up your "
+"new theme."
+msgstr ""
+
+#: ../admin/bienvenue.php:183
+msgid "Follow these instructions in order to understand how Etendard works."
+msgstr ""
+
+#: ../admin/bienvenue.php:186
+msgid "The 3 first steps"
+msgstr ""
+
+#: ../admin/bienvenue.php:192
+msgid "Valid your licence key"
+msgstr ""
+
+#: ../admin/bienvenue.php:193
+msgid ""
+"After your purchase, you received a licence key. Go to \"Etendard settings\" "
+"&rarr; \"General\" and paste your licence in the input field. Once "
+"validated, you'll receive Etendard updates automatically."
+msgstr ""
+
+#: ../admin/bienvenue.php:195
+msgid "Choose the main color"
+msgstr ""
+
+#: ../admin/bienvenue.php:196
+msgid ""
+"Etendard can wear the color of your choice. Go to the \"Appearence\" tab to "
+"choose your site main color with the color picker."
+msgstr ""
+
+#: ../admin/bienvenue.php:198
+msgid "Upload your logo"
+msgstr ""
+
+#: ../admin/bienvenue.php:199
+msgid ""
+"Still in the \"Appearence\" tab, you can add your logo to your site. Click "
+"on select to upload a picture as a logo."
+msgstr ""
+
+#: ../admin/bienvenue.php:205
+msgid "What you can do next"
+msgstr ""
+
+#: ../admin/bienvenue.php:210
+msgid "Set up the homepage"
+msgstr ""
+
+#: ../admin/bienvenue.php:211
+msgid ""
+"Choose the elements to display in \"Etendard Setting\" &rarr; \"General\". "
+"Don't forget to define a page as homepage (some other options will show up "
+"on this page)."
+msgstr ""
+
+#: ../admin/bienvenue.php:215
+msgid "Add some projects to your portfolio"
+msgstr ""
+
+#: ../admin/bienvenue.php:216
+msgid ""
+"Once you defined a portfolio page, add some projects to show the world what "
+"you do."
+msgstr ""
+
+#: ../admin/bienvenue.php:220
+msgid "And don't forget the ..."
+msgstr ""
+
+#: ../admin/bienvenue.php:221
+msgid ""
+"Footer optimization, sidebar position or the \"Etendard Social\" widget."
+msgstr ""
+
+#: ../admin/bienvenue.php:228
+msgid "All right, I'm ready to  set up Etendard"
+msgstr ""
+
+#: ../admin/bienvenue.php:232
+msgid "Need help with Etendard ?"
+msgstr ""
+
+#: ../admin/bienvenue.php:237
+msgid "Check the documentation"
+msgstr ""
+
+#: ../admin/bienvenue.php:238
+msgid ""
+"When you <a href=\"https://www.themesdefrance.fr/documentation/manuel-"
+"etendard/\" target=\"_blank\">login to Themes de France</a>, you will access "
+"videos and tutorials to help you to setup Etendard."
+msgstr ""
+
+#: ../admin/bienvenue.php:242
+msgid "Ask questions on the forums"
+msgstr ""
+
+#: ../admin/bienvenue.php:243
+msgid ""
+"Themes de France team is here to help you to have your site up and running."
+msgstr ""
+
+#: ../admin/EDD_SL_Theme_Updater.php:56
+msgid ""
+"Updating this theme will lose any customizations you have made. 'Cancel' to "
+"stop, 'OK' to update."
+msgstr ""
+
+#: ../admin/EDD_SL_Theme_Updater.php:61
+#, php-format
+msgid ""
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
+"title=\"%4s\">Discover what's new</a> or <a href=\"%5$s\"%6$s>Update now !</"
+"a>."
+msgstr ""
+
+#: ../admin/index.php:5
+msgid "Etendard Settings"
+msgstr ""
+
+#: ../admin/index.php:8
+msgid "General"
+msgstr ""
+
+#: ../admin/index.php:9
+msgid "Appearance"
+msgstr ""
+
+#: ../admin/index.php:19
+msgid "License"
+msgstr ""
+
+#: ../admin/index.php:20
+msgid ""
+"Enter your licence key in order to receive Etendard updates. You'll find it "
+"in the confirmation email we sent you after your purchase."
+msgstr ""
+
+#: ../admin/index.php:24
+msgid "Title"
+msgstr ""
+
+#: ../admin/index.php:25
+msgid "Title in the homepage banner."
+msgstr ""
+
+#: ../admin/index.php:33
+msgid "Subtitle"
+msgstr ""
+
+#: ../admin/index.php:34
+msgid "Subtitle in the homepage banner."
+msgstr ""
+
+#: ../admin/index.php:41
+msgid ""
+"Choose elements to display on the homepage and organize them with drag & "
+"drop :"
+msgstr ""
+
+#: ../admin/index.php:42
+msgid "Title and subtitle"
+msgstr ""
+
+#: ../admin/index.php:44
+msgid "Content"
+msgstr ""
+
+#: ../admin/index.php:47
+msgid "Last projects"
+msgstr ""
+
+#: ../admin/index.php:48
+msgid "Last posts"
+msgstr ""
+
+#: ../admin/index.php:53
+msgid ""
+"Left footer content. The following HTML tags are allowed : &lt;a href=&quot;"
+"LINK&quot;&gt;TEXT_LINK&lt;/a&gt;, &lt;strong&gt;BOLD_TEXT&lt;/strong&gt;, "
+"&lt;em&gt;ITALIC_TEXT&lt;/em&gt;, &lt;img src=&quot;IMAGE_URL&quot;&gt;."
+msgstr ""
+
+#: ../admin/index.php:55
+msgid ""
+"<strong>2014</strong> - Etendard by <a href=\"https://www.themesdefrance.fr/"
+"\" target=\"_blank\">Themes de France</a>"
+msgstr ""
+
+#: ../admin/index.php:69
+msgid "Main color"
+msgstr ""
+
+#: ../admin/index.php:70
+msgid "This color will be used across your site for buttons, links, etc."
+msgstr ""
+
+#: ../admin/index.php:74
+msgid "Logo"
+msgstr ""
+
+#: ../admin/index.php:75
+msgid ""
+"The image filetype should be JPG or PNG. Note that the optimal size is 280px "
+"by 60px."
+msgstr ""
+
+#: ../admin/index.php:78
+msgid "Slider width"
+msgstr ""
+
+#: ../admin/index.php:81
+msgid "Boxed"
+msgstr ""
+
+#: ../admin/index.php:82
+msgid "Fullsize"
+msgstr ""
+
+#: ../admin/index.php:91
+msgid "Slider height (in pixels)"
+msgstr ""
+
+#: ../admin/index.php:97
+msgid "Sidebar position"
+msgstr ""
+
+#: ../admin/index.php:100
+msgid "Right"
+msgstr ""
+
+#: ../admin/index.php:101
+msgid "Left"
+msgstr ""
+
+#: ../admin/index.php:102
+msgid "Nowhere"
+msgstr ""
+
+#: ../admin/index.php:105
+msgid ""
+"Sidebar could be placed on the right or on the left of the main content. "
+"Most sites place them on the right but you could do the opposite :)"
+msgstr ""
+
+#: ../admin/index.php:109
+msgid "Additionnal CSS"
+msgstr ""
+
+#: ../admin/index.php:110
+msgid ""
+"CSS rules added in this field will be added to your site. If you have too "
+"many updates, you should create a child theme."
+msgstr ""
+
+#: ../admin/index.php:121
+msgid "Display excerpts"
+msgstr ""
+
+#: ../admin/index.php:126
+msgid ""
+"Check this to display excerpts underneath the projects on the portfolio page."
+msgstr ""
+
+#: ../admin/index.php:129
+msgid "Display buttons"
+msgstr ""
+
+#: ../admin/index.php:134
+msgid ""
+"Check this to display buttons underneath the projects on the portfolio page."
+msgstr ""
+
+#: ../admin/index.php:137
+msgid "Project metas"
+msgstr ""
+
+#: ../admin/index.php:139
+msgid ""
+"Add metas to enhance your projects (the client, his website, etc.). Add "
+"values to each meta in the \"Projects metas\" metabox on each project page."
+msgstr ""
+
+#: ../admin/index.php:145 ../admin/meta-box/home_cta.php:12
+msgid "Call to action destination (url)"
+msgstr ""
+
+#: ../admin/index.php:149
+msgid ""
+"Write an incentive to get people to click on the call to action, be "
+"convincing ;)"
+msgstr ""
+
+#: ../admin/index.php:153
+msgid "Button's label (Example : \"Contact-us\")."
+msgstr ""
+
+#: ../admin/index.php:158
+msgid "Save changes"
+msgstr ""
+
+#: ../admin/migration.php:69
+msgid "Customer"
+msgstr ""
+
+#: ../admin/migration.php:69
+msgid "URL"
+msgstr ""
+
+#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:27
+msgid "Image"
+msgstr ""
+
+#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:48
+msgid "Lien"
+msgstr ""
+
+#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:65
+msgid "Titre"
+msgstr ""
+
+#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:81
+msgid "Supprimer"
+msgstr ""
+
+#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:95
+msgid "Ajouter"
+msgstr ""
+
+#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:188
+msgid "supprimer"
+msgstr ""
+
+#: ../admin/Cocorico/plugins/CocoricoComponents.php:180
+msgid "Save all changes"
+msgstr ""
+
+#: ../admin/Cocorico/plugins/CocoricoComponents.php:257
+msgid "Select"
+msgstr ""
+
+#: ../admin/Cocorico/plugins/CocoricoComponents.php:304
+msgid "Delete"
+msgstr ""
+
+#: ../admin/meta-box/home_cta.php:16
+msgid "Call to action incentive"
+msgstr ""
+
+#: ../admin/meta-box/home_cta.php:20
+msgid "Button's label"
+msgstr ""
+
+#: ../admin/meta-box/portfolio_client.php:22
+#, php-format
+msgid ""
+"No project metas were defined. If you want to, go in the portfolio tab <a "
+"href=\"%s\" >in Etendard Options</a>."
+msgstr ""
+
+#: ../admin/meta-box/portfolio_temoignage.php:12
+msgid "Name"
+msgstr ""
+
+#: ../admin/meta-box/portfolio_temoignage.php:20
+msgid "Avatar"
+msgstr ""
+
+#: ../admin/meta-box/portfolio_temoignage.php:21
+msgid "Optimal size is 160x110 pixels"
+msgstr ""
+
+#: ../admin/meta-box/post_formats.php:8
+msgid "Link"
+msgstr ""
+
+#: ../admin/meta-box/post_formats.php:17
+msgid "Quote"
+msgstr ""
+
+#: ../admin/meta-box/post_formats.php:26 ../admin/meta-box/post_formats.php:42
+msgid "Video"
+msgstr ""
+
+#: ../admin/meta-box/post_formats.php:61
+msgid "Link to feature"
+msgstr ""
+
+#: ../admin/meta-box/post_formats.php:62
+msgid ""
+"Add a link to feature for this post. You're free to talk about it in the "
+"post content."
+msgstr ""
+
+#: ../admin/meta-box/post_formats.php:77
+msgid "Quote to feature"
+msgstr ""
+
+#: ../admin/meta-box/post_formats.php:78
+msgid "Add some wise words and talk about it in the post content."
+msgstr ""
+
+#: ../admin/meta-box/post_formats.php:84
+msgid "Quote author (optional)"
+msgstr ""
+
+#: ../admin/meta-box/post_formats.php:85
+msgid "Be nice and don't forget to credit the quote author."
+msgstr ""
+
+#: ../admin/meta-box/post_formats.php:101
+msgid "Video to feature"
+msgstr ""
+
+#: ../admin/meta-box/post_formats.php:102
+msgid "Add a video link from Youtube, Dailymotion or Vimeo."
+msgstr ""
+
+#: ../admin/widgets/appel-action.php:9
+msgid "Etendard - Call to action"
+msgstr ""
+
+#: ../admin/widgets/appel-action.php:10
+msgid "Add a call to action in the sidebar."
+msgstr ""
+
+#: ../admin/widgets/appel-action.php:61
+msgid "Title:"
+msgstr ""
+
+#: ../admin/widgets/appel-action.php:65
+msgid "Call to action destination (url):"
+msgstr ""
+
+#: ../admin/widgets/appel-action.php:69
+msgid "Call to action incentive:"
+msgstr ""
+
+#: ../admin/widgets/appel-action.php:73
+msgid "Button's label:"
+msgstr ""
+
+#: ../admin/widgets/social.php:24
+msgid "Étendard Social"
+msgstr ""
+
+#: ../admin/widgets/social.php:25
+msgid "Display links to your social profiles."
+msgstr ""
+
+#: ../admin/widgets/social.php:64
+msgid "Please enter a valid url"
+msgstr ""
+
+#: ../admin/widgets/social.php:80
+msgid "More networks"
+msgstr ""
+
+#: ../home_elements/articles.php:10
+msgid "Last Posts"
+msgstr ""
+
+#: ../home_elements/articles.php:71
+msgid "Read the blog"
+msgstr ""
+
+#: ../home_elements/portfolio.php:25
+msgid "Last Projects"
+msgstr ""
+
+#: ../home_elements/portfolio.php:58
+msgid "Check the portfolio"
+msgstr ""

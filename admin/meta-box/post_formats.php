@@ -81,7 +81,7 @@ function etendard_quote_callback( $post ) {
 	
 	$form->setting(array('type'=>'text',
 					 'name'=>'_quote_author_meta',
-					 'label'=>__('Auteur de la citation (facultatif)', 'etendard'),
+					 'label'=>__('Quote author (optional)', 'etendard'),
 					 'description' => __('Be nice and don\'t forget to credit the quote author.','etendard')
 					 )
 				  );

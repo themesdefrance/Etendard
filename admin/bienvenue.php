@@ -20,8 +20,8 @@ class Etendard_Welcome {
 	public function admin_menus() {
 		// Update
 		add_dashboard_page(
-			__('Étendard a été mis à jour', 'etendard'),
-			__('Étendard a été mis à jour', 'etendard'),
+			__('Etendard was updated', 'etendard'),
+			__('Etendard was updated', 'etendard'),
 			$this->minimum_capability,
 			'etendard-update',
 			array( $this, 'update_screen' )
@@ -29,8 +29,8 @@ class Etendard_Welcome {
 
 		// First Installation
 		add_dashboard_page(
-			__('Bienvenue sur Étendard', 'etendard'),
-			__('Bienvenue sur Étendard', 'etendard'),
+			__('Welcome to Etendard', 'etendard'),
+			__('Welcome to Etendard', 'etendard'),
 			$this->minimum_capability,
 			'etendard-bienvenue',
 			array( $this, 'bienvenue_screen' )
@@ -71,11 +71,6 @@ class Etendard_Welcome {
 			margin-left: 10px!important;
 		}
 		
-		.etendard-video {
-			float: right;
-			margin-left: 10px!important;
-		}
-		
 		.etendard-merci{
 			font-style:italic;
 		}
@@ -97,10 +92,10 @@ class Etendard_Welcome {
 		?>
 		<h2 class="nav-tab-wrapper">
 			<a class="nav-tab <?php echo $selected == 'etendard-update' ? 'nav-tab-active' : ''; ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'etendard-update' ), 'index.php' ) ) ); ?>">
-				<?php _e( "Quoi de neuf ?", 'etendard' ); ?>
+				<?php _e( "What's new ?", 'etendard' ); ?>
 			</a>
 			<a class="nav-tab <?php echo $selected == 'etendard-bienvenue' ? 'nav-tab-active' : ''; ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'etendard-bienvenue' ), 'index.php' ) ) ); ?>">
-				<?php _e( 'Bienvenue', 'etendard' ); ?>
+				<?php _e( 'Welcome', 'etendard' ); ?>
 			</a>
 		</h2>
 		<?php
@@ -111,123 +106,55 @@ class Etendard_Welcome {
 		list( $display_version ) = explode( '-', EDD_SL_THEME_VERSION );
 		?>
 		<div class="wrap about-wrap">
-			<h1><?php printf( __( 'Bienvenue sur Étendard %s', 'etendard' ), $display_version ); ?></h1>
-			<div class="about-text"><?php printf( __( 'Merci d\'avoir procédé à la mise à jour, vous allez pouvoir découvrir ce que nous avons amélioré pour que votre site web soit encore plus performant.', 'etendard' ), $display_version ); ?></div>
+			<h1><?php printf( __( 'Welcome to Etendard %s', 'etendard' ), $display_version ); ?></h1>
+			<div class="about-text"><?php printf( __( 'Thanks for updating Etendard, here are the good stuff we added in order to improve your website.', 'etendard' ), $display_version ); ?></div>
 			<div class="etendard-badge"><?php printf( __( 'Version %s', 'etendard' ), $display_version ); ?></div>
 
 			<?php $this->tabs(); ?>
 
 			<div class="changelog">
-				<h3><?php _e( 'Présentation des nouveautés', 'etendard' );?></h3>
+				<h3><?php _e( 'Changelog', 'etendard' );?></h3>
 
 				<div class="feature-section">
-
-					<div class="etendard-video">
-						<iframe width="550" height="309" src="//www.youtube.com/embed/ngLS6vokwfA?rel=0" frameborder="0" allowfullscreen></iframe>
-					</div>
 					
-					<p>Comme d'habitude, nous avons réalisé une vidéo afin de vous présenter les améliorations que contient cette nouvelle version.</p>
-					
-					<p>Nous en profitons pour remercier toutes les personnes qui nous ont apporté des suggestions et permis de résoudre des bugs, vous allez pouvoir profiter de tout cela :)</p>
-					
-					<p>Un article a également été publié sur le blog de Thèmes de France pour revenir plus en détails sur cette version 1.012 d'Étendard.</p>
-					<p>
-						<a href="https://www.themesdefrance.fr/etendard-1-012-cocorico-social/?utm_source=SiteClient&utm_medium=Etendard&utm_campaign=1.012" class="button button-primary button-large" target="_blank">Lire l'article sur Thèmes de France</a>
-					</p>
+					<p><?php _e('Go to Themes de France\'s blog (in french) to check the features we added in the last versions.','etendard'); ?></p>
+					<ul>
+						<li>
+							<p><a href="https://www.themesdefrance.fr/etendard-1-013/" target="_blank">Étendard 1.013</a></p>
+						</li>
+						<li>
+							<p><a href="https://www.themesdefrance.fr/etendard-1-012-cocorico-social/" target="_blank" >Étendard 1.012</a></p>
+						</li>
+						<li>
+							<p><a href="https://www.themesdefrance.fr/etendard-version-1-011/" target="_blank">Étendard 1.011</a></p>
+						</li>
+						<li>
+							<p><a href="https://www.themesdefrance.fr/etendard-version-1-010/" target="_blank">Étendard 1.010</a></p>
+						</li>
+						<li>
+							<p><a href="https://www.themesdefrance.fr/themes-de-france-se-lance/" target="_blank">Étendard 1.009 (initial release)</a></p>
+						</li>
+					</ul>
 	
 				</div>
 			</div>
-
-			<hr>
-			
-			<div class="changelog">
-			
-			<h2 class="about-headline-callout">Les 3 améliorations majeures d'Étendard 1.012</h2>
-			
-				<div class="feature-section col three-col">
-
-					<div class="col-1">
-					
-						<img src="<?php echo get_template_directory_uri() . '/admin/img/contact-form-7.jpg'; ?>" alt="Formats articles" />
-						
-						<h4>Optimisation pour Contact Form 7</h4>
-						
-						<p>Si vous avez besoin de plus de champs sur la page de contact proposée par Étendard, nous vous recommandons d'utiliser le célèbre plugin Contact Form 7.</p><p>Tous les éléments de formulaires ont été optimisés pour s'intégrer au mieux avec Étendard.</p>
-					</div>
-					
-					<div class="col-2">
-					
-						<img src="<?php echo get_template_directory_uri() . '/admin/img/jetpack.jpg'; ?>" alt="Formats articles" />
-						
-						<h4>Optimisation pour JetPack</h4>
-						
-						<p>JetPack est un plugin qui propose pas mal de choses créé par l'équipe de WordPress.</p><p>Étendard intègre maintenant mieux les widgets proposés par Jetpack (le formulaire d'abonnement aux articles en fait partie).</p>
-					</div>
-					
-					<div class="col-3 last-feature">
-					
-						<img src="<?php echo get_template_directory_uri() . '/admin/img/filtres.jpg'; ?>" alt="Formats articles" />
-						
-						<h4>Une vingtaine de filtres ont été ajoutés</h4>
-						
-						<p>Plusieurs utilisateurs étaient désireux de personnaliser plus finement différents éléments d'Étendard.</p> <p>Afin de ne pas surcharger l'administration nous avons ajouté plusieurs filtres pour permettre une meilleure personnalisation. <a href="https://www.themesdefrance.fr/doc/etendard-filtres/" target="_blank">Cliquez ici</a> pour les découvrir en intégralité.</p>
-						
-					</div>
-				</div>
-			</div>
-			
-			<hr>
-			
-			<div class="changelog">
-				
-				<h2 class="about-headline-callout">Découvrez 3 autres optimisations</h2>
-				
-				<div class="feature-section col three-col">
-
-					<div class="col-1">
-						
-						<h4>Les balises schema.org ont été ajoutées</h4>
-						
-						<p>Derrière ce nom étrange se cache une simple optimisation du code d'Étendard pour <strong>améliorer le référencement</strong> de votre site.</p>
-						
-					</div>
-					
-					<div class="col-2">
-						
-						<h4>La date des commentaires est désormais affichée</h4>
-						
-						<p>Auparavant, la date de publication des commentaires n'était pas affichée. C'est désormais de l'histoire ancienne.</p>
-						
-						<p class="etendard-merci">Merci à Julie d'avoir suggéré cette amélioration.</p>
-					</div>
-					
-					<div class="col-3 last-feature">
-						
-						<h4>Les shortcodes ont été supprimés des extraits</h4>
-						
-						<p>Dans les versions précédentes, si vous insériez des shortcodes au début de vos articles, il figuraient toujours dans l'extrait généré par WordPress. Étendard possède maintenant des extraits doté uniquement de texte.</p>
-						
-						<p class="etendard-merci">Merci à Esther d'avoir fait remonter le problème.</p>
-					</div>
-				</div>
-			</div>
 			
 			<hr>
 			
 			<div class="changelog">
 			
-				<h3>Participez à l'amélioration d'Étendard</h3>
+				<h3><?php _e('Help us to improve Etendard','etendard'); ?></h3>
 					
 				<div class="feature-section col two-col">
 					
 					<div class="col-1">
-						<h4>Sur les réseaux sociaux</h4>
-						<p>Si vous le désirez, vous pouvez contribuer à l'amélioration d'Étendard en nous faisant part de vos idées et suggestions sur les réseaux sociaux. Nous sommes sur <a href="https://www.facebook.com/ThemesDeFrance" target="_blank">Facebook</a>, <a href="https://twitter.com/themesdefrance" target="_blank">Twitter</a> et <a href="https://plus.google.com/b/108963306408977874042/108963306408977874042/posts" target="_blank">Google+</a>.</p>
+						<h4><?php _e('On social media','etendard'); ?></h4>
+						<p><?php _e('You can contribute to Etendard by giving us ideas and reporting bugs. We are on','etendard'); ?> <a href="https://www.facebook.com/ThemesDeFrance" target="_blank">Facebook</a>, <a href="https://twitter.com/themesdefrance" target="_blank">Twitter</a> et <a href="https://plus.google.com/b/108963306408977874042/108963306408977874042/posts" target="_blank">Google+</a>.</p>
 					</div>
 					
 					<div class="col-2 last-feature">
-						<h4>Sur le forum</h4>
-						<p>Nous sommes également à votre écoute sur <a href="https://www.themesdefrance.fr/support/" target="_blank">le forum de support</a> pour vous aider à tirer le meilleur d'Étendard. N'hésitez surtout pas si vous avez des questions, nous avons à coeur d'avoir des clients satisfaits.</p>
+						<h4><?php _e('On the forum','etendard'); ?></h4>
+						<p><?php _e('We are also on the','etendard'); ?> <a href="https://www.themesdefrance.fr/support/" target="_blank"><?php _e('support forum','etendard'); ?></a> <?php _e('in order to help you get the most out of Etendard. Don\'t hesitate to ask questions we love have happy customers.','etendard'); ?></p>
 					</div>
 				</div>
 				
@@ -235,7 +162,7 @@ class Etendard_Welcome {
 			
 
 			<div class="return-to-dashboard">
-				<a href="<?php echo admin_url( 'themes.php?page=etendard_options') ?>" class="button button-primary">Découvrir les nouvelles fonctionnalités</a>
+				<a href="<?php echo admin_url( 'themes.php?page=etendard_options') ?>" class="button button-primary"><?php _e('Discover the new stuff','etendard'); ?></a>
 			</div>
 		</div>
 		<?php
@@ -247,73 +174,73 @@ class Etendard_Welcome {
 		list( $display_version ) = explode( '-', EDD_SL_THEME_VERSION );
 		?>
 		<div class="wrap about-wrap">
-			<h1><?php printf( __( 'Bienvenue sur Étendard %s', 'etendard' ), $display_version ); ?></h1>
-			<div class="about-text"><?php printf( __( 'Merci d\'avoir installé Étendard, parcourez le contenu de cette page pour découvrir comment mettre votre site en place.', 'etendard' ), $display_version ); ?></div>
+			<h1><?php printf( __( 'Welcome to Etendard %s', 'etendard' ), $display_version ); ?></h1>
+			<div class="about-text"><?php printf( __( 'Thanks for buying Etendard, browse this page to discover how to set up your new theme.', 'etendard' ), $display_version ); ?></div>
 			<div class="etendard-badge"><?php printf( __( 'Version %s', 'etendard' ), $display_version ); ?></div>
 
 			<?php $this->tabs(); ?>
 
-			<p class="about-description"><?php _e( 'Ces quelques indications vont vous permettre de prendre en main votre nouveau thème.', 'etendard' ); ?></p>
+			<p class="about-description"><?php _e( 'Follow these instructions in order to understand how Etendard works.', 'etendard' ); ?></p>
 
 			<div class="changelog">
-				<h3><?php _e( 'Les 3 premières choses à faire avec Étendard', 'etendard' );?></h3>
+				<h3><?php _e( 'The 3 first steps', 'etendard' );?></h3>
 
 				<div class="feature-section">
 
 					<img src="<?php echo get_template_directory_uri() . '/admin/img/premieres-etapes.png'; ?>" class="etendard-screenshots"/>
 
-					<h4><?php  _e( 'Validez votre clé de licence', 'etendard' ); ?></h4>
-					<p><?php  _e( 'Suite à votre commande, vous avez reçu une clé de licence. Entrez-là en allant dans "Options Étendard" &rarr; "Général" pour recevoir les mises à jour directement dans WordPress.', 'etendard' ); ?></p>
+					<h4><?php  _e( 'Valid your licence key', 'etendard' ); ?></h4>
+					<p><?php  _e( 'After your purchase, you received a licence key. Go to "Etendard settings" &rarr; "General" and paste your licence in the input field. Once validated, you\'ll receive Etendard updates automatically.', 'etendard' ); ?></p>
 
-					<h4><?php _e( 'Définissez une couleur principale', 'etendard' );?></h4>
-					<p><?php _e( 'Étendard peut arborer la couleur de votre choix. Rendez-vous dans l\'onglet "Apparence" des options pour la choisir avec le sélecteur de couleur.', 'etendard' );?></p>
+					<h4><?php _e( 'Choose the main color', 'etendard' );?></h4>
+					<p><?php _e( 'Etendard can wear the color of your choice. Go to the "Appearence" tab to choose your site main color with the color picker.', 'etendard' );?></p>
 
-					<h4><?php _e( 'Envoyez votre logo', 'etendard' );?></h4>
-					<p><?php _e( 'Toujours dans l\'onglet "Apparence", vous pouvez définir l\'image correspondant au logo de votre site. Cliquez sur le bouton "Sélectionner" pour envoyer/choisir une image dans votre bibliothèque de médias.', 'etendard' );?></p>
+					<h4><?php _e( 'Upload your logo', 'etendard' );?></h4>
+					<p><?php _e( 'Still in the "Appearence" tab, you can add your logo to your site. Click on select to upload a picture as a logo.', 'etendard' );?></p>
 
 				</div>
 			</div>
 
 			<div class="changelog">
-				<h3><?php _e( 'Ce que vous pouvez faire ensuite', 'etendard' );?></h3>
+				<h3><?php _e( 'What you can do next', 'etendard' );?></h3>
 
 				<div class="feature-section col three-col">
 
 					<div>
-						<h4><?php _e( 'Paramétrez votre page d\'accueil', 'etendard' ); ?></h4>
-						<p><?php _e( 'Déterminez les éléments à afficher en allant dans "Options Étendard" &rarr; "Général". Veillez à bien définir une page en tant que page d\'accueil (d\'autres options seront également disponibles sur cette page).', 'etendard' ); ?></p>
+						<h4><?php _e( 'Set up the homepage', 'etendard' ); ?></h4>
+						<p><?php _e( 'Choose the elements to display in "Etendard Setting" &rarr; "General". Don\'t forget to define a page as homepage (some other options will show up on this page).', 'etendard' ); ?></p>
 					</div>
 
 					<div>
-						<h4><?php _e( 'Ajoutez des éléments à votre portfolio', 'etendard' );?></h4>
-						<p><?php _e( 'Une fois que vous aurez défini une page portfolio, ajoutez-y des éléments pour montrer au monde ce que vous avez accompli.', 'etendard' );?></p>
+						<h4><?php _e( 'Add some projects to your portfolio', 'etendard' );?></h4>
+						<p><?php _e( 'Once you defined a portfolio page, add some projects to show the world what you do.', 'etendard' );?></p>
 					</div>
 					
 					<div class="last-feature">
-						<h4><?php _e( 'Sans oublier...', 'etendard' );?></h4>
-						<p><?php _e( 'La personnalisation du pied de page, la position de la barre latérale, l\'insertion du widget "Étendard Social", d\'appels à l\'action, etc.', 'etendard' );?></p>
+						<h4><?php _e( 'And don\'t forget the ...', 'etendard' );?></h4>
+						<p><?php _e( 'Footer optimization, sidebar position or the "Etendard Social" widget.', 'etendard' );?></p>
 					</div>
 					
 				</div>
 			</div>
 			
 			<div class="return-to-dashboard">
-				<a href="<?php echo admin_url( 'themes.php?page=etendard_options') ?>" class="button button-primary"><?php _e( 'C\'est bon, j\'attaque le paramétrage d\'Étendard', 'etendard' ); ?></a>
+				<a href="<?php echo admin_url( 'themes.php?page=etendard_options') ?>" class="button button-primary"><?php _e( 'All right, I\'m ready to  set up Etendard', 'etendard' ); ?></a>
 			</div>
 			
 			<div class="changelog">
-				<h3><?php _e( 'Besoin d\'aide avec Étendard ?', 'etendard' );?></h3>
+				<h3><?php _e( 'Need help with Etendard ?', 'etendard' );?></h3>
 
 				<div class="feature-section col three-col">
 					
 					<div>
-						<h4><?php _e( 'Consultez la documentation', 'etendard' ); ?></h4>
-						<p><?php _e( 'En vous <a href="https://www.themesdefrance.fr/documentation/manuel-etendard/" target="_blank">connectant sur Thèmes de France</a>, vous pourrez accéder aux vidéos et aux tutoriels qui vous aideront à paramétrer Étendard.', 'etendard' ); ?></p>
+						<h4><?php _e( 'Check the documentation', 'etendard' ); ?></h4>
+						<p><?php _e( 'When you <a href="https://www.themesdefrance.fr/documentation/manuel-etendard/" target="_blank">login to Themes de France</a>, you will access videos and tutorials to help you to setup Etendard.', 'etendard' ); ?></p>
 					</div>
 					
 					<div>
-						<h4><?php _e( 'Posez vos questions sur le forum de support', 'etendard' ); ?></h4>
-						<p><?php _e( 'Toute l\'équipe de Thèmes de France est là pour vous aider à régler tous problèmes relatifs à Étendard.', 'etendard' ); ?></p>
+						<h4><?php _e( 'Ask questions on the forums', 'etendard' ); ?></h4>
+						<p><?php _e( 'Themes de France team is here to help you to have your site up and running.', 'etendard' ); ?></p>
 					</div>
 				</div>
 				
@@ -322,8 +249,6 @@ class Etendard_Welcome {
 		</div>
 		<?php
 	}
-
-
 
 	// Redirect to the First Install or Update Page
 	public function welcome() {

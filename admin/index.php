@@ -2,7 +2,7 @@
 $form = new Cocorico(ETENDARD_COCORICO_PREFIX);
 
 $form->startWrapper('titre');
-$form->component('raw', __('Etendard Options', 'etendard'));
+$form->component('raw', __('Etendard Settings', 'etendard'));
 $form->endWrapper('titre');
 
 $form->groupHeader(array('general'=>__('General', 'etendard'), 
@@ -16,7 +16,7 @@ $form->startForm();
 
 $form->setting(array('type'=>'text',
 					 'name'=>substr(EDD_SL_LICENSE_KEY, strlen(ETENDARD_COCORICO_PREFIX)),
-					 'label'=>__("Licence", 'etendard'),
+					 'label'=>__("License", 'etendard'),
 					 'description'=>__("Enter your licence key in order to receive Etendard updates. You'll find it in the confirmation email we sent you after your purchase.", 'etendard')));
 
 $form->setting(array('type'=>'text',
@@ -30,7 +30,7 @@ $form->setting(array('type'=>'text',
 
 $form->setting(array('type'=>'text',
 					 'name'=>'subtitle',
-					 'label'=>__("Sous-titre", 'etendard'),
+					 'label'=>__("Subtitle", 'etendard'),
 					 'description'=>__("Subtitle in the homepage banner.", 'etendard'),
 					 'options'=>array(
 					 	'default'=>get_bloginfo('description')

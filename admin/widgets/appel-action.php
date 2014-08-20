@@ -7,7 +7,7 @@ class EtendardAppelAction extends WP_Widget{
 		parent::__construct(
 			'EtendardAppelAction',
 			__('Etendard - Call to action', 'etendard'),
-			array('description'=>__('Insérez un appel à l\'action dans une barre latérale.', 'etendard'),)
+			array('description'=>__('Add a call to action in the sidebar.', 'etendard'),)
 		);
 	}
 	

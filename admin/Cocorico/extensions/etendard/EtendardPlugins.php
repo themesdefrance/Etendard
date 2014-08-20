@@ -16,7 +16,7 @@ function etendardDiaporamaShorthand($cocorico, $name){
 	foreach ($images as $index=>$img){
 		$cocorico->startWrapper('tr');
 		$cocorico->startWrapper('th');
-		$cocorico->component('raw', __('Diaporama', 'etendard').' #'.($index+1));
+		$cocorico->component('raw', __('Slider', 'etendard').' #'.($index+1));
 		$cocorico->endWrapper('th');
 		$cocorico->endWrapper('tr');
 		
@@ -45,7 +45,7 @@ function etendardDiaporamaShorthand($cocorico, $name){
 		
 		$cocorico->startWrapper('th');
 		//THIS MAKES NO SENSE, INVERTARGS
-		$cocorico->component('label', $name.'-link-'.$index, __('Lien', 'etendard'));
+		$cocorico->component('label', $name.'-link-'.$index, __('Link', 'etendard'));
 		$cocorico->endWrapper('th');
 		
 		$cocorico->startWrapper('td');
@@ -62,7 +62,7 @@ function etendardDiaporamaShorthand($cocorico, $name){
 		
 		$cocorico->startWrapper('th');
 		//THIS MAKES NO SENSE, INVERTARGS
-		$cocorico->component('label', $name.'-title-'.$index, __('Titre', 'etendard'));
+		$cocorico->component('label', $name.'-title-'.$index, __('Title', 'etendard'));
 		$cocorico->endWrapper('th');
 		
 		$cocorico->startWrapper('td');
@@ -78,7 +78,7 @@ function etendardDiaporamaShorthand($cocorico, $name){
 		$cocorico->endWrapper('td');
 		
 		$cocorico->startWrapper('td');
-		$cocorico->component('link', '#', __('Supprimer', 'etendard'), array(
+		$cocorico->component('link', '#', __('Delete', 'etendard'), array(
 			'class'=>'submitdelete etendard-delete-diaporama',
 			'style'=>'color: #A00;'
 		));
@@ -92,7 +92,7 @@ function etendardDiaporamaShorthand($cocorico, $name){
 	$cocorico->component('input', 'upload-add', array(
 		'type'=>'button',
 		'class'=>array('button', 'button-primary', 'etendard-diaporama-add'),
-		'value'=>__('Ajouter', 'etendard')
+		'value'=>__('Add', 'etendard')
 	));
 	
 	wp_register_script('etendard_cocorico', ETENDARD_COCO_URI.'/extensions/etendard/etendard.js', array('jquery'), '1', true);
@@ -185,7 +185,7 @@ function etendardTextList($component){
 	foreach ($value as $field){
 		if (trim($field) === '') continue;
 		
-		$output .= '<li><input type="text" class="etendard-text-list" name="'.$component->getName().'[]" value="'.$field.'" /><a href="#" class="etendard-text-list-delete">'.__('supprimer', 'etendard').'</a></li>';
+		$output .= '<li><input type="text" class="etendard-text-list" name="'.$component->getName().'[]" value="'.$field.'" /><a href="#" class="etendard-text-list-delete">'.__('delete', 'etendard').'</a></li>';
 	}
 	$output .= '<li><input type="text" class="etendard-text-list" name="'.$component->getName().'[]" /></li>';
 	$output .= '</ul>';
