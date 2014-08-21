@@ -3,7 +3,7 @@
 		
 		etendard_shortcodesEd = editor;
 		etendard_shortcodesUrl = url;
-		// On remonte d'un repertoire
+		// We go up in the tree
 		etendard_url = etendard_shortcodesUrl.substring(0, etendard_shortcodesUrl.length-2);
 		
 		var buttonstyle = "background:url('" + etendard_url + "img/cocorico.png') no-repeat 5px 2px";
@@ -12,9 +12,11 @@
 			type: 'menubutton',
             style: buttonstyle,
             tooltip: 'Shortcodes Étendard',
+            //tooltip: editor.getLang('etendard_i18n_shortcodes.tooltip'),
             menu: [
 
-            		{	text: 'Boutons',
+            		{	//text: editor.getLang('etendard_i18n_shortcodes.buttons'),
+            			text: 'Boutons',
             			menu: [
 							{	text: 'Bouton',
 								onclick: function() {editor.insertContent('[bouton lien="LIEN_PAGE_DESTINATION"]TEXTE_BOUTON[/bouton]');}

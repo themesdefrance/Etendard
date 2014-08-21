@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Etendard\n"
-"POT-Creation-Date: 2014-08-20 17:31+0100\n"
-"PO-Revision-Date: 2014-08-20 17:31+0100\n"
+"POT-Creation-Date: 2014-08-21 10:14+0100\n"
+"PO-Revision-Date: 2014-08-21 10:14+0100\n"
 "Last-Translator: \n"
 "Language-Team: Themes de France <alex@themesdefrance.fr>\n"
 "Language: French\n"
@@ -312,53 +312,53 @@ msgstr "Aucun service trouvé."
 msgid "No Services Found in Trash."
 msgstr "Aucun service trouvé dans la corbeille."
 
-#: ../functions.php:280 ../admin/index.php:5
+#: ../functions.php:281 ../admin/index.php:5
 msgid "Etendard Settings"
 msgstr "Options Étendard"
 
-#: ../functions.php:288
+#: ../functions.php:289
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Vous n'avez pas les droits suffisants pour accéder à cette page."
 
-#: ../functions.php:322
+#: ../functions.php:323
 msgid "Project Metas"
 msgstr "Infos complémentaires"
 
-#: ../functions.php:330 ../admin/meta-box/portfolio_temoignage.php:16
+#: ../functions.php:331 ../admin/meta-box/portfolio_temoignage.php:16
 msgid "Testimonial"
 msgstr "Témoignage"
 
-#: ../functions.php:338 ../functions.php:362 ../admin/index.php:43
+#: ../functions.php:339 ../functions.php:363 ../admin/index.php:43
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:19
 msgid "Slider"
 msgstr "Diaporama"
 
-#: ../functions.php:352 ../admin/index.php:45
+#: ../functions.php:353 ../admin/index.php:45
 msgid "Call to action"
 msgstr "Appel à l'action"
 
-#: ../functions.php:510
+#: ../functions.php:511
 msgid "Pingback:"
 msgstr "Rétrolien:"
 
-#: ../functions.php:521
+#: ../functions.php:522
 msgid "Your comment is waiting for moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: ../functions.php:532
+#: ../functions.php:533
 #, php-format
 msgid "Published on %s at %s"
 msgstr "Publié dans %s le %s"
 
-#: ../functions.php:545
+#: ../functions.php:546
 msgid "Reply"
 msgstr "Répondre"
 
-#: ../functions.php:821
+#: ../functions.php:822
 msgid "Themes de France"
 msgstr "Thèmes de France"
 
-#: ../functions.php:836
+#: ../functions.php:837
 msgid ""
 "In order to get updates, please enter your licence that you received by "
 "email."
@@ -366,7 +366,7 @@ msgstr ""
 "Afin de recevoir les mises à jour, veuillez entrer votre clé de licence "
 "reçue par email."
 
-#: ../functions.php:842
+#: ../functions.php:843
 #, php-format
 msgid ""
 "You did not set up any page for posts. <a href=\"%s\">Click here to fix it</"
@@ -904,6 +904,14 @@ msgstr "Client"
 msgid "URL"
 msgstr "URL"
 
+#: ../admin/shortcodes-langs.php:11
+msgid "Etendard Shortcodes"
+msgstr "Shortcodes Étendard"
+
+#: ../admin/shortcodes-langs.php:12
+msgid "Buttons"
+msgstr "Boutons"
+
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:27
 msgid "Image"
 msgstr "Image"
@@ -1062,6 +1070,12 @@ msgstr "Derniers projets"
 #: ../home_elements/portfolio.php:58
 msgid "Check the portfolio"
 msgstr "Voir le portfolio"
+
+#~ msgid "link"
+#~ msgstr "lien"
+
+#~ msgid "newwindow"
+#~ msgstr "nouvellefenetre"
 
 #~ msgid "%s"
 #~ msgstr "%s"

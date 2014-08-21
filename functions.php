@@ -257,6 +257,7 @@ if (!function_exists('etendard_enqueue')){
 		
 		wp_enqueue_script('fancybox');
 		wp_enqueue_style('fancybox');
+	
 	}
 }
 add_action('wp_enqueue_scripts', 'etendard_enqueue');
@@ -892,6 +893,17 @@ if(!function_exists('etendard_add_tinymce4_button')){
 	    return $buttons;
 	}
 }
+
+// TinyMCE Translation // Not working yet
+if(!function_exists('etendard_add_tinymce4_plugin')){
+	function etendard_translate_tinymce4_plugin($locales) {
+	    $locales ['shortcode_drop'] = get_template_directory_uri() . '/admin/shortcodes-langs.php';
+	    
+	    return $locales;
+	}
+}
+//add_filter('mce_external_languages', 'etendard_translate_tinymce4_plugin');
+
 
 ////////////////////////////////////
 // Only show posts in search results

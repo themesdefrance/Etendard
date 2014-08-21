@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Etendard\n"
-"POT-Creation-Date: 2014-08-20 17:22+0100\n"
-"PO-Revision-Date: 2014-08-20 17:22+0100\n"
+"POT-Creation-Date: 2014-08-20 20:34+0100\n"
+"PO-Revision-Date: 2014-08-20 20:34+0100\n"
 "Last-Translator: \n"
 "Language-Team: Themes de France <alex@themesdefrance.fr>\n"
 "Language: English\n"
@@ -303,59 +303,59 @@ msgstr ""
 msgid "No Services Found in Trash."
 msgstr ""
 
-#: ../functions.php:280 ../admin/index.php:5
+#: ../functions.php:284 ../admin/index.php:5
 msgid "Etendard Settings"
 msgstr ""
 
-#: ../functions.php:288
+#: ../functions.php:292
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: ../functions.php:322
+#: ../functions.php:326
 msgid "Project Metas"
 msgstr ""
 
-#: ../functions.php:330 ../admin/meta-box/portfolio_temoignage.php:16
+#: ../functions.php:334 ../admin/meta-box/portfolio_temoignage.php:16
 msgid "Testimonial"
 msgstr ""
 
-#: ../functions.php:338 ../functions.php:362 ../admin/index.php:43
+#: ../functions.php:342 ../functions.php:366 ../admin/index.php:43
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:19
 msgid "Slider"
 msgstr ""
 
-#: ../functions.php:352 ../admin/index.php:45
+#: ../functions.php:356 ../admin/index.php:45
 msgid "Call to action"
 msgstr ""
 
-#: ../functions.php:510
+#: ../functions.php:514
 msgid "Pingback:"
 msgstr ""
 
-#: ../functions.php:521
+#: ../functions.php:525
 msgid "Your comment is waiting for moderation."
 msgstr ""
 
-#: ../functions.php:532
+#: ../functions.php:536
 #, php-format
 msgid "Published on %s at %s"
 msgstr ""
 
-#: ../functions.php:545
+#: ../functions.php:549
 msgid "Reply"
 msgstr ""
 
-#: ../functions.php:821
+#: ../functions.php:825
 msgid "Themes de France"
 msgstr ""
 
-#: ../functions.php:836
+#: ../functions.php:840
 msgid ""
 "In order to get updates, please enter your licence that you received by "
 "email."
 msgstr ""
 
-#: ../functions.php:842
+#: ../functions.php:846
 #, php-format
 msgid ""
 "You did not set up any page for posts. <a href=\"%s\">Click here to fix it</"
@@ -825,6 +825,14 @@ msgstr ""
 
 #: ../admin/migration.php:69
 msgid "URL"
+msgstr ""
+
+#: ../admin/shortcodes.php:166
+msgid "Etendard Shortcodes"
+msgstr ""
+
+#: ../admin/shortcodes.php:167
+msgid "Buttons"
 msgstr ""
 
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:27
