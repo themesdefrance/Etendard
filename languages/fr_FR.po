@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Etendard\n"
-"POT-Creation-Date: 2014-08-21 10:14+0100\n"
-"PO-Revision-Date: 2014-08-21 10:14+0100\n"
+"POT-Creation-Date: 2014-08-27 17:17+0100\n"
+"PO-Revision-Date: 2014-08-27 17:20+0100\n"
 "Last-Translator: \n"
 "Language-Team: Themes de France <alex@themesdefrance.fr>\n"
 "Language: French\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_n:1,2;_ex:1,2c\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_n:1,2;_ex:1,2c;_n\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n > 1) ;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -36,6 +36,15 @@ msgstr ""
 #: ../call_to_action.php:33 ../admin/widgets/appel-action.php:30
 msgid "Click here"
 msgstr "Cliquez ici"
+
+#: ../comments.php:7
+msgid "1 comment was added, add yours."
+msgstr "Un commentaire a été rédigé, ajoutez le votre."
+
+#: ../comments.php:7
+#, php-format
+msgid "%1$s comments were added, add yours."
+msgstr "%1$s commentaires ont été rédigés, ajoutez le votre. "
 
 #: ../comments.php:15 ../comments.php:43
 #, php-format
@@ -64,7 +73,7 @@ msgstr "Les commentaires sont fermés."
 
 #: ../content-body.php:10 ../content-body.php:22 ../template-portfolio.php:89
 #: ../template-services.php:49 ../home_elements/articles.php:63
-#: ../home_elements/services.php:42
+#: ../home_elements/services.php:44
 msgid "Read more"
 msgstr "Lire la suite"
 
@@ -354,11 +363,11 @@ msgstr "Publié dans %s le %s"
 msgid "Reply"
 msgstr "Répondre"
 
-#: ../functions.php:822
+#: ../functions.php:835
 msgid "Themes de France"
 msgstr "Thèmes de France"
 
-#: ../functions.php:837
+#: ../functions.php:850
 msgid ""
 "In order to get updates, please enter your licence that you received by "
 "email."
@@ -366,7 +375,7 @@ msgstr ""
 "Afin de recevoir les mises à jour, veuillez entrer votre clé de licence "
 "reçue par email."
 
-#: ../functions.php:843
+#: ../functions.php:856
 #, php-format
 msgid ""
 "You did not set up any page for posts. <a href=\"%s\">Click here to fix it</"
@@ -1070,6 +1079,10 @@ msgstr "Derniers projets"
 #: ../home_elements/portfolio.php:58
 msgid "Check the portfolio"
 msgstr "Voir le portfolio"
+
+#: ../home_elements/services.php:56
+msgid "Check all services"
+msgstr "Voir tous les services"
 
 #~ msgid "link"
 #~ msgstr "lien"

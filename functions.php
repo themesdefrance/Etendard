@@ -571,6 +571,19 @@ if (!function_exists('etendard_portfolio_page_link')){
 	}
 }
 
+// Get the first page using the service template
+if (!function_exists('etendard_service_page_link')){
+	function etendard_service_page_link(){
+		$services_pages = get_pages(array(
+			'meta_key'=>'_wp_page_template',
+			'meta_value'=>'template-services.php'
+		));
+		
+		if (count($services_pages) > 0)
+			return get_page_link($services_pages[0]->ID);
+	}
+}
+
 // Custom excerpt size
 if (!function_exists('etendard_custom_excerpt_length')){
 	function etendard_custom_excerpt_length($length) {

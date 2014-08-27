@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Etendard\n"
-"POT-Creation-Date: 2014-08-20 20:34+0100\n"
-"PO-Revision-Date: 2014-08-20 20:34+0100\n"
+"POT-Creation-Date: 2014-08-27 17:22+0100\n"
+"PO-Revision-Date: 2014-08-27 17:22+0100\n"
 "Last-Translator: \n"
 "Language-Team: Themes de France <alex@themesdefrance.fr>\n"
 "Language: English\n"
@@ -35,6 +35,15 @@ msgstr ""
 msgid "Click here"
 msgstr ""
 
+#: ../comments.php:7
+msgid "1 comment was added, add yours."
+msgstr ""
+
+#: ../comments.php:7
+#, php-format
+msgid "%1$s comments were added, add yours."
+msgstr ""
+
 #: ../comments.php:15 ../comments.php:43
 #, php-format
 msgid "Reply to %s"
@@ -62,7 +71,7 @@ msgstr ""
 
 #: ../content-body.php:10 ../content-body.php:22 ../template-portfolio.php:89
 #: ../template-services.php:49 ../home_elements/articles.php:63
-#: ../home_elements/services.php:42
+#: ../home_elements/services.php:44
 msgid "Read more"
 msgstr ""
 
@@ -303,59 +312,59 @@ msgstr ""
 msgid "No Services Found in Trash."
 msgstr ""
 
-#: ../functions.php:284 ../admin/index.php:5
+#: ../functions.php:281 ../admin/index.php:5
 msgid "Etendard Settings"
 msgstr ""
 
-#: ../functions.php:292
+#: ../functions.php:289
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: ../functions.php:326
+#: ../functions.php:323
 msgid "Project Metas"
 msgstr ""
 
-#: ../functions.php:334 ../admin/meta-box/portfolio_temoignage.php:16
+#: ../functions.php:331 ../admin/meta-box/portfolio_temoignage.php:16
 msgid "Testimonial"
 msgstr ""
 
-#: ../functions.php:342 ../functions.php:366 ../admin/index.php:43
+#: ../functions.php:339 ../functions.php:363 ../admin/index.php:43
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:19
 msgid "Slider"
 msgstr ""
 
-#: ../functions.php:356 ../admin/index.php:45
+#: ../functions.php:353 ../admin/index.php:45
 msgid "Call to action"
 msgstr ""
 
-#: ../functions.php:514
+#: ../functions.php:511
 msgid "Pingback:"
 msgstr ""
 
-#: ../functions.php:525
+#: ../functions.php:522
 msgid "Your comment is waiting for moderation."
 msgstr ""
 
-#: ../functions.php:536
+#: ../functions.php:533
 #, php-format
 msgid "Published on %s at %s"
 msgstr ""
 
-#: ../functions.php:549
+#: ../functions.php:546
 msgid "Reply"
 msgstr ""
 
-#: ../functions.php:825
+#: ../functions.php:835
 msgid "Themes de France"
 msgstr ""
 
-#: ../functions.php:840
+#: ../functions.php:850
 msgid ""
 "In order to get updates, please enter your licence that you received by "
 "email."
 msgstr ""
 
-#: ../functions.php:846
+#: ../functions.php:856
 #, php-format
 msgid ""
 "You did not set up any page for posts. <a href=\"%s\">Click here to fix it</"
@@ -827,11 +836,11 @@ msgstr ""
 msgid "URL"
 msgstr ""
 
-#: ../admin/shortcodes.php:166
+#: ../admin/shortcodes-langs.php:11
 msgid "Etendard Shortcodes"
 msgstr ""
 
-#: ../admin/shortcodes.php:167
+#: ../admin/shortcodes-langs.php:12
 msgid "Buttons"
 msgstr ""
 
@@ -988,4 +997,8 @@ msgstr ""
 
 #: ../home_elements/portfolio.php:58
 msgid "Check the portfolio"
+msgstr ""
+
+#: ../home_elements/services.php:56
+msgid "Check all services"
 msgstr ""

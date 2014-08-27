@@ -1,4 +1,6 @@
-<?php $services = new WP_Query(array(
+<?php 
+
+$services = new WP_Query(array(
 					'posts_per_page'=>apply_filters('etendard_home_services_nombre', 3),
 					'post_type'=>'service',
 					'orderby'=>'date'
@@ -44,6 +46,19 @@ switch ($services->post_count){
 			</li>
 			<?php endwhile; ?>
 		</ul>
+		
+		<?php
+		
+		 if(wp_count_posts('service')->publish > 3) { ?>
+		
+			<div class="cta-wrapper">
+				<a href="<?php echo etendard_service_page_link(); ?>" class="cta-button">
+					<?php echo apply_filters('etendard_home_services_lien', __('Check all services', 'etendard')); ?>
+				</a>
+			</div>
+			
+		<?php } ?>
+		
 	</div>
 </section>
 <?php endif; ?>

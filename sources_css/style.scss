@@ -330,6 +330,10 @@ section.description p{
 }
 
 //services
+ul.services{
+	margin-bottom:20px;
+}
+
 ul.services .service{
 	text-align: center;
 	
@@ -379,7 +383,7 @@ ul.services .service a.more-link{
 	}
 }
 
-.landing .header{
+.single-service .landing .header{
 	text-align: center;
 }
 
