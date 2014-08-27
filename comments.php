@@ -4,7 +4,7 @@
 	<?php if (have_comments()): ?>
 		<h2 class="comments-title">
 			<?php
-                printf(_n(apply_filters('etendard_commentaire_unique', '1 comment was added, add yours.'), apply_filters('etendard_commentaire_multiple', '%1$s comments were added, add yours.'), get_comments_number(), 'etendard'), number_format_i18n(get_comments_number()));
+                printf(_n(apply_filters('etendard_commentaire_unique', __('1 comment was added, add yours.','etendard')), apply_filters('etendard_commentaire_multiple', __('%1$s comments were added, add yours.','etendard')), get_comments_number(), 'etendard'), number_format_i18n(get_comments_number()));
             ?>
 		</h2>
 		
