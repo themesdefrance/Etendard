@@ -1,7 +1,7 @@
 <?php 
 
 $portfolios = new WP_Query(array(
-				'posts_per_page'=>apply_filters('etendard_home_portfolio_nombre', 1),
+				'posts_per_page'=>apply_filters('etendard_home_portfolio_nombre', 3),
 				'post_type'=>'portfolio'
 				));
 								
