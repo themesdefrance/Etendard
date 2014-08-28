@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-<section class="blog grid">
+<section class="blog">
 
 	<div class="wrapper">
 		
-		<div class="col-2-3 landing">
+		<div class="landing">
 
 			<?php while (have_posts()) : the_post(); ?>
 				
