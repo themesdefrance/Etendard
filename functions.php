@@ -85,7 +85,7 @@ if (!function_exists('etendard_setup')){
 		require_once 'admin/meta-box/post_formats.php';
 		
 		// Set images sizes
-		add_image_size('etendard-portfolio-thumbnail', 301, 230, true);
+		add_image_size('etendard-portfolio-thumbnail', 470, 230, true);
 		add_image_size('etendard-service-thumbnail', 230, 230, true);
 		add_image_size('etendard-blog-thumbnail', 225, 150, true);
 		add_image_size('etendard-post-thumbnail', 633, 400, true);
