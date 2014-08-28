@@ -43,6 +43,6 @@ ul.slip-target li.slip-reordering{
 	width:300px;
 }
 
-.attachment-preview:before{
+.cocorico-preview-wrapper.attachment .attachment-preview:before{
 	padding-top:0;
 }
