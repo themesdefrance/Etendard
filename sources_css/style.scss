@@ -628,6 +628,12 @@ section.realisation .realisation-site{
 
 section.realisation .video_portfolio iframe{
 	width:100%;
+	@include width-below($breakpoint-tablet){
+		height:350px !important;
+	}
+	@include width-below($breakpoint-mobile){
+		height:220px !important;
+	}
 }
 
 .temoignages{
@@ -1321,9 +1327,7 @@ form.search-form input.search-submit{
 	margin: 0 auto 40px;
 	position: relative;
 	background-position: 50% 50%;
-	@include width-matches($breakpoint-tablet){
-		height:350px;
-	}
+
 }
 .slider .slide-caption{
 	background: rgba(0,0,0,.7);
@@ -1340,10 +1344,8 @@ form.search-form input.search-submit{
 	top: 50%;
 	font-size: 25px;
 	line-height: 0;
-	background: white;
-	border-radius: 50%;
 	padding: 7px;
-	color: #696969;
+	color: white;
 	opacity: .7;
 	@include transition();
 	
@@ -1352,10 +1354,10 @@ form.search-form input.search-submit{
 		opacity: 1;
 	}
 	
-	&.icon-arrow-right{
+	&.icon-toright{
 		right: 10px;
 	}
-	&.icon-arrow-left{
+	&.icon-toleft{
 		left: 10px;
 	}
 }
