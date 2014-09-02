@@ -358,7 +358,11 @@ ul.services .service h2 a{
 	text-decoration:none;
 }
 ul.services .service p{
-	padding: 0 40px;
+	padding: 0 20px;
+	@include width-matches($breakpoint-mobile){
+		padding: 0 40px;
+	}
+	
 }
 ul.services .service a.more-link{
 	width: 100%;
