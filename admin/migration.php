@@ -32,7 +32,7 @@ if (!get_option('etendard_import_OF')){
 ////////////////////////////////////
 // Migration from Etendard < 1.010
 ////////////////////////////////////
-if (!get_option('etendard_home_blocks')){
+if (!get_option('etendard_home_blocks') && get_option('etendard_blocks_presence')){
 	$migrate = get_option('etendard_blocks_presence');
 	$stored = array();
 	$checkboxes = array('titre', 'diaporama', 'content', 'cta', 'services', 'portfolio', 'articles');
