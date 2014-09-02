@@ -351,13 +351,14 @@ ul.services .service h2{
 	font-size: 24px;
 	color: $body-copy-color;
 	margin-bottom: 10px;
+	padding: 0 40px;
 }
 ul.services .service h2 a{
 	color:inherit;
 	text-decoration:none;
 }
 ul.services .service p{
-	padding: 0 20px;
+	padding: 0 40px;
 }
 ul.services .service a.more-link{
 	width: 100%;
@@ -461,17 +462,27 @@ ul.portfolio .creation-list{
 	margin-right:-4px;
 	padding-bottom: $grid-gutters*2;
 	
+	@include width-below($breakpoint-tablet){
+		width: 50%;
+	}
+	
 	@include width-below($breakpoint-mobile){
 		display: block;
 		width: 100%;
 		margin-right: 0;
 	}
 }
+
+ul.portfolio .creation{
+	text-align:center;
+}
+
 ul.portfolio .creation a{
 	text-decoration: none;
 }
 ul.portfolio .creation figure{
 	position: relative;
+	display:inline-block;
 	
 	&:before{
 		display:block;
@@ -507,13 +518,8 @@ ul.portfolio .creation figure{
 }
 ul.portfolio .creation .entry-thumbnail{
 	background: #e2e2e2;
-	min-height: 230px;
 }
-ul.portfolio .creation .entry-thumbnail img{
-	display:block;
-	width:100%;
-	max-height:230px;
-}
+
 ul.portfolio .creation figcaption{
 	position: absolute;
 	z-index:1;
@@ -530,6 +536,10 @@ ul.portfolio .creation figcaption{
 ul.portfolio .creation .excerpt{
 	margin-top: 10px;
 	min-height: 90px;
+	@include width-matches($breakpoint-mobile){
+		min-height:0;
+		padding:0 40px;
+	}
 }
 ul.portfolio .creation .cta-wrapper{
 	text-align:center;
@@ -1096,6 +1106,11 @@ section.portfolio .pagination a, section.services .pagination a{
 	color:#6d6e71;
 	@extend .grid;
 }
+
+.footer-widgets .widget:first-child{
+	padding-top: 5px;
+}
+
 .footer-widgets .widget a{
 	color:#6d6e71;
 }
