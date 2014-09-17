@@ -17,7 +17,7 @@ jQuery(function($){
 			menuTimeout = null;
 		
 		if ($('.toggle-menu-icon').is(':visible') && !$('#menu-toggle').is(':checked')) $menu.css('height', '0');
-		else $menu.css('height', menuHeight+'px');
+		//else $menu.css('height', menuHeight+'px');
 		
 		$(window).resize(function(){
 			if (menuTimeout) clearTimeout(menuTimeout);
@@ -27,7 +27,7 @@ jQuery(function($){
 		var recalculateMenuSize = function(){
 			$menu.css('height', 'auto');
 			menuHeight = $menu.height();
-			$menu.css('height', '0');
+			//$menu.css('height', '0');
 		}
 		
 		$('#menu-toggle').change(function(){			
