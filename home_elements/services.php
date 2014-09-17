@@ -38,7 +38,12 @@ switch ($services->post_count){
 					</a>
 				</h2>
 				<p>
-					<?php echo etendard_excerpt(30); ?>
+					<?php 	
+							if(has_excerpt())
+								the_excerpt();
+							else
+								echo etendard_excerpt(30);
+					?>
 				</p>
 				<a href="<?php the_permalink(); ?>" class="more-link">
 					<?php _e('Read more', 'etendard'); ?>
