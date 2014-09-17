@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Etendard\n"
-"POT-Creation-Date: 2014-08-27 17:22+0100\n"
-"PO-Revision-Date: 2014-08-27 17:22+0100\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2014-09-17 17:43+0100\n"
+"PO-Revision-Date: 2014-09-17 17:43+0100\n"
+"Last-Translator: Alex Thèmes de France <alex@themesdefrance.fr>\n"
 "Language-Team: Themes de France <alex@themesdefrance.fr>\n"
-"Language: English\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.6.7\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;_n:1,2;_ex:1,2c\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -31,421 +31,58 @@ msgid ""
 "to get back to the home page."
 msgstr ""
 
-#: ../call_to_action.php:33 ../admin/widgets/appel-action.php:30
-msgid "Click here"
-msgstr ""
-
-#: ../comments.php:7
-msgid "1 comment was added, add yours."
-msgstr ""
-
-#: ../comments.php:7
-#, php-format
-msgid "%1$s comments were added, add yours."
-msgstr ""
-
-#: ../comments.php:15 ../comments.php:43
-#, php-format
-msgid "Reply to %s"
-msgstr ""
-
-#: ../comments.php:16 ../comments.php:44
-msgid "Post comment"
-msgstr ""
-
-#: ../comments.php:26
-msgid "Previous comments"
-msgstr ""
-
-#: ../comments.php:29
-msgid "Next comments"
-msgstr ""
-
-#: ../comments.php:36
-msgid "Be the first to post a comment."
-msgstr ""
-
-#: ../comments.php:49
-msgid "Comments are closed."
-msgstr ""
-
-#: ../content-body.php:10 ../content-body.php:22 ../template-portfolio.php:89
-#: ../template-services.php:49 ../home_elements/articles.php:63
-#: ../home_elements/services.php:44
-msgid "Read more"
-msgstr ""
-
-#: ../content-footer-meta.php:15
-msgid "Pages:"
-msgstr ""
-
-#: ../content-header-meta.php:5
-#, php-format
-msgid "Published on %2$s by <a href=\"%3$s\">%4$s</a> in %5$s | "
-msgstr ""
-
-#: ../content-header-meta.php:7
-msgid "No Comment"
-msgstr ""
-
-#: ../content-header-meta.php:7
-msgid "One Comment"
-msgstr ""
-
-#: ../content-header-meta.php:7
-msgid "% Comments"
-msgstr ""
-
-#: ../content-header-meta.php:9
-msgid "Edit"
-msgstr ""
-
-#: ../content-none.php:4
-#, php-format
-msgid ""
-"Sorry, no posts were found. You can <a href=\"%s\" title=\"Click here to get "
-"back to the homepage\">go back to the homepage</a> or use the search field "
-"below :"
-msgstr ""
-
-#: ../footer.php:17
-msgid ""
-"<strong>2014</strong> - Étendard by <a href=\"https://www.themesdefrance.fr"
-"\" target=\"_blank\">Themes de France</a>"
-msgstr ""
-
-#: ../footer.php:35
-msgid "Top"
-msgstr ""
-
-#: ../formulaire_contact.php:10
-msgid "Contact"
-msgstr ""
-
-#: ../formulaire_contact.php:26
-msgid "Name *"
-msgstr ""
-
-#: ../formulaire_contact.php:33
-msgid "Email *"
-msgstr ""
-
-#: ../formulaire_contact.php:40
-msgid "Subject"
-msgstr ""
-
-#: ../formulaire_contact.php:47
-msgid "Message *"
-msgstr ""
-
-#: ../formulaire_contact.php:53
-msgid "Send"
-msgstr ""
-
-#: ../formulaire_contact.php:59
-msgid "Succes ! You message was sent."
-msgstr ""
-
-#: ../formulaire_contact.php:60
-msgid "An error occured during sending, try again in a few minutes."
-msgstr ""
-
-#: ../functions.php:47
-msgid "Set up the main menu"
-msgstr ""
-
-#: ../functions.php:54
-msgid "Main menu"
-msgstr ""
-
-#: ../functions.php:55
-msgid "Footer menu"
-msgstr ""
-
-#: ../functions.php:59
-msgid "Sidebar"
-msgstr ""
-
-#: ../functions.php:61
-msgid "Add widgets in the sidebar."
-msgstr ""
-
-#: ../functions.php:69 ../admin/index.php:52
-msgid "Footer"
-msgstr ""
-
-#: ../functions.php:71
-msgid "Add widgets in the footer."
-msgstr ""
-
-#: ../functions.php:95
-msgid "Post"
-msgstr ""
-
-#: ../functions.php:122
-msgctxt "project post type general name"
-msgid "Projects"
-msgstr ""
-
-#: ../functions.php:123
-msgctxt "project post type singular name"
-msgid "Project"
-msgstr ""
-
-#: ../functions.php:124
-msgctxt "projects admin menu"
-msgid "Projects"
-msgstr ""
-
-#: ../functions.php:125
-msgctxt "add new project on admin bar"
-msgid "Project"
-msgstr ""
-
-#: ../functions.php:126
-msgctxt "add new portfolio"
-msgid "Add New"
-msgstr ""
-
-#: ../functions.php:127
-msgid "Add New Project"
-msgstr ""
-
-#: ../functions.php:128 ../functions.php:172
-msgid "Add New"
-msgstr ""
-
-#: ../functions.php:129
-msgid "Edit Project"
-msgstr ""
-
-#: ../functions.php:130
-msgid "View Project"
-msgstr ""
-
-#: ../functions.php:131
-msgid "All Projects"
-msgstr ""
-
-#: ../functions.php:132
-msgid "Search Projects"
-msgstr ""
-
-#: ../functions.php:133
-msgid "Parent Project:"
-msgstr ""
-
-#: ../functions.php:134
-msgid "No Projects found."
-msgstr ""
-
-#: ../functions.php:135
-msgid "No Projects found in Trash."
-msgstr ""
-
-#: ../functions.php:139
-msgid "Project"
-msgstr ""
-
-#: ../functions.php:145
-msgid "project"
-msgstr ""
-
-#: ../functions.php:159
-msgid "Categories"
-msgstr ""
-
-#: ../functions.php:166
-msgctxt "service post type general name"
-msgid "Services"
-msgstr ""
-
-#: ../functions.php:167
-msgctxt "service post type singular name"
-msgid "Service"
-msgstr ""
-
-#: ../functions.php:168
-msgctxt "services admin menu"
-msgid "Services"
-msgstr ""
-
-#: ../functions.php:169
-msgctxt "add new service on admin bar"
-msgid "Service"
-msgstr ""
-
-#: ../functions.php:170
-msgctxt "add new service"
-msgid "Add New"
-msgstr ""
-
-#: ../functions.php:171
-msgid "Add New Service"
-msgstr ""
-
-#: ../functions.php:173
-msgid "Edit Service"
-msgstr ""
-
-#: ../functions.php:174
-msgid "View Service"
-msgstr ""
-
-#: ../functions.php:175 ../functions.php:183 ../admin/index.php:46
-msgid "Services"
-msgstr ""
-
-#: ../functions.php:176
-msgid "Search Services"
-msgstr ""
-
-#: ../functions.php:177
-msgid "Parent Service:"
-msgstr ""
-
-#: ../functions.php:178
-msgid "No Services Found."
-msgstr ""
-
-#: ../functions.php:179
-msgid "No Services Found in Trash."
-msgstr ""
-
-#: ../functions.php:281 ../admin/index.php:5
-msgid "Etendard Settings"
-msgstr ""
-
-#: ../functions.php:289
-msgid "You do not have sufficient permissions to access this page."
-msgstr ""
-
-#: ../functions.php:323
-msgid "Project Metas"
-msgstr ""
-
-#: ../functions.php:331 ../admin/meta-box/portfolio_temoignage.php:16
-msgid "Testimonial"
-msgstr ""
-
-#: ../functions.php:339 ../functions.php:363 ../admin/index.php:43
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:19
+#: ../admin/index.php:43 ../functions.php:339 ../functions.php:363
 msgid "Slider"
 msgstr ""
 
-#: ../functions.php:353 ../admin/index.php:45
-msgid "Call to action"
+#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:27
+msgid "Image"
 msgstr ""
 
-#: ../functions.php:511
-msgid "Pingback:"
+#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:48
+#: ../admin/meta-box/post_formats.php:8
+msgid "Link"
 msgstr ""
 
-#: ../functions.php:522
-msgid "Your comment is waiting for moderation."
+#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:65
+#: ../admin/index.php:24
+msgid "Title"
 msgstr ""
 
-#: ../functions.php:533
-#, php-format
-msgid "Published on %s at %s"
+#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:81
+#: ../admin/Cocorico/plugins/CocoricoComponents.php:304
+msgid "Delete"
 msgstr ""
 
-#: ../functions.php:546
-msgid "Reply"
+#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:95
+msgid "Add"
 msgstr ""
 
-#: ../functions.php:835
-msgid "Themes de France"
+#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:188
+msgid "delete"
 msgstr ""
 
-#: ../functions.php:850
+#: ../admin/Cocorico/plugins/CocoricoComponents.php:180
+msgid "Save all changes"
+msgstr ""
+
+#: ../admin/Cocorico/plugins/CocoricoComponents.php:257
+msgid "Select"
+msgstr ""
+
+#: ../admin/EDD_SL_Theme_Updater.php:56
 msgid ""
-"In order to get updates, please enter your licence that you received by "
-"email."
+"Updating this theme will lose any customizations you have made. 'Cancel' to "
+"stop, 'OK' to update."
 msgstr ""
 
-#: ../functions.php:856
+#: ../admin/EDD_SL_Theme_Updater.php:61
 #, php-format
 msgid ""
-"You did not set up any page for posts. <a href=\"%s\">Click here to fix it</"
-"a>"
-msgstr ""
-
-#: ../header-bar.php:5 ../header-bar.php:56
-msgid "Blog"
-msgstr ""
-
-#: ../header-bar.php:13 ../admin/index.php:10
-msgid "Portfolio"
-msgstr ""
-
-#: ../header-bar.php:18
-msgid "Posts from "
-msgstr ""
-
-#: ../header-bar.php:24
-msgid "Posts tagged by "
-msgstr ""
-
-#: ../header-bar.php:30
-#, php-format
-msgid "Search results for : %s"
-msgstr ""
-
-#: ../header-bar.php:36
-msgid "Archives from "
-msgstr ""
-
-#: ../header-bar.php:40 ../header-bar.php:44
-msgid "Archives for "
-msgstr ""
-
-#: ../header-bar.php:48
-msgid "Archives"
-msgstr ""
-
-#: ../header.php:30
-msgid "Your browser is <em>too old !"
-msgstr ""
-
-#: ../header.php:30
-msgid "Update your browser"
-msgstr ""
-
-#: ../header.php:30
-msgid "or"
-msgstr ""
-
-#: ../header.php:30
-msgid "Install Google Chrome Frame"
-msgstr ""
-
-#: ../header.php:30
-msgid "to display this website correctly"
-msgstr ""
-
-#: ../searchform.php:4
-msgid "Search :"
-msgstr ""
-
-#: ../searchform.php:6
-msgid "Search..."
-msgstr ""
-
-#: ../searchform.php:9
-msgid "Go"
-msgstr ""
-
-#: ../template-portfolio.php:39
-msgid "All"
-msgstr ""
-
-#: ../template-portfolio.php:98 ../template-services.php:57
-msgid "Previous Page"
-msgstr ""
-
-#: ../template-portfolio.php:99 ../template-services.php:58
-msgid "Next Page"
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
+"title=\"%4s\">Discover what's new</a> or <a href=\"%5$s\"%6$s>Update now !</"
+"a>."
 msgstr ""
 
 #: ../admin/bienvenue.php:23 ../admin/bienvenue.php:24
@@ -633,18 +270,8 @@ msgid ""
 "Themes de France team is here to help you to have your site up and running."
 msgstr ""
 
-#: ../admin/EDD_SL_Theme_Updater.php:56
-msgid ""
-"Updating this theme will lose any customizations you have made. 'Cancel' to "
-"stop, 'OK' to update."
-msgstr ""
-
-#: ../admin/EDD_SL_Theme_Updater.php:61
-#, php-format
-msgid ""
-"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
-"title=\"%4s\">Discover what's new</a> or <a href=\"%5$s\"%6$s>Update now !</"
-"a>."
+#: ../admin/index.php:5 ../functions.php:281
+msgid "Etendard Settings"
 msgstr ""
 
 #: ../admin/index.php:8
@@ -655,6 +282,10 @@ msgstr ""
 msgid "Appearance"
 msgstr ""
 
+#: ../admin/index.php:10 ../header-bar.php:13
+msgid "Portfolio"
+msgstr ""
+
 #: ../admin/index.php:19
 msgid "License"
 msgstr ""
@@ -663,11 +294,6 @@ msgstr ""
 msgid ""
 "Enter your licence key in order to receive Etendard updates. You'll find it "
 "in the confirmation email we sent you after your purchase."
-msgstr ""
-
-#: ../admin/index.php:24
-#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:65
-msgid "Title"
 msgstr ""
 
 #: ../admin/index.php:25
@@ -695,12 +321,24 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
+#: ../admin/index.php:45 ../functions.php:353
+msgid "Call to action"
+msgstr ""
+
+#: ../admin/index.php:46 ../functions.php:175 ../functions.php:183
+msgid "Services"
+msgstr ""
+
 #: ../admin/index.php:47
 msgid "Last projects"
 msgstr ""
 
 #: ../admin/index.php:48
 msgid "Last posts"
+msgstr ""
+
+#: ../admin/index.php:52 ../functions.php:69
+msgid "Footer"
 msgstr ""
 
 #: ../admin/index.php:53
@@ -828,52 +466,6 @@ msgstr ""
 msgid "Save changes"
 msgstr ""
 
-#: ../admin/migration.php:69
-msgid "Customer"
-msgstr ""
-
-#: ../admin/migration.php:69
-msgid "URL"
-msgstr ""
-
-#: ../admin/shortcodes-langs.php:11
-msgid "Etendard Shortcodes"
-msgstr ""
-
-#: ../admin/shortcodes-langs.php:12
-msgid "Buttons"
-msgstr ""
-
-#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:27
-msgid "Image"
-msgstr ""
-
-#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:48
-#: ../admin/meta-box/post_formats.php:8
-msgid "Link"
-msgstr ""
-
-#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:81
-#: ../admin/Cocorico/plugins/CocoricoComponents.php:304
-msgid "Delete"
-msgstr ""
-
-#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:95
-msgid "Add"
-msgstr ""
-
-#: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:188
-msgid "delete"
-msgstr ""
-
-#: ../admin/Cocorico/plugins/CocoricoComponents.php:180
-msgid "Save all changes"
-msgstr ""
-
-#: ../admin/Cocorico/plugins/CocoricoComponents.php:257
-msgid "Select"
-msgstr ""
-
 #: ../admin/meta-box/home_cta.php:16
 msgid "Call to action incentive"
 msgstr ""
@@ -891,6 +483,10 @@ msgstr ""
 
 #: ../admin/meta-box/portfolio_temoignage.php:12
 msgid "Name"
+msgstr ""
+
+#: ../admin/meta-box/portfolio_temoignage.php:16 ../functions.php:331
+msgid "Testimonial"
 msgstr ""
 
 #: ../admin/meta-box/portfolio_temoignage.php:20
@@ -943,12 +539,32 @@ msgstr ""
 msgid "Add a video link from Youtube, Dailymotion or Vimeo."
 msgstr ""
 
+#: ../admin/migration.php:69
+msgid "Customer"
+msgstr ""
+
+#: ../admin/migration.php:69
+msgid "URL"
+msgstr ""
+
+#: ../admin/shortcodes-langs.php:11
+msgid "Etendard Shortcodes"
+msgstr ""
+
+#: ../admin/shortcodes-langs.php:12
+msgid "Buttons"
+msgstr ""
+
 #: ../admin/widgets/appel-action.php:9
 msgid "Etendard - Call to action"
 msgstr ""
 
 #: ../admin/widgets/appel-action.php:10
 msgid "Add a call to action in the sidebar."
+msgstr ""
+
+#: ../admin/widgets/appel-action.php:30 ../call_to_action.php:33
+msgid "Click here"
 msgstr ""
 
 #: ../admin/widgets/appel-action.php:61
@@ -983,6 +599,366 @@ msgstr ""
 msgid "More networks"
 msgstr ""
 
+#: ../comments.php:7
+msgid "1 comment was added, add yours."
+msgstr ""
+
+#: ../comments.php:7
+#, php-format
+msgid "%1$s comments were added, add yours."
+msgstr ""
+
+#: ../comments.php:15 ../comments.php:43
+#, php-format
+msgid "Reply to %s"
+msgstr ""
+
+#: ../comments.php:16 ../comments.php:44
+msgid "Post comment"
+msgstr ""
+
+#: ../comments.php:26
+msgid "Previous comments"
+msgstr ""
+
+#: ../comments.php:29
+msgid "Next comments"
+msgstr ""
+
+#: ../comments.php:36
+msgid "Be the first to post a comment."
+msgstr ""
+
+#: ../comments.php:49
+msgid "Comments are closed."
+msgstr ""
+
+#: ../content-body.php:10 ../content-body.php:22
+#: ../home_elements/articles.php:63 ../home_elements/services.php:49
+#: ../template-portfolio.php:89 ../template-services.php:49
+msgid "Read more"
+msgstr ""
+
+#: ../content-footer-meta.php:15
+msgid "Pages:"
+msgstr ""
+
+#: ../content-header-meta.php:5
+#, php-format
+msgid "Published on %2$s by <a href=\"%3$s\">%4$s</a> in %5$s | "
+msgstr ""
+
+#: ../content-header-meta.php:7
+msgid "No Comment"
+msgstr ""
+
+#: ../content-header-meta.php:7
+msgid "One Comment"
+msgstr ""
+
+#: ../content-header-meta.php:7
+msgid "% Comments"
+msgstr ""
+
+#: ../content-header-meta.php:9
+msgid "Edit"
+msgstr ""
+
+#: ../content-none.php:4
+#, php-format
+msgid ""
+"Sorry, no posts were found. You can <a href=\"%s\" title=\"Click here to get "
+"back to the homepage\">go back to the homepage</a> or use the search field "
+"below :"
+msgstr ""
+
+#: ../footer.php:17
+msgid ""
+"<strong>2014</strong> - Étendard by <a href=\"https://www.themesdefrance.fr"
+"\" target=\"_blank\">Themes de France</a>"
+msgstr ""
+
+#: ../footer.php:35
+msgid "Top"
+msgstr ""
+
+#: ../formulaire_contact.php:10
+msgid "Contact"
+msgstr ""
+
+#: ../formulaire_contact.php:26
+msgid "Name *"
+msgstr ""
+
+#: ../formulaire_contact.php:33
+msgid "Email *"
+msgstr ""
+
+#: ../formulaire_contact.php:40
+msgid "Subject"
+msgstr ""
+
+#: ../formulaire_contact.php:47
+msgid "Message *"
+msgstr ""
+
+#: ../formulaire_contact.php:53
+msgid "Send"
+msgstr ""
+
+#: ../formulaire_contact.php:59
+msgid "Succes ! You message was sent."
+msgstr ""
+
+#: ../formulaire_contact.php:60
+msgid "An error occured during sending, try again in a few minutes."
+msgstr ""
+
+#: ../functions.php:47
+msgid "Set up the main menu"
+msgstr ""
+
+#: ../functions.php:54
+msgid "Main menu"
+msgstr ""
+
+#: ../functions.php:55
+msgid "Footer menu"
+msgstr ""
+
+#: ../functions.php:59
+msgid "Sidebar"
+msgstr ""
+
+#: ../functions.php:61
+msgid "Add widgets in the sidebar."
+msgstr ""
+
+#: ../functions.php:71
+msgid "Add widgets in the footer."
+msgstr ""
+
+#: ../functions.php:95
+msgid "Post"
+msgstr ""
+
+#: ../functions.php:122
+msgctxt "project post type general name"
+msgid "Projects"
+msgstr ""
+
+#: ../functions.php:123
+msgctxt "project post type singular name"
+msgid "Project"
+msgstr ""
+
+#: ../functions.php:124
+msgctxt "projects admin menu"
+msgid "Projects"
+msgstr ""
+
+#: ../functions.php:125
+msgctxt "add new project on admin bar"
+msgid "Project"
+msgstr ""
+
+#: ../functions.php:126
+msgctxt "add new portfolio"
+msgid "Add New"
+msgstr ""
+
+#: ../functions.php:127
+msgid "Add New Project"
+msgstr ""
+
+#: ../functions.php:128 ../functions.php:172
+msgid "Add New"
+msgstr ""
+
+#: ../functions.php:129
+msgid "Edit Project"
+msgstr ""
+
+#: ../functions.php:130
+msgid "View Project"
+msgstr ""
+
+#: ../functions.php:131
+msgid "All Projects"
+msgstr ""
+
+#: ../functions.php:132
+msgid "Search Projects"
+msgstr ""
+
+#: ../functions.php:133
+msgid "Parent Project:"
+msgstr ""
+
+#: ../functions.php:134
+msgid "No Projects found."
+msgstr ""
+
+#: ../functions.php:135
+msgid "No Projects found in Trash."
+msgstr ""
+
+#: ../functions.php:139
+msgid "Project"
+msgstr ""
+
+#: ../functions.php:145
+msgid "project"
+msgstr ""
+
+#: ../functions.php:159
+msgid "Categories"
+msgstr ""
+
+#: ../functions.php:166
+msgctxt "service post type general name"
+msgid "Services"
+msgstr ""
+
+#: ../functions.php:167
+msgctxt "service post type singular name"
+msgid "Service"
+msgstr ""
+
+#: ../functions.php:168
+msgctxt "services admin menu"
+msgid "Services"
+msgstr ""
+
+#: ../functions.php:169
+msgctxt "add new service on admin bar"
+msgid "Service"
+msgstr ""
+
+#: ../functions.php:170
+msgctxt "add new service"
+msgid "Add New"
+msgstr ""
+
+#: ../functions.php:171
+msgid "Add New Service"
+msgstr ""
+
+#: ../functions.php:173
+msgid "Edit Service"
+msgstr ""
+
+#: ../functions.php:174
+msgid "View Service"
+msgstr ""
+
+#: ../functions.php:176
+msgid "Search Services"
+msgstr ""
+
+#: ../functions.php:177
+msgid "Parent Service:"
+msgstr ""
+
+#: ../functions.php:178
+msgid "No Services Found."
+msgstr ""
+
+#: ../functions.php:179
+msgid "No Services Found in Trash."
+msgstr ""
+
+#: ../functions.php:289
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: ../functions.php:323
+msgid "Project Metas"
+msgstr ""
+
+#: ../functions.php:511
+msgid "Pingback:"
+msgstr ""
+
+#: ../functions.php:522
+msgid "Your comment is waiting for moderation."
+msgstr ""
+
+#: ../functions.php:533
+#, php-format
+msgid "Published on %s at %s"
+msgstr ""
+
+#: ../functions.php:546
+msgid "Reply"
+msgstr ""
+
+#: ../functions.php:835
+msgid "Themes de France"
+msgstr ""
+
+#: ../functions.php:850
+msgid ""
+"In order to get updates, please enter your licence that you received by "
+"email."
+msgstr ""
+
+#: ../functions.php:856
+#, php-format
+msgid ""
+"You did not set up any page for posts. <a href=\"%s\">Click here to fix it</"
+"a>"
+msgstr ""
+
+#: ../header-bar.php:5 ../header-bar.php:56
+msgid "Blog"
+msgstr ""
+
+#: ../header-bar.php:18
+msgid "Posts from "
+msgstr ""
+
+#: ../header-bar.php:24
+msgid "Posts tagged by "
+msgstr ""
+
+#: ../header-bar.php:30
+#, php-format
+msgid "Search results for : %s"
+msgstr ""
+
+#: ../header-bar.php:36
+msgid "Archives from "
+msgstr ""
+
+#: ../header-bar.php:40 ../header-bar.php:44
+msgid "Archives for "
+msgstr ""
+
+#: ../header-bar.php:48
+msgid "Archives"
+msgstr ""
+
+#: ../header.php:30
+msgid "Your browser is <em>too old !"
+msgstr ""
+
+#: ../header.php:30
+msgid "Update your browser"
+msgstr ""
+
+#: ../header.php:30
+msgid "or"
+msgstr ""
+
+#: ../header.php:30
+msgid "Install Google Chrome Frame"
+msgstr ""
+
+#: ../header.php:30
+msgid "to display this website correctly"
+msgstr ""
+
 #: ../home_elements/articles.php:10
 msgid "Last Posts"
 msgstr ""
@@ -999,6 +975,30 @@ msgstr ""
 msgid "Check the portfolio"
 msgstr ""
 
-#: ../home_elements/services.php:56
+#: ../home_elements/services.php:61
 msgid "Check all services"
+msgstr ""
+
+#: ../searchform.php:4
+msgid "Search :"
+msgstr ""
+
+#: ../searchform.php:6
+msgid "Search..."
+msgstr ""
+
+#: ../searchform.php:9
+msgid "Go"
+msgstr ""
+
+#: ../template-portfolio.php:39
+msgid "All"
+msgstr ""
+
+#: ../template-portfolio.php:98 ../template-services.php:57
+msgid "Previous Page"
+msgstr ""
+
+#: ../template-portfolio.php:99 ../template-services.php:58
+msgid "Next Page"
 msgstr ""
