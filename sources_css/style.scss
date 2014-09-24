@@ -1053,7 +1053,6 @@ div.pagination{
 	}
 	& a{
 		color:$body-copy-color;
-		text-decoration: underline;
 		@include transition(color $default-transition-duration $default-transition-function);
 	}
 }

@@ -423,7 +423,7 @@ if (!function_exists('etendard_posts_nav')){
 	 @param $separator : string to insert between each page
 	*/
 	
-	function etendard_posts_nav($extremes=true, $separator='|'){
+	function etendard_posts_nav($extremes = true, $separator = '|'){
 		if (is_singular()) return;
 	
 		global $wp_query;
@@ -462,7 +462,7 @@ if (!function_exists('etendard_posts_nav')){
 			else
 				$output .= sprintf($linkTemplate, esc_url(get_pagenum_link(1)), '1');
 			
-			echo $separator;
+			$output .= $separator;
 			if (!in_array(2, $links)) $output .= '…'.$separator;
 		}
 	
@@ -474,12 +474,12 @@ if (!function_exists('etendard_posts_nav')){
 			else
 				$output .= sprintf($linkTemplate, esc_url(get_pagenum_link($link)), $link);
 				
-			if ($link < $max) echo $separator;
+			if ($link < $max) $output .= $separator;
 		}
 	
 		// Link to last page, plus ellipses if necessary
 		if (!in_array($max, $links)){
-			if (!in_array($max-1, $links)) echo '…'.$separator;
+			if (!in_array($max-1, $links)) $output .= '…'.$separator;
 	
 			if ($paged == $max)
 				$output .= sprintf($current, $link);
