@@ -562,16 +562,17 @@ section.portfolio nav.categories ul{
 section.portfolio nav.categories li{
 	display:inline-block;
 	
-	&:first-child a{
+	&:first-child span{
 		border-right: none;
 		margin-right:20px;
 	}
 	
-	&:last-child a{
+	&:last-child span{
 		border-right: none;
 	}
 }
-section.portfolio nav.categories a{
+
+section.portfolio nav.categories span{
 	display:inline;
 	padding: 4px 10px;
 	color: inherit;
@@ -580,6 +581,12 @@ section.portfolio nav.categories a{
 	font-family:$heading-font;
 	color:$body-copy-color;
 	border-right: 2px solid $body-copy-color;
+	
+	cursor: pointer;
+}
+
+ul.portfolio .creation-list.mix{
+	display: none;
 }
 
 section.realisation, section.diaporama{

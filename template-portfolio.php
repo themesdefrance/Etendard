@@ -19,7 +19,7 @@ if (!is_tax('portfolio_categorie') && !is_post_type_archive('portfolio')){
 			'post_type'=>'portfolio',
 			'orderby'=>'date',
 			'order'=>'DESC',
-			'posts_per_page'=> apply_filters('etendard_portfolio_pagination', 6),
+			'posts_per_page'=> apply_filters('etendard_portfolio_pagination', 9),
 			'paged'=>$paged
 	);
 	$wp_query = new WP_Query($args);
@@ -28,6 +28,7 @@ else if (is_tax('portfolio_categorie')){
 	$wp_query->set('post_type', 'portfolio');
 	$wp_query->get_posts();
 }
+
 ?>
 <section class="portfolio">
 	<div class="wrapper">
@@ -35,15 +36,15 @@ else if (is_tax('portfolio_categorie')){
 		<nav class="categories">
 			<ul>
 				<li>
-					<a href="<?php echo etendard_portfolio_page_link(); ?>" class="<?php echo (!is_tax('portfolio_categorie')) ? 'active' : ''; ?>">
+					<span class="<?php echo (!is_tax('portfolio_categorie')) ? 'active filter' : 'filter'; ?>" data-filter="all">
 						<?php echo apply_filters('etendard_portfolio_tous', __('All', 'etendard')); ?>
-					</a>
+					</span>
 				</li>
 				<?php foreach ($terms as $term){ ?>
 				<li>
-					<a href="<?php echo get_term_link($term); ?>" class="<?php echo (is_tax('portfolio_categorie', $term)) ? 'active' : ''; ?>">
+					<span class="<?php echo (is_tax('portfolio_categorie', $term)) ? 'active filter' : 'filter'; ?>" data-filter="<?php echo "." . $term->slug; ?>">
 						<?php echo $term->name; ?>
-					</a>
+					</span>
 				</li>
 				<?php } ?>
 			</ul>
@@ -62,8 +63,13 @@ else if (is_tax('portfolio_categorie')){
 					$icon = 'icon-ellipsis';
 					break;
 			}
+			
+			// Get current terms list
+			$currentterms_list = etendard_get_portfolio_term_list();
+			
 			?>
-			<li class="creation creation-list">
+			
+			<li class="creation creation-list mix <?php echo $currentterms_list; ?>">
 				<a href="<?php the_permalink(); ?>">
 					<figure class="<?php echo $icon; ?>">
 						<div class="entry-thumbnail">

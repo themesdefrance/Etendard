@@ -1,2 +1,4 @@
 <?php 
-get_template_part('template-portfolio');
+
+wp_redirect( etendard_portfolio_page_link());
+exit;
