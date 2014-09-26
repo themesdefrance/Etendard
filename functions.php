@@ -871,6 +871,10 @@ add_action('admin_init', 'etendard_edd');
 
 if(!function_exists('etendard_admin_notice')){
 	function etendard_admin_notice(){
+	
+		global $current_user;
+        $user_id = $current_user->ID;
+	
 		if(!get_option('etendard_license_status')){
 			echo '<div class="error"><p>';
 			_e("In order to get updates, please enter your licence that you received by email.", 'etendard');
@@ -878,13 +882,31 @@ if(!function_exists('etendard_admin_notice')){
 		}
 		
 		if(!get_option('page_for_posts')){
-			echo '<div class="error"><p>';
-			printf(__('You did not set up any page for posts. <a href="%s">Click here to fix it</a>', 'etendard'), admin_url('options-reading.php'));
-			echo '</p></div>';
+			if ( ! get_user_meta($user_id, 'ignore_pageforposts_notice') ) {
+
+				echo '<div class="error"><p>';
+				printf(__('You did not set up any page for posts. <a href="%s">Click here to fix it</a> | <a href="%s">Ignore</a>', 'etendard'), admin_url('options-reading.php'), '?ignore_notice=pageforposts');
+				echo '</p></div>';
+			}
 		}
 	}
 }
 add_action('admin_notices', 'etendard_admin_notice');
+
+// Thanks to http://wptheming.com/2011/08/admin-notices-in-wordpress/
+if (!function_exists('etendard_ignore_admin_notice')){
+	function etendard_ignore_admin_notice() {
+		global $current_user;
+        $user_id = $current_user->ID;
+        
+        /* If user clicks to ignore the notice, add that to their user meta */
+        if ( isset($_GET['ignore_notice']) && 'pageforposts' == $_GET['ignore_notice'] ) {
+             add_user_meta($user_id, 'ignore_pageforposts_notice', 'true', true);
+		}
+	}
+}
+add_action('admin_init', 'etendard_ignore_admin_notice');
+
 
 ////////////////////////////////////
 // Complement cocorico
