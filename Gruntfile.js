@@ -4,13 +4,13 @@ module.exports = function(grunt){
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
 			compile: {
-				files: ['sources_css/**/*', 'js/*.js', '!js/etendard-combined.js'],
+				files: ['scss/**/*.scss', 'js/*.js', '!js/etendard-combined.js'],
 				tasks: ['default']
 			}
 		},
 		compass: {
 			options:{
-				sassDir: 'sources_css/',
+				sassDir: 'scss/',
 				imagesDir: 'img',
 				fontsDir: 'fonts',
 				require: []
@@ -23,11 +23,19 @@ module.exports = function(grunt){
 			},
 			dev: {
 				options:{
-					cssDir: 'sources_css/',
+					cssDir: 'css/',
 					outputStyle: 'expanded',
 					noLineComments: true
 				}
+			},
+			
+			buddypress: {
+				options:{
+					cssDir: 'css/',
+					outputStyle: 'expanded',
+				}
 			}
+			
 		},
 		concat: {
 			options: {
@@ -51,6 +59,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	
-	grunt.registerTask('default', ['compass:build', 'concat:js']);
+	grunt.registerTask('default', ['compass:build','compass:dev', 'concat:js']);
 	grunt.registerTask('build', ['compass:build', 'compass:dev', 'concat:js', 'copy:build']);
+	grunt.registerTask('buddypress', ['compass:buddypress']);
 }
