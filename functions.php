@@ -759,6 +759,7 @@ if(!function_exists('etendard_user_styles')){
 				.cta-wrapper .cta-button,
 				.article .content a.bouton,
 				input[type='submit'],
+				input[type='button'],
 				a.bouton.lirelasuite,
 				.headerbar,
 				#remonter,
@@ -796,7 +797,8 @@ if(!function_exists('etendard_user_styles')){
 				#remonter:hover,
 				section.portfolio .pagination a:hover,
 				section.services .pagination a:hover,
-				input[type='submit']:hover{
+				input[type='submit']:hover,
+				input[type='button']:hover{
 					background:<?php echo $complement; ?> !important;
 				}
 				form.search-form .search-submit-wrapper:hover:before,
@@ -808,7 +810,8 @@ if(!function_exists('etendard_user_styles')){
 				.sidebar .widget_etendardsocial li a:hover,
 				.sidebar .widget_etendardappelaction a.cta-button,
 				.sidebar .widget_etendardappelaction a.cta-button:hover,
-				#breadcrumbs a{
+				#breadcrumbs a,
+				.headerbar a{
 					color:<?php echo $contrast; ?> !important;
 				}
 			</style>
