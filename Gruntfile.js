@@ -29,13 +29,6 @@ module.exports = function(grunt){
 				}
 			},
 			
-			buddypress: {
-				options:{
-					cssDir: 'css/',
-					outputStyle: 'expanded',
-				}
-			}
-			
 		},
 		concat: {
 			options: {
@@ -61,5 +54,5 @@ module.exports = function(grunt){
 	
 	grunt.registerTask('default', ['compass:build','compass:dev', 'concat:js']);
 	grunt.registerTask('build', ['compass:build', 'compass:dev', 'concat:js', 'copy:build']);
-	grunt.registerTask('buddypress', ['compass:buddypress']);
+
 }
