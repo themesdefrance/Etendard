@@ -824,7 +824,7 @@ if(!function_exists('etendard_custom_styles')){
 	function etendard_custom_styles(){
 		if (get_option("etendard_custom_css")){
 			echo '<style type="text/css">';
-			echo htmlentities(stripslashes(get_option("etendard_custom_css")), ENT_NOQUOTES);
+			echo strip_tags(stripslashes(get_option("etendard_custom_css")));
 			echo '</style>';
 		}
 	}
