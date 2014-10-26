@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Etendard\n"
-"POT-Creation-Date: 2014-09-17 17:42+0100\n"
-"PO-Revision-Date: 2014-09-17 17:43+0100\n"
+"POT-Creation-Date: 2014-10-26 13:18+0100\n"
+"PO-Revision-Date: 2014-10-26 13:19+0100\n"
 "Last-Translator: Alex Thèmes de France <alex@themesdefrance.fr>\n"
 "Language-Team: Themes de France <alex@themesdefrance.fr>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.7\n"
+"X-Generator: Poedit 1.6.9\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;_n:1,2;_ex:1,2c;_n\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n > 1) ;\n"
@@ -34,7 +34,7 @@ msgstr ""
 "ici</a> pour revenir à la page d'accueil."
 
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:19
-#: ../admin/index.php:43 ../functions.php:339 ../functions.php:363
+#: ../admin/index.php:43 ../functions.php:345 ../functions.php:369
 msgid "Slider"
 msgstr "Diaporama"
 
@@ -309,7 +309,7 @@ msgstr ""
 "Toute l'équipe de Thèmes de France est là pour vous aider à régler tous "
 "problèmes relatifs à Étendard."
 
-#: ../admin/index.php:5 ../functions.php:281
+#: ../admin/index.php:5 ../functions.php:287
 msgid "Etendard Settings"
 msgstr "Options Étendard"
 
@@ -364,7 +364,7 @@ msgstr "Titre et sous-titre"
 msgid "Content"
 msgstr "Contenu"
 
-#: ../admin/index.php:45 ../functions.php:353
+#: ../admin/index.php:45 ../functions.php:359
 msgid "Call to action"
 msgstr "Appel à l'action"
 
@@ -553,7 +553,7 @@ msgstr ""
 msgid "Name"
 msgstr "Nom"
 
-#: ../admin/meta-box/portfolio_temoignage.php:16 ../functions.php:331
+#: ../admin/meta-box/portfolio_temoignage.php:16 ../functions.php:337
 msgid "Testimonial"
 msgstr "Témoignage"
 
@@ -705,7 +705,7 @@ msgstr "Les commentaires sont fermés."
 
 #: ../content-body.php:10 ../content-body.php:22
 #: ../home_elements/articles.php:63 ../home_elements/services.php:49
-#: ../template-portfolio.php:89 ../template-services.php:49
+#: ../template-portfolio.php:95 ../template-services.php:49
 msgid "Read more"
 msgstr "Lire la suite"
 
@@ -945,36 +945,36 @@ msgstr "Aucun service trouvé."
 msgid "No Services Found in Trash."
 msgstr "Aucun service trouvé dans la corbeille."
 
-#: ../functions.php:289
+#: ../functions.php:295
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Vous n'avez pas les droits suffisants pour accéder à cette page."
 
-#: ../functions.php:323
+#: ../functions.php:329
 msgid "Project Metas"
 msgstr "Infos complémentaires"
 
-#: ../functions.php:511
+#: ../functions.php:517
 msgid "Pingback:"
 msgstr "Rétrolien:"
 
-#: ../functions.php:522
+#: ../functions.php:528
 msgid "Your comment is waiting for moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: ../functions.php:533
+#: ../functions.php:539
 #, php-format
 msgid "Published on %s at %s"
 msgstr "Publié dans %s le %s"
 
-#: ../functions.php:546
+#: ../functions.php:552
 msgid "Reply"
 msgstr "Répondre"
 
-#: ../functions.php:835
+#: ../functions.php:864
 msgid "Themes de France"
 msgstr "Thèmes de France"
 
-#: ../functions.php:850
+#: ../functions.php:883
 msgid ""
 "In order to get updates, please enter your licence that you received by "
 "email."
@@ -982,14 +982,14 @@ msgstr ""
 "Afin de recevoir les mises à jour, veuillez entrer votre clé de licence "
 "reçue par email."
 
-#: ../functions.php:856
+#: ../functions.php:891
 #, php-format
 msgid ""
 "You did not set up any page for posts. <a href=\"%s\">Click here to fix it</"
-"a>"
+"a> | <a href=\"%s\">Ignore</a>"
 msgstr ""
 "Vous n'avez pas défini de page pour les articles. <a href=\"%s\">Cliquez ici "
-"pour corriger cela</a>"
+"pour corriger cela</a> | <a href=\"%s\">Ignorer</a>"
 
 #: ../header-bar.php:5 ../header-bar.php:56
 msgid "Blog"
@@ -1072,15 +1072,15 @@ msgstr "Recherche..."
 msgid "Go"
 msgstr "Rechercher"
 
-#: ../template-portfolio.php:39
+#: ../template-portfolio.php:40
 msgid "All"
 msgstr "Tout"
 
-#: ../template-portfolio.php:98 ../template-services.php:57
+#: ../template-portfolio.php:104 ../template-services.php:57
 msgid "Previous Page"
 msgstr "Page précédente"
 
-#: ../template-portfolio.php:99 ../template-services.php:58
+#: ../template-portfolio.php:105 ../template-services.php:58
 msgid "Next Page"
 msgstr "Page suivante"
 

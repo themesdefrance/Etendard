@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Etendard\n"
-"POT-Creation-Date: 2014-09-17 17:43+0100\n"
-"PO-Revision-Date: 2014-09-17 17:43+0100\n"
+"POT-Creation-Date: 2014-10-26 13:18+0100\n"
+"PO-Revision-Date: 2014-10-26 13:18+0100\n"
 "Last-Translator: Alex Thèmes de France <alex@themesdefrance.fr>\n"
 "Language-Team: Themes de France <alex@themesdefrance.fr>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.7\n"
+"X-Generator: Poedit 1.6.9\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;_n:1,2;_ex:1,2c\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:19
-#: ../admin/index.php:43 ../functions.php:339 ../functions.php:363
+#: ../admin/index.php:43 ../functions.php:345 ../functions.php:369
 msgid "Slider"
 msgstr ""
 
@@ -270,7 +270,7 @@ msgid ""
 "Themes de France team is here to help you to have your site up and running."
 msgstr ""
 
-#: ../admin/index.php:5 ../functions.php:281
+#: ../admin/index.php:5 ../functions.php:287
 msgid "Etendard Settings"
 msgstr ""
 
@@ -321,7 +321,7 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: ../admin/index.php:45 ../functions.php:353
+#: ../admin/index.php:45 ../functions.php:359
 msgid "Call to action"
 msgstr ""
 
@@ -485,7 +485,7 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: ../admin/meta-box/portfolio_temoignage.php:16 ../functions.php:331
+#: ../admin/meta-box/portfolio_temoignage.php:16 ../functions.php:337
 msgid "Testimonial"
 msgstr ""
 
@@ -635,7 +635,7 @@ msgstr ""
 
 #: ../content-body.php:10 ../content-body.php:22
 #: ../home_elements/articles.php:63 ../home_elements/services.php:49
-#: ../template-portfolio.php:89 ../template-services.php:49
+#: ../template-portfolio.php:95 ../template-services.php:49
 msgid "Read more"
 msgstr ""
 
@@ -868,46 +868,46 @@ msgstr ""
 msgid "No Services Found in Trash."
 msgstr ""
 
-#: ../functions.php:289
+#: ../functions.php:295
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: ../functions.php:323
+#: ../functions.php:329
 msgid "Project Metas"
 msgstr ""
 
-#: ../functions.php:511
+#: ../functions.php:517
 msgid "Pingback:"
 msgstr ""
 
-#: ../functions.php:522
+#: ../functions.php:528
 msgid "Your comment is waiting for moderation."
 msgstr ""
 
-#: ../functions.php:533
+#: ../functions.php:539
 #, php-format
 msgid "Published on %s at %s"
 msgstr ""
 
-#: ../functions.php:546
+#: ../functions.php:552
 msgid "Reply"
 msgstr ""
 
-#: ../functions.php:835
+#: ../functions.php:864
 msgid "Themes de France"
 msgstr ""
 
-#: ../functions.php:850
+#: ../functions.php:883
 msgid ""
 "In order to get updates, please enter your licence that you received by "
 "email."
 msgstr ""
 
-#: ../functions.php:856
+#: ../functions.php:891
 #, php-format
 msgid ""
 "You did not set up any page for posts. <a href=\"%s\">Click here to fix it</"
-"a>"
+"a> | <a href=\"%s\">Ignore</a>"
 msgstr ""
 
 #: ../header-bar.php:5 ../header-bar.php:56
@@ -991,14 +991,14 @@ msgstr ""
 msgid "Go"
 msgstr ""
 
-#: ../template-portfolio.php:39
+#: ../template-portfolio.php:40
 msgid "All"
 msgstr ""
 
-#: ../template-portfolio.php:98 ../template-services.php:57
+#: ../template-portfolio.php:104 ../template-services.php:57
 msgid "Previous Page"
 msgstr ""
 
-#: ../template-portfolio.php:99 ../template-services.php:58
+#: ../template-portfolio.php:105 ../template-services.php:58
 msgid "Next Page"
 msgstr ""

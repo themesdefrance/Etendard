@@ -50,6 +50,10 @@ if (!function_exists( 'etendard_nomenu')){
 
 if (!function_exists('etendard_setup')){
 	function etendard_setup(){
+	
+		// Load language
+		load_theme_textdomain('etendard', get_template_directory().'/languages');
+		
 		// Register menus
 		register_nav_menu('primary', __('Main menu', 'etendard'));
 		register_nav_menu('footer', __('Footer menu', 'etendard'));
@@ -96,9 +100,6 @@ if (!function_exists('etendard_setup')){
 			$newsizes = array_merge($sizes, $added);
 			return $newsizes;
 		}
-		
-		// Load language
-		load_theme_textdomain('etendard', get_template_directory().'/languages');
 		
 		// Update Etendard new version
 		update_option( 'etendard_version', EDD_SL_THEME_VERSION );
