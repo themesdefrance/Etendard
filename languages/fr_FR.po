@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Etendard\n"
-"POT-Creation-Date: 2014-10-26 13:18+0100\n"
-"PO-Revision-Date: 2014-10-26 13:19+0100\n"
+"POT-Creation-Date: 2014-10-26 19:51+0100\n"
+"PO-Revision-Date: 2014-10-26 19:52+0100\n"
 "Last-Translator: Alex Thèmes de France <alex@themesdefrance.fr>\n"
 "Language-Team: Themes de France <alex@themesdefrance.fr>\n"
 "Language: fr\n"
@@ -34,7 +34,7 @@ msgstr ""
 "ici</a> pour revenir à la page d'accueil."
 
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:19
-#: ../admin/index.php:43 ../functions.php:345 ../functions.php:369
+#: ../admin/index.php:43 ../functions.php:346 ../functions.php:370
 msgid "Slider"
 msgstr "Diaporama"
 
@@ -53,7 +53,7 @@ msgid "Title"
 msgstr "Titre"
 
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:81
-#: ../admin/Cocorico/plugins/CocoricoComponents.php:304
+#: ../admin/Cocorico/plugins/CocoricoComponents.php:321
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -69,7 +69,7 @@ msgstr "supprimer"
 msgid "Save all changes"
 msgstr "Sauvegarder"
 
-#: ../admin/Cocorico/plugins/CocoricoComponents.php:257
+#: ../admin/Cocorico/plugins/CocoricoComponents.php:274
 msgid "Select"
 msgstr "Sélectionner"
 
@@ -309,7 +309,7 @@ msgstr ""
 "Toute l'équipe de Thèmes de France est là pour vous aider à régler tous "
 "problèmes relatifs à Étendard."
 
-#: ../admin/index.php:5 ../functions.php:287
+#: ../admin/index.php:5 ../functions.php:288
 msgid "Etendard Settings"
 msgstr "Options Étendard"
 
@@ -364,11 +364,11 @@ msgstr "Titre et sous-titre"
 msgid "Content"
 msgstr "Contenu"
 
-#: ../admin/index.php:45 ../functions.php:359
+#: ../admin/index.php:45 ../functions.php:360
 msgid "Call to action"
 msgstr "Appel à l'action"
 
-#: ../admin/index.php:46 ../functions.php:175 ../functions.php:183
+#: ../admin/index.php:46 ../functions.php:176 ../functions.php:184
 msgid "Services"
 msgstr "Services"
 
@@ -380,7 +380,7 @@ msgstr "Derniers projets"
 msgid "Last posts"
 msgstr "Derniers articles"
 
-#: ../admin/index.php:52 ../functions.php:69
+#: ../admin/index.php:52 ../functions.php:73
 msgid "Footer"
 msgstr "Pied de page"
 
@@ -532,6 +532,18 @@ msgstr "Libellé du bouton (Exemple : \"Contactez-nous\")"
 msgid "Save changes"
 msgstr "Sauvegarder"
 
+#: ../admin/index.php:166
+msgid "Etendard is a product of"
+msgstr "Étendard est un thème de"
+
+#: ../admin/index.php:166
+msgid "Tell us what you think of this theme"
+msgstr "Dites-nous ce que vous en pensez"
+
+#: ../admin/index.php:166
+msgid "on this page"
+msgstr "sur cette page"
+
 #: ../admin/meta-box/home_cta.php:16
 msgid "Call to action incentive"
 msgstr "Message de l'appel à l'action"
@@ -553,7 +565,7 @@ msgstr ""
 msgid "Name"
 msgstr "Nom"
 
-#: ../admin/meta-box/portfolio_temoignage.php:16 ../functions.php:337
+#: ../admin/meta-box/portfolio_temoignage.php:16 ../functions.php:338
 msgid "Testimonial"
 msgstr "Témoignage"
 
@@ -705,7 +717,7 @@ msgstr "Les commentaires sont fermés."
 
 #: ../content-body.php:10 ../content-body.php:22
 #: ../home_elements/articles.php:63 ../home_elements/services.php:49
-#: ../template-portfolio.php:95 ../template-services.php:49
+#: ../template-portfolio.php:97 ../template-services.php:49
 msgid "Read more"
 msgstr "Lire la suite"
 
@@ -795,186 +807,186 @@ msgstr ""
 msgid "Set up the main menu"
 msgstr "Veuillez configurer le menu principal"
 
-#: ../functions.php:54
+#: ../functions.php:58
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: ../functions.php:55
+#: ../functions.php:59
 msgid "Footer menu"
 msgstr "Menu du pied de page"
 
-#: ../functions.php:59
+#: ../functions.php:63
 msgid "Sidebar"
 msgstr "Barre latérale"
 
-#: ../functions.php:61
+#: ../functions.php:65
 msgid "Add widgets in the sidebar."
 msgstr "Ajoutez des widgets dans la barre latérale."
 
-#: ../functions.php:71
+#: ../functions.php:75
 msgid "Add widgets in the footer."
 msgstr "Ajouter des widgets dans le pied de page."
 
-#: ../functions.php:95
+#: ../functions.php:99
 msgid "Post"
 msgstr "Article"
 
-#: ../functions.php:122
+#: ../functions.php:123
 msgctxt "project post type general name"
 msgid "Projects"
 msgstr "Projets"
 
-#: ../functions.php:123
+#: ../functions.php:124
 msgctxt "project post type singular name"
 msgid "Project"
 msgstr "Projet"
 
-#: ../functions.php:124
+#: ../functions.php:125
 msgctxt "projects admin menu"
 msgid "Projects"
 msgstr "Projets"
 
-#: ../functions.php:125
+#: ../functions.php:126
 msgctxt "add new project on admin bar"
 msgid "Project"
 msgstr "Projet"
 
-#: ../functions.php:126
+#: ../functions.php:127
 msgctxt "add new portfolio"
 msgid "Add New"
 msgstr "Ajouter "
 
-#: ../functions.php:127
+#: ../functions.php:128
 msgid "Add New Project"
 msgstr "Ajouter un projet"
 
-#: ../functions.php:128 ../functions.php:172
+#: ../functions.php:129 ../functions.php:173
 msgid "Add New"
 msgstr "Ajouter"
 
-#: ../functions.php:129
+#: ../functions.php:130
 msgid "Edit Project"
 msgstr "Modifier le projet"
 
-#: ../functions.php:130
+#: ../functions.php:131
 msgid "View Project"
 msgstr "Voir le projet"
 
-#: ../functions.php:131
+#: ../functions.php:132
 msgid "All Projects"
 msgstr "Tous les projets"
 
-#: ../functions.php:132
+#: ../functions.php:133
 msgid "Search Projects"
 msgstr "Chercher dans les projets"
 
-#: ../functions.php:133
+#: ../functions.php:134
 msgid "Parent Project:"
 msgstr "Projet parent:"
 
-#: ../functions.php:134
+#: ../functions.php:135
 msgid "No Projects found."
 msgstr "Aucun projet trouvé."
 
-#: ../functions.php:135
+#: ../functions.php:136
 msgid "No Projects found in Trash."
 msgstr "Aucun projet trouvé dans la corbeille."
 
-#: ../functions.php:139
+#: ../functions.php:140
 msgid "Project"
 msgstr "Projet"
 
-#: ../functions.php:145
+#: ../functions.php:146
 msgid "project"
 msgstr "projet"
 
-#: ../functions.php:159
+#: ../functions.php:160
 msgid "Categories"
 msgstr "Catégories"
 
-#: ../functions.php:166
+#: ../functions.php:167
 msgctxt "service post type general name"
 msgid "Services"
 msgstr "Services"
 
-#: ../functions.php:167
+#: ../functions.php:168
 msgctxt "service post type singular name"
 msgid "Service"
 msgstr "Service"
 
-#: ../functions.php:168
+#: ../functions.php:169
 msgctxt "services admin menu"
 msgid "Services"
 msgstr "Services"
 
-#: ../functions.php:169
+#: ../functions.php:170
 msgctxt "add new service on admin bar"
 msgid "Service"
 msgstr "Service"
 
-#: ../functions.php:170
+#: ../functions.php:171
 msgctxt "add new service"
 msgid "Add New"
 msgstr "Ajouter"
 
-#: ../functions.php:171
+#: ../functions.php:172
 msgid "Add New Service"
 msgstr "Ajouter un service"
 
-#: ../functions.php:173
+#: ../functions.php:174
 msgid "Edit Service"
 msgstr "Modifier le service"
 
-#: ../functions.php:174
+#: ../functions.php:175
 msgid "View Service"
 msgstr "Voir le service"
 
-#: ../functions.php:176
+#: ../functions.php:177
 msgid "Search Services"
 msgstr "Chercher dans les services"
 
-#: ../functions.php:177
+#: ../functions.php:178
 msgid "Parent Service:"
 msgstr "Service parent:"
 
-#: ../functions.php:178
+#: ../functions.php:179
 msgid "No Services Found."
 msgstr "Aucun service trouvé."
 
-#: ../functions.php:179
+#: ../functions.php:180
 msgid "No Services Found in Trash."
 msgstr "Aucun service trouvé dans la corbeille."
 
-#: ../functions.php:295
+#: ../functions.php:296
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Vous n'avez pas les droits suffisants pour accéder à cette page."
 
-#: ../functions.php:329
+#: ../functions.php:330
 msgid "Project Metas"
 msgstr "Infos complémentaires"
 
-#: ../functions.php:517
+#: ../functions.php:518
 msgid "Pingback:"
 msgstr "Rétrolien:"
 
-#: ../functions.php:528
+#: ../functions.php:529
 msgid "Your comment is waiting for moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: ../functions.php:539
+#: ../functions.php:540
 #, php-format
 msgid "Published on %s at %s"
 msgstr "Publié dans %s le %s"
 
-#: ../functions.php:552
+#: ../functions.php:553
 msgid "Reply"
 msgstr "Répondre"
 
-#: ../functions.php:864
+#: ../functions.php:865
 msgid "Themes de France"
 msgstr "Thèmes de France"
 
-#: ../functions.php:883
+#: ../functions.php:884
 msgid ""
 "In order to get updates, please enter your licence that you received by "
 "email."
@@ -982,7 +994,7 @@ msgstr ""
 "Afin de recevoir les mises à jour, veuillez entrer votre clé de licence "
 "reçue par email."
 
-#: ../functions.php:891
+#: ../functions.php:892
 #, php-format
 msgid ""
 "You did not set up any page for posts. <a href=\"%s\">Click here to fix it</"
@@ -990,6 +1002,26 @@ msgid ""
 msgstr ""
 "Vous n'avez pas défini de page pour les articles. <a href=\"%s\">Cliquez ici "
 "pour corriger cela</a> | <a href=\"%s\">Ignorer</a>"
+
+#: ../functions.php:902
+#, php-format
+msgid ""
+"If you need to use shortcodes, take a look at our <a href='%s'>Cocorico "
+"Shortocodes plugin</a>. | <a href='%s'>No thanks</a>"
+msgstr ""
+"Si vous avez besoin d'utiliser des shortcodes, jetez un oeil à notre <a "
+"href='%s'>plugin Cocorico Shortocodes</a>. | <a href='%s'>Non merci</a>"
+
+#: ../functions.php:906
+#, php-format
+msgid ""
+"Thanks for using our Cocorico Shortcodes plugin, you're awesome ! If you "
+"think we can enhance it, <a href='%s' target='_blank'>tell us what to do "
+"here</a>. | <a href='%s'>No thanks</a>"
+msgstr ""
+"Merci d'utiliser le plugin Cocorico Shortcodes, vous êtes génial ! Si vous "
+"pensez que nous pouvons l'améliorer, <a href='%s' target='_blank'>dites-nous "
+"quoi faire ici</a>. | <a href='%s'>Non merci</a>"
 
 #: ../header-bar.php:5 ../header-bar.php:56
 msgid "Blog"
@@ -1052,13 +1084,21 @@ msgstr "Derniers articles"
 msgid "Last Projects"
 msgstr "Derniers projets"
 
-#: ../home_elements/portfolio.php:58
+#: ../home_elements/portfolio.php:47 ../template-portfolio.php:79
+msgid "Please add a featured image to this project"
+msgstr "Veuillez ajouter une image à la une pour ce projet"
+
+#: ../home_elements/portfolio.php:60
 msgid "Check the portfolio"
 msgstr "Voir le portfolio"
 
 #: ../home_elements/services.php:61
 msgid "Check all services"
 msgstr "Voir tous les services"
+
+#: ../main.php:23
+msgid "Sorry but no post match what you are looking for."
+msgstr "Désolé mais aucun article ne correspond à ce que vous cherchez."
 
 #: ../searchform.php:4
 msgid "Search :"
@@ -1076,11 +1116,11 @@ msgstr "Rechercher"
 msgid "All"
 msgstr "Tout"
 
-#: ../template-portfolio.php:104 ../template-services.php:57
+#: ../template-portfolio.php:106 ../template-services.php:57
 msgid "Previous Page"
 msgstr "Page précédente"
 
-#: ../template-portfolio.php:105 ../template-services.php:58
+#: ../template-portfolio.php:107 ../template-services.php:58
 msgid "Next Page"
 msgstr "Page suivante"
 
