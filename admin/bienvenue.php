@@ -120,6 +120,9 @@ class Etendard_Welcome {
 					<p><?php _e('Go to Themes de France\'s blog (in french) to check the features we added in the last versions.','etendard'); ?></p>
 					<ul>
 						<li>
+							<p><a href="https://www.themesdefrance.fr/etendard-1-014/" target="_blank">Étendard 1.014</a></p>
+						</li>
+						<li>
 							<p><a href="https://www.themesdefrance.fr/etendard-1-013/" target="_blank">Étendard 1.013</a></p>
 						</li>
 						<li>
