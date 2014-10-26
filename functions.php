@@ -893,6 +893,21 @@ if(!function_exists('etendard_admin_notice')){
 				echo '</p></div>';
 			}
 		}
+		
+		/* Shortcodes are now available in the Cocorico Shortcodes plugin */
+		if ( ! get_user_meta($user_id, 'ignore_cocorico_shortcodes_notice') ) {
+			
+			if(!function_exists('coco_shortcodes_register')){
+				echo '<div class="error"><p>';
+				printf(__("If you need to use shortcodes, take a look at our <a href='%s'>Cocorico Shortocodes plugin</a>. | <a href='%s'>No thanks</a>", 'etendard'), admin_url('plugin-install.php?tab=search&type=term&s="Cocorico+Shortcodes"'), '?ignore_notice=cocorico_shortcodes');
+				echo '</p></div>';
+			}else{
+				echo '<div class="updated"><p>';
+				printf(__("Thanks for using our Cocorico Shortcodes plugin, you're awesome ! If you think we can enhance it, <a href='%s' target='_blank'>tell us what to do here</a>. | <a href='%s'>No thanks</a>", 'etendard'), "https://www.themesdefrance.fr/temoignage/", '?ignore_notice=cocorico_shortcodes');
+				echo '</p></div>';
+			}
+		}
+		
 	}
 }
 add_action('admin_notices', 'etendard_admin_notice');
@@ -906,6 +921,10 @@ if (!function_exists('etendard_ignore_admin_notice')){
         /* If user clicks to ignore the notice, add that to their user meta */
         if ( isset($_GET['ignore_notice']) && 'pageforposts' == $_GET['ignore_notice'] ) {
              add_user_meta($user_id, 'ignore_pageforposts_notice', 'true', true);
+		}
+		
+		if ( isset($_GET['ignore_notice']) && 'cocorico_shortcodes' == $_GET['ignore_notice'] ) {
+             add_user_meta($user_id, 'ignore_cocorico_shortcodes_notice', 'true', true);
 		}
 	}
 }
@@ -939,7 +958,7 @@ if(!function_exists('etendard_add_tinymce4')){
 	    add_filter( 'mce_buttons', 'etendard_add_tinymce4_button' );
 	}
 }
-add_action( 'admin_head', 'etendard_add_tinymce4' );
+//add_action( 'admin_head', 'etendard_add_tinymce4' );
 
 // Load TinyMCE plugin
 if(!function_exists('etendard_add_tinymce4_plugin')){
