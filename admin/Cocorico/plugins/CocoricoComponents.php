@@ -208,6 +208,23 @@ function cocoricoRadioComponent($component, $radios, $options=array()){
 }
 CocoDictionary::register(CocoDictionary::COMPONENT, 'radio', 'cocoricoRadioComponent');
 
+//select 
+function cocoricoSelectComponent($component, $selects, $options=array()){
+	$output = '<select name="'.$component->getName().'">';
+	$selected = (!$component->getValue() && isset($options['default'])) ? $options['default'] : $component->getValue();
+
+	foreach ($selects as $value=>$label){
+		$output .= '
+			<option type="radio" value="'.$value.'" '.(($selected == $value) ? 'selected' : '').'>
+			'.$label.'</option>
+		';
+	}
+	$output .= '</select>';
+	
+	return $output;
+}
+CocoDictionary::register(CocoDictionary::COMPONENT, 'select', 'cocoricoSelectComponent');
+
 //checkbox button set
 function cocoricoCheckboxComponent($component, $checkboxes, $options=array()){
 	$options = array_merge(array(
@@ -297,7 +314,7 @@ function cocoricoUploadComponent($component, $options=array()){
 	$output .= '
 		<div class="cocorico-preview-wrapper attachment" style="float: none; '.(($value) ? '' : 'display: none;').'">		
 			<div class="attachment-preview" style="width: 150px; height: 150px; cursor: auto;">
-				<img src="'.$src.'" alt="'.$component->getName().'" class="cocorico-preview icon" style="max-width: 100%; max-height: 80%;">
+				<img src="'.$src.'" alt="'.$component->getName().'" class="cocorico-preview icon" style="max-width: 100%; max-height: 80%;position: absolute; top:0; left: 0;">
 				
 				<div class="filename">
 					<div class="submitbox">

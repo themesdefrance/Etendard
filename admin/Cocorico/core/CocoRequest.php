@@ -16,7 +16,9 @@ class CocoRequest{
 	}
 	
 	public static function restore(){
-		CocoRequest::$restored = array_merge(unserialize(get_option('cocostore_values')), $_POST);
+		$stored = get_option('cocostore_values');
+		if (!$stored) $stored = array();
+		CocoRequest::$restored = array_merge(unserialize($stored), $_POST);
 		update_option('cocostore_values', serialize(array()));//clears the cache
 	}
 	

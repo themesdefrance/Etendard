@@ -158,3 +158,11 @@ $form->endWrapper('tab');
 $form->component('submit', 'submit', array('value'=>__('Save changes', 'etendard')));
 
 $form->render();
+
+?>
+
+<div style="margin-top:20px;">
+
+<?php _e('Etendard is a product of','etendard'); ?> <a href="https://www.themesdefrance.fr/?utm_source=theme&utm_medium=link&utm_campaign=etendard" target="_blank">Themes de France</a> - <?php _e('Tell us what you think of this theme','etendard'); ?> <a href="https://www.themesdefrance.fr/temoignage/?utm_source=theme&utm_medium=link&utm_campaign=etendard" target="_blank"><?php _e('on this page','etendard'); ?></a>.
+
+</div>

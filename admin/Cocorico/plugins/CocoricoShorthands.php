@@ -38,6 +38,10 @@ function cocoricoSettingShorthand($cocorico, $params){
 			if (!isset($params['options'])) $params['options'] = array();
 			$ui = $cocorico->component('radio', $params['name'], $params['radios'], $params['options']);
 			break;
+		case 'select':
+			if (!isset($params['options'])) $params['options'] = array();
+			$ui = $cocorico->component('select', $params['name'], $params['selects'], $params['options']);
+			break;
 		case 'checkbox':
 			if (!isset($params['options'])) $params['options'] = array();
 			$ui = $cocorico->component('checkbox', $params['name'], $params['checkboxes'], $params['options']);
