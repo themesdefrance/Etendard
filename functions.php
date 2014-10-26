@@ -6,7 +6,7 @@
 
 define('EDD_SL_STORE_URL', 'https://www.themesdefrance.fr');
 define('EDD_SL_THEME_NAME', 'Etendard');
-define('EDD_SL_THEME_VERSION', '1.013');
+define('EDD_SL_THEME_VERSION', '1.014');
 define('EDD_SL_LICENSE_KEY', 'etendard_license_edd');
 
 if(!class_exists('EDD_SL_Theme_Updater')){
@@ -18,7 +18,8 @@ if(!class_exists('EDD_SL_Theme_Updater')){
 ////////////////////////////////////
 
 define('ETENDARD_COCORICO_PREFIX', 'etendard_');
-require_once 'admin/Cocorico/Cocorico.php';
+if(is_admin())
+	require_once 'admin/Cocorico/Cocorico.php';
 
 ////////////////////////////////////
 // Widgets, Shortcodes & Welcome page loading
