@@ -10,11 +10,19 @@
 
 	<div class="col-2-3 <?php if ($position === 'sans') echo 'landing' ?>">
 		<ul class="articles">
-			<?php while (have_posts()) : the_post(); ?>
-			<li>
-				<?php get_template_part('content', get_post_format()); ?>
-			</li>
-			<?php endwhile; ?>
+			<?php if(have_posts()) : ?>
+			
+				<?php while (have_posts()) : the_post(); ?>
+				<li>
+					<?php get_template_part('content', get_post_format()); ?>
+				</li>
+				<?php endwhile; ?>
+			
+			<?php else : ?>
+			
+				<p><?php echo apply_filters('etendard_nopostfound', __('Sorry but no post match what you are looking for.','etendard')); ?></p>
+				
+			<?php endif; ?>
 		</ul>
 		<div class="pagination">
 			<?php etendard_posts_nav(false); ?>
