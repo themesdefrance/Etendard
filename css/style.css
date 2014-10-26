@@ -1312,6 +1312,9 @@ ul.articles .article {
   transition: color 0.2s ease-out;
 }
 
+.article.teaser {
+  min-height: 400px;
+}
 @media only screen and (max-width: 759px) {
   .article.teaser {
     text-align: center;

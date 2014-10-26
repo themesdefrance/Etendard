@@ -710,6 +710,8 @@ ul.articles .article{
 }
 
 .article.teaser{
+	min-height: 400px;
+
 	@include width-matches($breakpoint-mobile){
 		text-align: center;
 		padding: 0 20px;
