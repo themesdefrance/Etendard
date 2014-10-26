@@ -41,8 +41,10 @@ switch ($portfolios->post_count){
 				<a href="<?php the_permalink(); ?>">
 					<figure class="<?php echo $icon; ?>">
 						<div class="entry-thumbnail">
-						<?php if (has_post_thumbnail() && !post_password_required()): ?>
-							<?php the_post_thumbnail('etendard-portfolio-thumbnail'); ?>
+						<?php if (has_post_thumbnail() && !post_password_required()): 
+							the_post_thumbnail('etendard-portfolio-thumbnail'); 
+						else : ?>
+						<span class="noimageportfolio"><?php _e('Please add a featured image to this project','etendard'); ?></span>
 						<?php endif; ?>
 						</div>
 						<figcaption>

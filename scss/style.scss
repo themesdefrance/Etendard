@@ -522,6 +522,12 @@ ul.portfolio .creation figure{
 }
 ul.portfolio .creation .entry-thumbnail{
 	background: #e2e2e2;
+	
+	.noimageportfolio{
+		display: block;
+		padding: 70px 50px 90px;
+		color: black;
+	}
 }
 
 ul.portfolio .creation figcaption{
