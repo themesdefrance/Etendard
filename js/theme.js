@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+/*jQuery(document).ready(function($) {
 	if(jQuery().mixItUp) {
      	$(function(){
 			// Instantiate MixItUp:
@@ -7,3 +7,4 @@ jQuery(document).ready(function($) {
 	}
 });
 
+*/

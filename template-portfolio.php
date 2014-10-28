@@ -36,15 +36,15 @@ else if (is_tax('portfolio_categorie')){
 		<nav class="categories">
 			<ul>
 				<li>
-					<span class="<?php echo (!is_tax('portfolio_categorie')) ? 'active filter' : 'filter'; ?>" data-filter="all">
+					<a href="<?php echo etendard_portfolio_page_link(); ?>" class="<?php echo (!is_tax('portfolio_categorie')) ? 'active' : ''; ?>">
 						<?php echo apply_filters('etendard_portfolio_tous', __('All', 'etendard')); ?>
-					</span>
+					</a>
 				</li>
 				<?php foreach ($terms as $term){ ?>
 				<li>
-					<span class="<?php echo (is_tax('portfolio_categorie', $term)) ? 'active filter' : 'filter'; ?>" data-filter="<?php echo "." . $term->slug; ?>">
+					<a href="<?php echo get_term_link($term); ?>" class="<?php echo (is_tax('portfolio_categorie', $term)) ? 'active' : ''; ?>">
 						<?php echo $term->name; ?>
-					</span>
+					</a>
 				</li>
 				<?php } ?>
 			</ul>
@@ -64,12 +64,9 @@ else if (is_tax('portfolio_categorie')){
 					break;
 			}
 			
-			// Get current terms list
-			$currentterms_list = etendard_get_portfolio_term_list();
-			
 			?>
 			
-			<li class="creation creation-list mix <?php echo $currentterms_list; ?>">
+			<li class="creation creation-list">
 				<a href="<?php the_permalink(); ?>">
 					<figure class="<?php echo $icon; ?>">
 						<div class="entry-thumbnail">

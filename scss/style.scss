@@ -568,17 +568,17 @@ section.portfolio nav.categories ul{
 section.portfolio nav.categories li{
 	display:inline-block;
 	
-	&:first-child span{
+	&:first-child a{
 		border-right: none;
 		margin-right:20px;
 	}
 	
-	&:last-child span{
+	&:last-child a{
 		border-right: none;
 	}
 }
 
-section.portfolio nav.categories span{
+section.portfolio nav.categories a{
 	display:inline;
 	padding: 4px 10px;
 	color: inherit;
@@ -590,10 +590,6 @@ section.portfolio nav.categories span{
 	
 	cursor: pointer;
 	line-height:30px;
-}
-
-ul.portfolio .creation-list.mix{
-	display: none;
 }
 
 section.realisation, section.diaporama{

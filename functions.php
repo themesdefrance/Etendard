@@ -235,9 +235,6 @@ if (!function_exists('etendard_enqueue')){
 		wp_register_script('fancybox', get_template_directory_uri().'/lib/fancybox/jquery.fancybox.pack.js', array('jquery'), $theme->get('Version'), true);
 		wp_register_style('fancybox', get_template_directory_uri().'/lib/fancybox/jquery.fancybox.css', false, $theme->get('Version'));
 		
-		// MixItUp for portfolio -- Will only load on portfolio page
-		wp_register_script('mixitup', get_template_directory_uri().'/lib/mixitup/jquery.mixitup.min.js', array('jquery'), $theme->get('Version'), true);
-		
 		// Etendard combined scripts (menu, galery, backtotop...)
 		wp_register_script('etendard_combined', get_template_directory_uri().'/js/etendard-combined.js', array('jquery'), $theme->get('Version'), true);
 		
@@ -262,9 +259,6 @@ if (!function_exists('etendard_enqueue')){
 		
 		wp_enqueue_script('fancybox');
 		wp_enqueue_style('fancybox');
-		
-		if(is_page_template('template-portfolio.php'))
-			wp_enqueue_script('mixitup');
 	
 	}
 }
@@ -589,24 +583,6 @@ if (!function_exists('etendard_service_page_link')){
 		
 		if (count($services_pages) > 0)
 			return get_page_link($services_pages[0]->ID);
-	}
-}
-
-// Get portfolio terms into string separated by spaces
-if (!function_exists('etendard_get_portfolio_term_list')){
-	function etendard_get_portfolio_term_list(){
-	
-		global $post;
-		$current_terms = get_the_terms($post->ID, 'portfolio_categorie');
-
-		$currentterms_list = "";
-		foreach ($current_terms as $current_term){
-			$currentterms_list .= $current_term->slug . ' ';
-		}
-		// Erase the last space
-		$currentterms_list = substr($currentterms_list, 0, -1);
-		
-		return $currentterms_list;
 	}
 }
 
