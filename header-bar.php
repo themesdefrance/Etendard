@@ -30,6 +30,14 @@
 				<?php printf( __( 'Search results for : %s', 'etendard' ), get_search_query() ); ?>
 			</h1>
 		
+		<?php }else if(is_author()){ ?>
+	
+			<?php $author = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author)); ?>
+			
+			<h1 class="masonry-header-title">
+				<?php printf( __( 'Posts by %s', 'etendard' ), $author->display_name ); ?>
+			</h1>
+		
 		<?php }else if(is_archive()){ ?>
 			<h1 class="headerbartitle">
 				<?php if (is_day()) { 
