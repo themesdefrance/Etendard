@@ -19,7 +19,7 @@
 			<?php _e('on','etendard'); ?>
 			
 			<time class="date updated">
-				<?php the_date(); ?>
+				<?php the_time( get_option( 'date_format' ) ); ?>
 			</time>
 			
 		<?php
