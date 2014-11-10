@@ -30,8 +30,8 @@
 			
 			<span class="vcard author">
 				<span class="fn">
-					<a href="<?php get_author_posts_url(get_the_author_meta('ID')) ?>">
-						<?php get_the_author_meta('display_name'); ?>
+					<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>">
+						<?php the_author_meta('display_name'); ?>
 					</a>
 				</span>
 			</span>
