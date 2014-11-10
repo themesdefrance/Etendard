@@ -14,14 +14,32 @@
 		if($post_header_date || $post_header_author || $post_header_category){
 			_e('Published ','etendard');
 		}
-		if($post_header_date){
-			echo sprintf(__('on %s ','etendard'),get_the_date());
+		if($post_header_date){ ?>
+			
+			<?php _e('on','etendard'); ?>
+			
+			<time class="date updated">
+				<?php the_date(); ?>
+			</time>
+			
+		<?php
 		}
-		if($post_header_author){
-			echo sprintf(__('by <a href="%s">%s</a> ','etendard'), get_author_posts_url(get_the_author_meta('ID')), get_the_author_meta('display_name') );
+		if($post_header_author){ ?>
+			
+			<?php _e('by','etendard'); ?>
+			
+			<span class="vcard author">
+				<span class="fn">
+					<a href="<?php get_author_posts_url(get_the_author_meta('ID')) ?>">
+						<?php get_the_author_meta('display_name'); ?>
+					</a>
+				</span>
+			</span>
+			
+		<?php
 		}
 		if($post_header_category){
-			echo sprintf(__('in %s ','etendard'), get_the_category_list('/'));
+			printf(__('in','etendard') . ' ' . get_the_category_list('/') . ' ');
 		}
 		if($post_header_date || $post_header_author || $post_header_category){
 			echo '| ';

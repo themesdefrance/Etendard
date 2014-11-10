@@ -27,7 +27,7 @@
 		
 			<?php if(!is_page_template('template_home.php')): ?>
 			
-				<h1 class="header-title" itemprop="name">
+				<h1 class="entry-title header-title " itemprop="name">
 				
 					<?php the_title(); ?>
 					
@@ -37,7 +37,7 @@
 			
 		<?php elseif(!is_page()): ?>
 		
-			<h2 class="header-title" itemprop="name">
+			<h2 class="entry-title header-title" itemprop="name">
 			
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 				
@@ -50,7 +50,7 @@
 		
 	</header>
 	
-	<div class="content" itemprop="articleBody">
+	<div class="entry-content content" itemprop="articleBody">
 		
 		<?php get_template_part( 'content', 'body' ); ?>
 

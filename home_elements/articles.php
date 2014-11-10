@@ -34,7 +34,7 @@
 									case 'link':
 										$link = get_post_meta($post->ID, '_etendard_link_meta', true); ?>
 										<div class="entry-thumbnail post-link">
-											<h2 class="header-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+											<h2 class="entry-title header-title "><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 											<span class="post-link-url"><a href="<?php echo $link; ?>" title="<?php the_title(); ?>" class="icon-newtab" target="_blank" rel="bookmark"></a></span>
 										</div><?php
 									break;
@@ -49,17 +49,17 @@
 							}
 							
 						if($format=='' || $format=='video'){ ?>
-							<h3 class="header-title">
+							<h3 class="entry-title header-title">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 									<?php the_title(); ?>
 								</a>
 							</h3>
 						<?php } ?>
 					</header>
-					<div class="content">
+					<div class="entry-summary content">
 						<?php echo etendard_excerpt(20); ?>
 					</div>
-					<a href="<?php the_permalink(); ?>" class="more-link">
+					<a href="<?php the_permalink(); ?>" class="bookmark more-link">
 						<?php _e('Read more', 'etendard'); ?>
 					</a>
 				</article>
