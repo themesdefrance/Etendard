@@ -981,20 +981,6 @@ if(!function_exists('etendard_add_tinymce4_plugin')){
 
 
 ////////////////////////////////////
-// Only show posts in search results
-////////////////////////////////////
-
-if(!function_exists('etendard_search_post_only')){
-	function etendard_search_post_only($query) {
-		if ($query->is_search) {
-			$query->set('post_type', 'post');
-		}
-		return $query;
-	}
-}
-add_filter('pre_get_posts','etendard_search_post_only');
-
-////////////////////////////////////
 // Migration from previous versions
 ////////////////////////////////////
 
