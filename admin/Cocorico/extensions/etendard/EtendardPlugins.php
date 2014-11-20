@@ -131,7 +131,7 @@ function etendardOrdreShorthand($cocorico, $name, $label, $checkboxes){
 		//first run
 		$stored = array();
 		foreach ($checkboxes as $index=>$value){
-			$stored[$index] = true;
+			$stored[$index] = false;
 		}
 	}
 	
