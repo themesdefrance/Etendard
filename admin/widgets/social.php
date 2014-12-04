@@ -38,7 +38,7 @@ class EtendardSocial extends WP_Widget{
 			if (isset($instance[$reseau]) && !empty($instance[$reseau])){
 				?>
 				<li>
-					<a href="<?php echo $instance[$reseau]; ?>" title="<?php echo $reseau; ?>">
+					<a href="<?php echo $instance[$reseau]; ?>" title="<?php echo $reseau; ?>" target="_blank">
 						<?php echo $icone; ?>
 					</a>
 				</li>
