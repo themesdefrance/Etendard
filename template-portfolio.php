@@ -42,7 +42,7 @@ else if (is_tax('portfolio_categorie')){
 				</li>
 				<?php foreach ($terms as $term){ ?>
 				<li>
-					<a href="<?php echo get_term_link($term); ?>" class="<?php echo (is_tax('portfolio_categorie', $term)) ? 'active' : ''; ?>">
+					<a href="<?php echo get_term_link($term); ?>" class="<?php echo (is_tax('portfolio_categorie', $term->name)) ? 'active' : ''; ?>">
 						<?php echo $term->name; ?>
 					</a>
 				</li>
