@@ -1,6 +1,6 @@
 <?php $link = get_post_meta($post->ID, '_etendard_link_meta', true); ?>
 
-<article <?php post_class('article'); ?>>
+<article <?php post_class('article'); ?> itemscope itemtype="http://schema.org/Article">
 
 	<header class="header">
 	
