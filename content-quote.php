@@ -26,17 +26,9 @@
 		<?php get_template_part( 'content', 'header-meta' ); ?>
 		
 	</header>
-	
-	<div class="content">
 		
-		<?php get_template_part( 'content', 'body' ); ?>
-
-	</div>
+	<?php get_template_part( 'content', 'body' ); ?>
 	
-	<footer class="footer">
-	
-		<?php get_template_part( 'content', 'footer-meta' ); ?>
-		
-	</footer>
+	<?php get_template_part( 'content', 'footer-meta' ); ?>
 	
 </article>

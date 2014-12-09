@@ -27,7 +27,7 @@
 		
 			<?php if(!is_page_template('template_home.php')): ?>
 			
-				<h1 class="entry-title header-title " itemprop="name">
+				<h1 class="entry-title header-title " itemprop="headline">
 				
 					<?php the_title(); ?>
 					
@@ -37,7 +37,7 @@
 			
 		<?php elseif(!is_page()): ?>
 		
-			<h2 class="entry-title header-title" itemprop="name">
+			<h2 class="entry-title header-title" itemprop="headline">
 			
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 				
@@ -49,17 +49,9 @@
 		<?php get_template_part( 'content', 'header-meta' ); ?>
 		
 	</header>
-	
-	<div class="entry-content content" itemprop="articleBody">
 		
-		<?php get_template_part( 'content', 'body' ); ?>
+	<?php get_template_part( 'content', 'body' ); ?>
 
-	</div>
-	
-	<footer class="footer">
-	
-		<?php get_template_part( 'content', 'footer-meta' ); ?>
-		
-	</footer>
+	<?php get_template_part( 'content', 'footer-meta' ); ?>
 	
 </article>

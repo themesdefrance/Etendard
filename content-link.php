@@ -8,7 +8,7 @@
 		
 			<?php if (is_single()): ?>
 				
-					<h1 class="header-title">
+					<h1 class="entry-title header-title" itemprop="headline">
 					
 						<?php the_title(); ?>
 						
@@ -16,7 +16,7 @@
 				
 			<?php else: ?>
 			
-				<h2 class="header-title">
+				<h2 class="entry-title header-title" itemprop="headline">
 				
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 					
@@ -33,17 +33,9 @@
 		<?php get_template_part( 'content', 'header-meta' ); ?>
 		
 	</header>
-	
-	<div class="content">
 		
-		<?php get_template_part( 'content', 'body' ); ?>	
-
-	</div>
+	<?php get_template_part( 'content', 'body' ); ?>	
 	
-	<footer class="footer">
-	
-		<?php get_template_part( 'content', 'footer-meta' ); ?>
-		
-	</footer>
+	<?php get_template_part( 'content', 'footer-meta' ); ?>
 	
 </article>
