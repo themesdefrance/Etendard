@@ -160,6 +160,10 @@ if (!function_exists('etendard_init_cpt')){
 		register_taxonomy('portfolio_categorie', 'portfolio', array(
 			'label'=>__('Categories', 'etendard'),
 			'hierarchical'=>true,
+			'show_in_nav_menus'=> true,
+			'rewrite'=>array(
+				'slug'=>apply_filters('etendard_portfolio_category_slug', __('portfolio_categorie', 'etendard'))
+			)
 		));
 		register_taxonomy_for_object_type('portfolio_categorie', 'portfolio');
 		
