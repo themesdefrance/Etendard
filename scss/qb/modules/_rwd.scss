@@ -1,4 +1,4 @@
-$breakpoints: null;
+$breakpoints: null !global;
 
 @mixin register-breakpoints($registering...){
 	$sorted: 0;
@@ -14,10 +14,10 @@ $breakpoints: null;
 			}
 		}
 		@if nth($breakpoints, 1) == null{
-			$breakpoints: $min;
+			$breakpoints: $min !global;;
 		}
 		@else{
-			$breakpoints: append($breakpoints, $min);
+			$breakpoints: append($breakpoints, $min) !global;;
 		}
 		$previous: $min;
 		$sorted: $sorted+1;
