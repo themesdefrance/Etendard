@@ -696,6 +696,10 @@ body.admin-bar .main-header.sticky {
   padding: 14px 10px 10px;
 }
 
+.top-level-menu {
+  display: table;
+}
+
 .top-level-menu > li {
   position: relative;
   margin-right: -5px;
@@ -777,6 +781,8 @@ body.admin-bar .main-header.sticky {
   }
 
   .top-level-menu {
+    display: inline-block;
+    width: 100%;
     max-height: 0;
     overflow: hidden;
     padding: 0 10px;
