@@ -144,7 +144,7 @@ if (!function_exists('etendard_init_cpt')){
 			'menu_position'=>20,
 			'has_archive'=>'portfolio-archive',
 			'rewrite'=>array(
-				'slug'=>__('project', 'etendard')
+				'slug'=>apply_filters('etendard_portfolio_slug', __('project', 'etendard'))
 			),
 			'exclude_from_search'=> true
 		));
@@ -188,7 +188,7 @@ if (!function_exists('etendard_init_cpt')){
 			'menu_position'=>21,
 			'has_archive'=>'service-archive',
 			'rewrite'=>array(
-				'slug'=>'service'
+				'slug'=>apply_filters('etendard_service_slug', __('service', 'etendard'))
 			),
 			'exclude_from_search'=> true
 		));
@@ -968,16 +968,6 @@ if(!function_exists('etendard_add_tinymce4_button')){
 	    return $buttons;
 	}
 }
-
-// TinyMCE Translation // Not working yet
-if(!function_exists('etendard_add_tinymce4_plugin')){
-	function etendard_translate_tinymce4_plugin($locales) {
-	    $locales ['shortcode_drop'] = get_template_directory_uri() . '/admin/shortcodes-langs.php';
-	    
-	    return $locales;
-	}
-}
-//add_filter('mce_external_languages', 'etendard_translate_tinymce4_plugin');
 
 
 ////////////////////////////////////
