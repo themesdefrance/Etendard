@@ -34,8 +34,8 @@
 	
 			<?php $author = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author)); ?>
 			
-			<h1 class="masonry-header-title">
-				<?php printf( __( 'Posts by %s', 'etendard' ), $author->display_name ); ?>
+			<h1 class="headerbartitle">
+				<?php printf( __( 'About %s', 'etendard' ), $author->display_name ); ?>
 			</h1>
 		
 		<?php }else if(is_archive()){ ?>

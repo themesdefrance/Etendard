@@ -1526,6 +1526,22 @@ article.format-quote .post-quote .post-quote-author {
   font-size: 20px;
 }
 
+.author .auteur-box {
+  margin-bottom: 10px;
+}
+.author .auteur-box img.avatar {
+  float: left;
+  margin: 0 15px 10px 0;
+}
+.author .auteur-box p {
+  margin-bottom: 8px;
+}
+.author h2 {
+  margin-bottom: 25px;
+  padding-top: 10px;
+  clear: both;
+}
+
 .comments-area .comments-title {
   margin-bottom: 15px;
 }

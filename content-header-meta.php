@@ -24,17 +24,19 @@
 			
 		<?php
 		}
-		if($post_header_author){ ?>
-			
-			<?php _e('by','etendard'); ?>
-			
-			<span class="vcard author">
-				<span class="fn" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
-					<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>" itemprop="url" rel="author"><?php the_author_meta('display_name'); ?></a>
+		if($post_header_author){
+		
+			if(!is_author()){
+				
+				_e('by','etendard'); ?>
+				
+				<span class="vcard author">
+					<span class="fn" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+						<a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>" itemprop="url" rel="author"><?php the_author_meta('display_name'); ?></a>
+					</span>
 				</span>
-			</span>
-			
-		<?php
+				
+		<?php }
 		}
 		if($post_header_category){
 			if(!is_category()){

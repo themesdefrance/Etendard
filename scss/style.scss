@@ -938,6 +938,31 @@ article.format-quote .post-quote{
 }
 
 
+// Author pages
+
+.author{
+	.auteur-box{
+		
+	margin-bottom: 10px;	
+	
+		img.avatar{
+			float:left;
+			margin:0 15px 10px 0;
+		}
+	
+		p{
+			margin-bottom:8px;
+		}
+		
+	}
+	
+	h2{
+		margin-bottom: 25px;
+		padding-top: 10px;
+		clear: both;
+	}
+}
+
 
 
 //commentaires
