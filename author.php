@@ -68,7 +68,7 @@
 					
 					<?php else : ?>
 					
-						<p><?php echo apply_filters('etendard_nopostfound', __('Sorry but no post match what you are looking for.','etendard')); ?></p>
+						<?php get_template_part('content', 'none'); ?>
 						
 					<?php endif; ?>
 				</ul>
