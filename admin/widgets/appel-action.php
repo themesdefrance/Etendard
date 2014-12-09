@@ -59,7 +59,7 @@ class EtendardAppelAction extends WP_Widget{
 		
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'etendard' ); ?></label> 
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="url" value="<?php echo esc_attr( $fields['title'] ); ?>">
+			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $fields['title'] ); ?>">
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'lien' ); ?>"><?php _e( 'Call to action destination (url):', 'etendard' ); ?></label> 

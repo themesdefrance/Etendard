@@ -50,7 +50,8 @@ class EtendardSocial extends WP_Widget{
 	}
 	
 	public function form($instance){
-		$fields = array_merge(array('title'), array_keys($this->reseaux));
+		
+		$fields = array_merge(array(__('Title','etendard')), array_keys($this->reseaux));
 		
 		echo '<style>';
 		include 'widgets.css';
@@ -64,7 +65,9 @@ class EtendardSocial extends WP_Widget{
 			_e('Please enter a valid url', 'etendard');
 			echo '</div>';
 		}
+		?>
 		
+		<?php
 		//verifie si les reseaux masqués par défaut ont une valeur
 		$open = '';
 		foreach ($instance as $reseau=>$valeur){
