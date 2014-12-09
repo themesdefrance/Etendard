@@ -231,9 +231,11 @@ if (!function_exists('etendard_enqueue')){
 	
 		$theme = wp_get_theme();
 		
-		// Slider
-		wp_register_script('glide', get_template_directory_uri().'/lib/glide/glide.min.js', array('jquery'), $theme->get('Version'), true);
-		wp_register_style('glide', get_template_directory_uri().'/lib/glide/glide.css', false, $theme->get('Version'));
+		if(is_page_template('template_home.php') || is_singular( 'portfolio')){
+			// Slider
+			wp_register_script('glide', get_template_directory_uri().'/lib/glide/glide.min.js', array('jquery'), $theme->get('Version'), true);
+			wp_register_style('glide', get_template_directory_uri().'/lib/glide/glide.css', false, $theme->get('Version'));
+		}
 		
 		// Fancybox (lightbox like effect)
 		wp_register_script('fancybox', get_template_directory_uri().'/lib/fancybox/jquery.fancybox.pack.js', array('jquery'), $theme->get('Version'), true);
@@ -725,6 +727,7 @@ if(!function_exists('etendard_user_styles')){
 				a.more-link,
 				ul.services .service h2:hover,
 				ul.portfolio .creation figcaption,
+				.single-portfolio .col-1-3.meta a,
 				.article .header-title a:hover,
 				.article.quote > blockquote cite,
 				.comment .comment-author a,
