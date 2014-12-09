@@ -1,8 +1,14 @@
 <?php $video_link = get_post_meta($post->ID, '_etendard_video_meta', true); ?>
 
-<article <?php post_class('article'); ?> itemscope itemtype="http://schema.org/Article">
+<?php do_action('etendard_before_post'); ?>
 
+<article <?php post_class('article'); ?> itemscope itemtype="http://schema.org/Article">
+	
+	<?php do_action('etendard_top_post'); ?>
+	
 	<header class="header">
+		
+		<?php do_action('etendard_top_header_post'); ?>
 	
 		<div class="post-video">
 									
@@ -26,10 +32,16 @@
 		
 		<?php get_template_part( 'content', 'header-meta' ); ?>
 		
+		<?php do_action('etendard_bottom_header_post'); ?>
+		
 	</header>
 		
 	<?php get_template_part( 'content', 'body' ); ?>	
 	
 	<?php get_template_part( 'content', 'footer-meta' ); ?>
 	
+	<?php do_action('etendard_bottom_post'); ?>
+	
 </article>
+
+<?php do_action('etendard_after_post'); ?>

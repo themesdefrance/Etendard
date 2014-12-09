@@ -3,34 +3,46 @@
 Template Name: Contact
 */
 ?>
+
+<?php $position = get_option('etendard_sidebar_position'); ?>
 <?php get_header(); ?>
 
 <?php get_template_part('header-bar'); ?>
 
 <section>
+	
 	<div class="wrapper">
+		
+		<?php do_action('etendard_before_main'); ?>
+		
 		<div class="layout-grid">
-			<?php if (get_option('etendard_sidebar_position') === 'gauche'): ?>
-			<sidebar class="sidebar col-1-3">
-				<?php get_sidebar('blog'); ?>
-			</sidebar>
-			<?php endif; ?>
+			
+			<?php if ($position === 'gauche')get_sidebar('blog'); ?>
 
-			<div class="col-2-3 <?php if (get_option('etendard_sidebar_position') === 'sans') echo 'landing' ?>">
-				<?php /* The loop */ ?>
+			<div class="col-2-3 <?php if ($position === 'sans') echo 'landing' ?>" role="main" itemprop="mainContentOfPage">
+				
+				<?php do_action('etendard_top_main'); ?>
+				
 				<?php while (have_posts()) : the_post(); ?>
-					<?php get_template_part('content', get_post_format()); ?>
+				
+					<?php get_template_part('content'); ?>
+					
 				<?php endwhile; ?>
 
 				<?php get_template_part('formulaire_contact'); ?>
+				
+				<?php do_action('etendard_bottom_main'); ?>
+				
 			</div>
 
-			<?php if (get_option('etendard_sidebar_position') === 'droite' || !get_option('etendard_sidebar_position')): ?>
-			<div class="sidebar col-1-3">
-				<?php get_sidebar('blog'); ?>
-			</div>
-			<?php endif; ?>
-		</div>
-	</div>
+			<?php if ($position === 'droite' || !$position)get_sidebar('blog'); ?>
+			
+		</div><!--END .layout-grid-->
+		
+		<?php do_action('etendard_after_main'); ?>
+		
+	</div><!--END .wrapper-->
+	
 </section>
+
 <?php get_footer(); ?>

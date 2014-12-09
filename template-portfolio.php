@@ -32,6 +32,9 @@ else if (is_tax('portfolio_categorie')){
 ?>
 <section class="portfolio">
 	<div class="wrapper">
+		
+		<?php do_action('etendard_before_main'); ?>
+		
 		<?php if (count($terms) > 0): ?> 
 		<nav class="categories">
 			<ul>
@@ -51,7 +54,7 @@ else if (is_tax('portfolio_categorie')){
 		</nav>
 		<?php endif; ?>
 		
-		<ul class="portfolio">
+		<ul class="portfolio" role="main" itemprop="mainContentOfPage" >
 			<?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 			<?php
 			$icon = '';
@@ -66,7 +69,7 @@ else if (is_tax('portfolio_categorie')){
 			
 			?>
 			
-			<li class="creation creation-list">
+			<li class="creation creation-list" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
 				<a href="<?php the_permalink(); ?>">
 					<figure class="<?php echo $icon; ?>">
 						<div class="entry-thumbnail">
@@ -103,7 +106,11 @@ else if (is_tax('portfolio_categorie')){
 			<?php previous_posts_link(apply_filters('etendard_pagination_precedente', __('Previous Page', 'etendard'))); ?>
 			<?php next_posts_link(apply_filters('etendard_pagination_suivante', __('Next Page', 'etendard'))); ?> 
 		</div>
-	</div>
+		
+		<?php do_action('etendard_after_main'); ?>
+		
+	</div><!--END .wrapper-->
+	
 </section>
 <?php wp_reset_postdata(); ?>
 

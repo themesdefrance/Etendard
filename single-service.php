@@ -4,33 +4,45 @@
 
 	<div class="wrapper">
 		
+		<?php do_action('etendard_before_main'); ?>
+		
 		<div class="landing">
-
+			
+			<?php do_action('etendard_top_main'); ?>
+			
 			<?php while (have_posts()) : the_post(); ?>
 				
-				<article <?php post_class('article'); ?>>
+				<article <?php post_class('article'); ?> role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
 
 					<header class="header">
 						
-						<h1 class="header-title"><?php the_title(); ?></h1>
+						<?php do_action('etendard_top_header_post'); ?>
+						
+						<h1 class="entry-title header-title"><?php the_title(); ?></h1>
+						
+						<?php do_action('etendard_bottom_header_post'); ?>
 						
 					</header>
 	
 					<div class="content">
-					
+						
+						<?php do_action('etendard_top_content'); ?>
+						
 						<?php the_content(); ?>
 						
+						<?php do_action('etendard_bottom_content'); ?>
+						
 					</div>
-					
-					<footer class="footer">
-					
-					</footer>
 					
 				</article>
 				
 			<?php endwhile; ?>
 			
-		</div><!--END .col-2-3 .landing-->
+			<?php do_action('etendard_bottom_main'); ?>
+			
+		</div><!--END .landing-->
+		
+		<?php do_action('etendard_after_main'); ?>
 		
 	</div><!--END .wrapper-->
 	

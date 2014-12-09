@@ -2,17 +2,17 @@
 
 <div <?php if ($position !== 'sans') echo 'class="layout-grid"' ?>>
 
-	<?php if ($position === 'gauche'): ?>
-	<sidebar class="sidebar col-1-3">
-		<?php get_sidebar('blog'); ?>
-	</sidebar>
-	<?php endif; ?>
+	<?php if ($position === 'gauche')get_sidebar('blog'); ?>
 
-	<div class="col-2-3 <?php if ($position === 'sans') echo 'landing' ?>">
+	<div class="col-2-3 <?php if ($position === 'sans') echo 'landing' ?>" role="main" itemprop="mainContentOfPage" >
+		
+		<?php do_action('etendard_top_main'); ?>
+		
 		<ul class="articles">
 			<?php if(have_posts()) : ?>
 			
 				<?php while (have_posts()) : the_post(); ?>
+				
 				<li>
 					<?php get_template_part('content', get_post_format()); ?>
 				</li>
@@ -27,12 +27,11 @@
 		<div class="pagination">
 			<?php etendard_posts_nav(false); ?>
 		</div>
+		
+		<?php do_action('etendard_bottom_main'); ?>
+		
 	</div><!--END .col-2-3-->
 
-	<?php if ($position === 'droite' || !$position): ?>
-	<sidebar class="sidebar col-1-3">
-		<?php get_sidebar('blog'); ?>
-	</sidebar>
-	<?php endif; ?>	
+	<?php if ($position === 'droite' || !$position)get_sidebar('blog'); ?>
 	
 </div>

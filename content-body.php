@@ -1,5 +1,9 @@
-<div class="entry-content content" itemprop="articleBody">
+<?php do_action('etendard_before_content'); ?>
 
+<div class="entry-content content" itemprop="articleBody">
+	
+	<?php do_action('etendard_top_content'); ?>
+	
 	<?php 
 	if (is_single() || is_page()){
 	
@@ -24,5 +28,9 @@
 		<a href="<?php the_permalink(); ?>" class="bookmark bouton lirelasuite" title="<?php the_title(); ?>"><?php _e('Read more','etendard'); ?></a>
 	
 	<?php } ?>
+	
+	<?php do_action('etendard_bottom_content'); ?>
 
 </div>
+
+<?php do_action('etendard_after_content'); ?>

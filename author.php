@@ -1,23 +1,21 @@
 <?php $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author)); ?>
+<?php $position = get_option('etendard_sidebar_position'); ?>
 
 <?php get_header(); ?>
 
 <?php get_template_part('header-bar'); ?>
 
 <section class="blog">
+	
 	<div class="wrapper">
 		
-		<?php $position = get_option('etendard_sidebar_position'); ?>
+		<?php do_action('etendard_before_main'); ?>	
 
 		<div <?php if ($position !== 'sans') echo 'class="layout-grid"' ?>>
 		
-			<?php if ($position === 'gauche'): ?>
-			<sidebar class="sidebar col-1-3">
-				<?php get_sidebar('blog'); ?>
-			</sidebar>
-			<?php endif; ?>
+			<?php if ($position === 'gauche')get_sidebar('blog'); ?>
 		
-			<div class="col-2-3 <?php if ($position === 'sans') echo 'landing' ?>">
+			<div class="col-2-3 <?php if ($position === 'sans') echo 'landing' ?>" role="main" itemprop="mainContentOfPage">
 				
 				<div class="auteur-box">
 					
@@ -72,19 +70,20 @@
 						
 					<?php endif; ?>
 				</ul>
+				
 				<div class="pagination">
 					<?php etendard_posts_nav(false); ?>
 				</div>
+				
 			</div><!--END .col-2-3-->
 		
-			<?php if ($position === 'droite' || !$position): ?>
-			<sidebar class="sidebar col-1-3">
-				<?php get_sidebar('blog'); ?>
-			</sidebar>
-			<?php endif; ?>	
+			<?php if ($position === 'droite' || !$position)get_sidebar('blog'); ?>
 			
-		</div>
+		</div><!--END .layout-grid-->
 		
-	</div>
+		<?php do_action('etendard_after_main'); ?>	
+		
+	</div> <!--END .wrapper-->
+	
 </section>
 <?php get_footer(); ?>

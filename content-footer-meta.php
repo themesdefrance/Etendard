@@ -2,6 +2,8 @@
 	
 	<footer class="post-footer">
 		
+		<?php do_action('etendard_top_footer_post'); ?>
+		
 		<?php if(has_tag()) { ?>
 		
 			<span class="footer-meta icon-tags" itemscope="keywords">
@@ -21,6 +23,8 @@
 			
 		<?php } ?>
 	
+		<?php do_action('etendard_bottom_footer_post'); ?>
+		
 	</footer>
 	
 <?php } ?>
