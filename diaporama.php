@@ -10,7 +10,7 @@ if (isset($custom['etendard_portfolio_diaporama'], $custom['etendard_portfolio_d
 	$titres = maybe_unserialize($custom['etendard_portfolio_diaporama_titre'][0]);
 	
 	if (is_array($unresizedDiaporama)){
-		$width = ($fullWidth) ? 1600 : 960;
+		$width = ($fullWidth) ? 1920 : 960;
 		$height = (int)get_option('etendard_diaporama_height');
 		if (!$height) $height = 500;
 		
