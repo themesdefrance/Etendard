@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Etendard\n"
-"POT-Creation-Date: 2014-12-09 21:47+0100\n"
-"PO-Revision-Date: 2014-12-09 21:48+0100\n"
+"POT-Creation-Date: 2014-12-12 10:05+0100\n"
+"PO-Revision-Date: 2014-12-12 10:05+0100\n"
 "Last-Translator: Alex Thèmes de France <alex@themesdefrance.fr>\n"
 "Language-Team: Themes de France <alex@themesdefrance.fr>\n"
 "Language: en\n"
@@ -170,243 +170,243 @@ msgstr ""
 msgid "An error occured during sending, try again in a few minutes."
 msgstr ""
 
-#: ../functions.php:48
+#: ../functions.php:49
 msgid "Set up the main menu"
 msgstr ""
 
-#: ../functions.php:59
+#: ../functions.php:60
 msgid "Main menu"
 msgstr ""
 
-#: ../functions.php:60
+#: ../functions.php:61
 msgid "Footer menu"
 msgstr ""
 
-#: ../functions.php:64
+#: ../functions.php:65
 msgid "Sidebar"
 msgstr ""
 
-#: ../functions.php:66
+#: ../functions.php:67
 msgid "Add widgets in the sidebar."
 msgstr ""
 
-#: ../functions.php:74 ../admin/index.php:52
+#: ../functions.php:75 ../admin/index.php:52
 msgid "Footer"
 msgstr ""
 
-#: ../functions.php:76
+#: ../functions.php:77
 msgid "Add widgets in the footer."
 msgstr ""
 
-#: ../functions.php:100
+#: ../functions.php:101
 msgid "Post"
 msgstr ""
 
-#: ../functions.php:124
+#: ../functions.php:125
 msgctxt "project post type general name"
 msgid "Projects"
 msgstr ""
 
-#: ../functions.php:125
+#: ../functions.php:126
 msgctxt "project post type singular name"
 msgid "Project"
 msgstr ""
 
-#: ../functions.php:126
+#: ../functions.php:127
 msgctxt "projects admin menu"
 msgid "Projects"
 msgstr ""
 
-#: ../functions.php:127
+#: ../functions.php:128
 msgctxt "add new project on admin bar"
 msgid "Project"
 msgstr ""
 
-#: ../functions.php:128
+#: ../functions.php:129
 msgctxt "add new portfolio"
 msgid "Add New"
 msgstr ""
 
-#: ../functions.php:129
+#: ../functions.php:130
 msgid "Add New Project"
 msgstr ""
 
-#: ../functions.php:130 ../functions.php:178
+#: ../functions.php:131 ../functions.php:179
 msgid "Add New"
 msgstr ""
 
-#: ../functions.php:131
+#: ../functions.php:132
 msgid "Edit Project"
 msgstr ""
 
-#: ../functions.php:132
+#: ../functions.php:133
 msgid "View Project"
 msgstr ""
 
-#: ../functions.php:133
+#: ../functions.php:134
 msgid "All Projects"
 msgstr ""
 
-#: ../functions.php:134
+#: ../functions.php:135
 msgid "Search Projects"
 msgstr ""
 
-#: ../functions.php:135
+#: ../functions.php:136
 msgid "Parent Project:"
 msgstr ""
 
-#: ../functions.php:136
+#: ../functions.php:137
 msgid "No Projects found."
 msgstr ""
 
-#: ../functions.php:137
+#: ../functions.php:138
 msgid "No Projects found in Trash."
 msgstr ""
 
-#: ../functions.php:141
+#: ../functions.php:142
 msgid "Project"
 msgstr ""
 
-#: ../functions.php:147
+#: ../functions.php:148
 msgid "project"
 msgstr ""
 
-#: ../functions.php:161
+#: ../functions.php:162
 msgid "Categories"
 msgstr ""
 
-#: ../functions.php:165
+#: ../functions.php:166
 msgid "portfolio_categorie"
 msgstr ""
 
-#: ../functions.php:172
+#: ../functions.php:173
 msgctxt "service post type general name"
 msgid "Services"
 msgstr ""
 
-#: ../functions.php:173
+#: ../functions.php:174
 msgctxt "service post type singular name"
 msgid "Service"
 msgstr ""
 
-#: ../functions.php:174
+#: ../functions.php:175
 msgctxt "services admin menu"
 msgid "Services"
 msgstr ""
 
-#: ../functions.php:175
+#: ../functions.php:176
 msgctxt "add new service on admin bar"
 msgid "Service"
 msgstr ""
 
-#: ../functions.php:176
+#: ../functions.php:177
 msgctxt "add new service"
 msgid "Add New"
 msgstr ""
 
-#: ../functions.php:177
+#: ../functions.php:178
 msgid "Add New Service"
 msgstr ""
 
-#: ../functions.php:179
+#: ../functions.php:180
 msgid "Edit Service"
 msgstr ""
 
-#: ../functions.php:180
+#: ../functions.php:181
 msgid "View Service"
 msgstr ""
 
-#: ../functions.php:181 ../functions.php:189 ../admin/index.php:46
+#: ../functions.php:182 ../functions.php:190 ../admin/index.php:46
 msgid "Services"
 msgstr ""
 
-#: ../functions.php:182
+#: ../functions.php:183
 msgid "Search Services"
 msgstr ""
 
-#: ../functions.php:183
+#: ../functions.php:184
 msgid "Parent Service:"
 msgstr ""
 
-#: ../functions.php:184
+#: ../functions.php:185
 msgid "No Services Found."
 msgstr ""
 
-#: ../functions.php:185
+#: ../functions.php:186
 msgid "No Services Found in Trash."
 msgstr ""
 
-#: ../functions.php:195
+#: ../functions.php:196
 msgid "service"
 msgstr ""
 
-#: ../functions.php:289 ../admin/index.php:5
+#: ../functions.php:290 ../admin/index.php:5
 msgid "Etendard Settings"
 msgstr ""
 
-#: ../functions.php:297
+#: ../functions.php:298
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: ../functions.php:331
+#: ../functions.php:332
 msgid "Project Metas"
 msgstr ""
 
-#: ../functions.php:339 ../admin/meta-box/portfolio_temoignage.php:16
+#: ../functions.php:340 ../admin/meta-box/portfolio_temoignage.php:16
 msgid "Testimonial"
 msgstr ""
 
-#: ../functions.php:347 ../functions.php:371 ../admin/index.php:43
+#: ../functions.php:348 ../functions.php:376 ../admin/index.php:43
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:19
 msgid "Slider"
 msgstr ""
 
-#: ../functions.php:361 ../admin/index.php:45
+#: ../functions.php:366 ../admin/index.php:45
 msgid "Call to action"
 msgstr ""
 
-#: ../functions.php:519
+#: ../functions.php:524
 msgid "Pingback:"
 msgstr ""
 
-#: ../functions.php:530
+#: ../functions.php:535
 msgid "Your comment is waiting for moderation."
 msgstr ""
 
-#: ../functions.php:541
+#: ../functions.php:546
 #, php-format
 msgid "Published on %s at %s"
 msgstr ""
 
-#: ../functions.php:554
+#: ../functions.php:559
 msgid "Reply"
 msgstr ""
 
-#: ../functions.php:864
+#: ../functions.php:869
 msgid "Themes de France"
 msgstr ""
 
-#: ../functions.php:883
+#: ../functions.php:888
 msgid ""
 "In order to get updates, please enter your licence that you received by "
 "email."
 msgstr ""
 
-#: ../functions.php:891
+#: ../functions.php:896
 #, php-format
 msgid ""
 "You did not set up any page for posts. <a href=\"%s\">Click here to fix it</"
 "a> | <a href=\"%s\">Ignore</a>"
 msgstr ""
 
-#: ../functions.php:901
+#: ../functions.php:906
 #, php-format
 msgid ""
 "If you need to use shortcodes, take a look at our <a href='%s'>Cocorico "
 "Shortocodes plugin</a>. | <a href='%s'>No thanks</a>"
 msgstr ""
 
-#: ../functions.php:905
+#: ../functions.php:910
 #, php-format
 msgid ""
 "Thanks for using our Cocorico Shortcodes plugin, you're awesome ! If you "
@@ -719,6 +719,7 @@ msgstr ""
 
 #: ../admin/index.php:24
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:65
+#: ../admin/widgets/social.php:54
 msgid "Title"
 msgstr ""
 
@@ -1007,7 +1008,7 @@ msgstr ""
 msgid "Add a call to action in the sidebar."
 msgstr ""
 
-#: ../admin/widgets/appel-action.php:61
+#: ../admin/widgets/appel-action.php:61 ../admin/widgets/video.php:67
 msgid "Title:"
 msgstr ""
 
@@ -1031,12 +1032,34 @@ msgstr ""
 msgid "Display links to your social profiles."
 msgstr ""
 
-#: ../admin/widgets/social.php:64
+#: ../admin/widgets/social.php:65 ../admin/widgets/video.php:44
 msgid "Please enter a valid url"
 msgstr ""
 
-#: ../admin/widgets/social.php:80
+#: ../admin/widgets/social.php:83
 msgid "More networks"
+msgstr ""
+
+#: ../admin/widgets/video.php:11
+msgid "Etendard - Video"
+msgstr ""
+
+#: ../admin/widgets/video.php:12
+msgid "Add a video from Youtube, Dailymotion or Vimeo."
+msgstr ""
+
+#: ../admin/widgets/video.php:32
+msgid ""
+"To display a video, please add a Youtube, Dailymotion or Vimeo URL in the "
+"widget settings."
+msgstr ""
+
+#: ../admin/widgets/video.php:50
+msgid "This video url doesn't seem to exist."
+msgstr ""
+
+#: ../admin/widgets/video.php:71
+msgid "Video URL (Youtube, Dailymotion or Vimeo):"
 msgstr ""
 
 #: ../home_elements/articles.php:10
