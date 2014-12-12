@@ -358,15 +358,19 @@ if (!function_exists('etendard_register_custom_fields')){
 			$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
 			
 			if ($template_file == 'template_home.php'){
-				add_meta_box('etendard_home_cta',
-							 __('Call to action', 'etendard'),
-							 'etendard_home_cta',
-							 'page',
-							 'normal',
-							 'high'
-				);
 				
 				$display_blocks = get_option('etendard_home_blocks');
+				
+				if ($display_blocks['cta']){
+					add_meta_box('etendard_home_cta',
+								 __('Call to action', 'etendard'),
+								 'etendard_home_cta',
+								 'page',
+								 'normal',
+								 'high'
+					);
+				}
+				
 				if ($display_blocks['diaporama']){
 					add_meta_box('etendard_portfolio_diaporama',
 							 __('Slider', 'etendard'),
