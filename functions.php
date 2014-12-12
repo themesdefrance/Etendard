@@ -27,6 +27,7 @@ if(is_admin())
 	
 require_once 'admin/widgets/social.php';
 require_once 'admin/widgets/appel-action.php';
+require_once 'admin/widgets/video.php';
 require_once 'admin/shortcodes.php';
 require_once 'admin/bienvenue.php';
 
