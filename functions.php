@@ -982,6 +982,59 @@ if(!function_exists('etendard_add_tinymce4_button')){
 	}
 }
 
+////////////////////////////////////
+// Addons tab content
+////////////////////////////////////
+
+// bbPress addon
+if(!function_exists('etendard_addons_bbpress')){
+	function etendard_addons_bbpress($form){
+		
+		$form->startWrapper('tr');
+	
+			$form->startWrapper('th');
+			
+				$form->component('raw', __('Etendard bbPress Addon', 'etendard'));
+			
+			$form->endWrapper('th');
+	
+			$form->startWrapper('td');
+				
+				// Check if the Etendard bbPress addon is installed
+				if(!function_exists('etendard_bbpress_styles')):
+					
+					$form->component('raw', __('Etendard bbPress Addon bring custom CSS styling to Etendard to get a perfect bbPress integration.', 'etendard') . '<br><br>');
+					
+					$form->component('link',
+									 'https://www.themesdefrance.fr/module-bbpress-etendard/?utm_source=Etendard&utm_medium=bouton&utm_content=Etendard_bbPress&utm_campaign=EtendardAdmin',
+									 __('Get Etendard bbPress Addon', 'etendard'),
+									 array(
+										 'class'=>array('button', 'button-primary'),
+										 'target'=>'_blank'
+									 ));
+				else:
+					$form->component('description', __('Etendard bbPress Addon is installed. Thanks for using it !', 'etendard'));
+					
+					$form->component('description', __('If you have some time, help us to improve it by giving some feedback.', 'etendard') . '<br><br>');
+					
+					$form->component('link',
+									 'https://www.themesdefrance.fr/temoignage/?produit=Etendard%20bbPress&utm_source=Etendard&utm_medium=bouton&utm_content=Etendard_bbPress&utm_campaign=EtendardAdmin',
+									 __('Give feedback on Etendard bbPress Addon', 'etendard'),
+									 array(
+										 'class'=>array('button'),
+										 'target'=>'_blank'
+									 ));
+					
+				endif;
+			
+			$form->endWrapper('td');
+		
+		$form->endWrapper('tr');
+		
+	
+	}
+}
+add_action('etendard_addons_tab', 'etendard_addons_bbpress', 10, 1);
 
 ////////////////////////////////////
 // Migration from previous versions

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Etendard\n"
-"POT-Creation-Date: 2014-12-12 10:05+0100\n"
-"PO-Revision-Date: 2014-12-12 10:05+0100\n"
+"POT-Creation-Date: 2014-12-13 13:32+0100\n"
+"PO-Revision-Date: 2014-12-13 13:32+0100\n"
 "Last-Translator: Alex Thèmes de France <alex@themesdefrance.fr>\n"
 "Language-Team: Themes de France <alex@themesdefrance.fr>\n"
 "Language: en\n"
@@ -190,7 +190,7 @@ msgstr ""
 msgid "Add widgets in the sidebar."
 msgstr ""
 
-#: ../functions.php:75 ../admin/index.php:52
+#: ../functions.php:75 ../admin/index.php:53
 msgid "Footer"
 msgstr ""
 
@@ -316,7 +316,7 @@ msgstr ""
 msgid "View Service"
 msgstr ""
 
-#: ../functions.php:182 ../functions.php:190 ../admin/index.php:46
+#: ../functions.php:182 ../functions.php:190 ../admin/index.php:47
 msgid "Services"
 msgstr ""
 
@@ -356,12 +356,12 @@ msgstr ""
 msgid "Testimonial"
 msgstr ""
 
-#: ../functions.php:348 ../functions.php:376 ../admin/index.php:43
+#: ../functions.php:348 ../functions.php:376 ../admin/index.php:44
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:19
 msgid "Slider"
 msgstr ""
 
-#: ../functions.php:366 ../admin/index.php:45
+#: ../functions.php:366 ../admin/index.php:46
 msgid "Call to action"
 msgstr ""
 
@@ -412,6 +412,32 @@ msgid ""
 "Thanks for using our Cocorico Shortcodes plugin, you're awesome ! If you "
 "think we can enhance it, <a href='%s' target='_blank'>tell us what to do "
 "here</a>. | <a href='%s'>No thanks</a>"
+msgstr ""
+
+#: ../functions.php:997
+msgid "Etendard bbPress Addon"
+msgstr ""
+
+#: ../functions.php:1006
+msgid ""
+"Etendard bbPress Addon bring custom CSS styling to Etendard to get a perfect "
+"bbPress integration."
+msgstr ""
+
+#: ../functions.php:1010
+msgid "Get Etendard bbPress Addon"
+msgstr ""
+
+#: ../functions.php:1016
+msgid "Etendard bbPress Addon is installed. Thanks for using it !"
+msgstr ""
+
+#: ../functions.php:1018
+msgid "If you have some time, help us to improve it by giving some feedback."
+msgstr ""
+
+#: ../functions.php:1022
+msgid "Give feedback on Etendard bbPress Addon"
 msgstr ""
 
 #: ../header-bar.php:5 ../header-bar.php:64
@@ -707,189 +733,199 @@ msgstr ""
 msgid "Appearance"
 msgstr ""
 
-#: ../admin/index.php:19
-msgid "License"
+#: ../admin/index.php:11
+msgid "Addons"
 msgstr ""
 
 #: ../admin/index.php:20
+msgid "License"
+msgstr ""
+
+#: ../admin/index.php:21
 msgid ""
 "Enter your licence key in order to receive Etendard updates. You'll find it "
 "in the confirmation email we sent you after your purchase."
 msgstr ""
 
-#: ../admin/index.php:24
+#: ../admin/index.php:25
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:65
 #: ../admin/widgets/social.php:54
 msgid "Title"
 msgstr ""
 
-#: ../admin/index.php:25
+#: ../admin/index.php:26
 msgid "Title in the homepage banner."
 msgstr ""
 
-#: ../admin/index.php:33
+#: ../admin/index.php:34
 msgid "Subtitle"
 msgstr ""
 
-#: ../admin/index.php:34
+#: ../admin/index.php:35
 msgid "Subtitle in the homepage banner."
 msgstr ""
 
-#: ../admin/index.php:41
+#: ../admin/index.php:42
 msgid ""
 "Choose elements to display on the homepage and organize them with drag & drop"
 msgstr ""
 
-#: ../admin/index.php:42
+#: ../admin/index.php:43
 msgid "Title and subtitle"
 msgstr ""
 
-#: ../admin/index.php:44
+#: ../admin/index.php:45
 msgid "Content"
 msgstr ""
 
-#: ../admin/index.php:47
+#: ../admin/index.php:48
 msgid "Last projects"
 msgstr ""
 
-#: ../admin/index.php:48
+#: ../admin/index.php:49
 msgid "Last posts"
 msgstr ""
 
-#: ../admin/index.php:53
+#: ../admin/index.php:54
 msgid ""
 "Left footer content. The following HTML tags are allowed : &lt;a href=&quot;"
 "LINK&quot;&gt;TEXT_LINK&lt;/a&gt;, &lt;strong&gt;BOLD_TEXT&lt;/strong&gt;, "
 "&lt;em&gt;ITALIC_TEXT&lt;/em&gt;, &lt;img src=&quot;IMAGE_URL&quot;&gt;."
 msgstr ""
 
-#: ../admin/index.php:55
+#: ../admin/index.php:56
 msgid ""
 "<strong>2014</strong> - Etendard by <a href=\"https://www.themesdefrance.fr/"
 "\" target=\"_blank\">Themes de France</a>"
 msgstr ""
 
-#: ../admin/index.php:69
+#: ../admin/index.php:70
 msgid "Main color"
 msgstr ""
 
-#: ../admin/index.php:70
+#: ../admin/index.php:71
 msgid "This color will be used across your site for buttons, links, etc."
 msgstr ""
 
-#: ../admin/index.php:74
+#: ../admin/index.php:75
 msgid "Logo"
 msgstr ""
 
-#: ../admin/index.php:75
+#: ../admin/index.php:76
 msgid ""
 "The image filetype should be JPG or PNG. Note that the optimal size is 280px "
 "by 60px."
 msgstr ""
 
-#: ../admin/index.php:78
+#: ../admin/index.php:79
 msgid "Slider width"
 msgstr ""
 
-#: ../admin/index.php:81
+#: ../admin/index.php:82
 msgid "Boxed"
 msgstr ""
 
-#: ../admin/index.php:82
+#: ../admin/index.php:83
 msgid "Fullsize"
 msgstr ""
 
-#: ../admin/index.php:91
+#: ../admin/index.php:92
 msgid "Slider height (in pixels)"
 msgstr ""
 
-#: ../admin/index.php:97
+#: ../admin/index.php:98
 msgid "Sidebar position"
 msgstr ""
 
-#: ../admin/index.php:100
+#: ../admin/index.php:101
 msgid "Right"
 msgstr ""
 
-#: ../admin/index.php:101
+#: ../admin/index.php:102
 msgid "Left"
 msgstr ""
 
-#: ../admin/index.php:102
+#: ../admin/index.php:103
 msgid "Nowhere"
 msgstr ""
 
-#: ../admin/index.php:105
+#: ../admin/index.php:106
 msgid ""
 "Sidebar could be placed on the right or on the left of the main content. "
 "Most sites place them on the right but you could do the opposite :)"
 msgstr ""
 
-#: ../admin/index.php:109
+#: ../admin/index.php:110
 msgid "Additionnal CSS"
 msgstr ""
 
-#: ../admin/index.php:110
+#: ../admin/index.php:111
 msgid ""
 "CSS rules added in this field will be added to your site. If you have too "
 "many updates, you should create a child theme."
 msgstr ""
 
-#: ../admin/index.php:121
+#: ../admin/index.php:122
 msgid "Display excerpts"
 msgstr ""
 
-#: ../admin/index.php:126
+#: ../admin/index.php:127
 msgid ""
 "Check this to display excerpts underneath the projects on the portfolio page."
 msgstr ""
 
-#: ../admin/index.php:129
+#: ../admin/index.php:130
 msgid "Display buttons"
 msgstr ""
 
-#: ../admin/index.php:134
+#: ../admin/index.php:135
 msgid ""
 "Check this to display buttons underneath the projects on the portfolio page."
 msgstr ""
 
-#: ../admin/index.php:137
+#: ../admin/index.php:138
 msgid "Project metas"
 msgstr ""
 
-#: ../admin/index.php:139
+#: ../admin/index.php:140
 msgid ""
 "Add metas to enhance your projects (the client, his website, etc.). Add "
 "values to each meta in the \"Projects metas\" metabox on each project page."
 msgstr ""
 
-#: ../admin/index.php:145 ../admin/meta-box/home_cta.php:12
+#: ../admin/index.php:146 ../admin/meta-box/home_cta.php:12
 msgid "Call to action destination (url)"
 msgstr ""
 
-#: ../admin/index.php:149
+#: ../admin/index.php:150
 msgid ""
 "Write an incentive to get people to click on the call to action, be "
 "convincing ;)"
 msgstr ""
 
-#: ../admin/index.php:153
+#: ../admin/index.php:154
 msgid "Button's label (Example : \"Contact-us\")."
 msgstr ""
 
-#: ../admin/index.php:158
+#: ../admin/index.php:167
+msgid ""
+"Do you know that Etendard can be extended with addons ? Check the addons "
+"available below :"
+msgstr ""
+
+#: ../admin/index.php:182
 msgid "Save changes"
 msgstr ""
 
-#: ../admin/index.php:166
+#: ../admin/index.php:190
 msgid "Etendard is a product of"
 msgstr ""
 
-#: ../admin/index.php:166
+#: ../admin/index.php:190
 msgid "Tell us what you think of this theme"
 msgstr ""
 
-#: ../admin/index.php:166
+#: ../admin/index.php:190
 msgid "on this page"
 msgstr ""
 

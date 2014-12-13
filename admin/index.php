@@ -7,7 +7,8 @@ $form->endWrapper('titre');
 
 $form->groupHeader(array('general'=>__('General', 'etendard'), 
 						 'apparence'=>__('Appearance', 'etendard'), 
-						 'portfolio'=>__('Portfolio', 'etendard')));
+						 'portfolio'=>__('Portfolio', 'etendard'),
+						 'addons'=>__('Addons', 'etendard')));
 
 //Tab general
 $form->startWrapper('tab', 'general');
@@ -154,6 +155,29 @@ $form->setting(array('type'=>'text',
 
 $form->endForm();
 $form->endWrapper('tab');
+
+/* Modules Tab */
+
+$form->startWrapper('tab', 'addons');
+
+	$form->startForm();
+	
+		$form->startWrapper('td');
+		
+			$form->component('raw', __('Do you know that Etendard can be extended with addons ? Check the addons available below :', 'galopin'));
+		
+		$form->endWrapper('td');
+	
+	$form->endForm();
+	
+	$form->startForm();
+	
+		do_action('etendard_addons_tab', $form);
+	
+	$form->endForm();
+
+$form->endWrapper('tab');
+
 
 $form->component('submit', 'submit', array('value'=>__('Save changes', 'etendard')));
 
