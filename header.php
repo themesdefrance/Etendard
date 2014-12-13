@@ -44,10 +44,9 @@
 				</div>
 			
 			<nav class="main-menu">
-				<label class="toggle-menu-icon" for="menu-toggle">
+				<a id="toggle-menu-icon">
 					<span class="icon-list"></span>
-				</label>
-				<input type="checkbox" id="menu-toggle" />
+				</a>
 			
 				<?php
 				wp_nav_menu(array(

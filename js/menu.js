@@ -2,7 +2,8 @@ jQuery(function($){
 	$(function(){
 		var stickyClass = 'sticky',
 			isSticked = false,
-			offsetTrigger = 68;
+			offsetTrigger = 68,
+			menuTimeout = null;
 		
 		$(window).on('scroll', function(){
 			isSticked = ($('.main-header.'+stickyClass).length >= 1) ? true : false;
@@ -10,33 +11,41 @@ jQuery(function($){
 			else if ($(window).scrollTop() <= 0 && isSticked) $('.main-header').removeClass(stickyClass);
 		});
 		
-		var $menu = $('.top-level-menu');
 		
-		$menu.css('max-height', '100%');
-		var menuHeight = $menu.height(),
-			menuTimeout = null;
+		$("#toggle-menu-icon").click(function() {
+		  $('.top-level-menu').slideToggle(400);
+		  return false;
+		});
+				
 		
-		if ($('.toggle-menu-icon').is(':visible') && !$('#menu-toggle').is(':checked')) $menu.css('height', '0');
-		else $menu.css('height', menuHeight+'px');
+		/*$( window ).resize( function() {
+			var browserWidth = $( window ).width();
+
+			if ( browserWidth > 760 ) {
+				$(".top-level-menu").show();
+			}else{
+				$(".top-level-menu").hide();
+			}
+		} );*/
 		
-		$(window).resize(function(){
+		$( window ).resize( function() {
 			if (menuTimeout) clearTimeout(menuTimeout);
 			menuTimeout = setTimeout(recalculateMenuSize, 100);
-		});
+		} );
 		
+
 		var recalculateMenuSize = function(){
-			$menu.css('height', 'auto');
-			menuHeight = $menu.height();
-			$menu.css('height', '0');
+			var browserWidth = $( window ).width();
+
+			if ( browserWidth > 760 ) {
+				$(".top-level-menu").show();
+			}else{
+				$(".top-level-menu").hide();
+			}
 		}
 		
-		$('#menu-toggle').change(function(){			
-			if ($(this).is(':checked')){
-				$menu.css('height', menuHeight+'px');
-			}
-			else{
-				$menu.css('height', '0');
-			}
-		});
+		
+		
+		
 	});
 });
