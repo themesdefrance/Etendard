@@ -83,7 +83,7 @@ body.admin-bar .main-header.sticky{
 
 .main-header .logo-wrap a.logotext{
 	@include transition(margin,font-size,color $main-header-transition-duration ease);
-	margin-top: 18px;
+	margin-top: 15px;
 	line-height: 38px;
 }
 

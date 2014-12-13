@@ -638,7 +638,7 @@ body.admin-bar .main-header.sticky {
   -o-transition: margin, font-size, color 0.05s ease;
   -webkit-transition: margin, font-size, color 0.05s ease;
   transition: margin, font-size, color 0.05s ease;
-  margin-top: 18px;
+  margin-top: 15px;
   line-height: 38px;
 }
 
