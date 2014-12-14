@@ -12,6 +12,8 @@
 		
 		<div class="layout-grid">
 			
+			<?php do_action('etendard_top_main'); ?>
+			
 			<?php if ($position === 'gauche')get_sidebar('blog'); ?>
 
 			<div class="col-2-3 <?php if (get_option('etendard_sidebar_position') === 'sans') echo 'landing' ?>" role="main" itemprop="mainContentOfPage">
@@ -30,11 +32,13 @@
 					<?php etendard_posts_nav(false); ?>
 				</div>
 				
-				<?php do_action('etendard_bottom_main'); ?>
+				
 				
 			</div><!--END .col-2-3 -->
 
 			<?php if ($position === 'droite' || !$position)get_sidebar('blog'); ?>
+			
+			<?php do_action('etendard_bottom_main'); ?>
 			
 		</div><!--END .layout-grid-->
 		

@@ -43,7 +43,7 @@
 					
 				</div>
 			
-			<nav class="main-menu">
+			<nav class="main-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 				<a id="toggle-menu-icon">
 					<span class="icon-list"></span>
 				</a>

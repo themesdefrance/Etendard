@@ -1,6 +1,6 @@
 <?php if(is_single()){ ?>
 	
-	<footer class="post-footer">
+	<footer class="entry-footer post-footer">
 		
 		<?php do_action('etendard_top_footer_post'); ?>
 		
@@ -8,7 +8,7 @@
 		
 			<span class="footer-meta icon-tags" itemscope="keywords">
 			
-				<?php echo get_the_tag_list('',' | ',''); ?>
+				<?php echo get_the_tag_list(apply_filters('etendard_before_post_tags', ''),' | ',apply_filters('etendard_after_post_tags', '')); ?>
 			
 			</span>
 		

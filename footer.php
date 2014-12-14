@@ -12,7 +12,7 @@
 	</section>
 <?php endif; ?>
 
-<footer class="main-footer">
+<footer class="main-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 	<div class="wrapper">
 		
 		<?php do_action('etendard_footer_top'); ?>

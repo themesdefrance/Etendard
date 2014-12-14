@@ -10,13 +10,13 @@
 			
 			<?php do_action('etendard_top_main'); ?>
 			
-			<h1 class="header-title" itemprop="headline">
+			<h1 class="entry-title header-title" itemprop="headline">
 				<?php _e('Oops, there is nothing here...', 'etendard'); ?>
 			</h1>
 			
 			<?php do_action('etendard_before_content'); ?>
 			
-				<div class="content" itemprop="articleBody">
+				<div class="entry-content content" itemprop="articleBody">
 					
 					<?php do_action('etendard_top_content'); ?>
 					
@@ -37,7 +37,7 @@
 		
 		<?php do_action('etendard_after_main'); ?>
 		
-	</div><!--END .wrapper-->
+	</div><!--END .wrapper -->
 	
 </section>
 
