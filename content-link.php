@@ -31,7 +31,7 @@
 			<?php endif; ?>
 			
 			<span class="post-link-url">
-				<a href="<?php echo $link; ?>" title="<?php the_title(); ?>" class="icon-newtab" target="_blank" rel="bookmark"><?php echo $link; ?></a>
+				<a href="<?php echo esc_url($link); ?>" title="<?php the_title(); ?>" class="icon-newtab" target="_blank" rel="bookmark"><?php echo esc_url($link); ?></a>
 			</span>
 		
 		</div>

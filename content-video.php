@@ -12,7 +12,7 @@
 	
 		<div class="post-video">
 									
-			<?php echo wp_oembed_get( $video_link, array( 'width' => 660, 'height' => 349) ); ?>
+			<?php echo wp_oembed_get( esc_url($video_link), array( 'width' => 660, 'height' => 349) ); ?>
 			
 		</div>
 		
