@@ -885,7 +885,7 @@ if(!function_exists('etendard_admin_notice')){
 	
 		if(!get_option('etendard_license_status')){
 			echo '<div class="error"><p>';
-			_e("In order to get updates, please enter your licence that you received by email.", 'etendard');
+			_e("In order to get Etendard updates, please enter your licence that you received by email.", 'etendard');
 			echo '</p></div>';
 		}
 		

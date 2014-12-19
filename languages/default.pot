@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Etendard\n"
-"POT-Creation-Date: 2014-12-13 13:32+0100\n"
-"PO-Revision-Date: 2014-12-13 13:32+0100\n"
+"POT-Creation-Date: 2014-12-19 12:10+0100\n"
+"PO-Revision-Date: 2014-12-19 12:10+0100\n"
 "Last-Translator: Alex Thèmes de France <alex@themesdefrance.fr>\n"
 "Language-Team: Themes de France <alex@themesdefrance.fr>\n"
 "Language: en\n"
@@ -388,8 +388,8 @@ msgstr ""
 
 #: ../functions.php:888
 msgid ""
-"In order to get updates, please enter your licence that you received by "
-"email."
+"In order to get Etendard updates, please enter your licence that you "
+"received by email."
 msgstr ""
 
 #: ../functions.php:896

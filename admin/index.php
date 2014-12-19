@@ -164,7 +164,7 @@ $form->startWrapper('tab', 'addons');
 	
 		$form->startWrapper('td');
 		
-			$form->component('raw', __('Do you know that Etendard can be extended with addons ? Check the addons available below :', 'galopin'));
+			$form->component('raw', __('Do you know that Etendard can be extended with addons ? Check the addons available below :', 'etendard'));
 		
 		$form->endWrapper('td');
 	
