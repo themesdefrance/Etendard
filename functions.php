@@ -4,10 +4,10 @@
 // License Stuff
 ////////////////////////////////////
 
-define('EDD_SL_STORE_URL', 'https://www.themesdefrance.fr');
-define('EDD_SL_THEME_NAME', 'Etendard');
-define('EDD_SL_THEME_VERSION', '1.014');
-define('EDD_SL_LICENSE_KEY', 'etendard_license_edd');
+define('ETENDARD_STORE_URL', 'https://www.themesdefrance.fr');
+define('ETENDARD_THEME_NAME', 'Etendard');
+define('ETENDARD_THEME_VERSION', '1.015');
+define('ETENDARD_LICENSE_KEY', 'etendard_license_edd');
 
 if(!class_exists('EDD_SL_Theme_Updater')){
 	include(dirname( __FILE__ ).'/admin/EDD_SL_Theme_Updater.php');
@@ -107,7 +107,7 @@ if (!function_exists('etendard_setup')){
 		}
 		
 		// Update Etendard new version
-		update_option( 'etendard_version', EDD_SL_THEME_VERSION );
+		update_option( 'etendard_version', ETENDARD_THEME_VERSION );
 		
 		// Transient redirect after activation
 		set_transient( '_etendard_activation_redirect', true, 30 );
@@ -843,7 +843,7 @@ add_action('wp_head', 'etendard_custom_styles', 99);
 
 if(!function_exists('etendard_edd')){
 	function etendard_edd(){
-		$license = trim(get_option(EDD_SL_LICENSE_KEY));
+		$license = trim(get_option(ETENDARD_LICENSE_KEY));
 		$status = get_option('etendard_license_status');
 		
 		if (!$status){
@@ -851,10 +851,10 @@ if(!function_exists('etendard_edd')){
 			$api_params = array(
 				'edd_action'=>'activate_license',
 				'license'=>$license,
-				'item_name'=>urlencode(EDD_SL_THEME_NAME)
+				'item_name'=>urlencode(ETENDARD_THEME_NAME)
 			);
 	
-			$response = wp_remote_get(add_query_arg($api_params, EDD_SL_STORE_URL), array('timeout'=>15, 'sslverify'=>false));
+			$response = wp_remote_get(add_query_arg($api_params, ETENDARD_STORE_URL), array('timeout'=>15, 'sslverify'=>false));
 	
 			if (!is_wp_error($response)){
 				$license_data = json_decode(wp_remote_retrieve_body($response));
@@ -863,10 +863,10 @@ if(!function_exists('etendard_edd')){
 		}
 		
 		$edd_updater = new EDD_SL_Theme_Updater(array( 
-				'remote_api_url'=> EDD_SL_STORE_URL,
-				'version' 	=> EDD_SL_THEME_VERSION,
+				'remote_api_url'=> ETENDARD_STORE_URL,
+				'version' 	=> ETENDARD_THEME_VERSION,
 				'license' 	=> $license,
-				'item_name' => EDD_SL_THEME_NAME,
+				'item_name' => ETENDARD_THEME_NAME,
 				'author'	=> __('Themes de France','etendard')
 			)
 		);

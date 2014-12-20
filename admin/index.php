@@ -16,7 +16,7 @@ $form->startWrapper('tab', 'general');
 $form->startForm();
 
 $form->setting(array('type'=>'text',
-					 'name'=>substr(EDD_SL_LICENSE_KEY, strlen(ETENDARD_COCORICO_PREFIX)),
+					 'name'=>substr(ETENDARD_LICENSE_KEY, strlen(ETENDARD_COCORICO_PREFIX)),
 					 'label'=>__("License", 'etendard'),
 					 'description'=>__("Enter your licence key in order to receive Etendard updates. You'll find it in the confirmation email we sent you after your purchase.", 'etendard')));
 
