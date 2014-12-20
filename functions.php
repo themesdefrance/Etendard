@@ -84,6 +84,9 @@ if (!function_exists('etendard_setup')){
 		// Enable thumbnails
 		add_theme_support('post-thumbnails');
 		
+		// Enable custom title tag for 4.1
+		add_theme_support( 'title-tag' );
+		
 		// Enable post formats
 		// Post formats are enabled with etendard_custom_format
 		
@@ -639,14 +642,12 @@ if (!function_exists('etendard_excerpt')){
 	}
 }
 
-// Get the right title in the head section
-if (!function_exists('etendard_titre_home')){
-	function etendard_titre_home($title) {
-		if( empty( $title ) && ( is_home() || is_front_page() ) ) {
-			return get_bloginfo('title');
-		}
+// Backward title compatibility for WP < 4.1
+if ( ! function_exists( '_wp_render_title_tag' ) ){
+	function etendard_render_title() {
+	    echo '<title>' . wp_title( '|', false, 'right' ) . "</title>\n";
 	}
-	add_filter('wp_title', 'etendard_titre_home');
+	add_action( 'wp_head', 'etendard_render_title');
 }
 
 // Paginated post
