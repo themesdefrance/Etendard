@@ -80,7 +80,7 @@ class Etendard_Welcome {
 			margin:1.4em 0 0 0;
 		}
 		
-		ul li{
+		.feature-section ul li{
 			list-style-type:disc;
 			margin-left:20px;
 		}
