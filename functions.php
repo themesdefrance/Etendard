@@ -747,8 +747,8 @@ if(!function_exists('etendard_user_styles')){
 					color: <?php echo $color; ?>;
 				}
 				
-				.main-menu a:hover,
-				.top-level-menu > li:hover > a,
+
+				.top-level-menu li > a:hover,
 				ul.portfolio .creation figure:hover figcaption,
 				.article.teaser .header-title:after,
 				#commentform #submit,
@@ -775,6 +775,12 @@ if(!function_exists('etendard_user_styles')){
 					color: <?php echo $contrast; ?> !important;
 				}
 				
+				@media only screen and (min-width: 759px){
+					.top-level-menu > li:hover > a{
+						background: <?php echo $color; ?> !important;
+						color: <?php echo $contrast; ?> !important;
+					}
+				}
 				
 				<?php foreach(array('-moz-', '-webkit-', '-ms-', '-o-', '') as $prefix){ ?>
 				::<?php echo $prefix; ?>selection{ 
