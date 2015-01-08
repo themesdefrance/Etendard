@@ -26,13 +26,8 @@ jQuery(function($){
 
 			if ( browserWidth > 760 ) {
 				$(".top-level-menu").show();
-			}/*else{
-				$(".top-level-menu").hide();
-			}*/
+			}
 		}
-		
-		
-		
 		
 	});
 });
