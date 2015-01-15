@@ -232,37 +232,39 @@ add_action( 'load-post-new.php', 'etendard_custom_format' );
 
 if (!function_exists('etendard_enqueue')){
 	function etendard_enqueue(){
-	
-		$theme = wp_get_theme();
 		
 		if(is_page_template('template_home.php') || is_singular( 'portfolio')){
 			// Slider
-			wp_register_script('glide', get_template_directory_uri().'/lib/glide/glide.min.js', array('jquery'), $theme->get('Version'), true);
-			wp_register_style('glide', get_template_directory_uri().'/lib/glide/glide.css', false, $theme->get('Version'));
+			wp_register_script('glide', get_template_directory_uri().'/lib/glide/glide.min.js', array('jquery'), false, true);
+			wp_register_style('glide', get_template_directory_uri().'/lib/glide/glide.css', false);
 		}
 		
+		wp_register_script('fitvids', get_template_directory_uri().'/lib/fitvids/jquery.fitvids.js', array('jquery'), false, true);
+		
 		// Fancybox (lightbox like effect)
-		wp_register_script('fancybox', get_template_directory_uri().'/lib/fancybox/jquery.fancybox.pack.js', array('jquery'), $theme->get('Version'), true);
-		wp_register_style('fancybox', get_template_directory_uri().'/lib/fancybox/jquery.fancybox.css', false, $theme->get('Version'));
+		wp_register_script('fancybox', get_template_directory_uri().'/lib/fancybox/jquery.fancybox.pack.js', array('jquery'), false, true);
+		wp_register_style('fancybox', get_template_directory_uri().'/lib/fancybox/jquery.fancybox.css', false, false);
 		
 		// Etendard combined scripts (menu, galery, backtotop...)
-		wp_register_script('etendard_combined', get_template_directory_uri().'/js/etendard-combined.js', array('jquery'), $theme->get('Version'), true);
+		wp_register_script('etendard_combined', get_template_directory_uri().'/js/etendard-combined.js', array('jquery'), false, true);
 		
 		// Entendard Shortcodes Script
-		wp_register_script('etendard_shortcodes', get_template_directory_uri().'/admin/js/shortcodes.js', array('jquery'), $theme->get('Version'), true);
+		wp_register_script('etendard_shortcodes', get_template_directory_uri().'/admin/js/shortcodes.js', array('jquery'), false, true);
 		
 		// Google Fonts
-		wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Sanchez:400,400italic|Maven+Pro:400,700', array(), $theme->get('Version'));
+		wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Sanchez:400,400italic|Maven+Pro:400,700', array(), false);
 		
 		// Etendard Font
-		wp_enqueue_style('icons', get_template_directory_uri().'/fonts/style.css', array(), $theme->get('Version'));
+		wp_enqueue_style('icons', get_template_directory_uri().'/fonts/style.css', array(), false);
 		
 		// Style.css
-		wp_enqueue_style('stylesheet', get_stylesheet_directory_uri().'/style.css', array(), $theme->get('Version'));
+		wp_enqueue_style('stylesheet', get_stylesheet_directory_uri().'/style.css', array(), false);
 		
 		// Enqueue scripts & style
 		wp_enqueue_script('glide');
 		wp_enqueue_style('glide');
+		
+		wp_enqueue_script('fitvids');
 		
 		wp_enqueue_script('etendard_combined');
 		wp_enqueue_script('etendard_shortcodes');
