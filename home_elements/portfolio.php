@@ -22,7 +22,7 @@ switch ($portfolios->post_count){
 <section class="portfolio">
 	<div class="wrapper">
 		<h2 class="center">
-			<?php echo apply_filters('etendard_home_portfolio', __('Last Projects', 'etendard')); ?>
+			<?php echo apply_filters('etendard_home_portfolio', __('Latest Projects', 'etendard')); ?>
 		</h2>
 		<ul class="portfolio">
 			<?php while ($portfolios->have_posts()) : $portfolios->the_post(); ?>
