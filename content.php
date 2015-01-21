@@ -4,7 +4,7 @@
 
 	<?php do_action('etendard_top_post'); ?>
 
-	<header class="header">
+	<header class="entry-header header">
 	
 		<?php do_action('etendard_top_header_post'); ?>
 	
@@ -20,9 +20,10 @@
 						
 					<?php else: ?>
 					
-						<a href="<?php the_permalink(); ?>" title="<?php esc_attr(the_title()); ?>"><?php the_post_thumbnail('etendard-post-thumbnail'); ?></a>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('etendard-post-thumbnail'); ?></a>
 						
 					<?php endif; ?>
+					
 				</div><!--END .entry-thumbnail-->
 				
 			<?php endif; ?>
@@ -33,11 +34,7 @@
 		
 			<?php if(!is_page_template('template_home.php')): ?>
 			
-				<h1 class="entry-title header-title " itemprop="headline">
-				
-					<?php the_title(); ?>
-					
-				</h1>
+				<h1 class="entry-title header-title " itemprop="headline"><?php the_title(); ?></h1>
 				
 			<?php endif; ?>
 			
@@ -45,7 +42,7 @@
 		
 			<h2 class="entry-title header-title" itemprop="headline">
 			
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 				
 			</h2>
 			

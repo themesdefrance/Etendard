@@ -38,7 +38,7 @@
 						</a>
 					<?php endif; ?>
 					
-				</div>
+				</div><!--END .logo-wrap-->
 			
 			<nav class="main-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 				<a id="toggle-menu-icon">
@@ -54,6 +54,6 @@
 					'fallback_cb'    => 'etendard_nomenu'
 				)); 
 				?>
-			</nav>
-		</div>
-	</header>
+			</nav><!--END .main-menu-->
+		</div><!--END .wrapper-->
+	</header><!--END .main-header-->

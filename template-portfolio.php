@@ -51,7 +51,7 @@ else if (is_tax('portfolio_categorie')){
 				</li>
 				<?php } ?>
 			</ul>
-		</nav>
+		</nav><!--END .categories-->
 		<?php endif; ?>
 		
 		<ul class="portfolio" role="main" itemprop="mainContentOfPage" >
@@ -100,7 +100,7 @@ else if (is_tax('portfolio_categorie')){
 				<?php } ?>
 			</li>
 			<?php endwhile; ?>
-		</ul>
+		</ul><!--END .portfolio-->
 		
 		<div class="pagination">
 			<?php previous_posts_link(apply_filters('etendard_pagination_precedente', __('Previous Page', 'etendard'))); ?>
@@ -111,7 +111,8 @@ else if (is_tax('portfolio_categorie')){
 		
 	</div><!--END .wrapper-->
 	
-</section>
+</section><!--END .portfolio-->
+
 <?php wp_reset_postdata(); ?>
 
 <?php get_footer(); ?>

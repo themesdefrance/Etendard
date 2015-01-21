@@ -51,13 +51,15 @@ Template Name: Services
 			</li>
 			
 			<?php endwhile; ?>
-		</ul>
+		</ul><!--END .services-->
 		
 		<div class="pagination">
 			<?php previous_posts_link(apply_filters('etendard_pagination_precedente', __('Previous Page', 'etendard'))); ?>
 			<?php next_posts_link(apply_filters('etendard_pagination_suivante', __('Next Page', 'etendard'))); ?> 
 		</div>
-	</div>
-</section>
+		
+	</div><!--END .wrapper-->
+	
+</section><!--END .services-->
 
 <?php get_footer(); ?>

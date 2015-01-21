@@ -25,6 +25,6 @@
 	
 		<?php do_action('etendard_bottom_footer_post'); ?>
 		
-	</footer>
+	</footer><!--END .entry-footer-->
 	
 <?php } ?>

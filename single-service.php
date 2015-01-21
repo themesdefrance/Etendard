@@ -14,7 +14,7 @@
 				
 				<article <?php post_class('article'); ?> role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
 
-					<header class="header">
+					<header class="entry-header header">
 						
 						<?php do_action('etendard_top_header_post'); ?>
 						
@@ -22,9 +22,9 @@
 						
 						<?php do_action('etendard_bottom_header_post'); ?>
 						
-					</header>
+					</header><!--END .entry-header-->
 	
-					<div class="content">
+					<div class="entry-content content">
 						
 						<?php do_action('etendard_top_content'); ?>
 						
@@ -32,7 +32,7 @@
 						
 						<?php do_action('etendard_bottom_content'); ?>
 						
-					</div>
+					</div><!--END .entry-content-->
 					
 				</article>
 				
@@ -46,6 +46,6 @@
 		
 	</div><!--END .wrapper-->
 	
-</section><!--END .blog.grid-->
+</section><!--END .blog-->
 
 <?php get_footer(); ?>

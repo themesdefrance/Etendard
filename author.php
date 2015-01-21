@@ -58,7 +58,7 @@
 									
 								<?php get_template_part( 'content', 'body' ); ?>
 								
-							</article>
+							</article><!--END .article-->
 							
 						</li>
 						
@@ -69,7 +69,8 @@
 						<?php get_template_part('content', 'none'); ?>
 						
 					<?php endif; ?>
-				</ul>
+					
+				</ul><!--END .articles-->
 				
 				<div class="pagination">
 					<?php etendard_posts_nav(false); ?>
@@ -85,5 +86,6 @@
 		
 	</div> <!--END .wrapper-->
 	
-</section>
+</section><!--END .blog-->
+
 <?php get_footer(); ?>

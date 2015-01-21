@@ -25,7 +25,7 @@
 				else{  
 					_e('<strong>2014</strong> - Étendard by <a href="https://www.themesdefrance.fr" target="_blank">Themes de France</a>', 'etendard');
 				} ?>
-		</div>
+		</div><!--END .col-1-2-->
 		
 		<div class="col-1-2">
 			<nav class="footer-menu">
@@ -38,16 +38,16 @@
 					));
 				}
 				?>
-			</nav>
-		</div>
+			</nav><!--END .footer-menu-->
+		</div><!--END .col-1-2-->
 		
 		<?php do_action('etendard_footer_bottom'); ?>
 		
-	</div>
+	</div><!--END .wrapper-->
 	
 	<a href="#" id="remonter" class="icon-totop" style="display:none;" title="<?php _e('Top', 'etendard'); ?>"></a>
 	
-</footer>
+</footer><!--END .main-footer-->
 
 <?php wp_footer(); ?>
 </body>

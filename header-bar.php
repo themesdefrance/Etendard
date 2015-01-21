@@ -63,7 +63,6 @@
 			
 			<h1 class="headerbartitle"><?php echo apply_filters('etendard_headerbar_single', __('Blog', 'etendard')); ?></h1>
 			
-			
 			<?php ?>
 		<?php } ?>
 		
@@ -71,6 +70,6 @@
 				yoast_breadcrumb('<div id="breadcrumbs">','</div>');
 				} ?>
 		
-	</div>
+	</div><!--END .wrapper-->
 
-</section>
+</section><!--END .headerbar-->

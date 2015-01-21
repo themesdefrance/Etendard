@@ -10,6 +10,9 @@
 		<?php get_template_part('main'); ?>
 		
 		<?php do_action('etendard_after_main'); ?>
-	</div>
-</section>
+
+	</div><!--END .wrapper-->
+
+</section><!--END .blog-->
+
 <?php get_footer(); ?>

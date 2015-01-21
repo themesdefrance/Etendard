@@ -6,15 +6,15 @@
 	
 	<?php do_action('etendard_top_post'); ?>
 	
-	<header class="header">
+	<header class="entry-header header">
 		
 		<?php do_action('etendard_top_header_post'); ?>
 	
-		<div class="post-video">
+		<div class="entry-video post-video">
 									
 			<?php echo wp_oembed_get( esc_url($video_link), array( 'width' => 660, 'height' => 349) ); ?>
 			
-		</div>
+		</div><!--END .entry-video-->
 		
 		<?php if (is_single()): ?>
 			
@@ -24,9 +24,9 @@
 		
 			<h2 class="entry-title header-title" itemprop="headline">
 			
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 				
-			</h2>
+			</h2><!--END .entry-title-->
 			
 		<?php endif; ?>
 		
@@ -34,7 +34,7 @@
 		
 		<?php do_action('etendard_bottom_header_post'); ?>
 		
-	</header>
+	</header><!--END .entry-header-->
 		
 	<?php get_template_part( 'content', 'body' ); ?>	
 	
@@ -42,6 +42,6 @@
 	
 	<?php do_action('etendard_bottom_post'); ?>
 	
-</article>
+</article><!--END .article-->
 
 <?php do_action('etendard_after_post'); ?>

@@ -34,4 +34,4 @@
 
 	<?php if ($position === 'droite' || !$position)get_sidebar('blog'); ?>
 	
-</div>
+</div><!--END .layout-grid-->

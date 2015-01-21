@@ -39,6 +39,6 @@
 		
 	</div><!--END .wrapper -->
 	
-</section>
+</section><!--END .blog-->
 
 <?php get_footer(); ?>

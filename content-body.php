@@ -31,6 +31,6 @@
 	
 	<?php do_action('etendard_bottom_content'); ?>
 
-</div>
+</div><!--END .entry-content-->
 
 <?php do_action('etendard_after_content'); ?>

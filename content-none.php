@@ -10,10 +10,10 @@
 		</p>
 		<?php get_search_form(); ?>
 	
-	</div>
+	</div><!--END .entry-content-->
 	
 	<?php do_action('etendard_bottom_post'); ?>
 	
-</article>
+</article><!--END .article-->
 
 <?php do_action('etendard_after_post'); ?>

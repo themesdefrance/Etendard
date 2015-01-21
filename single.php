@@ -34,7 +34,7 @@
 				
 				
 				
-			</div><!--END .col-2-3 -->
+			</div><!--END .col-2-3-->
 
 			<?php if ($position === 'droite' || !$position)get_sidebar('blog'); ?>
 			
@@ -46,6 +46,6 @@
 		
 	</div><!--END .wrapper-->
 	
-</section>
+</section><!--END .blog-->
 
 <?php get_footer(); ?>
