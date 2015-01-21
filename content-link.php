@@ -24,14 +24,14 @@
 			
 				<h2 class="entry-title header-title" itemprop="headline">
 				
-					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark" itemprop="url"><?php the_title(); ?></a>
 					
 				</h2>
 				
 			<?php endif; ?>
 			
 			<span class="post-link-url">
-				<a href="<?php echo esc_url($link); ?>" title="<?php the_title_attribute(); ?>" class="icon-newtab" target="_blank" rel="bookmark"><?php echo esc_url($link); ?></a>
+				<a href="<?php echo esc_url($link); ?>" title="<?php the_title_attribute(); ?>" class="icon-newtab" target="_blank" rel="bookmark" itemprop="url"><?php echo esc_url($link); ?></a>
 			</span>
 		
 		</div><!--END .entry-link-->

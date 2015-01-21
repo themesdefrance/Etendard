@@ -16,18 +16,18 @@
 			<?php if (is_single()): ?>
 				
 				<h1>
-					<blockquote>“<?php echo sanitize_text_field($quote); ?>”</blockquote>
+					<blockquote>“<?php echo $quote; ?>”</blockquote>
 				</h1>
 				
 			<?php else: ?>
 				
 				<h2>
-					<blockquote><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">“<?php echo sanitize_text_field($quote); ?>”</a></blockquote>
+					<blockquote><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark" itemprop="url">“<?php echo $quote; ?>”</a></blockquote>
 				</h2>
 				
 			<?php endif; ?>
 			
-			<span class="post-quote-author"><?php echo sanitize_text_field($author_quote); ?></span>
+			<span class="post-quote-author"><?php echo $author_quote; ?></span>
 			
 		</div><!--END .entry-quote-->
 		

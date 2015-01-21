@@ -20,7 +20,7 @@
 						
 					<?php else: ?>
 					
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('etendard-post-thumbnail'); ?></a>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark" itemprop="url"><?php the_post_thumbnail('etendard-post-thumbnail'); ?></a>
 						
 					<?php endif; ?>
 					
@@ -42,7 +42,7 @@
 		
 			<h2 class="entry-title header-title" itemprop="headline">
 			
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark" itemprop="url"><?php the_title(); ?></a>
 				
 			</h2>
 			
