@@ -206,7 +206,7 @@ html {
 
 .clearfix:before, .grid:before, .wrapper .layout-grid:before, ul.services:before,
 ul.portfolio:before,
-ul.blog:before, .main-footer:before, .footer-widgets:before, .main-header:before, section.portfolio nav.categories:before, .temoignages .temoignage:before, .article:before, .comment-navigation:before,
+ul.blog:before, .main-footer:before, .footer-widgets:before, .main-header:before, section.portfolio nav.categories:before, .temoignages .temoignage:before, .article:before, .entry-navigation:before, .comment-navigation:before,
 .clearfix:after,
 .grid:after,
 .wrapper .layout-grid:after,
@@ -219,6 +219,7 @@ ul.blog:after,
 section.portfolio nav.categories:after,
 .temoignages .temoignage:after,
 .article:after,
+.entry-navigation:after,
 .comment-navigation:after {
   content: "";
   display: table;
@@ -1524,6 +1525,25 @@ article.format-quote .post-quote blockquote a:hover {
 }
 article.format-quote .post-quote .post-quote-author {
   font-size: 20px;
+}
+
+.entry-navigation {
+  margin-bottom: 50px;
+}
+.entry-navigation:empty {
+  display: none;
+}
+.entry-navigation a {
+  text-decoration: none;
+}
+.entry-navigation a:hover {
+  text-decoration: underline;
+}
+.entry-navigation .meta-nav-prev {
+  float: left;
+}
+.entry-navigation .meta-nav-next {
+  float: right;
 }
 
 .author .auteur-box {

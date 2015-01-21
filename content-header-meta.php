@@ -29,8 +29,6 @@
 				</time>
 				
 			<?php }
-			
-		<?php
 		}
 		if($post_header_author){
 		
@@ -58,7 +56,11 @@
 			
 			if(comments_open()){ ?>
 			
-				<a href="<?php the_permalink(); ?>#comments"><?php comments_number(__('No Comment', 'etendard'), __('One Comment', 'etendard'), __('% Comments', 'etendard')); ?></a>
+				<a href="<?php the_permalink(); ?>#comments" itemprop="discussionUrl">
+					
+					<?php comments_number(	__('No Comment', 'etendard') . '<meta itemprop="interactionCount" content="0 UserComments">',
+											__('One Comment', 'etendard') . '<meta itemprop="interactionCount" content="1 UserComments">',
+											__('% Comments', 'etendard') . '<meta itemprop="interactionCount" content="% UserComments">'); ?></a>
 				
 				<?php 
 				

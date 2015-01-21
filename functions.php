@@ -22,26 +22,20 @@ if(is_admin())
 	require_once 'admin/Cocorico/Cocorico.php';
 
 ////////////////////////////////////
-// Widgets, Shortcodes & Welcome page loading
+// Widgets, Shortcodes loading
 ////////////////////////////////////
 	
-require_once 'admin/widgets/social.php';
-require_once 'admin/widgets/appel-action.php';
-require_once 'admin/widgets/video.php';
-require_once 'admin/shortcodes.php';
-require_once 'admin/bienvenue.php';
+require 'admin/widgets/social.php';
+require 'admin/widgets/appel-action.php';
+require 'admin/widgets/video.php';
+require 'admin/shortcodes.php';
 
 ////////////////////////////////////
 // Etendard Setup & Activation
 ////////////////////////////////////
 
-if (!function_exists( 'etendard_activation')){
-	function etendard_activation(){
-		global $wp_rewrite;
-		$wp_rewrite->flush_rules();
-	}
-}
-add_action('after_switch_theme', 'etendard_activation');
+//Refresh the permalink structure
+add_action('after_switch_theme', 'flush_rewrite_rules');
 
 // Function to call if no primary menu
 if (!function_exists( 'etendard_nomenu')){
@@ -512,6 +506,45 @@ if (!function_exists('etendard_posts_nav')){
 	}
 }
 
+/**
+ * Display navigation to next/previous post when applicable.
+ * Derived from Twenty Fourteen Theme
+ *
+ * @since 1.0
+ * @return void
+ */
+ 
+if (!function_exists('etendard_single_post_nav')){
+	function etendard_single_post_nav() {
+		
+		// Filter to handle displaying of the post navigation
+		if(!apply_filters('etendard_single_post_nav',true)){
+			return;
+		}
+		
+		// Don't print empty markup if there's nowhere to navigate.
+		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+		$next     = get_adjacent_post( false, '', false );
+	
+		if ( ! $next && ! $previous ) {
+			return;
+		}
+	
+		?>
+		<nav class="entry-navigation" role="navigation">
+			<?php
+			if ( is_attachment() ) :
+				previous_post_link( '<span class="meta-nav-prev">%link</span>', __( 'Published In', 'etendard' ) . '%title' );
+			else :
+				previous_post_link( '<span class="meta-nav-prev">%link</span>', __( 'Previous Post', 'etendard' ));
+				next_post_link( '<span class="meta-nav-next">%link</span>', __( 'Next Post', 'etendard' ));
+			endif;
+			?>
+		</nav><!-- .entry-navigation -->
+		<?php
+	}
+}
+
 ////////////////////////////////////
 // Comments
 ////////////////////////////////////
@@ -627,20 +660,21 @@ if (!function_exists('etendard_excerpt')){
 		if($length==0)
 			return '';
 		
-		// Do we have an excerpt ?
+		// Do we have an excerpt ? (excerpt field in the post editor)
 		if(has_excerpt())
-			return '<p>' . get_the_excerpt() . '</p>';
+			return apply_filters('the_excerpt', wpautop(strip_shortcodes(strip_tags(get_the_excerpt()))));
 		
-		// Do we have a read more tag ?
+		// Do we have a read more tag (<!--more-->) in the post content ?
 		if(strpos( $post->post_content, '<!--more-->' )){
 			$content_arr = get_extended($post->post_content);
-			return '<p>' . $content_arr['main'] . '</p>';
+			return apply_filters('the_excerpt', wpautop(strip_shortcodes(strip_tags($content_arr['main']))));
 		}
 		
-		// Create a custom excerpt without shortcodes, images and iframes
-		$content = strip_shortcodes(strip_tags(get_the_content(), '<img><iframe>'));
+		// Get the post content without shortcodes or HTML tags
+		$content = strip_shortcodes(strip_tags(get_the_content()));
 		
-		return apply_filters('the_content', wpautop(wp_trim_words( $content , $length )));
+		// Create a custom excerpt based on the post content
+		return apply_filters('the_excerpt', wpautop(wp_trim_words( $content , $length )));
 	}
 }
 
@@ -728,6 +762,7 @@ if(!function_exists('etendard_user_styles')){
 				.article .content a,
 				.article .header-meta a,
 				.article .footer-meta a,
+				.entry-navigation a,
 				.main-header .logo-wrap a.logotext:hover,
 				#comments a,
 				.sidebar .widget_etendardnewsletter .form-email:before,
@@ -815,6 +850,7 @@ if(!function_exists('etendard_user_styles')){
 				input[type='button']:hover{
 					background:<?php echo $complement; ?> !important;
 				}
+				
 				form.search-form .search-submit-wrapper:hover:before,
 				div.pagination a:hover,
 				.sidebar .widget a{
@@ -844,6 +880,8 @@ if(!function_exists('etendard_custom_styles')){
 	}
 }
 add_action('wp_head', 'etendard_custom_styles', 99);
+
+
 
 ////////////////////////////////////
 // License activation

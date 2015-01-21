@@ -935,6 +935,30 @@ article.format-quote .post-quote{
 	}
 }
 
+.entry-navigation{
+	&:empty{
+		display:none;
+	}
+	
+	@extend .clearfix;
+	margin-bottom: 50px;
+	
+	a{
+		text-decoration:none;
+		
+		&:hover{
+			text-decoration:underline;
+		}
+	}
+	
+	.meta-nav-prev{
+		float: left;
+	}
+	
+	.meta-nav-next{
+		float: right;
+	}
+}
 
 // Author pages
 

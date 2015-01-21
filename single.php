@@ -23,16 +23,16 @@
 				<ul class="articles">
 					<?php while (have_posts()) : the_post(); ?>
 					<li>
-						<?php get_template_part('content', get_post_format()); ?>
-						<?php comments_template(); ?>
+						<?php 
+							get_template_part('content', get_post_format());
+							
+							etendard_single_post_nav();
+							
+							comments_template();
+						?>
 					</li>
 					<?php endwhile; ?>
 				</ul>
-				<div class="pagination">
-					<?php etendard_posts_nav(false); ?>
-				</div>
-				
-				
 				
 			</div><!--END .col-2-3-->
 
