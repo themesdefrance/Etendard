@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Etendard\n"
-"POT-Creation-Date: 2015-01-15 09:46+0100\n"
-"PO-Revision-Date: 2015-01-15 09:47+0100\n"
+"POT-Creation-Date: 2015-01-21 18:33+0100\n"
+"PO-Revision-Date: 2015-01-21 18:33+0100\n"
 "Last-Translator: Alex Thèmes de France <alex@themesdefrance.fr>\n"
 "Language-Team: Themes de France <alex@themesdefrance.fr>\n"
 "Language: fr\n"
@@ -16,15 +16,15 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../404.php:14 ../Etendard/404.php:14 ../Etendard/Etendard/404.php:14
+#: ../404.php:14
 msgid "Oops, there is nothing here..."
 msgstr "Mince, il n'y a rien ici..."
 
-#: ../404.php:23 ../Etendard/404.php:23 ../Etendard/Etendard/404.php:23
+#: ../404.php:23
 msgid "Error 404"
 msgstr "Erreur 404"
 
-#: ../404.php:25 ../Etendard/404.php:25 ../Etendard/Etendard/404.php:25
+#: ../404.php:25
 #, php-format
 msgid ""
 "The page you requested does not seem to exist. <a href=\"%s\">Click here</a> "
@@ -33,132 +33,96 @@ msgstr ""
 "La page que vous recherchez ne semble pas exister. <a href=\"%s\">Cliquez "
 "ici</a> pour revenir à la page d'accueil."
 
-#: ../author.php:31 ../Etendard/author.php:31
-#: ../Etendard/Etendard/author.php:31
+#: ../author.php:31
 msgid "Website"
 msgstr "Site internet"
 
-#: ../author.php:37 ../Etendard/author.php:37
-#: ../Etendard/Etendard/author.php:37
+#: ../author.php:37
 #, php-format
 msgid "Last posts by %s"
 msgstr "Derniers articles de %s"
 
 #: ../call_to_action.php:33 ../admin/widgets/appel-action.php:30
-#: ../Etendard/call_to_action.php:33
-#: ../Etendard/admin/widgets/appel-action.php:30
-#: ../Etendard/Etendard/call_to_action.php:33
-#: ../Etendard/Etendard/admin/widgets/appel-action.php:30
 msgid "Click here"
 msgstr "Cliquez ici"
 
-#: ../comments.php:7 ../Etendard/comments.php:7
-#: ../Etendard/Etendard/comments.php:7
+#: ../comments.php:7
 msgid "1 comment was added, add yours."
 msgstr "Un commentaire a été rédigé, ajoutez le votre."
 
-#: ../comments.php:7 ../Etendard/comments.php:7
-#: ../Etendard/Etendard/comments.php:7
+#: ../comments.php:7
 #, php-format
 msgid "%1$s comments were added, add yours."
 msgstr "%1$s commentaires ont été rédigés, ajoutez le votre. "
 
-#: ../comments.php:15 ../comments.php:43 ../Etendard/comments.php:15
-#: ../Etendard/comments.php:43 ../Etendard/Etendard/comments.php:15
-#: ../Etendard/Etendard/comments.php:43
+#: ../comments.php:15 ../comments.php:43
 #, php-format
 msgid "Reply to %s"
 msgstr "Répondre à %s"
 
-#: ../comments.php:16 ../comments.php:44 ../Etendard/comments.php:16
-#: ../Etendard/comments.php:44 ../Etendard/Etendard/comments.php:16
-#: ../Etendard/Etendard/comments.php:44
+#: ../comments.php:16 ../comments.php:44
 msgid "Post comment"
 msgstr "Publier un commentaire"
 
-#: ../comments.php:26 ../Etendard/comments.php:26
-#: ../Etendard/Etendard/comments.php:26
+#: ../comments.php:26
 msgid "Previous comments"
 msgstr "Commentaires précédents"
 
-#: ../comments.php:29 ../Etendard/comments.php:29
-#: ../Etendard/Etendard/comments.php:29
+#: ../comments.php:29
 msgid "Next comments"
 msgstr "Commentaires suivants"
 
-#: ../comments.php:36 ../Etendard/comments.php:36
-#: ../Etendard/Etendard/comments.php:36
+#: ../comments.php:36
 msgid "Be the first to post a comment."
 msgstr "Soyez le premier à publier un commentaire."
 
-#: ../comments.php:49 ../Etendard/comments.php:49
-#: ../Etendard/Etendard/comments.php:49
+#: ../comments.php:49
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
 #: ../content-body.php:16 ../content-body.php:28 ../template-portfolio.php:97
-#: ../template-services.php:49 ../Etendard/content-body.php:16
-#: ../Etendard/content-body.php:28 ../Etendard/template-portfolio.php:97
-#: ../Etendard/template-services.php:49
-#: ../Etendard/Etendard/content-body.php:16
-#: ../Etendard/Etendard/content-body.php:28
-#: ../Etendard/Etendard/template-portfolio.php:97
-#: ../Etendard/Etendard/template-services.php:49
-#: ../Etendard/Etendard/home_elements/articles.php:63
-#: ../Etendard/Etendard/home_elements/services.php:49
-#: ../Etendard/home_elements/articles.php:63
-#: ../Etendard/home_elements/services.php:49 ../home_elements/articles.php:63
+#: ../template-services.php:49 ../home_elements/articles.php:63
 #: ../home_elements/services.php:49
 msgid "Read more"
 msgstr "Lire la suite"
 
-#: ../content-footer-meta.php:20 ../Etendard/content-footer-meta.php:20
-#: ../Etendard/Etendard/content-footer-meta.php:20
+#: ../content-footer-meta.php:20
 msgid "Pages:"
 msgstr "Pages:"
 
-#: ../content-header-meta.php:15 ../Etendard/content-header-meta.php:15
-#: ../Etendard/Etendard/content-header-meta.php:15
+#: ../content-header-meta.php:15
 msgid "Published "
 msgstr "Publié "
 
-#: ../content-header-meta.php:19 ../Etendard/content-header-meta.php:19
-#: ../Etendard/Etendard/content-header-meta.php:19
+#: ../content-header-meta.php:19
 msgid "on"
 msgstr "le"
 
-#: ../content-header-meta.php:31 ../Etendard/content-header-meta.php:31
-#: ../Etendard/Etendard/content-header-meta.php:31
+#: ../content-header-meta.php:37
 msgid "by"
 msgstr "par"
 
-#: ../content-header-meta.php:43 ../Etendard/content-header-meta.php:43
-#: ../Etendard/Etendard/content-header-meta.php:43
+#: ../content-header-meta.php:49
 msgid "in"
 msgstr "dans"
 
-#: ../content-header-meta.php:53 ../Etendard/content-header-meta.php:53
-#: ../Etendard/Etendard/content-header-meta.php:53
+#: ../content-header-meta.php:61
 msgid "No Comment"
 msgstr "Aucun commentaire"
 
-#: ../content-header-meta.php:53 ../Etendard/content-header-meta.php:53
-#: ../Etendard/Etendard/content-header-meta.php:53
+#: ../content-header-meta.php:62
 msgid "One Comment"
 msgstr "1 Commentaire"
 
-#: ../content-header-meta.php:53 ../Etendard/content-header-meta.php:53
-#: ../Etendard/Etendard/content-header-meta.php:53
+#: ../content-header-meta.php:63
 msgid "% Comments"
 msgstr "% Commentaires"
 
-#: ../content-header-meta.php:60 ../Etendard/content-header-meta.php:60
-#: ../Etendard/Etendard/content-header-meta.php:60
+#: ../content-header-meta.php:70
 msgid "Edit"
 msgstr "Modifier"
 
-#: ../content-none.php:9 ../Etendard/content-none.php:9
-#: ../Etendard/Etendard/content-none.php:9
+#: ../content-none.php:9
 #, php-format
 msgid ""
 "Sorry, no posts were found. You can <a href=\"%s\" title=\"Click here to get "
@@ -169,8 +133,7 @@ msgstr ""
 "\"Cliquez ici pour revenir à la page d'accueil\">revenir à la page "
 "d'accueil</a> ou utiliser le champ de recherche ci-dessous :"
 
-#: ../footer.php:26 ../Etendard/footer.php:26
-#: ../Etendard/Etendard/footer.php:26
+#: ../footer.php:26
 msgid ""
 "<strong>2014</strong> - Étendard by <a href=\"https://www.themesdefrance.fr"
 "\" target=\"_blank\">Themes de France</a>"
@@ -178,338 +141,273 @@ msgstr ""
 "<strong>2014</strong> - Étendard par <a href=\"https://www.themesdefrance.fr"
 "\" target=\"_blank\">Thèmes de France</a>"
 
-#: ../footer.php:48 ../Etendard/footer.php:48
-#: ../Etendard/Etendard/footer.php:48
+#: ../footer.php:48
 msgid "Top"
 msgstr "Remonter"
 
-#: ../formulaire_contact.php:10 ../Etendard/formulaire_contact.php:10
-#: ../Etendard/Etendard/formulaire_contact.php:10
+#: ../formulaire_contact.php:10
 msgid "Contact"
 msgstr "Contact"
 
-#: ../formulaire_contact.php:26 ../Etendard/formulaire_contact.php:26
-#: ../Etendard/Etendard/formulaire_contact.php:26
+#: ../formulaire_contact.php:26
 msgid "Name *"
 msgstr "Nom *"
 
-#: ../formulaire_contact.php:33 ../Etendard/formulaire_contact.php:33
-#: ../Etendard/Etendard/formulaire_contact.php:33
+#: ../formulaire_contact.php:33
 msgid "Email *"
 msgstr "Email *"
 
-#: ../formulaire_contact.php:40 ../Etendard/formulaire_contact.php:40
-#: ../Etendard/Etendard/formulaire_contact.php:40
+#: ../formulaire_contact.php:40
 msgid "Subject"
 msgstr "Sujet"
 
-#: ../formulaire_contact.php:47 ../Etendard/formulaire_contact.php:47
-#: ../Etendard/Etendard/formulaire_contact.php:47
+#: ../formulaire_contact.php:47
 msgid "Message *"
 msgstr "Message *"
 
-#: ../formulaire_contact.php:53 ../Etendard/formulaire_contact.php:53
-#: ../Etendard/Etendard/formulaire_contact.php:53
+#: ../formulaire_contact.php:53
 msgid "Send"
 msgstr "Envoyer"
 
-#: ../formulaire_contact.php:59 ../Etendard/formulaire_contact.php:59
-#: ../Etendard/Etendard/formulaire_contact.php:59
+#: ../formulaire_contact.php:59
 msgid "Succes ! You message was sent."
 msgstr "Votre message a été envoyé avec succès."
 
-#: ../formulaire_contact.php:60 ../Etendard/formulaire_contact.php:60
-#: ../Etendard/Etendard/formulaire_contact.php:60
+#: ../formulaire_contact.php:60
 msgid "An error occured during sending, try again in a few minutes."
 msgstr ""
 "Une erreur s'est produite lors de l'envoi, veuillez réessayer dans quelques "
 "minutes."
 
-#: ../functions.php:49 ../Etendard/functions.php:49
-#: ../Etendard/Etendard/functions.php:49
+#: ../functions.php:43
 msgid "Set up the main menu"
 msgstr "Veuillez configurer le menu principal"
 
-#: ../functions.php:60 ../Etendard/functions.php:60
-#: ../Etendard/Etendard/functions.php:60
+#: ../functions.php:54
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: ../functions.php:61 ../Etendard/functions.php:61
-#: ../Etendard/Etendard/functions.php:61
+#: ../functions.php:55
 msgid "Footer menu"
 msgstr "Menu du pied de page"
 
-#: ../functions.php:65 ../Etendard/functions.php:65
-#: ../Etendard/Etendard/functions.php:65
+#: ../functions.php:59
 msgid "Sidebar"
 msgstr "Barre latérale"
 
-#: ../functions.php:67 ../Etendard/functions.php:67
-#: ../Etendard/Etendard/functions.php:67
+#: ../functions.php:61
 msgid "Add widgets in the sidebar."
 msgstr "Ajoutez des widgets dans la barre latérale."
 
-#: ../functions.php:75 ../admin/index.php:53 ../Etendard/functions.php:75
-#: ../Etendard/admin/index.php:53 ../Etendard/Etendard/functions.php:75
-#: ../Etendard/Etendard/admin/index.php:53
+#: ../functions.php:69 ../admin/index.php:53
 msgid "Footer"
 msgstr "Pied de page"
 
-#: ../functions.php:77 ../Etendard/functions.php:77
-#: ../Etendard/Etendard/functions.php:77
+#: ../functions.php:71
 msgid "Add widgets in the footer."
 msgstr "Ajouter des widgets dans le pied de page."
 
-#: ../functions.php:104 ../Etendard/functions.php:104
-#: ../Etendard/Etendard/functions.php:104
+#: ../functions.php:98
 msgid "Post"
 msgstr "Article"
 
-#: ../functions.php:128 ../Etendard/functions.php:128
-#: ../Etendard/Etendard/functions.php:128
+#: ../functions.php:122
 msgctxt "project post type general name"
 msgid "Projects"
 msgstr "Projets"
 
-#: ../functions.php:129 ../Etendard/functions.php:129
-#: ../Etendard/Etendard/functions.php:129
+#: ../functions.php:123
 msgctxt "project post type singular name"
 msgid "Project"
 msgstr "Projet"
 
-#: ../functions.php:130 ../Etendard/functions.php:130
-#: ../Etendard/Etendard/functions.php:130
+#: ../functions.php:124
 msgctxt "projects admin menu"
 msgid "Projects"
 msgstr "Projets"
 
-#: ../functions.php:131 ../Etendard/functions.php:131
-#: ../Etendard/Etendard/functions.php:131
+#: ../functions.php:125
 msgctxt "add new project on admin bar"
 msgid "Project"
 msgstr "Projet"
 
-#: ../functions.php:132 ../Etendard/functions.php:132
-#: ../Etendard/Etendard/functions.php:132
+#: ../functions.php:126
 msgctxt "add new portfolio"
 msgid "Add New"
 msgstr "Ajouter "
 
-#: ../functions.php:133 ../Etendard/functions.php:133
-#: ../Etendard/Etendard/functions.php:133
+#: ../functions.php:127
 msgid "Add New Project"
 msgstr "Ajouter un projet"
 
-#: ../functions.php:134 ../functions.php:182 ../Etendard/functions.php:134
-#: ../Etendard/functions.php:182 ../Etendard/Etendard/functions.php:134
-#: ../Etendard/Etendard/functions.php:182
+#: ../functions.php:128 ../functions.php:176
 msgid "Add New"
 msgstr "Ajouter"
 
-#: ../functions.php:135 ../Etendard/functions.php:135
-#: ../Etendard/Etendard/functions.php:135
+#: ../functions.php:129
 msgid "Edit Project"
 msgstr "Modifier le projet"
 
-#: ../functions.php:136 ../Etendard/functions.php:136
-#: ../Etendard/Etendard/functions.php:136
+#: ../functions.php:130
 msgid "View Project"
 msgstr "Voir le projet"
 
-#: ../functions.php:137 ../Etendard/functions.php:137
-#: ../Etendard/Etendard/functions.php:137
+#: ../functions.php:131
 msgid "All Projects"
 msgstr "Tous les projets"
 
-#: ../functions.php:138 ../Etendard/functions.php:138
-#: ../Etendard/Etendard/functions.php:138
+#: ../functions.php:132
 msgid "Search Projects"
 msgstr "Chercher dans les projets"
 
-#: ../functions.php:139 ../Etendard/functions.php:139
-#: ../Etendard/Etendard/functions.php:139
+#: ../functions.php:133
 msgid "Parent Project:"
 msgstr "Projet parent:"
 
-#: ../functions.php:140 ../Etendard/functions.php:140
-#: ../Etendard/Etendard/functions.php:140
+#: ../functions.php:134
 msgid "No Projects found."
 msgstr "Aucun projet trouvé."
 
-#: ../functions.php:141 ../Etendard/functions.php:141
-#: ../Etendard/Etendard/functions.php:141
+#: ../functions.php:135
 msgid "No Projects found in Trash."
 msgstr "Aucun projet trouvé dans la corbeille."
 
-#: ../functions.php:145 ../Etendard/functions.php:145
-#: ../Etendard/Etendard/functions.php:145
+#: ../functions.php:139
 msgid "Project"
 msgstr "Projet"
 
-#: ../functions.php:151 ../Etendard/functions.php:151
-#: ../Etendard/Etendard/functions.php:151
+#: ../functions.php:145
 msgid "project"
 msgstr "projet"
 
-#: ../functions.php:165 ../Etendard/functions.php:165
-#: ../Etendard/Etendard/functions.php:165
+#: ../functions.php:159
 msgid "Categories"
 msgstr "Catégories"
 
-#: ../functions.php:169 ../Etendard/functions.php:169
-#: ../Etendard/Etendard/functions.php:169
+#: ../functions.php:163
 msgid "portfolio_categorie"
 msgstr "portfolio_categorie"
 
-#: ../functions.php:176 ../Etendard/functions.php:176
-#: ../Etendard/Etendard/functions.php:176
+#: ../functions.php:170
 msgctxt "service post type general name"
 msgid "Services"
 msgstr "Services"
 
-#: ../functions.php:177 ../Etendard/functions.php:177
-#: ../Etendard/Etendard/functions.php:177
+#: ../functions.php:171
 msgctxt "service post type singular name"
 msgid "Service"
 msgstr "Service"
 
-#: ../functions.php:178 ../Etendard/functions.php:178
-#: ../Etendard/Etendard/functions.php:178
+#: ../functions.php:172
 msgctxt "services admin menu"
 msgid "Services"
 msgstr "Services"
 
-#: ../functions.php:179 ../Etendard/functions.php:179
-#: ../Etendard/Etendard/functions.php:179
+#: ../functions.php:173
 msgctxt "add new service on admin bar"
 msgid "Service"
 msgstr "Service"
 
-#: ../functions.php:180 ../Etendard/functions.php:180
-#: ../Etendard/Etendard/functions.php:180
+#: ../functions.php:174
 msgctxt "add new service"
 msgid "Add New"
 msgstr "Ajouter"
 
-#: ../functions.php:181 ../Etendard/functions.php:181
-#: ../Etendard/Etendard/functions.php:181
+#: ../functions.php:175
 msgid "Add New Service"
 msgstr "Ajouter un service"
 
-#: ../functions.php:183 ../Etendard/functions.php:183
-#: ../Etendard/Etendard/functions.php:183
+#: ../functions.php:177
 msgid "Edit Service"
 msgstr "Modifier le service"
 
-#: ../functions.php:184 ../Etendard/functions.php:184
-#: ../Etendard/Etendard/functions.php:184
+#: ../functions.php:178
 msgid "View Service"
 msgstr "Voir le service"
 
-#: ../functions.php:185 ../functions.php:193 ../admin/index.php:47
-#: ../Etendard/functions.php:185 ../Etendard/functions.php:193
-#: ../Etendard/admin/index.php:47 ../Etendard/Etendard/functions.php:185
-#: ../Etendard/Etendard/functions.php:193
-#: ../Etendard/Etendard/admin/index.php:47
+#: ../functions.php:179 ../functions.php:187 ../admin/index.php:47
 msgid "Services"
 msgstr "Services"
 
-#: ../functions.php:186 ../Etendard/functions.php:186
-#: ../Etendard/Etendard/functions.php:186
+#: ../functions.php:180
 msgid "Search Services"
 msgstr "Chercher dans les services"
 
-#: ../functions.php:187 ../Etendard/functions.php:187
-#: ../Etendard/Etendard/functions.php:187
+#: ../functions.php:181
 msgid "Parent Service:"
 msgstr "Service parent:"
 
-#: ../functions.php:188 ../Etendard/functions.php:188
-#: ../Etendard/Etendard/functions.php:188
+#: ../functions.php:182
 msgid "No Services Found."
 msgstr "Aucun service trouvé."
 
-#: ../functions.php:189 ../Etendard/functions.php:189
-#: ../Etendard/Etendard/functions.php:189
+#: ../functions.php:183
 msgid "No Services Found in Trash."
 msgstr "Aucun service trouvé dans la corbeille."
 
-#: ../functions.php:199 ../Etendard/functions.php:199
-#: ../Etendard/Etendard/functions.php:199
+#: ../functions.php:193
 msgid "service"
 msgstr "service"
 
-#: ../functions.php:295 ../admin/index.php:5 ../Etendard/functions.php:295
-#: ../Etendard/admin/index.php:5 ../Etendard/Etendard/functions.php:293
-#: ../Etendard/Etendard/admin/index.php:5
+#: ../functions.php:289 ../admin/index.php:5
 msgid "Etendard Settings"
 msgstr "Options Étendard"
 
-#: ../functions.php:303 ../Etendard/functions.php:303
-#: ../Etendard/Etendard/functions.php:301
+#: ../functions.php:297
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Vous n'avez pas les droits suffisants pour accéder à cette page."
 
-#: ../functions.php:337 ../Etendard/functions.php:337
-#: ../Etendard/Etendard/functions.php:335
+#: ../functions.php:331
 msgid "Project Metas"
 msgstr "Infos complémentaires"
 
-#: ../functions.php:345 ../admin/meta-box/portfolio_temoignage.php:16
-#: ../Etendard/functions.php:345
-#: ../Etendard/admin/meta-box/portfolio_temoignage.php:16
-#: ../Etendard/Etendard/functions.php:343
-#: ../Etendard/Etendard/admin/meta-box/portfolio_temoignage.php:16
+#: ../functions.php:339 ../admin/meta-box/portfolio_temoignage.php:16
 msgid "Testimonial"
 msgstr "Témoignage"
 
-#: ../functions.php:353 ../functions.php:381 ../admin/index.php:44
+#: ../functions.php:347 ../functions.php:375 ../admin/index.php:44
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:19
-#: ../Etendard/functions.php:353 ../Etendard/functions.php:381
-#: ../Etendard/admin/index.php:44
-#: ../Etendard/admin/Cocorico/extensions/etendard/EtendardPlugins.php:19
-#: ../Etendard/Etendard/functions.php:351
-#: ../Etendard/Etendard/functions.php:379
-#: ../Etendard/Etendard/admin/index.php:44
-#: ../Etendard/Etendard/admin/Cocorico/extensions/etendard/EtendardPlugins.php:19
 msgid "Slider"
 msgstr "Diaporama"
 
-#: ../functions.php:371 ../admin/index.php:46 ../Etendard/functions.php:371
-#: ../Etendard/admin/index.php:46 ../Etendard/Etendard/functions.php:369
-#: ../Etendard/Etendard/admin/index.php:46
+#: ../functions.php:365 ../admin/index.php:46
 msgid "Call to action"
 msgstr "Appel à l'action"
 
-#: ../functions.php:529 ../Etendard/functions.php:529
-#: ../Etendard/Etendard/functions.php:527
+#: ../functions.php:537
+msgid "Published In"
+msgstr "Publié dans"
+
+#: ../functions.php:539
+msgid "Previous Post"
+msgstr "Article précédent"
+
+#: ../functions.php:540
+msgid "Next Post"
+msgstr "Article suivant"
+
+#: ../functions.php:562
 msgid "Pingback:"
 msgstr "Rétrolien:"
 
-#: ../functions.php:540 ../Etendard/functions.php:540
-#: ../Etendard/Etendard/functions.php:538
+#: ../functions.php:573
 msgid "Your comment is waiting for moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: ../functions.php:551 ../Etendard/functions.php:551
-#: ../Etendard/Etendard/functions.php:549
+#: ../functions.php:584
 #, php-format
 msgid "Published on %s at %s"
 msgstr "Publié dans %s le %s"
 
-#: ../functions.php:564 ../Etendard/functions.php:564
-#: ../Etendard/Etendard/functions.php:562
+#: ../functions.php:597
 msgid "Reply"
 msgstr "Répondre"
 
-#: ../functions.php:878 ../Etendard/functions.php:878
-#: ../Etendard/Etendard/functions.php:876
+#: ../functions.php:916
 msgid "Themes de France"
 msgstr "Thèmes de France"
 
-#: ../functions.php:897 ../Etendard/functions.php:897
-#: ../Etendard/Etendard/functions.php:895
+#: ../functions.php:935
 msgid ""
 "In order to get Etendard updates, please enter your licence that you "
 "received by email."
@@ -517,8 +415,7 @@ msgstr ""
 "Pour recevoir les mises à jour d'Étendard, veuillez entrer votre clé de "
 "licence reçue par email."
 
-#: ../functions.php:905 ../Etendard/functions.php:905
-#: ../Etendard/Etendard/functions.php:903
+#: ../functions.php:943
 #, php-format
 msgid ""
 "You did not set up any page for posts. <a href=\"%s\">Click here to fix it</"
@@ -527,8 +424,7 @@ msgstr ""
 "Vous n'avez pas défini de page pour les articles. <a href=\"%s\">Cliquez ici "
 "pour corriger cela</a> | <a href=\"%s\">Ignorer</a>"
 
-#: ../functions.php:915 ../Etendard/functions.php:915
-#: ../Etendard/Etendard/functions.php:913
+#: ../functions.php:953
 #, php-format
 msgid ""
 "If you need to use shortcodes, take a look at our <a href='%s'>Cocorico "
@@ -537,8 +433,7 @@ msgstr ""
 "Si vous avez besoin d'utiliser des shortcodes, jetez un oeil à notre <a "
 "href='%s'>plugin Cocorico Shortocodes</a>. | <a href='%s'>Non merci</a>"
 
-#: ../functions.php:919 ../Etendard/functions.php:919
-#: ../Etendard/Etendard/functions.php:917
+#: ../functions.php:957
 #, php-format
 msgid ""
 "Thanks for using our Cocorico Shortcodes plugin, you're awesome ! If you "
@@ -549,13 +444,11 @@ msgstr ""
 "pensez que nous pouvons l'améliorer, <a href='%s' target='_blank'>dites-nous "
 "quoi faire ici</a>. | <a href='%s'>Non merci</a>"
 
-#: ../functions.php:1006 ../Etendard/functions.php:1006
-#: ../Etendard/Etendard/functions.php:1004
+#: ../functions.php:1044
 msgid "Etendard bbPress Addon"
 msgstr "Module bbPress pour Étendard"
 
-#: ../functions.php:1015 ../Etendard/functions.php:1015
-#: ../Etendard/Etendard/functions.php:1013
+#: ../functions.php:1053
 msgid ""
 "Etendard bbPress Addon bring custom CSS styling to Etendard to get a perfect "
 "bbPress integration."
@@ -564,178 +457,133 @@ msgstr ""
 "intégration parfaite avec le plugin bbPress (pour créer un forum sur votre "
 "site)."
 
-#: ../functions.php:1019 ../Etendard/functions.php:1019
-#: ../Etendard/Etendard/functions.php:1017
+#: ../functions.php:1057
 msgid "Get Etendard bbPress Addon"
 msgstr "Obtenir le module bbPress pour Étendard"
 
-#: ../functions.php:1025 ../Etendard/functions.php:1025
-#: ../Etendard/Etendard/functions.php:1023
+#: ../functions.php:1063
 msgid "Etendard bbPress Addon is installed. Thanks for using it !"
 msgstr ""
 "Le module bbPress pour Étendard est installé. Merci à vous de l'utiliser !"
 
-#: ../functions.php:1027 ../Etendard/functions.php:1027
-#: ../Etendard/Etendard/functions.php:1025
+#: ../functions.php:1065
 msgid "If you have some time, help us to improve it by giving some feedback."
 msgstr ""
 "Si vous avez un peu de temps, aidez-nous à améliorer ce module en nous "
 "disant que ce vous en pensez."
 
-#: ../functions.php:1031 ../Etendard/functions.php:1031
-#: ../Etendard/Etendard/functions.php:1029
+#: ../functions.php:1069
 msgid "Give feedback on Etendard bbPress Addon"
 msgstr "Faire un retour sur bbPress pour Étendard"
 
-#: ../header-bar.php:5 ../header-bar.php:64 ../Etendard/header-bar.php:5
-#: ../Etendard/header-bar.php:64 ../Etendard/Etendard/header-bar.php:5
-#: ../Etendard/Etendard/header-bar.php:64
+#: ../header-bar.php:5 ../header-bar.php:64
 msgid "Blog"
 msgstr "Blog"
 
-#: ../header-bar.php:13 ../admin/index.php:10 ../Etendard/header-bar.php:13
-#: ../Etendard/admin/index.php:10 ../Etendard/Etendard/header-bar.php:13
-#: ../Etendard/Etendard/admin/index.php:10
+#: ../header-bar.php:13 ../admin/index.php:10
 msgid "Portfolio"
 msgstr "Portfolio"
 
-#: ../header-bar.php:18 ../Etendard/header-bar.php:18
-#: ../Etendard/Etendard/header-bar.php:18
+#: ../header-bar.php:18
 msgid "Posts from "
 msgstr "Articles classés dans "
 
-#: ../header-bar.php:24 ../Etendard/header-bar.php:24
-#: ../Etendard/Etendard/header-bar.php:24
+#: ../header-bar.php:24
 msgid "Posts tagged by "
 msgstr "Articles identifiés par "
 
-#: ../header-bar.php:30 ../Etendard/header-bar.php:30
-#: ../Etendard/Etendard/header-bar.php:30
+#: ../header-bar.php:30
 #, php-format
 msgid "Search results for : %s"
 msgstr "Résultats de recherche pour : %s"
 
-#: ../header-bar.php:38 ../Etendard/header-bar.php:38
-#: ../Etendard/Etendard/header-bar.php:38
+#: ../header-bar.php:38
 #, php-format
 msgid "About %s"
 msgstr "Qui est %s"
 
-#: ../header-bar.php:44 ../Etendard/header-bar.php:44
-#: ../Etendard/Etendard/header-bar.php:44
+#: ../header-bar.php:44
 msgid "Archives from "
 msgstr "Archives de "
 
-#: ../header-bar.php:48 ../header-bar.php:52 ../Etendard/header-bar.php:48
-#: ../Etendard/header-bar.php:52 ../Etendard/Etendard/header-bar.php:48
-#: ../Etendard/Etendard/header-bar.php:52
+#: ../header-bar.php:48 ../header-bar.php:52
 msgid "Archives for "
 msgstr "Archives pour "
 
-#: ../header-bar.php:56 ../Etendard/header-bar.php:56
-#: ../Etendard/Etendard/header-bar.php:56
+#: ../header-bar.php:56
 msgid "Archives"
 msgstr "Archives"
 
-#: ../header.php:27 ../Etendard/header.php:27
-#: ../Etendard/Etendard/header.php:27
+#: ../header.php:27
 msgid "Your browser is <em>too old !"
 msgstr "Votre navigateur est <em> trop vieux !"
 
-#: ../header.php:27 ../Etendard/header.php:27
-#: ../Etendard/Etendard/header.php:27
+#: ../header.php:27
 msgid "Update your browser"
 msgstr "Mettez votre navigateur à jour"
 
-#: ../header.php:27 ../Etendard/header.php:27
-#: ../Etendard/Etendard/header.php:27
+#: ../header.php:27
 msgid "or"
 msgstr "ou"
 
-#: ../header.php:27 ../Etendard/header.php:27
-#: ../Etendard/Etendard/header.php:27
+#: ../header.php:27
 msgid "Install Google Chrome Frame"
 msgstr "Installez Google Chrome Frame"
 
-#: ../header.php:27 ../Etendard/header.php:27
-#: ../Etendard/Etendard/header.php:27
+#: ../header.php:27
 msgid "to display this website correctly"
 msgstr "pour afficher ce site correctement"
 
-#: ../searchform.php:4 ../Etendard/searchform.php:4
-#: ../Etendard/Etendard/searchform.php:4
+#: ../searchform.php:4
 msgid "Search :"
 msgstr "Rechercher :"
 
-#: ../searchform.php:6 ../Etendard/searchform.php:6
-#: ../Etendard/Etendard/searchform.php:6
+#: ../searchform.php:6
 msgid "Search..."
 msgstr "Recherche..."
 
-#: ../searchform.php:9 ../Etendard/searchform.php:9
-#: ../Etendard/Etendard/searchform.php:9
+#: ../searchform.php:9
 msgid "Go"
 msgstr "Rechercher"
 
-#: ../template-portfolio.php:43 ../Etendard/template-portfolio.php:43
-#: ../Etendard/Etendard/template-portfolio.php:43
+#: ../template-portfolio.php:43
 msgid "All"
 msgstr "Tout"
 
-#: ../template-portfolio.php:79 ../Etendard/template-portfolio.php:79
-#: ../Etendard/Etendard/template-portfolio.php:79
-#: ../Etendard/Etendard/home_elements/portfolio.php:47
-#: ../Etendard/home_elements/portfolio.php:47
-#: ../home_elements/portfolio.php:47
+#: ../template-portfolio.php:79 ../home_elements/portfolio.php:47
 msgid "Please add a featured image to this project"
 msgstr "Veuillez ajouter une image à la une pour ce projet"
 
 #: ../template-portfolio.php:106 ../template-services.php:57
-#: ../Etendard/template-portfolio.php:106 ../Etendard/template-services.php:57
-#: ../Etendard/Etendard/template-portfolio.php:106
-#: ../Etendard/Etendard/template-services.php:57
 msgid "Previous Page"
 msgstr "Page précédente"
 
 #: ../template-portfolio.php:107 ../template-services.php:58
-#: ../Etendard/template-portfolio.php:107 ../Etendard/template-services.php:58
-#: ../Etendard/Etendard/template-portfolio.php:107
-#: ../Etendard/Etendard/template-services.php:58
 msgid "Next Page"
 msgstr "Page suivante"
 
 #: ../admin/bienvenue.php:23 ../admin/bienvenue.php:24
-#: ../Etendard/admin/bienvenue.php:23 ../Etendard/admin/bienvenue.php:24
-#: ../Etendard/Etendard/admin/bienvenue.php:23
-#: ../Etendard/Etendard/admin/bienvenue.php:24
 msgid "Etendard was updated"
 msgstr "Étendard a été mis à jour"
 
 #: ../admin/bienvenue.php:32 ../admin/bienvenue.php:33
-#: ../Etendard/admin/bienvenue.php:32 ../Etendard/admin/bienvenue.php:33
-#: ../Etendard/Etendard/admin/bienvenue.php:32
-#: ../Etendard/Etendard/admin/bienvenue.php:33
 msgid "Welcome to Etendard"
 msgstr "Bienvenue sur Étendard"
 
-#: ../admin/bienvenue.php:99 ../Etendard/admin/bienvenue.php:99
-#: ../Etendard/Etendard/admin/bienvenue.php:99
+#: ../admin/bienvenue.php:99
 msgid "What's new ?"
 msgstr "Quoi de neuf ?"
 
-#: ../admin/bienvenue.php:102 ../Etendard/admin/bienvenue.php:102
-#: ../Etendard/Etendard/admin/bienvenue.php:102
+#: ../admin/bienvenue.php:102
 msgid "Welcome"
 msgstr "Bienvenue"
 
-#: ../admin/bienvenue.php:113 ../Etendard/admin/bienvenue.php:113
-#: ../Etendard/Etendard/admin/bienvenue.php:113
+#: ../admin/bienvenue.php:113
 #, php-format
 msgid "Welcome to Etendard %s"
 msgstr "Bienvenue dans Étendard %s"
 
-#: ../admin/bienvenue.php:114 ../Etendard/admin/bienvenue.php:114
-#: ../Etendard/Etendard/admin/bienvenue.php:114
+#: ../admin/bienvenue.php:114
 msgid ""
 "Thanks for updating Etendard, here are the good stuff we added in order to "
 "improve your website."
@@ -744,35 +592,27 @@ msgstr ""
 "pour améliorer votre site."
 
 #: ../admin/bienvenue.php:115 ../admin/bienvenue.php:158
-#: ../Etendard/admin/bienvenue.php:115 ../Etendard/admin/bienvenue.php:158
-#: ../Etendard/Etendard/admin/bienvenue.php:115
-#: ../Etendard/Etendard/admin/bienvenue.php:158
 #, php-format
 msgid "Version %s"
 msgstr "Version %s"
 
-#: ../admin/bienvenue.php:156 ../Etendard/admin/bienvenue.php:156
-#: ../Etendard/Etendard/admin/bienvenue.php:156
+#: ../admin/bienvenue.php:156
 msgid "Thanks for using Etendard"
 msgstr "Merci d'utiliser Étendard"
 
-#: ../admin/bienvenue.php:157 ../Etendard/admin/bienvenue.php:157
-#: ../Etendard/Etendard/admin/bienvenue.php:157
+#: ../admin/bienvenue.php:157
 msgid "Browse this page to discover how to set up your new theme."
 msgstr "Parcourez cette page pour découvrir comment configurer Étendard."
 
-#: ../admin/bienvenue.php:163 ../Etendard/admin/bienvenue.php:163
-#: ../Etendard/Etendard/admin/bienvenue.php:163
+#: ../admin/bienvenue.php:163
 msgid "The 3 first steps"
 msgstr "Les 3 premières choses à faire avec Étendard"
 
-#: ../admin/bienvenue.php:169 ../Etendard/admin/bienvenue.php:169
-#: ../Etendard/Etendard/admin/bienvenue.php:169
+#: ../admin/bienvenue.php:169
 msgid "Enter your licence key"
 msgstr "Validez votre clé de licence"
 
-#: ../admin/bienvenue.php:170 ../Etendard/admin/bienvenue.php:170
-#: ../Etendard/Etendard/admin/bienvenue.php:170
+#: ../admin/bienvenue.php:170
 msgid ""
 "To get updates, you have to enter your license key. We sent it to your inbox "
 "right after your purchase. Then, go to \"Etendard settings\" &rarr; \"General"
@@ -782,13 +622,11 @@ msgstr ""
 "vous l'avons envoyée par email suite à votre commande. Ensuite allez dans "
 "Options Étendard &rarr; Général et insérez votre clé dans le champ associé."
 
-#: ../admin/bienvenue.php:172 ../Etendard/admin/bienvenue.php:172
-#: ../Etendard/Etendard/admin/bienvenue.php:172
+#: ../admin/bienvenue.php:172
 msgid "Choose the main color"
 msgstr "Définissez une couleur principale"
 
-#: ../admin/bienvenue.php:173 ../Etendard/admin/bienvenue.php:173
-#: ../Etendard/Etendard/admin/bienvenue.php:173
+#: ../admin/bienvenue.php:173
 msgid ""
 "Etendard can wear the color of your choice. Go to the \"Appearence\" tab to "
 "choose your site main color with the color picker."
@@ -796,13 +634,11 @@ msgstr ""
 "Étendard peut arborer la couleur de votre choix. Rendez-vous dans l'onglet "
 "\"Apparence\" des options pour la choisir avec le sélecteur de couleur."
 
-#: ../admin/bienvenue.php:175 ../Etendard/admin/bienvenue.php:175
-#: ../Etendard/Etendard/admin/bienvenue.php:175
+#: ../admin/bienvenue.php:175
 msgid "Upload your logo"
 msgstr "Envoyez votre logo"
 
-#: ../admin/bienvenue.php:176 ../Etendard/admin/bienvenue.php:176
-#: ../Etendard/Etendard/admin/bienvenue.php:176
+#: ../admin/bienvenue.php:176
 msgid ""
 "Still in the \"Appearence\" tab, you can add your logo to your site. Click "
 "on select to upload a picture as a logo."
@@ -811,18 +647,15 @@ msgstr ""
 "correspondant au logo de votre site. Cliquez sur le bouton \"Sélectionner\" "
 "pour envoyer/choisir une image dans votre bibliothèque de médias."
 
-#: ../admin/bienvenue.php:182 ../Etendard/admin/bienvenue.php:182
-#: ../Etendard/Etendard/admin/bienvenue.php:182
+#: ../admin/bienvenue.php:182
 msgid "What you can do next"
 msgstr "Ce que vous pouvez faire ensuite"
 
-#: ../admin/bienvenue.php:187 ../Etendard/admin/bienvenue.php:187
-#: ../Etendard/Etendard/admin/bienvenue.php:187
+#: ../admin/bienvenue.php:187
 msgid "Set up the homepage"
 msgstr "Paramétrez votre page d'accueil"
 
-#: ../admin/bienvenue.php:188 ../Etendard/admin/bienvenue.php:188
-#: ../Etendard/Etendard/admin/bienvenue.php:188
+#: ../admin/bienvenue.php:188
 msgid ""
 "Choose the elements to display in \"Etendard Setting\" &rarr; \"General\". "
 "Don't forget to define a page as homepage (some other options will show up "
@@ -832,13 +665,11 @@ msgstr ""
 "&rarr; \"Général\". Veillez à bien définir une page en tant que page "
 "d'accueil (d'autres options seront également disponibles sur cette page)."
 
-#: ../admin/bienvenue.php:192 ../Etendard/admin/bienvenue.php:192
-#: ../Etendard/Etendard/admin/bienvenue.php:192
+#: ../admin/bienvenue.php:192
 msgid "Add some projects to your portfolio"
 msgstr "Ajoutez des éléments à votre portfolio"
 
-#: ../admin/bienvenue.php:193 ../Etendard/admin/bienvenue.php:193
-#: ../Etendard/Etendard/admin/bienvenue.php:193
+#: ../admin/bienvenue.php:193
 msgid ""
 "Once you defined a portfolio page, add some projects to show the world what "
 "you do."
@@ -846,36 +677,30 @@ msgstr ""
 "Une fois que vous aurez défini une page portfolio, ajoutez-y des éléments "
 "pour montrer au monde ce que vous avez accompli."
 
-#: ../admin/bienvenue.php:197 ../Etendard/admin/bienvenue.php:197
-#: ../Etendard/Etendard/admin/bienvenue.php:197
+#: ../admin/bienvenue.php:197
 msgid "And don't forget the ..."
 msgstr "Sans oublier..."
 
-#: ../admin/bienvenue.php:198 ../Etendard/admin/bienvenue.php:198
-#: ../Etendard/Etendard/admin/bienvenue.php:198
+#: ../admin/bienvenue.php:198
 msgid ""
 "Footer optimization, sidebar position or the \"Etendard Social\" widget."
 msgstr ""
 "La personnalisation du pied de page, la position de la barre latérale, "
 "l'insertion du widget \"Étendard Social\", d'appels à l'action, etc."
 
-#: ../admin/bienvenue.php:205 ../Etendard/admin/bienvenue.php:205
-#: ../Etendard/Etendard/admin/bienvenue.php:205
+#: ../admin/bienvenue.php:205
 msgid "All right, I'm ready to  set up Etendard"
 msgstr "C'est bon, j'attaque le paramétrage d'Étendard"
 
-#: ../admin/bienvenue.php:209 ../Etendard/admin/bienvenue.php:209
-#: ../Etendard/Etendard/admin/bienvenue.php:209
+#: ../admin/bienvenue.php:209
 msgid "Need help with Etendard ?"
 msgstr "Besoin d'aide avec Étendard ?"
 
-#: ../admin/bienvenue.php:214 ../Etendard/admin/bienvenue.php:214
-#: ../Etendard/Etendard/admin/bienvenue.php:214
+#: ../admin/bienvenue.php:214
 msgid "Check the documentation"
 msgstr "Consultez la documentation"
 
-#: ../admin/bienvenue.php:215 ../Etendard/admin/bienvenue.php:215
-#: ../Etendard/Etendard/admin/bienvenue.php:215
+#: ../admin/bienvenue.php:215
 msgid ""
 "When you <a href=\"https://www.themesdefrance.fr/documentation/manuel-"
 "etendard/"
@@ -889,13 +714,11 @@ msgstr ""
 "\" target=\"_blank\">connectant sur Thèmes de France</a>, vous pourrez "
 "accéder aux vidéos et aux tutoriels qui vous aideront à paramétrer Étendard."
 
-#: ../admin/bienvenue.php:219 ../Etendard/admin/bienvenue.php:219
-#: ../Etendard/Etendard/admin/bienvenue.php:219
+#: ../admin/bienvenue.php:219
 msgid "Get support"
 msgstr "Obtenir de l'aide"
 
-#: ../admin/bienvenue.php:220 ../Etendard/admin/bienvenue.php:220
-#: ../Etendard/Etendard/admin/bienvenue.php:220
+#: ../admin/bienvenue.php:220
 msgid ""
 "Themes de France team is here to help you to have your site up and running."
 msgstr ""
@@ -903,8 +726,6 @@ msgstr ""
 "problèmes relatifs à Étendard."
 
 #: ../admin/EDD_SL_Theme_Updater.php:56
-#: ../Etendard/admin/EDD_SL_Theme_Updater.php:56
-#: ../Etendard/Etendard/admin/EDD_SL_Theme_Updater.php:56
 msgid ""
 "Updating this theme will lose any customizations you have made. 'Cancel' to "
 "stop, 'OK' to update."
@@ -914,8 +735,6 @@ msgstr ""
 "à jour."
 
 #: ../admin/EDD_SL_Theme_Updater.php:61
-#: ../Etendard/admin/EDD_SL_Theme_Updater.php:61
-#: ../Etendard/Etendard/admin/EDD_SL_Theme_Updater.php:61
 #, php-format
 msgid ""
 "<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
@@ -926,28 +745,23 @@ msgstr ""
 "\" title=\"%4s\">Découvrez les nouveautés</a> ou <a href=\"%5$s\"%6$s>Mettez "
 "à jour maintenant</a>."
 
-#: ../admin/index.php:8 ../Etendard/admin/index.php:8
-#: ../Etendard/Etendard/admin/index.php:8
+#: ../admin/index.php:8
 msgid "General"
 msgstr "Général"
 
-#: ../admin/index.php:9 ../Etendard/admin/index.php:9
-#: ../Etendard/Etendard/admin/index.php:9
+#: ../admin/index.php:9
 msgid "Appearance"
 msgstr "Apparence"
 
-#: ../admin/index.php:11 ../Etendard/admin/index.php:11
-#: ../Etendard/Etendard/admin/index.php:11
+#: ../admin/index.php:11
 msgid "Addons"
 msgstr "Modules"
 
-#: ../admin/index.php:20 ../Etendard/admin/index.php:20
-#: ../Etendard/Etendard/admin/index.php:20
+#: ../admin/index.php:20
 msgid "License"
 msgstr "Licence"
 
-#: ../admin/index.php:21 ../Etendard/admin/index.php:21
-#: ../Etendard/Etendard/admin/index.php:21
+#: ../admin/index.php:21
 msgid ""
 "Enter your licence key in order to receive Etendard updates. You'll find it "
 "in the confirmation email we sent you after your purchase."
@@ -957,60 +771,46 @@ msgstr ""
 
 #: ../admin/index.php:25
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:65
-#: ../admin/widgets/social.php:54 ../Etendard/admin/index.php:25
-#: ../Etendard/admin/Cocorico/extensions/etendard/EtendardPlugins.php:65
-#: ../Etendard/admin/widgets/social.php:54
-#: ../Etendard/Etendard/admin/index.php:25
-#: ../Etendard/Etendard/admin/Cocorico/extensions/etendard/EtendardPlugins.php:65
-#: ../Etendard/Etendard/admin/widgets/social.php:54
+#: ../admin/widgets/social.php:54
 msgid "Title"
 msgstr "Titre"
 
-#: ../admin/index.php:26 ../Etendard/admin/index.php:26
-#: ../Etendard/Etendard/admin/index.php:26
+#: ../admin/index.php:26
 msgid "Title in the homepage banner."
 msgstr "Titre sur la page d'accueil."
 
-#: ../admin/index.php:34 ../Etendard/admin/index.php:34
-#: ../Etendard/Etendard/admin/index.php:34
+#: ../admin/index.php:34
 msgid "Subtitle"
 msgstr "Sous-titre"
 
-#: ../admin/index.php:35 ../Etendard/admin/index.php:35
-#: ../Etendard/Etendard/admin/index.php:35
+#: ../admin/index.php:35
 msgid "Subtitle in the homepage banner."
 msgstr "Sous-titre de la page d'accueil."
 
-#: ../admin/index.php:42 ../Etendard/admin/index.php:42
-#: ../Etendard/Etendard/admin/index.php:42
+#: ../admin/index.php:42
 msgid ""
 "Choose elements to display on the homepage and organize them with drag & drop"
 msgstr ""
 "Choisir les éléments à afficher sur la page d'accueil et organisez les par "
 "glisser déposer"
 
-#: ../admin/index.php:43 ../Etendard/admin/index.php:43
-#: ../Etendard/Etendard/admin/index.php:43
+#: ../admin/index.php:43
 msgid "Title and subtitle"
 msgstr "Titre et sous-titre"
 
-#: ../admin/index.php:45 ../Etendard/admin/index.php:45
-#: ../Etendard/Etendard/admin/index.php:45
+#: ../admin/index.php:45
 msgid "Content"
 msgstr "Contenu"
 
-#: ../admin/index.php:48 ../Etendard/admin/index.php:48
-#: ../Etendard/Etendard/admin/index.php:48
+#: ../admin/index.php:48
 msgid "Last projects"
 msgstr "Derniers projets"
 
-#: ../admin/index.php:49 ../Etendard/admin/index.php:49
-#: ../Etendard/Etendard/admin/index.php:49
+#: ../admin/index.php:49
 msgid "Last posts"
 msgstr "Derniers articles"
 
-#: ../admin/index.php:54 ../Etendard/admin/index.php:54
-#: ../Etendard/Etendard/admin/index.php:54
+#: ../admin/index.php:54
 msgid ""
 "Left footer content. The following HTML tags are allowed : &lt;a href=&quot;"
 "LINK&quot;&gt;TEXT_LINK&lt;/a&gt;, &lt;strong&gt;BOLD_TEXT&lt;/strong&gt;, "
@@ -1021,8 +821,7 @@ msgstr ""
 "TEXTE_EN_GRAS&lt;/strong&gt;, &lt;em&gt;TEXTE_EN_ITALIQUE&lt;/em&gt;, &lt;"
 "img src=&quot;URL_DE_L_IMAGE&quot;&gt;."
 
-#: ../admin/index.php:56 ../Etendard/admin/index.php:56
-#: ../Etendard/Etendard/admin/index.php:56
+#: ../admin/index.php:56
 msgid ""
 "<strong>2014</strong> - Etendard by <a href=\"https://www.themesdefrance.fr/"
 "\" target=\"_blank\">Themes de France</a>"
@@ -1030,25 +829,21 @@ msgstr ""
 "<strong>2014</strong> - Étendard par <a href=\"https://www.themesdefrance.fr/"
 "\" target=\"_blank\">Thèmes de France</a>"
 
-#: ../admin/index.php:70 ../Etendard/admin/index.php:70
-#: ../Etendard/Etendard/admin/index.php:70
+#: ../admin/index.php:70
 msgid "Main color"
 msgstr "Couleur principale"
 
-#: ../admin/index.php:71 ../Etendard/admin/index.php:71
-#: ../Etendard/Etendard/admin/index.php:71
+#: ../admin/index.php:71
 msgid "This color will be used across your site for buttons, links, etc."
 msgstr ""
 "Cette couleur sera utilisée pour les boutons, les liens et les bandeaux de "
 "couleurs."
 
-#: ../admin/index.php:75 ../Etendard/admin/index.php:75
-#: ../Etendard/Etendard/admin/index.php:75
+#: ../admin/index.php:75
 msgid "Logo"
 msgstr "Logo"
 
-#: ../admin/index.php:76 ../Etendard/admin/index.php:76
-#: ../Etendard/Etendard/admin/index.php:76
+#: ../admin/index.php:76
 msgid ""
 "The image filetype should be JPG or PNG. Note that the optimal size is 280px "
 "by 60px."
@@ -1056,48 +851,39 @@ msgstr ""
 "L'image doit être au format JPG ou PNG. Notez que la taille optimale doit "
 "être de 280px par 60px."
 
-#: ../admin/index.php:79 ../Etendard/admin/index.php:79
-#: ../Etendard/Etendard/admin/index.php:79
+#: ../admin/index.php:79
 msgid "Slider width"
 msgstr "Largeur du diaporama"
 
-#: ../admin/index.php:82 ../Etendard/admin/index.php:82
-#: ../Etendard/Etendard/admin/index.php:82
+#: ../admin/index.php:82
 msgid "Boxed"
 msgstr "Cadré"
 
-#: ../admin/index.php:83 ../Etendard/admin/index.php:83
-#: ../Etendard/Etendard/admin/index.php:83
+#: ../admin/index.php:83
 msgid "Fullsize"
 msgstr "Plein écran"
 
-#: ../admin/index.php:92 ../Etendard/admin/index.php:92
-#: ../Etendard/Etendard/admin/index.php:92
+#: ../admin/index.php:92
 msgid "Slider height (in pixels)"
 msgstr "Hauteur du diaporama (en pixels)"
 
-#: ../admin/index.php:98 ../Etendard/admin/index.php:98
-#: ../Etendard/Etendard/admin/index.php:98
+#: ../admin/index.php:98
 msgid "Sidebar position"
 msgstr "Position de la barre latérale"
 
-#: ../admin/index.php:101 ../Etendard/admin/index.php:101
-#: ../Etendard/Etendard/admin/index.php:101
+#: ../admin/index.php:101
 msgid "Right"
 msgstr "Droite"
 
-#: ../admin/index.php:102 ../Etendard/admin/index.php:102
-#: ../Etendard/Etendard/admin/index.php:102
+#: ../admin/index.php:102
 msgid "Left"
 msgstr "Gauche"
 
-#: ../admin/index.php:103 ../Etendard/admin/index.php:103
-#: ../Etendard/Etendard/admin/index.php:103
+#: ../admin/index.php:103
 msgid "Nowhere"
 msgstr "Aucune"
 
-#: ../admin/index.php:106 ../Etendard/admin/index.php:106
-#: ../Etendard/Etendard/admin/index.php:106
+#: ../admin/index.php:106
 msgid ""
 "Sidebar could be placed on the right or on the left of the main content. "
 "Most sites place them on the right but you could do the opposite :)"
@@ -1106,13 +892,11 @@ msgstr ""
 "principal. La plupart des sites la place sur la droite mais vous pouvez "
 "faire le contraire (ou ne pas en utiliser du tout)."
 
-#: ../admin/index.php:110 ../Etendard/admin/index.php:110
-#: ../Etendard/Etendard/admin/index.php:110
+#: ../admin/index.php:110
 msgid "Additionnal CSS"
 msgstr "CSS Supplémentaire"
 
-#: ../admin/index.php:111 ../Etendard/admin/index.php:111
-#: ../Etendard/Etendard/admin/index.php:111
+#: ../admin/index.php:111
 msgid ""
 "CSS rules added in this field will be added to your site. If you have too "
 "many updates, you should create a child theme."
@@ -1120,38 +904,32 @@ msgstr ""
 "Les règles CSS ajoutées dans ce champ seront ajoutées à votre site. Si vous "
 "ajoutez un grand nombre de règles, vous devriez passer par un thème enfant."
 
-#: ../admin/index.php:122 ../Etendard/admin/index.php:122
-#: ../Etendard/Etendard/admin/index.php:122
+#: ../admin/index.php:122
 msgid "Display excerpts"
 msgstr "Afficher les extraits"
 
-#: ../admin/index.php:127 ../Etendard/admin/index.php:127
-#: ../Etendard/Etendard/admin/index.php:127
+#: ../admin/index.php:127
 msgid ""
 "Check this to display excerpts underneath the projects on the portfolio page."
 msgstr ""
 "Cochez ceci pour afficher des extraits sous les projets sur la page "
 "portfolio."
 
-#: ../admin/index.php:130 ../Etendard/admin/index.php:130
-#: ../Etendard/Etendard/admin/index.php:130
+#: ../admin/index.php:130
 msgid "Display buttons"
 msgstr "Afficher les boutons"
 
-#: ../admin/index.php:135 ../Etendard/admin/index.php:135
-#: ../Etendard/Etendard/admin/index.php:135
+#: ../admin/index.php:135
 msgid ""
 "Check this to display buttons underneath the projects on the portfolio page."
 msgstr ""
 "Cochez ceci pour afficher des boutons sous les projets de la page portfolio."
 
-#: ../admin/index.php:138 ../Etendard/admin/index.php:138
-#: ../Etendard/Etendard/admin/index.php:138
+#: ../admin/index.php:138
 msgid "Project metas"
 msgstr "Infos complémentaires"
 
-#: ../admin/index.php:140 ../Etendard/admin/index.php:140
-#: ../Etendard/Etendard/admin/index.php:140
+#: ../admin/index.php:140
 msgid ""
 "Add metas to enhance your projects (the client, his website, etc.). Add "
 "values to each meta in the \"Projects metas\" metabox on each project page."
@@ -1161,14 +939,10 @@ msgstr ""
 "\"Informations complémentaires\" sur chaque page projet."
 
 #: ../admin/index.php:146 ../admin/meta-box/home_cta.php:12
-#: ../Etendard/admin/index.php:146 ../Etendard/admin/meta-box/home_cta.php:12
-#: ../Etendard/Etendard/admin/index.php:146
-#: ../Etendard/Etendard/admin/meta-box/home_cta.php:12
 msgid "Call to action destination (url)"
 msgstr "Destination de l'appel à l'action (url)"
 
-#: ../admin/index.php:150 ../Etendard/admin/index.php:150
-#: ../Etendard/Etendard/admin/index.php:150
+#: ../admin/index.php:150
 msgid ""
 "Write an incentive to get people to click on the call to action, be "
 "convincing ;)"
@@ -1176,13 +950,11 @@ msgstr ""
 "Rédigez un texte pour inviter les gens à cliquer sur l'appel à l'action. "
 "Soyez convaincant ;)"
 
-#: ../admin/index.php:154 ../Etendard/admin/index.php:154
-#: ../Etendard/Etendard/admin/index.php:154
+#: ../admin/index.php:154
 msgid "Button's label (Example : \"Contact-us\")."
 msgstr "Libellé du bouton (Exemple : \"Contactez-nous\")"
 
-#: ../admin/index.php:167 ../Etendard/admin/index.php:167
-#: ../Etendard/Etendard/admin/index.php:167
+#: ../admin/index.php:167
 msgid ""
 "Do you know that Etendard can be extended with addons ? Check the addons "
 "available below :"
@@ -1190,99 +962,69 @@ msgstr ""
 "Savez-vous qu'Étendard peut se doter de nouvelles fonctionnalités ? Jetez un "
 "oeil aux modules ci-dessous :"
 
-#: ../admin/index.php:182 ../Etendard/admin/index.php:182
-#: ../Etendard/Etendard/admin/index.php:182
+#: ../admin/index.php:182
 msgid "Save changes"
 msgstr "Sauvegarder"
 
-#: ../admin/index.php:190 ../Etendard/admin/index.php:190
-#: ../Etendard/Etendard/admin/index.php:190
+#: ../admin/index.php:190
 msgid "Etendard is a product of"
 msgstr "Étendard est un thème de"
 
-#: ../admin/index.php:190 ../Etendard/admin/index.php:190
-#: ../Etendard/Etendard/admin/index.php:190
+#: ../admin/index.php:190
 msgid "Tell us what you think of this theme"
 msgstr "Dites-nous ce que vous en pensez"
 
-#: ../admin/index.php:190 ../Etendard/admin/index.php:190
-#: ../Etendard/Etendard/admin/index.php:190
+#: ../admin/index.php:190
 msgid "on this page"
 msgstr "sur cette page"
 
-#: ../admin/migration.php:69 ../Etendard/admin/migration.php:69
-#: ../Etendard/Etendard/admin/migration.php:69
+#: ../admin/migration.php:69
 msgid "Customer"
 msgstr "Client"
 
-#: ../admin/migration.php:69 ../Etendard/admin/migration.php:69
-#: ../Etendard/Etendard/admin/migration.php:69
+#: ../admin/migration.php:69
 msgid "URL"
 msgstr "URL"
 
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:27
-#: ../Etendard/admin/Cocorico/extensions/etendard/EtendardPlugins.php:27
-#: ../Etendard/Etendard/admin/Cocorico/extensions/etendard/EtendardPlugins.php:27
 msgid "Image"
 msgstr "Image"
 
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:48
 #: ../admin/meta-box/post_formats.php:8
-#: ../Etendard/admin/Cocorico/extensions/etendard/EtendardPlugins.php:48
-#: ../Etendard/admin/meta-box/post_formats.php:8
-#: ../Etendard/Etendard/admin/Cocorico/extensions/etendard/EtendardPlugins.php:48
-#: ../Etendard/Etendard/admin/meta-box/post_formats.php:8
 msgid "Link"
 msgstr "Lien"
 
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:81
 #: ../admin/Cocorico/plugins/CocoricoComponents.php:322
-#: ../Etendard/admin/Cocorico/extensions/etendard/EtendardPlugins.php:81
-#: ../Etendard/admin/Cocorico/plugins/CocoricoComponents.php:322
-#: ../Etendard/Etendard/admin/Cocorico/extensions/etendard/EtendardPlugins.php:81
-#: ../Etendard/Etendard/admin/Cocorico/plugins/CocoricoComponents.php:322
 msgid "Delete"
 msgstr "Supprimer"
 
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:95
-#: ../Etendard/admin/Cocorico/extensions/etendard/EtendardPlugins.php:95
-#: ../Etendard/Etendard/admin/Cocorico/extensions/etendard/EtendardPlugins.php:95
 msgid "Add"
 msgstr "Ajouter"
 
 #: ../admin/Cocorico/extensions/etendard/EtendardPlugins.php:188
-#: ../Etendard/admin/Cocorico/extensions/etendard/EtendardPlugins.php:188
-#: ../Etendard/Etendard/admin/Cocorico/extensions/etendard/EtendardPlugins.php:188
 msgid "delete"
 msgstr "supprimer"
 
 #: ../admin/Cocorico/plugins/CocoricoComponents.php:181
-#: ../Etendard/admin/Cocorico/plugins/CocoricoComponents.php:181
-#: ../Etendard/Etendard/admin/Cocorico/plugins/CocoricoComponents.php:181
 msgid "Save all changes"
 msgstr "Sauvegarder"
 
 #: ../admin/Cocorico/plugins/CocoricoComponents.php:275
-#: ../Etendard/admin/Cocorico/plugins/CocoricoComponents.php:275
-#: ../Etendard/Etendard/admin/Cocorico/plugins/CocoricoComponents.php:275
 msgid "Select"
 msgstr "Sélectionner"
 
 #: ../admin/meta-box/home_cta.php:16
-#: ../Etendard/admin/meta-box/home_cta.php:16
-#: ../Etendard/Etendard/admin/meta-box/home_cta.php:16
 msgid "Call to action incentive"
 msgstr "Message de l'appel à l'action"
 
 #: ../admin/meta-box/home_cta.php:20
-#: ../Etendard/admin/meta-box/home_cta.php:20
-#: ../Etendard/Etendard/admin/meta-box/home_cta.php:20
 msgid "Button's label"
 msgstr "Libellé du bouton"
 
 #: ../admin/meta-box/portfolio_client.php:22
-#: ../Etendard/admin/meta-box/portfolio_client.php:22
-#: ../Etendard/Etendard/admin/meta-box/portfolio_client.php:22
 #, php-format
 msgid ""
 "No project metas were defined. If you want to, go in the portfolio tab <a "
@@ -1292,46 +1034,30 @@ msgstr ""
 "dans l'onglet portfolio <a href=\"%s\" >des Options d'Étendard</a>."
 
 #: ../admin/meta-box/portfolio_temoignage.php:12
-#: ../Etendard/admin/meta-box/portfolio_temoignage.php:12
-#: ../Etendard/Etendard/admin/meta-box/portfolio_temoignage.php:12
 msgid "Name"
 msgstr "Nom"
 
 #: ../admin/meta-box/portfolio_temoignage.php:20
-#: ../Etendard/admin/meta-box/portfolio_temoignage.php:20
-#: ../Etendard/Etendard/admin/meta-box/portfolio_temoignage.php:20
 msgid "Avatar"
 msgstr "Portrait"
 
 #: ../admin/meta-box/portfolio_temoignage.php:21
-#: ../Etendard/admin/meta-box/portfolio_temoignage.php:21
-#: ../Etendard/Etendard/admin/meta-box/portfolio_temoignage.php:21
 msgid "Optimal size is 160x110 pixels"
 msgstr "Taille optimale : 160x110 pixels"
 
 #: ../admin/meta-box/post_formats.php:17
-#: ../Etendard/admin/meta-box/post_formats.php:17
-#: ../Etendard/Etendard/admin/meta-box/post_formats.php:17
 msgid "Quote"
 msgstr "Citation"
 
 #: ../admin/meta-box/post_formats.php:26 ../admin/meta-box/post_formats.php:42
-#: ../Etendard/admin/meta-box/post_formats.php:26
-#: ../Etendard/admin/meta-box/post_formats.php:42
-#: ../Etendard/Etendard/admin/meta-box/post_formats.php:26
-#: ../Etendard/Etendard/admin/meta-box/post_formats.php:42
 msgid "Video"
 msgstr "Vidéo"
 
 #: ../admin/meta-box/post_formats.php:61
-#: ../Etendard/admin/meta-box/post_formats.php:61
-#: ../Etendard/Etendard/admin/meta-box/post_formats.php:61
 msgid "Link to feature"
 msgstr "Lien à mettre en avant"
 
 #: ../admin/meta-box/post_formats.php:62
-#: ../Etendard/admin/meta-box/post_formats.php:62
-#: ../Etendard/Etendard/admin/meta-box/post_formats.php:62
 msgid ""
 "Add a link to feature for this post. You're free to talk about it in the "
 "post content."
@@ -1340,114 +1066,78 @@ msgstr ""
 "dans le contenu de l'article."
 
 #: ../admin/meta-box/post_formats.php:77
-#: ../Etendard/admin/meta-box/post_formats.php:77
-#: ../Etendard/Etendard/admin/meta-box/post_formats.php:77
 msgid "Quote to feature"
 msgstr "Citation à mettre en avant"
 
 #: ../admin/meta-box/post_formats.php:78
-#: ../Etendard/admin/meta-box/post_formats.php:78
-#: ../Etendard/Etendard/admin/meta-box/post_formats.php:78
 msgid "Add some wise words and talk about it in the post content."
 msgstr "Ajoutez quelques mots et parlez en dans le contenu de l'article."
 
 #: ../admin/meta-box/post_formats.php:84
-#: ../Etendard/admin/meta-box/post_formats.php:84
-#: ../Etendard/Etendard/admin/meta-box/post_formats.php:84
 msgid "Quote author (optional)"
 msgstr "Auteur de la citation (facultatif)"
 
 #: ../admin/meta-box/post_formats.php:85
-#: ../Etendard/admin/meta-box/post_formats.php:85
-#: ../Etendard/Etendard/admin/meta-box/post_formats.php:85
 msgid "Be nice and don't forget to credit the quote author."
 msgstr "Soyez sympa et n'oubliez pas de créditer l'auteur de la citation."
 
 #: ../admin/meta-box/post_formats.php:101
-#: ../Etendard/admin/meta-box/post_formats.php:101
-#: ../Etendard/Etendard/admin/meta-box/post_formats.php:101
 msgid "Video to feature"
 msgstr "Vidéo à mettre en avant"
 
 #: ../admin/meta-box/post_formats.php:102
-#: ../Etendard/admin/meta-box/post_formats.php:102
-#: ../Etendard/Etendard/admin/meta-box/post_formats.php:102
 msgid "Add a video link from Youtube, Dailymotion or Vimeo."
 msgstr "Ajoutez un lien de Youtube, Dailymotion ou Vimeo."
 
 #: ../admin/widgets/appel-action.php:9
-#: ../Etendard/admin/widgets/appel-action.php:9
-#: ../Etendard/Etendard/admin/widgets/appel-action.php:9
 msgid "Etendard - Call to action"
 msgstr "Étendard - Appel à l'action"
 
 #: ../admin/widgets/appel-action.php:10
-#: ../Etendard/admin/widgets/appel-action.php:10
-#: ../Etendard/Etendard/admin/widgets/appel-action.php:10
 msgid "Add a call to action in the sidebar."
 msgstr "Ajouter un appel à l'action dans la barre latérale."
 
 #: ../admin/widgets/appel-action.php:61 ../admin/widgets/video.php:67
-#: ../Etendard/admin/widgets/appel-action.php:61
-#: ../Etendard/admin/widgets/video.php:67
-#: ../Etendard/Etendard/admin/widgets/appel-action.php:61
-#: ../Etendard/Etendard/admin/widgets/video.php:67
 msgid "Title:"
 msgstr "Titre:"
 
 #: ../admin/widgets/appel-action.php:65
-#: ../Etendard/admin/widgets/appel-action.php:65
-#: ../Etendard/Etendard/admin/widgets/appel-action.php:65
 msgid "Call to action destination (url):"
 msgstr "Destination de l'appel à l'action (url):"
 
 #: ../admin/widgets/appel-action.php:69
-#: ../Etendard/admin/widgets/appel-action.php:69
-#: ../Etendard/Etendard/admin/widgets/appel-action.php:69
 msgid "Call to action incentive:"
 msgstr "Message de l'appel à l'action:"
 
 #: ../admin/widgets/appel-action.php:73
-#: ../Etendard/admin/widgets/appel-action.php:73
-#: ../Etendard/Etendard/admin/widgets/appel-action.php:73
 msgid "Button's label:"
 msgstr "Libellé du bouton:"
 
-#: ../admin/widgets/social.php:24 ../Etendard/admin/widgets/social.php:24
-#: ../Etendard/Etendard/admin/widgets/social.php:24
+#: ../admin/widgets/social.php:24
 msgid "Étendard Social"
 msgstr "Étendard Social"
 
-#: ../admin/widgets/social.php:25 ../Etendard/admin/widgets/social.php:25
-#: ../Etendard/Etendard/admin/widgets/social.php:25
+#: ../admin/widgets/social.php:25
 msgid "Display links to your social profiles."
 msgstr "Afficher les liens des profils sociaux."
 
 #: ../admin/widgets/social.php:65 ../admin/widgets/video.php:44
-#: ../Etendard/admin/widgets/social.php:65
-#: ../Etendard/admin/widgets/video.php:44
-#: ../Etendard/Etendard/admin/widgets/social.php:65
-#: ../Etendard/Etendard/admin/widgets/video.php:44
 msgid "Please enter a valid url"
 msgstr "Veuillez entrer une url valide"
 
-#: ../admin/widgets/social.php:83 ../Etendard/admin/widgets/social.php:83
-#: ../Etendard/Etendard/admin/widgets/social.php:83
+#: ../admin/widgets/social.php:83
 msgid "More networks"
 msgstr "Plus de réseaux"
 
-#: ../admin/widgets/video.php:11 ../Etendard/admin/widgets/video.php:11
-#: ../Etendard/Etendard/admin/widgets/video.php:11
+#: ../admin/widgets/video.php:11
 msgid "Etendard - Video"
 msgstr "Étendard - Vidéo"
 
-#: ../admin/widgets/video.php:12 ../Etendard/admin/widgets/video.php:12
-#: ../Etendard/Etendard/admin/widgets/video.php:12
+#: ../admin/widgets/video.php:12
 msgid "Add a video from Youtube, Dailymotion or Vimeo."
 msgstr "Ajoutez un lien de Youtube, Dailymotion ou Vimeo."
 
-#: ../admin/widgets/video.php:32 ../Etendard/admin/widgets/video.php:32
-#: ../Etendard/Etendard/admin/widgets/video.php:32
+#: ../admin/widgets/video.php:32
 msgid ""
 "To display a video, please add a Youtube, Dailymotion or Vimeo URL in the "
 "widget settings."
@@ -1455,28 +1145,23 @@ msgstr ""
 "Pour afficher une vidéo, veuillez ajouter le lien d'une vidéo Youtube, "
 "Dailymotion or Vimeo dans les paramètres du widget."
 
-#: ../admin/widgets/video.php:50 ../Etendard/admin/widgets/video.php:50
-#: ../Etendard/Etendard/admin/widgets/video.php:50
+#: ../admin/widgets/video.php:50
 msgid "This video url doesn't seem to exist."
 msgstr "Le lien de cette vidéo ne semble pas exister."
 
-#: ../admin/widgets/video.php:71 ../Etendard/admin/widgets/video.php:71
-#: ../Etendard/Etendard/admin/widgets/video.php:71
+#: ../admin/widgets/video.php:71
 msgid "Video URL (Youtube, Dailymotion or Vimeo):"
 msgstr "URL de la vidéo (Youtube, Dailymotion or Vimeo):"
 
-#: ../Etendard/Etendard/home_elements/articles.php:10
-#: ../Etendard/home_elements/articles.php:10 ../home_elements/articles.php:10
+#: ../home_elements/articles.php:10
 msgid "Last Posts"
 msgstr "Derniers articles"
 
-#: ../Etendard/Etendard/home_elements/articles.php:71
-#: ../Etendard/home_elements/articles.php:71 ../home_elements/articles.php:71
+#: ../home_elements/articles.php:71
 msgid "Read the blog"
 msgstr "Derniers articles"
 
-#: ../Etendard/Etendard/home_elements/init.php:6
-#: ../Etendard/home_elements/init.php:6 ../home_elements/init.php:6
+#: ../home_elements/init.php:6
 #, php-format
 msgid ""
 "Your custom home page isn't fully set up, you have to choose the elements to "
@@ -1486,25 +1171,20 @@ msgstr ""
 "devez choisir les éléments à afficher dans les <a href='%s'>options "
 "d'Étendard</a>."
 
-#: ../Etendard/Etendard/home_elements/portfolio.php:25
-#: ../Etendard/home_elements/portfolio.php:25
-msgid "Last Projects"
+#: ../home_elements/portfolio.php:25
+msgid "Latest Projects"
 msgstr "Derniers projets"
 
-#: ../Etendard/Etendard/home_elements/portfolio.php:60
-#: ../Etendard/home_elements/portfolio.php:60
 #: ../home_elements/portfolio.php:60
 msgid "Check the portfolio"
 msgstr "Voir le portfolio"
 
-#: ../Etendard/Etendard/home_elements/services.php:61
-#: ../Etendard/home_elements/services.php:61 ../home_elements/services.php:61
+#: ../home_elements/services.php:61
 msgid "Check all services"
 msgstr "Voir tous les services"
 
-#: ../home_elements/portfolio.php:25
-msgid "Latest Projects"
-msgstr "Derniers projets"
+#~ msgid "Last Projects"
+#~ msgstr "Derniers projets"
 
 #~ msgid "Follow these instructions in order to setup Etendard."
 #~ msgstr "Suivez les instructions pour paramétrer Étendard."
