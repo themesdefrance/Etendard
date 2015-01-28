@@ -37,6 +37,20 @@ require 'admin/shortcodes.php';
 //Refresh the permalink structure
 add_action('after_switch_theme', 'flush_rewrite_rules');
 
+//Remove accents in uploaded files
+add_filter( 'sanitize_file_name', 'remove_accents' );
+
+//Remove extra stuff from header
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'feed_links', 2);
+remove_action('wp_head', 'index_rel_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'start_post_rel_link', 10, 0);
+remove_action('wp_head', 'parent_post_rel_link', 10, 0);
+remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
+
 // Function to call if no primary menu
 if (!function_exists( 'etendard_nomenu')){
 	function etendard_nomenu(){
@@ -81,6 +95,9 @@ if (!function_exists('etendard_setup')){
 		// Enable custom title tag for 4.1
 		add_theme_support( 'title-tag' );
 		
+		// Enable Feed Links
+		add_theme_support( 'automatic-feed-links' );
+		
 		// Enable post formats
 		// Post formats are enabled with etendard_custom_format
 		
@@ -88,10 +105,10 @@ if (!function_exists('etendard_setup')){
 		require_once 'admin/meta-box/post_formats.php';
 		
 		// Set images sizes
+		set_post_thumbnail_size('etendard-post-thumbnail', 633, 400, true);
 		add_image_size('etendard-portfolio-thumbnail', 470, 230, true);
 		add_image_size('etendard-service-thumbnail', 230, 230, true);
 		add_image_size('etendard-blog-thumbnail', 225, 150, true);
-		add_image_size('etendard-post-thumbnail', 633, 400, true);
 		
 		add_filter('image_size_names_choose', 'etendard_tailles_images');
 		function etendard_tailles_images($sizes) {
@@ -774,6 +791,7 @@ if(!function_exists('etendard_user_styles')){
 				.article .header-title a:hover,
 				.article.quote > blockquote cite,
 				.comment .comment-author a,
+				.comment-navigation a,
 				.main-footer a,
 				.sidebar .widget a:hover,
 				.error404 .content a,
@@ -842,6 +860,7 @@ if(!function_exists('etendard_user_styles')){
 				.cta-wrapper .cta-button:hover,
 				.contact-form .submit input:hover,
 				#commentform #submit:hover,
+				.comment-navigation a:hover,
 				a.bouton.lirelasuite:hover,
 				#remonter:hover,
 				section.portfolio .pagination a:hover,
