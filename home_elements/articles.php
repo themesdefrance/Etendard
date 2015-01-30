@@ -48,7 +48,7 @@
 										<?php endif;
 							}
 							
-						if($format=='' || $format=='video'){ ?>
+						if($format!='quote' || $format!='link'){ ?>
 							<h3 class="entry-title header-title">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 									<?php the_title(); ?>
