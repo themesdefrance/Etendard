@@ -34,6 +34,11 @@ require 'admin/shortcodes.php';
 // Etendard Setup & Activation
 ////////////////////////////////////
 
+//Set the content width (in pixels) based on the theme's design and stylesheet.
+if ( ! isset( $content_width ) ) {
+	$content_width = 633; 
+}
+
 //Refresh the permalink structure
 add_action('after_switch_theme', 'flush_rewrite_rules');
 
@@ -282,6 +287,10 @@ if (!function_exists('etendard_enqueue')){
 		
 		wp_enqueue_script('fancybox');
 		wp_enqueue_style('fancybox');
+		
+		if ( is_singular() ){
+			wp_enqueue_script( "comment-reply" );
+		}
 	
 	}
 }
@@ -746,6 +755,20 @@ if (!function_exists('etendard_resize_upload')){
 		return apply_filters('etendard_resize_upload', $upload_url.$imgDir.$wanted);
 	}
 }
+
+/**
+ * Show a popup in order to make people drop IE mouahaha
+ *
+ * @since 1.016
+ * @return void
+ */
+if(!function_exists('etendard_chromeframe_notice')){
+	function etendard_chromeframe_notice(){ ?>
+		<!--[if lt IE 8]><p class='chromeframe'><?php _e('Your browser is <em>too old !','toutatis'); ?></em> <a href="http://browsehappy.com/"><?php _e('Update your browser','toutatis'); ?></a> <?php _e('or','toutatis'); ?> <a href="http://www.google.com/chromeframe/?redirect=true"><?php _e('Install Google Chrome Frame','toutatis'); ?></a> <?php _e('to display this website correctly','toutatis'); ?>.</p><![endif]-->
+	<?php
+	}
+}
+add_action('etendard_body_top','etendard_chromeframe_notice');
 
 ////////////////////////////////////
 // Styles Personnalisés

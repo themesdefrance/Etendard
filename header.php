@@ -24,7 +24,9 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<!--[if lt IE 8]><p class=chromeframe><?php _e('Your browser is <em>too old !','etendard'); ?></em> <a href="http://browsehappy.com/"><?php _e('Update your browser','etendard'); ?></a> <?php _e('or','etendard'); ?> <a href="http://www.google.com/chromeframe/?redirect=true"><?php _e('Install Google Chrome Frame','etendard'); ?></a> <?php _e('to display this website correctly','etendard'); ?>.</p><![endif]-->
+
+	<?php do_action('etendard_body_top'); ?>
+	
 	<header class="main-header">
 		<div class="wrapper">
 				<div class="logo-wrap">

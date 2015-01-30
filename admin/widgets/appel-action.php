@@ -23,7 +23,7 @@ class EtendardAppelAction extends WP_Widget{
 			
 			<p class="cta-text"><?php if (isset($instance['desc']) && $instance['desc']!=""){ echo $instance['desc'];} ?></p>
 			<p>
-				<a href="<?php if (isset($instance['lien']) && $instance['lien']!=""){ echo $instance['lien'];}else{echo bloginfo('url');} ?>" class="cta-button">
+				<a href="<?php if (isset($instance['lien']) && $instance['lien']!=""){ echo $instance['lien'];}else{echo esc_url( home_url() );} ?>" class="cta-button">
 				<?php if (isset($instance['libelle']) && $instance['libelle']!=""){
 						echo $instance['libelle'];
 					}else{
