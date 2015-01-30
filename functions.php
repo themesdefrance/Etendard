@@ -6,7 +6,7 @@
 
 define('ETENDARD_STORE_URL', 'https://www.themesdefrance.fr');
 define('ETENDARD_THEME_NAME', 'Etendard');
-define('ETENDARD_THEME_VERSION', '1.015');
+define('ETENDARD_THEME_VERSION', '1.016');
 define('ETENDARD_LICENSE_KEY', 'etendard_license_edd');
 
 if(!class_exists('EDD_SL_Theme_Updater')){
@@ -121,13 +121,6 @@ if (!function_exists('etendard_setup')){
 			$newsizes = array_merge($sizes, $added);
 			return $newsizes;
 		}
-		
-		// Update Etendard new version
-		update_option( 'etendard_version', ETENDARD_THEME_VERSION );
-		
-		// Transient redirect after activation
-		set_transient( '_etendard_activation_redirect', true, 30 );
-		
 	}
 }
 add_action('after_setup_theme', 'etendard_setup');
