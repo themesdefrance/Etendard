@@ -255,7 +255,7 @@ if (!function_exists('etendard_enqueue')){
 		wp_register_style('fancybox', get_template_directory_uri().'/lib/fancybox/jquery.fancybox.css', false, false);
 		
 		// Etendard combined scripts (menu, galery, backtotop...)
-		wp_register_script('etendard_combined', get_template_directory_uri().'/js/etendard-combined.js', array('jquery'), false, true);
+		wp_register_script('etendard_js', get_template_directory_uri().'/js/etendard.js', array('jquery'), false, true);
 		
 		// Entendard Shortcodes Script
 		wp_register_script('etendard_shortcodes', get_template_directory_uri().'/admin/js/shortcodes.js', array('jquery'), false, true);
