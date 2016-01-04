@@ -275,7 +275,7 @@ if (!function_exists('etendard_enqueue')){
 		
 		wp_enqueue_script('fitvids');
 		
-		wp_enqueue_script('etendard_combined');
+		wp_enqueue_script('etendard_js');
 		wp_enqueue_script('etendard_shortcodes');
 		
 		wp_enqueue_script('fancybox');
